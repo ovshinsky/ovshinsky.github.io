@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>工作日记</title>
+    <url>/2023/12/20/Working-diary/</url>
+    <content><![CDATA[<p>今天配置了blog，虽然花了一下午，但是挺有意思的，就几乎没有停下来。</p>
+<p>也更加深入理解了命令行的用法</p>
+<p>主要完成了三件事：1. 配置网页 2. 配置主题 3.采用gitalk配置评论区</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>通过hexo和github pages配置Blog的方法</title>
     <url>/2023/12/20/%E9%80%9A%E8%BF%87hexo%E5%92%8Cgithub-pages%E9%85%8D%E7%BD%AEBlog%E7%9A%84%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h3 id="网页环境配置"><a href="#网页环境配置" class="headerlink" title="网页环境配置"></a>网页环境配置</h3><ol>
@@ -73,17 +84,6 @@
       </tags>
   </entry>
   <entry>
-    <title>工作日记</title>
-    <url>/2023/12/20/Working-diary/</url>
-    <content><![CDATA[<p>今天配置了blog，虽然花了一下午，但是挺有意思的，就几乎没有停下来。</p>
-<p>也更加深入理解了命令行的用法</p>
-<p>主要完成了三件事：1. 配置网页 2. 配置主题 3.采用gitalk配置评论区</p>
-]]></content>
-      <tags>
-        <tag>lifelog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>采用Lumerical的硅光仿真设计参数优化方法</title>
     <url>/2023/12/20/%E9%87%87%E7%94%A8Lumerical%E7%9A%84%E7%A1%85%E5%85%89%E4%BB%BF%E7%9C%9F%E8%AE%BE%E8%AE%A1%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h5 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE:"></a>REFERENCE:</h5><p>[1] <a href="https://optics.ansys.com/hc/en-us/articles/360034922973-Creating-optimization-tasks-using-a-script">Creating optimization tasks using a script – Ansys Optics</a></p>
@@ -105,6 +105,17 @@
 ]]></content>
       <tags>
         <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo报错和解决方法</title>
+    <url>/2023/12/25/hexo%E6%8A%A5%E9%94%99%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<ol>
+<li>fatal: unable to access ‘<a href="https://github.com/ovshinsky/ovshinsky.github.io.git/">https://github.com/ovshinsky/ovshinsky.github.io.git/</a>‘: Failed to connect to github.com port 443 after 21098 ms: Couldn’t connect to server<br>解决方法：github连不上了，稍后重新hexo d部署页面即可。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>工作小结</tag>
       </tags>
   </entry>
   <entry>
@@ -152,35 +163,6 @@
       </tags>
   </entry>
   <entry>
-    <title>问题和解决方法</title>
-    <url>/2023/12/25/%E9%97%AE%E9%A2%98%E5%92%8C%E7%BA%A7/</url>
-    <content><![CDATA[<ol>
-<li>fatal: unable to access ‘<a href="https://github.com/ovshinsky/ovshinsky.github.io.git/">https://github.com/ovshinsky/ovshinsky.github.io.git/</a>‘: Failed to connect to github.com port 443 after 21098 ms: Couldn’t connect to server<br>解决方法：稍后重新hexo d</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>工作小结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/12/20/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>硅光研究常用软件</title>
     <url>/2023/12/25/%E7%A1%85%E5%85%89%E7%A0%94%E7%A9%B6%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</url>
     <content><![CDATA[<p>主要是我自己用的比较多的一些软件：</p>
@@ -209,6 +191,24 @@
       <tags>
         <tag>技术小结</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/12/20/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>使用说明书</title>
