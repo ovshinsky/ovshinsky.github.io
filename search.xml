@@ -109,6 +109,15 @@
   </entry>
   <entry>
     <title>工作日记</title>
+    <url>/2023/12/22/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天陪龙龙测试了cumec的片子，本来说帮他调一下光栅角度，顺便就测了自己的器件，结果一片稀烂。微环的耦合系数设置小了（也可以说是掺杂之后波导损耗比预计的大，毕竟没有扫描参数，gap设置大了，准备这么和老板解释，欸，没有实现靠谱交付），然后其他的Bragg波导光栅的器件性能也有问题，还没想清楚为啥，应该可能或许是耦合系数设置小了，可能是耦合系数的仿真和实验符合的不太好。<br>下午去开了大组会，然后把衣服打包用行李箱带回了川杨。<br>大组会没有拿到优秀poster，我们的导师说是他划掉了，说我工作做的还不够好，后面应该奖励的钱他补给我。可能是他言辞有些奇怪，刚开始说是这个评分也比较random，然后又说是我做的不够好，所以说就不给我了。<br>后面仔细一想估计是组织有些失误，同分的人有些多，然后又不好说谁下谁上，我导师就说先把我剔掉了，然后后面他再补给我，感觉有点像是被做了人情。<br>其实倒也无所谓把，本来这个就是自己实验室组织着玩的，本来自己没拿到决定听遗憾&#x2F;失望&#x2F;奇怪的，后面发现拿到了又挺开心，倒也是多了一点可玩的东西，感觉自己推理的合情合理还挺有意思，只是觉得我老板明明可以大大方方的告诉我的。</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作日记</title>
     <url>/2023/12/23/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<p>今天修改了逆向设计仿真的区域，扩大了仿真区域，希望可以得到更好的结果吧。</p>
 <p>接着可能会写一会毕业论文。</p>
@@ -119,9 +128,13 @@
       </tags>
   </entry>
   <entry>
-    <title>工作日记</title>
-    <url>/2023/12/22/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>今天陪龙龙测试了cumec的片子，本来说帮他调一下光栅角度，顺便就测了自己的器件，结果一片稀烂。微环的耦合系数设置小了（也可以说是掺杂之后波导损耗比预计的大，毕竟没有扫描参数，gap设置大了，准备这么和老板解释，欸，没有实现靠谱交付），然后其他的Bragg波导光栅的器件性能也有问题，还没想清楚为啥，应该可能或许是耦合系数设置小了，可能是耦合系数的仿真和实验符合的不太好。<br>下午去开了大组会，然后把衣服打包用行李箱带回了川杨。<br>大组会没有拿到优秀poster，我们的导师说是他划掉了，说我工作做的还不够好，后面应该奖励的钱他补给我。可能是他言辞有些奇怪，刚开始说是这个评分也比较random，然后又说是我做的不够好，所以说就不给我了。<br>后面仔细一想估计是组织有些失误，同分的人有些多，然后又不好说谁下谁上，我导师就说先把我剔掉了，然后后面他再补给我，感觉有点像是被做了人情。<br>其实倒也无所谓把，本来这个就是自己实验室组织着玩的，本来自己没拿到决定听遗憾&#x2F;失望&#x2F;奇怪的，后面发现拿到了又挺开心，倒也是多了一点可玩的东西，感觉自己推理的合情合理还挺有意思，只是觉得我老板明明可以大大方方的告诉我的。</p>
+    <title>日记</title>
+    <url>/2023/12/24/%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天几乎没有工作</p>
+<p>今天上午睡了懒觉，然后去霜花店（南京东路）吃了熔岩鸡。</p>
+<p>在南京东路几个大商场逛逛走走，然后回川杨吃了米线。</p>
+<p>晚上准备看个电影。</p>
+<p><img src="/../pictures/image-20231224184246798.png" alt="image-20231224184246798"></p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
@@ -140,19 +153,6 @@
       </tags>
   </entry>
   <entry>
-    <title>日记</title>
-    <url>/2023/12/24/%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>今天几乎没有工作</p>
-<p>今天上午睡了懒觉，然后去霜花店（南京东路）吃了熔岩鸡。</p>
-<p>在南京东路几个大商场逛逛走走，然后回川杨吃了米线。</p>
-<p>晚上准备看个电影。</p>
-<p><img src="/../pictures/image-20231224184246798.png" alt="image-20231224184246798"></p>
-]]></content>
-      <tags>
-        <tag>lifelog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>test_download</title>
     <url>/2023/12/25/test-download/</url>
     <content><![CDATA[<p><a href="/download/test.pptx" download>测试下载</a></p>
@@ -167,10 +167,30 @@
     <content><![CDATA[<p>目前工作上的任务应该是“研究lumerical多目标自动优化脚本”，自己的事情就是好好写毕业论文。</p>
 <p>刚刚把论文的摘要写完啦 :boom:</p>
 <p>总结了一些常用的软件，然后安装了lumerical2023r2，支持gpu加速。</p>
+<p>把摘要更新到word里面了</p>
+<p>然后研究了一下hexo如何添加附件</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/12/20/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>硅光研究常用软件</title>
@@ -197,24 +217,6 @@
       <tags>
         <tag>技术小结</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/12/20/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>使用说明书</title>
@@ -246,6 +248,7 @@
 <h4 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h4><p>hexo d</p>
 <h4 id="添加附件"><a href="#添加附件" class="headerlink" title="添加附件"></a>添加附件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;/download/[文件名] download&gt;[想要显示的文本]&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 
+<p>REF: <a href="https://lasonneil.github.io/2023/07/07/posts/Hexo%E6%B7%BB%E5%8A%A0%E9%99%84%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">Hexo添加附件下载功能 | 清河的博客 (lasonneil.github.io)</a></p>
 ]]></content>
   </entry>
 </search>
