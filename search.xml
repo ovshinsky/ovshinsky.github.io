@@ -90,19 +90,19 @@
 ]]></content>
   </entry>
   <entry>
-    <title>工作日记</title>
-    <url>/2023/12/21/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>今天继续配置了一会blog，配置了图片功能以及乱七八糟的其他东西。</p>
-<p>一会应该会写毕业论文把，然后晚上要开组会。</p>
-]]></content>
+    <title>2024硅光博士offer比较和分享</title>
+    <url>/2023/12/21/2024%E7%A1%85%E5%85%89%E5%8D%9A%E5%A3%ABoffer%E6%AF%94%E8%BE%83/</url>
+    <content><![CDATA[]]></content>
       <tags>
         <tag>lifelog</tag>
       </tags>
   </entry>
   <entry>
-    <title>2024硅光博士offer比较和分享</title>
-    <url>/2023/12/21/2024%E7%A1%85%E5%85%89%E5%8D%9A%E5%A3%ABoffer%E6%AF%94%E8%BE%83/</url>
-    <content><![CDATA[]]></content>
+    <title>工作日记</title>
+    <url>/2023/12/21/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天继续配置了一会blog，配置了图片功能以及乱七八糟的其他东西。</p>
+<p>一会应该会写毕业论文把，然后晚上要开组会。</p>
+]]></content>
       <tags>
         <tag>lifelog</tag>
       </tags>
@@ -128,6 +128,18 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo报错和解决方法</title>
+    <url>/2023/12/25/hexo%E6%8A%A5%E9%94%99%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<ol>
+<li><code>fatal: unable to access &#39;https://github.com/ovshinsky/ovshinsky.github.io.git/&#39;: Failed to connect to github.com port 443 after 21098 ms: Couldn&#39;t connect to server</code></li>
+</ol>
+<p>  解决方法：github连不上了，稍等重新<code>hexo d</code>部署页面即可。</p>
+]]></content>
+      <tags>
+        <tag>工作小结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>日记</title>
     <url>/2023/12/24/%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<p>今天几乎没有工作</p>
@@ -141,15 +153,12 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo报错和解决方法</title>
-    <url>/2023/12/25/hexo%E6%8A%A5%E9%94%99%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<ol>
-<li><code>fatal: unable to access &#39;https://github.com/ovshinsky/ovshinsky.github.io.git/&#39;: Failed to connect to github.com port 443 after 21098 ms: Couldn&#39;t connect to server</code></li>
-</ol>
-<p>  解决方法：github连不上了，稍等重新<code>hexo d</code>部署页面即可。</p>
+    <title>test_download</title>
+    <url>/2023/12/25/test-download/</url>
+    <content><![CDATA[<p><a href="/download/test.pptx" download>测试下载</a></p>
 ]]></content>
       <tags>
-        <tag>工作小结</tag>
+        <tag>技术小结</tag>
       </tags>
   </entry>
   <entry>
@@ -231,15 +240,12 @@
 <td><code>source/_drafts</code></td>
 </tr>
 </tbody></table>
-<h4 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h4><p>hexo g</p>
+<h4 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h4><p>hexo clean</p>
+<p>hexo g</p>
 <p>hexo s</p>
 <h4 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h4><p>hexo d</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>test_download</title>
-    <url>/2023/12/25/test-download/</url>
-    <content><![CDATA[<p><a href="/download/test.pptx" download>测试下载</a></p>
+<h4 id="添加附件"><a href="#添加附件" class="headerlink" title="添加附件"></a>添加附件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;/download/[文件名] download&gt;[想要显示的文本]&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
 </search>
