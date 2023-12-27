@@ -12,6 +12,16 @@
       </tags>
   </entry>
   <entry>
+    <title>工作日记</title>
+    <url>/2023/12/21/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天继续配置了一会blog，配置了图片功能以及乱七八糟的其他东西。</p>
+<p>一会应该会写毕业论文把，然后晚上要开组会。</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>通过hexo和github pages配置Blog的方法</title>
     <url>/2023/12/20/%E9%80%9A%E8%BF%87hexo%E5%92%8Cgithub-pages%E9%85%8D%E7%BD%AEBlog%E7%9A%84%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h3 id="网页环境配置"><a href="#网页环境配置" class="headerlink" title="网页环境配置"></a>网页环境配置</h3><ol>
@@ -84,25 +94,15 @@
       </tags>
   </entry>
   <entry>
-    <title>2024硅光博士offer比较和分享</title>
-    <url>/2023/12/21/2024%E7%A1%85%E5%85%89%E5%8D%9A%E5%A3%ABoffer%E6%AF%94%E8%BE%83/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>lifelog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>采用Lumerical的硅光仿真设计参数优化方法</title>
     <url>/2023/12/20/%E9%87%87%E7%94%A8Lumerical%E7%9A%84%E7%A1%85%E5%85%89%E4%BB%BF%E7%9C%9F%E8%AE%BE%E8%AE%A1%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h5 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE:"></a>REFERENCE:</h5><p>[1] <a href="https://optics.ansys.com/hc/en-us/articles/360034922973-Creating-optimization-tasks-using-a-script">Creating optimization tasks using a script – Ansys Optics</a></p>
 ]]></content>
   </entry>
   <entry>
-    <title>工作日记</title>
-    <url>/2023/12/21/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>今天继续配置了一会blog，配置了图片功能以及乱七八糟的其他东西。</p>
-<p>一会应该会写毕业论文把，然后晚上要开组会。</p>
-]]></content>
+    <title>2024硅光博士offer比较和分享</title>
+    <url>/2023/12/21/2024%E7%A1%85%E5%85%89%E5%8D%9A%E5%A3%ABoffer%E6%AF%94%E8%BE%83/</url>
+    <content><![CDATA[]]></content>
       <tags>
         <tag>lifelog</tag>
       </tags>
@@ -113,15 +113,6 @@
     <content><![CDATA[<p>今天修改了逆向设计仿真的区域，扩大了仿真区域，希望可以得到更好的结果吧。</p>
 <p>接着可能会写一会毕业论文。</p>
 <p>发现自己波导宽度设置错了，波导宽度太窄了。改了仿真条件重新进行仿真。</p>
-]]></content>
-      <tags>
-        <tag>lifelog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>工作日记</title>
-    <url>/2023/12/22/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>今天陪龙龙测试了cumec的片子，本来说帮他调一下光栅角度，顺便就测了自己的器件，结果一片稀烂。微环的耦合系数设置小了（也可以说是掺杂之后波导损耗比预计的大，毕竟没有扫描参数，gap设置大了，准备这么和老板解释，欸，没有实现靠谱交付），然后其他的Bragg波导光栅的器件性能也有问题，还没想清楚为啥，应该可能或许是耦合系数设置小了，可能是耦合系数的仿真和实验符合的不太好。<br>下午去开了大组会，然后把衣服打包用行李箱带回了川杨。<br>大组会没有拿到优秀poster，我们的导师说是他划掉了，说我工作做的还不够好，后面应该奖励的钱他补给我。可能是他言辞有些奇怪，刚开始说是这个评分也比较random，然后又说是我做的不够好，所以说就不给我了。<br>后面仔细一想估计是组织有些失误，同分的人有些多，然后又不好说谁下谁上，我导师就说先把我剔掉了，然后后面他再补给我，感觉有点像是被做了人情。<br>其实倒也无所谓把，本来这个就是自己实验室组织着玩的，本来自己没拿到决定听遗憾&#x2F;失望&#x2F;奇怪的，后面发现拿到了又挺开心，倒也是多了一点可玩的东西，感觉自己推理的合情合理还挺有意思，只是觉得我老板明明可以大大方方的告诉我的。</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
@@ -141,22 +132,9 @@
       </tags>
   </entry>
   <entry>
-    <title>test_download</title>
-    <url>/2023/12/25/test-download/</url>
-    <content><![CDATA[<p><a href="/download/test.pptx" download>测试下载</a></p>
-]]></content>
-      <tags>
-        <tag>技术小结</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>工作日记</title>
-    <url>/2023/12/25/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>目前工作上的任务应该是“研究lumerical多目标自动优化脚本”，自己的事情就是好好写毕业论文。</p>
-<p>刚刚把论文的摘要写完啦 :boom:</p>
-<p>总结了一些常用的软件，然后安装了lumerical2023r2，支持gpu加速。</p>
-<p>把摘要更新到word里面了</p>
-<p>然后研究了一下hexo如何添加附件</p>
+    <url>/2023/12/22/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天陪龙龙测试了cumec的片子，本来说帮他调一下光栅角度，顺便就测了自己的器件，结果一片稀烂。微环的耦合系数设置小了（也可以说是掺杂之后波导损耗比预计的大，毕竟没有扫描参数，gap设置大了，准备这么和老板解释，欸，没有实现靠谱交付），然后其他的Bragg波导光栅的器件性能也有问题，还没想清楚为啥，应该可能或许是耦合系数设置小了，可能是耦合系数的仿真和实验符合的不太好。<br>下午去开了大组会，然后把衣服打包用行李箱带回了川杨。<br>大组会没有拿到优秀poster，我们的导师说是他划掉了，说我工作做的还不够好，后面应该奖励的钱他补给我。可能是他言辞有些奇怪，刚开始说是这个评分也比较random，然后又说是我做的不够好，所以说就不给我了。<br>后面仔细一想估计是组织有些失误，同分的人有些多，然后又不好说谁下谁上，我导师就说先把我剔掉了，然后后面他再补给我，感觉有点像是被做了人情。<br>其实倒也无所谓把，本来这个就是自己实验室组织着玩的，本来自己没拿到决定听遗憾&#x2F;失望&#x2F;奇怪的，后面发现拿到了又挺开心，倒也是多了一点可玩的东西，感觉自己推理的合情合理还挺有意思，只是觉得我老板明明可以大大方方的告诉我的。</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
@@ -168,6 +146,15 @@
     <content><![CDATA[<ol>
 <li><code>fatal: unable to access &#39;https://github.com/ovshinsky/ovshinsky.github.io.git/&#39;: Failed to connect to github.com port 443 after 21098 ms: Couldn&#39;t connect to server</code><br> 解决方法：github连不上了，稍等重新<code>hexo d</code>部署页面即可。</li>
 </ol>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test_download</title>
+    <url>/2023/12/25/test-download/</url>
+    <content><![CDATA[<p><a href="/download/test.pptx" download>测试下载</a></p>
 ]]></content>
       <tags>
         <tag>技术小结</tag>
@@ -200,6 +187,58 @@
       </tags>
   </entry>
   <entry>
+    <title>工作日记</title>
+    <url>/2023/12/25/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>目前工作上的任务应该是“研究lumerical多目标自动优化脚本”，自己的事情就是好好写毕业论文。</p>
+<p>刚刚把论文的摘要写完啦 :boom:</p>
+<p>总结了一些常用的软件，然后安装了lumerical2023r2，支持gpu加速。</p>
+<p>把摘要更新到word里面了</p>
+<p>然后研究了一下hexo如何添加附件</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作日记</title>
+    <url>/2023/12/26/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>从川杨到实验室了，今天计划研究仿真自动优化的方法，以及完成毕业论文的绪论section。</p>
+<p>-12：33 绪论还需要补充参考文献，需要进一步补充一些前人的具体工作来论证提出的一些观点。</p>
+<p>-14：38 介绍一些前人的具体工作</p>
+<p>-16：35这周把绪论弄完把</p>
+<ul>
+<li><input disabled="" type="checkbox"> Typora完成编辑 <ul>
+<li><input disabled="" type="checkbox"> 1</li>
+<li><input disabled="" type="checkbox"> 2</li>
+<li><input disabled="" type="checkbox"> 3</li>
+<li><input disabled="" type="checkbox"> 4</li>
+<li><input disabled="" type="checkbox"> 5</li>
+<li><input disabled="" type="checkbox"> 6</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 整理到word，插入参考文献<ul>
+<li><input disabled="" type="checkbox"> 1</li>
+<li><input disabled="" type="checkbox"> 2</li>
+<li><input disabled="" type="checkbox"> 3</li>
+<li><input disabled="" type="checkbox"> 4</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作日记</title>
+    <url>/2023/12/27/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天还在写绪论，补充了多维光复用，偏振复用，模式复用的相关研究<br>进一步需要补充波长复用和超材料的相关研究文献</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2023/12/20/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -216,17 +255,6 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>工作日记</title>
-    <url>/2023/12/26/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>从川杨到实验室了，今天计划研究仿真自动优化的方法，以及完成毕业论文的绪论section。</p>
-<p>-12：33 绪论还需要补充参考文献，需要进一步补充一些前人的具体工作来论证提出的一些观点。</p>
-<p>-14：38 介绍一些前人的具体工作</p>
-]]></content>
-      <tags>
-        <tag>lifelog</tag>
-      </tags>
   </entry>
   <entry>
     <title>使用说明书</title>
