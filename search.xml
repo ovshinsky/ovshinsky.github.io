@@ -12,6 +12,20 @@
       </tags>
   </entry>
   <entry>
+    <title>2024硅光博士offer比较和分享</title>
+    <url>/2023/12/21/2024%E7%A1%85%E5%85%89%E5%8D%9A%E5%A3%ABoffer%E6%AF%94%E8%BE%83/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>采用Lumerical的硅光仿真设计参数优化方法</title>
+    <url>/2023/12/20/%E9%87%87%E7%94%A8Lumerical%E7%9A%84%E7%A1%85%E5%85%89%E4%BB%BF%E7%9C%9F%E8%AE%BE%E8%AE%A1%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h5 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE:"></a>REFERENCE:</h5><p>[1] <a href="https://optics.ansys.com/hc/en-us/articles/360034922973-Creating-optimization-tasks-using-a-script">Creating optimization tasks using a script – Ansys Optics</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>通过hexo和github pages配置Blog的方法</title>
     <url>/2023/12/20/%E9%80%9A%E8%BF%87hexo%E5%92%8Cgithub-pages%E9%85%8D%E7%BD%AEBlog%E7%9A%84%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h3 id="网页环境配置"><a href="#网页环境配置" class="headerlink" title="网页环境配置"></a>网页环境配置</h3><ol>
@@ -84,15 +98,10 @@
       </tags>
   </entry>
   <entry>
-    <title>采用Lumerical的硅光仿真设计参数优化方法</title>
-    <url>/2023/12/20/%E9%87%87%E7%94%A8Lumerical%E7%9A%84%E7%A1%85%E5%85%89%E4%BB%BF%E7%9C%9F%E8%AE%BE%E8%AE%A1%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h5 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE:"></a>REFERENCE:</h5><p>[1] <a href="https://optics.ansys.com/hc/en-us/articles/360034922973-Creating-optimization-tasks-using-a-script">Creating optimization tasks using a script – Ansys Optics</a></p>
+    <title>工作日记</title>
+    <url>/2023/12/22/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天陪龙龙测试了cumec的片子，本来说帮他调一下光栅角度，顺便就测了自己的器件，结果一片稀烂。微环的耦合系数设置小了（也可以说是掺杂之后波导损耗比预计的大，毕竟没有扫描参数，gap设置大了，准备这么和老板解释，欸，没有实现靠谱交付），然后其他的Bragg波导光栅的器件性能也有问题，还没想清楚为啥，应该可能或许是耦合系数设置小了，可能是耦合系数的仿真和实验符合的不太好。<br>下午去开了大组会，然后把衣服打包用行李箱带回了川杨。<br>大组会没有拿到优秀poster，我们的导师说是他划掉了，说我工作做的还不够好，后面应该奖励的钱他补给我。可能是他言辞有些奇怪，刚开始说是这个评分也比较random，然后又说是我做的不够好，所以说就不给我了。<br>后面仔细一想估计是组织有些失误，同分的人有些多，然后又不好说谁下谁上，我导师就说先把我剔掉了，然后后面他再补给我，感觉有点像是被做了人情。<br>其实倒也无所谓把，本来这个就是自己实验室组织着玩的，本来自己没拿到决定听遗憾&#x2F;失望&#x2F;奇怪的，后面发现拿到了又挺开心，倒也是多了一点可玩的东西，感觉自己推理的合情合理还挺有意思，只是觉得我老板明明可以大大方方的告诉我的。</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>2024硅光博士offer比较和分享</title>
-    <url>/2023/12/21/2024%E7%A1%85%E5%85%89%E5%8D%9A%E5%A3%ABoffer%E6%AF%94%E8%BE%83/</url>
-    <content><![CDATA[]]></content>
       <tags>
         <tag>lifelog</tag>
       </tags>
@@ -108,26 +117,6 @@
       </tags>
   </entry>
   <entry>
-    <title>工作日记</title>
-    <url>/2023/12/23/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>今天修改了逆向设计仿真的区域，扩大了仿真区域，希望可以得到更好的结果吧。</p>
-<p>接着可能会写一会毕业论文。</p>
-<p>发现自己波导宽度设置错了，波导宽度太窄了。改了仿真条件重新进行仿真。</p>
-]]></content>
-      <tags>
-        <tag>lifelog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>工作日记</title>
-    <url>/2023/12/22/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>今天陪龙龙测试了cumec的片子，本来说帮他调一下光栅角度，顺便就测了自己的器件，结果一片稀烂。微环的耦合系数设置小了（也可以说是掺杂之后波导损耗比预计的大，毕竟没有扫描参数，gap设置大了，准备这么和老板解释，欸，没有实现靠谱交付），然后其他的Bragg波导光栅的器件性能也有问题，还没想清楚为啥，应该可能或许是耦合系数设置小了，可能是耦合系数的仿真和实验符合的不太好。<br>下午去开了大组会，然后把衣服打包用行李箱带回了川杨。<br>大组会没有拿到优秀poster，我们的导师说是他划掉了，说我工作做的还不够好，后面应该奖励的钱他补给我。可能是他言辞有些奇怪，刚开始说是这个评分也比较random，然后又说是我做的不够好，所以说就不给我了。<br>后面仔细一想估计是组织有些失误，同分的人有些多，然后又不好说谁下谁上，我导师就说先把我剔掉了，然后后面他再补给我，感觉有点像是被做了人情。<br>其实倒也无所谓把，本来这个就是自己实验室组织着玩的，本来自己没拿到决定听遗憾&#x2F;失望&#x2F;奇怪的，后面发现拿到了又挺开心，倒也是多了一点可玩的东西，感觉自己推理的合情合理还挺有意思，只是觉得我老板明明可以大大方方的告诉我的。</p>
-]]></content>
-      <tags>
-        <tag>lifelog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>日记</title>
     <url>/2023/12/24/%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<p>今天几乎没有工作</p>
@@ -135,6 +124,17 @@
 <p>在南京东路几个大商场逛逛走走，然后回川杨吃了米线。</p>
 <p>晚上准备看个电影。</p>
 <p><img src="/../pictures/image-20231224184246798.png" alt="image-20231224184246798"></p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作日记</title>
+    <url>/2023/12/23/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天修改了逆向设计仿真的区域，扩大了仿真区域，希望可以得到更好的结果吧。</p>
+<p>接着可能会写一会毕业论文。</p>
+<p>发现自己波导宽度设置错了，波导宽度太窄了。改了仿真条件重新进行仿真。</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
@@ -248,6 +248,7 @@
     <title>工作日记</title>
     <url>/2023/12/28/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<p>对于毕业论文的绪论部分，在考虑进一步画一些示意图（关于研究发展路线）。</p>
+<p>绪论文字部分写完了，准备整理一下绪论需要的图片。整理了一下TM的模式demux的结果，性能还有待提高。</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
@@ -270,6 +271,37 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>基于单纳米线的计算光谱仪</title>
+    <url>/2023/12/29/%E5%9F%BA%E4%BA%8E%E5%8D%95%E7%BA%B3%E7%B1%B3%E7%BA%BF%E7%9A%84%E8%AE%A1%E7%AE%97%E5%85%89%E8%B0%B1%E4%BB%AA/</url>
+    <content><![CDATA[<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>本回答将简单简单的介绍杨宗银老师开发单纳米线计算光谱仪，此项研究在2019年在<em>science</em>上有报告 [1]，感兴趣的可以阅读原文，此回答可以看作该文章的导读。</p>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>光谱仪的目的是得到入射光在不同波上的强度，也就是得到光谱。杨老师的方法是基于光谱重构原理设计的计算光谱仪，2013年，<em>Cao Hui</em>老师最早在<em>nature photonics</em>上报道过这种方法 [2]，并且后续做了一系列工作，潜在应用包括光谱相机，血氧检测等。</p>
+<h3 id="方法和设计原理"><a href="#方法和设计原理" class="headerlink" title="方法和设计原理"></a>方法和设计原理</h3><p>光谱仪的方法是基于光谱重构，具体原理可以简单介绍如下：</p>
+<h5 id="1-光强可以通过材料中的电流来探测"><a href="#1-光强可以通过材料中的电流来探测" class="headerlink" title="1. 光强可以通过材料中的电流来探测"></a>1. 光强可以通过材料中的电流来探测</h5><p>我们高中的时候可能学过光电效应，光子会被吸收把电子从价带顶激发到导带底。光探测器的原理与此类似，也就就是一定强度的光照射在特定的半导体材料上会产生自由载流子，进而在反偏PN结中形成电流。简言之，就是光强可以通过材料中的电流来探测。</p>
+<h5 id="2-光强可以叠加"><a href="#2-光强可以叠加" class="headerlink" title="2. 光强可以叠加"></a>2. 光强可以叠加</h5><p>比如说，波长为$<em>λ_1</em>$，强度为*$a_1$*的光产生的电流为$<em>c_1</em>$，波长为$<em>λ_2</em>$，强度为$a_2$的光子产生的电流为$<em>c_2</em>$，那么当这两束光同时入射时，产生的电流为 $<em>c_1 + c_2</em>$。</p>
+<p>当连续光入射时，探测到的电流为：<br>$$<br>\int_{\lambda 1}^{\lambda 2} F(\lambda) R_1(\lambda) d \lambda&#x3D;I_1<br>$$<br>其中$F(\lambda)$是入射光谱，$R_1(\lambda)$可以理解为特定光探测器的光电转换系数。</p>
+<h5 id="3-假如我们制造了2个光探测器"><a href="#3-假如我们制造了2个光探测器" class="headerlink" title="3. 假如我们制造了2个光探测器"></a>3. 假如我们制造了2个光探测器</h5><p>比如说，波长为$λ_1$，强度为$a_1$的光产生的电流为$c_1$，波长为$λ2$，强度为$a_2$的光同时入射时，产生的电流在探测器1上为 $I_1$，在探测器2上为$I_2$，那么我们可以得到如下方程组：<br>$$<br>r_1(\lambda_1)*a_1 + r_1(\lambda_2)*a_2 &#x3D; I_1\<br>r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 &#x3D; I_2<br>$$<br>我们知道这是一个二元一次方程组，在已知$r_1(\lambda_i),I_i$的情况，可以轻松算出$a_1,a_2$。</p>
+<h5 id="3-假如我们制造了100个光探测器"><a href="#3-假如我们制造了100个光探测器" class="headerlink" title="3. 假如我们制造了100个光探测器"></a>3. 假如我们制造了100个光探测器</h5><p>假如我们制造了100个光探测器，并且提前测得了每个光探测器在不同波长的光电转换系数$Ri(λ)$。可以得到：<br>$$<br>\begin{gathered}<br>\int_{\lambda 1}^{\lambda 2} F(\lambda) R_1(\lambda) d \lambda&#x3D;I_1 \<br>\int_{\lambda 1}^{\lambda 2} F(\lambda) R_2(\lambda) d \lambda&#x3D;I_2 \<br>\vdots \<br>\int_{\lambda 1}^{\lambda 2} F(\lambda) R_n(\lambda) d \lambda&#x3D;I_n<br>\end{gathered}<br>$$<br>那么我们把他们同样离散化后（就是光谱划分为$\lambda_1, \lambda_2,…\lambda_n$），可以得到一个n元方程组，在已知$R_i(\lambda)$，并且测得$I_i$的情况下，</p>
+<p>通过矩阵求逆&#x2F;最小误差等等方法可以求出来光谱信号（如MATLAB CVX toolbox）。</p>
+<h5 id="4-假如我们把这100个光探测器做在一根纳米线上"><a href="#4-假如我们把这100个光探测器做在一根纳米线上" class="headerlink" title="4.假如我们把这100个光探测器做在一根纳米线上"></a>4.假如我们把这100个光探测器做在一根纳米线上</h5><p><img src="D:/myblog/source/pictures/image-20231229120606633.png" alt="image-20231229120606633"></p>
+<p>假如我们把这100个光探测器做在一根纳米线上，并且每过一段长度放一个电极来检测电流。那么我们就得到了一个超小型的片上计算光谱仪。</p>
+<h3 id="个人评价"><a href="#个人评价" class="headerlink" title="个人评价"></a>个人评价</h3><p>因为我本身不做这个领域，只能分享一些道听途说的事情，有错漏可以指出，有什么写的不太清楚，或者想进一步了解的地方也可以评论区提问。</p>
+<p>和大部分科研工作相比，这项工作确实挺有意思的，但依然有很多问题需要解决。</p>
+<ol>
+<li>由于矩阵的病态性，不能确定入射光谱一定能被计算出来</li>
+<li>由于光探测器需要用激光器提前标定，因此在工业生产中成本较高。</li>
+<li>可能这个光谱系统可能不是非常稳定。</li>
+</ol>
+<p>总之，在快到2024年的今天，这个坑里面可以继续灌的水不多了，大家入坑请谨慎。</p>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
+<li>Zongyin Yang <em>et al.</em>, Single-nanowire spectrometers.<em>Science</em><strong>365</strong>,1017-1020(2019).DOI:<a href="https://doi.org/10.1126/science.aax8814">10.1126&#x2F;science.aax8814</a></li>
+<li>Redding, B., Liew, S., Sarma, R. <em>et al.</em> Compact spectrometer based on a disordered photonic chip. <em>Nature Photon</em> <strong>7</strong>, 746–751 (2013). <a href="https://doi.org/10.1038/nphoton.2013.190">https://doi.org/10.1038/nphoton.2013.190</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
   </entry>
   <entry>
     <title>采用gpu进行lumericalFDTD仿真</title>
