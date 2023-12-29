@@ -12,14 +12,6 @@
       </tags>
   </entry>
   <entry>
-    <title>2024硅光博士offer比较和分享</title>
-    <url>/2023/12/21/2024%E7%A1%85%E5%85%89%E5%8D%9A%E5%A3%ABoffer%E6%AF%94%E8%BE%83/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>lifelog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>采用Lumerical的硅光仿真设计参数优化方法</title>
     <url>/2023/12/20/%E9%87%87%E7%94%A8Lumerical%E7%9A%84%E7%A1%85%E5%85%89%E4%BB%BF%E7%9C%9F%E8%AE%BE%E8%AE%A1%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h5 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE:"></a>REFERENCE:</h5><p>[1] <a href="https://optics.ansys.com/hc/en-us/articles/360034922973-Creating-optimization-tasks-using-a-script">Creating optimization tasks using a script – Ansys Optics</a></p>
@@ -98,9 +90,19 @@
       </tags>
   </entry>
   <entry>
+    <title>2024硅光博士offer比较和分享</title>
+    <url>/2023/12/21/2024%E7%A1%85%E5%85%89%E5%8D%9A%E5%A3%ABoffer%E6%AF%94%E8%BE%83/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>工作日记</title>
-    <url>/2023/12/22/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>今天陪龙龙测试了cumec的片子，本来说帮他调一下光栅角度，顺便就测了自己的器件，结果一片稀烂。微环的耦合系数设置小了（也可以说是掺杂之后波导损耗比预计的大，毕竟没有扫描参数，gap设置大了，准备这么和老板解释，欸，没有实现靠谱交付），然后其他的Bragg波导光栅的器件性能也有问题，还没想清楚为啥，应该可能或许是耦合系数设置小了，可能是耦合系数的仿真和实验符合的不太好。<br>下午去开了大组会，然后把衣服打包用行李箱带回了川杨。<br>大组会没有拿到优秀poster，我们的导师说是他划掉了，说我工作做的还不够好，后面应该奖励的钱他补给我。可能是他言辞有些奇怪，刚开始说是这个评分也比较random，然后又说是我做的不够好，所以说就不给我了。<br>后面仔细一想估计是组织有些失误，同分的人有些多，然后又不好说谁下谁上，我导师就说先把我剔掉了，然后后面他再补给我，感觉有点像是被做了人情。<br>其实倒也无所谓把，本来这个就是自己实验室组织着玩的，本来自己没拿到决定听遗憾&#x2F;失望&#x2F;奇怪的，后面发现拿到了又挺开心，倒也是多了一点可玩的东西，感觉自己推理的合情合理还挺有意思，只是觉得我老板明明可以大大方方的告诉我的。</p>
+    <url>/2023/12/23/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天修改了逆向设计仿真的区域，扩大了仿真区域，希望可以得到更好的结果吧。</p>
+<p>接着可能会写一会毕业论文。</p>
+<p>发现自己波导宽度设置错了，波导宽度太窄了。改了仿真条件重新进行仿真。</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
@@ -111,6 +113,15 @@
     <url>/2023/12/21/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<p>今天继续配置了一会blog，配置了图片功能以及乱七八糟的其他东西。</p>
 <p>一会应该会写毕业论文把，然后晚上要开组会。</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作日记</title>
+    <url>/2023/12/22/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天陪龙龙测试了cumec的片子，本来说帮他调一下光栅角度，顺便就测了自己的器件，结果一片稀烂。微环的耦合系数设置小了（也可以说是掺杂之后波导损耗比预计的大，毕竟没有扫描参数，gap设置大了，准备这么和老板解释，欸，没有实现靠谱交付），然后其他的Bragg波导光栅的器件性能也有问题，还没想清楚为啥，应该可能或许是耦合系数设置小了，可能是耦合系数的仿真和实验符合的不太好。<br>下午去开了大组会，然后把衣服打包用行李箱带回了川杨。<br>大组会没有拿到优秀poster，我们的导师说是他划掉了，说我工作做的还不够好，后面应该奖励的钱他补给我。可能是他言辞有些奇怪，刚开始说是这个评分也比较random，然后又说是我做的不够好，所以说就不给我了。<br>后面仔细一想估计是组织有些失误，同分的人有些多，然后又不好说谁下谁上，我导师就说先把我剔掉了，然后后面他再补给我，感觉有点像是被做了人情。<br>其实倒也无所谓把，本来这个就是自己实验室组织着玩的，本来自己没拿到决定听遗憾&#x2F;失望&#x2F;奇怪的，后面发现拿到了又挺开心，倒也是多了一点可玩的东西，感觉自己推理的合情合理还挺有意思，只是觉得我老板明明可以大大方方的告诉我的。</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
@@ -130,31 +141,20 @@
       </tags>
   </entry>
   <entry>
-    <title>工作日记</title>
-    <url>/2023/12/23/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>今天修改了逆向设计仿真的区域，扩大了仿真区域，希望可以得到更好的结果吧。</p>
-<p>接着可能会写一会毕业论文。</p>
-<p>发现自己波导宽度设置错了，波导宽度太窄了。改了仿真条件重新进行仿真。</p>
-]]></content>
-      <tags>
-        <tag>lifelog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>test_download</title>
-    <url>/2023/12/25/test-download/</url>
-    <content><![CDATA[<p><a href="/download/test.pptx" download>测试下载</a></p>
+    <title>hexo报错和解决方法</title>
+    <url>/2023/12/25/hexo%E6%8A%A5%E9%94%99%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<ol>
+<li><code>fatal: unable to access &#39;https://github.com/ovshinsky/ovshinsky.github.io.git/&#39;: Failed to connect to github.com port 443 after 21098 ms: Couldn&#39;t connect to server</code><br> 解决方法：github连不上了，稍等重新<code>hexo d</code>部署页面即可。</li>
+</ol>
 ]]></content>
       <tags>
         <tag>技术小结</tag>
       </tags>
   </entry>
   <entry>
-    <title>hexo报错和解决方法</title>
-    <url>/2023/12/25/hexo%E6%8A%A5%E9%94%99%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<ol>
-<li><code>fatal: unable to access &#39;https://github.com/ovshinsky/ovshinsky.github.io.git/&#39;: Failed to connect to github.com port 443 after 21098 ms: Couldn&#39;t connect to server</code><br> 解决方法：github连不上了，稍等重新<code>hexo d</code>部署页面即可。</li>
-</ol>
+    <title>test_download</title>
+    <url>/2023/12/25/test-download/</url>
+    <content><![CDATA[<p><a href="/download/test.pptx" download>测试下载</a></p>
 ]]></content>
       <tags>
         <tag>技术小结</tag>
@@ -249,28 +249,12 @@
     <url>/2023/12/28/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<p>对于毕业论文的绪论部分，在考虑进一步画一些示意图（关于研究发展路线）。</p>
 <p>绪论文字部分写完了，准备整理一下绪论需要的图片。整理了一下TM的模式demux的结果，性能还有待提高。</p>
+<p>吃饭，开组会，开组会的同时审了之前的APL的稿子（惭愧没有认真开会），居然还能送审，看来我们老师很想接收这篇文章。</p>
+<p>但是u1s1文章都没怎么改过，返修也不认真，确实文章质量有点不满足期刊的要求，又给了大修。</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/12/20/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>基于单纳米线的计算光谱仪</title>
@@ -301,6 +285,33 @@
 ]]></content>
       <tags>
         <tag>技术小结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/12/20/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>工作日记</title>
+    <url>/2023/12/29/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天上午来复旦学习了<br>刚刚总结整理了一下计算光谱仪的原理，起因是看到杨宗银老师的计算光谱仪上了知乎热搜。<br>然后准备看一下仿真结果，然后继续整理毕业论文的绪论。</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
       </tags>
   </entry>
   <entry>
