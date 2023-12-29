@@ -99,7 +99,11 @@
   </style>
 </noscript>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -256,7 +260,7 @@
 <p>今天上午睡了懒觉，然后去霜花店（南京东路）吃了熔岩鸡。</p>
 <p>在南京东路几个大商场逛逛走走，然后回川杨吃了米线。</p>
 <p>晚上准备看个电影。</p>
-<p><img src="/../pictures/image-20231224184246798.png" alt="image-20231224184246798"></p>
+<p><img src="../pictures/image-20231224184246798.png" alt="image-20231224184246798"></p>
 
       
     </div>
@@ -397,7 +401,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>503</span>
+              <span>493</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -416,7 +420,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>今天陪龙龙测试了cumec的片子，本来说帮他调一下光栅角度，顺便就测了自己的器件，结果一片稀烂。微环的耦合系数设置小了（也可以说是掺杂之后波导损耗比预计的大，毕竟没有扫描参数，gap设置大了，准备这么和老板解释，欸，没有实现靠谱交付），然后其他的Bragg波导光栅的器件性能也有问题，还没想清楚为啥，应该可能或许是耦合系数设置小了，可能是耦合系数的仿真和实验符合的不太好。<br>下午去开了大组会，然后把衣服打包用行李箱带回了川杨。<br>大组会没有拿到优秀poster，我们的导师说是他划掉了，说我工作做的还不够好，后面应该奖励的钱他补给我。可能是他言辞有些奇怪，刚开始说是这个评分也比较random，然后又说是我做的不够好，所以说就不给我了。<br>后面仔细一想估计是组织有些失误，同分的人有些多，然后又不好说谁下谁上，我导师就说先把我剔掉了，然后后面他再补给我，感觉有点像是被做了人情。<br>其实倒也无所谓把，本来这个就是自己实验室组织着玩的，本来自己没拿到决定听遗憾&#x2F;失望&#x2F;奇怪的，后面发现拿到了又挺开心，倒也是多了一点可玩的东西，感觉自己推理的合情合理还挺有意思，只是觉得我老板明明可以大大方方的告诉我的。</p>
+          <p>今天陪龙龙测试了cumec的片子，本来说帮他调一下光栅角度，顺便就测了自己的器件，结果一片稀烂。微环的耦合系数设置小了（也可以说是掺杂之后波导损耗比预计的大，毕竟没有扫描参数，gap设置大了，准备这么和老板解释，欸，没有实现靠谱交付），然后其他的Bragg波导光栅的器件性能也有问题，还没想清楚为啥，应该可能或许是耦合系数设置小了，可能是耦合系数的仿真和实验符合的不太好。<br>下午去开了大组会，然后把衣服打包用行李箱带回了川杨。<br>大组会没有拿到优秀poster，我们的导师说是他划掉了，说我工作做的还不够好，后面应该奖励的钱他补给我。可能是他言辞有些奇怪，刚开始说是这个评分也比较random，然后又说是我做的不够好，所以说就不给我了。<br>后面仔细一想估计是组织有些失误，同分的人有些多，然后又不好说谁下谁上，我导师就说先把我剔掉了，然后后面他再补给我，感觉有点像是被做了人情。<br>其实倒也无所谓把，本来这个就是自己实验室组织着玩的，本来自己没拿到决定听遗憾/失望/奇怪的，后面发现拿到了又挺开心，倒也是多了一点可玩的东西，感觉自己推理的合情合理还挺有意思，只是觉得我老板明明可以大大方方的告诉我的。</p>
 
       
     </div>
@@ -682,29 +686,27 @@
 <li><p>部署执行命令：</p>
 <p>hexo d</p>
 <p>可能需要安装插件：</p>
-<p>npm install hexo-deployer-git –save</p>
+<p>npm install hexo-deployer-git —save</p>
 </li>
 <li><p>然后就可以打开ovshinsky.github.io查看效果</p>
 </li>
 </ol>
 <h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>1.安装主题</p>
 <p>在主文件夹里运行cmd：</p>
-<p>git clone <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next.git">https://github.com/theme-next/hexo-theme-next.git</a> themes&#x2F;next</p>
+<p>git clone <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next.git">https://github.com/theme-next/hexo-theme-next.git</a> themes/next</p>
 <p>切换版本（可选）：</p>
-<p>cd themes&#x2F;hexo-theme-next</p>
-<p>git checkout tags&#x2F;v6.0.1</p>
+<p>cd themes/hexo-theme-next</p>
+<p>git checkout tags/v6.0.1</p>
 <p>2.配置主题</p>
 <p>打开主文件夹中的_config.yml，配置为theme:next</p>
 <h3 id="评论配置："><a href="#评论配置：" class="headerlink" title="评论配置："></a>评论配置：</h3><p>采用gitalk配置，next的主题里预留了接口：</p>
 <p>打开next文件夹中的_config.yml，创建一个Comment仓库，配置为</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">gitalk:</span><br><span class="line">  enable: true #false</span><br><span class="line">  github_id: ovshinsky # GitHub repo owner</span><br><span class="line">  repo: BlogComments # Repository name to store issues</span><br><span class="line">  client_id: 4299921ded3b8e***** # GitHub Application Client ID</span><br><span class="line">  client_secret: 90fa712acbeec6ccc4e62************** # GitHub Application Client Secret</span><br><span class="line">  admin_user: ovshinsky # GitHub repo owner and collaborators, only these guys can initialize gitHub issues</span><br><span class="line">  distraction_free_mode: false # Facebook-like distraction free mode</span><br><span class="line">  \# Gitalk&#x27;s display language depends on user&#x27;s browser or system environment</span><br><span class="line">  \# If you want everyone visiting your site to see a uniform language, you can set a force language value</span><br><span class="line">  \# Available values: en | es-ES | fr | ru | zh-CN | zh-TW</span><br><span class="line">  language: </span><br></pre></td></tr></table></figure>
-
 <h3 id="图片配置"><a href="#图片配置" class="headerlink" title="图片配置:"></a>图片配置:</h3><p>安装依赖：npm install hexo-renderer-marked</p>
 <p>在_config.yml中设置：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">marked:</span></span><br><span class="line">  <span class="attr">prependRoot:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">postAsset:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
 <p>最后，按如下方法修改typora的配置即可：</p>
-<p><img src="/../pictures/image-20231221133235218.png" alt="image-20231221133235218"></p>
+<p><img src="../pictures/image-20231221133235218.png" alt="image-20231221133235218"></p>
 <h4 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h4><ol>
 <li><a target="_blank" rel="noopener" href="http://home.ustc.edu.cn/~liujunyan/blog/hexo-next-theme-config/#more">Hexo 博客 NexT 主题的安装使用 | Julian’s blog (ustc.edu.cn)</a>, access in 2023.12.21.</li>
 <li>“了不起的markdown”, 毕小朋，电子工业出版社，2019.</li>
@@ -948,6 +950,7 @@
 <p>布局默认为[_drafts]文章，或者[_drafts] 草稿；或者[source]页面。</p>
 <p>可以通过publish _drafts &lt;标题&gt;来发布草稿</p>
 <p>其中布局和保存文件夹的对应关系如下：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -955,7 +958,8 @@
 <th><code>source/_posts</code></th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>page</code></td>
 <td><code>source</code></td>
 </tr>
@@ -963,14 +967,15 @@
 <td><code>draft</code></td>
 <td><code>source/_drafts</code></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h4 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h4><p>hexo clean</p>
 <p>hexo g</p>
 <p>hexo s</p>
 <h4 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h4><p>hexo d</p>
 <h4 id="添加附件"><a href="#添加附件" class="headerlink" title="添加附件"></a>添加附件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;/download/[文件名] download&gt;[想要显示的文本]&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-
-<p>REF: <a target="_blank" rel="noopener" href="https://lasonneil.github.io/2023/07/07/posts/Hexo%E6%B7%BB%E5%8A%A0%E9%99%84%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">Hexo添加附件下载功能 | 清河的博客 (lasonneil.github.io)</a></p>
+<p>REF: <a target="_blank" rel="noopener" href="https://lasonneil.github.io/2023/07/07/posts/Hexo添加附件下载功能/">Hexo添加附件下载功能 | 清河的博客 (lasonneil.github.io)</a></p>
 
       
     </div>
@@ -1044,16 +1049,12 @@
       
           <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
@@ -1181,7 +1182,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">7k</span>
+    <span title="站点总字数">8k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
@@ -1279,6 +1280,8 @@ if (document.querySelectorAll('pre.mermaid').length) {
 }
 </script>
 
+
+  
 
   
 

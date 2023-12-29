@@ -49,29 +49,27 @@
 <li><p>部署执行命令：</p>
 <p>hexo d</p>
 <p>可能需要安装插件：</p>
-<p>npm install hexo-deployer-git –save</p>
+<p>npm install hexo-deployer-git —save</p>
 </li>
 <li><p>然后就可以打开ovshinsky.github.io查看效果</p>
 </li>
 </ol>
 <h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>1.安装主题</p>
 <p>在主文件夹里运行cmd：</p>
-<p>git clone <a href="https://github.com/theme-next/hexo-theme-next.git">https://github.com/theme-next/hexo-theme-next.git</a> themes&#x2F;next</p>
+<p>git clone <a href="https://github.com/theme-next/hexo-theme-next.git">https://github.com/theme-next/hexo-theme-next.git</a> themes/next</p>
 <p>切换版本（可选）：</p>
-<p>cd themes&#x2F;hexo-theme-next</p>
-<p>git checkout tags&#x2F;v6.0.1</p>
+<p>cd themes/hexo-theme-next</p>
+<p>git checkout tags/v6.0.1</p>
 <p>2.配置主题</p>
 <p>打开主文件夹中的_config.yml，配置为theme:next</p>
 <h3 id="评论配置："><a href="#评论配置：" class="headerlink" title="评论配置："></a>评论配置：</h3><p>采用gitalk配置，next的主题里预留了接口：</p>
 <p>打开next文件夹中的_config.yml，创建一个Comment仓库，配置为</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gitalk:</span><br><span class="line">  enable: true #false</span><br><span class="line">  github_id: ovshinsky # GitHub repo owner</span><br><span class="line">  repo: BlogComments # Repository name to store issues</span><br><span class="line">  client_id: 4299921ded3b8e***** # GitHub Application Client ID</span><br><span class="line">  client_secret: 90fa712acbeec6ccc4e62************** # GitHub Application Client Secret</span><br><span class="line">  admin_user: ovshinsky # GitHub repo owner and collaborators, only these guys can initialize gitHub issues</span><br><span class="line">  distraction_free_mode: false # Facebook-like distraction free mode</span><br><span class="line">  \# Gitalk&#x27;s display language depends on user&#x27;s browser or system environment</span><br><span class="line">  \# If you want everyone visiting your site to see a uniform language, you can set a force language value</span><br><span class="line">  \# Available values: en | es-ES | fr | ru | zh-CN | zh-TW</span><br><span class="line">  language: </span><br></pre></td></tr></table></figure>
-
 <h3 id="图片配置"><a href="#图片配置" class="headerlink" title="图片配置:"></a>图片配置:</h3><p>安装依赖：npm install hexo-renderer-marked</p>
 <p>在_config.yml中设置：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">marked:</span></span><br><span class="line">  <span class="attr">prependRoot:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">postAsset:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
 <p>最后，按如下方法修改typora的配置即可：</p>
-<p><img src="/../pictures/image-20231221133235218.png" alt="image-20231221133235218"></p>
+<p><img src="../pictures/image-20231221133235218.png" alt="image-20231221133235218"></p>
 <h4 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h4><ol>
 <li><a href="http://home.ustc.edu.cn/~liujunyan/blog/hexo-next-theme-config/#more">Hexo 博客 NexT 主题的安装使用 | Julian’s blog (ustc.edu.cn)</a>, access in 2023.12.21.</li>
 <li>“了不起的markdown”, 毕小朋，电子工业出版社，2019.</li>
@@ -99,31 +97,8 @@
   </entry>
   <entry>
     <title>工作日记</title>
-    <url>/2023/12/21/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>今天继续配置了一会blog，配置了图片功能以及乱七八糟的其他东西。</p>
-<p>一会应该会写毕业论文把，然后晚上要开组会。</p>
-]]></content>
-      <tags>
-        <tag>lifelog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>工作日记</title>
     <url>/2023/12/22/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>今天陪龙龙测试了cumec的片子，本来说帮他调一下光栅角度，顺便就测了自己的器件，结果一片稀烂。微环的耦合系数设置小了（也可以说是掺杂之后波导损耗比预计的大，毕竟没有扫描参数，gap设置大了，准备这么和老板解释，欸，没有实现靠谱交付），然后其他的Bragg波导光栅的器件性能也有问题，还没想清楚为啥，应该可能或许是耦合系数设置小了，可能是耦合系数的仿真和实验符合的不太好。<br>下午去开了大组会，然后把衣服打包用行李箱带回了川杨。<br>大组会没有拿到优秀poster，我们的导师说是他划掉了，说我工作做的还不够好，后面应该奖励的钱他补给我。可能是他言辞有些奇怪，刚开始说是这个评分也比较random，然后又说是我做的不够好，所以说就不给我了。<br>后面仔细一想估计是组织有些失误，同分的人有些多，然后又不好说谁下谁上，我导师就说先把我剔掉了，然后后面他再补给我，感觉有点像是被做了人情。<br>其实倒也无所谓把，本来这个就是自己实验室组织着玩的，本来自己没拿到决定听遗憾&#x2F;失望&#x2F;奇怪的，后面发现拿到了又挺开心，倒也是多了一点可玩的东西，感觉自己推理的合情合理还挺有意思，只是觉得我老板明明可以大大方方的告诉我的。</p>
-]]></content>
-      <tags>
-        <tag>lifelog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>日记</title>
-    <url>/2023/12/24/%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>今天几乎没有工作</p>
-<p>今天上午睡了懒觉，然后去霜花店（南京东路）吃了熔岩鸡。</p>
-<p>在南京东路几个大商场逛逛走走，然后回川杨吃了米线。</p>
-<p>晚上准备看个电影。</p>
-<p><img src="/../pictures/image-20231224184246798.png" alt="image-20231224184246798"></p>
+    <content><![CDATA[<p>今天陪龙龙测试了cumec的片子，本来说帮他调一下光栅角度，顺便就测了自己的器件，结果一片稀烂。微环的耦合系数设置小了（也可以说是掺杂之后波导损耗比预计的大，毕竟没有扫描参数，gap设置大了，准备这么和老板解释，欸，没有实现靠谱交付），然后其他的Bragg波导光栅的器件性能也有问题，还没想清楚为啥，应该可能或许是耦合系数设置小了，可能是耦合系数的仿真和实验符合的不太好。<br>下午去开了大组会，然后把衣服打包用行李箱带回了川杨。<br>大组会没有拿到优秀poster，我们的导师说是他划掉了，说我工作做的还不够好，后面应该奖励的钱他补给我。可能是他言辞有些奇怪，刚开始说是这个评分也比较random，然后又说是我做的不够好，所以说就不给我了。<br>后面仔细一想估计是组织有些失误，同分的人有些多，然后又不好说谁下谁上，我导师就说先把我剔掉了，然后后面他再补给我，感觉有点像是被做了人情。<br>其实倒也无所谓把，本来这个就是自己实验室组织着玩的，本来自己没拿到决定听遗憾/失望/奇怪的，后面发现拿到了又挺开心，倒也是多了一点可玩的东西，感觉自己推理的合情合理还挺有意思，只是觉得我老板明明可以大大方方的告诉我的。</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
@@ -141,12 +116,26 @@
       </tags>
   </entry>
   <entry>
-    <title>test_download</title>
-    <url>/2023/12/25/test-download/</url>
-    <content><![CDATA[<p><a href="/download/test.pptx" download>测试下载</a></p>
+    <title>工作日记</title>
+    <url>/2023/12/21/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天继续配置了一会blog，配置了图片功能以及乱七八糟的其他东西。</p>
+<p>一会应该会写毕业论文把，然后晚上要开组会。</p>
 ]]></content>
       <tags>
-        <tag>技术小结</tag>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日记</title>
+    <url>/2023/12/24/%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天几乎没有工作</p>
+<p>今天上午睡了懒觉，然后去霜花店（南京东路）吃了熔岩鸡。</p>
+<p>在南京东路几个大商场逛逛走走，然后回川杨吃了米线。</p>
+<p>晚上准备看个电影。</p>
+<p><img src="../pictures/image-20231224184246798.png" alt="image-20231224184246798"></p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
       </tags>
   </entry>
   <entry>
@@ -161,31 +150,9 @@
       </tags>
   </entry>
   <entry>
-    <title>硅光研究常用软件</title>
-    <url>/2023/12/25/%E7%A1%85%E5%85%89%E7%A0%94%E7%A9%B6%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</url>
-    <content><![CDATA[<p>主要是我自己用的比较多的一些软件，有一些还没有安装：</p>
-<h5 id="Pycharm"><a href="#Pycharm" class="headerlink" title="Pycharm"></a>Pycharm</h5><p><a href="https://www.yuque.com/ningmengna-6ulrv/gu0o2u/gu4tmfgur2kqtq7o">https://www.yuque.com/ningmengna-6ulrv/gu0o2u/gu4tmfgur2kqtq7o</a></p>
-<h5 id="Adobe-全家桶-PS、AI、Acrobat"><a href="#Adobe-全家桶-PS、AI、Acrobat" class="headerlink" title="Adobe 全家桶 (PS、AI、Acrobat)"></a>Adobe 全家桶 (PS、AI、<strong>Acrobat</strong>)</h5><p> <a href="https://www.yuque.com/ruanjian-jkyer/qik9br">https://www.yuque.com/ruanjian-jkyer/qik9br</a></p>
-<h5 id="MATLAB"><a href="#MATLAB" class="headerlink" title="MATLAB"></a>MATLAB</h5><h5 id="ANSYS-Lumerical-r2-3-支持gpu加速"><a href="#ANSYS-Lumerical-r2-3-支持gpu加速" class="headerlink" title="ANSYS Lumerical r2.3 支持gpu加速"></a>ANSYS Lumerical r2.3 支持gpu加速</h5><h6 id="安装教程："><a href="#安装教程：" class="headerlink" title="安装教程："></a>安装教程：</h6><p><a href="https://mp.weixin.qq.com/s?__biz=Mzk0NjI3ODE4OQ==&mid=2247572065&idx=1&sn=618093eeec4e92f2920ff168a1ede100&chksm=c30b0023f47c8935ae2bc8d5b35637a9aa1018cca0e9ff3383755a2c5a962081be19c560bff0&scene=21#wechat_redirect">【实用软件】ANSYS Lumerical 2023 R1安装教程 (qq.com)</a></p>
-<p><a href="https://blog.csdn.net/a1254098517/article/details/133737743">Lumerical FDTD 2023 R2.3安装-CSDN博客</a></p>
-<h6 id="下载链接："><a href="#下载链接：" class="headerlink" title="下载链接："></a>下载链接：</h6><p>2023r1: <a href="https://pan.baidu.com/s/1Tznv7gMIFvgvcfMpyT0ghQ?pwd=imkg">https://pan.baidu.com/s/1Tznv7gMIFvgvcfMpyT0ghQ?pwd=imkg</a> </p>
-<p>2023r2.3: <a href="https://pan.baidu.com/s/1V9j8SsaU4d2-5Zk1TUKWFQ?pwd=h9vr">https://pan.baidu.com/s/1V9j8SsaU4d2-5Zk1TUKWFQ?pwd=h9vr</a></p>
-<p>gpu加速配置教程：<a href="https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information">FDTD GPU Solver Information – Ansys Optics</a></p>
-<p><img src="/../pictures/image-20231225175420746.png" alt="image-20231225175420746"></p>
-<h6 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项:"></a>注意事项:</h6><ol>
-<li><p>GPU仿真加速不支持对称和反对称的边界条件</p>
-</li>
-<li><p>运行软件前需要先启动license manager服务</p>
-</li>
-<li><p>采用gpu仿真需要勾选：</p>
-<p><img src="/../pictures/18518186955411.png" alt="img"></p>
-</li>
-</ol>
-<h5 id="Klayout"><a href="#Klayout" class="headerlink" title="Klayout"></a>Klayout</h5><p><a href="https://www.klayout.de/build.html">KLayout Layout Viewer And Editor</a></p>
-<h5 id="L-edit"><a href="#L-edit" class="headerlink" title="L-edit"></a>L-edit</h5><h5 id="Origin"><a href="#Origin" class="headerlink" title="Origin"></a>Origin</h5><p> <a href="https://note.youdao.com/s/UJLHVtw8">https://note.youdao.com/s/UJLHVtw8</a> </p>
-<h5 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h5><h5 id="Islide"><a href="#Islide" class="headerlink" title="Islide"></a>Islide</h5><h5 id="Comsol"><a href="#Comsol" class="headerlink" title="Comsol"></a>Comsol</h5><h5 id="3ds-max-C4d"><a href="#3ds-max-C4d" class="headerlink" title="3ds max&#x2F; C4d"></a>3ds max&#x2F; C4d</h5><h6 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h6><ol>
-<li><a href="https://www.yuque.com/zhefengerhuanzaigua/bld6x5">不迷路资源库 (yuque.com)</a>，大概可以淘宝转存成百度网盘下载。</li>
-</ol>
+    <title>test_download</title>
+    <url>/2023/12/25/test-download/</url>
+    <content><![CDATA[<p><a href="/download/test.pptx" download>测试下载</a></p>
 ]]></content>
       <tags>
         <tag>技术小结</tag>
@@ -205,6 +172,37 @@
       </tags>
   </entry>
   <entry>
+    <title>硅光研究常用软件</title>
+    <url>/2023/12/25/%E7%A1%85%E5%85%89%E7%A0%94%E7%A9%B6%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</url>
+    <content><![CDATA[<p>主要是我自己用的比较多的一些软件，有一些还没有安装：</p>
+<h5 id="Pycharm"><a href="#Pycharm" class="headerlink" title="Pycharm"></a>Pycharm</h5><p><a href="https://www.yuque.com/ningmengna-6ulrv/gu0o2u/gu4tmfgur2kqtq7o">https://www.yuque.com/ningmengna-6ulrv/gu0o2u/gu4tmfgur2kqtq7o</a></p>
+<h5 id="Adobe-全家桶-PS、AI、Acrobat"><a href="#Adobe-全家桶-PS、AI、Acrobat" class="headerlink" title="Adobe 全家桶 (PS、AI、Acrobat)"></a>Adobe 全家桶 (PS、AI、<strong>Acrobat</strong>)</h5><p> <a href="https://www.yuque.com/ruanjian-jkyer/qik9br">https://www.yuque.com/ruanjian-jkyer/qik9br</a></p>
+<h5 id="MATLAB"><a href="#MATLAB" class="headerlink" title="MATLAB"></a>MATLAB</h5><h5 id="ANSYS-Lumerical-r2-3-支持gpu加速"><a href="#ANSYS-Lumerical-r2-3-支持gpu加速" class="headerlink" title="ANSYS Lumerical r2.3 支持gpu加速"></a>ANSYS Lumerical r2.3 支持gpu加速</h5><h6 id="安装教程："><a href="#安装教程：" class="headerlink" title="安装教程："></a>安装教程：</h6><p><a href="https://mp.weixin.qq.com/s?__biz=Mzk0NjI3ODE4OQ==&amp;mid=2247572065&amp;idx=1&amp;sn=618093eeec4e92f2920ff168a1ede100&amp;chksm=c30b0023f47c8935ae2bc8d5b35637a9aa1018cca0e9ff3383755a2c5a962081be19c560bff0&amp;scene=21#wechat_redirect">【实用软件】ANSYS Lumerical 2023 R1安装教程 (qq.com)</a></p>
+<p><a href="https://blog.csdn.net/a1254098517/article/details/133737743">Lumerical FDTD 2023 R2.3安装-CSDN博客</a></p>
+<h6 id="下载链接："><a href="#下载链接：" class="headerlink" title="下载链接："></a>下载链接：</h6><p>2023r1: <a href="https://pan.baidu.com/s/1Tznv7gMIFvgvcfMpyT0ghQ?pwd=imkg">https://pan.baidu.com/s/1Tznv7gMIFvgvcfMpyT0ghQ?pwd=imkg</a> </p>
+<p>2023r2.3: <a href="https://pan.baidu.com/s/1V9j8SsaU4d2-5Zk1TUKWFQ?pwd=h9vr">https://pan.baidu.com/s/1V9j8SsaU4d2-5Zk1TUKWFQ?pwd=h9vr</a></p>
+<p>gpu加速配置教程：<a href="https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information">FDTD GPU Solver Information – Ansys Optics</a></p>
+<p><img src="../pictures/image-20231225175420746.png" alt="image-20231225175420746"></p>
+<h6 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项:"></a>注意事项:</h6><ol>
+<li><p>GPU仿真加速不支持对称和反对称的边界条件</p>
+</li>
+<li><p>运行软件前需要先启动license manager服务</p>
+</li>
+<li><p>采用gpu仿真需要勾选：</p>
+<p><img src="../pictures/18518186955411.png" alt="img"></p>
+</li>
+</ol>
+<h5 id="Klayout"><a href="#Klayout" class="headerlink" title="Klayout"></a>Klayout</h5><p><a href="https://www.klayout.de/build.html">KLayout Layout Viewer And Editor</a></p>
+<h5 id="L-edit"><a href="#L-edit" class="headerlink" title="L-edit"></a>L-edit</h5><h5 id="Origin"><a href="#Origin" class="headerlink" title="Origin"></a>Origin</h5><p> <a href="https://note.youdao.com/s/UJLHVtw8">https://note.youdao.com/s/UJLHVtw8</a> </p>
+<h5 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h5><h5 id="Islide"><a href="#Islide" class="headerlink" title="Islide"></a>Islide</h5><h5 id="Comsol"><a href="#Comsol" class="headerlink" title="Comsol"></a>Comsol</h5><h5 id="3ds-max-C4d"><a href="#3ds-max-C4d" class="headerlink" title="3ds max/ C4d"></a>3ds max/ C4d</h5><h6 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h6><ol>
+<li><a href="https://www.yuque.com/zhefengerhuanzaigua/bld6x5">不迷路资源库 (yuque.com)</a>，大概可以淘宝转存成百度网盘下载。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>工作日记</title>
     <url>/2023/12/26/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<p>从川杨到实验室了，今天计划研究仿真自动优化的方法，以及完成毕业论文的绪论section。</p>
@@ -212,33 +210,23 @@
 <p>-14：38 介绍一些前人的具体工作</p>
 <p>-16：35这周把绪论弄完把</p>
 <ul>
-<li><input disabled="" type="checkbox"> Typora完成编辑 <ul>
-<li><input disabled="" type="checkbox"> 1</li>
-<li><input disabled="" type="checkbox"> 2</li>
-<li><input disabled="" type="checkbox"> 3</li>
-<li><input disabled="" type="checkbox"> 4</li>
-<li><input disabled="" type="checkbox"> 5</li>
-<li><input disabled="" type="checkbox"> 6</li>
+<li>[ ]  Typora完成编辑 <ul>
+<li>[ ] 1</li>
+<li>[ ] 2</li>
+<li>[ ] 3</li>
+<li>[ ] 4</li>
+<li>[ ] 5</li>
+<li>[ ] 6 </li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"> 整理到word，插入参考文献<ul>
-<li><input disabled="" type="checkbox"> 1</li>
-<li><input disabled="" type="checkbox"> 2</li>
-<li><input disabled="" type="checkbox"> 3</li>
-<li><input disabled="" type="checkbox"> 4</li>
+<li>[ ] 整理到word，插入参考文献<ul>
+<li>[ ] 1</li>
+<li>[ ] 2</li>
+<li>[ ] 3</li>
+<li>[ ] 4</li>
 </ul>
 </li>
 </ul>
-]]></content>
-      <tags>
-        <tag>lifelog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>工作日记</title>
-    <url>/2023/12/27/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>今天还在写绪论，昨天写完了硅光的研究背景，今天补充了多维光复用，偏振复用，模式复用的相关研究<br>进一步需要补充波长复用和超材料的相关研究文献</p>
-<p>希望明天把绪论部分的markdown写完，后天检查整理放到word文档里面</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
@@ -257,20 +245,53 @@
       </tags>
   </entry>
   <entry>
+    <title>工作日记</title>
+    <url>/2023/12/27/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天还在写绪论，昨天写完了硅光的研究背景，今天补充了多维光复用，偏振复用，模式复用的相关研究<br>进一步需要补充波长复用和超材料的相关研究文献</p>
+<p>希望明天把绪论部分的markdown写完，后天检查整理放到word文档里面</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>基于单纳米线的计算光谱仪</title>
     <url>/2023/12/29/%E5%9F%BA%E4%BA%8E%E5%8D%95%E7%BA%B3%E7%B1%B3%E7%BA%BF%E7%9A%84%E8%AE%A1%E7%AE%97%E5%85%89%E8%B0%B1%E4%BB%AA/</url>
-    <content><![CDATA[<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>本回答将简单简单的介绍杨宗银老师开发单纳米线计算光谱仪，此项研究在2019年在<em>science</em>上有报告 [1]，感兴趣的可以阅读原文，此回答可以看作该文章的导读。</p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>光谱仪的目的是得到入射光在不同波上的强度，也就是得到光谱。杨老师的方法是基于光谱重构原理设计的计算光谱仪，2013年，<em>Cao Hui</em>老师最早在<em>nature photonics</em>上报道过这种方法 [2]，并且后续做了一系列工作，潜在应用包括光谱相机，血氧检测等。</p>
-<h3 id="方法和设计原理"><a href="#方法和设计原理" class="headerlink" title="方法和设计原理"></a>方法和设计原理</h3><p>光谱仪的方法是基于光谱重构，具体原理可以简单介绍如下：</p>
-<h5 id="1-光强可以通过材料中的电流来探测"><a href="#1-光强可以通过材料中的电流来探测" class="headerlink" title="1. 光强可以通过材料中的电流来探测"></a>1. 光强可以通过材料中的电流来探测</h5><p>我们高中的时候可能学过光电效应，光子会被吸收把电子从价带顶激发到导带底。光探测器的原理与此类似，也就就是一定强度的光照射在特定的半导体材料上会产生自由载流子，进而在反偏PN结中形成电流。简言之，就是光强可以通过材料中的电流来探测。</p>
-<h5 id="2-光强可以叠加"><a href="#2-光强可以叠加" class="headerlink" title="2. 光强可以叠加"></a>2. 光强可以叠加</h5><p>比如说，波长为$<em>λ_1</em>$，强度为*$a_1$*的光产生的电流为$<em>c_1</em>$，波长为$<em>λ_2</em>$，强度为$a_2$的光子产生的电流为$<em>c_2</em>$，那么当这两束光同时入射时，产生的电流为 $<em>c_1 + c_2</em>$。</p>
-<p>当连续光入射时，探测到的电流为：<br>$$<br>\int_{\lambda 1}^{\lambda 2} F(\lambda) R_1(\lambda) d \lambda&#x3D;I_1<br>$$<br>其中$F(\lambda)$是入射光谱，$R_1(\lambda)$可以理解为特定光探测器的光电转换系数。</p>
-<h5 id="3-假如我们制造了2个光探测器"><a href="#3-假如我们制造了2个光探测器" class="headerlink" title="3. 假如我们制造了2个光探测器"></a>3. 假如我们制造了2个光探测器</h5><p>比如说，波长为$λ_1$，强度为$a_1$的光产生的电流为$c_1$，波长为$λ2$，强度为$a_2$的光同时入射时，产生的电流在探测器1上为 $I_1$，在探测器2上为$I_2$，那么我们可以得到如下方程组：<br>$$<br>r_1(\lambda_1)*a_1 + r_1(\lambda_2)*a_2 &#x3D; I_1\<br>r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 &#x3D; I_2<br>$$<br>我们知道这是一个二元一次方程组，在已知$r_1(\lambda_i),I_i$的情况，可以轻松算出$a_1,a_2$。</p>
-<h5 id="3-假如我们制造了100个光探测器"><a href="#3-假如我们制造了100个光探测器" class="headerlink" title="3. 假如我们制造了100个光探测器"></a>3. 假如我们制造了100个光探测器</h5><p>假如我们制造了100个光探测器，并且提前测得了每个光探测器在不同波长的光电转换系数$Ri(λ)$。可以得到：<br>$$<br>\begin{gathered}<br>\int_{\lambda 1}^{\lambda 2} F(\lambda) R_1(\lambda) d \lambda&#x3D;I_1 \<br>\int_{\lambda 1}^{\lambda 2} F(\lambda) R_2(\lambda) d \lambda&#x3D;I_2 \<br>\vdots \<br>\int_{\lambda 1}^{\lambda 2} F(\lambda) R_n(\lambda) d \lambda&#x3D;I_n<br>\end{gathered}<br>$$<br>那么我们把他们同样离散化后（就是光谱划分为$\lambda_1, \lambda_2,…\lambda_n$），可以得到一个n元方程组，在已知$R_i(\lambda)$，并且测得$I_i$的情况下，</p>
-<p>通过矩阵求逆&#x2F;最小误差等等方法可以求出来光谱信号（如MATLAB CVX toolbox）。</p>
-<h5 id="4-假如我们把这100个光探测器做在一根纳米线上"><a href="#4-假如我们把这100个光探测器做在一根纳米线上" class="headerlink" title="4.假如我们把这100个光探测器做在一根纳米线上"></a>4.假如我们把这100个光探测器做在一根纳米线上</h5><p><img src="D:/myblog/source/pictures/image-20231229120606633.png" alt="image-20231229120606633"></p>
-<p>假如我们把这100个光探测器做在一根纳米线上，并且每过一段长度放一个电极来检测电流。那么我们就得到了一个超小型的片上计算光谱仪。</p>
-<h3 id="个人评价"><a href="#个人评价" class="headerlink" title="个人评价"></a>个人评价</h3><p>因为我本身不做这个领域，只能分享一些道听途说的事情，有错漏可以指出，有什么写的不太清楚，或者想进一步了解的地方也可以评论区提问。</p>
+    <content><![CDATA[<h3 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h3>
+<p>本回答将简单简单的介绍杨宗银老师开发单纳米线计算光谱仪，此项研究在2019年在<em>science</em>上有报告 [1]，感兴趣的可以阅读原文，此回答可以看作该文章的导读。</p>
+<h3 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h3>
+<p>光谱仪的目的是得到入射光在不同波上的强度，也就是得到光谱。杨老师的方法是基于光谱重构原理设计的计算光谱仪，2013年，<em>Cao Hui</em>老师最早在<em>nature photonics</em>上报道过这种方法 [2]，并且后续做了一系列工作，潜在应用包括光谱相机，血氧检测等。</p>
+<h3 id="方法和设计原理"><a class="markdownIt-Anchor" href="#方法和设计原理"></a> 方法和设计原理</h3>
+<p>光谱仪的方法是基于光谱重构，具体原理可以简单介绍如下：</p>
+<h5 id="1-光强可以通过材料中的电流来探测"><a class="markdownIt-Anchor" href="#1-光强可以通过材料中的电流来探测"></a> 1. 光强可以通过材料中的电流来探测</h5>
+<p>我们高中的时候可能学过光电效应，光子会被吸收把电子从价带顶激发到导带底。光探测器的原理与此类似，也就就是一定强度的光照射在特定的半导体材料上会产生自由载流子，进而在反偏PN结中形成电流。简言之，就是光强可以通过材料中的电流来探测。</p>
+<h5 id="2-光强可以叠加"><a class="markdownIt-Anchor" href="#2-光强可以叠加"></a> 2. 光强可以叠加</h5>
+<p>比如说，波长为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">λ_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，强度为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">a_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的光产生的电流为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">c_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，波长为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">λ_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，强度为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">a_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的光子产生的电流为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">c_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，那么当这两束光同时入射时，产生的电流为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>+</mo><msub><mi>c</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">c_1 + c_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>。</p>
+<p>当连续光入射时，探测到的电流为：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mo>∫</mo><mrow><mi>λ</mi><mn>1</mn></mrow><mrow><mi>λ</mi><mn>2</mn></mrow></msubsup><mi>F</mi><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><msub><mi>R</mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><mi>d</mi><mi>λ</mi><mo>=</mo><msub><mi>I</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\int_{\lambda 1}^{\lambda 2} F(\lambda) R_1(\lambda) d \lambda=I_1
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.510958em;vertical-align:-0.9119499999999999em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011249999999999316em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5990080000000002em;"><span style="top:-1.7880500000000001em;margin-left:-0.44445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">λ</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.8129000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">λ</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119499999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<p>其中<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">F(\lambda)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span></span></span></span>是入射光谱，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">R_1(\lambda)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span></span></span></span>可以理解为特定光探测器的光电转换系数。</p>
+<h5 id="3-假如我们制造了2个光探测器"><a class="markdownIt-Anchor" href="#3-假如我们制造了2个光探测器"></a> 3. 假如我们制造了2个光探测器</h5>
+<p>比如说，波长为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">λ_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，强度为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">a_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的光产生的电流为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">c_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，波长为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">λ2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">λ</span><span class="mord">2</span></span></span></span>，强度为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">a_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的光同时入射时，产生的电流在探测器1上为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">I_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，在探测器2上为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">I_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，那么我们可以得到如下方程组：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>r</mi><mn>1</mn></msub><mo stretchy="false">(</mo><msub><mi>λ</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>∗</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>r</mi><mn>1</mn></msub><mo stretchy="false">(</mo><msub><mi>λ</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>∗</mo><msub><mi>a</mi><mn>2</mn></msub><mo>=</mo><msub><mi>I</mi><mn>1</mn></msub><mspace linebreak="newline"></mspace><msub><mi>r</mi><mn>2</mn></msub><mo stretchy="false">(</mo><msub><mi>λ</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>∗</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>r</mi><mn>2</mn></msub><mo stretchy="false">(</mo><msub><mi>λ</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>∗</mo><msub><mi>a</mi><mn>2</mn></msub><mo>=</mo><msub><mi>I</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">r_1(\lambda_1)*a_1 + r_1(\lambda_2)*a_2 = I_1\\
+r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 = I_2
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<p>我们知道这是一个二元一次方程组，在已知<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mn>1</mn></msub><mo stretchy="false">(</mo><msub><mi>λ</mi><mi>i</mi></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><msub><mi>I</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">r_1(\lambda_i),I_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的情况，可以轻松算出<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>a</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">a_1,a_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>。</p>
+<h5 id="3-假如我们制造了100个光探测器"><a class="markdownIt-Anchor" href="#3-假如我们制造了100个光探测器"></a> 3. 假如我们制造了100个光探测器</h5>
+<p>假如我们制造了100个光探测器，并且提前测得了每个光探测器在不同波长的光电转换系数<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mi>i</mi><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Ri(λ)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">i</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span></span></span></span>。可以得到：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.24999999999999992em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><msubsup><mo>∫</mo><mrow><mi>λ</mi><mn>1</mn></mrow><mrow><mi>λ</mi><mn>2</mn></mrow></msubsup><mi>F</mi><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><msub><mi>R</mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><mi>d</mi><mi>λ</mi><mo>=</mo><msub><mi>I</mi><mn>1</mn></msub></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><msubsup><mo>∫</mo><mrow><mi>λ</mi><mn>1</mn></mrow><mrow><mi>λ</mi><mn>2</mn></mrow></msubsup><mi>F</mi><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><msub><mi>R</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><mi>d</mi><mi>λ</mi><mo>=</mo><msub><mi>I</mi><mn>2</mn></msub></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mi><mi mathvariant="normal">⋮</mi><mpadded height="+0em" voffset="0em"><mspace mathbackground="black" width="0em" height="1.5em"></mspace></mpadded></mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><msubsup><mo>∫</mo><mrow><mi>λ</mi><mn>1</mn></mrow><mrow><mi>λ</mi><mn>2</mn></mrow></msubsup><mi>F</mi><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><msub><mi>R</mi><mi>n</mi></msub><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><mi>d</mi><mi>λ</mi><mo>=</mo><msub><mi>I</mi><mi>n</mi></msub></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{gathered}
+\int_{\lambda 1}^{\lambda 2} F(\lambda) R_1(\lambda) d \lambda=I_1 \\
+\int_{\lambda 1}^{\lambda 2} F(\lambda) R_2(\lambda) d \lambda=I_2 \\
+\vdots \\
+\int_{\lambda 1}^{\lambda 2} F(\lambda) R_n(\lambda) d \lambda=I_n
+\end{gathered}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:10.592874em;vertical-align:-5.046437em;"></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:5.546437em;"><span style="top:-7.634929em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011249999999999316em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5990080000000002em;"><span style="top:-1.7880500000000001em;margin-left:-0.44445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">λ</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.8129000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">λ</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119499999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-4.823970999999999em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011249999999999316em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5990080000000002em;"><span style="top:-1.7880500000000001em;margin-left:-0.44445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">λ</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.8129000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">λ</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119499999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.1120209999999995em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord">⋮</span><span class="mord rule" style="border-right-width:0em;border-top-width:1.5em;bottom:0em;"></span></span></span></span><span style="top:0.1469870000000002em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011249999999999316em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5990080000000002em;"><span style="top:-1.7880500000000001em;margin-left:-0.44445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">λ</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.8129000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">λ</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119499999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:5.046437em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>那么我们把他们同样离散化后（就是光谱划分为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>λ</mi><mn>2</mn></msub><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><msub><mi>λ</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_1, \lambda_2,...\lambda_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>），可以得到一个n元方程组，在已知<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>i</mi></msub><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">R_i(\lambda)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span></span></span></span>，并且测得<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">I_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的情况下，</p>
+<p>通过矩阵求逆/最小误差等等方法可以求出来光谱信号（如MATLAB CVX toolbox）。</p>
+<h5 id="4假如我们把这100个光探测器做在一根纳米线上"><a class="markdownIt-Anchor" href="#4假如我们把这100个光探测器做在一根纳米线上"></a> 4.假如我们把这100个光探测器做在一根纳米线上</h5>
+<p><img src="../pictures/image-20231229120606633.png" alt="image-20231229120606633" />假如我们把这100个光探测器做在一根纳米线上，并且每过一段长度放一个电极来检测电流。那么我们就得到了一个超小型的片上计算光谱仪。</p>
+<h3 id="个人评价"><a class="markdownIt-Anchor" href="#个人评价"></a> 个人评价</h3>
+<p>因为我本身不做这个领域，只能分享一些道听途说的事情，有错漏可以指出，有什么写的不太清楚，或者想进一步了解的地方也可以评论区提问。</p>
 <p>和大部分科研工作相比，这项工作确实挺有意思的，但依然有很多问题需要解决。</p>
 <ol>
 <li>由于矩阵的病态性，不能确定入射光谱一定能被计算出来</li>
@@ -278,51 +299,10 @@
 <li>可能这个光谱系统可能不是非常稳定。</li>
 </ol>
 <p>总之，在快到2024年的今天，这个坑里面可以继续灌的水不多了，大家入坑请谨慎。</p>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
-<li>Zongyin Yang <em>et al.</em>, Single-nanowire spectrometers.<em>Science</em><strong>365</strong>,1017-1020(2019).DOI:<a href="https://doi.org/10.1126/science.aax8814">10.1126&#x2F;science.aax8814</a></li>
-<li>Redding, B., Liew, S., Sarma, R. <em>et al.</em> Compact spectrometer based on a disordered photonic chip. <em>Nature Photon</em> <strong>7</strong>, 746–751 (2013). <a href="https://doi.org/10.1038/nphoton.2013.190">https://doi.org/10.1038/nphoton.2013.190</a></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>技术小结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/12/20/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>采用gpu进行lumericalFDTD仿真</title>
-    <url>/2023/12/28/%E9%87%87%E7%94%A8gpu%E8%BF%9B%E8%A1%8ClumericalFDTD%E4%BB%BF%E7%9C%9F/</url>
-    <content><![CDATA[<h2 id="硬件需求"><a href="#硬件需求" class="headerlink" title="硬件需求"></a>硬件需求</h2><p>Nvidia CUDA driver version 450.80.02 or later (Linux), version 452.39 or later (windows)</p>
-<h2 id="仿真需求"><a href="#仿真需求" class="headerlink" title="仿真需求"></a>仿真需求</h2><p>需要设置为express模式：</p>
-<p><img src="/../pictures/18518186955411.png" alt="img"></p>
-<h2 id="目前限制"><a href="#目前限制" class="headerlink" title="目前限制"></a>目前限制</h2><ol>
-<li>边界条件仅支持PML</li>
-<li>frequency dependent mode source profiles are not supported.</li>
-<li>time monitors 会限制仿真速度</li>
-</ol>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol>
-<li>For multiple jobs it is recommended to run them in series rather than in parallel.</li>
-</ol>
-<h2 id="脚本实现"><a href="#脚本实现" class="headerlink" title="脚本实现"></a>脚本实现</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">setnamed(&quot;FDTD&quot;, &quot;express mode&quot;, true);</span><br><span class="line">setresource(&quot;FDTD&quot;,&quot;GPU&quot;, true);</span><br><span class="line">setresource(&quot;FDTD&quot;, 3, &quot;GPU Device&quot;, &quot;Auto&quot;);</span><br><span class="line">setresource(&quot;FDTD&quot;, &quot;GPU&quot;, false);</span><br><span class="line">setresource(&quot;FDTD&quot;, &quot;CPU&quot;, true); //&lt; equivalent to previous line</span><br></pre></td></tr></table></figure>
-
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><a href="https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information">https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information</a></li>
+<h3 id="参考文献"><a class="markdownIt-Anchor" href="#参考文献"></a> 参考文献</h3>
+<ol>
+<li>Zongyin Yang <em>et al.</em>, Single-nanowire spectrometers. <em>Science</em><strong>365</strong>,1017-1020(2019). DOI:<a href="https://doi.org/10.1126/science.aax8814">10.1126/science.aax8814</a></li>
+<li>Redding, B., Liew, S., Sarma, R. <em>et al.</em> Compact spectrometer based on a disordered photonic chip. <em>Nature Photon</em> <strong>7</strong>, 746–751 (2013).  <a href="https://doi.org/10.1038/nphoton.2013.190">https://doi.org/10.1038/nphoton.2013.190</a></li>
 </ol>
 ]]></content>
       <tags>
@@ -340,6 +320,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2023/12/20/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>使用说明书</title>
     <url>/2023/12/20/%E9%9D%9E%E5%B8%B8%E7%AE%80%E7%95%A5%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
     <content><![CDATA[<h4 id="Hexo运行"><a href="#Hexo运行" class="headerlink" title="Hexo运行"></a>Hexo运行</h4><p>在文件夹中右键，选择命令提示符或者git bush</p>
@@ -347,6 +341,7 @@
 <p>布局默认为[_drafts]文章，或者[_drafts] 草稿；或者[source]页面。</p>
 <p>可以通过publish _drafts &lt;标题&gt;来发布草稿</p>
 <p>其中布局和保存文件夹的对应关系如下：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -354,7 +349,8 @@
 <th><code>source/_posts</code></th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>page</code></td>
 <td><code>source</code></td>
 </tr>
@@ -362,14 +358,38 @@
 <td><code>draft</code></td>
 <td><code>source/_drafts</code></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h4 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h4><p>hexo clean</p>
 <p>hexo g</p>
 <p>hexo s</p>
 <h4 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h4><p>hexo d</p>
 <h4 id="添加附件"><a href="#添加附件" class="headerlink" title="添加附件"></a>添加附件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;/download/[文件名] download&gt;[想要显示的文本]&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-
-<p>REF: <a href="https://lasonneil.github.io/2023/07/07/posts/Hexo%E6%B7%BB%E5%8A%A0%E9%99%84%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">Hexo添加附件下载功能 | 清河的博客 (lasonneil.github.io)</a></p>
+<p>REF: <a href="https://lasonneil.github.io/2023/07/07/posts/Hexo添加附件下载功能/">Hexo添加附件下载功能 | 清河的博客 (lasonneil.github.io)</a></p>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>采用gpu进行lumericalFDTD仿真</title>
+    <url>/2023/12/28/%E9%87%87%E7%94%A8gpu%E8%BF%9B%E8%A1%8ClumericalFDTD%E4%BB%BF%E7%9C%9F/</url>
+    <content><![CDATA[<h2 id="硬件需求"><a href="#硬件需求" class="headerlink" title="硬件需求"></a>硬件需求</h2><p>Nvidia CUDA driver version 450.80.02 or later (Linux), version 452.39 or later (windows)</p>
+<h2 id="仿真需求"><a href="#仿真需求" class="headerlink" title="仿真需求"></a>仿真需求</h2><p>需要设置为express模式：</p>
+<p><img src="../pictures/18518186955411.png" alt="img"></p>
+<h2 id="目前限制"><a href="#目前限制" class="headerlink" title="目前限制"></a>目前限制</h2><ol>
+<li>边界条件仅支持PML</li>
+<li>frequency dependent mode source profiles are not supported.</li>
+<li>time monitors 会限制仿真速度</li>
+</ol>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol>
+<li>For multiple jobs it is recommended to run them in series rather than in parallel.</li>
+</ol>
+<h2 id="脚本实现"><a href="#脚本实现" class="headerlink" title="脚本实现"></a>脚本实现</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">setnamed(&quot;FDTD&quot;, &quot;express mode&quot;, true);</span><br><span class="line">setresource(&quot;FDTD&quot;,&quot;GPU&quot;, true);</span><br><span class="line">setresource(&quot;FDTD&quot;, 3, &quot;GPU Device&quot;, &quot;Auto&quot;);</span><br><span class="line">setresource(&quot;FDTD&quot;, &quot;GPU&quot;, false);</span><br><span class="line">setresource(&quot;FDTD&quot;, &quot;CPU&quot;, true); //&lt; equivalent to previous line</span><br></pre></td></tr></table></figure>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><a href="https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information">https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information</a></li>
+</ol>
 ]]></content>
       <tags>
         <tag>技术小结</tag>
