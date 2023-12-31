@@ -520,4 +520,31 @@ r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 = I_2
         <tag>lifelog</tag>
       </tags>
   </entry>
+  <entry>
+    <title>google学术+zotero+Xmousebutton快速导入参考文献的方法</title>
+    <url>/2023/12/31/google%E5%AD%A6%E6%9C%AF-zotero-Xmousebutton%E5%BF%AB%E9%80%9F%E5%AF%BC%E5%85%A5%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="方法"><a class="markdownIt-Anchor" href="#方法"></a> 方法</h3>
+<p>google 学术里面选择引用-&gt;BibTeX</p>
+<p><img src="../pictures/image-20231231204002660.png" alt="image-20231231204002660" /></p>
+<p><em>用BibTeX的原因是其他格式的的好像短时间下载多了ip会被ban</em></p>
+<p>鼠标侧键复制</p>
+<p>下面是x mouse button的配置</p>
+<p><img src="../pictures/image-20231231204026045.png" alt="image-20231231204026045" /></p>
+<p>鼠标中键导入到zotero中</p>
+<p><img src="../pictures/image-20231231204041281.png" alt="image-20231231204041281" />最后在word里面使用</p>
+<p><img src="../pictures/image-20231231204136679.png" alt="image-20231231204136679" /></p>
+<h3 id="好处"><a class="markdownIt-Anchor" href="#好处"></a> 好处：</h3>
+<ol>
+<li>
+<p>google学术抓取的一般参考文献的人名、页码等不会出错</p>
+</li>
+<li>
+<p>方便快捷，适合大量参考文献的格式统一和抓取</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
 </search>
