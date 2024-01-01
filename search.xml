@@ -421,6 +421,8 @@
     <title>工作日记</title>
     <url>/2024/01/01/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<p>年份已经变成2024打头了呢<br>今天上午去穿堂风和小超的小伙伴们吃了饭<br>聊了聊工作的事情，心里又给张江加了一分，因为张江的领导班子的级别很高<br>想着每次想完之后的结论应该写一写记录一下，没有记录下来下次忘了就白想了<br>吃完饭到复旦张江学会习坐一会 可能攒一会毕业论文<br>但其实不太想干活</p>
+<p>晚上插了一会儿参考文献，解决了hexo有时候图片不显示的问题。</p>
+<p>P.S. 目前还是先好好把手头的事情做好，超材料非线性谐振腔的事情还是别想了，过两个星期还得弄文章返修的事情</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
@@ -481,6 +483,7 @@
 <h4 id="添加附件"><a href="#添加附件" class="headerlink" title="添加附件"></a>添加附件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;/download/[文件名] download&gt;[想要显示的文本]&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 
 <p>REF: <a href="https://lasonneil.github.io/2023/07/07/posts/Hexo%E6%B7%BB%E5%8A%A0%E9%99%84%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">Hexo添加附件下载功能 | 清河的博客 (lasonneil.github.io)</a></p>
+<h4 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h4><p>插入图片后把<code>.md</code>文件中前面两个点删掉，可能typora和网页导入的方法不一样。</p>
 ]]></content>
       <tags>
         <tag>技术小结</tag>
