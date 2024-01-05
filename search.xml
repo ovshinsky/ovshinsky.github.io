@@ -389,11 +389,14 @@
 <li>地理位置更方便（置信区间：95%）</li>
 <li>起点更高（置信区间：95%）</li>
 <li>没有末位淘汰</li>
+<li>专业博士的扩招利好张江</li>
 </ol>
 <h2 id="华为的好处"><a href="#华为的好处" class="headerlink" title="华为的好处"></a>华为的好处</h2><ol>
 <li>做的事情有落地压力</li>
 <li>工资更高</li>
 <li>有较多的前人留下来的工作经验积累</li>
+<li>因为实实在在做事情所以更稳定</li>
+<li>平台更大</li>
 </ol>
 ]]></content>
       <tags>
@@ -519,10 +522,39 @@
     <title>工作日记</title>
     <url>/2024/01/04/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<p>今日安排：<br>今天准备先填一下乾元实验室的应聘登记表√<br>然后画一下最后一章节多维复用的示意图（可以放到今天组会PPT里面），也可以放到毕业论文里面√</p>
-<p>还有时间的话做一两篇journal tracking，整理一下微环+swg+神经网络激活函数的方法<br>然后继续写毕业论文的原理部分<br>晚上开组会，开完组会回家</p>
+<p>还有时间的话做一两篇journal tracking，整理一下微环+swg+神经网络激活函数的方法√<br>然后继续写毕业论文的原理部分√<br>晚上开组会，开完组会回家</p>
 <p>刚刚整理了一会儿仿真文件，把长度double了，然后跑TM的optimization的inverse design。</p>
-<p>接下来准备整理一下multiple mode compatible PBS 的结果，也可以放到毕业论文里面，不过可能要先优化一下参数。大体思路就是TE好的话就减少宽度，TM好的话就增加宽度【大概可能是这样子吧】。</p>
+<p>接下来准备整理一下multiple mode compatible PBS 的结果，也可以放到毕业论文里面，不过可能要先优化一下参数。大体思路就是TE好的话就减少宽度，TM好的话就增加宽度【大概可能是这样子吧】。（放了一个sweep去扫描参数）</p>
 <p>突然意识到TM需要TM的wavelength demux, 要么先转成TE再弄（还是选这个方案把），要么直接弄TM模式的wavelength DEMUX。</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>multiple_modes_PBS_仿真优化记录</title>
+    <url>/2024/01/04/multiple-modes-PBS_%E4%BB%BF%E7%9C%9F%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="器件功能："><a href="#器件功能：" class="headerlink" title="器件功能："></a>器件功能：</h2><p>使TE0<del>TE4和TM0</del>TM4能分开</p>
+<h2 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h2><p><img src="/../pictures/image-20240104164502003.png" alt="image-20240104164502003"></p>
+<h2 id="优化思路："><a href="#优化思路：" class="headerlink" title="优化思路："></a>优化思路：</h2><p>大体思路就是TE4好的话就减少宽度，TM4好的话就增加宽度（trench和gap）</p>
+<h2 id="优化过程log"><a href="#优化过程log" class="headerlink" title="优化过程log"></a>优化过程log</h2><h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="gap-0-3-trench-0-3"><a href="#gap-0-3-trench-0-3" class="headerlink" title="gap &#x3D; 0.3; trench &#x3D; 0.3"></a>gap &#x3D; 0.3; trench &#x3D; 0.3</h3><p>TM4 @ 1550 nm:</p>
+<img src="../pictures/image-20240104175603572.png" alt="image-20240104175603572" style="zoom:200%;" />
+
+<h3 id="gap-0-25-trench-0-25"><a href="#gap-0-25-trench-0-25" class="headerlink" title="gap &#x3D; 0.25; trench &#x3D; 0.25"></a>gap &#x3D; 0.25; trench &#x3D; 0.25</h3><h4 id="TM4"><a href="#TM4" class="headerlink" title="TM4:"></a>TM4:</h4><p><img src="/../pictures/image-20240104211808072.png" alt="image-20240104211808072"></p>
+<p>TE4:</p>
+<p><img src="/../pictures/image-20240104212419303.png" alt="image-20240104212419303"></p>
+]]></content>
+      <tags>
+        <tag>worklog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作日记</title>
+    <url>/2024/01/05/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天没什么别的安排，就好好写毕业论文吧</p>
+<p>想起来那个1000字的项目总结啥的，有时间也可以弄一下吧</p>
+<p>在写耦合模理论部分，简单起见，我们写一下原理然后仿真分析一下吧</p>
+<p>把1000字总结写完了</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
