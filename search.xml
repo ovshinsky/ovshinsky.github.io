@@ -532,23 +532,6 @@
       </tags>
   </entry>
   <entry>
-    <title>multiple_modes_PBS_仿真优化记录</title>
-    <url>/2024/01/04/multiple-modes-PBS_%E4%BB%BF%E7%9C%9F%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h2 id="器件功能："><a href="#器件功能：" class="headerlink" title="器件功能："></a>器件功能：</h2><p>使TE0<del>TE4和TM0</del>TM4能分开</p>
-<h2 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h2><p><img src="/../pictures/image-20240104164502003.png" alt="image-20240104164502003"></p>
-<h2 id="优化思路："><a href="#优化思路：" class="headerlink" title="优化思路："></a>优化思路：</h2><p>大体思路就是TE4好的话就减少宽度，TM4好的话就增加宽度（trench和gap）</p>
-<h2 id="优化过程log"><a href="#优化过程log" class="headerlink" title="优化过程log"></a>优化过程log</h2><h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="gap-0-3-trench-0-3"><a href="#gap-0-3-trench-0-3" class="headerlink" title="gap &#x3D; 0.3; trench &#x3D; 0.3"></a>gap &#x3D; 0.3; trench &#x3D; 0.3</h3><p>TM4 @ 1550 nm:</p>
-<img src="../pictures/image-20240104175603572.png" alt="image-20240104175603572" style="zoom:200%;" />
-
-<h3 id="gap-0-25-trench-0-25"><a href="#gap-0-25-trench-0-25" class="headerlink" title="gap &#x3D; 0.25; trench &#x3D; 0.25"></a>gap &#x3D; 0.25; trench &#x3D; 0.25</h3><h4 id="TM4"><a href="#TM4" class="headerlink" title="TM4:"></a>TM4:</h4><p><img src="/../pictures/image-20240104211808072.png" alt="image-20240104211808072"></p>
-<p>TE4:</p>
-<p><img src="/../pictures/image-20240104212419303.png" alt="image-20240104212419303"></p>
-]]></content>
-      <tags>
-        <tag>worklog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>工作日记</title>
     <url>/2024/01/05/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<p>今天没什么别的安排，就好好写毕业论文吧</p>
@@ -606,11 +589,74 @@
   <entry>
     <title>工作日记</title>
     <url>/2024/01/08/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>最近形成了规律的生活作息：<br>8：30 起床<br>9：00 洗漱完成出门<br>11：00 到学校<br>11：40 吃完午饭开始干活</p>
+    <content><![CDATA[<p>最近形成了规律的生活作息：<br />
+8：30 起床<br />
+9：00 洗漱完成出门<br />
+11：00 到学校<br />
+11：40 吃完午饭开始干活</p>
 <p>解决了仿真机974xxxxxx连不上的问题（把仿真机重启了）</p>
+<p>地铁路上大部分时间在看&quot;葬送的芙莉莲&quot;，感觉自己最近陆续又看了“悉达多”，整个人变得平静了很多。这才是真正的&quot;人类圣经’'。</p>
+<p>安安静静发发呆的感觉</p>
+<p>接着应该继续写毕业论文的研究方法部分把</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PBS仿真优化记录</title>
+    <url>/2024/01/04/PBS%E4%BB%BF%E7%9C%9F%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="器件功能："><a href="#器件功能：" class="headerlink" title="器件功能："></a>器件功能：</h2><p>使TE0-TE4和TM0-TM4能分开</p>
+<h2 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h2><p><img src="/../pictures/image-20240104164502003.png" alt="image-20240104164502003"></p>
+<h2 id="优化思路："><a href="#优化思路：" class="headerlink" title="优化思路："></a>优化思路：</h2><p>大体思路就是TE4好的话就减少宽度，TM4好的话就增加宽度（trench和gap）</p>
+<h2 id="优化过程log"><a href="#优化过程log" class="headerlink" title="优化过程log"></a>优化过程log</h2><h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="gap-0-3-trench-0-3"><a href="#gap-0-3-trench-0-3" class="headerlink" title="gap &#x3D; 0.3; trench &#x3D; 0.3"></a>gap &#x3D; 0.3; trench &#x3D; 0.3</h3><p>TM4 @ 1550 nm:</p>
+<img src="../pictures/image-20240104175603572.png" alt="image-20240104175603572" style="zoom:200%;" />
+
+<h3 id="gap-0-25-trench-0-25"><a href="#gap-0-25-trench-0-25" class="headerlink" title="gap &#x3D; 0.25; trench &#x3D; 0.25"></a>gap &#x3D; 0.25; trench &#x3D; 0.25</h3><h4 id="TM4"><a href="#TM4" class="headerlink" title="TM4:"></a>TM4:</h4><p><img src="/../pictures/image-20240104211808072.png" alt="image-20240104211808072"></p>
+<p>TE4:</p>
+<p><img src="/../pictures/image-20240104212419303.png" alt="image-20240104212419303"></p>
+]]></content>
+      <tags>
+        <tag>worklog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PBS仿真优化记录</title>
+    <url>/2024/01/04/multiple-modes-PBS_%E4%BB%BF%E7%9C%9F%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="器件功能："><a href="#器件功能：" class="headerlink" title="器件功能："></a>器件功能：</h2><p>使TE0-TE4和TM0-TM4能分开</p>
+<h2 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h2><p><img src="/../pictures/image-20240104164502003.png" alt="image-20240104164502003"></p>
+<h2 id="优化思路："><a href="#优化思路：" class="headerlink" title="优化思路："></a>优化思路：</h2><p>大体思路就是TE4好的话就减少宽度，TM4好的话就增加宽度（trench和gap）</p>
+<h2 id="优化过程log"><a href="#优化过程log" class="headerlink" title="优化过程log"></a>优化过程log</h2><h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="gap-0-3-trench-0-3"><a href="#gap-0-3-trench-0-3" class="headerlink" title="gap &#x3D; 0.3; trench &#x3D; 0.3"></a>gap &#x3D; 0.3; trench &#x3D; 0.3</h3><p>TM4 @ 1550 nm:</p>
+<img src="../pictures/image-20240104175603572.png" alt="image-20240104175603572" style="zoom:200%;" />
+
+<h3 id="gap-0-25-trench-0-25"><a href="#gap-0-25-trench-0-25" class="headerlink" title="gap &#x3D; 0.25; trench &#x3D; 0.25"></a>gap &#x3D; 0.25; trench &#x3D; 0.25</h3><h4 id="TM4"><a href="#TM4" class="headerlink" title="TM4:"></a>TM4:</h4><p><img src="/../pictures/image-20240104211808072.png" alt="image-20240104211808072"></p>
+<p>TE4:</p>
+<p><img src="/../pictures/image-20240104212419303.png" alt="image-20240104212419303"></p>
+]]></content>
+      <tags>
+        <tag>worklog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>删除word公式中的占位符</title>
+    <url>/2024/01/08/%E5%88%A0%E9%99%A4word%E5%85%AC%E5%BC%8F%E4%B8%AD%E7%9A%84%E5%8D%A0%E4%BD%8D%E7%AC%A6/</url>
+    <content><![CDATA[<h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>识别插入word的公式前面有一些奇奇怪怪的空间，后面发现是占位符，想把它们删掉，从而实现公式的对齐。</p>
+<p><img src="/pictures/image-20240108131147814.png" alt="image-20240108131147814"></p>
+<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><ol>
+<li>显示占位符</li>
+</ol>
+<p><img src="/pictures/image-20240108131248181.png" alt="image-20240108131248181"></p>
+<ol start="2">
+<li>删除列</li>
+</ol>
+<p><img src="/pictures/image-20240108131334353.png" alt="image-20240108131334353"></p>
+<ol start="3">
+<li>最后效果：</li>
+</ol>
+<p><img src="/pictures/image-20240108131416647.png" alt="image-20240108131416647"></p>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
       </tags>
   </entry>
 </search>
