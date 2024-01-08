@@ -598,6 +598,9 @@
 <p>地铁路上大部分时间在看&quot;葬送的芙莉莲&quot;，感觉自己最近陆续又看了“悉达多”，整个人变得平静了很多。这才是真正的&quot;人类圣经’'。</p>
 <p>安安静静发发呆的感觉</p>
 <p>接着应该继续写毕业论文的研究方法部分把</p>
+<p>今天的桌面：</p>
+<p><img src="/pictures/image-20240108135414108.png" alt="image-20240108135414108" /></p>
+<p>13：54 - 连续喝了三杯咖啡，胃有点不舒服了，不能再喝了。</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
@@ -654,6 +657,31 @@
 <li>最后效果：</li>
 </ol>
 <p><img src="/pictures/image-20240108131416647.png" alt="image-20240108131416647"></p>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用PPT画3D结构</title>
+    <url>/2024/01/08/%E7%94%A8PPT%E7%94%BB3D%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<h2 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h2>
+<p>因为要画结构的3D示意图，发现ppt画的挺方便的。虽然可能渲染什么的高级功能差一点。</p>
+<h2 id="方法"><a class="markdownIt-Anchor" href="#方法"></a> 方法</h2>
+<h3 id="建立2d图片"><a class="markdownIt-Anchor" href="#建立2d图片"></a> 建立2D图片：</h3>
+<p>可以先画好结构，然后用iside布尔运算</p>
+<ol>
+<li></li>
+</ol>
+<p><img src="/pictures/image-20240108151959481.png" alt="image-20240108151959481" /><br />
+2.<br />
+<img src="/pictures/image-20240108151947035.png" alt="image-20240108151947035" /><br />
+3.<br />
+<img src="/pictures/image-20240108152009712.png" alt="image-20240108152009712" /></p>
+<h3 id="用ppt的三维格式进行修改"><a class="markdownIt-Anchor" href="#用ppt的三维格式进行修改"></a> 用PPT的三维格式进行修改</h3>
+<p><img src="/pictures/image-20240108152333140.png" alt="image-20240108152333140" /></p>
+<h3 id="最后结果如下"><a class="markdownIt-Anchor" href="#最后结果如下"></a> 最后结果如下：</h3>
+<p><img src="/pictures/image-20240108152354898.png" alt="image-20240108152354898" /></p>
 ]]></content>
       <tags>
         <tag>技术小结</tag>
