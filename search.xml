@@ -589,18 +589,20 @@
   <entry>
     <title>工作日记</title>
     <url>/2024/01/08/%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>最近形成了规律的生活作息：<br />
-8：30 起床<br />
-9：00 洗漱完成出门<br />
-11：00 到学校<br />
-11：40 吃完午饭开始干活</p>
+    <content><![CDATA[<p>最近形成了规律的生活作息：<br>8：30 起床<br>9：00 洗漱完成出门<br>11：00 到学校<br>11：40 吃完午饭开始干活</p>
 <p>解决了仿真机974xxxxxx连不上的问题（把仿真机重启了）</p>
-<p>地铁路上大部分时间在看&quot;葬送的芙莉莲&quot;，感觉自己最近陆续又看了“悉达多”，整个人变得平静了很多。这才是真正的&quot;人类圣经’'。</p>
+<p>地铁路上大部分时间在看”葬送的芙莉莲”，感觉自己最近陆续又看了“悉达多”，整个人变得平静了很多。这才是真正的”人类圣经’’。</p>
 <p>安安静静发发呆的感觉</p>
 <p>接着应该继续写毕业论文的研究方法部分把</p>
 <p>今天的桌面：</p>
-<p><img src="/pictures/image-20240108135414108.png" alt="image-20240108135414108" /></p>
+<p><img src="/pictures/image-20240108135414108.png" alt="image-20240108135414108"></p>
 <p>13：54 - 连续喝了三杯咖啡，胃有点不舒服了，不能再喝了。</p>
+<p>下午写完了两根波导之间的反向耦合part</p>
+<p>做了同一根波导中不同模式的正向&#x2F;反向耦合的仿真</p>
+<p>画完了结构图和正向耦合的示意图</p>
+<p>做了pbs的仿真setup</p>
+<p>明天可以先把pbs的仿真和mwbg的仿真整理出图</p>
+<p>就此下班把！&#x3D;v&#x3D;</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
@@ -685,6 +687,22 @@
 ]]></content>
       <tags>
         <tag>技术小结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Grating-assisted_mode_conversion</title>
+    <url>/2024/01/08/Grating-assisted-mode-conversion/</url>
+    <content><![CDATA[<h2 id="Structure-and-parameter"><a href="#Structure-and-parameter" class="headerlink" title="Structure and parameter:"></a>Structure and parameter:</h2><p><img src="/pictures/image-20240108174153008.png" alt="image-20240108174153008"></p>
+<p>w &#x3D; 1 μm d &#x3D; 50 nm </p>
+<h2 id="Period-initial"><a href="#Period-initial" class="headerlink" title="Period initial"></a>Period initial</h2><p>Mode effective index:</p>
+<p><img src="/pictures/image-20240108174235914.png" alt="image-20240108174235914"></p>
+<p>Period initial : 1550&#x2F;(2.751637-2.426784) &#x3D; 4771.388905 nm</p>
+<h2 id="Simulation"><a href="#Simulation" class="headerlink" title="Simulation:"></a>Simulation:</h2><p><img src="/pictures/image-20240108174318261.png" alt="image-20240108174318261"></p>
+<p>Optimized period: 5.08 μm</p>
+<h2 id="Result"><a href="#Result" class="headerlink" title="Result:"></a>Result:</h2><p>![资源 120240108](&#x2F;pictures&#x2F;资源 120240108.png)</p>
+]]></content>
+      <tags>
+        <tag>工作小结</tag>
       </tags>
   </entry>
 </search>
