@@ -699,10 +699,26 @@
 <p>Period initial : 1550&#x2F;(2.751637-2.426784) &#x3D; 4771.388905 nm</p>
 <h2 id="Simulation"><a href="#Simulation" class="headerlink" title="Simulation:"></a>Simulation:</h2><p><img src="/pictures/image-20240108174318261.png" alt="image-20240108174318261"></p>
 <p>Optimized period: 5.08 μm</p>
-<h2 id="Result"><a href="#Result" class="headerlink" title="Result:"></a>Result:</h2><p>![资源 120240108](&#x2F;pictures&#x2F;资源 120240108.png)</p>
+<h2 id="Result"><a href="#Result" class="headerlink" title="Result:"></a>Result:</h2><p><img src="/pictures/120240108.png" alt="120240108"></p>
 ]]></content>
       <tags>
         <tag>工作小结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日记</title>
+    <url>/2024/01/09/%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<h3 id="11：58"><a href="#11：58" class="headerlink" title="11：58"></a>11：58</h3><p>起床洗漱吃早饭坐地铁骑电动车吃午饭饭上完厕所到实验室了，准备开始干活。</p>
+<img src="/pictures/image-20240109121301092.png" alt="image-20240109121301092"  />
+
+<p>前段日子在看“悉达多”，今天坐地铁和其他生活的生活就会想到，悉达多所谓的三个方法手段，“斋戒，等待和思考”。</p>
+<p>对我来讲，斋戒意味着节制自己的欲望。</p>
+<p>等待意味着不要焦虑内耗，静待机会的出现。</p>
+<p>思考意味着思考发呆，默念“唵”和冥想。</p>
+<p>PBS仿真的结果不太好，TM模式依然有较强的反射，再阅读一下对应的文章吧。</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
       </tags>
   </entry>
 </search>
