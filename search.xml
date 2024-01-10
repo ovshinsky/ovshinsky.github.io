@@ -639,7 +639,7 @@
 <p><img src="/../pictures/image-20240104212419303.png" alt="image-20240104212419303"></p>
 ]]></content>
       <tags>
-        <tag>worklog</tag>
+        <tag>工作日志</tag>
       </tags>
   </entry>
   <entry>
@@ -720,6 +720,32 @@
 <p>看了一下它们仿真的图和它们claim的参数都i不一样。它们说gap和trench的宽度相等，但其实仿真的图看起来明明trench远大于trench的宽度，我估计是两倍左右，然后改了仿真效果就好了。好在我机智！</p>
 <p>仿真的问题算是解决了，然后毕业论文的理论部分应该就差再插入一些参考文献了。</p>
 <p>然后稍微准备了一下晚上乾元实验室的面试。晚上19：20~30，晚上要晚一点到家了。</p>
+<p>接着设置一下pbs的仿真参数，然后跑一个sweep，晚一点或者明天收结果把（√）</p>
+<p>然后今天把研究方法的参考文献也插好把（√）</p>
+<h3 id="18：30"><a href="#18：30" class="headerlink" title="18：30"></a>18：30</h3><p>第二章完成了，明天来了做第三章把，顺便收一下pbs的仿真结果</p>
+<p>包括10张（2×5）能量分布图</p>
+<p>2张（IL-CT VS different mode order） TE&#x2F;TM</p>
+<p>(x axis &#x3D; mode order, y axis &#x3D; IL&#x2F;CT), TE&#x2F;TM @ 1550 nm</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日记</title>
+    <url>/2024/01/10/%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天起晚了 10点多一点才起床<br>所以打了个车来学校<br>路上和chu老师说确定去ZJ lab工作了<br>中午在五餐好好吃了一顿 33 RMB</p>
+<img src="../pictures/image-20240110114836668.png" alt="image-20240110114836668" style="zoom:25%;" />
+
+<p>要开始坚持 米诺地尔、林霉素、维生素片、水乳、非那雄胺、锻炼身体，维持良好的个人形象和健康水平。</p>
+<p>今天玩了挺多的lol手游 有点疲倦了</p>
+<p>把pbs的图片整理好了，包括仿真结果和示意图。</p>
+<p>然后多多少少开始写大论文第三章了。</p>
+<p>这几章感觉应该会写的比较轻松吧</p>
+<p>预计1week&#x2F;chapter…这个时间应该还是很保守的，对自己还是宽容呢…</p>
+<p>呆0.0</p>
+<p>明天继续写大论文第三章，争取把文字部分弄完，应该没什么问题吧…</p>
+<p>今天就下班啦</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
