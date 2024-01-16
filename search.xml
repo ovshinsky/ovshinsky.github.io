@@ -816,4 +816,29 @@
         <tag>lifelog</tag>
       </tags>
   </entry>
+  <entry>
+    <title>日记</title>
+    <url>/2024/01/16/%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<h3 id="1156"><a class="markdownIt-Anchor" href="#1156"></a> 11:56</h3>
+<p>昨天不是OneDrive把GitHub弄乱了<br />
+今天准备重新换个路径clone一遍吧<br />
+不修复了，简单点好<br />
+今天地铁上在看 大明王朝的解析<br />
+觉得其实人事还是挺复杂的<br />
+并不仅仅是技术上面的事情<br />
+除了技术之外，也还有很多要学习的</p>
+<p>PBS（波导宽度50 μm）仿完了，在考虑要不要收一下结 果（√）–还是弄吧 反正迟早要弄 现在刚好弄到这里了<br />
+然后要不要提高精度再仿真看一下（mesh = 2) (√)  --简单看一下吧 时间太长就算了 没想到mesh原来已经是2了 那就这样子吧</p>
+<p>然后就接着写波长的毕业论文<br />
+等optica的返修</p>
+<p>缩写词需要统一</p>
+<p>abstract和正文中第一次出现的词要全称加缩写，之后的使用都可以用缩写。</p>
+<h3 id="1900"><a class="markdownIt-Anchor" href="#1900"></a> 19：00</h3>
+<p>今天解决了毕业论文波长调控章节的文字部分，准备下班</p>
+<p>明天调一下图片放进去，然后检查一下。</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
 </search>
