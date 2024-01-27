@@ -484,8 +484,9 @@
 <p>hexo g</p>
 <p>hexo s</p>
 <h4 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h4><p>hexo d</p>
-<h4 id="添加附件"><a href="#添加附件" class="headerlink" title="添加附件"></a>添加附件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;/download/[文件名] download&gt;[想要显示的文本]&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="添加附件"><a href="#添加附件" class="headerlink" title="添加附件"></a>添加附件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;/download/[文件名]&quot;download&gt;[想要显示的文本]&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 
+<p>记得[]要删掉。</p>
 <p>REF: <a href="https://lasonneil.github.io/2023/07/07/posts/Hexo%E6%B7%BB%E5%8A%A0%E9%99%84%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">Hexo添加附件下载功能 | 清河的博客 (lasonneil.github.io)</a></p>
 <h4 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h4><p>插入图片后把<code>.md</code>文件中前面两个点删掉，可能typora和网页导入的方法不一样。</p>
 ]]></content>
@@ -1001,7 +1002,7 @@
 <p>中午小宝出去吃的饭</p>
 <p>下午和我一起窝在屋里<br>小宝在刷手机，我在干活，可把小宝憋坏了</p>
 <p>晚上吃饭的时候出门<br>吃了淮南牛肉汤<br>然后去汉堡王吃了一个甜筒<br>窝着准备再看看RL干干活</p>
-<p><a href="/download/xiaobaochibingqiling.mp4" download>小宝吃冰淇淋</a></p>
+<p><a href="/download/xiaobaochibingqiling.mp4" download>点击下载小宝吃冰淇淋的小视频</a></p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
