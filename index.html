@@ -197,6 +197,233 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/06/multimode-reflection-wavelength-demux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ovshinsky's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/03/06/multimode-reflection-wavelength-demux/" class="post-title-link" itemprop="url">Multimode-reflection-wavelength-DEMUX</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-03-06 16:52:21 / 修改时间：17:19:58" itemprop="dateCreated datePublished" datetime="2024-03-06T16:52:21+08:00">2024-03-06</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>749</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="结构原理"><a href="#结构原理" class="headerlink" title="结构原理"></a>结构原理</h4><h4 id="用来检查模式反射光谱的代码："><a href="#用来检查模式反射光谱的代码：" class="headerlink" title="用来检查模式反射光谱的代码："></a>用来检查模式反射光谱的代码：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#首先把mode expansion MONITOR命名为in_mode</span></span><br><span class="line">T0=getresult(<span class="string">&quot;in_mode&quot;</span>,<span class="string">&quot;expansion for &quot;</span>);</span><br><span class="line">x=T0.<span class="keyword">lambda</span>;</span><br><span class="line">x=<span class="number">1000000000</span>*x;</span><br><span class="line">x=T0.<span class="keyword">lambda</span>;</span><br><span class="line">x=<span class="number">1000000000</span>*x;</span><br><span class="line">y0=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">1</span>)));</span><br><span class="line">plot(x,y0,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =5&quot;</span> );</span><br><span class="line">holdon;</span><br><span class="line">y1=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">2</span>)));</span><br><span class="line">plot(x,y1,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">y2=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">3</span>)));</span><br><span class="line">plot(x,y2,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">legend(<span class="string">&quot;TE0-TE0&quot;</span>,<span class="string">&quot;TE1-TE1&quot;</span>,<span class="string">&quot;TE2-TE2&quot;</span>);</span><br><span class="line">holdoff;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/20/%E6%97%A5%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ovshinsky's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/02/20/%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">日记</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-02-20 11:34:24 / 修改时间：11:36:05" itemprop="dateCreated datePublished" datetime="2024-02-20T11:34:24+08:00">2024-02-20</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>46</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="今天要做什么"><a href="#今天要做什么" class="headerlink" title="今天要做什么"></a>今天要做什么</h4><p>首先是要写毕业论文的多维光通信章节，首先是写研究背景<br>策略是找几篇文章翻译整合一下</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/19/%E6%97%A5%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ovshinsky's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/02/19/%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">日记</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-02-19 23:52:57" itemprop="dateCreated datePublished" datetime="2024-02-19T23:52:57+08:00">2024-02-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-02-20 00:03:42" itemprop="dateModified" datetime="2024-02-20T00:03:42+08:00">2024-02-20</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>482</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="今天有什么想法和念头"><a href="#今天有什么想法和念头" class="headerlink" title="今天有什么想法和念头"></a>今天有什么想法和念头</h4><p>孃孃打麻将是有所谓赢钱概率最大的策略的。<br>就是希望有一个既定的策略和习惯，然后不用动脑子，身体就会自己动起来。<br>就像我们之前做的所谓”早起一套”和”睡前一套”的行动树那样子。<br>有一套成熟的”解决方案”，从而可以提高效率，并且不那么犹豫。</p>
+<h4 id="今天做了什么事情"><a href="#今天做了什么事情" class="headerlink" title="今天做了什么事情"></a>今天做了什么事情</h4><p>今天早上起床，辅助小宝晒了被子，然后坐地铁去学校。<br>路上在玩”星穹铁道”, 结束了仙舟”罗浮”的开拓。<br>到学校和G老师打了招呼，刷了脸，所谓开工第一天我来啦！明天不打算去学校了。<br>然后去五餐吃了饭，吃的是农家菜，排骨炖花生，还有茄子，其实挺油腻的。偶遇王博士后聊了天。<br>然后回实验室了，收视了实验室工位。<br>然后刷B站和手机。<br>发现lolm的克隆大作战挺好玩的，下午玩了好多把。<br>总之工作上完成了“波长调控”章节的图片增添。<br>晚上去三餐吃了F+牛肉饭店里的”牛肉鸡扒饭”，比较油腻且没有认真咀嚼，然后晚上回屋之后肚子就有点不舒服（一点点）。<br>回川杨也坐的地铁，玩了”星穹铁道”。</p>
+<h4 id="明天要做什么"><a href="#明天要做什么" class="headerlink" title="明天要做什么"></a>明天要做什么</h4><p>计划写毕业论文咯<br>正常来说，可以参考之前的策略：上午先在屋里写一会，然后中午出去吃个饭，然后去复旦学习。emmm，但是要考虑减肥呀。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/18/%E6%97%A5%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -222,7 +449,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-02-18 23:29:26 / 修改时间：23:43:27" itemprop="dateCreated datePublished" datetime="2024-02-18T23:29:26+08:00">2024-02-18</time>
+              <time title="创建时间：2024-02-18 23:29:26 / 修改时间：23:47:20" itemprop="dateCreated datePublished" datetime="2024-02-18T23:29:26+08:00">2024-02-18</time>
             </span>
 
           <br>
@@ -231,7 +458,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>316</span>
+              <span>327</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -261,6 +488,7 @@
 <p>生活上最近要坚持锻炼身体，控制饮食，保护头发。等这一波寒潮结束后可以继续骑自行车啦。</p>
 <p>目前生活上的目标是调理身体，学习上的目标是完成毕业论文。</p>
 <p>那么我最近有什么很想做的事情嘛….好像没有欸…那就好好工作把~</p>
+<p>好希望张江给我加点钱呐</p>
 
       
     </div>
@@ -395,7 +623,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-02-13 12:07:33" itemprop="dateModified" datetime="2024-02-13T12:07:33+08:00">2024-02-13</time>
+                <time title="修改时间：2024-02-18 23:46:54" itemprop="dateModified" datetime="2024-02-18T23:46:54+08:00">2024-02-18</time>
               </span>
 
           <br>
@@ -424,7 +652,8 @@
 
       
           <p>前几天收到了华为的offer，但可能还是要拒的:cry:</p>
-<p><img src="/pictures/image-20240206104404492.png" alt="image-20240206104404492"></p>
+<img src="../pictures/image-20240206104404492.png" alt="image-20240206104404492" style="zoom:50%;" />
+
 <p>收到还是很开心的，但是种种原因我觉得不如张江把。</p>
 <p>年前在家还收到了QY实验室的线下面试邀约，还在想要不要去面试。说起来春运临时让我去面试也挺离谱，然后就改约了年后。</p>
 
@@ -739,253 +968,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/24/%E6%97%A5%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
-      <meta itemprop="description" content="You should write because writing makes you a better person.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ovshinsky's Blogs">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/01/24/%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">日记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-01-24 13:06:43 / 修改时间：19:52:45" itemprop="dateCreated datePublished" datetime="2024-01-24T13:06:43+08:00">2024-01-24</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>221</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="19：48"><a href="#19：48" class="headerlink" title="19：48"></a>19：48</h3><p>今天早上九点半起的床</p>
-<p>给郭老师发了昨天改完的版本</p>
-<p>然后继续修改</p>
-<p>修改了最长的那个</p>
-<p>然后冷 在床上修改了一会</p>
-<p>然后去吃饭</p>
-<p>中午吃的是溪雨观的酸菜鱼</p>
-<p>送了小酥肉和银耳汤</p>
-<p>然后去库迪买了生椰dirty </p>
-<p>然后去复旦教室学习</p>
-<p>刷b站 今天刷了好多b站</p>
-<p>不管怎么说 尽管Reviewer2的几个问题回复的不是特别好，但是我算它弄完了发给郭老师了</p>
-<p>然后就刷b站</p>
-<p>说起来是要做正文的修改，但是其实并没有弄</p>
-<p>晚上吃了个饼，半碗馄饨，一个饭团，半瓶可乐。</p>
-<p>刷b站</p>
-<p>要把正文弄到GPT里面修改</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/23/%E6%97%A5%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
-      <meta itemprop="description" content="You should write because writing makes you a better person.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ovshinsky's Blogs">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/01/23/%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">日记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-01-23 18:50:05 / 修改时间：20:50:40" itemprop="dateCreated datePublished" datetime="2024-01-23T18:50:05+08:00">2024-01-23</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>464</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="18：50"><a href="#18：50" class="headerlink" title="18：50"></a>18：50</h3><p>今天早上起床<br>在川杨画了图<br>TPA spectrometer 提升的方法图 喝了一罐330ml的无糖可乐<br>然后休息了一会<br>晾了衣服<br>洗漱出门<br>带了一瓶600ml的<em>膳食纤维</em>+可乐<br>坐地铁到中科路<br>然后小宝骑车车带我去吃了肯德基的翅桶 喝掉了<em>膳食纤维</em>+可乐<br>然后走路去买了库迪<br>今天喝的是燕麦奶的咖啡 目的是还是避免一下乳糖不耐吧<br>然后坐小宝的小车车去复旦<br>在教室喝咖啡和改responseletter<br>主要是通过chatgpt润色<br>可真好用呀<br>然后玩了一会lolm，玩了辛德拉，全靠队友血C，这个英雄并不好用。还是炼金好玩<br>然后继续写responseletter<br>画了图<br>晚上去吃了学校门口的自选餐厅，买了一瓶1.25L的无糖可乐<br>喝了一半左右<br>然后走路到教室里<br>还挺冷的<br>小宝最近对生不生宝宝的事情比较上心<br>说实话 我还没有认真思考过这个问题，主要是还没有意识到自己真正的长大了吧。</p>
-<p>呆<br>预计今天干到八点半回去吧 或者晚点九点半？<br>先这样~</p>
-<p>P.S. 今天师妹还汇报了工作情况，主要是帮我画版图，做的还不错，好好地鼓励了她。</p>
-<p><img src="/pictures/image-20240123190120438.png" alt="image-20240123190120438"></p>
-<p>我想，我应该明确说明每一个步骤，这样子师妹做的会更快更轻松一些吧</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/22/%E6%97%A5%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
-      <meta itemprop="description" content="You should write because writing makes you a better person.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ovshinsky's Blogs">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/01/22/%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">日记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-01-22 14:48:44 / 修改时间：19:02:25" itemprop="dateCreated datePublished" datetime="2024-01-22T14:48:44+08:00">2024-01-22</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>203</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="14-49"><a href="#14-49" class="headerlink" title="14:49"></a>14:49</h3><p>约了三点钟和郭老师汇报工作 </p>
-<p>然后发现电脑多点背光打不开是因为开启了hdr默认多点背光</p>
-<p>感觉response letter 写的差不多了 要不就先这样吧 后面在这个基础上进一步polish它</p>
-<h3 id="16：14"><a href="#16：14" class="headerlink" title="16：14"></a>16：14</h3><p>汇报完进度之后感觉一身轻松，是压力被转移了嘛</p>
-<h3 id="19：01"><a href="#19：01" class="headerlink" title="19：01"></a>19：01</h3><p>准备下班 明天不来实验室了</p>
-<p>明天继续根据意见修改response letter</p>
-<p>o_o ….</p>
-<p>明确了response letter的方向</p>
-<p>明天和郭老师说让他帮我看正文的修改</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1055,7 +1037,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1097,13 +1079,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">18k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">15 分钟</span>
+    <span title="站点阅读时长">16 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v7.0.0
   </div>
