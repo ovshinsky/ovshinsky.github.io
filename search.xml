@@ -1102,7 +1102,7 @@
   <entry>
     <title>Multimode-reflection-wavelength-DEMUX</title>
     <url>/2024/03/06/multimode-reflection-wavelength-demux/</url>
-    <content><![CDATA[<h4 id="结构原理"><a href="#结构原理" class="headerlink" title="结构原理"></a>结构原理</h4><h4 id="用来检查模式反射光谱的代码："><a href="#用来检查模式反射光谱的代码：" class="headerlink" title="用来检查模式反射光谱的代码："></a>用来检查模式反射光谱的代码：</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#首先把mode expansion MONITOR命名为in_mode</span></span><br><span class="line">T0=getresult(<span class="string">&quot;in_mode&quot;</span>,<span class="string">&quot;expansion for &quot;</span>);</span><br><span class="line">x=T0.<span class="keyword">lambda</span>;</span><br><span class="line">x=<span class="number">1000000000</span>*x;</span><br><span class="line">x=T0.<span class="keyword">lambda</span>;</span><br><span class="line">x=<span class="number">1000000000</span>*x;</span><br><span class="line">y0=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">1</span>)));</span><br><span class="line">plot(x,y0,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =5&quot;</span> );</span><br><span class="line">holdon;</span><br><span class="line">y1=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">2</span>)));</span><br><span class="line">plot(x,y1,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">y2=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">3</span>)));</span><br><span class="line">plot(x,y2,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">legend(<span class="string">&quot;TE0-TE0&quot;</span>,<span class="string">&quot;TE1-TE1&quot;</span>,<span class="string">&quot;TE2-TE2&quot;</span>);</span><br><span class="line">holdoff;</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h4 id="结构原理"><a href="#结构原理" class="headerlink" title="结构原理"></a>结构原理</h4><h4 id="用来检查模式反射光谱的代码："><a href="#用来检查模式反射光谱的代码：" class="headerlink" title="用来检查模式反射光谱的代码："></a>用来检查模式反射光谱的代码：</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#首先把mode expansion MONITOR命名为in_mode</span></span><br><span class="line">T0=getresult(<span class="string">&quot;in_mode&quot;</span>,<span class="string">&quot;expansion for &quot;</span>);</span><br><span class="line">x=T0.<span class="keyword">lambda</span>;</span><br><span class="line">x=<span class="number">1000000000</span>*x;</span><br><span class="line">y0=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">1</span>)));</span><br><span class="line">plot(x,y0,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =5&quot;</span> );</span><br><span class="line">holdon;</span><br><span class="line">y1=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">2</span>)));</span><br><span class="line">plot(x,y1,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">y2=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">3</span>)));</span><br><span class="line">plot(x,y2,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">legend(<span class="string">&quot;TE0-TE0&quot;</span>,<span class="string">&quot;TE1-TE1&quot;</span>,<span class="string">&quot;TE2-TE2&quot;</span>);</span><br><span class="line">holdoff;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>worklog</tag>
@@ -1112,6 +1112,25 @@
     <title>日记</title>
     <url>/2024/02/27/%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<p>今天中午吃了湘菜<br>然后下午处理了optica的proof的要求<br>然后玩了一会儿崩铁<br>晚上去长泰逛了一圈<br>检查了一下毕业论文<br>然后给师妹让她帮我校对一下<br>然后明天再校对一下毕业论文，后天看一下要不要发给郭老师看一下。<br>反正就攒钱呗<br>用资产回报进行消费<br>每个月记一下收入的帐<br>thanks，暂定每月3号吧</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日记</title>
+    <url>/2024/03/06/%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<h3 id="今天做了什么事情"><a href="#今天做了什么事情" class="headerlink" title="今天做了什么事情"></a>今天做了什么事情</h3><p>今天早上起床<br>洗衣服晒衣服<br>看了一会儿bowers的综述论文<br>吃牛杂煲<br>去复旦药学院按摩<br>下午干活<br>改G老师要的图片，他要把ppt里面的图全部变成“可编辑的形式”。<br>出去溜达了一圈<br>买了瑞幸咖啡<br>然后回来干活<br>和大四的师弟确定了研究方向，他的目的是要混一下。<br>和师妹确定了目的，她说之后可能想去硅光方向的企业，给她找了几个新任务（因为昨天她说给她安排的活少了）<br>然后把CWDM-MULTIMODE-REFLECTION初步做了一些仿真<br>把G老师要的图片改好了。</p>
+<p>可能还是要算一下波长相对微扰周期移动的单位距离，然后来确定中心波长 😓</p>
+]]></content>
+      <tags>
+        <tag>lifelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日记</title>
+    <url>/2024/03/19/%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>今天早上从川杨来了交大<br>领了三方，邮寄了三方，寄到张江实验室。<br>AEMD账户还是没有钱。<br>要把新的毕业论文发给郭老师。</p>
 ]]></content>
       <tags>
         <tag>lifelog</tag>
