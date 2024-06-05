@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://example.com').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: true,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="You should write because writing makes you a better person.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ZhaoYaotian&#39;s Blogs">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
+<meta property="og:description" content="You should write because writing makes you a better person.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Yaotian Zhao shineskys@outlook.com">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false
+  };
+</script>
+
+  <title>ZhaoYaotian's Blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZhaoYaotian's Blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">You should write because writing makes you a better person.</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-关于我">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于我</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-日记">
+
+    <a href="/lifelog/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>日记</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/20/%E6%97%A5%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/05/20/%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">日记</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-05-20 12:21:43 / 修改时间：15:58:55" itemprop="dateCreated datePublished" datetime="2024-05-20T12:21:43+08:00">2024-05-20</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>306</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/05/20/%E6%97%A5%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/19/%E6%97%A5%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/05/19/%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">日记</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-05-19 23:22:21 / 修改时间：23:28:41" itemprop="dateCreated datePublished" datetime="2024-05-19T23:22:21+08:00">2024-05-19</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>255</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/05/19/%E6%97%A5%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/19/%E5%8D%9A%E5%A3%AB%E7%AD%94%E8%BE%A9%E9%80%9A%E8%BF%87%E5%95%A6%EF%BC%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/05/19/%E5%8D%9A%E5%A3%AB%E7%AD%94%E8%BE%A9%E9%80%9A%E8%BF%87%E5%95%A6%EF%BC%81/" class="post-title-link" itemprop="url">博士答辩通过啦！</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-05-19 19:59:08" itemprop="dateCreated datePublished" datetime="2024-05-19T19:59:08+08:00">2024-05-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-23 13:44:36" itemprop="dateModified" datetime="2024-05-23T13:44:36+08:00">2024-05-23</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>63</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="/../pictures/image-20240519201832800.png" alt="image-20240519201832800"></p>
+<p><img src="/../pictures/image-20240519201843537.png" alt="image-20240519201843537"></p>
+<p><em>★,°</em>:.☆(￣▽￣)&#x2F;$:<em>.°★</em> 。撒花~</p>
+<p><a href="/download/phd_thesis_zhaoyaotian.pdf_off" download>毕业论文下载-硅基超构多维光场调控</a><br><a href="/download/phd_defense_slides_off.pptx" download>毕业答辩PPT下载-硅基超构多维光场调控</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/19/PCIe-%E5%9F%BA%E7%A1%80%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/05/19/PCIe-%E5%9F%BA%E7%A1%80%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">PCIe 基础规范学习</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-05-19 19:59:08" itemprop="dateCreated datePublished" datetime="2024-05-19T19:59:08+08:00">2024-05-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-06-02 20:06:13" itemprop="dateModified" datetime="2024-06-02T20:06:13+08:00">2024-06-02</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="PCIe-基础规范学习"><a href="#PCIe-基础规范学习" class="headerlink" title="PCIe 基础规范学习"></a>PCIe 基础规范学习</h1><p><strong>REF：5.0-1.0-PUB — PCI Express® Base Specification Revision 5.0 Version 1.0</strong></p>
+<hr>
+<h2 id="PCIe-简介"><a href="#PCIe-简介" class="headerlink" title="PCIe 简介"></a>PCIe 简介</h2><h3 id="PCIe作为第三代通用的I-O互连接口，能实现如下的功能要求："><a href="#PCIe作为第三代通用的I-O互连接口，能实现如下的功能要求：" class="headerlink" title="PCIe作为第三代通用的I&#x2F;O互连接口，能实现如下的功能要求："></a>PCIe作为第三代通用的I&#x2F;O互连接口，能实现如下的功能要求：</h3><ol>
+<li>兼容多种应用场景（电脑、手机、工作站、服务器、嵌入式系统等等）</li>
+<li>性价比高（低成本高容量）</li>
+<li>支持多平台互连（片间互连、板间互连）</li>
+<li>有多样的物理接口形式（M.2、CEM、U.2、OcuLink等）</li>
+<li>兼容PCI的软件模型（向下兼容）</li>
+<li>性能优秀（低负担 low-overhead、低延迟的通信）</li>
+<li>先进的特性features<ol>
+<li>能理解输入的不同类型的数据和指令</li>
+<li>能耗管理和分配机制</li>
+<li>可以支持不同设备</li>
+<li>支持热插拔</li>
+<li>支持link-level和端到端的信号完整性检查</li>
+<li>支持高级的错误报告和处理</li>
+<li>在发射器和接收器能支持不同的共模电压</li>
+<li>容易测试：能够通过简单的连接来测试其电学特性</li>
+</ol>
+</li>
+</ol>
+<h3 id="PCIe的链路（Link）"><a href="#PCIe的链路（Link）" class="headerlink" title="PCIe的链路（Link）"></a>PCIe的链路（Link）</h3><p>Link代表两个组件之间的双单工通信通道。PCIe Link的基础组件包括两个低电压差分驱动的信号对：一个发送对和一个接收对。如下图所示。一个PCIe Link包含一个PCIe的物理层。</p>
+<blockquote>
+<p>双单工通信：在每个方向上，数据只能在一个方向上传输（即单向），这与全双工通信（可以同时双向传输数据）有所不同。</p>
+</blockquote>
+<img src="../pictures/image-20240531143922148.png" alt="image-20240531143922148" style="zoom:80%;" />
+
+<p>PCIe具有如下的基础属性：</p>
+<ol>
+<li><p>·基本链路：PCIe由两个单向传输差分链路构成，实现发送对和接收对的功能。使用编码的方式嵌入一个信号时钟，从而实现非常高速的数据传输速率。</p>
+</li>
+<li><p>信号速率：初始化后，链路必须在支持的信号电平上运行。【不同版本的PCIe协议支持不同信号速率的传输】。</p>
+</li>
+<li><p>通道（Lanes）：一个链路（Link）至少需要支持一个通道（Lane)，每个通道代表了一系列差分信号对（一个信号对用于信号发送，一个信号对用于信号接收）。为了扩展带宽，一个链路可能聚合多个通道，用×N来表示，其中N表示通道数量，如×1代表1个通道，×8表示8个通道。</p>
+</li>
+<li><p>初始化： 在硬件初始化期间，每个 PCI Express 链路通过链路两端的两个设备进行通道宽度和工作频率的协商来设置。这个过程不涉及固件或操作系统软件。</p>
+</li>
+<li><p>对称性：每个链路必须在每个方向上支持相同数量的通道。例如，一个×16链路表示在每个方向上都有16个差分信号对。</p>
+</li>
+</ol>
+<h3 id="PCIe的结构拓扑"><a href="#PCIe的结构拓扑" class="headerlink" title="PCIe的结构拓扑"></a>PCIe的结构拓扑</h3><p>PCIe的拓扑结构（fabric）由点对点的链路组成。这些链路将一组组件互连在一起。下图展示了一个实例，称为体系结构（Hierarchy），由一个根复合体（Root complex，RC）、多个端点设备（I&#x2F;O设备）、一个交换机（Switch）和一个PCIe连接到PCI&#x2F;PCI-X桥组成，这些组件通过PCIe链路进行互连。</p>
+<p><img src="/../pictures/image-20240602165921703.png" alt="image-20240602165921703"></p>
+<h4 id="根复合体-（Root-Complex）"><a href="#根复合体-（Root-Complex）" class="headerlink" title="根复合体 （Root Complex）"></a>根复合体 （Root Complex）</h4><ol>
+<li><p>根复合体（RC）表示连接CPU&#x2F;内存子系统到I&#x2F;O（输入&#x2F;输出）设备层次结构的根节点</p>
+</li>
+<li><p>如图1.2所示，RC可以支持一个或多个PCIe端口，每个接口定义了一个独立的层次域。每个层次域可以由单个端点设备构成，也可以由多个交换机组件和端点设备组成的子层次结构组成</p>
+<p>……</p>
+</li>
+</ol>
+<h4 id="端点设备"><a href="#端点设备" class="headerlink" title="端点设备"></a>端点设备</h4><p>端点设备指的是一种功能，它可以是PCIe通信传输的请求方或者完成方。</p>
+<h5 id="传统端点设备规则"><a href="#传统端点设备规则" class="headerlink" title="传统端点设备规则"></a>传统端点设备规则</h5><p>……</p>
+<h5 id="PCIe端点规则"><a href="#PCIe端点规则" class="headerlink" title="PCIe端点规则"></a>PCIe端点规则</h5><p>……</p>
+<h5 id="RC集成系统的端点规则"><a href="#RC集成系统的端点规则" class="headerlink" title="RC集成系统的端点规则"></a>RC集成系统的端点规则</h5><p>……</p>
+<h4 id="交换机（Switch）"><a href="#交换机（Switch）" class="headerlink" title="交换机（Switch）"></a>交换机（Switch）</h4><p>交换机被定义为多个虚拟PCI到PCI桥设备的逻辑组合，如图所示。所有交换机需要满足以下基本规则：</p>
+<p><img src="/../pictures/image-20240602173230536.png" alt="image-20240602173230536"></p>
+<ol>
+<li><p>Switch被配置为两个或多个PCI到PCI桥之间的连接</p>
+<p>……</p>
+</li>
+</ol>
+<h4 id="RC事件收集器"><a href="#RC事件收集器" class="headerlink" title="RC事件收集器"></a>RC事件收集器</h4><p>   ……</p>
+<h4 id="PCI-Express-到-PCI-PCI-X-桥接器"><a href="#PCI-Express-到-PCI-PCI-X-桥接器" class="headerlink" title="PCI Express 到 PCI&#x2F;PCI-X 桥接器"></a>PCI Express 到 PCI&#x2F;PCI-X 桥接器</h4><h3 id="用于探索、配置和操作的硬件-软件模型"><a href="#用于探索、配置和操作的硬件-软件模型" class="headerlink" title="用于探索、配置和操作的硬件&#x2F;软件模型"></a>用于探索、配置和操作的硬件&#x2F;软件模型</h3><p>PCIe的硬件&#x2F;软件模型包括必要的架构，可以用来简单地探索、配置和使用PCIe的功能。模型的核心组件包括：</p>
+<ol>
+<li><p>软件要能够配置可用的硬件功能</p>
+</li>
+<li><p>提供执行基本资源分配的机制，用于可寻址资源，例如内存空间和中断。</p>
+</li>
+<li><p>启用&#x2F;禁用控制功能，接收询问和初始化</p>
+</li>
+<li><p>明确定义的顺序和控制流模型，支持硬件&#x2F;软件接口的一致和鲁棒性</p>
+</li>
+</ol>
+<p>PCIe的配置模型支持两种机制：</p>
+<ol>
+<li>PCI兼容的配置机制</li>
+<li>PCIe增强的配置机制</li>
+</ol>
+<p>每个 PCI Express 链路都通过虚拟的 PCI-to-PCI 桥接器结构进行映射，并与一个逻辑 PCI 总线相关联。这个虚拟的 PCI-to-PCI 桥接器结构可以是 PCI Express 根复合体端口、交换机上行端口或者交换机下行端口的一部分。根端口是一个虚拟的 PCI-to-PCI 桥接器结构，它从一个 PCI Express 根复合体发起一个 PCI Express 层次域。设备被映射到配置空间，以便每个设备都会响应于特定的设备编号。</p>
+<h3 id="PCIe分层概览"><a href="#PCIe分层概览" class="headerlink" title="PCIe分层概览"></a>PCIe分层概览</h3><p>该文档按照三个独立的逻辑层次来规范架构：事务层（Transaction Layer）、数据链路层（Data Link Layer）和物理层（Physical Layer）。每个层次都分为两个部分：一个处理出站（待传输）信息，一个处理入站（接收）信息，如图1-4所示。这种分层定义的基本目标是为了方便读者理解规范。请注意，这种分层并不意味着特定的PCI Express实现。</p>
+<p><img src="/../pictures/image-20240602194206885.png" alt="image-20240602194206885"></p>
+<p>PCI Express 使用数据包在组件之间传递信息。数据包在事务层和数据链路层中形成，用于将信息从发送组件传输到接收组件。随着传输的数据包流经其他层次，它们会被扩展以包含其他层次处理数据包所需的额外信息。在接收端，相反的过程发生，数据包从物理层表示转换为数据链路层表示，最终（对于事务层数据包）转换为接收设备的事务层能够处理的形式。 图1-5展示了事务级数据包信息在各层之间的概念流程。</p>
+<p><img src="/../pictures/image-20240602200151365.png" alt="image-20240602200151365"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/18/%E6%97%A5%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/05/18/%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">日记</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-05-18 12:43:17" itemprop="dateCreated datePublished" datetime="2024-05-18T12:43:17+08:00">2024-05-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-19 20:23:19" itemprop="dateModified" datetime="2024-05-19T20:23:19+08:00">2024-05-19</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>76</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/05/18/%E6%97%A5%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/13/PCIE%E5%85%89%E5%BC%95%E6%93%8E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/05/13/PCIE%E5%85%89%E5%BC%95%E6%93%8E/" class="post-title-link" itemprop="url">PCIe光互连</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-05-13 21:50:24" itemprop="dateCreated datePublished" datetime="2024-05-13T21:50:24+08:00">2024-05-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-20 23:30:02" itemprop="dateModified" datetime="2024-05-20T23:30:02+08:00">2024-05-20</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>605</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/05/13/PCIE%E5%85%89%E5%BC%95%E6%93%8E/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/13/%E6%97%A5%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/05/13/%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">日记</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-05-13 20:35:53 / 修改时间：20:46:02" itemprop="dateCreated datePublished" datetime="2024-05-13T20:35:53+08:00">2024-05-13</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>174</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/05/13/%E6%97%A5%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/10/%E9%80%86%E5%90%91%E8%AE%BE%E8%AE%A1%E5%A4%9A%E7%BB%B4%E5%85%89%E5%A4%8D%E7%94%A8%E5%B7%A5%E8%89%BA%E6%B5%81%E7%A8%8B1-0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/10/%E9%80%86%E5%90%91%E8%AE%BE%E8%AE%A1%E5%A4%9A%E7%BB%B4%E5%85%89%E5%A4%8D%E7%94%A8%E5%B7%A5%E8%89%BA%E6%B5%81%E7%A8%8B1-0/" class="post-title-link" itemprop="url">逆向设计多维光复用工艺流程1.0</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-04-10 21:50:24 / 修改时间：19:02:57" itemprop="dateCreated datePublished" datetime="2024-04-10T21:50:24+08:00">2024-04-10</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>569</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <table>
+<thead>
+<tr>
+<th>工艺流程</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>超声清洗</td>
+<td>丙酮3min，丙酮3min，异丙醇3min，去离子水1min，吹干</td>
+</tr>
+<tr>
+<td>Plasma</td>
+<td>刻蚀区，sccm 350, 5min</td>
+</tr>
+<tr>
+<td>涂胶</td>
+<td>光刻胶型号：AR-P 6200.09，涂胶程序：Program 4</td>
+</tr>
+<tr>
+<td>EBL(波导)</td>
+<td>徐剑&#x2F;王伟</td>
+</tr>
+<tr>
+<td>显影</td>
+<td>没人的时候或者下午3点后，MIBK，75s + IPA ，轻柔一点，避免弄倒小结构。</td>
+</tr>
+<tr>
+<td>（镜检）（光学显微镜）（可选）</td>
+<td>光刻区或者FIB的区域，带U盘</td>
+</tr>
+<tr>
+<td>刻蚀（SPTS）</td>
+<td>付刘成，220nm硅波导刻蚀，一片过刻蚀20s，一片过刻蚀40s (考虑loading effect)</td>
+</tr>
+<tr>
+<td>镜检</td>
+<td>光刻区或者FIB的区域，带U盘</td>
+</tr>
+<tr>
+<td>Plasma</td>
+<td>刻蚀区，sccm 350, 5min。这里就不超声清洗了，避免弄倒小结构。有点点脏没关系，因为这一步要写光栅。</td>
+</tr>
+<tr>
+<td>涂胶</td>
+<td>光刻胶型号：AR-P 6200.09，涂胶程序：Program 4</td>
+</tr>
+<tr>
+<td>EBL（光栅）</td>
+<td>徐剑&#x2F;王伟；套刻</td>
+</tr>
+<tr>
+<td>显影</td>
+<td>没人的时候或者下午3点后，MIBK，75s + IPA ，轻柔一点，避免弄倒小结构。</td>
+</tr>
+<tr>
+<td>镜检</td>
+<td>光刻区或者FIB的区域，带U盘</td>
+</tr>
+<tr>
+<td>刻蚀(SPTS) 70nm</td>
+<td>付刘成，70nm浅刻蚀</td>
+</tr>
+<tr>
+<td>镜检</td>
+<td>光刻区或者FIB的区域，带U盘</td>
+</tr>
+<tr>
+<td>Plasma</td>
+<td>刻蚀区，sccm 350, 5min</td>
+</tr>
+<tr>
+<td>SEM</td>
+<td>微电子楼先上四楼，再下一楼&#x2F;门开了可以走AEMD后门，带光盘</td>
+</tr>
+<tr>
+<td>PECVD&#x2F;ICPCVD</td>
+<td>付刘成，1μm氧化硅沉积</td>
+</tr>
+<tr>
+<td>测试</td>
+<td>光栅耦合平台测试</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/03/%E6%97%A5%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/03/%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">日记</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-04-03 21:50:24 / 修改时间：21:52:47" itemprop="dateCreated datePublished" datetime="2024-04-03T21:50:24+08:00">2024-04-03</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>136</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/04/03/%E6%97%A5%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/02/%E6%97%A5%E8%AE%B0-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/02/%E6%97%A5%E8%AE%B0-1/" class="post-title-link" itemprop="url">日记</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-04-02 22:55:16 / 修改时间：23:14:42" itemprop="dateCreated datePublished" datetime="2024-04-02T22:55:16+08:00">2024-04-02</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>240</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/04/02/%E6%97%A5%E8%AE%B0-1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yaotian Zhao shineskys@outlook.com"
+      src="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+  <p class="site-author-name" itemprop="name">Yaotian Zhao shineskys@outlook.com</p>
+  <div class="site-description" itemprop="description">You should write because writing makes you a better person.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">86</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://scholar.google.com/citations?user=9Uc2du4AAAAJ&hl=zh-CN" title="Scholar → https:&#x2F;&#x2F;scholar.google.com&#x2F;citations?user&#x3D;9Uc2du4AAAAJ&amp;hl&#x3D;zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-graduation-cap"></i>Scholar</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://otip.sjtu.edu.cn/" title="OTIP → https:&#x2F;&#x2F;otip.sjtu.edu.cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-users"></i>OTIP</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yaotian Zhao shineskys@outlook.com</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">25k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">23 分钟</span>
+</div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme: 'dark',
+      logLevel: 3,
+      flowchart: { curve: 'linear' },
+      gantt: { axisFormat: '%m/%d/%Y' },
+      sequence: { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
