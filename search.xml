@@ -1836,6 +1836,13 @@
 <p>使用的时候采用html语言：	</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;far fa-envelope&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<p>图标可以在这个网站上查询：</p>
+<p><i class="far fa-globe" /> <a href="https://fontawesome.com.cn/v5">图标库v5 - FontAwesome 字体图标中文Icon</a></p>
+<head> 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script> 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script> 
+</head> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
 ]]></content>
       <tags>
         <tag>技术小结</tag>
