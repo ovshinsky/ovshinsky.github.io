@@ -46,12 +46,12 @@
   };
 </script>
 
-  <meta name="description" content="网页环境配置   安装node.js和git   npm install hexo-cli -g   hexo init myblog 这里因为可能运行路径不对卡了挺久，可能是因为默认的路径不能创建文件夹，最后发现在桌面上右键cmd打开搞定了。   切换到项目中 cd myblog   安装依赖 npm install   本地预览 hexo g hexo s 然后在浏览器中输入对应的端口网页">
+  <meta name="description" content="网页环境配置 安装node.js和git  npm install hexo-cli -g  hexo init myblog 这里因为可能运行路径不对卡了挺久，可能是因为默认的路径不能创建文件夹，最后发现在桌面上右键cmd打开搞定了。  切换到项目中 cd myblog  安装依赖 npm install  本地预览 hexo g hexo s 然后在浏览器中输入对应的端口网页  新建文章 he">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通过hexo和github pages配置Blog的方法">
 <meta property="og:url" content="http://example.com/2023/12/20/%E9%80%9A%E8%BF%87hexo%E5%92%8Cgithub-pages%E9%85%8D%E7%BD%AEBlog%E7%9A%84%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="网页环境配置   安装node.js和git   npm install hexo-cli -g   hexo init myblog 这里因为可能运行路径不对卡了挺久，可能是因为默认的路径不能创建文件夹，最后发现在桌面上右键cmd打开搞定了。   切换到项目中 cd myblog   安装依赖 npm install   本地预览 hexo g hexo s 然后在浏览器中输入对应的端口网页">
+<meta property="og:description" content="网页环境配置 安装node.js和git  npm install hexo-cli -g  hexo init myblog 这里因为可能运行路径不对卡了挺久，可能是因为默认的路径不能创建文件夹，最后发现在桌面上右键cmd打开搞定了。  切换到项目中 cd myblog  安装依赖 npm install  本地预览 hexo g hexo s 然后在浏览器中输入对应的端口网页  新建文章 he">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/pictures/image-20231221133235218.png">
 <meta property="article:published_time" content="2023-12-20T10:06:59.000Z">
@@ -277,80 +277,65 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="网页环境配置"><a class="markdownIt-Anchor" href="#网页环境配置"></a> 网页环境配置</h3>
-<ol>
-<li>
-<p>安装node.js和git</p>
+        <h3 id="网页环境配置"><a href="#网页环境配置" class="headerlink" title="网页环境配置"></a>网页环境配置</h3><ol>
+<li><p>安装node.js和git</p>
 </li>
-<li>
-<p>npm install hexo-cli -g</p>
+<li><p>npm install hexo-cli -g</p>
 </li>
-<li>
-<p>hexo init myblog</p>
+<li><p>hexo init myblog</p>
 <p>这里因为可能运行路径不对卡了挺久，可能是因为默认的路径不能创建文件夹，最后发现在桌面上右键cmd打开搞定了。</p>
 </li>
-<li>
-<p>切换到项目中</p>
+<li><p>切换到项目中</p>
 <p>cd myblog</p>
 </li>
-<li>
-<p>安装依赖</p>
+<li><p>安装依赖</p>
 <p>npm install</p>
 </li>
-<li>
-<p>本地预览</p>
+<li><p>本地预览</p>
 <p>hexo g</p>
 <p>hexo s</p>
 <p>然后在浏览器中输入对应的端口网页</p>
 </li>
-<li>
-<p>新建文章</p>
+<li><p>新建文章</p>
 <p>hexo new test</p>
 <p>本质上就是新建了一个markdown文件，可以后续进入这个markdown文件进行修改和写东西</p>
 </li>
-<li>
-<p>就可以重复之前的预览看看结果啦</p>
+<li><p>就可以重复之前的预览看看结果啦</p>
 </li>
-<li>
-<p>创建github pages</p>
-<p>创建github仓库：<a target="_blank" rel="noopener" href="http://username.github.io">username.github.io</a></p>
+<li><p>创建github pages</p>
+<p>创建github仓库：username.github.io</p>
 </li>
-<li>
-<p>修改之前生成的文件夹中配置文件，_config.yml，</p>
+<li><p>修改之前生成的文件夹中配置文件，_config.yml，</p>
 <p>修改为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/ovshinsky/ovshinsky.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>部署执行命令：</p>
+<li><p>部署执行命令：</p>
 <p>hexo d</p>
 <p>可能需要安装插件：</p>
-<p>npm install hexo-deployer-git --save</p>
+<p>npm install hexo-deployer-git –save</p>
 </li>
-<li>
-<p>然后就可以打开ovshinsky.github.io查看效果</p>
+<li><p>然后就可以打开ovshinsky.github.io查看效果</p>
 </li>
 </ol>
-<h3 id="主题配置"><a class="markdownIt-Anchor" href="#主题配置"></a> 主题配置</h3>
-<p>1.安装主题</p>
+<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>1.安装主题</p>
 <p>在主文件夹里运行cmd：</p>
-<p>git clone <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next.git">https://github.com/theme-next/hexo-theme-next.git</a> themes/next</p>
+<p>git clone <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next.git">https://github.com/theme-next/hexo-theme-next.git</a> themes&#x2F;next</p>
 <p>切换版本（可选）：</p>
-<p>cd themes/hexo-theme-next</p>
-<p>git checkout tags/v6.0.1</p>
+<p>cd themes&#x2F;hexo-theme-next</p>
+<p>git checkout tags&#x2F;v6.0.1</p>
 <p>2.配置主题</p>
 <p>打开主文件夹中的_config.yml，配置为theme:next</p>
-<h3 id="评论配置"><a class="markdownIt-Anchor" href="#评论配置"></a> 评论配置：</h3>
-<p>采用gitalk配置，next的主题里预留了接口：</p>
+<h3 id="评论配置："><a href="#评论配置：" class="headerlink" title="评论配置："></a>评论配置：</h3><p>采用gitalk配置，next的主题里预留了接口：</p>
 <p>打开next文件夹中的_config.yml，创建一个Comment仓库，配置为</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">gitalk:</span><br><span class="line">  enable: true #false</span><br><span class="line">  github_id: ovshinsky # GitHub repo owner</span><br><span class="line">  repo: BlogComments # Repository name to store issues</span><br><span class="line">  client_id: 4299921ded3b8e***** # GitHub Application Client ID</span><br><span class="line">  client_secret: 90fa712acbeec6ccc4e62************** # GitHub Application Client Secret</span><br><span class="line">  admin_user: ovshinsky # GitHub repo owner and collaborators, only these guys can initialize gitHub issues</span><br><span class="line">  distraction_free_mode: false # Facebook-like distraction free mode</span><br><span class="line">  \# Gitalk&#x27;s display language depends on user&#x27;s browser or system environment</span><br><span class="line">  \# If you want everyone visiting your site to see a uniform language, you can set a force language value</span><br><span class="line">  \# Available values: en | es-ES | fr | ru | zh-CN | zh-TW</span><br><span class="line">  language: </span><br></pre></td></tr></table></figure>
-<h3 id="图片配置"><a class="markdownIt-Anchor" href="#图片配置"></a> 图片配置:</h3>
-<p>安装依赖：npm install hexo-renderer-marked</p>
+
+<h3 id="图片配置"><a href="#图片配置" class="headerlink" title="图片配置:"></a>图片配置:</h3><p>安装依赖：npm install hexo-renderer-marked</p>
 <p>在_config.yml中设置：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">marked:</span></span><br><span class="line">  <span class="attr">prependRoot:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">postAsset:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
 <p>最后，按如下方法修改typora的配置即可：</p>
-<p><img src="/pictures/image-20231221133235218.png" alt="image-20231221133235218" /></p>
-<h4 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考：</h4>
-<ol>
+<p><img src="/pictures/image-20231221133235218.png" alt="image-20231221133235218"></p>
+<h4 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h4><ol>
 <li><a target="_blank" rel="noopener" href="http://home.ustc.edu.cn/~liujunyan/blog/hexo-next-theme-config/#more">Hexo 博客 NexT 主题的安装使用 | Julian’s blog (ustc.edu.cn)</a>, access in 2023.12.21.</li>
 <li>“了不起的markdown”, 毕小朋，电子工业出版社，2019.</li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Miracle_ps/article/details/114791335">Hexo 添加图片——不用插件，超简单_hexo添加图片-CSDN博客</a></li>
@@ -441,7 +426,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text"> 网页环境配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text"> 主题配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E8%AE%BA%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text"> 评论配置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text"> 图片配置:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">4.1.</span> <span class="nav-text"> 参考：</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">网页环境配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">主题配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E8%AE%BA%E9%85%8D%E7%BD%AE%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">评论配置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">图片配置:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%EF%BC%9A"><span class="nav-number">4.1.</span> <span class="nav-text">参考：</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -511,7 +496,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">10 分钟</span>
+    <span title="站点阅读时长">9 分钟</span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
 
         
