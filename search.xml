@@ -645,4 +645,18 @@ r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 = I_2
         <tag>技术小结</tag>
       </tags>
   </entry>
+  <entry>
+    <title>解决网站部署错误的方法</title>
+    <url>/2024/08/05/%E8%A7%A3%E5%86%B3%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2%E9%94%99%E8%AF%AF%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p><i class="fa fa-globe" > </i>  <a href="https://blog.csdn.net/qq_43546721/article/details/139506583">完美解决 git 报错 “fatal: unable to access ‘https://github.com/.../.git‘: Recv failure Connection was rese-CSDN博客</a></p>
+<head> 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script> 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script> 
+</head> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
 </search>
