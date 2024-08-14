@@ -189,17 +189,17 @@
     <title>PBS仿真优化记录</title>
     <url>/2024/01/04/PBS%E4%BB%BF%E7%9C%9F%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h2 id="器件功能："><a href="#器件功能：" class="headerlink" title="器件功能："></a>器件功能：</h2><p>使TE0-TE4和TM0-TM4能分开</p>
-<h2 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h2><p><img src="/../pictures/image-20240104164502003.png" alt="image-20240104164502003"></p>
+<h2 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h2><p><img src="/pictures/image-20240104164502003.png" alt="image-20240104164502003"></p>
 <h2 id="优化思路："><a href="#优化思路：" class="headerlink" title="优化思路："></a>优化思路：</h2><p>大体思路就是TE4好的话就减少宽度，TM4好的话就增加宽度（trench和gap）</p>
 <h2 id="优化过程log"><a href="#优化过程log" class="headerlink" title="优化过程log"></a>优化过程log</h2><h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="gap-0-3-trench-0-3"><a href="#gap-0-3-trench-0-3" class="headerlink" title="gap &#x3D; 0.3; trench &#x3D; 0.3"></a>gap &#x3D; 0.3; trench &#x3D; 0.3</h3><p>TM4 @ 1550 nm:</p>
-<img src="../pictures/image-20240104175603572.png" alt="image-20240104175603572" style="zoom:200%;" />
+<img src="/pictures/image-20240104175603572.png" alt="image-20240104175603572" style="zoom:200%;" />
 
-<h3 id="gap-0-25-trench-0-25"><a href="#gap-0-25-trench-0-25" class="headerlink" title="gap &#x3D; 0.25; trench &#x3D; 0.25"></a>gap &#x3D; 0.25; trench &#x3D; 0.25</h3><h4 id="TM4"><a href="#TM4" class="headerlink" title="TM4:"></a>TM4:</h4><p><img src="/../pictures/image-20240104211808072.png" alt="image-20240104211808072"></p>
+<h3 id="gap-0-25-trench-0-25"><a href="#gap-0-25-trench-0-25" class="headerlink" title="gap &#x3D; 0.25; trench &#x3D; 0.25"></a>gap &#x3D; 0.25; trench &#x3D; 0.25</h3><h4 id="TM4"><a href="#TM4" class="headerlink" title="TM4:"></a>TM4:</h4><p><img src="/pictures/image-20240104211808072.png" alt="image-20240104211808072"></p>
 <p>TE4:</p>
-<p><img src="/../pictures/image-20240104212419303.png" alt="image-20240104212419303"></p>
+<p><img src="/pictures/image-20240104212419303.png" alt="image-20240104212419303"></p>
 ]]></content>
       <tags>
-        <tag>worklog</tag>
+        <tag>技术小结</tag>
       </tags>
   </entry>
   <entry>
@@ -249,7 +249,7 @@
 <h2 id="Result"><a href="#Result" class="headerlink" title="Result:"></a>Result:</h2><p><img src="/pictures/120240108.png" alt="120240108"></p>
 ]]></content>
       <tags>
-        <tag>工作小结</tag>
+        <tag>技术小结</tag>
       </tags>
   </entry>
   <entry>
@@ -352,7 +352,7 @@
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <tags>
-        <tag>worklog-secret</tag>
+        <tag>技术小结</tag>
       </tags>
   </entry>
   <entry>
