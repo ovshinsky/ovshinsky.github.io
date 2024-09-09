@@ -541,4 +541,25 @@
         <tag>技术小结</tag>
       </tags>
   </entry>
+  <entry>
+    <title>阿里云每三个月更新网站https证书的方法</title>
+    <url>/2024/09/09/%E6%AF%8F%E4%B8%89%E4%B8%AA%E6%9C%88%E6%9B%B4%E6%96%B0%E7%BD%91%E7%AB%99https%E8%AF%81%E4%B9%A6%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<ol>
+<li>在阿里云的ssl证书管理中申请新证书</li>
+</ol>
+<ul>
+<li>创建证书 -&gt; 自动部署<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/232488366">阿里云个人网站免费绑定SSL证书（超详细图文教程） - 知乎 (zhihu.com)</a></li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>在全站加速DCDN中更新https证书</li>
+</ol>
+<p>​	</p>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
 </search>
