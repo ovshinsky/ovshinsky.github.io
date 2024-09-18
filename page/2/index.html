@@ -200,6 +200,80 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/20/%E9%AB%98%E6%80%A7%E8%83%BD%E9%94%97%E9%9B%AA%E5%B4%A9%E5%85%89%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8-%E7%94%A8%E4%BA%8E100Gbits%E7%9A%84%E5%85%89%E5%AD%A6%E6%8E%A5%E6%94%B6%E6%9C%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/08/20/%E9%AB%98%E6%80%A7%E8%83%BD%E9%94%97%E9%9B%AA%E5%B4%A9%E5%85%89%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8-%E7%94%A8%E4%BA%8E100Gbits%E7%9A%84%E5%85%89%E5%AD%A6%E6%8E%A5%E6%94%B6%E6%9C%BA/" class="post-title-link" itemprop="url">高性能锗雪崩光电探测器-用于100Gbit/s的光学接收机</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-08-20 10:34:46 / 修改时间：12:47:05" itemprop="dateCreated datePublished" datetime="2024-08-20T10:34:46+08:00">2024-08-20</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>本文报告了一种高比特率低偏置电压的波导垂直锗硅雪崩光电探测器（avalanche photodetector，APD）。通过优化掺杂工艺，这种设计减少了对复杂单晶硅层外延和多次离子注入的需求。光吸收和载流子的雪崩倍增都发生在锗层中。<br>在输入光的功率为为-30.2 dBm的情况下，预计光探测器的最大增益为112.4。当输入光的功率为-16.1 dBm的情况下，偏置电压为7.8V时，增益带宽积大约为141 GHz。<br>同时，在接收60 Gbit/s的信号时，探测器在软判决前向纠错（SD-FEC）阈值（误码率BER &lt; 2×10-2）表现出4.6倍的灵敏度提升，雪崩增益为5.1。<br>在SD-FDC的阈值下，40，60，80和100 Gbit/s非归零码（NRZ）信号光电接收机的绝对灵敏度分别为-21，-18.6，-15.9和-11.5 dBm。<br>这些特性表明，这种探测器可以赋能可靠稳定的片上光探测，在未来用于高能效硅光互连。</p>
+<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>硅光芯片和微电子技术的集成可以赋能多样的片上系统（SOC）应用，包括通信、计算、成像和传感等。通过利用CMOS工艺的强大能力，硅光可以满足这些应用的灵敏度，能效和成本需求。雪崩光电探测器（APD）可以被集成在硅基晶体管上，并且可以被视作硅光上的关键器件模型。<br>理想的APD应该具备较高的雪崩增益，较低的暗电流，较小的偏置电压，并且能探测高速光学信号(大于100Gbpt/s)。APD同样需要和其他硅光模块兼容，能通过商业硅光公司实现低成本的加工。<br>至今为止，基于锗硅（Ge-Si）的APD方案主要包括金属-半导体-金属（MSM）结构，分立的吸收-充电-倍增（SACM）结构，和pin结构。<br>基于MSM结构的Ge-APD在较低的偏置电压（3V）下具有较高的雪崩增益，并且和半导体晶体管工艺兼容。然而，MSM方案有如下缺点：雪崩增益受限，暗电流较大，接收器灵敏度下降。<br>基于SACM结构的Ge-APDs由于把载流子倍增的过程限制在本征硅总，器件具有较低的倍增噪声和出色的增益带宽积（GBP，gain-bandwidth product）。近年来，通过采用三电极或侧壁硅接触结构，可以将最低偏压降至约6V。基于SACM的器件需要外延生长单晶硅来进行电场控制（charge-layer），倍增区域的控制形成以及多次离子注入。<br>对于基于同质PIN的Ge-APD，光学吸收和载流子倍增将在同一个Ge区域发生。此方案在GPB，暗电流，偏置电压和CMOS兼容性之间达到了较好的平衡。这减少了复杂的外延单晶硅层生长和多次离子注入的依赖性，对实现低成本硅光集成片上光互连很有帮助。<br>至今为止，实验验证的垂直和水平Ge-APD架构均能够改善接收机的灵敏度，但数据速率仍受到限制（目前为64 Gbit/s）。电场在Ge区域中非均匀的分布和对Si层的刻蚀可能会导致较大的暗电流，从而相应的降低增益和灵敏度。<br>本文基于标准硅光平台的工艺，设计并加工了高性能Ge-APD和垂直PIN结构。本文首次通过优化掺杂的方式减少了本征Ge的区域，实现了100 Gbit/s 非归零码（NRZ）的传输，在软判决前向纠错（SD-FEC）阈值（误码率为2e-2）下灵敏度为-11.5 dBm。这使得Ge-APD是一个实现高性能低成本硅光集成回路的重要器件。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/14/%E7%A1%85%E5%85%89%E8%B0%83%E5%88%B6%E5%99%A8%E8%83%BD%E6%95%88%E5%92%8C%E5%B8%A6%E5%AE%BD%E9%99%90%E5%88%B6%E7%9A%84%E7%90%86%E8%AE%BA%E5%88%86%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1188,92 +1262,6 @@ i_{\mathrm{RX}-\mathrm{PD}}=\|E\|^2</script><p>其中，E是总的入射电场�
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/13/PCIE%E5%85%89%E5%BC%95%E6%93%8E/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
-      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
-      <meta itemprop="description" content="You should write because writing makes you a better person.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZhaoYaotian's Blogs">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/13/PCIE%E5%85%89%E5%BC%95%E6%93%8E/" class="post-title-link" itemprop="url">PCIe光互连</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-05-13 21:50:24" itemprop="dateCreated datePublished" datetime="2024-05-13T21:50:24+08:00">2024-05-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-14 09:36:23" itemprop="dateModified" datetime="2024-08-14T09:36:23+08:00">2024-08-14</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>605</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          Here's something encrypted, password is required to continue reading.
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/05/13/PCIE%E5%85%89%E5%BC%95%E6%93%8E/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1394,13 +1382,13 @@ i_{\mathrm{RX}-\mathrm{PD}}=\|E\|^2</script><p>其中，E是总的入射电场�
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">81k</span>
+    <span title="站点总字数">89k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:14</span>
+    <span title="站点阅读时长">1:20</span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
 
         
