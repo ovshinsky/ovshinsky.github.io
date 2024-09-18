@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://example.com').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: true,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="REF：驱动电压为0.8V的高速硅基MOSCAP微环调制器 摘要硅基微环调制器在高能效的光互连和光计算里扮演至关重要的作用，其具有超紧凑的尺寸，并且与片上波分复用系统有着很好的兼容性。然而，现有的微环调制器技术通常需要较大的驱动电压（&gt;2V），受限于材料特性和器件结构。这里，我们展示了一个基于金属-氧化物-半导体电容的微环调制器，通过硅光和掺钛氧化物的异质集成，可以实现更高迁移率的透明导电氧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="驱动电压为0.8V的高速硅基MOSCAP微环调制器">
+<meta property="og:url" content="http://example.com/2024/08/13/%E9%A9%B1%E5%8A%A8%E7%94%B5%E5%8E%8B%E4%B8%BA0-8V%E7%9A%84%E9%AB%98%E9%80%9F%E7%A1%85%E5%9F%BAMOSCAP%E5%BE%AE%E7%8E%AF%E8%B0%83%E5%88%B6%E5%99%A8/index.html">
+<meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
+<meta property="og:description" content="REF：驱动电压为0.8V的高速硅基MOSCAP微环调制器 摘要硅基微环调制器在高能效的光互连和光计算里扮演至关重要的作用，其具有超紧凑的尺寸，并且与片上波分复用系统有着很好的兼容性。然而，现有的微环调制器技术通常需要较大的驱动电压（&gt;2V），受限于材料特性和器件结构。这里，我们展示了一个基于金属-氧化物-半导体电容的微环调制器，通过硅光和掺钛氧化物的异质集成，可以实现更高迁移率的透明导电氧">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/pictures/image-20240814104919597.png">
+<meta property="og:image" content="http://example.com/pictures/image-20240814110157903.png">
+<meta property="article:published_time" content="2024-08-13T06:30:54.000Z">
+<meta property="article:modified_time" content="2024-08-19T02:31:00.062Z">
+<meta property="article:author" content="Yaotian Zhao shineskys@outlook.com">
+<meta property="article:tag" content="光互连">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/pictures/image-20240814104919597.png">
+
+<link rel="canonical" href="http://example.com/2024/08/13/%E9%A9%B1%E5%8A%A8%E7%94%B5%E5%8E%8B%E4%B8%BA0-8V%E7%9A%84%E9%AB%98%E9%80%9F%E7%A1%85%E5%9F%BAMOSCAP%E5%BE%AE%E7%8E%AF%E8%B0%83%E5%88%B6%E5%99%A8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>驱动电压为0.8V的高速硅基MOSCAP微环调制器 | ZhaoYaotian's Blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZhaoYaotian's Blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">You should write because writing makes you a better person.</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-关于我">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于我</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/13/%E9%A9%B1%E5%8A%A8%E7%94%B5%E5%8E%8B%E4%B8%BA0-8V%E7%9A%84%E9%AB%98%E9%80%9F%E7%A1%85%E5%9F%BAMOSCAP%E5%BE%AE%E7%8E%AF%E8%B0%83%E5%88%B6%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          驱动电压为0.8V的高速硅基MOSCAP微环调制器
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-08-13 14:30:54" itemprop="dateCreated datePublished" datetime="2024-08-13T14:30:54+08:00">2024-08-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-08-19 10:31:00" itemprop="dateModified" datetime="2024-08-19T10:31:00+08:00">2024-08-19</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>REF：<a href="/download/Hsu 等 - 2024 - Sub-volt high-speed silicon MOSCAP microring modul.pdf" download>驱动电压为0.8V的高速硅基MOSCAP微环调制器</a></p>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>硅基微环调制器在高能效的光互连和光计算里扮演至关重要的作用，其具有超紧凑的尺寸，并且与片上波分复用系统有着很好的兼容性。然而，现有的微环调制器技术通常需要较大的驱动电压（&gt;2V），受限于材料特性和器件结构。这里，我们展示了一个基于金属-氧化物-半导体电容的微环调制器，通过硅光和掺钛氧化物的异质集成，可以实现更高迁移率的透明导电氧化物（TCO），并且具有很强的等离子体色散特性。这个器件通过Intel硅光工厂和in-house的TCO图案化工艺共同制造，可以展示出更高的调制效率（117 pm/V），因此可以通过非常低的调制电压（Vpp = 0.8 V）进行调制。调制器的调制带宽为11 GHz（主要受限于RC带宽），我们可以在25 Gb/s的条件下得到清晰的眼图，其能效为53 fJ/bit。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>微环谐振腔是光子集成回路的重要结构，其能够实现很多的器件：包括调制器、复用器、频率梳激光器的谐振腔、神经形态计算中的权重单元，光学传感器等。</p>
+<p>在光学系统中，它们扮演了越来越关键的作用，可以用于光通信、光互连、光计算和生物传感，具有超紧凑的尺寸和片上波分复用系统的兼容性。</p>
+<p>尽管微环谐振腔已经被用于很多平台，包括薄膜铌酸锂、氮化硅和等离子体，有源微环调制器仍是未来研究的热点，其可以实现高速的电光调制。</p>
+<p>硅光提供了一个成熟的、性价比高的平台，能够把微环调制器、激光器、光探测器和无源光学器件集成在一起，甚至可以通过标准工艺集成微电子电路，这仍然是构建大规模光子集成回路复杂系统（包括有源和无源器件）的唯一可行方法。</p>
+<p>现有代工工艺中的硅基微环调制器基于反偏PN结，可以实现很高的调制带宽但是通常需要大于2V的驱动电压。如此高的驱动电压是由于硅较弱的等离子体色散效应所引起的，反向PN结每长度的电容较小（通常小于2 fF/μm）【I = C*V】。如此高的驱动电压使CMOS逻辑电路不能直接驱动硅基微环调制器。</p>
+<p>例如，当前的5nm CMOS核心电压为0.65V，输入/输出供电电压为1V。因此，高摆幅的CMOS驱动电路需要用来驱动微环调制器（消耗数百毫瓦的能量），微环调制器本身的功耗和驱动电路的功耗比起来微不足道。</p>
+<p>举个例子，使用28nm CMOS工艺的106 Gb/s 2.5 Vpp PAM4的微环驱动器所需的电压通常需要消耗1.33 pJ/bit的能量，而微环调制器本身消耗的能量通常小于100 fJ/bit。因此，减小调制器的驱动电压摆幅本身不仅降低了调制器自身的能耗，更重要的是可以实现更高能效更快速的调制器驱动，使用先进的CMOS工艺节点（先进的CMOS工艺节点不支持高摆幅电压）</p>
+<p>而作为对比，MOSCAP驱动的硅光MRM可以实现更高的电容密度（采用超薄的高介电常数绝缘体材料，例如HfO2）,此外，MOSCAP器件允许异质集成电光效率更高的栅极材料，例如硅波导和III-V组半导体材料和石墨烯材料。</p>
+<p>在过去的二十年，高速MOSCAP硅光调制器，包括异质集成功能材料，已经被报道很多。然而，现在依然有很强烈的需求设计高速硅光调制器，驱动电压小于1V，并且具有较大的EO调制带宽。</p>
+<p>在本文中，我们展示了一种高效的基于MOSCAP结构的硅光微环调制器，通过和掺钛氧化铟异构集成，透明导电氧化物（TCO）具有更高的载流子迁移率。</p>
+<p>本研究的重点是实现亚伏特（Vpp）的调制电压，同时具有高电光（E-O）带宽，这需要优化微环调制器（MRM）的品质因数（Q因数）和电光效率。<strong>更高的Q因数允许更窄的谐振光谱，从而实现更低的Vpp。然而，这也会导致光子寿命延长，从而限制了调制带宽。</strong>因此，<strong>通过使用更高效的栅极材料和更高的电容密度来提高MRM的电光效率变得至关重要</strong>。</p>
+<p>本研究中的ITiO门控MOSCAP Si-MRM通过<strong>缩小微环波导宽度来提高电光效率</strong>，从而有效地改善了<strong>累积载流子与光模式轮廓之间的重叠因子</strong>。高迁移率的ITiO的使用减少了光波导的吸收，使得在支持长光子寿命限制带宽的同时，实现亚伏特Vpp调制的平衡Q因数。此外，<strong>高迁移率的ITiO以及对硅微环波导的掺杂和金属电极图案的优化能提高RC带宽</strong>。</p>
+<p>因此，ITiO门控MOSCAP SiMRM可以在0.8 Vpp下驱动，具有11 GHz的电光带宽，以53 fJ/bit的能效在25 Gb/s时展示了清晰的眼图。此外，我们还要指出，近年来，TCOs已成为集成光子学的新型电光调制材料。尽管声称具有高带宽，但这些器件仅展示了小信号RF调制，并且在5 Gb/s以上没有报告过清晰的眼图。</p>
+<p>在这项工作中，ITiO门控的MOSCAP Si-MRM代表了第一个能够进行超过25 Gb/s的高速电光（E-O）调制且具有清晰眼图的TCO调制器，这标志着TCO调制器发展的一个重要里程碑。通过进一步优化器件结构以增强RC带宽（这是我们当前器件的主要限制），我们提出了一种高迁移率的TCO，以在更低的驱动电压下实现更高的带宽。这一进步有望实现亚伏特驱动电压下的高速E-O调制，从而为未来的节能光通信和计算系统的进一步发展铺平道路。</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><h3 id="器件设计"><a href="#器件设计" class="headerlink" title="器件设计"></a>器件设计</h3><p>图1展示了ITiO门控MOSCAP Si-MRM的设计，包括3D示意图和有源区域的截面图。器件由一个宽度为300 nm的硅脊形波导构成，薄膜厚度为100 nm。为了提高电光（E-O）效率，波导宽度选择了300 nm，而8 μm的半径则用于减少弯曲损耗。硅的掺杂剖面设计为p (1 × 10<sup>17</sup> cm<sup>−3</sup>)、p+ (3 × 10<sup>18</sup> cm<sup>−3</sup>)和p++ (1 × 10<sup>20</sup> cm<sup>−3</sup>)，以降低串联电阻而不影响硅波导中的光吸收。</p>
+<p>整个器件具有<strong>背景硅p型掺杂</strong>，p+区域覆盖环形波导的顶部和部分硅薄膜。<strong>p++区域位于距环形波导600 nm处，以不影响微环的Q值</strong>。这样的掺杂设计使得被动硅微环谐振器能够<strong>在临界耦合条件附近实现20,000的高Q因子</strong>。<strong>主动电光调制区域约占微环周长的62.5%（L = 31.4 μm）</strong>，由<strong>10 nm厚的HfO<sub>2</sub>绝缘层和顶部的14 nm ITiO层</strong>组成。<strong>Ni/Au电极</strong>通过顶部的SiO<sub>2</sub>波导包覆层穿过总线波导，<strong>与MOSCAP的ITiO栅极</strong>和<strong>硅基底</strong>形成欧姆接触。</p>
+<p><img src="/pictures/image-20240814104919597.png" alt="image-20240814104919597"></p>
+<p>图2a展示了在有源区域中，ITiO门控MOSCAP Si-MRM横截面波导中<strong>载流子密度分布的仿真结果</strong>。</p>
+<p>当施加负偏压时，空穴和电子分别在Si/HfO<sub>2</sub>和HfO<sub>2</sub>/ITiO界面处积累。<strong>ITiO层中积累的电子厚度小于1 nm</strong>，这明显比Si波导中的空穴积累层薄，这是由于不同的载流子浓度和介电常数导致不同的德拜长度所致。</p>
+<p>图2b展示了ITiO门控MOSCAP Si-MRM中横向电（TE）模的光学模式分布。<strong>由于环形波导的弯曲，光学模式分布向波导的外侧壁偏移</strong>。当施加负偏压时，<strong>光学模式与ITiO和Si中的累积电荷相互作用</strong>，实现电光调制，并使<strong>共振波长（Δλ<sub>res</sub>）发生蓝移</strong>。我们之前的研究表明，在相对适中的折射率变化下，相位调制主要由总电荷变化决定，这使我们能够将模拟模型简化为具有1 nm厚均匀积累层的分布，与实验结果非常吻合</p>
+<p>图2b还提供了HfO<sub>2</sub>/ITiO<strong>界面处光学模式分布的放大视图</strong>，展示了在0 V和-1 V偏压下的1 nm厚均匀<strong>积累层</strong>的示例。图2c展示了在不同栅极偏压下的模拟传输光谱。我们的模拟假设HfO<sub>2</sub>的介电常数为12，ITiO的载流子迁移率为62 cm<sup>2</sup>/(V⋅s)，浓度为1.2 × 10<sup>20</sup> cm<sup>−3</sup>，这些参数选择与实验材料属性相符（补充信息III，IV）。使用这些参数，<strong>ITiO门控的MOSCAP Si-MRM在0 V时在积累模式下实现了5000的高Q因子和125 pm/V的电光效率</strong>。</p>
+<p>为了平衡输出光功率和驱动电压，我们根据微环传输的洛伦兹形状显著减小，选择了<strong>3 dB的插入损耗（IL）点</strong>。此外，采用6 dB的消光比（ER）来实现清晰的眼图，特别是在传输高速数据时。<strong>3 dB IL和6 dB ER的组合</strong>也被推荐为光发射器中电光调制的实用且有效的选择。图2c中的仿真结果还展示了ITiO门控MOSCAP Si-MRM仅使用0.8 Vpp就能实现7.6 dB的ER和3 dB的IL，突出了高效调制的潜力。</p>
+<p><img src="/pictures/image-20240814110157903.png" alt="image-20240814110157903" style="zoom:100%;" /></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%85%89%E4%BA%92%E8%BF%9E/" rel="tag"># 光互连</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/08/13/%E5%BC%82%E8%B4%A8%E9%9B%86%E6%88%90%E7%9A%84%E7%A1%85-%E5%AF%BC%E7%94%B5%E6%B0%A7%E5%8C%96%E7%89%A9MOSCAP%E5%BE%AE%E7%8E%AF%E8%B0%83%E5%88%B6%E5%99%A8%E9%98%B5%E5%88%97/" rel="prev" title="异质集成的硅-导电氧化物MOSCAP微环调制器阵列-Intel">
+      <i class="fa fa-chevron-left"></i> 异质集成的硅-导电氧化物MOSCAP微环调制器阵列-Intel
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/08/14/%E7%A1%85%E5%85%89%E8%B0%83%E5%88%B6%E5%99%A8%E8%83%BD%E6%95%88%E5%92%8C%E5%B8%A6%E5%AE%BD%E9%99%90%E5%88%B6%E7%9A%84%E7%90%86%E8%AE%BA%E5%88%86%E6%9E%90/" rel="next" title="硅光调制器能效和带宽限制的理论分析">
+      硅光调制器能效和带宽限制的理论分析 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C"><span class="nav-number">3.</span> <span class="nav-text">结果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%99%A8%E4%BB%B6%E8%AE%BE%E8%AE%A1"><span class="nav-number">3.1.</span> <span class="nav-text">器件设计</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yaotian Zhao shineskys@outlook.com"
+      src="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+  <p class="site-author-name" itemprop="name">Yaotian Zhao shineskys@outlook.com</p>
+  <div class="site-description" itemprop="description">You should write because writing makes you a better person.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://scholar.google.com/citations?user=9Uc2du4AAAAJ&hl=zh-CN" title="Scholar → https:&#x2F;&#x2F;scholar.google.com&#x2F;citations?user&#x3D;9Uc2du4AAAAJ&amp;hl&#x3D;zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-graduation-cap"></i>Scholar</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://otip.sjtu.edu.cn/" title="OTIP → https:&#x2F;&#x2F;otip.sjtu.edu.cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-users"></i>OTIP</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yaotian Zhao shineskys@outlook.com</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">81k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:14</span>
+</div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme: 'dark',
+      logLevel: 3,
+      flowchart: { curve: 'linear' },
+      gantt: { axisFormat: '%m/%d/%Y' },
+      sequence: { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '4299921ded3b8e64c83a',
+      clientSecret: '90fa712acbeec6ccc4e62461615eb46ae73ac7c3',
+      repo: 'BlogComments',
+      owner: 'ovshinsky',
+      admin: ['ovshinsky'],
+      id: 'f04423dbb91ce42dfd4c74ccd172b09d',
+        language: '',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

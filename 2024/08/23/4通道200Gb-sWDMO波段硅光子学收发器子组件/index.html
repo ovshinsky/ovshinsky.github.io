@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://example.com').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: true,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="参考文献：4通道200 Gb&#x2F;s WDM O波段硅光子学收发器子组件 2020. 摘要我们展示了一种具备200G能力的WDM O-band光学收发模块，该模块包含一个由4个硅光子学环调制器（RM）和锗光电二极管（PD）组成的阵列，与一个SiGe BiCMOS集成驱动器和一个SiGe跨阻放大器（TIA）芯片共同封装。在4×50 Gb&#x2F;s的数据调制实验中，平均消光比（ER）为3.17 dB，发射器的总">
+<meta property="og:type" content="article">
+<meta property="og:title" content="4通道200 Gb&#x2F;s WDM O波段硅光子学收发器子组件-from IMEC">
+<meta property="og:url" content="http://example.com/2024/08/23/4%E9%80%9A%E9%81%93200Gb-sWDMO%E6%B3%A2%E6%AE%B5%E7%A1%85%E5%85%89%E5%AD%90%E5%AD%A6%E6%94%B6%E5%8F%91%E5%99%A8%E5%AD%90%E7%BB%84%E4%BB%B6/index.html">
+<meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
+<meta property="og:description" content="参考文献：4通道200 Gb&#x2F;s WDM O波段硅光子学收发器子组件 2020. 摘要我们展示了一种具备200G能力的WDM O-band光学收发模块，该模块包含一个由4个硅光子学环调制器（RM）和锗光电二极管（PD）组成的阵列，与一个SiGe BiCMOS集成驱动器和一个SiGe跨阻放大器（TIA）芯片共同封装。在4×50 Gb&#x2F;s的数据调制实验中，平均消光比（ER）为3.17 dB，发射器的总">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/pictures/image-20240823173006919.png">
+<meta property="og:image" content="http://example.com/pictures/image-20240823173540799.png">
+<meta property="og:image" content="http://example.com/pictures/image-20240823173713494.png">
+<meta property="og:image" content="http://example.com/pictures/image-20240823173816949.png">
+<meta property="og:image" content="http://example.com/pictures/image-20240823173940164.png">
+<meta property="og:image" content="http://example.com/pictures/image-20240823174039142.png">
+<meta property="article:published_time" content="2024-08-23T09:07:26.000Z">
+<meta property="article:modified_time" content="2024-09-03T07:53:23.619Z">
+<meta property="article:author" content="Yaotian Zhao shineskys@outlook.com">
+<meta property="article:tag" content="光互连">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/pictures/image-20240823173006919.png">
+
+<link rel="canonical" href="http://example.com/2024/08/23/4%E9%80%9A%E9%81%93200Gb-sWDMO%E6%B3%A2%E6%AE%B5%E7%A1%85%E5%85%89%E5%AD%90%E5%AD%A6%E6%94%B6%E5%8F%91%E5%99%A8%E5%AD%90%E7%BB%84%E4%BB%B6/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>4通道200 Gb/s WDM O波段硅光子学收发器子组件-from IMEC | ZhaoYaotian's Blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZhaoYaotian's Blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">You should write because writing makes you a better person.</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-关于我">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于我</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/23/4%E9%80%9A%E9%81%93200Gb-sWDMO%E6%B3%A2%E6%AE%B5%E7%A1%85%E5%85%89%E5%AD%90%E5%AD%A6%E6%94%B6%E5%8F%91%E5%99%A8%E5%AD%90%E7%BB%84%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          4通道200 Gb/s WDM O波段硅光子学收发器子组件-from IMEC
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-08-23 17:07:26" itemprop="dateCreated datePublished" datetime="2024-08-23T17:07:26+08:00">2024-08-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-03 15:53:23" itemprop="dateModified" datetime="2024-09-03T15:53:23+08:00">2024-09-03</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>参考文献：<a href="/download/Heterogeneously integrated silicon.pdf" download>4通道200 Gb/s WDM O波段硅光子学收发器子组件</a> 2020.</p>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>我们展示了一种具备200G能力的WDM O-band光学收发模块，该模块包含一个由4个硅光子学环调制器（RM）和锗光电二极管（PD）组成的阵列，与一个SiGe BiCMOS集成驱动器和一个SiGe跨阻放大器（TIA）芯片共同封装。在4×50 Gb/s的数据调制实验中，平均消光比（ER）为3.17 dB，发射器的总能效为 ==2 pJ/bit== 。数据接收实验验证了每条通道在50 Gb/s下的性能，实现了输入光调制幅度（OMA）为−9.5 dBm时的插值10^-12位错误率（BER），功率效率为 ==2.2 pJ/bit== ，使得整个收发模块的总功率效率为4.2 pJ/bit，包括加热器调节要求。该电光子模块在O-band基于RM的硅光子学收发器实现中提供了最高的总数据速率，突显了其在下一代WDM以太网收发器中的潜力。</p>
+<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>新兴的数据中心（DC）时代[1]和持续增长的内部数据中心流量[2]要求光收发器技术在低功耗和小体积的要求下提供更高的操作速度和总带宽。然而，从当前部署的100 GbE（4×25 Gb/s以太网）模块向200 GbE甚至400 GbE接口的过渡，需要多通道收发器配置，具有等于或高于50 Gb/s的传输速率，利用波分复用（WDM）或空间分复用（SDM）技术。硅光子学（SiPho）作为一种技术推动者已经脱颖而出，在C波段[3–5]的先前展示中，光发射器（Tx）布局已经实现了8×40G[3]的操作，而完整的C波段收发器模块集成了Tx和接收器（Rx）电路以及它们的电子驱动器和TIA模块，实现了4通道WDM设置，总带宽达到80 Gb/s，这一性能相对平庸[5]。<br>然而，由于O波段已经成为高速数据中心内部互联的主要光谱区域，研究工作逐渐转向O波段发射器（Tx）和接收器（Rx）的实现[6–9]。到目前为止，主要的关注点仍集中在发射器部分，特别是在目标为25 Gb/s或更高线速的情况下[10–15]。无论是利用行波马赫-曾德调制器（MZM）阵列[9,10]，还是硅基环形调制器（RM）[11–15]，单通道和多通道发射器布局都已报道了高达400 Gb/s的总带宽。然而，最近展示的基于MZM的发射器仅包括硅光子芯片，并使用外部连接的大型电驱动器，这需要较高的驱动电压（2.9V）和额外的数字信号处理[9]，使其能耗远离了数据中心发射器低功耗规格。基于MZM的发射器与电子驱动器共同组装的演示也仅达到2通道布局，总带宽为2 × 56 Gb/s[10]。与MZM相比，基于RM的发射器布局在占地面积和能效方面具有显著优势。我们最近的工作中，首次展示的WDM硅光O波段发射器报道了一个4×40 Gb/s的配置，其能耗仅为2.2 pJ/bit[14]，但缺乏集成的接收器部分，使其不能成为完整的WDM TxRx子模块。<br>在本文中，我们扩展了之前关于基于环形调制器（RM）的WDM光发射器（Tx）的研究[14]，展示了一个完整的200 Gb/s能力的O波段WDM收发器子模块。该模块在50 Gb/s的线速下运行，并且提供了迄今为止报告的硅光（Si-Pho）RM基O波段收发器布局中最高的总带宽。它包括一个硅光4通道收发器芯片，该芯片与其电子部分共同封装在一个基于聚合物的电路板上，4通道电子驱动器和TIA电路采用55纳米SiGe技术平台制造。硅光发射部分包括4个高速载波耗尽环形调制器（RM），接着是一个4通道基于环形的复用器（MUX），而接收部分则包括一个类似的4通道解复用器（DEMUX）以及4个Ge光电二极管。在一个4×50 Gb/s的数据调制实验中，使用4种不同波长，波道间距为2 nm，结果显示开眼图，消光比（ER）值在3 dB到3.38 dB之间。电子驱动器为每个RM提供平均2 Vpp的电压，功耗仅为244 mW，能效为1.22 pJ/bit，考虑到RM的热调节机制后能效提高至2 pJ/bit。此外，展示了2×50 Gb/s的数据接收操作，结果显示无误差操作，插值位误码率（BER）为10^-12，参考输入光调制幅度（OMA）为-9.5 dBm。TIA的功耗为448 mW，对应的功耗为2.24 pJ/bit，最终总收发器能效为4.24 pJ/bit，工作速率为50 Gb/s。</p>
+<h2 id="器件的加工和描述"><a href="#器件的加工和描述" class="headerlink" title="器件的加工和描述"></a>器件的加工和描述</h2><p>图1(a)展示了4通道WDM O波段收发器的示意图，图中包括了设备安装在聚合物电路板上的显微照片，以及硅光芯片和电子部分的特写图，分别如图1(b)和1(c)所示。该收发器组件包括一个硅光（SiPho）芯片（14.04 mm²），该芯片通过线焊接连接到一个SiGe电子驱动器阵列（2.4 mm²）和一个SiGe跨阻放大器（TIA）阵列（2.9 mm²），这三块芯片都安装在一个基于聚合物的印刷电路板（PCB）上。</p>
+<p><img src="/pictures/image-20240823173006919.png" alt="image-20240823173006919"></p>
+<p>SiPho芯片是在imec的ISIPP50G平台上制造的，包含一个基于微环调制器（MRM）的4通道发射器（Tx）阵列和一个基于<strong>SiGe光电二极管</strong>的4通道接收器（Rx）阵列[11]。每个Tx单元包含一个<strong>7.5 μm的载流子耗尽RM</strong>，具有45 fF的电容、约5000的Q因子、33.8 GHz的3 dB带宽和9.0 nm的自由光谱范围（FSR）。集成的加热器允许对RM共振进行精细调节，并通过芯片东侧的电气直流垫片进行访问。所有四个RM的光输出通过一个4通道MUX单元进行复用，该单元基于级联的双环谐振器，每个MUX通道包括两个微环[16]，具有9.0 nm的FSR，而一个集体加热器允许对MUX的传输函数进行热调节。集成Tx阵列的光输入/输出访问通过芯片西侧的TE极化光栅耦合器（GC）实现，这些光栅耦合器基于PDK-ready imec设计，在图1(b)中标记为Tx In 1-4和Tx out，分别指代4个Tx输入和组合Tx输出。</p>
+<p>每个Rx单元包含一个Ge波导光电探测器（PD），具有50 GHz的3 dB带宽、30 fF的电容和0.9 A/W的响应度。Rx阵列设计用于接收一个共用的WDM光输入，该输入包含4个不同波长的信号，信道间距为2 nm，信号在一个4通道DEMUX单元中进行解复用，该单元基于与Tx中使用的类似的级联双环谐振器。解复用后的信号被波导引导到各个Rx单元，而Rx阵列的访问通过芯片西侧的TE GC实现，在图1(b)中标记为RxIn。</p>
+<p>该收发器的电子电路包括一个4通道全差分电子驱动器阵列[17]和一个4通道全差分TIA阵列[18]，均采用55 nm SiGe BiCMOS技术制造。4通道电子驱动器为每个RM提供2 Vpp的电压，所有通道的总功耗为244 mW，这有效转化为50 Gb/s下的1.22 pJ/bit功率效率。此外，它采用集中驱动方案，通过利用驱动器与RM垫片之间的短电气连接（线键合），避免了使用终端电阻，从而提高了能量效率。还利用了不平衡输出阶段，允许直接耦合到调制器而无需外部偏置TEE，从而显著减少了所需的空间和降低了Tx的成本。</p>
+<p>4通道TIA具有光电流的差分检测功能，显著提高了Rx的灵敏度，同时使用片上偏置网络为PD提供偏置电压，简化了组装过程。所有通道的TIA电路总功耗为448 mW，在50 Gb/s下的效率为2.24 pJ/bit。</p>
+<p>所有三块芯片被安装在一个高频印刷电路板上，以便提供驱动器和TIA电路所需的电子组件（例如去耦电容、线键合垫片、电源I/O引脚）并通过50GHz电气走线路由驱动器输入和TIA输出信号。需要注意的是，这些电路板是作为开发电光电路板（EOCB）迭代过程的一部分专门开发的，最终将实现通过低损耗光学聚合物波导和硅到聚合物绝热耦合器进行电气路由和光学波导耦合。此外，铜走线提供了几乎垂直的侧壁和良好控制的间隙宽度，从而实现低阻抗变化，并允许特征尺寸缩小至40μm。聚合物RF走线的高速路由性能已经在先前的演示中得到验证，能够在4cm长的线路上无缝传输112 Gb/s PAM-4信号[19]。最后，电子芯片和光子芯片被放置在近距离位置，以最小化线键合引起的电感，同时特别设计的布局允许通过无焊RF连接器（Ardent TR70）实现驱动器输入和TIA输出的无缝连接。</p>
+<h2 id="实验设备和测试结果"><a href="#实验设备和测试结果" class="headerlink" title="实验设备和测试结果"></a>实验设备和测试结果</h2><p>图2展示了200 Gb/s收发器的Tx部分的原理图以及用于评估其性能的实验设置。实验中使用了一个位模式发生器生成50 Gb/s的差分信号，该信号为NRZ伪随机二进制序列（PRBS7-1），峰值幅度为180 mV，通过TR70可插拔RF连接器输入到驱动器的输入端。电子驱动电路由四个电压源供电：VddPre、Vdd、Vbias1和Vbias2，其中第一个用于预驱动器操作，第二个用于主电源电压，最后两个用于设置RM的偏置点。集成驱动器的操作设置经过精细调整，以提供最佳的调制深度和光学眼图开口。</p>
+<p>一个可调激光源（TLS）被用来依次生成四个连续波（CW）信号中的一个，波长分别为λ1 = 1309.70 nm、λ2 = 1311.90 nm、λ3 = 1314.26 nm和λ4 = 1316.34 nm，具体取决于RM的操作点。这些CW信号通过光纤阵列注入到输入光栅耦合器（Tx In1-4）中。一个偏振控制器用于匹配入射光的偏振方向与光栅耦合器的偏振方向。调制后的信号通过输出光栅耦合器（Tx out）从芯片中耦合出来，经过半导体光放大器（SOA）放大后，注入到带通光学滤波器（OBPF）中，该滤波器具有0.5 nm的3 dB带宽，用于滤除SOA放大的自发辐射（ASE）。最后，信号在采样示波器（OSC）中进行评估。</p>
+<p><img src="/pictures/image-20240823173540799.png" alt="image-20240823173540799"></p>
+<p>图3(a)-(e)展示了通过依次扫掠每个Tx输入端口并测量共用Tx输出端口的光功率得到的4通道MUX的光谱传递函数。MUX的自由光谱范围（FSR）为9.02 ± 0.2 nm，通道间距为2 ± 0.2 nm，而插入损耗为10-12 dB，与预期的1-2 dB有所偏差，这主要是由于设计错误导致的。图3(a)中的波长标注（λ1-λ4）指示了用于数据传输的MUX通道，而图3(b)–3(e)展示了相应MUX通道的输出光谱，分别显示了在调谐MUX传递函数内各个RM谐振腔之前和之后的光谱。Rx侧的4通道DEMUX与Tx侧的设计完全相同，并具有相同的光谱特性，包括通道间距和FSR。</p>
+<p>4通道Tx的性能通过4×50 Gb/s NRZ OOK数据调制实验进行了评估。图3(f)–3(i)展示了在MUX的共用输出端口获得的光学眼图，每个RM按适当波长依次调谐，分别显示了3.07 dB、3.25 dB、3.38 dB和3.01 dB的ER值。RM由集成驱动阵列提供的约2 Vpp驱动，每个驱动输入由180-mVpp差分信号供给，而RM的DC反向偏置分别为−0.39 V、−0.41 V、−0.42 V、−0.38 V。注入在四个波长（λ1-λ4）上的CW信号的光功率为10 dBm，而从共用输出端口产生的调制信号的平均光功率分别为−17.7 dBm、−18 dBm、−19.1 dBm和−19 dBm。光损耗分析中，两个GC引入了约9 dB的损耗，RM插入损耗在6-9 dB之间，具体取决于Tx通道和操作波长，而MUX引入了约10-12 dB的光损耗，这主要是由于MUX设计错误造成的。SOA以276 mA电流驱动，提供了20 ± 2 dB的平均增益，具体取决于操作波长。为了将RM谐振腔调谐到相应的MUX通道，应用于RM1-RM4的集成加热器的电功率分别为39.3 mW、47.58 mW、33.63 mW和38.75 mW。驱动阵列的功耗为244 mW，对应的高能效为1.22 pJ/bit，当考虑到RM加热器的功耗时，总Tx功率效率为2 pJ/bit。需要注意的是，通过使用消耗约180 mW的热电控制器（TEC），保持了芯片上的温度和因此RM操作点的稳定。下一代的收发器可以通过利用最近引入的无接触集成光子探针（CLIPP）系统来进一步降低RM监控和控制的功耗，从而在50 Gb/s数据速率下，仅增加约0.5 pJ/bit的功耗，同时稳定RM操作。</p>
+<p><img src="/pictures/image-20240823173713494.png" alt="image-20240823173713494"></p>
+<p>图4(a)展示了用于表征收发器Rx部分的实验 setup。TIA电路通过两个电源供电，其中一个（Vdd1 = 1V）用于为一个芯片上的可编程寄存器提供电力，以允许对TIA特性进行细调，另一个（Vdd = 2.5V）则用于为TIAs供电并为PDs偏置。使用比特模式发生器生成一个40 Gb/s和50 Gb/s的NRZ伪随机二进制序列（PRBS7-1）差分信号，峰值幅度为300 mV，该信号经过商业高速RF驱动放大器放大，以驱动一个30 GHz O带MZM调制器。</p>
+<p>为了确定4通道DEMUX的峰值光谱点，从TLS发出的光被扫过O带，并随后注入到MZM调制器中，得到的调制信号耦合到共用RxIn端口。使用RF功率计监测TIA的电输出，从而确定每个MUX通道的峰值传输点。基于这些测量，Rx通道2和3的峰值波长分别为1316.6 nm和1318.79 nm。不幸的是，通道1和4的TIAs的线焊点被切断，无法进行评估，而MUX/DEMUX设计中的设计错误阻止了使用集成DEMUX加热器来匹配发射器和接收器的通道波长，因为其使用显著增加了DEMUX插入损耗。</p>
+<p>随后使用TLS生成了两个CW信号，分别为1316.6 nm和1318.79 nm，对应于Rx2和Rx3通道，这些信号被注入到MZM调制器中。得到的调制光信号在SOA中放大，以补偿MZM、MUX和GC的光损耗，并通过相应的GC耦合到Rx阵列的共用输入端口（即RxIn），在0.5 nm 3 dB带宽的OBPF中滤波。最后，电TIA输出信号通过高速RF迹线传输到TR70可插拔连接器，并在实时OSC中进行监测和评估。</p>
+<p><img src="/pictures/image-20240823173816949.png" alt="image-20240823173816949"></p>
+<p>两个Rx通道的性能通过40 Gb/s和50 Gb/s NRZ OOK数据进行了评估。图4(b)和4(e)展示了λ=1316.6 nm处MZM调制器输出的光学眼图，在40 Gb/s和50 Gb/s下分别具有8 dB和7.2 dB的消光比（ER），其光学调制幅度（OMA）分别为5.4 dBm和6 dBm，这些数据是在光带通滤波器（BPF）输出后得到的，随后被注入到Rx共用输入端口（RxIn）。考虑到由光栅耦合器（GC）引起的约4.5 dB损耗和DEMUX额外的约11 dB损耗，最终在PD输入处的光信号OMA为40 Gb/s下的−10.1 dBm和50 Gb/s下的−9.5 dBm。</p>
+<p>单端TIA输出连接到实时示波器（OSC），该示波器通过比特错误率（BER）估算提供信号质量的指示。图4(c)、(f)-(d)和(g)中的电信号眼图对应于Rx通道2和通道3在40 Gb/s和50 Gb/s下的10E-12 BER值。BER值是通过在3E+07比特序列中测量零错误，并利用实时示波器提供的工具包应用插值方法[21]得出的。更具体地说，在信号到达实时示波器之前引入了0.86 dB的光学衰减，这可以映射为信噪比（SNR）从13.8 dB降到11.2 dB，并且理论BER从1E-12变化到1E-7，基于假设接收器输入的热高斯噪声是系统中错误的主要原因。在插入衰减因子后，测量了3.01E-07比特的结果，再次显示零错误，并允许插值到1E-12 BER。最后，如果光信号来自发射器的一侧，并且在50 Gb/s时ER为3 dB，则为了实现相同的OMA和性能，接收器中注入的光信号的平均功率应比实验上演示的具有7.2 dB ER的情况增加3.2 dB。TIA阵列的功耗测量为448 mW，结果为50 Gb/s时的2.44 pJ/bit功率效率。</p>
+<p>为了评估发射机的最大可实现传输距离，计算了总光学功率预算，并在表1中进行了说明。可以明显观察到，主要的光学损耗来源于MUX和相应的DEMUX，这些损耗在后续的制造过程中可以轻松纠正，以达到最初目标的1-2 dB损耗，这在相应的C波段设计中已经得到实验验证[16]。这表明，采用基于之前C波段设计的光栅耦合器（GC），其损耗为2 dB[22]，以及优化的RM结构，其损耗为4 dB[23]，可以使未来的制造过程中的总光学损耗达到10 dB（发射端）和4 dB（接收端）。考虑到输入激光功率为10 dBm，并且考虑到RM达到的3 dB ER，发射端的调制信号OMA将为−1.76 dBm。因此，接收器PD-TIA处的信号OMA将为−5.76 dBm，相比于接收器在50 Gb/s时的−9.5 dBm OMA要求，具有约4 dB的功率裕量。最后，考虑到O波段光谱窗口中的单模标准光纤（SSMF）的极低色散，以及典型的光学损耗约为0.33 dB/km[24]，4 dB的光学功率裕量允许在包括0.2 dB光学连接器相关损耗在内的11.5 km SSMF上进行传输。</p>
+<p><img src="/pictures/image-20240823173940164.png" alt="image-20240823173940164"></p>
+<p>为了评估在多通道操作下的TxRx性能，我们开发了一个模拟框架，该框架考虑了来自RF信号路由的电气串扰和来自使用的MUX和DEMUX的光学串扰。基于在Keysight的ADS中进行的电气模拟结果，差分模式到模式和共模到差分模式的串扰均为−40 dB，因此不会影响4通道TxRx的电气性能。考虑到来自光学MUX和DEMUX的有限串扰，使用VPI软件套件模拟了多通道TxRx操作的光学性能。将MUX和DEMUX的测量光学传输函数以及Tx和Rx的性能导入到自定义模拟环境中，最坏情况下的光学串扰测量为22 dB，Tx的ER在50 Gb/s时设置为3 dB。在50 Gb/s下，通过逐步将调制信号注入到每个MUX通道，从而模拟了从一个到四个通道同时操作的TxRx，结果显示，4通道同时操作相对于单通道操作在10E-12比特错误率（BER）下的功率损耗为0.2 dB。</p>
+<p>总结如下，表2汇总了测量性能，并与之前的CMOS-SiPho TxRx演示进行比较，揭示了该工作的低功耗高带宽优势。</p>
+<p><img src="/pictures/image-20240823174039142.png" alt="image-20240823174039142"></p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>我们展示了一个200 Gb/s O波段4通道硅光子WDM光学收发器，其中包括一个SiPho芯片与4通道电子驱动器和4通道TIA共同组装在一个单一的聚合物基板上。通过50 Gb/s每通道的调制和数据接收实验，验证了集成收发器的高速度和低功耗性能，最终实现了总收发器能效为4.4 pJ/bit。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%85%89%E4%BA%92%E8%BF%9E/" rel="tag"># 光互连</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/08/23/0-96pJ-b7%C3%9750Gb-s%E6%AF%8F%E5%85%89%E7%BA%A4%E6%B3%A2%E9%95%BF%E5%88%86%E5%A4%8D%E7%94%A8%EF%BC%88WDM%EF%BC%89%E6%8E%A5%E6%94%B6%E5%99%A8%E9%87%87%E7%94%A8%E5%A0%86%E5%8F%A07nmCMOS%E5%92%8C45nm%E7%A1%85%E5%85%89%E5%AD%90%E8%8A%AF%E7%89%87/" rel="prev" title="0.96pJ/b 7×50Gb/s 每光纤波长分复用（WDM）接收器采用堆叠的7nm CMOS和45nm硅光子芯片">
+      <i class="fa fa-chevron-left"></i> 0.96pJ/b 7×50Gb/s 每光纤波长分复用（WDM）接收器采用堆叠的7nm CMOS和45nm硅光子芯片
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/08/26/%E5%8F%AF%E8%A7%81%E6%B3%A2%E9%95%BF%E4%B8%8B%E7%A8%B3%E5%81%A5%E9%AB%98%E6%95%88%E7%9A%84%E5%BE%AE%E7%B1%B3%E7%BA%A7%E7%9B%B8%E4%BD%8D%E8%B0%83%E5%88%B6%E5%99%A8/" rel="next" title="可见波长下稳健高效的微米级相位调制器">
+      可见波长下稳健高效的微米级相位调制器 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.</span> <span class="nav-text">背景介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%99%A8%E4%BB%B6%E7%9A%84%E5%8A%A0%E5%B7%A5%E5%92%8C%E6%8F%8F%E8%BF%B0"><span class="nav-number">3.</span> <span class="nav-text">器件的加工和描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E8%AE%BE%E5%A4%87%E5%92%8C%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C"><span class="nav-number">4.</span> <span class="nav-text">实验设备和测试结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">5.</span> <span class="nav-text">结论</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yaotian Zhao shineskys@outlook.com"
+      src="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+  <p class="site-author-name" itemprop="name">Yaotian Zhao shineskys@outlook.com</p>
+  <div class="site-description" itemprop="description">You should write because writing makes you a better person.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://scholar.google.com/citations?user=9Uc2du4AAAAJ&hl=zh-CN" title="Scholar → https:&#x2F;&#x2F;scholar.google.com&#x2F;citations?user&#x3D;9Uc2du4AAAAJ&amp;hl&#x3D;zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-graduation-cap"></i>Scholar</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://otip.sjtu.edu.cn/" title="OTIP → https:&#x2F;&#x2F;otip.sjtu.edu.cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-users"></i>OTIP</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yaotian Zhao shineskys@outlook.com</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">81k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:14</span>
+</div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme: 'dark',
+      logLevel: 3,
+      flowchart: { curve: 'linear' },
+      gantt: { axisFormat: '%m/%d/%Y' },
+      sequence: { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '4299921ded3b8e64c83a',
+      clientSecret: '90fa712acbeec6ccc4e62461615eb46ae73ac7c3',
+      repo: 'BlogComments',
+      owner: 'ovshinsky',
+      admin: ['ovshinsky'],
+      id: '32e3045cbb9b79beb6b34322f1460a65',
+        language: '',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

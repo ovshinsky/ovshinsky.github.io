@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://example.com').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: true,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="参考文献：高Q值慢光及其在光子晶体微环中的局域化 2022. 摘要我们介绍了一种光子晶体环形谐振腔，它类似于内部齿轮，将光子晶体（PhC）和回音壁模式（WGM）的概念结合在一起。这种“微齿轮”光子晶体环（MPhCR）是通过对微环谐振腔的内边界进行周期性调制而形成的，打开了一个大的带隙，就像在PhC腔体中一样，同时保持了环的圆对称外边界和高光学品质因子（Q），如同在WGM腔体中一样。MPhCR以特定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高Q值慢光及其在光子晶体微环中的局域化">
+<meta property="og:url" content="http://example.com/2024/08/27/%E9%AB%98Q%E5%80%BC%E6%85%A2%E5%85%89%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%85%89%E5%AD%90%E6%99%B6%E4%BD%93%E5%BE%AE%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%B1%80%E5%9F%9F%E5%8C%96/index.html">
+<meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
+<meta property="og:description" content="参考文献：高Q值慢光及其在光子晶体微环中的局域化 2022. 摘要我们介绍了一种光子晶体环形谐振腔，它类似于内部齿轮，将光子晶体（PhC）和回音壁模式（WGM）的概念结合在一起。这种“微齿轮”光子晶体环（MPhCR）是通过对微环谐振腔的内边界进行周期性调制而形成的，打开了一个大的带隙，就像在PhC腔体中一样，同时保持了环的圆对称外边界和高光学品质因子（Q），如同在WGM腔体中一样。MPhCR以特定">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/pictures/image-20240827091202436.png">
+<meta property="article:published_time" content="2024-08-27T00:34:40.000Z">
+<meta property="article:modified_time" content="2024-09-18T02:24:27.828Z">
+<meta property="article:author" content="Yaotian Zhao shineskys@outlook.com">
+<meta property="article:tag" content="光互连">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/pictures/image-20240827091202436.png">
+
+<link rel="canonical" href="http://example.com/2024/08/27/%E9%AB%98Q%E5%80%BC%E6%85%A2%E5%85%89%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%85%89%E5%AD%90%E6%99%B6%E4%BD%93%E5%BE%AE%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%B1%80%E5%9F%9F%E5%8C%96/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>高Q值慢光及其在光子晶体微环中的局域化 | ZhaoYaotian's Blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZhaoYaotian's Blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">You should write because writing makes you a better person.</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-关于我">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于我</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/27/%E9%AB%98Q%E5%80%BC%E6%85%A2%E5%85%89%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%85%89%E5%AD%90%E6%99%B6%E4%BD%93%E5%BE%AE%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%B1%80%E5%9F%9F%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          高Q值慢光及其在光子晶体微环中的局域化
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-08-27 08:34:40" itemprop="dateCreated datePublished" datetime="2024-08-27T08:34:40+08:00">2024-08-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-18 10:24:27" itemprop="dateModified" datetime="2024-09-18T10:24:27+08:00">2024-09-18</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>参考文献：<a href="/download/Lu 等 - 2022 - High-Q slow light and its localization in a photon.pdf" download>高Q值慢光及其在光子晶体微环中的局域化</a> 2022.</p>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>我们介绍了一种光子晶体环形谐振腔，它类似于内部齿轮，将光子晶体（PhC）和回音壁模式（WGM）的概念结合在一起。这种“微齿轮”光子晶体环（MPhCR）是通过对微环谐振腔的内边界进行周期性调制而形成的，打开了一个大的带隙，就像在PhC腔体中一样，同时保持了环的圆对称外边界和高光学品质因子（Q），如同在WGM腔体中一样。MPhCR以特定的WGM为目标，打开一个宽达几十个自由光谱范围的大的PhC带隙，压缩模式谱，同时保持WGM模式的高Q值、角动量和波导耦合特性。特别是在介质带边附近，我们观察到模式的群速度相对于传统微环模式降低了10倍，同时支持Q值为(1.1 ± 0.1) × 10^6。这个Q值大约是先前慢光设备记录的50倍。以慢光设计为起点，我们进一步展示了将WGM局域化到光子晶体缺陷模式的能力，使模式体积相比于传统WGM减少了超过10倍，同时保持高达(5.6 ± 0.1) × 10^5的高Q值。重要的是，这种额外的光子晶体缺陷局域化可以在不需要详细电磁设计的情况下实现。此外，由于MPhCR继承了WGM的特性，控制其共振频率和波导耦合变得简单。在利用PhC强烈改变WGM的基本特性（如群速度和局域化）的过程中，MPhCR为广泛的光子学应用提供了一个令人兴奋的平台，包括传感/计量学、非线性光学和腔量子电动力学。</p>
+<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>芯片集成的光学微/纳米腔已经在光学科学领域取得了许多突破。这些器件在适合集成和部署的平台上，时空增强了光与物质的相互作用，并被确立为量子光学、非线性光子学、光机械学和传感等领域的基础元素。空间约束的度量标准是模式体积（V），而与时间增强相关的度量标准是光学品质因子（Q）。虽然已经研究了许多腔体几何结构，但它们大多可以归为两类：回音壁模式（WGM）腔体，它们基于设备外围的全内反射；以及光子晶体（PhC）腔体，它们基于在一维或二维光子晶格中局域化缺陷。在前一类中，只要设备的半径足够大且侧壁光滑，就自然可以在宽波长范围内实现多个高Q值的WGM，而无需特定的器件几何结构设计。相比之下，在PhC腔体中，多模式操作和高Q值共振需要对器件几何结构进行精心和具体的设计，并且在纳米制造过程中必须保持一定的图案精度。WGM腔体的另一个优势是通过倏逝场相互作用实现波导耦合的相对容易性。这两个优势使WGM腔体成为宽带非线性光学的主要平台，包括克尔频率梳、光频率转换和其他非线性波混合效应。然而，WGM腔体无法与PhC缺陷腔体提供的更强的空间约束相媲美，后者的V值通常小10到100倍。PhC缺陷腔体可以具有亚立方波长的V值，特别适用于腔体量子电动力学（QED）和腔体光机械学中的单模应用。<br>鉴于WGM和光子晶体（PhC）缺陷腔体各自的优点，将这两种几何结构结合起来以利用两者的最佳特点是非常理想的。实际上，这一愿望已在各种腔体几何结构中得到追求（见扩展数据表1）。例如，一种研究中的几何结构在二维光子晶体中创建了多边形的“盘”形或“环”形线缺陷，即光子晶体“盘/环”谐振器（PCDRs/PCRRs）9–11。进一步的开创性工作在传统的环形谐振器中进行，称为光子晶体环（PhCRs）12，其中在微环中引入了刻蚀的空气孔，重点在于生成慢光模式12–16。在这些PhCRs中，尽管光的群速度被减慢以增强光-物质相互作用，但Q值与最先进的微环相比显著下降，这抵消了使用慢光的最初好处。<br>其他研究在微环侧壁上加入了小幅度的光栅，以控制选定腔体模式的频率17，并用于单模激光18和自发脉冲生成19，但这些研究没有考虑光子晶体引起的慢光或局部化效应。类似的光栅概念也被应用于回音壁谐振器，在许多不同的背景下进行研究，包括生成轨道角动量光束20和探索微激光器中的对称时间概念21，但一般来说，这些研究并未专注于通过缺陷引入实现高Q因子或强模式局部化。<br>在这项工作中，我们以一种新颖的方式将WGM和光子晶体（PhC）缺陷腔体的特点结合起来，这种方式保留了WGM腔体实现高Q因子和简便波导耦合的优势，同时保持了对光的传播和局部化的强控制能力，与PhC缺陷腔体相关联。我们的设备，即MPhCR，是一种微环腔体，其中对其内边界进行精心选择的周期性调制（类似于内部齿轮的形状）在角动量空间的目标位置打开了一个大的带隙。在这个平台上，我们展示了具有高Q值（1.1 ± 0.1）× 10⁶的慢光模式，并且群速度减慢比（SR）12,22值约为10。我们进一步展示了基于慢光模式在带边缘局部化的PhC缺陷模式。这些局部化的缺陷模式具有类似的高Q值，最高可达（5.6 ± 0.1）× 10⁵，并支持直观的频率工程和波导耦合，类似于传统的WGM。通过将WGM和PhC概念以保持各自优势的方式结合，MPhCR成为微腔物理学和应用的突破性平台。</p>
+<h2 id="MPhCR设计的介绍"><a href="#MPhCR设计的介绍" class="headerlink" title="MPhCR设计的介绍"></a>MPhCR设计的介绍</h2><p>图1a和1b展示了MPhCR的示意图，其中第一个面板展示了慢光设备，第二个面板展示了具有光子晶体缺陷（dPhC）的设备。这两个设备都具有与传统微环相同的圆形外边界，支持具有离散角动量（由方位模数m描述）和频率（ω）的高Q值WGM。慢光设备的内边界具有大幅度的周期性调制，如图1a所示，这在带边缘及其附近创建了宽的光子带隙，支持慢光模式。dPhC设备基于慢光设备的设计，在周期性调制中引入了一个局部化的缺陷（此处缺陷位于中心，靠近耦合波导），如图1b所示。</p>
+<p><img src="/pictures/image-20240827091202436.png" alt="image-20240827091202436"></p>
+<blockquote>
+<p><strong>图1 | MPhCR，高Q值慢光光子晶体微环。</strong><br>a,b, MPhCR的示意图，分别用于慢光（a）和光子晶体缺陷（dPhC）（b）腔体。c, MPhCR中的三种对称性：CW和CCW传播模式的镜像对称性（S）；仅允许具有离散角动量（m）和能量（ω）的模式的旋转对称性（R）；以及来自PhC结构的方位方向的周期性平移对称性（P），它将具有特定方位动量（即± m0）的CW和CCW模式耦合在一起。d, 由这三种对称性创建的带结构图。空气带被推向光锥（灰色），而介电带则被很好地保持。在慢光设备中，模式通过实线连接，其中s0和a0是带边缘模式。在dPhC设备中，s0移动到g，如虚线所示，而其他模式保持固定频率。e, 标记模式的主要电场分量的定性示意图（例如，横电模式的径向电场分量Er），红色和蓝色显示对立的相位，暗度与幅度成正比。慢光和dPhC模式的模式轮廓通过完整的数值电磁仿真显示在扩展数据图1和图2中。</p>
+</blockquote>
+<p>MPhCR设备具有三种对称性，如图1c所示：</p>
+<ul>
+<li><strong>S</strong> 代表镜像对称性，即顺时针（CW）和逆时针（CCW）传播光的对称性；</li>
+<li><strong>P</strong> 代表由周期性（在方位方向上）PhC调制产生的角动量变化，即模式从CCW到CW的转变（红色箭头）或从CW到CCW的转变（蓝色箭头）；</li>
+<li><strong>R</strong> 代表由于圆形边界条件而产生的旋转对称性，这导致了WGMs的量子化/整数角动量（m）和离散的共振频率（ωm）。</li>
+</ul>
+<p>如图1a所示，施加大幅度的内部侧壁调制会在图1d中m = ±m0处产生大的光子带隙，其中PhC调制周期为πR/m0（即环形周长内适配2m0个周期）。在MPhCR中，两个传播模式（m = ±m0）被重标定为两个驻波模式，标记为a0（空气带边缘模式）和s0（介电带边缘模式）。在带边缘的两侧，四个模式（m = ±(m0 ± 1)）被混合成四个新模式，其中两个在空气带中简并（a1），两个在介电带中简并（s1），其中s1可以看作是与s0具有相同空间轮廓但附加了cos(φ)调制（φ是方位角）。s2的特性类似，只是模式轮廓相对于s0附加了cos(2φ)的调制。我们注意到，由PhC调制引起的频率偏移导致高频空气带模式开始接触光锥（灰色阴影区域）。从慢光设备开始，通过局部扰动调制幅度可以制作dPhC设备。dPhC模式（g）是s0模式的局部化，具有较高的共振频率，依赖于缺陷的详细参数，如图1d中的虚线所示，而其他所有模式保持不变。图1e以定性方式展示了这些光学模式的代表性轮廓。为了说明目的，这里展示了方位模数m = 8，这大约是我们实际设备中使用的20倍。实际几何形状的模式的完整数值仿真见于方法部分和扩展数据图1和图2。<br>图2a、b显示了在化学计量硅氮化物（Si3N4）中制造的MPhCR的扫描电子显微镜（SEM）图像。图2a展示了一个环半径（Rout）为25 μm，厚度为500 nm，标称平均环宽（RW）为1,250 nm，调制幅度（A）为1,150 nm的MPhCR。图2b的扩展SEM图像展示了慢光MPhCR的结构细节，包括较大的A，使得环宽在最窄部分仅为100 nm，形状类似于以前研究的‘鳄鱼’光子晶体波导。该设备完全通过Si3N4层进行刻蚀，具有平滑的调制轮廓和侧壁。调制周期（一单元长度）约为485 nm，对应于周长上的162 × 2单元。有关制造细节，请参见方法部分。</p>
+<h2 id="MPhCR中的慢光效应"><a href="#MPhCR中的慢光效应" class="headerlink" title="MPhCR中的慢光效应"></a>MPhCR中的慢光效应</h2><p>通过增加光–物质相互作用的时间，可以增强这些相互作用。通常，这通过增加光子存储时间（即提高Q值）来实现，例如，通过使用光学微腔。此外，另一种方法是通过降低光的群速度，也就是利用慢光效应，例如，基于光子带边附近的波导模式。尽管这两种方法分别被广泛研究，但也存在它们可以协同工作的情况，即在保持高Q值的同时减慢光的群速度。我们强调，在光子晶体微环中，减慢因子应已包含在Q中。换句话说，慢光设备可能具有比对照设备更高的光学Q值，并在应用中提供额外的好处。虽然有证据支持在Q &lt;5,000的范围内使用慢光来增强Q值，但所有这些研究的Q值比通常在高Q微腔中达到的1,000,000低两个数量级，这抵消了使用慢光效应的好处。例如，在对光子晶体微环的开创性研究中，实现了Q = 2,000和SR = 4。最近，有研究报告了改进的性能，其中Q = 12,100和SR = 8。详细信息请参见扩展数据表1。<br>我们在开发MPhCR的首要目标是实现具有高Q值的慢光模式，这些Q值与WGMs相当。与之前在微环中采用空气孔的几何结构相比，MPhCR似乎更有利于减少散射损耗。我们通过图2中的光谱测量确认了这一点，其中Q和SR分别从线宽和自由光谱范围（FSR）值中提取（详见方法部分）。特别地，由于FSR与谐振腔模式群体指数成反比，相对于传统的微环模式，FSR的减小表明群体指数相应增加（从而群体速度降低）。与早期的研究相同，我们将SR作为旅行波模式和驻波模式的评价指标（这两种模式在传统高Q WGMs中常见且没有慢光效应，即SR=1）。对于后者，我们主要考虑构成驻波的反向传播旅行波的群体速度的降低。<br>没有调制的传统微环（A = 0 nm）展示了WGMs（主要是单模共振），其自由光谱范围（FSR）值几乎均匀（约0.91 THz或7.4 nm），如图2c所示。对于波长为1553.9 nm的模式，其固有光学品质因子（Q0）为（7.5 ± 0.2）× 10^5（最右侧面板），其方位模式数（m = 162）是目标用于内部侧壁调制的数值（Q0的误差来自传输共振的非线性最小二乘拟合；详见方法部分）。当调制非常大时，A = 1,150 nm，如图2d所示，大多数空气带模式被推入光锥中，只剩下三个模式具有较低的Q值和较差的波导耦合。介质带得到很好的保留，光谱被压缩，并且在带边附近的模式具有更高的光谱密度。该设备的s0模式的Q0 =（6.8 ± 0.1）× 10^5。图2f展示了图2d中{ s0，s1，s2 }模式的散射光的红外图像，这些模式的方位图案与图1e中所示的相匹配。<br>我们在图2e中构建了八个设备的能带图（七个设备的调制幅度A从550 nm到1150 nm，步长为100 nm，再加上一个对照设备）。当A增加时，空气带会被推向光锥，但介质带边缘保持在1 THz以内。测得的带边频率与数值模拟结果非常一致，如图2f所示（这些设备的完整模拟带结构显示在扩展数据图1中）。图2h展示了带隙（BG）值BG = [ω(a0) − ω(s0)]/2π和s0模式的SR值作为A的函数。带隙增加时，SR也增加，具有最大带隙的设备展现了SR = 9.94 ± 0.02（SR的误差来自于用分裂模式估算的FSR值；详见方法部分），对于s0模式的Q0为（6.8 ± 0.1）× 10^5，这比以往研究高约50倍。扩展数据图3b展示了所有A值和所有介质带模式近带边的SR，表明s1和s2也展现出显著但较小的SR值。对于慢光应用（例如，干涉仪），一个重要的指标是 ( \frac{n_g}{\alpha} )，其中 ( n_g ) 是群折射率，( \alpha ) 是损耗系数（与 ( Q_0 ) 直接成正比；详见方法部分）。在A = 1,150 nm的设备中，s0模式的 ( \frac{n_g}{\alpha} = (17 \pm 1) ) cm（不确定性来源于 ( Q_0 ) 的误差），这与早期研究相比有显著改进。此外，光学Q因子还可以进一步提升。例如，在扩展数据图4中，我们展示了一种具有高Q的慢光设备，其s0模式的 ( Q_0 = (1.1 \pm 0.1) \times 10^6 )，SR约为10， ( \frac{n_g}{\alpha} \approx 28 ) cm。这种高Q值，或等效地 ( \frac{n_g}{\alpha} )，代表了约50倍的记录提升；详见扩展数据表1的比较。因此，MPhCR是进一步研究慢光应用的有前途的平台，包括干涉仪、电信和传感等领域。</p>
+<h2 id="MPhCR中的缺陷模式"><a href="#MPhCR中的缺陷模式" class="headerlink" title="MPhCR中的缺陷模式"></a>MPhCR中的缺陷模式</h2><p>虽然 (  $\frac{n_g}{\alpha}$ ) 是慢光应用中的一个重要性能指标，如前一节所讨论，但 ( \frac{Q}{V} ) 是对腔增强光–物质相互作用（包括非线性和量子光学过程，例如 Purcell 增强）至关重要的度量指标。在微环中，这个值可以通过减少微环的半径，同时保持相对较低的辐射/散射损耗来优化，弯曲损耗最终限制了可实现的最小模式体积（V）。在本节中，我们展示了如何将局部的光子晶体缺陷（dPhC）引入慢光设备中，从而进一步减少模式体积（V），并将 ( \frac{Q}{V} ) 提高约十倍，相较于我们传统的微环。例如，在图 3a 中，SEM 图像展示了如何从慢光设备（如图 2b 所示）中导出一个 dPhC 设备。在此图中，引入了一个缺陷区域，其中调制幅度 A 在八个单元格（两侧各四个）中呈二次变化，缺陷中心的最大调制深度偏差（Δ）为 A 的 10%。这种直观的缺陷设计产生了一个支撑基态（g）dPhC 模式的束缚简谐势阱。图 3b 显示了类似于图 3a 的 dPhC 模式（g）的传输，但跨越 48 个单元，Q0 = (4.0 ± 0.1) × 10^5，类似于慢光模式的 Q0。观察到的最高 Q0 为 (5.6 ± 0.1) × 10^5；参见扩展数据图 5e。通过对慢光腔体进行扰动可以创建高 Q dPhC 模式，而无需特定的详细设计，这是与大多数 dPhC 腔体相对比的一个优点，在大多数 dPhC 腔体中，需要详细的数值模拟来优化设计以支持高 Q 值。通过以上述方式在图 2e 中的所有七种慢光设计中引入缺陷，生成了图 3c 中的缺陷带图。图 3c 中的介质带边缘扩展图展示了与未扰动的慢光设备（图 2e）的带图相比，s0 模式向带隙中的移动（形成 g）是主要变化，而相邻的慢光模式（例如，{s1, s2, s3}）基本上未受扰动。在扩展数据图 5a–c 中，我们展示了除 A 以外的其他参数对 g 模式频率的控制，包括 m、N（构成缺陷的单元数量）和 Δ。我们通过模拟确认了这些实验观察到的 g 模式的存在，并计算了它们的模式体积（V）数据。扩展数据图 2 展示了 dPhC 模式剖面和结果 V 值的全面数值模拟，使用基于电偶极耦合的腔体 QED 定义来计算 V（详见方法部分）。对于 dPhC 模式，V 值在 3.3(λ/n)³ 到 5.5(λ/n)³ 之间，其中 λ 是波长，n 是氮化硅的折射率，相较于慢光带边缘模式，显示出十倍以上的减少，并且，如预期的那样，本地化程度取决于势阱的具体特征。我们预计，通过数值优化和采用基本方法来增加模式的约束（如更低的空气包层或槽模式结构），可以进一步减少 V，而在高折射率平台（如硅基绝缘体）上使用近似的 (λ/n)³ 值是可能的。<br>利用光学微腔中增强的光–物质相互作用的应用还需要有效的波导输入/输出耦合。接下来，我们考虑以受控方式耦合到 dPhC 模式的能力，这是 MPhCR 继承自 WGM 的一个特性。在图 3d 中，我们展示了控制 MPhCR 与波导之间的渐逝耦合的两个参数，即缺陷角（θ）和波导–环间隙（G）。我们还展示了两个红外图像，分别来自于缺陷旋转（θ = 60°）和缺陷中心（θ = 0°）的设备。图 3e 中绘制了 dPhC 模式（g）和慢光模式 {s1±, s2+} 的耦合比 K = Q0/Qc 的测量值，涵盖了六种情况，即三种 G 值和两种 θ 值。显然，由于 g 模式的局部化，其耦合特性与 {s1±, s2+} 模式大相径庭。在旋转情况下，与 {s1±, s2+} 相比，g 的耦合较弱（约为 K 值的十分之一）。相比之下，在中心情况下，g 的耦合强度比 {s1±, s2+} 强（K 值约提高十倍）。对于 G = 350 nm 的 MPhCR，耦合质量因子 Qc 可以达到 10,000（参见扩展数据图 5），而通过使用更小的 G、优化的波导宽度和滑轮耦合，甚至可以实现更强的耦合。</p>
+<h2 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h2><p>我们展示了一种新的微腔平台，结合了 WGM 和 PhC 腔体的一些最重要的特点。实质上，我们的 MPhCR 设计可以可控地修改目标微环 WGM 的基本特性，例如其群速度和局部化长度尺度，同时保持其高 Q 值和简便的波导耦合。MPhCR 几何设计高度直观，我们展示的设备不需要任何详细的数值建模来实现高 Q 值、大的 SR 值或强的模式局部化（数值建模仅用于验证设备性能）。展望未来，慢光、dPhC 和传统 WGM 模式的共存对非线性光学具有很大的潜力，例如光学参量振荡；此外，在单一设备中结合多个光子带隙频率是可行的，类似于选择性引入多重 WGM 的背散射能力。另一个可能的方向是关注气体带模式的性能，例如，开发用于耦合中性原子的设备。如最近的综述中讨论的那样，虽然氮化硅通常被认为是在集成光子学中具有特别高 Q 值的平台，但 Q 值的实现很大程度上依赖于模态约束的程度，这由波导的横截面尺寸和包层的折射率决定。在中等约束的氮化硅微环中，最先进的 Q 值在 1,000,000 左右；而在高约束和低约束的氮化硅微环中，最先进的 Q 值则分别高达 10,000,000 和 100,000,000。虽然我们在本研究中展示了中等约束的氮化硅微环中的 MPhCR，但将 MPhCR 应用于高约束和低约束的氮化硅微环对于实现更高的 Q 值以及在超窄带滤波器、延迟线和受激布里渊散射等额外应用中也很有趣。最后，在其他平台上开发 MPhCR，例如碳化硅和砷化镓，可能会带来控制和利用被约束光场与单一量子发射体之间强相互作用的新机会。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%85%89%E4%BA%92%E8%BF%9E/" rel="tag"># 光互连</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/08/26/%E5%8F%AF%E8%A7%81%E6%B3%A2%E9%95%BF%E4%B8%8B%E7%A8%B3%E5%81%A5%E9%AB%98%E6%95%88%E7%9A%84%E5%BE%AE%E7%B1%B3%E7%BA%A7%E7%9B%B8%E4%BD%8D%E8%B0%83%E5%88%B6%E5%99%A8/" rel="prev" title="可见波长下稳健高效的微米级相位调制器">
+      <i class="fa fa-chevron-left"></i> 可见波长下稳健高效的微米级相位调制器
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/09/09/%E9%AB%98%E9%80%9F%E4%BD%8E%E9%A9%B1%E5%8A%A8%E7%94%B5%E5%8E%8B%E7%A1%85%E5%9F%BA%E5%85%89%E5%AD%90%E6%99%B6%E4%BD%93%E6%85%A2%E5%85%89%E8%B0%83%E5%88%B6%E5%99%A8/" rel="next" title="高速低驱动电压硅基光子晶体慢光调制器">
+      高速低驱动电压硅基光子晶体慢光调制器 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.</span> <span class="nav-text">背景介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MPhCR%E8%AE%BE%E8%AE%A1%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text">MPhCR设计的介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MPhCR%E4%B8%AD%E7%9A%84%E6%85%A2%E5%85%89%E6%95%88%E5%BA%94"><span class="nav-number">4.</span> <span class="nav-text">MPhCR中的慢光效应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MPhCR%E4%B8%AD%E7%9A%84%E7%BC%BA%E9%99%B7%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">MPhCR中的缺陷模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A8%E8%AE%BA"><span class="nav-number">6.</span> <span class="nav-text">讨论</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yaotian Zhao shineskys@outlook.com"
+      src="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+  <p class="site-author-name" itemprop="name">Yaotian Zhao shineskys@outlook.com</p>
+  <div class="site-description" itemprop="description">You should write because writing makes you a better person.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://scholar.google.com/citations?user=9Uc2du4AAAAJ&hl=zh-CN" title="Scholar → https:&#x2F;&#x2F;scholar.google.com&#x2F;citations?user&#x3D;9Uc2du4AAAAJ&amp;hl&#x3D;zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-graduation-cap"></i>Scholar</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://otip.sjtu.edu.cn/" title="OTIP → https:&#x2F;&#x2F;otip.sjtu.edu.cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-users"></i>OTIP</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yaotian Zhao shineskys@outlook.com</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">81k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:14</span>
+</div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme: 'dark',
+      logLevel: 3,
+      flowchart: { curve: 'linear' },
+      gantt: { axisFormat: '%m/%d/%Y' },
+      sequence: { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('[object Object]', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '4299921ded3b8e64c83a',
+      clientSecret: '90fa712acbeec6ccc4e62461615eb46ae73ac7c3',
+      repo: 'BlogComments',
+      owner: 'ovshinsky',
+      admin: ['ovshinsky'],
+      id: 'f624923cbb132ea4c34879ab7fbd14fe',
+        language: '',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

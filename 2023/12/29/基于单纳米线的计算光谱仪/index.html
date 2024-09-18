@@ -106,8 +106,6 @@
 
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
 <!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -277,10 +275,22 @@
 <h3 id="方法和设计原理"><a href="#方法和设计原理" class="headerlink" title="方法和设计原理"></a>方法和设计原理</h3><p>光谱仪的方法是基于光谱重构，具体原理可以简单介绍如下：</p>
 <h5 id="1-光强可以通过材料中的电流来探测"><a href="#1-光强可以通过材料中的电流来探测" class="headerlink" title="1. 光强可以通过材料中的电流来探测"></a>1. 光强可以通过材料中的电流来探测</h5><p>我们高中的时候可能学过光电效应，光子会被吸收把电子从价带顶激发到导带底。光探测器的原理与此类似，也就就是一定强度的光照射在特定的半导体材料上会产生自由载流子，进而在反偏PN结中形成电流。简言之，就是光强可以通过材料中的电流来探测。</p>
 <h5 id="2-光强可以叠加"><a href="#2-光强可以叠加" class="headerlink" title="2. 光强可以叠加"></a>2. 光强可以叠加</h5><p>比如说，波长为$λ_1$，强度为$a_1$的光产生的电流为$c_1$，波长为$λ_2$，强度为$a_2$的光子产生的电流为$c_2$，那么当这两束光同时入射时，产生的电流为 $c_1 + c_2$。</p>
-<p>当连续光入射时，探测到的电流为：<br>$$<br>\int_{\lambda 1}^{\lambda 2} F(\lambda) R_1(\lambda) d \lambda&#x3D;I_1<br>$$<br>其中$F(\lambda)$是入射光谱，$R_1(\lambda)$可以理解为特定光探测器的光电转换系数。</p>
-<h5 id="3-假如我们制造了2个光探测器"><a href="#3-假如我们制造了2个光探测器" class="headerlink" title="3. 假如我们制造了2个光探测器"></a>3. 假如我们制造了2个光探测器</h5><p>比如说，波长为$λ_1$，强度为$a_1$的光产生的电流为$c_1$，波长为$λ2$，强度为$a_2$的光同时入射时，产生的电流在探测器1上为 $I_1$，在探测器2上为$I_2$，那么我们可以得到如下方程组：<br>$$<br>r_1(\lambda_1)*a_1 + r_1(\lambda_2)*a_2 &#x3D; I_1\<br>r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 &#x3D; I_2<br>$$<br>我们知道这是一个二元一次方程组，在已知$r_1(\lambda_i),I_i$的情况，可以轻松算出$a_1,a_2$。</p>
-<h5 id="3-假如我们制造了100个光探测器"><a href="#3-假如我们制造了100个光探测器" class="headerlink" title="3. 假如我们制造了100个光探测器"></a>3. 假如我们制造了100个光探测器</h5><p>假如我们制造了100个光探测器，并且提前测得了每个光探测器在不同波长的光电转换系数$Ri(λ)$。可以得到：<br>$$<br>\begin{gathered}<br>\int_{\lambda 1}^{\lambda 2} F(\lambda) R_1(\lambda) d \lambda&#x3D;I_1 \<br>\int_{\lambda 1}^{\lambda 2} F(\lambda) R_2(\lambda) d \lambda&#x3D;I_2 \<br>\vdots \<br>\int_{\lambda 1}^{\lambda 2} F(\lambda) R_n(\lambda) d \lambda&#x3D;I_n<br>\end{gathered}<br>$$<br>那么我们把他们同样离散化后（就是光谱划分为$\lambda_1, \lambda_2,…\lambda_n$），可以得到一个n元方程组，在已知$R_i(\lambda)$，并且测得$I_i$的情况下，</p>
-<p>通过矩阵求逆&#x2F;最小误差等等方法可以求出来光谱信号（如MATLAB CVX toolbox）。</p>
+<p>当连续光入射时，探测到的电流为：</p>
+<script type="math/tex; mode=display">
+\int_{\lambda 1}^{\lambda 2} F(\lambda) R_1(\lambda) d \lambda=I_1</script><p>其中$F(\lambda)$是入射光谱，$R_1(\lambda)$可以理解为特定光探测器的光电转换系数。</p>
+<h5 id="3-假如我们制造了2个光探测器"><a href="#3-假如我们制造了2个光探测器" class="headerlink" title="3. 假如我们制造了2个光探测器"></a>3. 假如我们制造了2个光探测器</h5><p>比如说，波长为$λ_1$，强度为$a_1$的光产生的电流为$c_1$，波长为$λ2$，强度为$a_2$的光同时入射时，产生的电流在探测器1上为 $I_1$，在探测器2上为$I_2$，那么我们可以得到如下方程组：</p>
+<script type="math/tex; mode=display">
+r_1(\lambda_1)*a_1 + r_1(\lambda_2)*a_2 = I_1\\
+r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 = I_2</script><p>我们知道这是一个二元一次方程组，在已知$r_1(\lambda_i),I_i$的情况，可以轻松算出$a_1,a_2$。</p>
+<h5 id="3-假如我们制造了100个光探测器"><a href="#3-假如我们制造了100个光探测器" class="headerlink" title="3. 假如我们制造了100个光探测器"></a>3. 假如我们制造了100个光探测器</h5><p>假如我们制造了100个光探测器，并且提前测得了每个光探测器在不同波长的光电转换系数$Ri(λ)$。可以得到：</p>
+<script type="math/tex; mode=display">
+\begin{gathered}
+\int_{\lambda 1}^{\lambda 2} F(\lambda) R_1(\lambda) d \lambda=I_1 \\
+\int_{\lambda 1}^{\lambda 2} F(\lambda) R_2(\lambda) d \lambda=I_2 \\
+\vdots \\
+\int_{\lambda 1}^{\lambda 2} F(\lambda) R_n(\lambda) d \lambda=I_n
+\end{gathered}</script><p>那么我们把他们同样离散化后（就是光谱划分为$\lambda_1, \lambda_2,…\lambda_n$），可以得到一个n元方程组，在已知$R_i(\lambda)$，并且测得$I_i$的情况下，</p>
+<p>通过矩阵求逆/最小误差等等方法可以求出来光谱信号（如MATLAB CVX toolbox）。</p>
 <h5 id="4-假如我们把这100个光探测器做在一根纳米线上"><a href="#4-假如我们把这100个光探测器做在一根纳米线上" class="headerlink" title="4.假如我们把这100个光探测器做在一根纳米线上"></a>4.假如我们把这100个光探测器做在一根纳米线上</h5><p><img src="/pictures/image-20231229120606633.png" alt="image-20231229120606633">假如我们把这100个光探测器做在一根纳米线上，并且每过一段长度放一个电极来检测电流。那么我们就得到了一个超小型的片上计算光谱仪。</p>
 <h3 id="个人评价"><a href="#个人评价" class="headerlink" title="个人评价"></a>个人评价</h3><p>因为我本身不做这个领域，只能分享一些道听途说的事情，有错漏可以指出，有什么写的不太清楚，或者想进一步了解的地方也可以评论区提问。</p>
 <p>和大部分科研工作相比，这项工作确实挺有意思的，但依然有很多问题需要解决。</p>
@@ -291,7 +301,7 @@
 </ol>
 <p>总之，在快到2024年的今天，这个坑里面可以继续灌的水不多了，大家入坑请谨慎。</p>
 <h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
-<li>Zongyin Yang <em>et al.</em>, Single-nanowire spectrometers. <em>Science</em><strong>365</strong>,1017-1020(2019). DOI:<a target="_blank" rel="noopener" href="https://doi.org/10.1126/science.aax8814">10.1126&#x2F;science.aax8814</a></li>
+<li>Zongyin Yang <em>et al.</em>, Single-nanowire spectrometers. <em>Science**</em>365**,1017-1020(2019). DOI:<a target="_blank" rel="noopener" href="https://doi.org/10.1126/science.aax8814">10.1126/science.aax8814</a></li>
 <li>Redding, B., Liew, S., Sarma, R. <em>et al.</em> Compact spectrometer based on a disordered photonic chip. <em>Nature Photon</em> <strong>7</strong>, 746–751 (2013).  <a target="_blank" rel="noopener" href="https://doi.org/10.1038/nphoton.2013.190">https://doi.org/10.1038/nphoton.2013.190</a></li>
 </ol>
 
@@ -394,13 +404,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -443,13 +453,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">81k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">16 分钟</span>
+    <span title="站点阅读时长">1:14</span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
 
         

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://example.com').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: true,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="Ref.  下载 随着机器学习、高性能计算和云存储等新兴应用对数据中心计算需求的不断推动，分布式计算架构的采用越来越广泛。在这些架构中，CPU、GPU、FPGA、内存和存储的物理位置可能分布在数米的距离范围内。为了跟上这种需求，基于硅光子的封装光学链路采用了波长分复用（WDM）和非归零（NRZ）信号传输，这种方法提供了一个高效、带宽高且延迟低的接口，连接这些组件。 在本文中，我们介绍了一种低功耗（">
+<meta property="og:type" content="article">
+<meta property="og:title" content="0.96pJ&#x2F;b 7×50Gb&#x2F;s 每光纤波长分复用（WDM）接收器采用堆叠的7nm CMOS和45nm硅光子芯片">
+<meta property="og:url" content="http://example.com/2024/08/23/0-96pJ-b7%C3%9750Gb-s%E6%AF%8F%E5%85%89%E7%BA%A4%E6%B3%A2%E9%95%BF%E5%88%86%E5%A4%8D%E7%94%A8%EF%BC%88WDM%EF%BC%89%E6%8E%A5%E6%94%B6%E5%99%A8%E9%87%87%E7%94%A8%E5%A0%86%E5%8F%A07nmCMOS%E5%92%8C45nm%E7%A1%85%E5%85%89%E5%AD%90%E8%8A%AF%E7%89%87/index.html">
+<meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
+<meta property="og:description" content="Ref.  下载 随着机器学习、高性能计算和云存储等新兴应用对数据中心计算需求的不断推动，分布式计算架构的采用越来越广泛。在这些架构中，CPU、GPU、FPGA、内存和存储的物理位置可能分布在数米的距离范围内。为了跟上这种需求，基于硅光子的封装光学链路采用了波长分复用（WDM）和非归零（NRZ）信号传输，这种方法提供了一个高效、带宽高且延迟低的接口，连接这些组件。 在本文中，我们介绍了一种低功耗（">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/pictures/image-20240823163949323.png">
+<meta property="og:image" content="http://example.com/pictures/image-20240823164052568.png">
+<meta property="og:image" content="http://example.com/pictures/image-20240823164143548.png">
+<meta property="og:image" content="http://example.com/pictures/image-20240823165722998.png">
+<meta property="og:image" content="http://example.com/pictures/image-20240823165817759.png">
+<meta property="og:image" content="http://example.com/pictures/image-20240823165851522.png">
+<meta property="og:image" content="http://example.com/pictures/image-20240823165912605.png">
+<meta property="article:published_time" content="2024-08-23T08:38:14.000Z">
+<meta property="article:modified_time" content="2024-08-23T09:03:10.957Z">
+<meta property="article:author" content="Yaotian Zhao shineskys@outlook.com">
+<meta property="article:tag" content="光互连">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/pictures/image-20240823163949323.png">
+
+<link rel="canonical" href="http://example.com/2024/08/23/0-96pJ-b7%C3%9750Gb-s%E6%AF%8F%E5%85%89%E7%BA%A4%E6%B3%A2%E9%95%BF%E5%88%86%E5%A4%8D%E7%94%A8%EF%BC%88WDM%EF%BC%89%E6%8E%A5%E6%94%B6%E5%99%A8%E9%87%87%E7%94%A8%E5%A0%86%E5%8F%A07nmCMOS%E5%92%8C45nm%E7%A1%85%E5%85%89%E5%AD%90%E8%8A%AF%E7%89%87/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>0.96pJ/b 7×50Gb/s 每光纤波长分复用（WDM）接收器采用堆叠的7nm CMOS和45nm硅光子芯片 | ZhaoYaotian's Blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZhaoYaotian's Blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">You should write because writing makes you a better person.</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-关于我">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于我</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/23/0-96pJ-b7%C3%9750Gb-s%E6%AF%8F%E5%85%89%E7%BA%A4%E6%B3%A2%E9%95%BF%E5%88%86%E5%A4%8D%E7%94%A8%EF%BC%88WDM%EF%BC%89%E6%8E%A5%E6%94%B6%E5%99%A8%E9%87%87%E7%94%A8%E5%A0%86%E5%8F%A07nmCMOS%E5%92%8C45nm%E7%A1%85%E5%85%89%E5%AD%90%E8%8A%AF%E7%89%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          0.96pJ/b 7×50Gb/s 每光纤波长分复用（WDM）接收器采用堆叠的7nm CMOS和45nm硅光子芯片
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-08-23 16:38:14 / 修改时间：17:03:10" itemprop="dateCreated datePublished" datetime="2024-08-23T16:38:14+08:00">2024-08-23</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Ref.  <a href="/download/Raj 等 - 2023 - A O.96pJb 7 × 50Gbs-per-Fiber WDM Receiver with Stacked 7nm CMOS and 45nm Silicon Photonic Dies.pdf" download>下载</a></p>
+<p>随着机器学习、高性能计算和云存储等新兴应用对数据中心计算需求的不断推动，分布式计算架构的采用越来越广泛。在这些架构中，CPU、GPU、FPGA、内存和存储的物理位置可能分布在数米的距离范围内。为了跟上这种需求，基于硅光子的封装光学链路采用了波长分复用（WDM）和非归零（NRZ）信号传输，这种方法提供了一个高效、带宽高且延迟低的接口，连接这些组件。</p>
+<p>在本文中，我们介绍了一种低功耗（0.96 pJ/bit）、高灵敏度（中位值为-11.1 dBm）、高带宽（7×50 Gb/s NRZ WDM）的接收器（RX）。该接收器在没有前向纠错（FEC）的情况下，能够实现低于1e-12的比特错误率（BER）。</p>
+<p>图12.1.1展示了一个多芯片模块（MCM）原型，包括一个电气芯片（EIC）、一个硅光子芯片（PIC）、集成扇出（InFO）、一个有机中介层（organic interposer）和一个有机层压基板（organic laminate substrate）。为了实现低功耗和高带宽，EIC的接收器输入直接放置在PIC的顶部，采用了55μm间距的铜柱焊盘。这种设计使得TIA可以直接连接到光探测器（PD），并且寄生效应最小化。InFO用于通过并行接口（在此工作中未使用）将EIC连接到代理核心集成电路（proxy Core IC）。光通过15光纤阵列以250μm的间距通过V型槽耦合进出PIC。</p>
+<p><img src="/pictures/image-20240823163949323.png" alt="image-20240823163949323"></p>
+<p>图12.1.1详细展示了PIC RX的架构。为了实现WDM通道选择，采用了级联环形谐振器（CRR）。CRR滤波器由两个环形谐振器耦合形成，创建了一个以特定波长为中心的二阶平顶滤波器，具有来自相邻波长的低串扰。CRR的自由光谱范围（FSR）设计为通道间距1.5 nm的8倍。每个RX1至RX7 CRR的掉落端口连接到一个基于SiGe的波导光探测器（PD），其响应度为0.9 A/W。最后一个CRR（RX8）的掉落端口未连接到PD，用于测试芯片中的调试。CRR设计的插入损耗小于1.5 dB，串扰小于15 dB。选择了带有直耦合段的赛道设计，以增加耦合距离，从而提高工艺变化的容忍度。与一阶滤波器（单个环形谐振器）相比，二阶滤波器由于-40 dB/dec增益衰减提供了更低的相邻波长之间的串扰。此外，平顶特性对激光波长间距变化的敏感性也较低。这允许对CRR阵列进行集体热调谐，以匹配激光波长。为了获得最佳的整体BER性能，每个CRR的通带必须与其对应的激光波长匹配，同时保持1.5 nm的网格间距。为了优化激光网格和滤波器对齐，RX1至RX7的透过端口功率（在此设计中是免费的）被求和，1313 nm的最低损耗中间值被用作RX1的波长（见图12.1.2）。RX2至RX7的激光波长通过递减1.5 nm的倍数来确定。通过集体调谐CRR阵列也可以实现相同的操作，同时固定激光波长。</p>
+<p><img src="/pictures/image-20240823164052568.png" alt="image-20240823164052568"></p>
+<p>图12.1.3展示了完整的接收器（RX）架构。在光接收器设计中，低功耗和高灵敏度的TIA（跨导放大器）至关重要。为了利用7nm技术节点提供的($g_m/C$)缩放效益，选择了一个3级基于逆变器的TIA设计，配备了t-coil峰值电路。TIA输出（Voutb）直接连接到强臂锁存器（latch-based slicers）。锁存器的正端（Vcm）连接到由自偏置逆变器生成的固定DC电位，该逆变器具有PMOS/NMOS强度控制。为了匹配采样时钟对Vcm和Voutb节点的干扰，在Vcm节点上添加了一个可编程的传输门开关。与传统的连续时间线性均衡器（CTLE）电路不同，NMOS开关被添加到TIA的电阻R1和R3上，以实现可编程带宽和峰值调整。为了确保无论光电二极管的平均电流水平如何，锁存器的输入共模电压始终保持在Vcm，添加了一个带宽为10MHz的DC电流取消环路。该DC环路可以通过关闭工作跨导放大器（OTA）来禁用，使TIA在开环模式下运行。在这种模式下，使用静态模拟探针（SAP）监测TIA经过RC滤波器后的输出电压，以表征CRR滤波器的插入损耗。TIA的设计目标是跨导阻抗（Zt）在4kΩ到6kΩ之间，带宽大于35GHz，集成输入噪声为3μA。TIA的电源敏感性通过使用片上稳压电源得到改善，该电源提供了大于25dB的电源抑制比（PSRR）。为了避免由于DC环路跟踪导致通过Vcm路径的差分PSRR在中频（10-200MHz）处峰值，添加了一个低通滤波器（见图12.1.3）。</p>
+<p><img src="/pictures/image-20240823164143548.png" alt="image-20240823164143548"></p>
+<p>设计中使用了四相四分之一速率时钟来驱动4个数据取样器和1个误差取样器。误差取样器用于采样输入信号的峰值，并与数据取样结合，用于执行波特率时钟和数据恢复（CDR）功能。CDR环路通过数字控制一个8位相位插值器（PI）来将取样时钟调整到其最佳位置。PI的8相位时钟由一个基于环形的锁相振荡器（ILO1）生成，该振荡器使用来自通用锁相环（PLL）的12.5GHz时钟作为参考。另一个锁相振荡器（ILO2）生成驱动取样器的4相位时钟，并以PI的输出作为参考。为了修正4相位取样时钟的相位误差，使用了一个四分之一锁相环（QLL），同时为PI和两个ILO生成电源电压。在设计中，四分之一锁相环（QLL）使用的相位误差检测器（QED）驱动的电压到电流（V-to-I）电路直接驱动了调节器的NMOS源跟随器。这种设计使得可以去除操作跨导放大器（OTA）和滤波电容器（C2）。去除C2将第二极点推得更远，从而可以进一步减小C1，节省硅片面积。</p>
+<ul>
+<li><p><strong>制造工艺</strong>：</p>
+<ul>
+<li>电气芯片（EIC）使用7nm FinFET工艺制造，每个通道的RX活跃区域为165×186μm²。</li>
+<li>光子集成电路（PIC）使用45nm工艺制造。</li>
+</ul>
+</li>
+<li><p><strong>测量设置</strong>：</p>
+<ul>
+<li>测量使用了一个参考光调制器，生成50Gb/s的伪随机二进制序列（PRBS7）模式，具有3.7dB的消光比（ER）。</li>
+<li>激光波长由可调激光器设置。</li>
+<li>可调光衰减器用于控制发送到PIC的光功率。</li>
+</ul>
+</li>
+<li><p><strong>光接收器性能</strong>：</p>
+<ul>
+<li>RX1至RX7的灵敏度在-11.4dBm（OMA）到-10.1dBm（OMA）之间变化，中位灵敏度为-11.1dBm（OMA）。</li>
+<li>灵敏度变化由CRR滤波器的损耗差异造成。</li>
+<li>测量结果表明，最差通道（RX1）的响应与最佳通道（RX7）的响应一致，只需增加1.5dBm的功率输入，这对应于RX1的1.3dB OMA损耗。</li>
+<li><ul>
+<li><img src="/pictures/image-20240823165722998.png" alt="image-20240823165722998"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>误码率（BER）性能</strong>：</p>
+<ul>
+<li>测量的BER浴缸曲线显示，RX1至RX7在1dB链路余量下，所有通道都满足BER&lt;1e-12，并且在50Gb/s时具有超过14%的单位间隔（UI）开口。</li>
+<li>聚合数据率达到350Gb/s，BER&lt;1e-12，没有前向纠错（FEC）。</li>
+<li><img src="/pictures/image-20240823165817759.png" alt="image-20240823165817759"></li>
+<li><p><strong>眼图扫描</strong>：</p>
+</li>
+<li><p>使用1e10比特的2D眼图扫描显示了内部眼形状。</p>
+</li>
+<li>2D眼图的水平分辨率为一个PI代码（在50Gb/s下为312.5fs），垂直分辨率为4.4mV。</li>
+<li>第二阶平顶CRR滤波器的优势通过RX5得到证明，尽管其激光波长偏离滤波器中心200pm，但仍能保持&lt;1e-12的无误差性能。</li>
+<li><img src="/pictures/image-20240823165851522.png" alt="image-20240823165851522"></li>
+</ul>
+</li>
+<li><p><strong>光学串扰影响</strong>：</p>
+<ul>
+<li>对RX2和RX3进行的测试显示，即使通道间隔为1.5 nm，水平和垂直眼开口的影响也很小。</li>
+</ul>
+</li>
+<li><p><strong>功耗与能效</strong>：</p>
+<ul>
+<li>RX的功耗为40mW，通用PLL的功耗为8.2mW（在7条通道中摊销）。</li>
+<li>RX的能效为0.96pJ/bit（在50Gb/s时测得）。</li>
+</ul>
+</li>
+<li><p><strong>性能总结</strong>：</p>
+<ul>
+<li>图表总结了系统性能，并与之前报道的CMOS接收器前端进行了比较。</li>
+<li>本设计在综合数据速率和功耗效率方面优于集成SerDes的相关工作。</li>
+</ul>
+</li>
+<li><p><strong>芯片照片</strong>：</p>
+<ul>
+<li>图示包括PIC中的CRR阵列、EIC中的RX电路和打包模块的照片。</li>
+</ul>
+</li>
+</ul>
+<p><img src="/pictures/image-20240823165912605.png" alt="image-20240823165912605"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%85%89%E4%BA%92%E8%BF%9E/" rel="tag"># 光互连</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/08/23/45nmCMOS%E9%9B%86%E6%88%90256Gb-s%E5%85%89%E7%94%B5%E5%8D%95%E7%89%87%E9%9B%86%E6%88%90%E6%94%B6%E5%8F%91%E5%99%A8/" rel="prev" title="45nm CMOS集成256Gb/s光电单片集成收发器-祁楠">
+      <i class="fa fa-chevron-left"></i> 45nm CMOS集成256Gb/s光电单片集成收发器-祁楠
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/08/23/4%E9%80%9A%E9%81%93200Gb-sWDMO%E6%B3%A2%E6%AE%B5%E7%A1%85%E5%85%89%E5%AD%90%E5%AD%A6%E6%94%B6%E5%8F%91%E5%99%A8%E5%AD%90%E7%BB%84%E4%BB%B6/" rel="next" title="4通道200 Gb/s WDM O波段硅光子学收发器子组件-from IMEC">
+      4通道200 Gb/s WDM O波段硅光子学收发器子组件-from IMEC <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yaotian Zhao shineskys@outlook.com"
+      src="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+  <p class="site-author-name" itemprop="name">Yaotian Zhao shineskys@outlook.com</p>
+  <div class="site-description" itemprop="description">You should write because writing makes you a better person.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://scholar.google.com/citations?user=9Uc2du4AAAAJ&hl=zh-CN" title="Scholar → https:&#x2F;&#x2F;scholar.google.com&#x2F;citations?user&#x3D;9Uc2du4AAAAJ&amp;hl&#x3D;zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-graduation-cap"></i>Scholar</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://otip.sjtu.edu.cn/" title="OTIP → https:&#x2F;&#x2F;otip.sjtu.edu.cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-users"></i>OTIP</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yaotian Zhao shineskys@outlook.com</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">81k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:14</span>
+</div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme: 'dark',
+      logLevel: 3,
+      flowchart: { curve: 'linear' },
+      gantt: { axisFormat: '%m/%d/%Y' },
+      sequence: { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '4299921ded3b8e64c83a',
+      clientSecret: '90fa712acbeec6ccc4e62461615eb46ae73ac7c3',
+      repo: 'BlogComments',
+      owner: 'ovshinsky',
+      admin: ['ovshinsky'],
+      id: '9076bc014c9844e74c756219a194ce9d',
+        language: '',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
