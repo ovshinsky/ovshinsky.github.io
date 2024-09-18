@@ -1237,28 +1237,41 @@ Z_{\text {image }}=\sqrt{\frac{L_{\mathrm{H}}}{C_{\mathrm{pn}}}\left[1-\left(\fr
   <entry>
     <title>Cadence_virtuoso_光电联合仿真-1</title>
     <url>/2024/09/12/Cadence-virtuoso-%E5%85%89%E7%94%B5%E8%81%94%E5%90%88%E4%BB%BF%E7%9C%9F1/</url>
-    <content><![CDATA[<h3 id="绘制了反相器的电路原理图并且完成了简单仿真"><a href="#绘制了反相器的电路原理图并且完成了简单仿真" class="headerlink" title="绘制了反相器的电路原理图并且完成了简单仿真"></a>绘制了反相器的电路原理图并且完成了简单仿真</h3><p><img src="/pictures/image-20240912143816623.png" alt="image-20240912143816623"></p>
-<p><img src="/pictures/image-20240912143837503.png" alt="image-20240912143837503"></p>
-<p><img src="/pictures/image-20240912143850534.png" alt="image-20240912143850534"></p>
-<p><img src="/pictures/image-20240912143924560.png" alt="image-20240912143924560"></p>
-<p><img src="/pictures/image-20240912144837620.png" alt="image-20240912144837620"></p>
-<p><img src="/pictures/image-20240912150815156.png" alt="image-20240912150815156"></p>
-<h4 id="1-Cadence-virtuoso虚拟机安装方式"><a href="#1-Cadence-virtuoso虚拟机安装方式" class="headerlink" title="1. Cadence virtuoso虚拟机安装方式"></a>1. Cadence virtuoso虚拟机安装方式</h4><ol>
-<li>资源链接：<a href="https://pan.baidu.com/s/1Hhy0yxjRnsvdTMVRJ0DDaA">https://pan.baidu.com/s/1Hhy0yxjRnsvdTMVRJ0DDaA</a><br>提取码：7i29<br>安装教程和虚拟机解压密码：minlei618<br>IC618解压密码：minlei816<br>用vmware导入虚拟机，选择==我已移动该虚拟机==<br>用vmware可以设置共享文件夹</li>
+    <content><![CDATA[<h3 id="绘制了反相器的电路原理图并且完成了简单仿真"><a class="markdownIt-Anchor" href="#绘制了反相器的电路原理图并且完成了简单仿真"></a> 绘制了反相器的电路原理图并且完成了简单仿真</h3>
+<p><img src="/pictures/image-20240912143816623.png" alt="image-20240912143816623" /></p>
+<p><img src="/pictures/image-20240912143837503.png" alt="image-20240912143837503" /></p>
+<p><img src="/pictures/image-20240912143850534.png" alt="image-20240912143850534" /></p>
+<p><img src="/pictures/image-20240912143924560.png" alt="image-20240912143924560" /></p>
+<p><img src="/pictures/image-20240912144837620.png" alt="image-20240912144837620" /></p>
+<p><img src="/pictures/image-20240912150815156.png" alt="image-20240912150815156" /></p>
+<h4 id="1-cadence-virtuoso虚拟机安装方式"><a class="markdownIt-Anchor" href="#1-cadence-virtuoso虚拟机安装方式"></a> 1. Cadence virtuoso虚拟机安装方式</h4>
+<ol>
+<li>资源链接：<a href="https://pan.baidu.com/s/1Hhy0yxjRnsvdTMVRJ0DDaA">https://pan.baidu.com/s/1Hhy0yxjRnsvdTMVRJ0DDaA</a><br />
+提取码：7i29<br />
+安装教程和虚拟机解压密码：minlei618<br />
+IC618解压密码：minlei816<br />
+用vmware导入虚拟机，选择 <mark>我已移动该虚拟机</mark><br />
+用vmware可以设置共享文件夹</li>
 </ol>
-<h4 id="2-Lumerical-工艺库"><a href="#2-Lumerical-工艺库" class="headerlink" title="2. Lumerical 工艺库"></a>2. Lumerical 工艺库</h4><p>运行virtuoso，可以添加Lumerical工艺库</p>
-<h4 id="3-绘制原理图"><a href="#3-绘制原理图" class="headerlink" title="3. 绘制原理图"></a>3. 绘制原理图</h4><ol>
+<h4 id="2-lumerical-工艺库"><a class="markdownIt-Anchor" href="#2-lumerical-工艺库"></a> 2. Lumerical 工艺库</h4>
+<p>运行virtuoso，可以添加Lumerical工艺库</p>
+<h4 id="3-绘制原理图"><a class="markdownIt-Anchor" href="#3-绘制原理图"></a> 3. 绘制原理图</h4>
+<ol>
 <li>快捷键 i ，添加conponent</li>
 <li>快捷键w，添加连线</li>
 <li>快捷键p，添加引脚</li>
 <li>快捷键l，添加label，可以用于较远的引线连接</li>
 </ol>
-<h4 id="4-创建symbol"><a href="#4-创建symbol" class="headerlink" title="4. 创建symbol"></a>4. 创建symbol</h4><h4 id="5-Test-branch"><a href="#5-Test-branch" class="headerlink" title="5. Test branch"></a>5. Test branch</h4><p>添加电源和激励，用来进行测试</p>
-<h4 id="6-ADE-L"><a href="#6-ADE-L" class="headerlink" title="6. ADE L"></a>6. ADE L</h4><ol>
+<h4 id="4-创建symbol"><a class="markdownIt-Anchor" href="#4-创建symbol"></a> 4. 创建symbol</h4>
+<h4 id="5-test-branch"><a class="markdownIt-Anchor" href="#5-test-branch"></a> 5. Test branch</h4>
+<p>添加电源和激励，用来进行测试</p>
+<h4 id="6-ade-l"><a class="markdownIt-Anchor" href="#6-ade-l"></a> 6. ADE L</h4>
+<ol>
 <li>tran 仿真</li>
 <li>选择set library model，为仿真选择模型</li>
 </ol>
-<h4 id="7-眼图绘制"><a href="#7-眼图绘制" class="headerlink" title="7. 眼图绘制"></a>7. 眼图绘制</h4><ol>
+<h4 id="7-眼图绘制"><a class="markdownIt-Anchor" href="#7-眼图绘制"></a> 7. 眼图绘制</h4>
+<ol>
 <li>在导航栏中的measurements -&gt; eye diagram</li>
 </ol>
 ]]></content>
