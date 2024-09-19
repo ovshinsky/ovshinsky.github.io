@@ -144,27 +144,51 @@ r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 = I_2</script><p>我们知道这是一�
     <title>硅光研究常用软件</title>
     <url>/2023/12/25/%E7%A1%85%E5%85%89%E7%A0%94%E7%A9%B6%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</url>
     <content><![CDATA[<p>主要是我自己用的比较多的一些软件，有一些还没有安装：</p>
-<h5 id="L-edit"><a href="#L-edit" class="headerlink" title="L-edit"></a>L-edit</h5><p>链接：<a href="https://pan.baidu.com/s/1XHCDHUSGgn-p5HQMH1VrIw">https://pan.baidu.com/s/1XHCDHUSGgn-p5HQMH1VrIw</a><br>提取码：f1ik </p>
-<h5 id="Pycharm"><a href="#Pycharm" class="headerlink" title="Pycharm"></a>Pycharm</h5><p><a href="https://www.yuque.com/ningmengna-6ulrv/gu0o2u/gu4tmfgur2kqtq7o">https://www.yuque.com/ningmengna-6ulrv/gu0o2u/gu4tmfgur2kqtq7o</a></p>
-<h5 id="Adobe-全家桶-PS、AI、Acrobat"><a href="#Adobe-全家桶-PS、AI、Acrobat" class="headerlink" title="Adobe 全家桶 (PS、AI、Acrobat)"></a>Adobe 全家桶 (PS、AI、<strong>Acrobat</strong>)</h5><p> <a href="https://www.yuque.com/ruanjian-jkyer/qik9br">https://www.yuque.com/ruanjian-jkyer/qik9br</a></p>
-<h5 id="MATLAB"><a href="#MATLAB" class="headerlink" title="MATLAB"></a>MATLAB</h5><h5 id="ANSYS-Lumerical-r2-3-支持gpu加速"><a href="#ANSYS-Lumerical-r2-3-支持gpu加速" class="headerlink" title="ANSYS Lumerical r2.3 支持gpu加速"></a>ANSYS Lumerical r2.3 支持gpu加速</h5><h6 id="安装教程："><a href="#安装教程：" class="headerlink" title="安装教程："></a>安装教程：</h6><p><a href="https://mp.weixin.qq.com/s?__biz=Mzk0NjI3ODE4OQ==&amp;mid=2247572065&amp;idx=1&amp;sn=618093eeec4e92f2920ff168a1ede100&amp;chksm=c30b0023f47c8935ae2bc8d5b35637a9aa1018cca0e9ff3383755a2c5a962081be19c560bff0&amp;scene=21#wechat_redirect">【实用软件】ANSYS Lumerical 2023 R1安装教程 (qq.com)</a></p>
+<h5 id="l-edit"><a class="markdownIt-Anchor" href="#l-edit"></a> L-edit</h5>
+<p>链接：<a href="https://pan.baidu.com/s/1XHCDHUSGgn-p5HQMH1VrIw">https://pan.baidu.com/s/1XHCDHUSGgn-p5HQMH1VrIw</a><br />
+提取码：f1ik</p>
+<h5 id="pycharm"><a class="markdownIt-Anchor" href="#pycharm"></a> Pycharm</h5>
+<p><a href="https://www.yuque.com/ningmengna-6ulrv/gu0o2u/gu4tmfgur2kqtq7o">https://www.yuque.com/ningmengna-6ulrv/gu0o2u/gu4tmfgur2kqtq7o</a></p>
+<h5 id="adobe-全家桶-ps-ai-acrobat"><a class="markdownIt-Anchor" href="#adobe-全家桶-ps-ai-acrobat"></a> Adobe 全家桶 (PS、AI、<strong>Acrobat</strong>)</h5>
+<p><a href="https://www.yuque.com/ruanjian-jkyer/qik9br">https://www.yuque.com/ruanjian-jkyer/qik9br</a></p>
+<h5 id="matlab"><a class="markdownIt-Anchor" href="#matlab"></a> MATLAB</h5>
+<h5 id="ansys-lumerical-r23-支持gpu加速"><a class="markdownIt-Anchor" href="#ansys-lumerical-r23-支持gpu加速"></a> ANSYS Lumerical r2.3 支持gpu加速</h5>
+<h6 id="安装教程"><a class="markdownIt-Anchor" href="#安装教程"></a> 安装教程：</h6>
+<p><a href="https://mp.weixin.qq.com/s?__biz=Mzk0NjI3ODE4OQ==&amp;mid=2247572065&amp;idx=1&amp;sn=618093eeec4e92f2920ff168a1ede100&amp;chksm=c30b0023f47c8935ae2bc8d5b35637a9aa1018cca0e9ff3383755a2c5a962081be19c560bff0&amp;scene=21#wechat_redirect">【实用软件】ANSYS Lumerical 2023 R1安装教程 (qq.com)</a></p>
 <p><a href="https://blog.csdn.net/a1254098517/article/details/133737743">Lumerical FDTD 2023 R2.3安装-CSDN博客</a></p>
-<h6 id="下载链接："><a href="#下载链接：" class="headerlink" title="下载链接："></a>下载链接：</h6><p>2023r1: <a href="https://pan.baidu.com/s/1Tznv7gMIFvgvcfMpyT0ghQ?pwd=imkg">https://pan.baidu.com/s/1Tznv7gMIFvgvcfMpyT0ghQ?pwd=imkg</a> </p>
+<h6 id="下载链接"><a class="markdownIt-Anchor" href="#下载链接"></a> 下载链接：</h6>
+<p>2023r1: <a href="https://pan.baidu.com/s/1Tznv7gMIFvgvcfMpyT0ghQ?pwd=imkg">https://pan.baidu.com/s/1Tznv7gMIFvgvcfMpyT0ghQ?pwd=imkg</a></p>
 <p>2023r2.3: <a href="https://pan.baidu.com/s/1V9j8SsaU4d2-5Zk1TUKWFQ?pwd=h9vr">https://pan.baidu.com/s/1V9j8SsaU4d2-5Zk1TUKWFQ?pwd=h9vr</a></p>
-<p>gpu加速配置教程：<a href="https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information">FDTD GPU Solver Information – Ansys Optics</a><br><img src="/pictures/18518186955411.png" alt="18518186955411"></p>
-<h6 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项:"></a>注意事项:</h6><ol>
-<li><p>GPU仿真加速不支持对称和反对称的边界条件</p>
+<p>2024r1：Luemrical 2024 R1<br />
+链接：<a href="https://pan.baidu.com/s/1wbxZ074Z184wBtkcL6Yc9A">https://pan.baidu.com/s/1wbxZ074Z184wBtkcL6Yc9A</a><br />
+提取码：admw</p>
+<p>gpu加速配置教程：<a href="https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information">FDTD GPU Solver Information – Ansys Optics</a><br />
+<img src="/pictures/18518186955411.png" alt="18518186955411" /></p>
+<h6 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项:</h6>
+<ol>
+<li>
+<p>GPU仿真加速不支持对称和反对称的边界条件</p>
 </li>
-<li><p>运行软件前需要先启动license manager服务</p>
+<li>
+<p>运行软件前需要先启动license manager服务</p>
 </li>
-<li><p>采用gpu仿真需要勾选：</p>
+<li>
+<p>采用gpu仿真需要勾选：</p>
 </li>
 </ol>
-<p><img src="/pictures/image-20231225175420746.png" alt="image-20231225175420746"></p>
-<h5 id="Klayout"><a href="#Klayout" class="headerlink" title="Klayout"></a>Klayout</h5><p><a href="https://www.klayout.de/build.html">KLayout Layout Viewer And Editor</a></p>
-<h5 id="L-edit-1"><a href="#L-edit-1" class="headerlink" title="L-edit"></a>L-edit</h5><h5 id="Origin"><a href="#Origin" class="headerlink" title="Origin"></a>Origin</h5><p> <a href="https://note.youdao.com/s/UJLHVtw8">https://note.youdao.com/s/UJLHVtw8</a> </p>
-<h5 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h5><h5 id="Islide"><a href="#Islide" class="headerlink" title="Islide"></a>Islide</h5><h5 id="Comsol"><a href="#Comsol" class="headerlink" title="Comsol"></a>Comsol</h5><h5 id="3ds-max-C4d"><a href="#3ds-max-C4d" class="headerlink" title="3ds max/ C4d"></a>3ds max/ C4d</h5><p><a href="https://www.yuque.com/zhefengerhuanzaigua/bld6x5/azbtmakfpgsf0yxd">【实用软件】Cinema4D 2024(C4D 2024)安装教程 (yuque.com)</a>还是用C4D吧</p>
-<h6 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h6><ol>
+<p><img src="/pictures/image-20231225175420746.png" alt="image-20231225175420746" /></p>
+<h5 id="klayout"><a class="markdownIt-Anchor" href="#klayout"></a> Klayout</h5>
+<p><a href="https://www.klayout.de/build.html">KLayout Layout Viewer And Editor</a></p>
+<h5 id="l-edit-2"><a class="markdownIt-Anchor" href="#l-edit-2"></a> L-edit</h5>
+<h5 id="origin"><a class="markdownIt-Anchor" href="#origin"></a> Origin</h5>
+<p><a href="https://note.youdao.com/s/UJLHVtw8">https://note.youdao.com/s/UJLHVtw8</a></p>
+<h5 id="typora"><a class="markdownIt-Anchor" href="#typora"></a> Typora</h5>
+<h5 id="islide"><a class="markdownIt-Anchor" href="#islide"></a> Islide</h5>
+<h5 id="comsol"><a class="markdownIt-Anchor" href="#comsol"></a> Comsol</h5>
+<h5 id="3ds-max-c4d"><a class="markdownIt-Anchor" href="#3ds-max-c4d"></a> 3ds max/ C4d</h5>
+<p><a href="https://www.yuque.com/zhefengerhuanzaigua/bld6x5/azbtmakfpgsf0yxd">【实用软件】Cinema4D 2024(C4D 2024)安装教程 (yuque.com)</a>还是用C4D吧</p>
+<h6 id="reference"><a class="markdownIt-Anchor" href="#reference"></a> Reference:</h6>
+<ol>
 <li><a href="https://www.yuque.com/zhefengerhuanzaigua/bld6x5">不迷路资源库 (yuque.com)</a>，大概可以淘宝转存成百度网盘下载。</li>
 </ol>
 ]]></content>
