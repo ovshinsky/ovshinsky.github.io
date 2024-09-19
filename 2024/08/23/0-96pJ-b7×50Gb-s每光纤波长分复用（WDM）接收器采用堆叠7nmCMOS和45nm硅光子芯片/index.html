@@ -274,75 +274,98 @@
 <p>随着机器学习、高性能计算和云存储等新兴应用对数据中心计算需求的不断推动，分布式计算架构的采用越来越广泛。在这些架构中，CPU、GPU、FPGA、内存和存储的物理位置可能分布在数米的距离范围内。为了跟上这种需求，基于硅光子的封装光学链路采用了波长分复用（WDM）和非归零（NRZ）信号传输，这种方法提供了一个高效、带宽高且延迟低的接口，连接这些组件。</p>
 <p>在本文中，我们介绍了一种低功耗（0.96 pJ/bit）、高灵敏度（中位值为-11.1 dBm）、高带宽（7×50 Gb/s NRZ WDM）的接收器（RX）。该接收器在没有前向纠错（FEC）的情况下，能够实现低于1e-12的比特错误率（BER）。</p>
 <p>图12.1.1展示了一个多芯片模块（MCM）原型，包括一个电气芯片（EIC）、一个硅光子芯片（PIC）、集成扇出（InFO）、一个有机中介层（organic interposer）和一个有机层压基板（organic laminate substrate）。为了实现低功耗和高带宽，EIC的接收器输入直接放置在PIC的顶部，采用了55μm间距的铜柱焊盘。这种设计使得TIA可以直接连接到光探测器（PD），并且寄生效应最小化。InFO用于通过并行接口（在此工作中未使用）将EIC连接到代理核心集成电路（proxy Core IC）。光通过15光纤阵列以250μm的间距通过V型槽耦合进出PIC。</p>
-<p><img src="/pictures/image-20240823163949323.png" alt="image-20240823163949323"></p>
+<p><img src="/pictures/image-20240823163949323.png" alt="image-20240823163949323" /></p>
 <p>图12.1.1详细展示了PIC RX的架构。为了实现WDM通道选择，采用了级联环形谐振器（CRR）。CRR滤波器由两个环形谐振器耦合形成，创建了一个以特定波长为中心的二阶平顶滤波器，具有来自相邻波长的低串扰。CRR的自由光谱范围（FSR）设计为通道间距1.5 nm的8倍。每个RX1至RX7 CRR的掉落端口连接到一个基于SiGe的波导光探测器（PD），其响应度为0.9 A/W。最后一个CRR（RX8）的掉落端口未连接到PD，用于测试芯片中的调试。CRR设计的插入损耗小于1.5 dB，串扰小于15 dB。选择了带有直耦合段的赛道设计，以增加耦合距离，从而提高工艺变化的容忍度。与一阶滤波器（单个环形谐振器）相比，二阶滤波器由于-40 dB/dec增益衰减提供了更低的相邻波长之间的串扰。此外，平顶特性对激光波长间距变化的敏感性也较低。这允许对CRR阵列进行集体热调谐，以匹配激光波长。为了获得最佳的整体BER性能，每个CRR的通带必须与其对应的激光波长匹配，同时保持1.5 nm的网格间距。为了优化激光网格和滤波器对齐，RX1至RX7的透过端口功率（在此设计中是免费的）被求和，1313 nm的最低损耗中间值被用作RX1的波长（见图12.1.2）。RX2至RX7的激光波长通过递减1.5 nm的倍数来确定。通过集体调谐CRR阵列也可以实现相同的操作，同时固定激光波长。</p>
-<p><img src="/pictures/image-20240823164052568.png" alt="image-20240823164052568"></p>
-<p>图12.1.3展示了完整的接收器（RX）架构。在光接收器设计中，低功耗和高灵敏度的TIA（跨导放大器）至关重要。为了利用7nm技术节点提供的($g_m/C$)缩放效益，选择了一个3级基于逆变器的TIA设计，配备了t-coil峰值电路。TIA输出（Voutb）直接连接到强臂锁存器（latch-based slicers）。锁存器的正端（Vcm）连接到由自偏置逆变器生成的固定DC电位，该逆变器具有PMOS/NMOS强度控制。为了匹配采样时钟对Vcm和Voutb节点的干扰，在Vcm节点上添加了一个可编程的传输门开关。与传统的连续时间线性均衡器（CTLE）电路不同，NMOS开关被添加到TIA的电阻R1和R3上，以实现可编程带宽和峰值调整。为了确保无论光电二极管的平均电流水平如何，锁存器的输入共模电压始终保持在Vcm，添加了一个带宽为10MHz的DC电流取消环路。该DC环路可以通过关闭工作跨导放大器（OTA）来禁用，使TIA在开环模式下运行。在这种模式下，使用静态模拟探针（SAP）监测TIA经过RC滤波器后的输出电压，以表征CRR滤波器的插入损耗。TIA的设计目标是跨导阻抗（Zt）在4kΩ到6kΩ之间，带宽大于35GHz，集成输入噪声为3μA。TIA的电源敏感性通过使用片上稳压电源得到改善，该电源提供了大于25dB的电源抑制比（PSRR）。为了避免由于DC环路跟踪导致通过Vcm路径的差分PSRR在中频（10-200MHz）处峰值，添加了一个低通滤波器（见图12.1.3）。</p>
-<p><img src="/pictures/image-20240823164143548.png" alt="image-20240823164143548"></p>
+<p><img src="/pictures/image-20240823164052568.png" alt="image-20240823164052568" /></p>
+<p>图12.1.3展示了完整的接收器（RX）架构。在光接收器设计中，低功耗和高灵敏度的TIA（跨导放大器）至关重要。为了利用7nm技术节点提供的(<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mi>m</mi></msub><mi mathvariant="normal">/</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">g_m/C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span>)缩放效益，选择了一个3级基于逆变器的TIA设计，配备了t-coil峰值电路。TIA输出（Voutb）直接连接到强臂锁存器（latch-based slicers）。锁存器的正端（Vcm）连接到由自偏置逆变器生成的固定DC电位，该逆变器具有PMOS/NMOS强度控制。为了匹配采样时钟对Vcm和Voutb节点的干扰，在Vcm节点上添加了一个可编程的传输门开关。与传统的连续时间线性均衡器（CTLE）电路不同，NMOS开关被添加到TIA的电阻R1和R3上，以实现可编程带宽和峰值调整。为了确保无论光电二极管的平均电流水平如何，锁存器的输入共模电压始终保持在Vcm，添加了一个带宽为10MHz的DC电流取消环路。该DC环路可以通过关闭工作跨导放大器（OTA）来禁用，使TIA在开环模式下运行。在这种模式下，使用静态模拟探针（SAP）监测TIA经过RC滤波器后的输出电压，以表征CRR滤波器的插入损耗。TIA的设计目标是跨导阻抗（Zt）在4kΩ到6kΩ之间，带宽大于35GHz，集成输入噪声为3μA。TIA的电源敏感性通过使用片上稳压电源得到改善，该电源提供了大于25dB的电源抑制比（PSRR）。为了避免由于DC环路跟踪导致通过Vcm路径的差分PSRR在中频（10-200MHz）处峰值，添加了一个低通滤波器（见图12.1.3）。</p>
+<p><img src="/pictures/image-20240823164143548.png" alt="image-20240823164143548" /></p>
 <p>设计中使用了四相四分之一速率时钟来驱动4个数据取样器和1个误差取样器。误差取样器用于采样输入信号的峰值，并与数据取样结合，用于执行波特率时钟和数据恢复（CDR）功能。CDR环路通过数字控制一个8位相位插值器（PI）来将取样时钟调整到其最佳位置。PI的8相位时钟由一个基于环形的锁相振荡器（ILO1）生成，该振荡器使用来自通用锁相环（PLL）的12.5GHz时钟作为参考。另一个锁相振荡器（ILO2）生成驱动取样器的4相位时钟，并以PI的输出作为参考。为了修正4相位取样时钟的相位误差，使用了一个四分之一锁相环（QLL），同时为PI和两个ILO生成电源电压。在设计中，四分之一锁相环（QLL）使用的相位误差检测器（QED）驱动的电压到电流（V-to-I）电路直接驱动了调节器的NMOS源跟随器。这种设计使得可以去除操作跨导放大器（OTA）和滤波电容器（C2）。去除C2将第二极点推得更远，从而可以进一步减小C1，节省硅片面积。</p>
 <ul>
-<li><p><strong>制造工艺</strong>：</p>
+<li>
+<p><strong>制造工艺</strong>：</p>
 <ul>
 <li>电气芯片（EIC）使用7nm FinFET工艺制造，每个通道的RX活跃区域为165×186μm²。</li>
 <li>光子集成电路（PIC）使用45nm工艺制造。</li>
 </ul>
 </li>
-<li><p><strong>测量设置</strong>：</p>
+<li>
+<p><strong>测量设置</strong>：</p>
 <ul>
 <li>测量使用了一个参考光调制器，生成50Gb/s的伪随机二进制序列（PRBS7）模式，具有3.7dB的消光比（ER）。</li>
 <li>激光波长由可调激光器设置。</li>
 <li>可调光衰减器用于控制发送到PIC的光功率。</li>
 </ul>
 </li>
-<li><p><strong>光接收器性能</strong>：</p>
+<li>
+<p><strong>光接收器性能</strong>：</p>
 <ul>
 <li>RX1至RX7的灵敏度在-11.4dBm（OMA）到-10.1dBm（OMA）之间变化，中位灵敏度为-11.1dBm（OMA）。</li>
 <li>灵敏度变化由CRR滤波器的损耗差异造成。</li>
 <li>测量结果表明，最差通道（RX1）的响应与最佳通道（RX7）的响应一致，只需增加1.5dBm的功率输入，这对应于RX1的1.3dB OMA损耗。</li>
-<li><ul>
-<li><img src="/pictures/image-20240823165722998.png" alt="image-20240823165722998"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>误码率（BER）性能</strong>：</p>
+<li>
 <ul>
-<li>测量的BER浴缸曲线显示，RX1至RX7在1dB链路余量下，所有通道都满足BER&lt;1e-12，并且在50Gb/s时具有超过14%的单位间隔（UI）开口。</li>
-<li>聚合数据率达到350Gb/s，BER&lt;1e-12，没有前向纠错（FEC）。</li>
-<li><img src="/pictures/image-20240823165817759.png" alt="image-20240823165817759"></li>
-<li><p><strong>眼图扫描</strong>：</p>
-</li>
-<li><p>使用1e10比特的2D眼图扫描显示了内部眼形状。</p>
-</li>
-<li>2D眼图的水平分辨率为一个PI代码（在50Gb/s下为312.5fs），垂直分辨率为4.4mV。</li>
-<li>第二阶平顶CRR滤波器的优势通过RX5得到证明，尽管其激光波长偏离滤波器中心200pm，但仍能保持&lt;1e-12的无误差性能。</li>
-<li><img src="/pictures/image-20240823165851522.png" alt="image-20240823165851522"></li>
+<li><img src="/pictures/image-20240823165722998.png" alt="image-20240823165722998" /></li>
 </ul>
 </li>
-<li><p><strong>光学串扰影响</strong>：</p>
+</ul>
+</li>
+<li>
+<p><strong>误码率（BER）性能</strong>：</p>
+<ul>
+<li>
+<p>测量的BER浴缸曲线显示，RX1至RX7在1dB链路余量下，所有通道都满足BER&lt;1e-12，并且在50Gb/s时具有超过14%的单位间隔（UI）开口。</p>
+</li>
+<li>
+<p>聚合数据率达到350Gb/s，BER&lt;1e-12，没有前向纠错（FEC）。</p>
+</li>
+<li>
+<p><img src="/pictures/image-20240823165817759.png" alt="image-20240823165817759" /></p>
+</li>
+<li>
+<p><strong>眼图扫描</strong>：</p>
+</li>
+<li>
+<p>使用1e10比特的2D眼图扫描显示了内部眼形状。</p>
+</li>
+<li>
+<p>2D眼图的水平分辨率为一个PI代码（在50Gb/s下为312.5fs），垂直分辨率为4.4mV。</p>
+</li>
+<li>
+<p>第二阶平顶CRR滤波器的优势通过RX5得到证明，尽管其激光波长偏离滤波器中心200pm，但仍能保持&lt;1e-12的无误差性能。</p>
+</li>
+<li>
+<p><img src="/pictures/image-20240823165851522.png" alt="image-20240823165851522" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>光学串扰影响</strong>：</p>
 <ul>
 <li>对RX2和RX3进行的测试显示，即使通道间隔为1.5 nm，水平和垂直眼开口的影响也很小。</li>
 </ul>
 </li>
-<li><p><strong>功耗与能效</strong>：</p>
+<li>
+<p><strong>功耗与能效</strong>：</p>
 <ul>
 <li>RX的功耗为40mW，通用PLL的功耗为8.2mW（在7条通道中摊销）。</li>
 <li>RX的能效为0.96pJ/bit（在50Gb/s时测得）。</li>
 </ul>
 </li>
-<li><p><strong>性能总结</strong>：</p>
+<li>
+<p><strong>性能总结</strong>：</p>
 <ul>
 <li>图表总结了系统性能，并与之前报道的CMOS接收器前端进行了比较。</li>
 <li>本设计在综合数据速率和功耗效率方面优于集成SerDes的相关工作。</li>
 </ul>
 </li>
-<li><p><strong>芯片照片</strong>：</p>
+<li>
+<p><strong>芯片照片</strong>：</p>
 <ul>
 <li>图示包括PIC中的CRR阵列、EIC中的RX电路和打包模块的照片。</li>
 </ul>
 </li>
 </ul>
-<p><img src="/pictures/image-20240823165912605.png" alt="image-20240823165912605"></p>
+<p><img src="/pictures/image-20240823165912605.png" alt="image-20240823165912605" /></p>
 
     </div>
 
@@ -491,13 +514,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">81k</span>
+    <span title="站点总字数">90k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:14</span>
+    <span title="站点阅读时长">1:22</span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
 
         

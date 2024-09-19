@@ -46,12 +46,12 @@
   };
 </script>
 
-  <meta name="description" content="硬件需求Nvidia CUDA driver version 450.80.02 or later (Linux), version 452.39 or later (windows) 仿真需求需要设置为express模式：  目前限制 边界条件仅支持PML frequency dependent mode source profiles are not supported. time monit">
+  <meta name="description" content="硬件需求 Nvidia CUDA driver version 450.80.02 or later (Linux), version 452.39 or later (windows)  仿真需求 需要设置为express模式：   目前限制  边界条件仅支持PML frequency dependent mode source profiles are not supported. time">
 <meta property="og:type" content="article">
 <meta property="og:title" content="采用gpu进行lumericalFDTD仿真">
 <meta property="og:url" content="http://example.com/2023/12/28/%E9%87%87%E7%94%A8gpu%E8%BF%9B%E8%A1%8ClumericalFDTD%E4%BB%BF%E7%9C%9F/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="硬件需求Nvidia CUDA driver version 450.80.02 or later (Linux), version 452.39 or later (windows) 仿真需求需要设置为express模式：  目前限制 边界条件仅支持PML frequency dependent mode source profiles are not supported. time monit">
+<meta property="og:description" content="硬件需求 Nvidia CUDA driver version 450.80.02 or later (Linux), version 452.39 or later (windows)  仿真需求 需要设置为express模式：   目前限制  边界条件仅支持PML frequency dependent mode source profiles are not supported. time">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/pictures/18518186955411.png">
 <meta property="article:published_time" content="2023-12-28T04:10:13.000Z">
@@ -270,19 +270,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="硬件需求"><a href="#硬件需求" class="headerlink" title="硬件需求"></a>硬件需求</h2><p>Nvidia CUDA driver version 450.80.02 or later (Linux), version 452.39 or later (windows)</p>
-<h2 id="仿真需求"><a href="#仿真需求" class="headerlink" title="仿真需求"></a>仿真需求</h2><p>需要设置为express模式：</p>
-<p><img src="/pictures/18518186955411.png" alt="img"></p>
-<h2 id="目前限制"><a href="#目前限制" class="headerlink" title="目前限制"></a>目前限制</h2><ol>
+        <h2 id="硬件需求"><a class="markdownIt-Anchor" href="#硬件需求"></a> 硬件需求</h2>
+<p>Nvidia CUDA driver version 450.80.02 or later (Linux), version 452.39 or later (windows)</p>
+<h2 id="仿真需求"><a class="markdownIt-Anchor" href="#仿真需求"></a> 仿真需求</h2>
+<p>需要设置为express模式：</p>
+<p><img src="/pictures/18518186955411.png" alt="img" /></p>
+<h2 id="目前限制"><a class="markdownIt-Anchor" href="#目前限制"></a> 目前限制</h2>
+<ol>
 <li>边界条件仅支持PML</li>
 <li>frequency dependent mode source profiles are not supported.</li>
 <li>time monitors 会限制仿真速度</li>
 </ol>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol>
+<h2 id="其他"><a class="markdownIt-Anchor" href="#其他"></a> 其他</h2>
+<ol>
 <li>For multiple jobs it is recommended to run them in series rather than in parallel.</li>
 </ol>
-<h2 id="脚本实现"><a href="#脚本实现" class="headerlink" title="脚本实现"></a>脚本实现</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setnamed(&quot;FDTD&quot;, &quot;express mode&quot;, true);</span><br><span class="line">setresource(&quot;FDTD&quot;,&quot;GPU&quot;, true);</span><br><span class="line">setresource(&quot;FDTD&quot;, 3, &quot;GPU Device&quot;, &quot;Auto&quot;);</span><br><span class="line">setresource(&quot;FDTD&quot;, &quot;GPU&quot;, false);</span><br><span class="line">setresource(&quot;FDTD&quot;, &quot;CPU&quot;, true); //&lt; equivalent to previous line</span><br></pre></td></tr></table></figure>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<h2 id="脚本实现"><a class="markdownIt-Anchor" href="#脚本实现"></a> 脚本实现</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setnamed(&quot;FDTD&quot;, &quot;express mode&quot;, true);</span><br><span class="line">setresource(&quot;FDTD&quot;,&quot;GPU&quot;, true);</span><br><span class="line">setresource(&quot;FDTD&quot;, 3, &quot;GPU Device&quot;, &quot;Auto&quot;);</span><br><span class="line">setresource(&quot;FDTD&quot;, &quot;GPU&quot;, false);</span><br><span class="line">setresource(&quot;FDTD&quot;, &quot;CPU&quot;, true); //&lt; equivalent to previous line</span><br></pre></td></tr></table></figure>
+<h2 id="参考文献"><a class="markdownIt-Anchor" href="#参考文献"></a> 参考文献</h2>
+<ol>
 <li><a target="_blank" rel="noopener" href="https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information">https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information</a></li>
 </ol>
 
@@ -370,7 +376,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E9%9C%80%E6%B1%82"><span class="nav-number">1.</span> <span class="nav-text">硬件需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%BF%E7%9C%9F%E9%9C%80%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text">仿真需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%89%8D%E9%99%90%E5%88%B6"><span class="nav-number">3.</span> <span class="nav-text">目前限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E5%AE%9E%E7%8E%B0"><span class="nav-number">5.</span> <span class="nav-text">脚本实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">6.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E9%9C%80%E6%B1%82"><span class="nav-number">1.</span> <span class="nav-text"> 硬件需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%BF%E7%9C%9F%E9%9C%80%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text"> 仿真需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%89%8D%E9%99%90%E5%88%B6"><span class="nav-number">3.</span> <span class="nav-text"> 目前限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">4.</span> <span class="nav-text"> 其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E5%AE%9E%E7%8E%B0"><span class="nav-number">5.</span> <span class="nav-text"> 脚本实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">6.</span> <span class="nav-text"> 参考文献</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -434,13 +440,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">81k</span>
+    <span title="站点总字数">90k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:14</span>
+    <span title="站点阅读时长">1:22</span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
 
         

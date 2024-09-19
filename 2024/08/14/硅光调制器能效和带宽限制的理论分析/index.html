@@ -46,12 +46,12 @@
   };
 </script>
 
-  <meta name="description" content="REF: 硅光调制器能效和带宽限制的理论分析 摘要超大规模并行光互连是解决芯片核心之间大量数据交换的核心挑战，硅光调制器作为电光信号转换最关键的器件之一，必须在能效和带宽上具有出色的表现，才能够满足光互连的需求。 在这篇文章里，我们从以下三个方面分析了基于超紧凑谐振腔的硅光调制器：  材料有源区自由载流子色散强度 谐振腔的普克尔（Purcell）因子 电容器的电气配置  我们的仿真结果显示，光子晶">
+  <meta name="description" content="REF: 硅光调制器能效和带宽限制的理论分析  摘要 超大规模并行光互连是解决芯片核心之间大量数据交换的核心挑战，硅光调制器作为电光信号转换最关键的器件之一，必须在能效和带宽上具有出色的表现，才能够满足光互连的需求。 在这篇文章里，我们从以下三个方面分析了基于超紧凑谐振腔的硅光调制器：  材料有源区自由载流子色散强度 谐振腔的普克尔（Purcell）因子 电容器的电气配置  我们的仿真结果显示，光">
 <meta property="og:type" content="article">
 <meta property="og:title" content="硅光调制器能效和带宽限制的理论分析">
 <meta property="og:url" content="http://example.com/2024/08/14/%E7%A1%85%E5%85%89%E8%B0%83%E5%88%B6%E5%99%A8%E8%83%BD%E6%95%88%E5%92%8C%E5%B8%A6%E5%AE%BD%E9%99%90%E5%88%B6%E7%9A%84%E7%90%86%E8%AE%BA%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="REF: 硅光调制器能效和带宽限制的理论分析 摘要超大规模并行光互连是解决芯片核心之间大量数据交换的核心挑战，硅光调制器作为电光信号转换最关键的器件之一，必须在能效和带宽上具有出色的表现，才能够满足光互连的需求。 在这篇文章里，我们从以下三个方面分析了基于超紧凑谐振腔的硅光调制器：  材料有源区自由载流子色散强度 谐振腔的普克尔（Purcell）因子 电容器的电气配置  我们的仿真结果显示，光子晶">
+<meta property="og:description" content="REF: 硅光调制器能效和带宽限制的理论分析  摘要 超大规模并行光互连是解决芯片核心之间大量数据交换的核心挑战，硅光调制器作为电光信号转换最关键的器件之一，必须在能效和带宽上具有出色的表现，才能够满足光互连的需求。 在这篇文章里，我们从以下三个方面分析了基于超紧凑谐振腔的硅光调制器：  材料有源区自由载流子色散强度 谐振腔的普克尔（Purcell）因子 电容器的电气配置  我们的仿真结果显示，光">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-14T06:48:59.000Z">
 <meta property="article:modified_time" content="2024-08-20T04:57:33.490Z">
@@ -269,7 +269,8 @@
 
       
         <p>REF: <a href="/download/Li 和 Wang - 2019 - Theoretical Analysis of Energy Efficiency and Band.pdf" download>硅光调制器能效和带宽限制的理论分析</a></p>
-<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>超大规模并行光互连是解决芯片核心之间大量数据交换的核心挑战，硅光调制器作为电光信号转换最关键的器件之一，必须在能效和带宽上具有出色的表现，才能够满足光互连的需求。</p>
+<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
+<p>超大规模并行光互连是解决芯片核心之间大量数据交换的核心挑战，硅光调制器作为电光信号转换最关键的器件之一，必须在能效和带宽上具有出色的表现，才能够满足光互连的需求。</p>
 <p>在这篇文章里，我们从以下三个方面分析了基于超紧凑谐振腔的硅光调制器：</p>
 <ol>
 <li>材料有源区自由载流子色散强度</li>
@@ -278,7 +279,8 @@
 </ol>
 <p>我们的仿真结果显示，光子晶体谐振腔在能效和器件尺寸上比微环谐振腔和微盘谐振腔有着更好的优势，而在电光调制区域，金属氧化物半导体电容器（MOSCAP）的表现优于反向PN结（由于其具有更高的电容密度）。</p>
 <p>然而，所有基于谐振腔的硅光子调制器都存在本质上的能效和带宽（受限于RC延时）之间的tradeoff。本文提出的一般模型也因此为硅光调制器理论奠定了基础，并且指出了实现阿托焦耳/比特能效的可能途径，以及如何接近硅光子调制器的理论极限。</p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>随着计算机芯片的时钟频率在 21 世纪初期停止增长，微电子产业逐渐采用并行计算架构来保持性能的提升。并行架构现已普遍应用于大多数高性能电子设备。例如，一台 NVIDIA Tesla V100 包含多达 100 个中央处理器单元（CPU）和 5120 个内核在一个单一的图形处理器单元（GPU）中，可以实现 125 万亿次浮点运算的计算性能，但需要接近 10 Tbps的 GPU 与内存带宽。然而，并行计算系统的优势目前并非受限于单个节点的计算能力，而是受限于互连瓶颈，即如何以高能效在节点之间移动数据。</p>
+<h2 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h2>
+<p>随着计算机芯片的时钟频率在 21 世纪初期停止增长，微电子产业逐渐采用并行计算架构来保持性能的提升。并行架构现已普遍应用于大多数高性能电子设备。例如，一台 NVIDIA Tesla V100 包含多达 100 个中央处理器单元（CPU）和 5120 个内核在一个单一的图形处理器单元（GPU）中，可以实现 125 万亿次浮点运算的计算性能，但需要接近 10 Tbps的 GPU 与内存带宽。然而，并行计算系统的优势目前并非受限于单个节点的计算能力，而是受限于互连瓶颈，即如何以高能效在节点之间移动数据。</p>
 <p>虽然光子技术被广泛认为是解决互连瓶颈的最重要解决方案，但目前以插拔模块形式存在于电路板上的现有光学输入/输出（I/O）无法完全解决这一问题，主要是由于其高功耗和低面积带宽密度的限制。高密度并行数据链路的光子集成电路（PICs）有能力满足并行计算系统的高带宽密度需求。然而，基于 PIC 的光互连同样面临与电互连相同的能效和带宽限制挑战，因为对于更短距离的光互连而言，裕量缩小得不利。D. Miller 指出，关键问题在于光子技术能否将互连能耗降低到<strong>阿托焦耳/比特</strong>的水平，从机柜、机架和电路板内开始，至少要到达芯片边缘，甚至可能到芯片内部。这种对能效的前所未有的需求对现有的 PIC 设备，甚至是最先进的硅光子技术，都提出了巨大的挑战。</p>
 <p>过去二十年中，硅光子技术的发展为实现并行光互连提供了最可行的平台，因为它具有与 CMOS 的固有兼容性。由于 III-V 族化合物半导体光源可以进行芯片外耦合或异质集成，并且 Si/Ge 光电探测器有可能直接由信号光供电，因此电光（E-O）调制器成为光学模块中最关键的有源器件之一，将消耗芯片上功耗的最大部分，特别是对于高速高密度并行光链路而言。考虑到与微电子的系统级集成，我们对节能、高速 E-O 调制器的研究将仅限于与硅光子技术兼容的器件。尽管在 III-V 族化合物半导体、等离激元学、铌酸锂（LiNbO3以及具有高带宽和高能效的 E-O 聚合物平台上取得了令人鼓舞的进展，但由于其完全不同的工作机制，我们将不讨论这些器件。最近有一些优秀的论文回顾了各种类型调制器的能效和扩展规律。</p>
 <p>对于每一种电光（E-O）调制器，其性能最终由三个主要因素决定：材料有源区、光子器件设计和电气结构。由于硅的内在对称晶体结构，硅没有Pockels效应。硅光子调制器要么利用硅本身的自由载流子等离子体色散效应，要么利用异质集成材料的电光效应，例如锗、电光聚合物、铁电材料、透明导电氧化物（TCOs）、石墨烯和二维材料，以及最新的相变材料。这些新兴材料提供了非常独特且通常非常大的电光效应，但由于材料特性的不一致性，很难对其能量效率和带宽限制进行严格的分析。另一方面，大多数已报道的电光调制器都是基于自由载流子等离子体色散效应所引起的折射率扰动，这些效应来源于硅或异质集成材料。因此，本文的范围限于自由载流子驱动的硅电光调制器，包括与异质集成材料的硅调制器。</p>
@@ -370,7 +372,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text"> 摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">2.</span> <span class="nav-text"> 背景</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -434,13 +436,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">81k</span>
+    <span title="站点总字数">90k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:14</span>
+    <span title="站点阅读时长">1:22</span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
 
         
