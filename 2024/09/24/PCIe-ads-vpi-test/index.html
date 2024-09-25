@@ -46,30 +46,18 @@
   };
 </script>
 
-  <meta name="description" content="仿真文件下载  复习了vpi+ads的仿真方法  采用ads打开仿真文件  ads中原理图如下：   vpi中原理图如下：   VPI中进行了信号的放大和预失真    进行联合仿真  通过全局变量传递参数    采用了Tx AMI模拟芯片发生的信号：  Tx_DCD &#x3D; 0.1 UI Tx_RJ &#x3D; 0.01 UI Tx_DJ &#x3D; 0.05 UI Deemphasis &#x3D; -5 dB  Rx AM">
+  <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PCIe_ads+vpi_test">
 <meta property="og:url" content="http://example.com/2024/09/24/PCIe-ads-vpi-test/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="仿真文件下载  复习了vpi+ads的仿真方法  采用ads打开仿真文件  ads中原理图如下：   vpi中原理图如下：   VPI中进行了信号的放大和预失真    进行联合仿真  通过全局变量传递参数    采用了Tx AMI模拟芯片发生的信号：  Tx_DCD &#x3D; 0.1 UI Tx_RJ &#x3D; 0.01 UI Tx_DJ &#x3D; 0.05 UI Deemphasis &#x3D; -5 dB  Rx AM">
+<meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/pictures/image-20240924093856062.png">
-<meta property="og:image" content="http://example.com/pictures/image-20240924093945889.png">
-<meta property="og:image" content="http://example.com/pictures/image-20240924094843110.png">
-<meta property="og:image" content="http://example.com/pictures/image-20240924094856453.png">
-<meta property="og:image" content="http://example.com/pictures/image-20240924094626548.png">
-<meta property="og:image" content="http://example.com/pictures/image-20240924094646956.png">
-<meta property="og:image" content="http://example.com/pictures/image-20240924094034868.png">
-<meta property="og:image" content="http://example.com/pictures/image-20240924094131452.png">
-<meta property="og:image" content="http://example.com/pictures/image-20240924094233944.png">
-<meta property="og:image" content="http://example.com/pictures/image-20240924094259965.png">
-<meta property="og:image" content="http://example.com/pictures/image-20240924095013472.png">
 <meta property="article:published_time" content="2024-09-24T01:36:38.000Z">
-<meta property="article:modified_time" content="2024-09-24T07:06:12.801Z">
+<meta property="article:modified_time" content="2024-09-25T02:59:32.866Z">
 <meta property="article:author" content="Yaotian Zhao shineskys@outlook.com">
 <meta property="article:tag" content="光互连">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/pictures/image-20240924093856062.png">
 
 <link rel="canonical" href="http://example.com/2024/09/24/PCIe-ads-vpi-test/">
 
@@ -237,10 +225,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-09-24 09:36:38 / 修改时间：15:06:12" itemprop="dateCreated datePublished" datetime="2024-09-24T09:36:38+08:00">2024-09-24</time>
+              <time title="创建时间：2024-09-24 09:36:38" itemprop="dateCreated datePublished" datetime="2024-09-24T09:36:38+08:00">2024-09-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-25 10:59:32" itemprop="dateModified" datetime="2024-09-25T10:59:32+08:00">2024-09-25</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读数" id="busuanzi_container_page_pv" style="display: none;">
@@ -274,36 +268,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a href="/download/pcie_20240923_wrk.zip" download>仿真文件下载</a></p>
-<h3 id="复习了vpiads的仿真方法"><a class="markdownIt-Anchor" href="#复习了vpiads的仿真方法"></a> 复习了vpi+ads的仿真方法</h3>
-<h4 id="采用ads打开仿真文件"><a class="markdownIt-Anchor" href="#采用ads打开仿真文件"></a> 采用ads打开仿真文件</h4>
-<h4 id="ads中原理图如下"><a class="markdownIt-Anchor" href="#ads中原理图如下"></a> ads中原理图如下：</h4>
-<p><img src="/pictures/image-20240924093856062.png" alt="image-20240924093856062" /></p>
-<h4 id="vpi中原理图如下"><a class="markdownIt-Anchor" href="#vpi中原理图如下"></a> vpi中原理图如下：</h4>
-<p><img src="/pictures/image-20240924093945889.png" alt="image-20240924093945889" /></p>
-<h5 id="vpi中进行了信号的放大和预失真"><a class="markdownIt-Anchor" href="#vpi中进行了信号的放大和预失真"></a> VPI中进行了信号的放大和预失真</h5>
-<p><img src="/pictures/image-20240924094843110.png" alt="image-20240924094843110" /></p>
-<p><img src="/pictures/image-20240924094856453.png" alt="image-20240924094856453" /></p>
-<h4 id="进行联合仿真"><a class="markdownIt-Anchor" href="#进行联合仿真"></a> 进行联合仿真</h4>
-<h5 id="通过全局变量传递参数"><a class="markdownIt-Anchor" href="#通过全局变量传递参数"></a> 通过全局变量传递参数</h5>
-<p><img src="/pictures/image-20240924094626548.png" alt="image-20240924094626548" /></p>
-<p><img src="/pictures/image-20240924094646956.png" alt="image-20240924094646956" /></p>
-<h4 id="采用了tx-ami模拟芯片发生的信号"><a class="markdownIt-Anchor" href="#采用了tx-ami模拟芯片发生的信号"></a> 采用了Tx AMI模拟芯片发生的信号：</h4>
-<p><img src="/pictures/image-20240924094034868.png" alt="image-20240924094034868" /></p>
-<p>Tx_DCD = 0.1 UI</p>
-<p>Tx_RJ = 0.01 UI</p>
-<p>Tx_DJ = 0.05 UI</p>
-<p>Deemphasis = -5 dB</p>
-<h4 id="rx-ami模拟芯片包括ctle和dfe"><a class="markdownIt-Anchor" href="#rx-ami模拟芯片包括ctle和dfe"></a> Rx AMI模拟芯片包括CTLE和DFE</h4>
-<h4 id="采用pciegen5refchannel模拟封装损耗"><a class="markdownIt-Anchor" href="#采用pciegen5refchannel模拟封装损耗"></a> 采用PCIeGen5RefChannel模拟封装损耗：</h4>
-<p><img src="/pictures/image-20240924094131452.png" alt="image-20240924094131452" /></p>
-<h5 id="采用s参数仿真器仿真封装s参数"><a class="markdownIt-Anchor" href="#采用s参数仿真器仿真封装s参数"></a> 采用S参数仿真器仿真封装S参数</h5>
-<p><img src="/pictures/image-20240924094233944.png" alt="image-20240924094233944" /></p>
-<h5 id="结果如下"><a class="markdownIt-Anchor" href="#结果如下"></a> 结果如下</h5>
-<p><img src="/pictures/image-20240924094259965.png" alt="image-20240924094259965" /></p>
-<h4 id="在ads中查看tx发送端-rx接收端和最后的信号眼图"><a class="markdownIt-Anchor" href="#在ads中查看tx发送端-rx接收端和最后的信号眼图"></a> 在ADS中查看Tx发送端、Rx接收端和最后的信号眼图</h4>
-<p><img src="/pictures/image-20240924095013472.png" alt="image-20240924095013472" /></p>
-
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="134d279089e33137130149f40e8f36985d0f917b04343f2ef14dfe3e4f496f97">5852e6e1d18a5dbd7f6ca8ad98f80baa622bbfbdd6aae770edf09229ebeea865f9c98b39c5117860e5a2de08793676a6e75171eaab9e2674f1797814cecdbd55fc50ef73bb02678296baa1d52968904f3582b2aa73be85df2acc01b85ef43f9355dea83b7a6a9a0d9fbc9fa80bb4afa6cb10d0806f3485cad22e57441a589649d5f1b82790f620f131cbd8cacb874efc2404e88c2be7725eae64934c38d16e6d17d27b66d0d38235b70adfbb3e30438a0b41a7a5d40701c2d1d6108fe8d10602b96109872cd33f9c5424c3414d6ac06c62cdf94100d14b8715073ec24cb09fd667ecb595a0761cb762f350d940d96fc65744c052ea82a3a563c199dcc996b1135ddd6ad95d9d8ebcdef3ecf3e4096da84e505fac12f718a8a2a9d039a588fee0b31761fdb41299d65b9360a2ed10823e6e05be98a3a9a88c412f9eed320c72c625bffa1574b9f71e14e5181671692b387061823e741fa1fa5c0cbbab968285afd643105b35ac68b9be116cfabd2f5c577e19c4631d1f319ad3918fd6fd8fe81bf38af70d14cb3a03a5a201dd8ff323b655329810619bd6ab882c5aaa2ea703b498e294091ae85ca8e8c4b616f0a0acb982407164b75674698236390d08594e607ba97c17b8add5b600ad59394f36bd1cff812c32a6b1fdcede0474764257a00bb71128cb05025fed9b7868e7db478e8bfd7a70257f66454b8f57cb9f41a6297cfa1692f8b24bbf787c632e230d3a1c05a41dc033092f4a36557457e1725b9145fc0d1ec88f1be23cc00e89ac20587fab3b19e6bfa9c59c1ed83081e377a6c322b3173472097cad9083f21d956d5b816c239e5de0859867a4964cf463f6fe030c0e2a44cf958c0d5a7fb712576c2b35d5ccb2ebce0aecb07b7d4ccf1e737f55f4ce409cfa9a8b08115875e3861ad95f1b9dcabf4e39f5063f621a5923f5c615ed1cd400923c5549c44523605401e327bb4470d9c85e962842bda1591919387189e24020688ada756bde0f3062515fc63f116502070e39ec8a176381f2a60439436253fd8bc2d27fc5ed8cab9e6075075a995e12e0bd14332a5197cff785c10b82a87f0134ae64b876cacc2d754680417b8f5272365a7ebf9e866d0f6980b86e9d7ed065c92a710633a0cfe8203869c1f5810ca052df4e1586e9b32f4ab6d0079983b3b98bc517a5a93f26da6553415ab3dd6d880a97fcc65dec65be98d587380a77a67a5ed280643757e6ef2bbcee874f927af11e5a37b14f86131db1f4bf0162a3ab83082127a3050facde81166c5f9a7e386db18abdfe5eb3fdc61b65e91bfa45fb9255ce9f8d85d69197a4297d9bb36ad7be4e636497a0cf086e1c6a1aff03df6a2805f1217cb8b5731c80808f3fa05a305da5c45eb7d2096248c0cc5d67babe37f75d956462b89447168ac7f4dfb19776e17269f68bcfd770b31a108e862aa48f69a72bfd75fe743e71a66c151b72a476e9fe9fb01a18ac0864b07ac2c26efca651104d36e60f1c9178ebb7a9fd7345f237989e8a90cab7289d3fe15e61e47b513a162ec5eb4fb08801125e104c502e341977f6c79c4f517ff09f2d76b1b14026e55a39623f7b480915db4dd0a4867ce7a642ad3f364516551e1d4ec3013c18b9812ce7ae8c4060093f71733af0de6cfd75a81bb8bbadf913d2491f30ef16dad1d676c34e71e3e63c6c87d61381a9664e6c67128c3c6fb579c32b39efd5c17a386ab3989765c8ae1a3050aa71f2d45119ddc9e641fb480fd65ef5c2522571747406b0a6e991b384317ddd650daf2b84a20260a070e3ca8093e7decc16ccdd2f35eb5c84f0f7452522d311132072d06868f0e73fa99497520160d233c4689a2c9ff4bff26d143ff890c468ae17e338d1547e0609d86c54dd6276ef22ea1b66f18d9262b06fd4ff1f8433165147a7c353bf8f5e9da57e5e868ca1a5d742dfb2e322e1c0b5870c9e5bb975031b98d7c6f3e38fc739fe5e7140569a9e6e2a984532cb7947652e8ee35f60f76197523b90150ae5e8833a0f81f95859749dfc83b88ed261520f4ca9a47679a8a4c8a298b5bed02dd509043a23e455a5e6fa22fbe26f592c031421fcc1621d764e65da145274bd715efd258400b88888101c6c120dea427853ea4b47b1318b5f795669caae6310e0c010cb2007d616b17cd10967dd04e579904842c2d08f31e51fc0f35542e50fdcc457ba6fb85cb4b1ab8c7c2e191045bd7ebe359a41372d7ee194641baa2db301bf4648698d72b223a74f1a8bcebd29c92beca6415fadd1444e3ec815ad3fb5bb0d090d7c921a7d0f55923e655eea92f85ae8c2863811b41a5bcd3fb5d32c597e181f6b4420ff15f90f586908b2afed42abbe3ca5bc6a377664760e215e1202dcaabe04f5b6ca3995f200b7f001eaf793b9f38f10b3c200fa4833a948ce1d722d6e41d844d259a542ac71fbaded0281f3450d202835c3b29e3577d4b4abe927c333b96ea68cafd308700d22b79c458631ff371af1ebdcc6a7097769a22ee65064ac5128b2c84c7f886984c2bd3eb2ad00d85b8e015aa039579c6e68b4c57d42a9f8df3d02a9c18df3f9f70966be4e30722df3f355b98e6e9b6733391864986cfa114a48895263293b2eff80c37d754199634d9be26333f7820b544f478ee02cd8accad68a4da1a01af613b313f0937edab0d64d9d74aa27f22a7fd22bbd5232a4600b15f32b3cdbd5e06f84c941c552111f7dac880476007b310fec0f17b2478b33e540c906ed1ae986f08136e7b23e6ccb4b7ce832368e9074442fba401d30f47f7d330207e78a714772cc34c15f7d9f369c1811b2361939dd26ecf893fe5a5ed0d08adb0df4934ced9b6b464cfce03cf8420e196b15340ffabd989e994c5cb7c69e10ea5cb7ce274b00b0cf65e105f033003f2f4dd6c3ca5bebc8ab2c509b123c994f6cdeef1eec35bddd18a85a3ef4ddbc91fdbd755a0a127e314f61b89012f3e15df214507c16cd7a98fa156fe642af06303e7d507c1b3558b216b6bf0aff55e6e603061d6088f5e156440f306acda0082fc5d76094fa7073bd53014be4000d777860dd181be6fdac324da025cfc4a4cf239f9903a248423175eb791ef9ff9166ec3efc7430d9f1037e9eb956807894df2a6b3fb60702b0ef8c0002fd8c389c67a81c604117bbc665b3ab728bf3f0066db032d7c1ed10a920e7adabf97918881c0a0aff74964ff538f671b88da598a6fd77c7e956449eb8f26ec7d153e17cbb224e2e62c0f4ed71f082d3e32882536468b46a8ce916529eadd53d5de96df5b344ab577604e645a52a2fcebd3dc342f2cc225833431ff5b4b97c3c1c930f2a28f94bb966df9a6f19bdb4296fbd70dd6aae9288375ed1d81ae3c9b79a4c0b96094d00ead733613abcb30e0d9a0a7987f3c5e8d43c986e82c6e40eb5ba20047dfc72d8635fa1e44642882f8977208f32999fe01606e3e3ebb6fa57d8a0f8d5dbea72ee3c1fe056b09e41bb8d0f2ceb0af5ed8a4b5389ea07df492e1121bbd5160be670f76fb2889988a67c6214183355eaff253bc88642ec5efd59c0079814507defbc21203b618ca1e998cf2d57936704f51da3e8e6404de3cda38a3b533ab497e93df6bced9885b1f6d45b7c7b82fb3fedee5e88b08cac0c6531dd6d3fad1cf42ce187f791b622fd0b39f0684c9e919835afa12084d12a9481effc423a06434fbd10c9cfb1430cbdc72e227267a50eca062acb658387a16c0654a41e2338b4e71f6a304990cdaba5624973d84f9be15547af19c52ffce418e92d3281d3345d735ad5d7af844250b7fcc259b29aba462fa071389f502f43f21eda8485bdba25f93d5dc953c7fa687632ece2723e018f35a3b3daad0cb536ed35e047188bcf4f25ec97b86771201d73a8e082725b83b73ed603e5be136a22dccd99793c3bfa760f894576483e2d2039e86ef49876c8c4d85bbc05272abbdaf55f31cc156bea55109a9d33a7d974518923ae1b36d6cef9ff597d83da2a0474ea568748861dbdb77cda47ebf76f6d297bfb990c7b3c588f0a44524259e503f71e32e1cf9c08cbbccd2f21011d6fcefb77ab94ea62267be3852880c12c1e96ddb897f6c91286ec34109f5211e9c1b299acfd09fe4aacf00de5c0424e2644787eb9b011f1e718422ad38cd443246f84db511e46bf76ad9a5265302432ce3f32bebf0efa2cfbb0982b9065ff2ab70650a43e3752d53e89e319f03b81d60ff1a0a8261bf135ab34dbc51adaf04222df72b4ed493fe04e9cb03c33167fcbb68df2eac79f28d43da2cadc7e9526c9cdcc40808932344f5113fbb1e285a70622725a27488751412ee17ac154fcad08cc8e36e10a06a582b7bcc0c4a6976ef32f822fd34744064e81db9b5c28fb478e1eb524a1f495611eb42739007b0687c8d6663eea20fdf30834766662c2fa9409f545ae684089bdc6b79b2b2d832a02082a7c47c50d81f22015301ba06b20c198cbed4a87a5f47ec65a7e8a38385a358c86e9a787223652c3ae2459da9bfbf9c0973cf97df1a217f0d9a08cff975ce78f9e1c91883b47729649d650430b496ec7e3e1130d118a028d2c</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
     </div>
 
     
@@ -385,7 +361,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E4%B9%A0%E4%BA%86vpiads%E7%9A%84%E4%BB%BF%E7%9C%9F%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text"> 复习了vpi+ads的仿真方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%87%E7%94%A8ads%E6%89%93%E5%BC%80%E4%BB%BF%E7%9C%9F%E6%96%87%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text"> 采用ads打开仿真文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ads%E4%B8%AD%E5%8E%9F%E7%90%86%E5%9B%BE%E5%A6%82%E4%B8%8B"><span class="nav-number">1.2.</span> <span class="nav-text"> ads中原理图如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vpi%E4%B8%AD%E5%8E%9F%E7%90%86%E5%9B%BE%E5%A6%82%E4%B8%8B"><span class="nav-number">1.3.</span> <span class="nav-text"> vpi中原理图如下：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#vpi%E4%B8%AD%E8%BF%9B%E8%A1%8C%E4%BA%86%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%94%BE%E5%A4%A7%E5%92%8C%E9%A2%84%E5%A4%B1%E7%9C%9F"><span class="nav-number">1.3.1.</span> <span class="nav-text"> VPI中进行了信号的放大和预失真</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8C%E8%81%94%E5%90%88%E4%BB%BF%E7%9C%9F"><span class="nav-number">1.4.</span> <span class="nav-text"> 进行联合仿真</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="nav-number">1.4.1.</span> <span class="nav-text"> 通过全局变量传递参数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%87%E7%94%A8%E4%BA%86tx-ami%E6%A8%A1%E6%8B%9F%E8%8A%AF%E7%89%87%E5%8F%91%E7%94%9F%E7%9A%84%E4%BF%A1%E5%8F%B7"><span class="nav-number">1.5.</span> <span class="nav-text"> 采用了Tx AMI模拟芯片发生的信号：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rx-ami%E6%A8%A1%E6%8B%9F%E8%8A%AF%E7%89%87%E5%8C%85%E6%8B%ACctle%E5%92%8Cdfe"><span class="nav-number">1.6.</span> <span class="nav-text"> Rx AMI模拟芯片包括CTLE和DFE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%87%E7%94%A8pciegen5refchannel%E6%A8%A1%E6%8B%9F%E5%B0%81%E8%A3%85%E6%8D%9F%E8%80%97"><span class="nav-number">1.7.</span> <span class="nav-text"> 采用PCIeGen5RefChannel模拟封装损耗：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%87%87%E7%94%A8s%E5%8F%82%E6%95%B0%E4%BB%BF%E7%9C%9F%E5%99%A8%E4%BB%BF%E7%9C%9F%E5%B0%81%E8%A3%85s%E5%8F%82%E6%95%B0"><span class="nav-number">1.7.1.</span> <span class="nav-text"> 采用S参数仿真器仿真封装S参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C%E5%A6%82%E4%B8%8B"><span class="nav-number">1.7.2.</span> <span class="nav-text"> 结果如下</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8ads%E4%B8%AD%E6%9F%A5%E7%9C%8Btx%E5%8F%91%E9%80%81%E7%AB%AF-rx%E6%8E%A5%E6%94%B6%E7%AB%AF%E5%92%8C%E6%9C%80%E5%90%8E%E7%9A%84%E4%BF%A1%E5%8F%B7%E7%9C%BC%E5%9B%BE"><span class="nav-number">1.8.</span> <span class="nav-text"> 在ADS中查看Tx发送端、Rx接收端和最后的信号眼图</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
