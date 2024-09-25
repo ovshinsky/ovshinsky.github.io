@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>test_download</title>
+    <url>/2023/12/25/test-download/</url>
+    <content><![CDATA[<p><a href="/download/test.pptx" download>测试下载</a></p>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>通过hexo和github pages配置Blog的方法</title>
     <url>/2023/12/20/%E9%80%9A%E8%BF%87hexo%E5%92%8Cgithub-pages%E9%85%8D%E7%BD%AEBlog%E7%9A%84%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h3 id="网页环境配置"><a class="markdownIt-Anchor" href="#网页环境配置"></a> 网页环境配置</h3>
@@ -88,13 +97,6 @@
       </tags>
   </entry>
   <entry>
-    <title>采用Lumerical的硅光仿真设计参数优化方法</title>
-    <url>/2023/12/20/%E9%87%87%E7%94%A8Lumerical%E7%9A%84%E7%A1%85%E5%85%89%E4%BB%BF%E7%9C%9F%E8%AE%BE%E8%AE%A1%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h5 id="reference"><a class="markdownIt-Anchor" href="#reference"></a> REFERENCE:</h5>
-<p>[1] <a href="https://optics.ansys.com/hc/en-us/articles/360034922973-Creating-optimization-tasks-using-a-script">Creating optimization tasks using a script – Ansys Optics</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>hexo报错和解决方法</title>
     <url>/2023/12/25/hexo%E6%8A%A5%E9%94%99%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<ol>
@@ -109,13 +111,11 @@
       </tags>
   </entry>
   <entry>
-    <title>test_download</title>
-    <url>/2023/12/25/test-download/</url>
-    <content><![CDATA[<p><a href="/download/test.pptx" download>测试下载</a></p>
+    <title>采用Lumerical的硅光仿真设计参数优化方法</title>
+    <url>/2023/12/20/%E9%87%87%E7%94%A8Lumerical%E7%9A%84%E7%A1%85%E5%85%89%E4%BB%BF%E7%9C%9F%E8%AE%BE%E8%AE%A1%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h5 id="reference"><a class="markdownIt-Anchor" href="#reference"></a> REFERENCE:</h5>
+<p>[1] <a href="https://optics.ansys.com/hc/en-us/articles/360034922973-Creating-optimization-tasks-using-a-script">Creating optimization tasks using a script – Ansys Optics</a></p>
 ]]></content>
-      <tags>
-        <tag>技术小结</tag>
-      </tags>
   </entry>
   <entry>
     <title>硅光研究常用软件</title>
@@ -349,6 +349,17 @@ r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 = I_2
       </tags>
   </entry>
   <entry>
+    <title>Multimode-reflection-wavelength-DEMUX</title>
+    <url>/2024/03/06/multimode-reflection-wavelength-demux/</url>
+    <content><![CDATA[<h4 id="结构原理"><a class="markdownIt-Anchor" href="#结构原理"></a> 结构原理</h4>
+<h4 id="用来检查模式反射光谱的代码"><a class="markdownIt-Anchor" href="#用来检查模式反射光谱的代码"></a> 用来检查模式反射光谱的代码：</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#首先把mode expansion MONITOR命名为in_mode</span></span><br><span class="line">T0=getresult(<span class="string">&quot;in_mode&quot;</span>,<span class="string">&quot;expansion for &quot;</span>);</span><br><span class="line">x=T0.<span class="keyword">lambda</span>;</span><br><span class="line">x=<span class="number">1000000000</span>*x;</span><br><span class="line">y0=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">1</span>)));</span><br><span class="line">plot(x,y0,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =5&quot;</span> );</span><br><span class="line">holdon;</span><br><span class="line">y1=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">2</span>)));</span><br><span class="line">plot(x,y1,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">y2=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">3</span>)));</span><br><span class="line">plot(x,y2,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">legend(<span class="string">&quot;TE0-TE0&quot;</span>,<span class="string">&quot;TE1-TE1&quot;</span>,<span class="string">&quot;TE2-TE2&quot;</span>);</span><br><span class="line">holdoff;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>worklog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>删除word公式中的占位符</title>
     <url>/2024/01/08/%E5%88%A0%E9%99%A4word%E5%85%AC%E5%BC%8F%E4%B8%AD%E7%9A%84%E5%8D%A0%E4%BD%8D%E7%AC%A6/</url>
     <content><![CDATA[<h3 id="问题描述"><a class="markdownIt-Anchor" href="#问题描述"></a> 问题描述：</h3>
@@ -395,17 +406,6 @@ r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 = I_2
 ]]></content>
       <tags>
         <tag>技术小结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Multimode-reflection-wavelength-DEMUX</title>
-    <url>/2024/03/06/multimode-reflection-wavelength-demux/</url>
-    <content><![CDATA[<h4 id="结构原理"><a class="markdownIt-Anchor" href="#结构原理"></a> 结构原理</h4>
-<h4 id="用来检查模式反射光谱的代码"><a class="markdownIt-Anchor" href="#用来检查模式反射光谱的代码"></a> 用来检查模式反射光谱的代码：</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#首先把mode expansion MONITOR命名为in_mode</span></span><br><span class="line">T0=getresult(<span class="string">&quot;in_mode&quot;</span>,<span class="string">&quot;expansion for &quot;</span>);</span><br><span class="line">x=T0.<span class="keyword">lambda</span>;</span><br><span class="line">x=<span class="number">1000000000</span>*x;</span><br><span class="line">y0=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">1</span>)));</span><br><span class="line">plot(x,y0,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =5&quot;</span> );</span><br><span class="line">holdon;</span><br><span class="line">y1=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">2</span>)));</span><br><span class="line">plot(x,y1,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">y2=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">3</span>)));</span><br><span class="line">plot(x,y2,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">legend(<span class="string">&quot;TE0-TE0&quot;</span>,<span class="string">&quot;TE1-TE1&quot;</span>,<span class="string">&quot;TE2-TE2&quot;</span>);</span><br><span class="line">holdoff;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>worklog</tag>
       </tags>
   </entry>
   <entry>
@@ -462,6 +462,58 @@ Ref. 毛忠宇，《信号、电源完整性仿真设计与高速产品应用实
 </ol>
 <p>链接：<a href="https://pan.baidu.com/s/1KA96gWqL_6fNO7qLKHDAXw">https://pan.baidu.com/s/1KA96gWqL_6fNO7qLKHDAXw</a><br />
 提取码：bfzw</p>
+]]></content>
+      <tags>
+        <tag>光互连</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>适用于封装内光学 I/O 的 256 Gbps 异构集成硅光子微环基密集波分复用（DWDM）接收器（VLSI Technology and Circuits - 2023）</title>
+    <url>/2024/08/08/2023-%E5%BC%82%E6%9E%84%E9%9B%86%E6%88%90%E7%A1%85%E5%85%89%E5%AD%90%E5%BE%AE%E7%8E%AF%E5%9F%BA%E5%AF%86%E9%9B%86%E6%B3%A2%E5%88%86%E5%A4%8D%E7%94%A8%EF%BC%88DWDM%EF%BC%89%E6%8E%A5%E6%94%B6%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
+<p>我们展示了一款256 Gb/s（8λ × 32 Gb/s/λ）3D集成硅光子接收器。此光子集成回路集成了多波长激光器，光学放大器和级联的微环谐振腔（MRRs），从而可以在较小的尺寸里实现密集波分复用（DWDM）的功能。</p>
+<p>28 nm工艺下的CMOS电子集成电路包含8个串并转换通道，PIC的接口和控制电路。基于抖动（dither-based）的热反馈控制单元可以对光解复用器件中的MRR进行调谐，用来在亚pm的量级上对准激光器的波长和MRR的波长。</p>
+<p>测试结果表明，当接收MRR调制的通道间隔为200 GHz 8波 256 Gb/s 的DWDM信号时，误码率BER &lt; 1e-12。其总带宽是之前发表的基于硅光微环的接收机的两倍。</p>
+<h2 id="背景介绍"><a class="markdownIt-Anchor" href="#背景介绍"></a> 背景介绍</h2>
+<p>封内硅光收发机（XCVRs）可以缓解当下数据中心互连的带宽瓶颈，用以满足AI/ML工作负载的性能需求。把光学的I/O带到开关（switch）/XPU/FPGA的封装中可以通过将所需的电气SerDes传输距离从几厘米缩短到几毫米来提高系统能效。</p>
+<p>微环谐振器（MRR）是实现光子器件小型化的关键技术，它们的谐振特性使得密集波分复用（DWDM）变得非常高效，从而使光纤带宽可以得到极大的扩展。近期已经有报告演示过 25 Gb/s/λ 的硅光微环DWDM收发机。在这里，我们展示了一个异构MRR 8波 DWDM接收机，支持高于28%的符号率，2倍以上的总带宽，实现了更高水平的硅光片上集成。</p>
+<h2 id="实现方法"><a class="markdownIt-Anchor" href="#实现方法"></a> 实现方法</h2>
+<p><img src="/pictures/image-20240809102118412.png" alt="image-20240809102118412" /></p>
+<p><em>图 1. 异构集成DWDM收发机，包含电子集成回路和光子集成回路。光收发机的照片和电子芯片的照片和安装方式</em></p>
+<p>光学收发机的示意图如图1所示，通过把电子集成回路堆叠在硅光子集成回路上实现。光子集成回路包括：</p>
+<ol>
+<li>分布式激光器阵列：分布式激光器阵列可以在O波段产生通道间隔为200 GHz的8个波长。</li>
+<li>8个微环调制器（MRM）：MRM的标称半径为6 μm，Q值约为4000。</li>
+<li>半导体光学放大器（SOA）可以补偿光学回路的损耗。</li>
+<li>解复用器通过8个级联的半径为6 μm的add-drop微环谐振腔实现。</li>
+<li>锗光探测器</li>
+</ol>
+<p>所有的微环调制器都具备了一个集成的加热器，能够热调他们的谐振波长。电子集成回路包括8个发送机通道，8个接收机通道和串并转换器，射频电路和控制电路（可以与微环谐振腔MRR接口进行链接）。外部的半速时钟通过芯片内的传输线进行放大。发射机的细节在另外的文献中进行了介绍。在这项工作中，我们更加关注光学接收机的实现和其性能指标的测量。</p>
+<p>每个光学接收机的通道集成了一个模拟的前端（AFE）和一个采样器，用于从输入的光电流中提取NRZ的数据（如图2所示）。此AFE包括了一个受控分流反馈跨阻放大器（TIA），后接多个基于反相器的跨导/跨阻级（TAS/TISs），以提供高达75 dBΩ的增益。</p>
+<p>如图2所示，通过TISs中的series peaking技术，版图后的仿真结果表明其带宽为21 GHz，输入噪声为2.9 μA-rms。模拟前端AFE的增益用数字控制电源来进行编程控制，模拟回路控制消除了接收到光电流中的直流分量，并且可以在采样器的输入提供所需的共模电压（~0.65 V ）。每个4路交错采样器的第一级采用了集成的采样保持（ISH），ISH的集成窗口通过一个电流受限的反相器来控制，以解耦增益与采样率。ISH之后是再生的数据/错误锁存器，用于后续的错误计数和数字后台适应。每个RX通道还包括一个正交时钟生成器和两个CMOS相位插值器，用于优化采样。</p>
+<img src="/pictures/image-20240809105714082.png" alt="image-20240809105714082" style="zoom: 67%;" />
+<p><em>图 2. 光学接收机中的模拟前端AFE和NRZ采样器的实现方式</em></p>
+<p>微环谐振器对工艺和温度非常敏感，需要有源热控制单元（TCUs）来稳定器工作性能。每个接收机通道的TCU可以调节其对应的MRR解复用器，从而使其谐振波长和激光器的工作波长对准，使光电流达到一个最大值。集成的TIA后级联了一个7位 SAR ADC把光电流Iph进行数字化，并且通过与微环谐振器上的微调信号相关，估计光电流的梯度。</p>
+<p>积分回路可以用来调整加热器使梯度为零。电流数字-模拟转换器可以用来消除暗电流，从而确保能最大化利用ADC的动态调节范围。14位功率数模转换器可以驱动微环谐振腔（MRR）的加热器，利用模拟电流压缩技术，从而提供亚皮米级别的调谐分辨率，覆盖微环的自由频谱范围（~11.2 nm）。</p>
+<h2 id="测试结果"><a class="markdownIt-Anchor" href="#测试结果"></a> 测试结果</h2>
+<p>电子集成回路是在28 nm CMOS工艺线上进行的加工，其中光子集成电路（EIC）则是采用了内部开发的硅光子工艺线。图1展示了EIC（EIC+PIC）组装的显微镜照片，并描述了光学接收机的测试设备。</p>
+<p>在光子集成回路（PIC）中，光开关可以配置片上的器件是采用独立的发送和接收测试，或者通过硅波导中的片上的光学回路来进行测试。</p>
+<p><img src="/pictures/image-20240809124933871.png" alt="image-20240809124933871" /></p>
+<p>*图 3. 微环解复用器温度控制单元的概念和架构 *</p>
+<p>模式生成器（Patteren Generator) 和电子集成芯片（EIC）上的错误检查器使链路可以进行BER的测量。图4展示了一个32 Gb/s的光学发射机眼图（来自8个微环谐振腔阵列之一），当反偏电压设置为1V时，通过 2Vpp的CMOS驱动器可以将MRM的损耗调整为6 dB。在所有8个DWDM发射机通道观察到的消光比ER大于4.9 dB，将被下一步用于接收机的测试。</p>
+<p>光学接收机的灵敏度是在调整用SOA输入光功率的同时，监控BER进行测试的。结果表明在32 Gb/s的条件下，其光学接收机的灵敏度是-10.1 dBm（BER &gt; 1e-12）。验证闭环微扰温度控制单元的测试结果也如图4所示。</p>
+<p>BER的测试在256 Gb/s的DWDM信号输入的条件下进行，输入的信号来自8个光发射机通道（通过32 Gb/s PRBS10进行调制），如图5所示。为了将8个TX，8个RX的微环谐振腔和激光器波长对齐，我们首先在开环的方式下测试了它们的TCU，并根据测试结果调整了PDAC，这使得我们可以测量对应的光电流，确定最优的PDAC的配置，减少最后的热调功耗。</p>
+<p>图5中的光谱显示了8波32Gb/s/λ的光学发射机输出光谱，所有的8个波长之间间隔为200 GHz，功率差别&lt; 1.5 dB。所有的8个通道展现出的误码率BER&lt;1e-12，光功率为3.6dBm（~-5.4 dBm/λ）。和最近已发布的技术相比，这个光学接收机展示了如下优势：</p>
+<ol>
+<li>单波数据率提高了38%</li>
+<li>总带宽提高了2倍</li>
+<li>光子学集成度更高</li>
+</ol>
+<p>测试结果表明，接收机的总能效为3.8 pJ/b（不包括热调功率）。</p>
+<p><img src="/pictures/image-20240809125126400.png" alt="image-20240809125126400" /></p>
+<p><em>图 4. （a）光学发射机的参考测试眼，（b）32 Gb/s的条件下光学接收机的灵敏度测试，（c）温度控制单元TCU的测试结果</em></p>
+<p><img src="/pictures/image-20240809130750464.png" alt="image-20240809130750464" /></p>
+<p><em>图 5. 光学发射机的出光光谱，和DWDM接收机误码率的澡盆曲线</em></p>
 ]]></content>
       <tags>
         <tag>光互连</tag>
@@ -718,73 +770,6 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
       </tags>
   </entry>
   <entry>
-    <title>适用于封装内光学 I/O 的 256 Gbps 异构集成硅光子微环基密集波分复用（DWDM）接收器（VLSI Technology and Circuits - 2023）</title>
-    <url>/2024/08/08/2023-%E5%BC%82%E6%9E%84%E9%9B%86%E6%88%90%E7%A1%85%E5%85%89%E5%AD%90%E5%BE%AE%E7%8E%AF%E5%9F%BA%E5%AF%86%E9%9B%86%E6%B3%A2%E5%88%86%E5%A4%8D%E7%94%A8%EF%BC%88DWDM%EF%BC%89%E6%8E%A5%E6%94%B6%E5%99%A8/</url>
-    <content><![CDATA[<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
-<p>我们展示了一款256 Gb/s（8λ × 32 Gb/s/λ）3D集成硅光子接收器。此光子集成回路集成了多波长激光器，光学放大器和级联的微环谐振腔（MRRs），从而可以在较小的尺寸里实现密集波分复用（DWDM）的功能。</p>
-<p>28 nm工艺下的CMOS电子集成电路包含8个串并转换通道，PIC的接口和控制电路。基于抖动（dither-based）的热反馈控制单元可以对光解复用器件中的MRR进行调谐，用来在亚pm的量级上对准激光器的波长和MRR的波长。</p>
-<p>测试结果表明，当接收MRR调制的通道间隔为200 GHz 8波 256 Gb/s 的DWDM信号时，误码率BER &lt; 1e-12。其总带宽是之前发表的基于硅光微环的接收机的两倍。</p>
-<h2 id="背景介绍"><a class="markdownIt-Anchor" href="#背景介绍"></a> 背景介绍</h2>
-<p>封内硅光收发机（XCVRs）可以缓解当下数据中心互连的带宽瓶颈，用以满足AI/ML工作负载的性能需求。把光学的I/O带到开关（switch）/XPU/FPGA的封装中可以通过将所需的电气SerDes传输距离从几厘米缩短到几毫米来提高系统能效。</p>
-<p>微环谐振器（MRR）是实现光子器件小型化的关键技术，它们的谐振特性使得密集波分复用（DWDM）变得非常高效，从而使光纤带宽可以得到极大的扩展。近期已经有报告演示过 25 Gb/s/λ 的硅光微环DWDM收发机。在这里，我们展示了一个异构MRR 8波 DWDM接收机，支持高于28%的符号率，2倍以上的总带宽，实现了更高水平的硅光片上集成。</p>
-<h2 id="实现方法"><a class="markdownIt-Anchor" href="#实现方法"></a> 实现方法</h2>
-<p><img src="/pictures/image-20240809102118412.png" alt="image-20240809102118412" /></p>
-<p><em>图 1. 异构集成DWDM收发机，包含电子集成回路和光子集成回路。光收发机的照片和电子芯片的照片和安装方式</em></p>
-<p>光学收发机的示意图如图1所示，通过把电子集成回路堆叠在硅光子集成回路上实现。光子集成回路包括：</p>
-<ol>
-<li>分布式激光器阵列：分布式激光器阵列可以在O波段产生通道间隔为200 GHz的8个波长。</li>
-<li>8个微环调制器（MRM）：MRM的标称半径为6 μm，Q值约为4000。</li>
-<li>半导体光学放大器（SOA）可以补偿光学回路的损耗。</li>
-<li>解复用器通过8个级联的半径为6 μm的add-drop微环谐振腔实现。</li>
-<li>锗光探测器</li>
-</ol>
-<p>所有的微环调制器都具备了一个集成的加热器，能够热调他们的谐振波长。电子集成回路包括8个发送机通道，8个接收机通道和串并转换器，射频电路和控制电路（可以与微环谐振腔MRR接口进行链接）。外部的半速时钟通过芯片内的传输线进行放大。发射机的细节在另外的文献中进行了介绍。在这项工作中，我们更加关注光学接收机的实现和其性能指标的测量。</p>
-<p>每个光学接收机的通道集成了一个模拟的前端（AFE）和一个采样器，用于从输入的光电流中提取NRZ的数据（如图2所示）。此AFE包括了一个受控分流反馈跨阻放大器（TIA），后接多个基于反相器的跨导/跨阻级（TAS/TISs），以提供高达75 dBΩ的增益。</p>
-<p>如图2所示，通过TISs中的series peaking技术，版图后的仿真结果表明其带宽为21 GHz，输入噪声为2.9 μA-rms。模拟前端AFE的增益用数字控制电源来进行编程控制，模拟回路控制消除了接收到光电流中的直流分量，并且可以在采样器的输入提供所需的共模电压（~0.65 V ）。每个4路交错采样器的第一级采用了集成的采样保持（ISH），ISH的集成窗口通过一个电流受限的反相器来控制，以解耦增益与采样率。ISH之后是再生的数据/错误锁存器，用于后续的错误计数和数字后台适应。每个RX通道还包括一个正交时钟生成器和两个CMOS相位插值器，用于优化采样。</p>
-<img src="/pictures/image-20240809105714082.png" alt="image-20240809105714082" style="zoom: 67%;" />
-<p><em>图 2. 光学接收机中的模拟前端AFE和NRZ采样器的实现方式</em></p>
-<p>微环谐振器对工艺和温度非常敏感，需要有源热控制单元（TCUs）来稳定器工作性能。每个接收机通道的TCU可以调节其对应的MRR解复用器，从而使其谐振波长和激光器的工作波长对准，使光电流达到一个最大值。集成的TIA后级联了一个7位 SAR ADC把光电流Iph进行数字化，并且通过与微环谐振器上的微调信号相关，估计光电流的梯度。</p>
-<p>积分回路可以用来调整加热器使梯度为零。电流数字-模拟转换器可以用来消除暗电流，从而确保能最大化利用ADC的动态调节范围。14位功率数模转换器可以驱动微环谐振腔（MRR）的加热器，利用模拟电流压缩技术，从而提供亚皮米级别的调谐分辨率，覆盖微环的自由频谱范围（~11.2 nm）。</p>
-<h2 id="测试结果"><a class="markdownIt-Anchor" href="#测试结果"></a> 测试结果</h2>
-<p>电子集成回路是在28 nm CMOS工艺线上进行的加工，其中光子集成电路（EIC）则是采用了内部开发的硅光子工艺线。图1展示了EIC（EIC+PIC）组装的显微镜照片，并描述了光学接收机的测试设备。</p>
-<p>在光子集成回路（PIC）中，光开关可以配置片上的器件是采用独立的发送和接收测试，或者通过硅波导中的片上的光学回路来进行测试。</p>
-<p><img src="/pictures/image-20240809124933871.png" alt="image-20240809124933871" /></p>
-<p>*图 3. 微环解复用器温度控制单元的概念和架构 *</p>
-<p>模式生成器（Patteren Generator) 和电子集成芯片（EIC）上的错误检查器使链路可以进行BER的测量。图4展示了一个32 Gb/s的光学发射机眼图（来自8个微环谐振腔阵列之一），当反偏电压设置为1V时，通过 2Vpp的CMOS驱动器可以将MRM的损耗调整为6 dB。在所有8个DWDM发射机通道观察到的消光比ER大于4.9 dB，将被下一步用于接收机的测试。</p>
-<p>光学接收机的灵敏度是在调整用SOA输入光功率的同时，监控BER进行测试的。结果表明在32 Gb/s的条件下，其光学接收机的灵敏度是-10.1 dBm（BER &gt; 1e-12）。验证闭环微扰温度控制单元的测试结果也如图4所示。</p>
-<p>BER的测试在256 Gb/s的DWDM信号输入的条件下进行，输入的信号来自8个光发射机通道（通过32 Gb/s PRBS10进行调制），如图5所示。为了将8个TX，8个RX的微环谐振腔和激光器波长对齐，我们首先在开环的方式下测试了它们的TCU，并根据测试结果调整了PDAC，这使得我们可以测量对应的光电流，确定最优的PDAC的配置，减少最后的热调功耗。</p>
-<p>图5中的光谱显示了8波32Gb/s/λ的光学发射机输出光谱，所有的8个波长之间间隔为200 GHz，功率差别&lt; 1.5 dB。所有的8个通道展现出的误码率BER&lt;1e-12，光功率为3.6dBm（~-5.4 dBm/λ）。和最近已发布的技术相比，这个光学接收机展示了如下优势：</p>
-<ol>
-<li>单波数据率提高了38%</li>
-<li>总带宽提高了2倍</li>
-<li>光子学集成度更高</li>
-</ol>
-<p>测试结果表明，接收机的总能效为3.8 pJ/b（不包括热调功率）。</p>
-<p><img src="/pictures/image-20240809125126400.png" alt="image-20240809125126400" /></p>
-<p><em>图 4. （a）光学发射机的参考测试眼，（b）32 Gb/s的条件下光学接收机的灵敏度测试，（c）温度控制单元TCU的测试结果</em></p>
-<p><img src="/pictures/image-20240809130750464.png" alt="image-20240809130750464" /></p>
-<p><em>图 5. 光学发射机的出光光谱，和DWDM接收机误码率的澡盆曲线</em></p>
-]]></content>
-      <tags>
-        <tag>光互连</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>异质集成的硅-导电氧化物MOSCAP微环调制器阵列-Intel</title>
-    <url>/2024/08/13/%E5%BC%82%E8%B4%A8%E9%9B%86%E6%88%90%E7%9A%84%E7%A1%85-%E5%AF%BC%E7%94%B5%E6%B0%A7%E5%8C%96%E7%89%A9MOSCAP%E5%BE%AE%E7%8E%AF%E8%B0%83%E5%88%B6%E5%99%A8%E9%98%B5%E5%88%97/</url>
-    <content><![CDATA[<p><a href="/download/Heterogeneously integrated silicon.pdf" download>异质集成的硅 - 导电氧化物 MOSCAP 微环调制器阵列</a></p>
-<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
-<p>为了实现高能效的光学互联，硅基微环调制器（Si - MRM）具有超紧凑尺寸和片上波分复用的能力（WDM）。本文展示了一个1×4的金属氧化物半导体电容器硅基微环调制器，通过具有高迁移率的钛掺杂氧化铟（ITiO）作为栅极进行控制。该器件通过Intel大规模制造工艺，以及后续大学里的透明导电氧化物（TCO）图案化工艺进行加工。1×4的硅基MRM阵列展示出了较高的电光效率，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>π</mi></msub><mo separator="true">⋅</mo><mi>L</mi><mo>=</mo><mn>0.12</mn><mi>V</mi><mo separator="true">⋅</mo><mi>c</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">V_{\pi} · L=0.12 V · cm</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">1</span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">m</span></span></span></span>，调制效率为（3×25 + 1×15）Gb/s，测试带宽为14 GHz。此外，其可以在四个等间距波长上实现片上波分复用的调制，不需要额外的加热器。硅光子技术和TCO材料之间的工艺兼容性得到了验证，并且性能可以通过异质集成得到提升。</p>
-<h2 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h2>
-<p>随着数据流量成指数级的增长，对节能并且可扩展的片上光通信系统的需求越来越迫切。硅光技术对于光学互联和光计算中是至关重要的。片上波分复用技术使我们可以在一个物理通道上同时调制和探测多个信号。作为片上波分复用系统中很理想的器件，微环调制器提供了一个超紧凑的器件尺寸，低能耗，并且可以通过简单改变微环的半径实现波长的（解）复用。通过把多个微环谐振腔（具有轻微不同的半径）和一个总线波导进行耦合，可以在不同波长上同时进行电光调制，从而最大化光子集成回路的带宽密度。</p>
-<p>采用基于反向PN结的微环调制器阵列的不同片上波分复用系统，已经被演示其具有大规模集成能力和聚合带宽的能力。然而微环调制器的电光调制效率被<strong>较弱的硅基等离子体色散效</strong>应以及<strong>较低的电容密度</strong>所限制【参见<a href="/download/Theoretical_Analysis_of_Energy_Efficiency_and_Bandwidth_Limit_of_Silicon_Photonic_Modulators.pdf" download>Ref</a>】。</p>
-<p>为了解决这种本质上的缺陷，通过金属氧化物半导体电容器（MOSCAP）设计的硅光器件，结合薄绝缘层，例如氧化铪（HfO2），能够提高更好的电光效率。此外，MOSCAP器件允许与其他的半导体（如III-V族化合物，透明导电氧化物TCO，和石墨烯）结合，能够提供<mark>更大的折射率调制</mark>。之前采用MOCSCAP栅极控制的微环调制器已经演示了电光调制性能上的提高，然而，这些报告只包括了单独的硅基MRM器件，没有回答大规模异质集成工艺挑战下集成扩展的不确定性。</p>
-]]></content>
-      <tags>
-        <tag>光互连</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>驱动电压为0.8V的高速硅基MOSCAP微环调制器</title>
     <url>/2024/08/13/%E9%A9%B1%E5%8A%A8%E7%94%B5%E5%8E%8B%E4%B8%BA0-8V%E7%9A%84%E9%AB%98%E9%80%9F%E7%A1%85%E5%9F%BAMOSCAP%E5%BE%AE%E7%8E%AF%E8%B0%83%E5%88%B6%E5%99%A8/</url>
     <content><![CDATA[<p>REF：<a href="/download/Hsu 等 - 2024 - Sub-volt high-speed silicon MOSCAP microring modul.pdf" download>驱动电压为0.8V的高速硅基MOSCAP微环调制器</a></p>
@@ -822,23 +807,15 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
       </tags>
   </entry>
   <entry>
-    <title>高性能锗雪崩光电探测器-用于100Gbit/s的光学接收机</title>
-    <url>/2024/08/20/%E9%AB%98%E6%80%A7%E8%83%BD%E9%94%97%E9%9B%AA%E5%B4%A9%E5%85%89%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8-%E7%94%A8%E4%BA%8E100Gbits%E7%9A%84%E5%85%89%E5%AD%A6%E6%8E%A5%E6%94%B6%E6%9C%BA/</url>
-    <content><![CDATA[<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
-<p>本文报告了一种高比特率低偏置电压的波导垂直锗硅雪崩光电探测器（avalanche photodetector，APD）。通过优化掺杂工艺，这种设计减少了对复杂单晶硅层外延和多次离子注入的需求。光吸收和载流子的雪崩倍增都发生在锗层中。<br />
-在输入光的功率为为-30.2 dBm的情况下，预计光探测器的最大增益为112.4。当输入光的功率为-16.1 dBm的情况下，偏置电压为7.8V时，增益带宽积大约为141 GHz。<br />
-同时，在接收60 Gbit/s的信号时，探测器在软判决前向纠错（SD-FEC）阈值（误码率BER &lt; 2×10-2）表现出4.6倍的灵敏度提升，雪崩增益为5.1。<br />
-在SD-FDC的阈值下，40，60，80和100 Gbit/s非归零码（NRZ）信号光电接收机的绝对灵敏度分别为-21，-18.6，-15.9和-11.5 dBm。<br />
-这些特性表明，这种探测器可以赋能可靠稳定的片上光探测，在未来用于高能效硅光互连。</p>
-<h2 id="背景介绍"><a class="markdownIt-Anchor" href="#背景介绍"></a> 背景介绍</h2>
-<p>硅光芯片和微电子技术的集成可以赋能多样的片上系统（SOC）应用，包括通信、计算、成像和传感等。通过利用CMOS工艺的强大能力，硅光可以满足这些应用的灵敏度，能效和成本需求。雪崩光电探测器（APD）可以被集成在硅基晶体管上，并且可以被视作硅光上的关键器件模型。<br />
-理想的APD应该具备较高的雪崩增益，较低的暗电流，较小的偏置电压，并且能探测高速光学信号(大于100Gbpt/s)。APD同样需要和其他硅光模块兼容，能通过商业硅光公司实现低成本的加工。<br />
-至今为止，基于锗硅（Ge-Si）的APD方案主要包括金属-半导体-金属（MSM）结构，分立的吸收-充电-倍增（SACM）结构，和pin结构。<br />
-基于MSM结构的Ge-APD在较低的偏置电压（3V）下具有较高的雪崩增益，并且和半导体晶体管工艺兼容。然而，MSM方案有如下缺点：雪崩增益受限，暗电流较大，接收器灵敏度下降。<br />
-基于SACM结构的Ge-APDs由于把载流子倍增的过程限制在本征硅总，器件具有较低的倍增噪声和出色的增益带宽积（GBP，gain-bandwidth product）。近年来，通过采用三电极或侧壁硅接触结构，可以将最低偏压降至约6V。基于SACM的器件需要外延生长单晶硅来进行电场控制（charge-layer），倍增区域的控制形成以及多次离子注入。<br />
-对于基于同质PIN的Ge-APD，光学吸收和载流子倍增将在同一个Ge区域发生。此方案在GPB，暗电流，偏置电压和CMOS兼容性之间达到了较好的平衡。这减少了复杂的外延单晶硅层生长和多次离子注入的依赖性，对实现低成本硅光集成片上光互连很有帮助。<br />
-至今为止，实验验证的垂直和水平Ge-APD架构均能够改善接收机的灵敏度，但数据速率仍受到限制（目前为64 Gbit/s）。电场在Ge区域中非均匀的分布和对Si层的刻蚀可能会导致较大的暗电流，从而相应的降低增益和灵敏度。<br />
-本文基于标准硅光平台的工艺，设计并加工了高性能Ge-APD和垂直PIN结构。本文首次通过优化掺杂的方式减少了本征Ge的区域，实现了100 Gbit/s 非归零码（NRZ）的传输，在软判决前向纠错（SD-FEC）阈值（误码率为2e-2）下灵敏度为-11.5 dBm。这使得Ge-APD是一个实现高性能低成本硅光集成回路的重要器件。</p>
+    <title>异质集成的硅-导电氧化物MOSCAP微环调制器阵列-Intel</title>
+    <url>/2024/08/13/%E5%BC%82%E8%B4%A8%E9%9B%86%E6%88%90%E7%9A%84%E7%A1%85-%E5%AF%BC%E7%94%B5%E6%B0%A7%E5%8C%96%E7%89%A9MOSCAP%E5%BE%AE%E7%8E%AF%E8%B0%83%E5%88%B6%E5%99%A8%E9%98%B5%E5%88%97/</url>
+    <content><![CDATA[<p><a href="/download/Heterogeneously integrated silicon.pdf" download>异质集成的硅 - 导电氧化物 MOSCAP 微环调制器阵列</a></p>
+<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
+<p>为了实现高能效的光学互联，硅基微环调制器（Si - MRM）具有超紧凑尺寸和片上波分复用的能力（WDM）。本文展示了一个1×4的金属氧化物半导体电容器硅基微环调制器，通过具有高迁移率的钛掺杂氧化铟（ITiO）作为栅极进行控制。该器件通过Intel大规模制造工艺，以及后续大学里的透明导电氧化物（TCO）图案化工艺进行加工。1×4的硅基MRM阵列展示出了较高的电光效率，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>π</mi></msub><mo separator="true">⋅</mo><mi>L</mi><mo>=</mo><mn>0.12</mn><mi>V</mi><mo separator="true">⋅</mo><mi>c</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">V_{\pi} · L=0.12 V · cm</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">1</span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">m</span></span></span></span>，调制效率为（3×25 + 1×15）Gb/s，测试带宽为14 GHz。此外，其可以在四个等间距波长上实现片上波分复用的调制，不需要额外的加热器。硅光子技术和TCO材料之间的工艺兼容性得到了验证，并且性能可以通过异质集成得到提升。</p>
+<h2 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h2>
+<p>随着数据流量成指数级的增长，对节能并且可扩展的片上光通信系统的需求越来越迫切。硅光技术对于光学互联和光计算中是至关重要的。片上波分复用技术使我们可以在一个物理通道上同时调制和探测多个信号。作为片上波分复用系统中很理想的器件，微环调制器提供了一个超紧凑的器件尺寸，低能耗，并且可以通过简单改变微环的半径实现波长的（解）复用。通过把多个微环谐振腔（具有轻微不同的半径）和一个总线波导进行耦合，可以在不同波长上同时进行电光调制，从而最大化光子集成回路的带宽密度。</p>
+<p>采用基于反向PN结的微环调制器阵列的不同片上波分复用系统，已经被演示其具有大规模集成能力和聚合带宽的能力。然而微环调制器的电光调制效率被<strong>较弱的硅基等离子体色散效</strong>应以及<strong>较低的电容密度</strong>所限制【参见<a href="/download/Theoretical_Analysis_of_Energy_Efficiency_and_Bandwidth_Limit_of_Silicon_Photonic_Modulators.pdf" download>Ref</a>】。</p>
+<p>为了解决这种本质上的缺陷，通过金属氧化物半导体电容器（MOSCAP）设计的硅光器件，结合薄绝缘层，例如氧化铪（HfO2），能够提高更好的电光效率。此外，MOSCAP器件允许与其他的半导体（如III-V族化合物，透明导电氧化物TCO，和石墨烯）结合，能够提供<mark>更大的折射率调制</mark>。之前采用MOCSCAP栅极控制的微环调制器已经演示了电光调制性能上的提高，然而，这些报告只包括了单独的硅基MRM器件，没有回答大规模异质集成工艺挑战下集成扩展的不确定性。</p>
 ]]></content>
       <tags>
         <tag>光互连</tag>
@@ -872,35 +849,23 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
       </tags>
   </entry>
   <entry>
-    <title>45nm CMOS集成256Gb/s光电单片集成收发器-祁楠</title>
-    <url>/2024/08/23/45nmCMOS%E9%9B%86%E6%88%90256Gb-s%E5%85%89%E7%94%B5%E5%8D%95%E7%89%87%E9%9B%86%E6%88%90%E6%94%B6%E5%8F%91%E5%99%A8/</url>
-    <content><![CDATA[<p>随着人工智能（AI）、机器学习（ML）和高性能计算（HPC）的迅猛发展，数据传输量的不断增加要求高密度互连具有更高的带宽（BW）、更低的功耗和更低的延迟[1−3]。光学输入/输出（I/O）利用硅光子技术（SiPh）实现高密度大规模集成光子学。通过这种方式，微型光学收发器可以集成到xPU封装中，并直接连接到芯片边缘的光纤。光学I/O将电气芯片间连接扩展到数十米，从而扩展了具有高能效的高度并行计算系统。<br />
-以前，光子学和电子学是在不同的工艺下制造，并在单独的芯片中实现，然后通过封装（2D、2.5D或3D）进行集成[4, 5]。然而，电静电放电（ESD）保护电路和引脚垫不可避免地引入了与主要光子器件相当的电容，这会影响信号完整性并消耗大量功耗。此外，有限的引线或焊球数量无法支持大规模高密度的芯片集成。<br />
-在此，我们提出了一种单片集成的4λ × 64 Gb/s硅光子（SiPh）收发器，采用单一的45 nm SOI-CMOS电子-光子集成芯片（EPIC）[6, 7]。通过将所有光电探测器（PD）、基于微环谐振器（MRR）的调制器和滤波器，以及共设计的CMOS驱动器、跨阻放大器（TIA）和波长热控单元（TCU）集成在一起，演示了极高的带宽密度和功率效率，并借助外部激光源进行测试。实验结果表明，所提出的EPIC在光学发射器（TX）和接收器（RX）中分别消耗了仅1.6和1.25 pJ/bit。O波段的波长分复用（WDM）聚合了256 Gb/s的总数据速率，并且实现了低于10⁻¹²的比特错误率（BER）。<br />
-图1展示了EPIC的显微图和单片集成光学收发器的细节。主要内容包括：<br />
-光子组件:微环谐振器（MRR） 基于调制器（MRM）和滤波器，半径约为7.5 μm。<br />
-集成的温控单元（TCU） 用于调节共振波长。</p>
-<p><img src="/pictures/image-20240823163032792.png" alt="image-20240823163032792" /></p>
-<p>单通道发射系统:连续时间线性均衡器（CTLE）: 提供高达10 dB的均衡，工作频率为25 GHz，用于补偿PCB上的通道损耗。<br />
-双级可变增益放大器（VGA）: 提供15 dB的可调范围，以覆盖更大的输入动态范围。<br />
-双轨输出前驱动器: 生成在不同电压域（0-1 V和1-2 V）下工作的双路径。通过以堆叠推挽的方式驱动最终级，输出电压摆幅增加到2.5 Vppd。<br />
-差分输出: 通过适当的DC偏置耦合到MRM，用于耗尽模式操作。为了提高驱动电容型MRM时的线性度，采用500 Ω电阻反向终端，以最小化调制MRM电容的阻抗波动。<br />
-光学接收器:使用四个MRR滤波器级联在总线波导上，每个MRR选择相应波长的信号。<br />
-在每个MRR的下游端口，Ge-Si光电探测器将高速光功率转换为光电流，然后在跨阻放大器（TIA）中放大。<br />
-信号差分（S2D）转换器: 提供差分输出，以抑制共模噪声。<br />
-DC偏移消除环路（DCOL）: 在输入节点实现，以消除由输入平均光功率变化引起的DC漂移。<br />
-多级源退化均衡: 在VGA和最后驱动级中使用，以补偿由MRR带宽限制引起的符号间干扰（ISI），提供高达8.5 dB的均衡能力。<br />
-封装面积:<br />
-发射器（TX）的面积为870 × 1500 μm²。<br />
-接收器（RX）的面积为640 × 1500 μm²。<br />
-这些设计元素共同实现了高密度、高性能的光电集成系统，有效地支持了256 Gb/s的高速数据传输。<br />
-图2 展示了发射器（TX）的光学响应，测得的消光比（ER）超过15 dB，自由光谱范围（FSR）为9.2 nm。接收器（RX）的FSR为9.2 nm，ER大于8 dB。</p>
-<p><img src="/pictures/image-20240823163054891.png" alt="image-20240823163054891" /></p>
-<p>为了展示高速度性能，使用任意波形发生器（AWG）将差分信号输入到收发器链路中。然后收集输出信号并使用数字通信分析仪（DCA）生成眼图。图3 显示了TX的64 Gb/s非归零（NRZ）传输眼图，得到了一个开眼图，调制ER约为7 dB。图3中还显示了在输入光功率OMA为–5 dBm的条件下，RX的64 Gb/s NRZ眼图。跨阻放大器（TIA）的输出电压摆幅为38 mV，抖动为1.2 ps。</p>
-<p><img src="/pictures/image-20240823163111768.png" alt="image-20240823163111768" /></p>
-<p>需要注意的是，5级前馈均衡（FFE）被应用于补偿TX输入和RX输出的PCB走线和连接器损耗（在40 GHz下约5 dB），这些损耗在xPU封装中通常要小得多，并会由xPU SERDES在实际应用中提供。使用波长分复用（WDM）技术，4通道阵列在发射器和接收器中实现了256 Gb/s的总数据速率（比特错误率BER &lt; 10⁻¹²），能效分别为1.6和1.25 pJ/bit。</p>
-<p>表1 展示了与其他最新技术报告的性能比较[9−13]。我们的工作实现了更高的通道数据速率、更低的功耗和更高的调制ER。总结来说，我们报告了一种单片O波段4λ × 64 Gb/s光学收发器，能够实现高达256 Gb/s的总带宽用于光学I/O。实验结果表明，完整的发射器（TX）和接收器（RX）功耗为2.85 pJ/bit，达到10⁻¹²的前向纠错（FEC）比特错误率（BER）。除了这项工作外，我们还成功实现了基于Mach-Zehnder调制器的单片集成EPIC收发器，用于以太网共同封装光学（CPO），相关研究将于不久后公布。</p>
-<p><img src="/pictures/image-20240823163204020.png" alt="image-20240823163204020" /></p>
+    <title>高性能锗雪崩光电探测器-用于100Gbit/s的光学接收机</title>
+    <url>/2024/08/20/%E9%AB%98%E6%80%A7%E8%83%BD%E9%94%97%E9%9B%AA%E5%B4%A9%E5%85%89%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8-%E7%94%A8%E4%BA%8E100Gbits%E7%9A%84%E5%85%89%E5%AD%A6%E6%8E%A5%E6%94%B6%E6%9C%BA/</url>
+    <content><![CDATA[<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
+<p>本文报告了一种高比特率低偏置电压的波导垂直锗硅雪崩光电探测器（avalanche photodetector，APD）。通过优化掺杂工艺，这种设计减少了对复杂单晶硅层外延和多次离子注入的需求。光吸收和载流子的雪崩倍增都发生在锗层中。<br />
+在输入光的功率为为-30.2 dBm的情况下，预计光探测器的最大增益为112.4。当输入光的功率为-16.1 dBm的情况下，偏置电压为7.8V时，增益带宽积大约为141 GHz。<br />
+同时，在接收60 Gbit/s的信号时，探测器在软判决前向纠错（SD-FEC）阈值（误码率BER &lt; 2×10-2）表现出4.6倍的灵敏度提升，雪崩增益为5.1。<br />
+在SD-FDC的阈值下，40，60，80和100 Gbit/s非归零码（NRZ）信号光电接收机的绝对灵敏度分别为-21，-18.6，-15.9和-11.5 dBm。<br />
+这些特性表明，这种探测器可以赋能可靠稳定的片上光探测，在未来用于高能效硅光互连。</p>
+<h2 id="背景介绍"><a class="markdownIt-Anchor" href="#背景介绍"></a> 背景介绍</h2>
+<p>硅光芯片和微电子技术的集成可以赋能多样的片上系统（SOC）应用，包括通信、计算、成像和传感等。通过利用CMOS工艺的强大能力，硅光可以满足这些应用的灵敏度，能效和成本需求。雪崩光电探测器（APD）可以被集成在硅基晶体管上，并且可以被视作硅光上的关键器件模型。<br />
+理想的APD应该具备较高的雪崩增益，较低的暗电流，较小的偏置电压，并且能探测高速光学信号(大于100Gbpt/s)。APD同样需要和其他硅光模块兼容，能通过商业硅光公司实现低成本的加工。<br />
+至今为止，基于锗硅（Ge-Si）的APD方案主要包括金属-半导体-金属（MSM）结构，分立的吸收-充电-倍增（SACM）结构，和pin结构。<br />
+基于MSM结构的Ge-APD在较低的偏置电压（3V）下具有较高的雪崩增益，并且和半导体晶体管工艺兼容。然而，MSM方案有如下缺点：雪崩增益受限，暗电流较大，接收器灵敏度下降。<br />
+基于SACM结构的Ge-APDs由于把载流子倍增的过程限制在本征硅总，器件具有较低的倍增噪声和出色的增益带宽积（GBP，gain-bandwidth product）。近年来，通过采用三电极或侧壁硅接触结构，可以将最低偏压降至约6V。基于SACM的器件需要外延生长单晶硅来进行电场控制（charge-layer），倍增区域的控制形成以及多次离子注入。<br />
+对于基于同质PIN的Ge-APD，光学吸收和载流子倍增将在同一个Ge区域发生。此方案在GPB，暗电流，偏置电压和CMOS兼容性之间达到了较好的平衡。这减少了复杂的外延单晶硅层生长和多次离子注入的依赖性，对实现低成本硅光集成片上光互连很有帮助。<br />
+至今为止，实验验证的垂直和水平Ge-APD架构均能够改善接收机的灵敏度，但数据速率仍受到限制（目前为64 Gbit/s）。电场在Ge区域中非均匀的分布和对Si层的刻蚀可能会导致较大的暗电流，从而相应的降低增益和灵敏度。<br />
+本文基于标准硅光平台的工艺，设计并加工了高性能Ge-APD和垂直PIN结构。本文首次通过优化掺杂的方式减少了本征Ge的区域，实现了100 Gbit/s 非归零码（NRZ）的传输，在软判决前向纠错（SD-FEC）阈值（误码率为2e-2）下灵敏度为-11.5 dBm。这使得Ge-APD是一个实现高性能低成本硅光集成回路的重要器件。</p>
 ]]></content>
       <tags>
         <tag>光互连</tag>
@@ -1005,6 +970,82 @@ DC偏移消除环路（DCOL）: 在输入节点实现，以消除由输入平均
 </li>
 </ul>
 <p><img src="/pictures/image-20240823165912605.png" alt="image-20240823165912605" /></p>
+]]></content>
+      <tags>
+        <tag>光互连</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>45nm CMOS集成256Gb/s光电单片集成收发器-祁楠</title>
+    <url>/2024/08/23/45nmCMOS%E9%9B%86%E6%88%90256Gb-s%E5%85%89%E7%94%B5%E5%8D%95%E7%89%87%E9%9B%86%E6%88%90%E6%94%B6%E5%8F%91%E5%99%A8/</url>
+    <content><![CDATA[<p>随着人工智能（AI）、机器学习（ML）和高性能计算（HPC）的迅猛发展，数据传输量的不断增加要求高密度互连具有更高的带宽（BW）、更低的功耗和更低的延迟[1−3]。光学输入/输出（I/O）利用硅光子技术（SiPh）实现高密度大规模集成光子学。通过这种方式，微型光学收发器可以集成到xPU封装中，并直接连接到芯片边缘的光纤。光学I/O将电气芯片间连接扩展到数十米，从而扩展了具有高能效的高度并行计算系统。<br />
+以前，光子学和电子学是在不同的工艺下制造，并在单独的芯片中实现，然后通过封装（2D、2.5D或3D）进行集成[4, 5]。然而，电静电放电（ESD）保护电路和引脚垫不可避免地引入了与主要光子器件相当的电容，这会影响信号完整性并消耗大量功耗。此外，有限的引线或焊球数量无法支持大规模高密度的芯片集成。<br />
+在此，我们提出了一种单片集成的4λ × 64 Gb/s硅光子（SiPh）收发器，采用单一的45 nm SOI-CMOS电子-光子集成芯片（EPIC）[6, 7]。通过将所有光电探测器（PD）、基于微环谐振器（MRR）的调制器和滤波器，以及共设计的CMOS驱动器、跨阻放大器（TIA）和波长热控单元（TCU）集成在一起，演示了极高的带宽密度和功率效率，并借助外部激光源进行测试。实验结果表明，所提出的EPIC在光学发射器（TX）和接收器（RX）中分别消耗了仅1.6和1.25 pJ/bit。O波段的波长分复用（WDM）聚合了256 Gb/s的总数据速率，并且实现了低于10⁻¹²的比特错误率（BER）。<br />
+图1展示了EPIC的显微图和单片集成光学收发器的细节。主要内容包括：<br />
+光子组件:微环谐振器（MRR） 基于调制器（MRM）和滤波器，半径约为7.5 μm。<br />
+集成的温控单元（TCU） 用于调节共振波长。</p>
+<p><img src="/pictures/image-20240823163032792.png" alt="image-20240823163032792" /></p>
+<p>单通道发射系统:连续时间线性均衡器（CTLE）: 提供高达10 dB的均衡，工作频率为25 GHz，用于补偿PCB上的通道损耗。<br />
+双级可变增益放大器（VGA）: 提供15 dB的可调范围，以覆盖更大的输入动态范围。<br />
+双轨输出前驱动器: 生成在不同电压域（0-1 V和1-2 V）下工作的双路径。通过以堆叠推挽的方式驱动最终级，输出电压摆幅增加到2.5 Vppd。<br />
+差分输出: 通过适当的DC偏置耦合到MRM，用于耗尽模式操作。为了提高驱动电容型MRM时的线性度，采用500 Ω电阻反向终端，以最小化调制MRM电容的阻抗波动。<br />
+光学接收器:使用四个MRR滤波器级联在总线波导上，每个MRR选择相应波长的信号。<br />
+在每个MRR的下游端口，Ge-Si光电探测器将高速光功率转换为光电流，然后在跨阻放大器（TIA）中放大。<br />
+信号差分（S2D）转换器: 提供差分输出，以抑制共模噪声。<br />
+DC偏移消除环路（DCOL）: 在输入节点实现，以消除由输入平均光功率变化引起的DC漂移。<br />
+多级源退化均衡: 在VGA和最后驱动级中使用，以补偿由MRR带宽限制引起的符号间干扰（ISI），提供高达8.5 dB的均衡能力。<br />
+封装面积:<br />
+发射器（TX）的面积为870 × 1500 μm²。<br />
+接收器（RX）的面积为640 × 1500 μm²。<br />
+这些设计元素共同实现了高密度、高性能的光电集成系统，有效地支持了256 Gb/s的高速数据传输。<br />
+图2 展示了发射器（TX）的光学响应，测得的消光比（ER）超过15 dB，自由光谱范围（FSR）为9.2 nm。接收器（RX）的FSR为9.2 nm，ER大于8 dB。</p>
+<p><img src="/pictures/image-20240823163054891.png" alt="image-20240823163054891" /></p>
+<p>为了展示高速度性能，使用任意波形发生器（AWG）将差分信号输入到收发器链路中。然后收集输出信号并使用数字通信分析仪（DCA）生成眼图。图3 显示了TX的64 Gb/s非归零（NRZ）传输眼图，得到了一个开眼图，调制ER约为7 dB。图3中还显示了在输入光功率OMA为–5 dBm的条件下，RX的64 Gb/s NRZ眼图。跨阻放大器（TIA）的输出电压摆幅为38 mV，抖动为1.2 ps。</p>
+<p><img src="/pictures/image-20240823163111768.png" alt="image-20240823163111768" /></p>
+<p>需要注意的是，5级前馈均衡（FFE）被应用于补偿TX输入和RX输出的PCB走线和连接器损耗（在40 GHz下约5 dB），这些损耗在xPU封装中通常要小得多，并会由xPU SERDES在实际应用中提供。使用波长分复用（WDM）技术，4通道阵列在发射器和接收器中实现了256 Gb/s的总数据速率（比特错误率BER &lt; 10⁻¹²），能效分别为1.6和1.25 pJ/bit。</p>
+<p>表1 展示了与其他最新技术报告的性能比较[9−13]。我们的工作实现了更高的通道数据速率、更低的功耗和更高的调制ER。总结来说，我们报告了一种单片O波段4λ × 64 Gb/s光学收发器，能够实现高达256 Gb/s的总带宽用于光学I/O。实验结果表明，完整的发射器（TX）和接收器（RX）功耗为2.85 pJ/bit，达到10⁻¹²的前向纠错（FEC）比特错误率（BER）。除了这项工作外，我们还成功实现了基于Mach-Zehnder调制器的单片集成EPIC收发器，用于以太网共同封装光学（CPO），相关研究将于不久后公布。</p>
+<p><img src="/pictures/image-20240823163204020.png" alt="image-20240823163204020" /></p>
+]]></content>
+      <tags>
+        <tag>光互连</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高Q值慢光及其在光子晶体微环中的局域化</title>
+    <url>/2024/08/27/%E9%AB%98Q%E5%80%BC%E6%85%A2%E5%85%89%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%85%89%E5%AD%90%E6%99%B6%E4%BD%93%E5%BE%AE%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%B1%80%E5%9F%9F%E5%8C%96/</url>
+    <content><![CDATA[<p>参考文献：<a href="/download/Lu 等 - 2022 - High-Q slow light and its localization in a photon.pdf" download>高Q值慢光及其在光子晶体微环中的局域化</a> 2022.</p>
+<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
+<p>我们介绍了一种光子晶体环形谐振腔，它类似于内部齿轮，将光子晶体（PhC）和回音壁模式（WGM）的概念结合在一起。这种“微齿轮”光子晶体环（MPhCR）是通过对微环谐振腔的内边界进行周期性调制而形成的，打开了一个大的带隙，就像在PhC腔体中一样，同时保持了环的圆对称外边界和高光学品质因子（Q），如同在WGM腔体中一样。MPhCR以特定的WGM为目标，打开一个宽达几十个自由光谱范围的大的PhC带隙，压缩模式谱，同时保持WGM模式的高Q值、角动量和波导耦合特性。特别是在介质带边附近，我们观察到模式的群速度相对于传统微环模式降低了10倍，同时支持Q值为(1.1 ± 0.1) × 10^6。这个Q值大约是先前慢光设备记录的50倍。以慢光设计为起点，我们进一步展示了将WGM局域化到光子晶体缺陷模式的能力，使模式体积相比于传统WGM减少了超过10倍，同时保持高达(5.6 ± 0.1) × 10^5的高Q值。重要的是，这种额外的光子晶体缺陷局域化可以在不需要详细电磁设计的情况下实现。此外，由于MPhCR继承了WGM的特性，控制其共振频率和波导耦合变得简单。在利用PhC强烈改变WGM的基本特性（如群速度和局域化）的过程中，MPhCR为广泛的光子学应用提供了一个令人兴奋的平台，包括传感/计量学、非线性光学和腔量子电动力学。</p>
+<h2 id="背景介绍"><a class="markdownIt-Anchor" href="#背景介绍"></a> 背景介绍</h2>
+<p>芯片集成的光学微/纳米腔已经在光学科学领域取得了许多突破。这些器件在适合集成和部署的平台上，时空增强了光与物质的相互作用，并被确立为量子光学、非线性光子学、光机械学和传感等领域的基础元素。空间约束的度量标准是模式体积（V），而与时间增强相关的度量标准是光学品质因子（Q）。虽然已经研究了许多腔体几何结构，但它们大多可以归为两类：回音壁模式（WGM）腔体，它们基于设备外围的全内反射；以及光子晶体（PhC）腔体，它们基于在一维或二维光子晶格中局域化缺陷。在前一类中，只要设备的半径足够大且侧壁光滑，就自然可以在宽波长范围内实现多个高Q值的WGM，而无需特定的器件几何结构设计。相比之下，在PhC腔体中，多模式操作和高Q值共振需要对器件几何结构进行精心和具体的设计，并且在纳米制造过程中必须保持一定的图案精度。WGM腔体的另一个优势是通过倏逝场相互作用实现波导耦合的相对容易性。这两个优势使WGM腔体成为宽带非线性光学的主要平台，包括克尔频率梳、光频率转换和其他非线性波混合效应。然而，WGM腔体无法与PhC缺陷腔体提供的更强的空间约束相媲美，后者的V值通常小10到100倍。PhC缺陷腔体可以具有亚立方波长的V值，特别适用于腔体量子电动力学（QED）和腔体光机械学中的单模应用。<br />
+鉴于WGM和光子晶体（PhC）缺陷腔体各自的优点，将这两种几何结构结合起来以利用两者的最佳特点是非常理想的。实际上，这一愿望已在各种腔体几何结构中得到追求（见扩展数据表1）。例如，一种研究中的几何结构在二维光子晶体中创建了多边形的“盘”形或“环”形线缺陷，即光子晶体“盘/环”谐振器（PCDRs/PCRRs）9–11。进一步的开创性工作在传统的环形谐振器中进行，称为光子晶体环（PhCRs）12，其中在微环中引入了刻蚀的空气孔，重点在于生成慢光模式12–16。在这些PhCRs中，尽管光的群速度被减慢以增强光-物质相互作用，但Q值与最先进的微环相比显著下降，这抵消了使用慢光的最初好处。<br />
+其他研究在微环侧壁上加入了小幅度的光栅，以控制选定腔体模式的频率17，并用于单模激光18和自发脉冲生成19，但这些研究没有考虑光子晶体引起的慢光或局部化效应。类似的光栅概念也被应用于回音壁谐振器，在许多不同的背景下进行研究，包括生成轨道角动量光束20和探索微激光器中的对称时间概念21，但一般来说，这些研究并未专注于通过缺陷引入实现高Q因子或强模式局部化。<br />
+在这项工作中，我们以一种新颖的方式将WGM和光子晶体（PhC）缺陷腔体的特点结合起来，这种方式保留了WGM腔体实现高Q因子和简便波导耦合的优势，同时保持了对光的传播和局部化的强控制能力，与PhC缺陷腔体相关联。我们的设备，即MPhCR，是一种微环腔体，其中对其内边界进行精心选择的周期性调制（类似于内部齿轮的形状）在角动量空间的目标位置打开了一个大的带隙。在这个平台上，我们展示了具有高Q值（1.1 ± 0.1）× 10⁶的慢光模式，并且群速度减慢比（SR）12,22值约为10。我们进一步展示了基于慢光模式在带边缘局部化的PhC缺陷模式。这些局部化的缺陷模式具有类似的高Q值，最高可达（5.6 ± 0.1）× 10⁵，并支持直观的频率工程和波导耦合，类似于传统的WGM。通过将WGM和PhC概念以保持各自优势的方式结合，MPhCR成为微腔物理学和应用的突破性平台。</p>
+<h2 id="mphcr设计的介绍"><a class="markdownIt-Anchor" href="#mphcr设计的介绍"></a> MPhCR设计的介绍</h2>
+<p>图1a和1b展示了MPhCR的示意图，其中第一个面板展示了慢光设备，第二个面板展示了具有光子晶体缺陷（dPhC）的设备。这两个设备都具有与传统微环相同的圆形外边界，支持具有离散角动量（由方位模数m描述）和频率（ω）的高Q值WGM。慢光设备的内边界具有大幅度的周期性调制，如图1a所示，这在带边缘及其附近创建了宽的光子带隙，支持慢光模式。dPhC设备基于慢光设备的设计，在周期性调制中引入了一个局部化的缺陷（此处缺陷位于中心，靠近耦合波导），如图1b所示。</p>
+<p><img src="/pictures/image-20240827091202436.png" alt="image-20240827091202436" /></p>
+<blockquote>
+<p><strong>图1 | MPhCR，高Q值慢光光子晶体微环。</strong><br />
+a,b, MPhCR的示意图，分别用于慢光（a）和光子晶体缺陷（dPhC）（b）腔体。c, MPhCR中的三种对称性：CW和CCW传播模式的镜像对称性（S）；仅允许具有离散角动量（m）和能量（ω）的模式的旋转对称性（R）；以及来自PhC结构的方位方向的周期性平移对称性（P），它将具有特定方位动量（即± m0）的CW和CCW模式耦合在一起。d, 由这三种对称性创建的带结构图。空气带被推向光锥（灰色），而介电带则被很好地保持。在慢光设备中，模式通过实线连接，其中s0和a0是带边缘模式。在dPhC设备中，s0移动到g，如虚线所示，而其他模式保持固定频率。e, 标记模式的主要电场分量的定性示意图（例如，横电模式的径向电场分量Er），红色和蓝色显示对立的相位，暗度与幅度成正比。慢光和dPhC模式的模式轮廓通过完整的数值电磁仿真显示在扩展数据图1和图2中。</p>
+</blockquote>
+<p>MPhCR设备具有三种对称性，如图1c所示：</p>
+<ul>
+<li><strong>S</strong> 代表镜像对称性，即顺时针（CW）和逆时针（CCW）传播光的对称性；</li>
+<li><strong>P</strong> 代表由周期性（在方位方向上）PhC调制产生的角动量变化，即模式从CCW到CW的转变（红色箭头）或从CW到CCW的转变（蓝色箭头）；</li>
+<li><strong>R</strong> 代表由于圆形边界条件而产生的旋转对称性，这导致了WGMs的量子化/整数角动量（m）和离散的共振频率（ωm）。</li>
+</ul>
+<p>如图1a所示，施加大幅度的内部侧壁调制会在图1d中m = ±m0处产生大的光子带隙，其中PhC调制周期为πR/m0（即环形周长内适配2m0个周期）。在MPhCR中，两个传播模式（m = ±m0）被重标定为两个驻波模式，标记为a0（空气带边缘模式）和s0（介电带边缘模式）。在带边缘的两侧，四个模式（m = ±(m0 ± 1)）被混合成四个新模式，其中两个在空气带中简并（a1），两个在介电带中简并（s1），其中s1可以看作是与s0具有相同空间轮廓但附加了cos(φ)调制（φ是方位角）。s2的特性类似，只是模式轮廓相对于s0附加了cos(2φ)的调制。我们注意到，由PhC调制引起的频率偏移导致高频空气带模式开始接触光锥（灰色阴影区域）。从慢光设备开始，通过局部扰动调制幅度可以制作dPhC设备。dPhC模式（g）是s0模式的局部化，具有较高的共振频率，依赖于缺陷的详细参数，如图1d中的虚线所示，而其他所有模式保持不变。图1e以定性方式展示了这些光学模式的代表性轮廓。为了说明目的，这里展示了方位模数m = 8，这大约是我们实际设备中使用的20倍。实际几何形状的模式的完整数值仿真见于方法部分和扩展数据图1和图2。<br />
+图2a、b显示了在化学计量硅氮化物（Si3N4）中制造的MPhCR的扫描电子显微镜（SEM）图像。图2a展示了一个环半径（Rout）为25 μm，厚度为500 nm，标称平均环宽（RW）为1,250 nm，调制幅度（A）为1,150 nm的MPhCR。图2b的扩展SEM图像展示了慢光MPhCR的结构细节，包括较大的A，使得环宽在最窄部分仅为100 nm，形状类似于以前研究的‘鳄鱼’光子晶体波导。该设备完全通过Si3N4层进行刻蚀，具有平滑的调制轮廓和侧壁。调制周期（一单元长度）约为485 nm，对应于周长上的162 × 2单元。有关制造细节，请参见方法部分。</p>
+<h2 id="mphcr中的慢光效应"><a class="markdownIt-Anchor" href="#mphcr中的慢光效应"></a> MPhCR中的慢光效应</h2>
+<p>通过增加光–物质相互作用的时间，可以增强这些相互作用。通常，这通过增加光子存储时间（即提高Q值）来实现，例如，通过使用光学微腔。此外，另一种方法是通过降低光的群速度，也就是利用慢光效应，例如，基于光子带边附近的波导模式。尽管这两种方法分别被广泛研究，但也存在它们可以协同工作的情况，即在保持高Q值的同时减慢光的群速度。我们强调，在光子晶体微环中，减慢因子应已包含在Q中。换句话说，慢光设备可能具有比对照设备更高的光学Q值，并在应用中提供额外的好处。虽然有证据支持在Q &lt;5,000的范围内使用慢光来增强Q值，但所有这些研究的Q值比通常在高Q微腔中达到的1,000,000低两个数量级，这抵消了使用慢光效应的好处。例如，在对光子晶体微环的开创性研究中，实现了Q = 2,000和SR = 4。最近，有研究报告了改进的性能，其中Q = 12,100和SR = 8。详细信息请参见扩展数据表1。<br />
+我们在开发MPhCR的首要目标是实现具有高Q值的慢光模式，这些Q值与WGMs相当。与之前在微环中采用空气孔的几何结构相比，MPhCR似乎更有利于减少散射损耗。我们通过图2中的光谱测量确认了这一点，其中Q和SR分别从线宽和自由光谱范围（FSR）值中提取（详见方法部分）。特别地，由于FSR与谐振腔模式群体指数成反比，相对于传统的微环模式，FSR的减小表明群体指数相应增加（从而群体速度降低）。与早期的研究相同，我们将SR作为旅行波模式和驻波模式的评价指标（这两种模式在传统高Q WGMs中常见且没有慢光效应，即SR=1）。对于后者，我们主要考虑构成驻波的反向传播旅行波的群体速度的降低。<br />
+没有调制的传统微环（A = 0 nm）展示了WGMs（主要是单模共振），其自由光谱范围（FSR）值几乎均匀（约0.91 THz或7.4 nm），如图2c所示。对于波长为1553.9 nm的模式，其固有光学品质因子（Q0）为（7.5 ± 0.2）× 10^5（最右侧面板），其方位模式数（m = 162）是目标用于内部侧壁调制的数值（Q0的误差来自传输共振的非线性最小二乘拟合；详见方法部分）。当调制非常大时，A = 1,150 nm，如图2d所示，大多数空气带模式被推入光锥中，只剩下三个模式具有较低的Q值和较差的波导耦合。介质带得到很好的保留，光谱被压缩，并且在带边附近的模式具有更高的光谱密度。该设备的s0模式的Q0 =（6.8 ± 0.1）× 10^5。图2f展示了图2d中{ s0，s1，s2 }模式的散射光的红外图像，这些模式的方位图案与图1e中所示的相匹配。<br />
+我们在图2e中构建了八个设备的能带图（七个设备的调制幅度A从550 nm到1150 nm，步长为100 nm，再加上一个对照设备）。当A增加时，空气带会被推向光锥，但介质带边缘保持在1 THz以内。测得的带边频率与数值模拟结果非常一致，如图2f所示（这些设备的完整模拟带结构显示在扩展数据图1中）。图2h展示了带隙（BG）值BG = [ω(a0) − ω(s0)]/2π和s0模式的SR值作为A的函数。带隙增加时，SR也增加，具有最大带隙的设备展现了SR = 9.94 ± 0.02（SR的误差来自于用分裂模式估算的FSR值；详见方法部分），对于s0模式的Q0为（6.8 ± 0.1）× 10^5，这比以往研究高约50倍。扩展数据图3b展示了所有A值和所有介质带模式近带边的SR，表明s1和s2也展现出显著但较小的SR值。对于慢光应用（例如，干涉仪），一个重要的指标是 ( \frac{n_g}{\alpha} )，其中 ( n_g ) 是群折射率，( \alpha ) 是损耗系数（与 ( Q_0 ) 直接成正比；详见方法部分）。在A = 1,150 nm的设备中，s0模式的 ( \frac{n_g}{\alpha} = (17 \pm 1) ) cm（不确定性来源于 ( Q_0 ) 的误差），这与早期研究相比有显著改进。此外，光学Q因子还可以进一步提升。例如，在扩展数据图4中，我们展示了一种具有高Q的慢光设备，其s0模式的 ( Q_0 = (1.1 \pm 0.1) \times 10^6 )，SR约为10， ( \frac{n_g}{\alpha} \approx 28 ) cm。这种高Q值，或等效地 ( \frac{n_g}{\alpha} )，代表了约50倍的记录提升；详见扩展数据表1的比较。因此，MPhCR是进一步研究慢光应用的有前途的平台，包括干涉仪、电信和传感等领域。</p>
+<h2 id="mphcr中的缺陷模式"><a class="markdownIt-Anchor" href="#mphcr中的缺陷模式"></a> MPhCR中的缺陷模式</h2>
+<p>虽然 (  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>n</mi><mi>g</mi></msub><mi>α</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{n_g}{\alpha}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.153712em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.808712em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.50732em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.16454285714285716em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2818857142857143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> ) 是慢光应用中的一个重要性能指标，如前一节所讨论，但 ( \frac{Q}{V} ) 是对腔增强光–物质相互作用（包括非线性和量子光学过程，例如 Purcell 增强）至关重要的度量指标。在微环中，这个值可以通过减少微环的半径，同时保持相对较低的辐射/散射损耗来优化，弯曲损耗最终限制了可实现的最小模式体积（V）。在本节中，我们展示了如何将局部的光子晶体缺陷（dPhC）引入慢光设备中，从而进一步减少模式体积（V），并将 ( \frac{Q}{V} ) 提高约十倍，相较于我们传统的微环。例如，在图 3a 中，SEM 图像展示了如何从慢光设备（如图 2b 所示）中导出一个 dPhC 设备。在此图中，引入了一个缺陷区域，其中调制幅度 A 在八个单元格（两侧各四个）中呈二次变化，缺陷中心的最大调制深度偏差（Δ）为 A 的 10%。这种直观的缺陷设计产生了一个支撑基态（g）dPhC 模式的束缚简谐势阱。图 3b 显示了类似于图 3a 的 dPhC 模式（g）的传输，但跨越 48 个单元，Q0 = (4.0 ± 0.1) × 10^5，类似于慢光模式的 Q0。观察到的最高 Q0 为 (5.6 ± 0.1) × 10^5；参见扩展数据图 5e。通过对慢光腔体进行扰动可以创建高 Q dPhC 模式，而无需特定的详细设计，这是与大多数 dPhC 腔体相对比的一个优点，在大多数 dPhC 腔体中，需要详细的数值模拟来优化设计以支持高 Q 值。通过以上述方式在图 2e 中的所有七种慢光设计中引入缺陷，生成了图 3c 中的缺陷带图。图 3c 中的介质带边缘扩展图展示了与未扰动的慢光设备（图 2e）的带图相比，s0 模式向带隙中的移动（形成 g）是主要变化，而相邻的慢光模式（例如，{s1, s2, s3}）基本上未受扰动。在扩展数据图 5a–c 中，我们展示了除 A 以外的其他参数对 g 模式频率的控制，包括 m、N（构成缺陷的单元数量）和 Δ。我们通过模拟确认了这些实验观察到的 g 模式的存在，并计算了它们的模式体积（V）数据。扩展数据图 2 展示了 dPhC 模式剖面和结果 V 值的全面数值模拟，使用基于电偶极耦合的腔体 QED 定义来计算 V（详见方法部分）。对于 dPhC 模式，V 值在 3.3(λ/n)³ 到 5.5(λ/n)³ 之间，其中 λ 是波长，n 是氮化硅的折射率，相较于慢光带边缘模式，显示出十倍以上的减少，并且，如预期的那样，本地化程度取决于势阱的具体特征。我们预计，通过数值优化和采用基本方法来增加模式的约束（如更低的空气包层或槽模式结构），可以进一步减少 V，而在高折射率平台（如硅基绝缘体）上使用近似的 (λ/n)³ 值是可能的。<br />
+利用光学微腔中增强的光–物质相互作用的应用还需要有效的波导输入/输出耦合。接下来，我们考虑以受控方式耦合到 dPhC 模式的能力，这是 MPhCR 继承自 WGM 的一个特性。在图 3d 中，我们展示了控制 MPhCR 与波导之间的渐逝耦合的两个参数，即缺陷角（θ）和波导–环间隙（G）。我们还展示了两个红外图像，分别来自于缺陷旋转（θ = 60°）和缺陷中心（θ = 0°）的设备。图 3e 中绘制了 dPhC 模式（g）和慢光模式 {s1±, s2+} 的耦合比 K = Q0/Qc 的测量值，涵盖了六种情况，即三种 G 值和两种 θ 值。显然，由于 g 模式的局部化，其耦合特性与 {s1±, s2+} 模式大相径庭。在旋转情况下，与 {s1±, s2+} 相比，g 的耦合较弱（约为 K 值的十分之一）。相比之下，在中心情况下，g 的耦合强度比 {s1±, s2+} 强（K 值约提高十倍）。对于 G = 350 nm 的 MPhCR，耦合质量因子 Qc 可以达到 10,000（参见扩展数据图 5），而通过使用更小的 G、优化的波导宽度和滑轮耦合，甚至可以实现更强的耦合。</p>
+<h2 id="讨论"><a class="markdownIt-Anchor" href="#讨论"></a> 讨论</h2>
+<p>我们展示了一种新的微腔平台，结合了 WGM 和 PhC 腔体的一些最重要的特点。实质上，我们的 MPhCR 设计可以可控地修改目标微环 WGM 的基本特性，例如其群速度和局部化长度尺度，同时保持其高 Q 值和简便的波导耦合。MPhCR 几何设计高度直观，我们展示的设备不需要任何详细的数值建模来实现高 Q 值、大的 SR 值或强的模式局部化（数值建模仅用于验证设备性能）。展望未来，慢光、dPhC 和传统 WGM 模式的共存对非线性光学具有很大的潜力，例如光学参量振荡；此外，在单一设备中结合多个光子带隙频率是可行的，类似于选择性引入多重 WGM 的背散射能力。另一个可能的方向是关注气体带模式的性能，例如，开发用于耦合中性原子的设备。如最近的综述中讨论的那样，虽然氮化硅通常被认为是在集成光子学中具有特别高 Q 值的平台，但 Q 值的实现很大程度上依赖于模态约束的程度，这由波导的横截面尺寸和包层的折射率决定。在中等约束的氮化硅微环中，最先进的 Q 值在 1,000,000 左右；而在高约束和低约束的氮化硅微环中，最先进的 Q 值则分别高达 10,000,000 和 100,000,000。虽然我们在本研究中展示了中等约束的氮化硅微环中的 MPhCR，但将 MPhCR 应用于高约束和低约束的氮化硅微环对于实现更高的 Q 值以及在超窄带滤波器、延迟线和受激布里渊散射等额外应用中也很有趣。最后，在其他平台上开发 MPhCR，例如碳化硅和砷化镓，可能会带来控制和利用被约束光场与单一量子发射体之间强相互作用的新机会。</p>
 ]]></content>
       <tags>
         <tag>光互连</tag>
@@ -1369,6 +1410,28 @@ DC偏移消除环路（DCOL）: 在输入节点实现，以消除由输入平均
       </tags>
   </entry>
   <entry>
+    <title>阿里云每三个月更新网站https证书的方法</title>
+    <url>/2024/09/09/%E6%AF%8F%E4%B8%89%E4%B8%AA%E6%9C%88%E6%9B%B4%E6%96%B0%E7%BD%91%E7%AB%99https%E8%AF%81%E4%B9%A6%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<ol>
+<li>在阿里云的ssl证书管理中申请新证书</li>
+</ol>
+<ul>
+<li>创建证书 -&gt; 自动部署
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/232488366">阿里云个人网站免费绑定SSL证书（超详细图文教程） - 知乎 (zhihu.com)</a></li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>在全站加速DCDN中更新https证书</li>
+</ol>
+<p>​</p>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>高速低驱动电压硅基光子晶体慢光调制器</title>
     <url>/2024/09/09/%E9%AB%98%E9%80%9F%E4%BD%8E%E9%A9%B1%E5%8A%A8%E7%94%B5%E5%8E%8B%E7%A1%85%E5%9F%BA%E5%85%89%E5%AD%90%E6%99%B6%E4%BD%93%E6%85%A2%E5%85%89%E8%B0%83%E5%88%B6%E5%99%A8/</url>
     <content><![CDATA[<p>参考文献：<a href="/download/Kawahara 等 - 2024 - High-speed, low-voltage, low-bit-energy silicon photonic crystal slow-light modulator with impedance.pdf" download>高速低驱动电压硅基光子晶体慢光调制器</a> 2024.08.</p>
@@ -1453,47 +1516,6 @@ c-4-3.333-8.333-7.667-13 -13l-13-13l77-155 77-156c66 199.333 139 419.667
       </tags>
   </entry>
   <entry>
-    <title>高Q值慢光及其在光子晶体微环中的局域化</title>
-    <url>/2024/08/27/%E9%AB%98Q%E5%80%BC%E6%85%A2%E5%85%89%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%85%89%E5%AD%90%E6%99%B6%E4%BD%93%E5%BE%AE%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%B1%80%E5%9F%9F%E5%8C%96/</url>
-    <content><![CDATA[<p>参考文献：<a href="/download/Lu 等 - 2022 - High-Q slow light and its localization in a photon.pdf" download>高Q值慢光及其在光子晶体微环中的局域化</a> 2022.</p>
-<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
-<p>我们介绍了一种光子晶体环形谐振腔，它类似于内部齿轮，将光子晶体（PhC）和回音壁模式（WGM）的概念结合在一起。这种“微齿轮”光子晶体环（MPhCR）是通过对微环谐振腔的内边界进行周期性调制而形成的，打开了一个大的带隙，就像在PhC腔体中一样，同时保持了环的圆对称外边界和高光学品质因子（Q），如同在WGM腔体中一样。MPhCR以特定的WGM为目标，打开一个宽达几十个自由光谱范围的大的PhC带隙，压缩模式谱，同时保持WGM模式的高Q值、角动量和波导耦合特性。特别是在介质带边附近，我们观察到模式的群速度相对于传统微环模式降低了10倍，同时支持Q值为(1.1 ± 0.1) × 10^6。这个Q值大约是先前慢光设备记录的50倍。以慢光设计为起点，我们进一步展示了将WGM局域化到光子晶体缺陷模式的能力，使模式体积相比于传统WGM减少了超过10倍，同时保持高达(5.6 ± 0.1) × 10^5的高Q值。重要的是，这种额外的光子晶体缺陷局域化可以在不需要详细电磁设计的情况下实现。此外，由于MPhCR继承了WGM的特性，控制其共振频率和波导耦合变得简单。在利用PhC强烈改变WGM的基本特性（如群速度和局域化）的过程中，MPhCR为广泛的光子学应用提供了一个令人兴奋的平台，包括传感/计量学、非线性光学和腔量子电动力学。</p>
-<h2 id="背景介绍"><a class="markdownIt-Anchor" href="#背景介绍"></a> 背景介绍</h2>
-<p>芯片集成的光学微/纳米腔已经在光学科学领域取得了许多突破。这些器件在适合集成和部署的平台上，时空增强了光与物质的相互作用，并被确立为量子光学、非线性光子学、光机械学和传感等领域的基础元素。空间约束的度量标准是模式体积（V），而与时间增强相关的度量标准是光学品质因子（Q）。虽然已经研究了许多腔体几何结构，但它们大多可以归为两类：回音壁模式（WGM）腔体，它们基于设备外围的全内反射；以及光子晶体（PhC）腔体，它们基于在一维或二维光子晶格中局域化缺陷。在前一类中，只要设备的半径足够大且侧壁光滑，就自然可以在宽波长范围内实现多个高Q值的WGM，而无需特定的器件几何结构设计。相比之下，在PhC腔体中，多模式操作和高Q值共振需要对器件几何结构进行精心和具体的设计，并且在纳米制造过程中必须保持一定的图案精度。WGM腔体的另一个优势是通过倏逝场相互作用实现波导耦合的相对容易性。这两个优势使WGM腔体成为宽带非线性光学的主要平台，包括克尔频率梳、光频率转换和其他非线性波混合效应。然而，WGM腔体无法与PhC缺陷腔体提供的更强的空间约束相媲美，后者的V值通常小10到100倍。PhC缺陷腔体可以具有亚立方波长的V值，特别适用于腔体量子电动力学（QED）和腔体光机械学中的单模应用。<br />
-鉴于WGM和光子晶体（PhC）缺陷腔体各自的优点，将这两种几何结构结合起来以利用两者的最佳特点是非常理想的。实际上，这一愿望已在各种腔体几何结构中得到追求（见扩展数据表1）。例如，一种研究中的几何结构在二维光子晶体中创建了多边形的“盘”形或“环”形线缺陷，即光子晶体“盘/环”谐振器（PCDRs/PCRRs）9–11。进一步的开创性工作在传统的环形谐振器中进行，称为光子晶体环（PhCRs）12，其中在微环中引入了刻蚀的空气孔，重点在于生成慢光模式12–16。在这些PhCRs中，尽管光的群速度被减慢以增强光-物质相互作用，但Q值与最先进的微环相比显著下降，这抵消了使用慢光的最初好处。<br />
-其他研究在微环侧壁上加入了小幅度的光栅，以控制选定腔体模式的频率17，并用于单模激光18和自发脉冲生成19，但这些研究没有考虑光子晶体引起的慢光或局部化效应。类似的光栅概念也被应用于回音壁谐振器，在许多不同的背景下进行研究，包括生成轨道角动量光束20和探索微激光器中的对称时间概念21，但一般来说，这些研究并未专注于通过缺陷引入实现高Q因子或强模式局部化。<br />
-在这项工作中，我们以一种新颖的方式将WGM和光子晶体（PhC）缺陷腔体的特点结合起来，这种方式保留了WGM腔体实现高Q因子和简便波导耦合的优势，同时保持了对光的传播和局部化的强控制能力，与PhC缺陷腔体相关联。我们的设备，即MPhCR，是一种微环腔体，其中对其内边界进行精心选择的周期性调制（类似于内部齿轮的形状）在角动量空间的目标位置打开了一个大的带隙。在这个平台上，我们展示了具有高Q值（1.1 ± 0.1）× 10⁶的慢光模式，并且群速度减慢比（SR）12,22值约为10。我们进一步展示了基于慢光模式在带边缘局部化的PhC缺陷模式。这些局部化的缺陷模式具有类似的高Q值，最高可达（5.6 ± 0.1）× 10⁵，并支持直观的频率工程和波导耦合，类似于传统的WGM。通过将WGM和PhC概念以保持各自优势的方式结合，MPhCR成为微腔物理学和应用的突破性平台。</p>
-<h2 id="mphcr设计的介绍"><a class="markdownIt-Anchor" href="#mphcr设计的介绍"></a> MPhCR设计的介绍</h2>
-<p>图1a和1b展示了MPhCR的示意图，其中第一个面板展示了慢光设备，第二个面板展示了具有光子晶体缺陷（dPhC）的设备。这两个设备都具有与传统微环相同的圆形外边界，支持具有离散角动量（由方位模数m描述）和频率（ω）的高Q值WGM。慢光设备的内边界具有大幅度的周期性调制，如图1a所示，这在带边缘及其附近创建了宽的光子带隙，支持慢光模式。dPhC设备基于慢光设备的设计，在周期性调制中引入了一个局部化的缺陷（此处缺陷位于中心，靠近耦合波导），如图1b所示。</p>
-<p><img src="/pictures/image-20240827091202436.png" alt="image-20240827091202436" /></p>
-<blockquote>
-<p><strong>图1 | MPhCR，高Q值慢光光子晶体微环。</strong><br />
-a,b, MPhCR的示意图，分别用于慢光（a）和光子晶体缺陷（dPhC）（b）腔体。c, MPhCR中的三种对称性：CW和CCW传播模式的镜像对称性（S）；仅允许具有离散角动量（m）和能量（ω）的模式的旋转对称性（R）；以及来自PhC结构的方位方向的周期性平移对称性（P），它将具有特定方位动量（即± m0）的CW和CCW模式耦合在一起。d, 由这三种对称性创建的带结构图。空气带被推向光锥（灰色），而介电带则被很好地保持。在慢光设备中，模式通过实线连接，其中s0和a0是带边缘模式。在dPhC设备中，s0移动到g，如虚线所示，而其他模式保持固定频率。e, 标记模式的主要电场分量的定性示意图（例如，横电模式的径向电场分量Er），红色和蓝色显示对立的相位，暗度与幅度成正比。慢光和dPhC模式的模式轮廓通过完整的数值电磁仿真显示在扩展数据图1和图2中。</p>
-</blockquote>
-<p>MPhCR设备具有三种对称性，如图1c所示：</p>
-<ul>
-<li><strong>S</strong> 代表镜像对称性，即顺时针（CW）和逆时针（CCW）传播光的对称性；</li>
-<li><strong>P</strong> 代表由周期性（在方位方向上）PhC调制产生的角动量变化，即模式从CCW到CW的转变（红色箭头）或从CW到CCW的转变（蓝色箭头）；</li>
-<li><strong>R</strong> 代表由于圆形边界条件而产生的旋转对称性，这导致了WGMs的量子化/整数角动量（m）和离散的共振频率（ωm）。</li>
-</ul>
-<p>如图1a所示，施加大幅度的内部侧壁调制会在图1d中m = ±m0处产生大的光子带隙，其中PhC调制周期为πR/m0（即环形周长内适配2m0个周期）。在MPhCR中，两个传播模式（m = ±m0）被重标定为两个驻波模式，标记为a0（空气带边缘模式）和s0（介电带边缘模式）。在带边缘的两侧，四个模式（m = ±(m0 ± 1)）被混合成四个新模式，其中两个在空气带中简并（a1），两个在介电带中简并（s1），其中s1可以看作是与s0具有相同空间轮廓但附加了cos(φ)调制（φ是方位角）。s2的特性类似，只是模式轮廓相对于s0附加了cos(2φ)的调制。我们注意到，由PhC调制引起的频率偏移导致高频空气带模式开始接触光锥（灰色阴影区域）。从慢光设备开始，通过局部扰动调制幅度可以制作dPhC设备。dPhC模式（g）是s0模式的局部化，具有较高的共振频率，依赖于缺陷的详细参数，如图1d中的虚线所示，而其他所有模式保持不变。图1e以定性方式展示了这些光学模式的代表性轮廓。为了说明目的，这里展示了方位模数m = 8，这大约是我们实际设备中使用的20倍。实际几何形状的模式的完整数值仿真见于方法部分和扩展数据图1和图2。<br />
-图2a、b显示了在化学计量硅氮化物（Si3N4）中制造的MPhCR的扫描电子显微镜（SEM）图像。图2a展示了一个环半径（Rout）为25 μm，厚度为500 nm，标称平均环宽（RW）为1,250 nm，调制幅度（A）为1,150 nm的MPhCR。图2b的扩展SEM图像展示了慢光MPhCR的结构细节，包括较大的A，使得环宽在最窄部分仅为100 nm，形状类似于以前研究的‘鳄鱼’光子晶体波导。该设备完全通过Si3N4层进行刻蚀，具有平滑的调制轮廓和侧壁。调制周期（一单元长度）约为485 nm，对应于周长上的162 × 2单元。有关制造细节，请参见方法部分。</p>
-<h2 id="mphcr中的慢光效应"><a class="markdownIt-Anchor" href="#mphcr中的慢光效应"></a> MPhCR中的慢光效应</h2>
-<p>通过增加光–物质相互作用的时间，可以增强这些相互作用。通常，这通过增加光子存储时间（即提高Q值）来实现，例如，通过使用光学微腔。此外，另一种方法是通过降低光的群速度，也就是利用慢光效应，例如，基于光子带边附近的波导模式。尽管这两种方法分别被广泛研究，但也存在它们可以协同工作的情况，即在保持高Q值的同时减慢光的群速度。我们强调，在光子晶体微环中，减慢因子应已包含在Q中。换句话说，慢光设备可能具有比对照设备更高的光学Q值，并在应用中提供额外的好处。虽然有证据支持在Q &lt;5,000的范围内使用慢光来增强Q值，但所有这些研究的Q值比通常在高Q微腔中达到的1,000,000低两个数量级，这抵消了使用慢光效应的好处。例如，在对光子晶体微环的开创性研究中，实现了Q = 2,000和SR = 4。最近，有研究报告了改进的性能，其中Q = 12,100和SR = 8。详细信息请参见扩展数据表1。<br />
-我们在开发MPhCR的首要目标是实现具有高Q值的慢光模式，这些Q值与WGMs相当。与之前在微环中采用空气孔的几何结构相比，MPhCR似乎更有利于减少散射损耗。我们通过图2中的光谱测量确认了这一点，其中Q和SR分别从线宽和自由光谱范围（FSR）值中提取（详见方法部分）。特别地，由于FSR与谐振腔模式群体指数成反比，相对于传统的微环模式，FSR的减小表明群体指数相应增加（从而群体速度降低）。与早期的研究相同，我们将SR作为旅行波模式和驻波模式的评价指标（这两种模式在传统高Q WGMs中常见且没有慢光效应，即SR=1）。对于后者，我们主要考虑构成驻波的反向传播旅行波的群体速度的降低。<br />
-没有调制的传统微环（A = 0 nm）展示了WGMs（主要是单模共振），其自由光谱范围（FSR）值几乎均匀（约0.91 THz或7.4 nm），如图2c所示。对于波长为1553.9 nm的模式，其固有光学品质因子（Q0）为（7.5 ± 0.2）× 10^5（最右侧面板），其方位模式数（m = 162）是目标用于内部侧壁调制的数值（Q0的误差来自传输共振的非线性最小二乘拟合；详见方法部分）。当调制非常大时，A = 1,150 nm，如图2d所示，大多数空气带模式被推入光锥中，只剩下三个模式具有较低的Q值和较差的波导耦合。介质带得到很好的保留，光谱被压缩，并且在带边附近的模式具有更高的光谱密度。该设备的s0模式的Q0 =（6.8 ± 0.1）× 10^5。图2f展示了图2d中{ s0，s1，s2 }模式的散射光的红外图像，这些模式的方位图案与图1e中所示的相匹配。<br />
-我们在图2e中构建了八个设备的能带图（七个设备的调制幅度A从550 nm到1150 nm，步长为100 nm，再加上一个对照设备）。当A增加时，空气带会被推向光锥，但介质带边缘保持在1 THz以内。测得的带边频率与数值模拟结果非常一致，如图2f所示（这些设备的完整模拟带结构显示在扩展数据图1中）。图2h展示了带隙（BG）值BG = [ω(a0) − ω(s0)]/2π和s0模式的SR值作为A的函数。带隙增加时，SR也增加，具有最大带隙的设备展现了SR = 9.94 ± 0.02（SR的误差来自于用分裂模式估算的FSR值；详见方法部分），对于s0模式的Q0为（6.8 ± 0.1）× 10^5，这比以往研究高约50倍。扩展数据图3b展示了所有A值和所有介质带模式近带边的SR，表明s1和s2也展现出显著但较小的SR值。对于慢光应用（例如，干涉仪），一个重要的指标是 ( \frac{n_g}{\alpha} )，其中 ( n_g ) 是群折射率，( \alpha ) 是损耗系数（与 ( Q_0 ) 直接成正比；详见方法部分）。在A = 1,150 nm的设备中，s0模式的 ( \frac{n_g}{\alpha} = (17 \pm 1) ) cm（不确定性来源于 ( Q_0 ) 的误差），这与早期研究相比有显著改进。此外，光学Q因子还可以进一步提升。例如，在扩展数据图4中，我们展示了一种具有高Q的慢光设备，其s0模式的 ( Q_0 = (1.1 \pm 0.1) \times 10^6 )，SR约为10， ( \frac{n_g}{\alpha} \approx 28 ) cm。这种高Q值，或等效地 ( \frac{n_g}{\alpha} )，代表了约50倍的记录提升；详见扩展数据表1的比较。因此，MPhCR是进一步研究慢光应用的有前途的平台，包括干涉仪、电信和传感等领域。</p>
-<h2 id="mphcr中的缺陷模式"><a class="markdownIt-Anchor" href="#mphcr中的缺陷模式"></a> MPhCR中的缺陷模式</h2>
-<p>虽然 (  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>n</mi><mi>g</mi></msub><mi>α</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{n_g}{\alpha}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.153712em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.808712em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.50732em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.16454285714285716em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2818857142857143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> ) 是慢光应用中的一个重要性能指标，如前一节所讨论，但 ( \frac{Q}{V} ) 是对腔增强光–物质相互作用（包括非线性和量子光学过程，例如 Purcell 增强）至关重要的度量指标。在微环中，这个值可以通过减少微环的半径，同时保持相对较低的辐射/散射损耗来优化，弯曲损耗最终限制了可实现的最小模式体积（V）。在本节中，我们展示了如何将局部的光子晶体缺陷（dPhC）引入慢光设备中，从而进一步减少模式体积（V），并将 ( \frac{Q}{V} ) 提高约十倍，相较于我们传统的微环。例如，在图 3a 中，SEM 图像展示了如何从慢光设备（如图 2b 所示）中导出一个 dPhC 设备。在此图中，引入了一个缺陷区域，其中调制幅度 A 在八个单元格（两侧各四个）中呈二次变化，缺陷中心的最大调制深度偏差（Δ）为 A 的 10%。这种直观的缺陷设计产生了一个支撑基态（g）dPhC 模式的束缚简谐势阱。图 3b 显示了类似于图 3a 的 dPhC 模式（g）的传输，但跨越 48 个单元，Q0 = (4.0 ± 0.1) × 10^5，类似于慢光模式的 Q0。观察到的最高 Q0 为 (5.6 ± 0.1) × 10^5；参见扩展数据图 5e。通过对慢光腔体进行扰动可以创建高 Q dPhC 模式，而无需特定的详细设计，这是与大多数 dPhC 腔体相对比的一个优点，在大多数 dPhC 腔体中，需要详细的数值模拟来优化设计以支持高 Q 值。通过以上述方式在图 2e 中的所有七种慢光设计中引入缺陷，生成了图 3c 中的缺陷带图。图 3c 中的介质带边缘扩展图展示了与未扰动的慢光设备（图 2e）的带图相比，s0 模式向带隙中的移动（形成 g）是主要变化，而相邻的慢光模式（例如，{s1, s2, s3}）基本上未受扰动。在扩展数据图 5a–c 中，我们展示了除 A 以外的其他参数对 g 模式频率的控制，包括 m、N（构成缺陷的单元数量）和 Δ。我们通过模拟确认了这些实验观察到的 g 模式的存在，并计算了它们的模式体积（V）数据。扩展数据图 2 展示了 dPhC 模式剖面和结果 V 值的全面数值模拟，使用基于电偶极耦合的腔体 QED 定义来计算 V（详见方法部分）。对于 dPhC 模式，V 值在 3.3(λ/n)³ 到 5.5(λ/n)³ 之间，其中 λ 是波长，n 是氮化硅的折射率，相较于慢光带边缘模式，显示出十倍以上的减少，并且，如预期的那样，本地化程度取决于势阱的具体特征。我们预计，通过数值优化和采用基本方法来增加模式的约束（如更低的空气包层或槽模式结构），可以进一步减少 V，而在高折射率平台（如硅基绝缘体）上使用近似的 (λ/n)³ 值是可能的。<br />
-利用光学微腔中增强的光–物质相互作用的应用还需要有效的波导输入/输出耦合。接下来，我们考虑以受控方式耦合到 dPhC 模式的能力，这是 MPhCR 继承自 WGM 的一个特性。在图 3d 中，我们展示了控制 MPhCR 与波导之间的渐逝耦合的两个参数，即缺陷角（θ）和波导–环间隙（G）。我们还展示了两个红外图像，分别来自于缺陷旋转（θ = 60°）和缺陷中心（θ = 0°）的设备。图 3e 中绘制了 dPhC 模式（g）和慢光模式 {s1±, s2+} 的耦合比 K = Q0/Qc 的测量值，涵盖了六种情况，即三种 G 值和两种 θ 值。显然，由于 g 模式的局部化，其耦合特性与 {s1±, s2+} 模式大相径庭。在旋转情况下，与 {s1±, s2+} 相比，g 的耦合较弱（约为 K 值的十分之一）。相比之下，在中心情况下，g 的耦合强度比 {s1±, s2+} 强（K 值约提高十倍）。对于 G = 350 nm 的 MPhCR，耦合质量因子 Qc 可以达到 10,000（参见扩展数据图 5），而通过使用更小的 G、优化的波导宽度和滑轮耦合，甚至可以实现更强的耦合。</p>
-<h2 id="讨论"><a class="markdownIt-Anchor" href="#讨论"></a> 讨论</h2>
-<p>我们展示了一种新的微腔平台，结合了 WGM 和 PhC 腔体的一些最重要的特点。实质上，我们的 MPhCR 设计可以可控地修改目标微环 WGM 的基本特性，例如其群速度和局部化长度尺度，同时保持其高 Q 值和简便的波导耦合。MPhCR 几何设计高度直观，我们展示的设备不需要任何详细的数值建模来实现高 Q 值、大的 SR 值或强的模式局部化（数值建模仅用于验证设备性能）。展望未来，慢光、dPhC 和传统 WGM 模式的共存对非线性光学具有很大的潜力，例如光学参量振荡；此外，在单一设备中结合多个光子带隙频率是可行的，类似于选择性引入多重 WGM 的背散射能力。另一个可能的方向是关注气体带模式的性能，例如，开发用于耦合中性原子的设备。如最近的综述中讨论的那样，虽然氮化硅通常被认为是在集成光子学中具有特别高 Q 值的平台，但 Q 值的实现很大程度上依赖于模态约束的程度，这由波导的横截面尺寸和包层的折射率决定。在中等约束的氮化硅微环中，最先进的 Q 值在 1,000,000 左右；而在高约束和低约束的氮化硅微环中，最先进的 Q 值则分别高达 10,000,000 和 100,000,000。虽然我们在本研究中展示了中等约束的氮化硅微环中的 MPhCR，但将 MPhCR 应用于高约束和低约束的氮化硅微环对于实现更高的 Q 值以及在超窄带滤波器、延迟线和受激布里渊散射等额外应用中也很有趣。最后，在其他平台上开发 MPhCR，例如碳化硅和砷化镓，可能会带来控制和利用被约束光场与单一量子发射体之间强相互作用的新机会。</p>
-]]></content>
-      <tags>
-        <tag>光互连</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Cadence_virtuoso_光电联合仿真-1</title>
     <url>/2024/09/12/Cadence-virtuoso-%E5%85%89%E7%94%B5%E8%81%94%E5%90%88%E4%BB%BF%E7%9C%9F1/</url>
     <content><![CDATA[<h3 id="绘制了反相器的电路原理图并且完成了简单仿真"><a class="markdownIt-Anchor" href="#绘制了反相器的电路原理图并且完成了简单仿真"></a> 绘制了反相器的电路原理图并且完成了简单仿真</h3>
@@ -1539,28 +1561,6 @@ IC618解压密码：minlei816<br />
       </tags>
   </entry>
   <entry>
-    <title>阿里云每三个月更新网站https证书的方法</title>
-    <url>/2024/09/09/%E6%AF%8F%E4%B8%89%E4%B8%AA%E6%9C%88%E6%9B%B4%E6%96%B0%E7%BD%91%E7%AB%99https%E8%AF%81%E4%B9%A6%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<ol>
-<li>在阿里云的ssl证书管理中申请新证书</li>
-</ol>
-<ul>
-<li>创建证书 -&gt; 自动部署
-<ul>
-<li><a href="https://zhuanlan.zhihu.com/p/232488366">阿里云个人网站免费绑定SSL证书（超详细图文教程） - 知乎 (zhihu.com)</a></li>
-</ul>
-</li>
-</ul>
-<ol start="2">
-<li>在全站加速DCDN中更新https证书</li>
-</ol>
-<p>​</p>
-]]></content>
-      <tags>
-        <tag>技术小结</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ADS-vpi-cosimlation</title>
     <url>/2024/09/13/ADS-vpi-cosimlation/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -1577,16 +1577,6 @@ IC618解压密码：minlei816<br />
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <tags>
         <tag>光互连</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>结合MathType和MathJax在Hexo博客中插入数学公式</title>
-    <url>/2024/09/18/%E7%BB%93%E5%90%88MathType%E5%92%8CMathJax%E5%9C%A8Hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</url>
-    <content><![CDATA[<h1 id="结合mathtype和mathjax在hexo博客中插入数学公式"><a class="markdownIt-Anchor" href="#结合mathtype和mathjax在hexo博客中插入数学公式"></a> 结合MathType和MathJax在Hexo博客中插入数学公式</h1>
-<p>REF: <a href="https://zhuanlan.zhihu.com/p/108766968">结合MathType和MathJax在Hexo博客中插入数学公式 - 知乎 (zhihu.com)</a></p>
-]]></content>
-      <tags>
-        <tag>技术小结</tag>
       </tags>
   </entry>
   <entry>
@@ -1607,6 +1597,90 @@ IC618解压密码：minlei816<br />
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>结合MathType和MathJax在Hexo博客中插入数学公式</title>
+    <url>/2024/09/18/%E7%BB%93%E5%90%88MathType%E5%92%8CMathJax%E5%9C%A8Hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="结合mathtype和mathjax在hexo博客中插入数学公式"><a class="markdownIt-Anchor" href="#结合mathtype和mathjax在hexo博客中插入数学公式"></a> 结合MathType和MathJax在Hexo博客中插入数学公式</h1>
+<p>REF: <a href="https://zhuanlan.zhihu.com/p/108766968">结合MathType和MathJax在Hexo博客中插入数学公式 - 知乎 (zhihu.com)</a></p>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>采用gpu进行lumericalFDTD仿真</title>
+    <url>/2023/12/28/%E9%87%87%E7%94%A8gpu%E8%BF%9B%E8%A1%8ClumericalFDTD%E4%BB%BF%E7%9C%9F/</url>
+    <content><![CDATA[<h2 id="硬件需求"><a class="markdownIt-Anchor" href="#硬件需求"></a> 硬件需求</h2>
+<p>Nvidia CUDA driver version 450.80.02 or later (Linux), version 452.39 or later (windows)</p>
+<h2 id="仿真需求"><a class="markdownIt-Anchor" href="#仿真需求"></a> 仿真需求</h2>
+<p>需要设置为express模式：</p>
+<p><img src="/pictures/18518186955411.png" alt="img" /></p>
+<h2 id="目前限制"><a class="markdownIt-Anchor" href="#目前限制"></a> 目前限制</h2>
+<ol>
+<li>边界条件仅支持PML</li>
+<li>frequency dependent mode source profiles are not supported.</li>
+<li>time monitors 会限制仿真速度</li>
+</ol>
+<h2 id="其他"><a class="markdownIt-Anchor" href="#其他"></a> 其他</h2>
+<ol>
+<li>For multiple jobs it is recommended to run them in series rather than in parallel.</li>
+</ol>
+<h2 id="脚本实现"><a class="markdownIt-Anchor" href="#脚本实现"></a> 脚本实现</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">setnamed(&quot;FDTD&quot;, &quot;express mode&quot;, true);</span><br><span class="line">setresource(&quot;FDTD&quot;,&quot;GPU&quot;, true);</span><br><span class="line">setresource(&quot;FDTD&quot;, 3, &quot;GPU Device&quot;, &quot;Auto&quot;);</span><br><span class="line">setresource(&quot;FDTD&quot;, &quot;GPU&quot;, false);</span><br><span class="line">setresource(&quot;FDTD&quot;, &quot;CPU&quot;, true); //&lt; equivalent to previous line</span><br></pre></td></tr></table></figure>
+<h2 id="参考文献"><a class="markdownIt-Anchor" href="#参考文献"></a> 参考文献</h2>
+<ol>
+<li><a href="https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information">https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用说明书</title>
+    <url>/2023/12/20/%E9%9D%9E%E5%B8%B8%E7%AE%80%E7%95%A5%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
+    <content><![CDATA[<h4 id="hexo运行"><a class="markdownIt-Anchor" href="#hexo运行"></a> Hexo运行</h4>
+<p>在文件夹中右键，选择命令提示符或者git bush</p>
+<h4 id="创建"><a class="markdownIt-Anchor" href="#创建"></a> 创建</h4>
+<p>hexo new [布局] &lt;标题&gt;</p>
+<p>布局默认为[_drafts]文章，或者[_drafts] 草稿；或者[source]页面。</p>
+<p>可以通过publish _drafts &lt;标题&gt;来发布草稿</p>
+<p>其中布局和保存文件夹的对应关系如下：</p>
+<table>
+<thead>
+<tr>
+<th><code>post</code></th>
+<th><code>source/_posts</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>page</code></td>
+<td><code>source</code></td>
+</tr>
+<tr>
+<td><code>draft</code></td>
+<td><code>source/_drafts</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="预览"><a class="markdownIt-Anchor" href="#预览"></a> 预览</h4>
+<p>hexo clean</p>
+<p>hexo g</p>
+<p>hexo s</p>
+<h4 id="发布"><a class="markdownIt-Anchor" href="#发布"></a> 发布</h4>
+<p>hexo d</p>
+<h4 id="添加附件"><a class="markdownIt-Anchor" href="#添加附件"></a> 添加附件</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;/download/[文件名]&quot;download&gt;[想要显示的文本]&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>记得[]要删掉。</p>
+<p>REF: <a href="https://lasonneil.github.io/2023/07/07/posts/Hexo%E6%B7%BB%E5%8A%A0%E9%99%84%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">Hexo添加附件下载功能 | 清河的博客 (lasonneil.github.io)</a></p>
+<h4 id="插入图片"><a class="markdownIt-Anchor" href="#插入图片"></a> 插入图片</h4>
+<p>插入图片后把<code>.md</code>文件中前面两个点删掉，可能typora和网页导入的方法不一样。</p>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
   </entry>
   <entry>
     <title>逆向设计多维光复用工艺流程1.0</title>
@@ -1700,80 +1774,6 @@ IC618解压密码：minlei816<br />
 ]]></content>
       <tags>
         <tag>worklog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>采用gpu进行lumericalFDTD仿真</title>
-    <url>/2023/12/28/%E9%87%87%E7%94%A8gpu%E8%BF%9B%E8%A1%8ClumericalFDTD%E4%BB%BF%E7%9C%9F/</url>
-    <content><![CDATA[<h2 id="硬件需求"><a class="markdownIt-Anchor" href="#硬件需求"></a> 硬件需求</h2>
-<p>Nvidia CUDA driver version 450.80.02 or later (Linux), version 452.39 or later (windows)</p>
-<h2 id="仿真需求"><a class="markdownIt-Anchor" href="#仿真需求"></a> 仿真需求</h2>
-<p>需要设置为express模式：</p>
-<p><img src="/pictures/18518186955411.png" alt="img" /></p>
-<h2 id="目前限制"><a class="markdownIt-Anchor" href="#目前限制"></a> 目前限制</h2>
-<ol>
-<li>边界条件仅支持PML</li>
-<li>frequency dependent mode source profiles are not supported.</li>
-<li>time monitors 会限制仿真速度</li>
-</ol>
-<h2 id="其他"><a class="markdownIt-Anchor" href="#其他"></a> 其他</h2>
-<ol>
-<li>For multiple jobs it is recommended to run them in series rather than in parallel.</li>
-</ol>
-<h2 id="脚本实现"><a class="markdownIt-Anchor" href="#脚本实现"></a> 脚本实现</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">setnamed(&quot;FDTD&quot;, &quot;express mode&quot;, true);</span><br><span class="line">setresource(&quot;FDTD&quot;,&quot;GPU&quot;, true);</span><br><span class="line">setresource(&quot;FDTD&quot;, 3, &quot;GPU Device&quot;, &quot;Auto&quot;);</span><br><span class="line">setresource(&quot;FDTD&quot;, &quot;GPU&quot;, false);</span><br><span class="line">setresource(&quot;FDTD&quot;, &quot;CPU&quot;, true); //&lt; equivalent to previous line</span><br></pre></td></tr></table></figure>
-<h2 id="参考文献"><a class="markdownIt-Anchor" href="#参考文献"></a> 参考文献</h2>
-<ol>
-<li><a href="https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information">https://optics.ansys.com/hc/en-us/articles/17518942465811-FDTD-GPU-Solver-Information</a></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>技术小结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用说明书</title>
-    <url>/2023/12/20/%E9%9D%9E%E5%B8%B8%E7%AE%80%E7%95%A5%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
-    <content><![CDATA[<h4 id="hexo运行"><a class="markdownIt-Anchor" href="#hexo运行"></a> Hexo运行</h4>
-<p>在文件夹中右键，选择命令提示符或者git bush</p>
-<h4 id="创建"><a class="markdownIt-Anchor" href="#创建"></a> 创建</h4>
-<p>hexo new [布局] &lt;标题&gt;</p>
-<p>布局默认为[_drafts]文章，或者[_drafts] 草稿；或者[source]页面。</p>
-<p>可以通过publish _drafts &lt;标题&gt;来发布草稿</p>
-<p>其中布局和保存文件夹的对应关系如下：</p>
-<table>
-<thead>
-<tr>
-<th><code>post</code></th>
-<th><code>source/_posts</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>page</code></td>
-<td><code>source</code></td>
-</tr>
-<tr>
-<td><code>draft</code></td>
-<td><code>source/_drafts</code></td>
-</tr>
-</tbody>
-</table>
-<h4 id="预览"><a class="markdownIt-Anchor" href="#预览"></a> 预览</h4>
-<p>hexo clean</p>
-<p>hexo g</p>
-<p>hexo s</p>
-<h4 id="发布"><a class="markdownIt-Anchor" href="#发布"></a> 发布</h4>
-<p>hexo d</p>
-<h4 id="添加附件"><a class="markdownIt-Anchor" href="#添加附件"></a> 添加附件</h4>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;/download/[文件名]&quot;download&gt;[想要显示的文本]&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<p>记得[]要删掉。</p>
-<p>REF: <a href="https://lasonneil.github.io/2023/07/07/posts/Hexo%E6%B7%BB%E5%8A%A0%E9%99%84%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">Hexo添加附件下载功能 | 清河的博客 (lasonneil.github.io)</a></p>
-<h4 id="插入图片"><a class="markdownIt-Anchor" href="#插入图片"></a> 插入图片</h4>
-<p>插入图片后把<code>.md</code>文件中前面两个点删掉，可能typora和网页导入的方法不一样。</p>
-]]></content>
-      <tags>
-        <tag>技术小结</tag>
       </tags>
   </entry>
 </search>
