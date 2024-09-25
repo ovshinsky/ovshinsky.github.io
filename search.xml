@@ -1776,4 +1776,70 @@ IC618解压密码：minlei816<br />
         <tag>worklog</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Verilog-A-PAM4收发器-virtuoso互操作</title>
+    <url>/2024/09/12/Verilog-A-PAM4%E6%94%B6%E5%8F%91%E5%99%A8-virtuoso%E4%BA%92%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p>在这里，我们在Cadence Virtuoso中采用Verilog-A模型仿真了一个4脉冲幅度调制（PAM4）收发器。仿真了其频率响应谱和瞬时的眼图。</p>
+<blockquote>
+<p>仿真这个例程需要Spectre201（ISR17）或更高版本</p>
+<p><img src="/pictures/image-20240912171247351.png" alt="image-20240912171247351" /></p>
+<p>我也不知道这个版本可不可行 T.T （好像不行）</p>
+</blockquote>
+<h3 id="概述"><a class="markdownIt-Anchor" href="#概述"></a> 概述</h3>
+<p><img src="/pictures/360102402733.png" alt="workflow_cadence_interop_verilog-a_pam4_v3.PNG" /></p>
+<p>我们仿真了一个PAM4收发器，采用Verilog-A 模型。模型采用Spectre进行仿真，光学行为通过Verilog-A方法进行仿真。</p>
+<p>此回路是一个PAM收发器，包括一个连续波激光器，一个光学微环调制器，一个光栅耦合器，一组光波导，一个光探测器，一个调制器的电学驱动回路。</p>
+<blockquote>
+<p>Verilog-A模型存放在库<strong>pam4_va_example_lib</strong>和<strong>pam4_va_example_primitive_lib</strong>，这些库包括模型符号和组件描述格式（CDF）设置。请参考 <a href="https://support.lumerical.com/hc/en-us/articles/360037565953">CML Compiler Product reference manual </a>页面获得如何建立和使用Verilog-A模型的细节。</p>
+</blockquote>
+<h4 id="步骤1建立库参考和原理图设计"><a class="markdownIt-Anchor" href="#步骤1建立库参考和原理图设计"></a> 步骤1：建立库参考和原理图设计</h4>
+<p>将Verilog-A库和Virtuoso内置库添加到Library Manager的库路径中。然后，在Cadence Virtuoso中使用Verilog-A元素库设计电路原理图。同时还需要使用Cadence Virtuoso自带的<strong>analogLib</strong>、<strong>basic</strong> 和 <strong>opticalLib</strong> 库。</p>
+<h4 id="步骤-2配置ade-explorer"><a class="markdownIt-Anchor" href="#步骤-2配置ade-explorer"></a> 步骤 2：配置ADE Explorer</h4>
+<p>在模拟设计环境（ADE）Explorer窗口中定义设计变量、监控的输出端口和分析参数。</p>
+<h4 id="步骤-3生成网表-运行仿真并可视化结果"><a class="markdownIt-Anchor" href="#步骤-3生成网表-运行仿真并可视化结果"></a> 步骤 3：生成网表、运行仿真并可视化结果</h4>
+<p>接下来，我们可以生成网表并运行仿真。PAM4接收信号的传输波形和眼图将会在结果窗口中通过直接绘图方式呈现。响应谱也将生成。</p>
+<h4 id="步骤-4生成响应谱可选"><a class="markdownIt-Anchor" href="#步骤-4生成响应谱可选"></a> 步骤 4：生成响应谱（可选）</h4>
+<p>通过扫描光源的工作波长，可以在时域瞬态仿真中生成电路的频谱响应。在此步骤中，我们使用这种方法生成电路的频谱图。</p>
+]]></content>
+      <tags>
+        <tag>光互连</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PCIe_ads+vpi_test</title>
+    <url>/2024/09/24/PCIe-ads-vpi-test/</url>
+    <content><![CDATA[<p><a href="/download/pcie_20240923_wrk.zip" download>仿真文件下载</a></p>
+<h3 id="复习了vpiads的仿真方法"><a class="markdownIt-Anchor" href="#复习了vpiads的仿真方法"></a> 复习了vpi+ads的仿真方法</h3>
+<h4 id="采用ads打开仿真文件"><a class="markdownIt-Anchor" href="#采用ads打开仿真文件"></a> 采用ads打开仿真文件</h4>
+<h4 id="ads中原理图如下"><a class="markdownIt-Anchor" href="#ads中原理图如下"></a> ads中原理图如下：</h4>
+<p><img src="/pictures/image-20240924093856062.png" alt="image-20240924093856062" /></p>
+<h4 id="vpi中原理图如下"><a class="markdownIt-Anchor" href="#vpi中原理图如下"></a> vpi中原理图如下：</h4>
+<p><img src="/pictures/image-20240924093945889.png" alt="image-20240924093945889" /></p>
+<h5 id="vpi中进行了信号的放大和预失真"><a class="markdownIt-Anchor" href="#vpi中进行了信号的放大和预失真"></a> VPI中进行了信号的放大和预失真</h5>
+<p><img src="/pictures/image-20240924094843110.png" alt="image-20240924094843110" /></p>
+<p><img src="/pictures/image-20240924094856453.png" alt="image-20240924094856453" /></p>
+<h4 id="进行联合仿真"><a class="markdownIt-Anchor" href="#进行联合仿真"></a> 进行联合仿真</h4>
+<h5 id="通过全局变量传递参数"><a class="markdownIt-Anchor" href="#通过全局变量传递参数"></a> 通过全局变量传递参数</h5>
+<p><img src="/pictures/image-20240924094626548.png" alt="image-20240924094626548" /></p>
+<p><img src="/pictures/image-20240924094646956.png" alt="image-20240924094646956" /></p>
+<h4 id="采用了tx-ami模拟芯片发生的信号"><a class="markdownIt-Anchor" href="#采用了tx-ami模拟芯片发生的信号"></a> 采用了Tx AMI模拟芯片发生的信号：</h4>
+<p><img src="/pictures/image-20240924094034868.png" alt="image-20240924094034868" /></p>
+<p>Tx_DCD = 0.1 UI</p>
+<p>Tx_RJ = 0.01 UI</p>
+<p>Tx_DJ = 0.05 UI</p>
+<p>Deemphasis = -5 dB</p>
+<h4 id="rx-ami模拟芯片包括ctle和dfe"><a class="markdownIt-Anchor" href="#rx-ami模拟芯片包括ctle和dfe"></a> Rx AMI模拟芯片包括CTLE和DFE</h4>
+<h4 id="采用pciegen5refchannel模拟封装损耗"><a class="markdownIt-Anchor" href="#采用pciegen5refchannel模拟封装损耗"></a> 采用PCIeGen5RefChannel模拟封装损耗：</h4>
+<p><img src="/pictures/image-20240924094131452.png" alt="image-20240924094131452" /></p>
+<h5 id="采用s参数仿真器仿真封装s参数"><a class="markdownIt-Anchor" href="#采用s参数仿真器仿真封装s参数"></a> 采用S参数仿真器仿真封装S参数</h5>
+<p><img src="/pictures/image-20240924094233944.png" alt="image-20240924094233944" /></p>
+<h5 id="结果如下"><a class="markdownIt-Anchor" href="#结果如下"></a> 结果如下</h5>
+<p><img src="/pictures/image-20240924094259965.png" alt="image-20240924094259965" /></p>
+<h4 id="在ads中查看tx发送端-rx接收端和最后的信号眼图"><a class="markdownIt-Anchor" href="#在ads中查看tx发送端-rx接收端和最后的信号眼图"></a> 在ADS中查看Tx发送端、Rx接收端和最后的信号眼图</h4>
+<p><img src="/pictures/image-20240924095013472.png" alt="image-20240924095013472" /></p>
+]]></content>
+      <tags>
+        <tag>光互连</tag>
+      </tags>
+  </entry>
 </search>
