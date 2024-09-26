@@ -1004,4 +1004,33 @@ r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 = I_2
         <tag>worklog</tag>
       </tags>
   </entry>
+  <entry>
+    <title>部署ChatGPT学术优化——chatgpt_academic</title>
+    <url>/2024/09/26/%E9%83%A8%E7%BD%B2ChatGPT%E5%AD%A6%E6%9C%AF%E4%BC%98%E5%8C%96%E2%80%94%E2%80%94chatgpt-academic/</url>
+    <content><![CDATA[<p>REF: [纯代码小白部署ChatGPT 学术优化——chatgpt_academic - 知乎 (<a href="http://zhihu.com">zhihu.com</a>)](<a href="https://zhuanlan.zhihu.com/p/618303185#:~:text=ChatGPT">https://zhuanlan.zhihu.com/p/618303185#:~:text=ChatGPT</a> 学术)</p>
+<p>此外：</p>
+<ol>
+<li>
+<p>报错缺少包可以使用pip install安装</p>
+</li>
+<li>
+<p>chatgpt api key的获取:</p>
+<blockquote>
+<ul>
+<li>
+<p><a href="https://github.com/chatanywhere/GPT_API_free">chatanywhere/GPT_API_free: Free ChatGPT API Key，免费ChatGPT API，支持GPT4 API（免费），ChatGPT国内可用免费转发API，直连无需代理。可以搭配ChatBox等软件/插件使用，极大降低接口使用成本。国内即可无限制畅快聊天。 (github.com)</a> -&gt; <a href="https://api.chatanywhere.org/v1/oauth/free/github/render">申请内测免费Key</a></p>
+</li>
+<li>
+<p>找到<code>config.py</code>文件中的<code>API_URL_REDIRECT</code>配置并修改为以下内容：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">API_URL_REDIRECT = &#123;<span class="string">&quot;https://api.openai.com/v1/chat/completions&quot;</span>: <span class="string">&quot;https://api.chatanywhere.tech/v1/chat/completions&quot;</span>&#125;</span><br><span class="line"><span class="comment"># API_URL_REDIRECT = &#123;&quot;https://api.openai.com/v1/chat/completions&quot;: &quot;https://api.chatanywhere.org/v1/chat/completions&quot;&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
 </search>
