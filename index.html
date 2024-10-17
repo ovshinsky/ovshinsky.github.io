@@ -200,6 +200,257 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/17/%E6%88%91%E5%B8%B8%E7%94%A8%E7%9A%84Lumerical%E8%84%9A%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/10/17/%E6%88%91%E5%B8%B8%E7%94%A8%E7%9A%84Lumerical%E8%84%9A%E6%9C%AC/" class="post-title-link" itemprop="url">我常用的Lumerical脚本</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-10-17 10:35:33 / 修改时间：10:36:00" itemprop="dateCreated datePublished" datetime="2024-10-17T10:35:33+08:00">2024-10-17</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>将脚本复制放在command line里就可以使用，注意修改监视器名称。</p>
+<p>-———————————————————————————————————————————————</p>
+<p><strong>一个监视器的transmission转换为dB：</strong></p>
+<p>monitor0=”drop”;</p>
+<p>T_temp =getresult(monitor0,”T”);</p>
+<p>x=T_temp.lambda;</p>
+<p>x=1000000000*x;</p>
+<p>y=10*log10(T_temp.T);</p>
+<p>plot(x,y,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =5” );</p>
+<p>legend(monitor0);</p>
+<p><strong>两个监视器的transmission转换为dB后比较：</strong></p>
+<p>monitor0 = “out”;</p>
+<p>monitor1 = “in”;</p>
+<p>T_out=getresult(monitor0,”T”);</p>
+<p>T_in =getresult(monitor1,”T”);</p>
+<p>x=T_out.lambda;</p>
+<p>x=1000000000*x;</p>
+<p>y1=10*log10(T_out.T);</p>
+<p>y2=10*log10(T_in.T);</p>
+<p>plot(x,y1,y2,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =5” );</p>
+<p>legend(monitor0, monitor1);</p>
+<p><strong>一个监视器的不同模式转换为dB后比较:</strong></p>
+<p><strong>向前传输的模式：</strong></p>
+<p>#首先把mode expansion MONITOR命名为outmode</p>
+<p>T0=getresult(“outmode”,”expansion for “);</p>
+<p>x=T0.lambda;</p>
+<p>x=1000000000*x;</p>
+<p>y0=real(10*log10(-T0.T_forward(:,1)));</p>
+<p>plot(x,y0,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =5” );</p>
+<p>#legend(“upper waveguide”,”bottom waveguide”);</p>
+<p>holdon;</p>
+<p>x=T0.lambda;</p>
+<p>x=1000000000*x;</p>
+<p>y1=real(10*log10(T0.T_forward(:,2)));</p>
+<p>plot(x,y1,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y2=real(10*log10(-T0.T_forward(:,3)));</p>
+<p>plot(x,y2,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y3=real(10*log10(-T0.T_forward(:,4)));</p>
+<p>plot(x,y3,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y4=real(10*log10(-T0.T_forward(:,5)));</p>
+<p>plot(x,y4,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y5=real(10*log10(-T0.T_forward(:,6)));</p>
+<p>plot(x,y5,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y6=real(10*log10(-T0.T_forward(:,7)));</p>
+<p>plot(x,y6,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y7=real(10*log10(-T0.T_forward(:,8)));</p>
+<p>plot(x,y7,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y8=real(10*log10(-T0.T_forward(:,9)));</p>
+<p>plot(x,y8,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y9=real(10*log10(-T0.T_forward(:,10)));</p>
+<p>plot(x,y9,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3”);</p>
+<p>legend(“TE0”,”TE1”,”TE2”,”TE3”,”TE4”,”TE5”,”TE6”,”TE7”,”TE8”,”TE9”);</p>
+<p>holdoff;</p>
+<p><strong>向后传输的模式：</strong></p>
+<p>#首先把mode expansion MONITOR命名为in_mode</p>
+<p>T0=getresult(“in_mode”,”expansion for “);</p>
+<p>x=T0.lambda;</p>
+<p>x=1000000000*x;</p>
+<p>y0=real(10*log10(-T0.T_backward(:,1)));</p>
+<p>plot(x,y0,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =5” );</p>
+<p>#legend(“upper waveguide”,”bottom waveguide”);</p>
+<p>holdon;</p>
+<p>x=T0.lambda;</p>
+<p>x=1000000000*x;</p>
+<p>y1=real(10*log10(-T0.T_backward(:,2)));</p>
+<p>plot(x,y1,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y2=real(10*log10(-T0.T_backward(:,3)));</p>
+<p>plot(x,y2,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y3=real(10*log10(-T0.T_backward(:,4)));</p>
+<p>plot(x,y3,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y4=real(10*log10(-T0.T_backward(:,5)));</p>
+<p>plot(x,y4,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y5=real(10*log10(-T0.T_backward(:,6)));</p>
+<p>plot(x,y5,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y6=real(10*log10(-T0.T_backward(:,7)));</p>
+<p>plot(x,y6,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y7=real(10*log10(-T0.T_backward(:,8)));</p>
+<p>plot(x,y7,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y8=real(10*log10(-T0.T_backward(:,9)));</p>
+<p>plot(x,y8,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y9=real(10*log10(-T0.T_backward(:,10)));</p>
+<p>plot(x,y9,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>legend(“TE0”,”TE1”,”TE2”,”TE3”,”TE4”,”TE5”,”TE6”,”TE7”,”TE8”,”TE9”);</p>
+<p>holdoff;</p>
+<p><strong>批量仿真</strong></p>
+<p>clearjobs;</p>
+<p>addjob(“L70a1_5gap120”);</p>
+<p>addjob(“L70a2_0gap100”);</p>
+<p>addjob(“L70a2_0gap120”);</p>
+<p>addjob(“L70a2_0gap150”);</p>
+<p>addjob(“L70a2_0gap180”);</p>
+<p>addjob(“L70a2_0gap210”);</p>
+<p>runjobs;</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/16/%E5%9F%BA%E4%BA%8E%E8%B6%85%E6%9E%84%E6%9D%90%E6%96%99%E7%9A%84%E7%B4%A7%E5%87%91%E5%9E%8B%E6%BB%A4%E6%B3%A2%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/10/16/%E5%9F%BA%E4%BA%8E%E8%B6%85%E6%9E%84%E6%9D%90%E6%96%99%E7%9A%84%E7%B4%A7%E5%87%91%E5%9E%8B%E6%BB%A4%E6%B3%A2%E5%99%A8/" class="post-title-link" itemprop="url">基于超构材料的紧凑型滤波器</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-10-16 10:43:50" itemprop="dateCreated datePublished" datetime="2024-10-16T10:43:50+08:00">2024-10-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-10-17 10:31:51" itemprop="dateModified" datetime="2024-10-17T10:31:51+08:00">2024-10-17</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>177</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/10/16/%E5%9F%BA%E4%BA%8E%E8%B6%85%E6%9E%84%E6%9D%90%E6%96%99%E7%9A%84%E7%B4%A7%E5%87%91%E5%9E%8B%E6%BB%A4%E6%B3%A2%E5%99%A8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/15/%E9%9D%A2%E5%90%91%E6%9E%81%E9%AB%98%E5%B8%A6%E5%AE%BD%E5%92%8C%E8%83%BD%E6%95%88%E7%89%87%E9%97%B4%E4%BA%92%E8%BF%9E%E7%9A%84%E7%A1%85%E5%85%89%E8%8A%AF%E7%89%87I-O/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -841,190 +1092,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/26/%E9%83%A8%E7%BD%B2ChatGPT%E5%AD%A6%E6%9C%AF%E4%BC%98%E5%8C%96%E2%80%94%E2%80%94chatgpt-academic/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
-      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
-      <meta itemprop="description" content="You should write because writing makes you a better person.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZhaoYaotian's Blogs">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/09/26/%E9%83%A8%E7%BD%B2ChatGPT%E5%AD%A6%E6%9C%AF%E4%BC%98%E5%8C%96%E2%80%94%E2%80%94chatgpt-academic/" class="post-title-link" itemprop="url">部署ChatGPT学术优化——chatgpt_academic</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-09-26 09:23:42 / 修改时间：13:08:04" itemprop="dateCreated datePublished" datetime="2024-09-26T09:23:42+08:00">2024-09-26</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>715</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>REF: [纯代码小白部署ChatGPT 学术优化——chatgpt_academic - 知乎 (<a target="_blank" rel="noopener" href="http://zhihu.com">zhihu.com</a>)](<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618303185#:~:text=ChatGPT">https://zhuanlan.zhihu.com/p/618303185#:~:text=ChatGPT</a> 学术)</p>
-<p>此外：</p>
-<ol>
-<li>
-<p>报错缺少包可以使用pip install安装</p>
-</li>
-<li>
-<p>chatgpt api key的获取:</p>
-<blockquote>
-<ul>
-<li>
-<p><a target="_blank" rel="noopener" href="https://github.com/chatanywhere/GPT_API_free">chatanywhere/GPT_API_free: Free ChatGPT API Key，免费ChatGPT API，支持GPT4 API（免费），ChatGPT国内可用免费转发API，直连无需代理。可以搭配ChatBox等软件/插件使用，极大降低接口使用成本。国内即可无限制畅快聊天。 (github.com)</a> -&gt; <a target="_blank" rel="noopener" href="https://api.chatanywhere.org/v1/oauth/free/github/render">申请内测免费Key</a></p>
-</li>
-<li>
-<p>找到<code>config.py</code>文件中的<code>API_URL_REDIRECT</code>配置并修改为以下内容：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">API_URL_REDIRECT = &#123;<span class="string">&quot;https://api.openai.com/v1/chat/completions&quot;</span>: <span class="string">&quot;https://api.chatanywhere.tech/v1/chat/completions&quot;</span>&#125;</span><br><span class="line"><span class="comment"># API_URL_REDIRECT = &#123;&quot;https://api.openai.com/v1/chat/completions&quot;: &quot;https://api.chatanywhere.org/v1/chat/completions&quot;&#125;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-</li>
-<li>
-<p>运行方式：</p>
-<p>运行Anaconda Prompt，输入命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd chatgpt_academic</span><br><span class="line">python main.py</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/25/%E4%BC%98%E5%8C%96%E8%A1%8C%E6%B3%A2MZM%E8%B0%83%E5%88%B6%E5%99%A8-optiSLang%E4%BA%92%E6%93%8D%E4%BD%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
-      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
-      <meta itemprop="description" content="You should write because writing makes you a better person.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZhaoYaotian's Blogs">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/09/25/%E4%BC%98%E5%8C%96%E8%A1%8C%E6%B3%A2MZM%E8%B0%83%E5%88%B6%E5%99%A8-optiSLang%E4%BA%92%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">优化行波MZM调制器_optiSLang互操作</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-09-25 16:48:00" itemprop="dateCreated datePublished" datetime="2024-09-25T16:48:00+08:00">2024-09-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-09-27 15:48:43" itemprop="dateModified" datetime="2024-09-27T15:48:43+08:00">2024-09-27</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>5.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/09/25/%E4%BC%98%E5%8C%96%E8%A1%8C%E6%B3%A2MZM%E8%B0%83%E5%88%B6%E5%99%A8-optiSLang%E4%BA%92%E6%93%8D%E4%BD%9C/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1096,7 +1163,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">94</span>
+          <span class="site-state-item-count">96</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1145,13 +1212,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">188k</span>
+    <span title="站点总字数">192k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:51</span>
+    <span title="站点阅读时长">2:55</span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
 
         

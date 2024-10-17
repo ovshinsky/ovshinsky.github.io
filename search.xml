@@ -2015,4 +2015,124 @@ Origin源文件 <a href="/download/不同RMS下损耗和波导粗糙度的关系
         <tag>光互连</tag>
       </tags>
   </entry>
+  <entry>
+    <title>我常用的Lumerical脚本</title>
+    <url>/2024/10/17/%E6%88%91%E5%B8%B8%E7%94%A8%E7%9A%84Lumerical%E8%84%9A%E6%9C%AC/</url>
+    <content><![CDATA[<p>将脚本复制放在command line里就可以使用，注意修改监视器名称。</p>
+<p>-———————————————————————————————————————————————</p>
+<p><strong>一个监视器的transmission转换为dB：</strong></p>
+<p>monitor0=”drop”;</p>
+<p>T_temp =getresult(monitor0,”T”);</p>
+<p>x=T_temp.lambda;</p>
+<p>x=1000000000*x;</p>
+<p>y=10*log10(T_temp.T);</p>
+<p>plot(x,y,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =5” );</p>
+<p>legend(monitor0);</p>
+<p><strong>两个监视器的transmission转换为dB后比较：</strong></p>
+<p>monitor0 = “out”;</p>
+<p>monitor1 = “in”;</p>
+<p>T_out=getresult(monitor0,”T”);</p>
+<p>T_in =getresult(monitor1,”T”);</p>
+<p>x=T_out.lambda;</p>
+<p>x=1000000000*x;</p>
+<p>y1=10*log10(T_out.T);</p>
+<p>y2=10*log10(T_in.T);</p>
+<p>plot(x,y1,y2,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =5” );</p>
+<p>legend(monitor0, monitor1);</p>
+<p><strong>一个监视器的不同模式转换为dB后比较:</strong></p>
+<p><strong>向前传输的模式：</strong></p>
+<p>#首先把mode expansion MONITOR命名为outmode</p>
+<p>T0=getresult(“outmode”,”expansion for “);</p>
+<p>x=T0.lambda;</p>
+<p>x=1000000000*x;</p>
+<p>y0=real(10*log10(-T0.T_forward(:,1)));</p>
+<p>plot(x,y0,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =5” );</p>
+<p>#legend(“upper waveguide”,”bottom waveguide”);</p>
+<p>holdon;</p>
+<p>x=T0.lambda;</p>
+<p>x=1000000000*x;</p>
+<p>y1=real(10*log10(T0.T_forward(:,2)));</p>
+<p>plot(x,y1,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y2=real(10*log10(-T0.T_forward(:,3)));</p>
+<p>plot(x,y2,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y3=real(10*log10(-T0.T_forward(:,4)));</p>
+<p>plot(x,y3,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y4=real(10*log10(-T0.T_forward(:,5)));</p>
+<p>plot(x,y4,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y5=real(10*log10(-T0.T_forward(:,6)));</p>
+<p>plot(x,y5,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y6=real(10*log10(-T0.T_forward(:,7)));</p>
+<p>plot(x,y6,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y7=real(10*log10(-T0.T_forward(:,8)));</p>
+<p>plot(x,y7,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y8=real(10*log10(-T0.T_forward(:,9)));</p>
+<p>plot(x,y8,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y9=real(10*log10(-T0.T_forward(:,10)));</p>
+<p>plot(x,y9,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3”);</p>
+<p>legend(“TE0”,”TE1”,”TE2”,”TE3”,”TE4”,”TE5”,”TE6”,”TE7”,”TE8”,”TE9”);</p>
+<p>holdoff;</p>
+<p><strong>向后传输的模式：</strong></p>
+<p>#首先把mode expansion MONITOR命名为in_mode</p>
+<p>T0=getresult(“in_mode”,”expansion for “);</p>
+<p>x=T0.lambda;</p>
+<p>x=1000000000*x;</p>
+<p>y0=real(10*log10(-T0.T_backward(:,1)));</p>
+<p>plot(x,y0,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =5” );</p>
+<p>#legend(“upper waveguide”,”bottom waveguide”);</p>
+<p>holdon;</p>
+<p>x=T0.lambda;</p>
+<p>x=1000000000*x;</p>
+<p>y1=real(10*log10(-T0.T_backward(:,2)));</p>
+<p>plot(x,y1,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y2=real(10*log10(-T0.T_backward(:,3)));</p>
+<p>plot(x,y2,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y3=real(10*log10(-T0.T_backward(:,4)));</p>
+<p>plot(x,y3,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y4=real(10*log10(-T0.T_backward(:,5)));</p>
+<p>plot(x,y4,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y5=real(10*log10(-T0.T_backward(:,6)));</p>
+<p>plot(x,y5,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y6=real(10*log10(-T0.T_backward(:,7)));</p>
+<p>plot(x,y6,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y7=real(10*log10(-T0.T_backward(:,8)));</p>
+<p>plot(x,y7,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y8=real(10*log10(-T0.T_backward(:,9)));</p>
+<p>plot(x,y8,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>y9=real(10*log10(-T0.T_backward(:,10)));</p>
+<p>plot(x,y9,”Wavelength(nm)”, “Transmission(dB)”,”Simulated response”,”linewidth =3” );</p>
+<p>legend(“TE0”,”TE1”,”TE2”,”TE3”,”TE4”,”TE5”,”TE6”,”TE7”,”TE8”,”TE9”);</p>
+<p>holdoff;</p>
+<p><strong>批量仿真</strong></p>
+<p>clearjobs;</p>
+<p>addjob(“L70a1_5gap120”);</p>
+<p>addjob(“L70a2_0gap100”);</p>
+<p>addjob(“L70a2_0gap120”);</p>
+<p>addjob(“L70a2_0gap150”);</p>
+<p>addjob(“L70a2_0gap180”);</p>
+<p>addjob(“L70a2_0gap210”);</p>
+<p>runjobs;</p>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于超构材料的紧凑型滤波器</title>
+    <url>/2024/10/16/%E5%9F%BA%E4%BA%8E%E8%B6%85%E6%9E%84%E6%9D%90%E6%96%99%E7%9A%84%E7%B4%A7%E5%87%91%E5%9E%8B%E6%BB%A4%E6%B3%A2%E5%99%A8/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="fcf6e81f0fc4181acee8ae23a55eb08d5d1ac9b321c4cf03b945fdfea959ff0a">9f90b056097cc9d196826240cdaa0c59c45676de4ba46bd7adf6e63aae0189978642176177b92250b7e30859e7e30daefa79b744cbedcc5e503b1aeae4317565418b57007c8039f3284ac82f473b22b042cca8dc5c6ba2cf6a33e4860bfc41234de5aeaec905f356efae29686f812a301676775f9122a49277d858babc20f8701f96456486ef6db85ced03f22d7c613975a316d4552ec6654321e2f6870706a4f5c4f5d4e8575c386b4180f67f1a8628d341247ca04a464589e5e8672093e595dd27406570be750603ffd4965aae407a32754ba8ed84686f3e10d39fd860b1a219748a74ca8086ce80b094428a5183792d4027fe6a53957c97e8b214443c44528ba2dc80d8b645ca7805bec1c86ac9d9032d759403ef686ebf08d5893b3d659885bfa8753f95e6ab8b67148fc4886ccf76c6cf35e3f15f62cce7ce13e63ce20efaeb7c2364b439aa3a5014bb6b1dc51e0fbf802272053b27d595d681e960019cece6277b6b4966880a3c3955c96973adf4b6b27b1dc89977cd08723bc183c090161b57618f8c7cb3202ece1017ff62576b166e32c0ec73c9fe6c458ecc84ea5673d37836287e99e40c94df21294d1507e67981920c17fe174ffb719ec7d2de34a70b7b5c9df02eda3238268f29f555445141c9a5b29ee075813c087b052c1fa447ddab582123f93642541dfdbc921846934729261b969e1155503af722dd7a365ce056628f49c6c31ee26bb65e5ad730a4f5bfdc9c279595bd86d474f6b91137555e4133571c5dcc82dfed43a4d19e28360b525822780aff90c5c50f049df4bb9a3fcaf5c5e78cf5a97e2230e17c5bba7c2bb2f5dacec86df0be268f03347d5d59663b2540dbae08ffab2db310b3d334f4f0f68965b14446a56fb00f54bdbff06f4f9c9bacbd49dab12d3d3d5fee172eb168f8945fcf4bc14f76d1a860d16598aff40378374c161f9024261e545e2ddf5ed883bb65972503423a2395b6b19f9a7e872e7d20a5171af8b89cd3b29447af4ec6f1747f6d2e26aea06a79035cfebc900e99675d4e1c274a487ae02bce9bf743fe4db6c7c854a5cb59534ed0188029342f425382e0bd60290b4d127ca13f8b</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>光互连</tag>
+      </tags>
+  </entry>
 </search>
