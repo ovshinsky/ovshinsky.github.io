@@ -200,6 +200,92 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/19/PCIe%20%E5%9F%BA%E7%A1%80%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You should write because writing makes you a better person.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/05/19/PCIe%20%E5%9F%BA%E7%A1%80%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">PCIe 基础规范学习</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-05-19 19:59:08" itemprop="dateCreated datePublished" datetime="2024-05-19T19:59:08+08:00">2024-05-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-13 10:49:56" itemprop="dateModified" datetime="2024-09-13T10:49:56+08:00">2024-09-13</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/05/19/PCIe%20%E5%9F%BA%E7%A1%80%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/19/%E5%8D%9A%E5%A3%AB%E7%AD%94%E8%BE%A9%E9%80%9A%E8%BF%87%E5%95%A6%EF%BC%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -345,7 +431,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <table>
+          <div class="table-container">
+<table>
 <thead>
 <tr>
 <th>工艺流程</th>
@@ -431,6 +518,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 
       
     </div>
@@ -509,9 +597,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="结构原理"><a class="markdownIt-Anchor" href="#结构原理"></a> 结构原理</h4>
-<h4 id="用来检查模式反射光谱的代码"><a class="markdownIt-Anchor" href="#用来检查模式反射光谱的代码"></a> 用来检查模式反射光谱的代码：</h4>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#首先把mode expansion MONITOR命名为in_mode</span></span><br><span class="line">T0=getresult(<span class="string">&quot;in_mode&quot;</span>,<span class="string">&quot;expansion for &quot;</span>);</span><br><span class="line">x=T0.<span class="keyword">lambda</span>;</span><br><span class="line">x=<span class="number">1000000000</span>*x;</span><br><span class="line">y0=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">1</span>)));</span><br><span class="line">plot(x,y0,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =5&quot;</span> );</span><br><span class="line">holdon;</span><br><span class="line">y1=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">2</span>)));</span><br><span class="line">plot(x,y1,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">y2=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">3</span>)));</span><br><span class="line">plot(x,y2,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">legend(<span class="string">&quot;TE0-TE0&quot;</span>,<span class="string">&quot;TE1-TE1&quot;</span>,<span class="string">&quot;TE2-TE2&quot;</span>);</span><br><span class="line">holdoff;</span><br></pre></td></tr></table></figure>
+          <h4 id="结构原理"><a href="#结构原理" class="headerlink" title="结构原理"></a>结构原理</h4><h4 id="用来检查模式反射光谱的代码："><a href="#用来检查模式反射光谱的代码：" class="headerlink" title="用来检查模式反射光谱的代码："></a>用来检查模式反射光谱的代码：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#首先把mode expansion MONITOR命名为in_mode</span></span><br><span class="line">T0=getresult(<span class="string">&quot;in_mode&quot;</span>,<span class="string">&quot;expansion for &quot;</span>);</span><br><span class="line">x=T0.<span class="keyword">lambda</span>;</span><br><span class="line">x=<span class="number">1000000000</span>*x;</span><br><span class="line">y0=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">1</span>)));</span><br><span class="line">plot(x,y0,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =5&quot;</span> );</span><br><span class="line">holdon;</span><br><span class="line">y1=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">2</span>)));</span><br><span class="line">plot(x,y1,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">y2=real(<span class="number">10</span>*log10(-T0.T_backward(:,<span class="number">3</span>)));</span><br><span class="line">plot(x,y2,<span class="string">&quot;Wavelength(nm)&quot;</span>, <span class="string">&quot;Transmission(dB)&quot;</span>,<span class="string">&quot;Simulated response&quot;</span>,<span class="string">&quot;linewidth =3&quot;</span> );</span><br><span class="line">legend(<span class="string">&quot;TE0-TE0&quot;</span>,<span class="string">&quot;TE1-TE1&quot;</span>,<span class="string">&quot;TE2-TE2&quot;</span>);</span><br><span class="line">holdoff;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -590,18 +676,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="structure-and-parameter"><a class="markdownIt-Anchor" href="#structure-and-parameter"></a> Structure and parameter:</h2>
-<p><img src="/pictures/image-20240108174153008.png" alt="image-20240108174153008" /></p>
-<p>w = 1 μm d = 50 nm</p>
-<h2 id="period-initial"><a class="markdownIt-Anchor" href="#period-initial"></a> Period initial</h2>
-<p>Mode effective index:</p>
-<p><img src="/pictures/image-20240108174235914.png" alt="image-20240108174235914" /></p>
+          <h2 id="Structure-and-parameter"><a href="#Structure-and-parameter" class="headerlink" title="Structure and parameter:"></a>Structure and parameter:</h2><p><img src="/pictures/image-20240108174153008.png" alt="image-20240108174153008"></p>
+<p>w = 1 μm d = 50 nm </p>
+<h2 id="Period-initial"><a href="#Period-initial" class="headerlink" title="Period initial"></a>Period initial</h2><p>Mode effective index:</p>
+<p><img src="/pictures/image-20240108174235914.png" alt="image-20240108174235914"></p>
 <p>Period initial : 1550/(2.751637-2.426784) = 4771.388905 nm</p>
-<h2 id="simulation"><a class="markdownIt-Anchor" href="#simulation"></a> Simulation:</h2>
-<p><img src="/pictures/image-20240108174318261.png" alt="image-20240108174318261" /></p>
+<h2 id="Simulation"><a href="#Simulation" class="headerlink" title="Simulation:"></a>Simulation:</h2><p><img src="/pictures/image-20240108174318261.png" alt="image-20240108174318261"></p>
 <p>Optimized period: 5.08 μm</p>
-<h2 id="result"><a class="markdownIt-Anchor" href="#result"></a> Result:</h2>
-<p><img src="/pictures/120240108.png" alt="120240108" /></p>
+<h2 id="Result"><a href="#Result" class="headerlink" title="Result:"></a>Result:</h2><p><img src="/pictures/120240108.png" alt="120240108"></p>
 
       
     </div>
@@ -655,7 +737,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>97</span>
+              <span>95</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -674,23 +756,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h2>
-<p>因为要画结构的3D示意图，发现ppt画的挺方便的。虽然可能渲染什么的高级功能差一点。</p>
-<h2 id="方法"><a class="markdownIt-Anchor" href="#方法"></a> 方法</h2>
-<h3 id="建立2d图片"><a class="markdownIt-Anchor" href="#建立2d图片"></a> 建立2D图片：</h3>
-<p>可以先画好结构，然后用iside布尔运算</p>
+          <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>因为要画结构的3D示意图，发现ppt画的挺方便的。虽然可能渲染什么的高级功能差一点。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="建立2D图片："><a href="#建立2D图片：" class="headerlink" title="建立2D图片："></a>建立2D图片：</h3><p>可以先画好结构，然后用iside布尔运算</p>
+<p>1.</p>
+<p><img src="/pictures/image-20240108151959481.png" alt="image-20240108151959481"></p>
 <ol>
-<li></li>
+<li><img src="/pictures/image-20240108151947035.png" alt="image-20240108151947035"></li>
+<li><img src="/pictures/image-20240108152009712.png" alt="image-20240108152009712"></li>
 </ol>
-<p><img src="/pictures/image-20240108151959481.png" alt="image-20240108151959481" /><br />
-2.<br />
-<img src="/pictures/image-20240108151947035.png" alt="image-20240108151947035" /><br />
-3.<br />
-<img src="/pictures/image-20240108152009712.png" alt="image-20240108152009712" /></p>
-<h3 id="用ppt的三维格式进行修改"><a class="markdownIt-Anchor" href="#用ppt的三维格式进行修改"></a> 用PPT的三维格式进行修改</h3>
-<p><img src="/pictures/image-20240108152333140.png" alt="image-20240108152333140" /></p>
-<h3 id="最后结果如下"><a class="markdownIt-Anchor" href="#最后结果如下"></a> 最后结果如下：</h3>
-<p><img src="/pictures/image-20240108152354898.png" alt="image-20240108152354898" /></p>
+<h3 id="用PPT的三维格式进行修改"><a href="#用PPT的三维格式进行修改" class="headerlink" title="用PPT的三维格式进行修改"></a>用PPT的三维格式进行修改</h3><p><img src="/pictures/image-20240108152333140.png" alt="image-20240108152333140"></p>
+<h3 id="最后结果如下："><a href="#最后结果如下：" class="headerlink" title="最后结果如下："></a>最后结果如下：</h3><p><img src="/pictures/image-20240108152354898.png" alt="image-20240108152354898"></p>
 
       
     </div>
@@ -763,22 +838,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="问题描述"><a class="markdownIt-Anchor" href="#问题描述"></a> 问题描述：</h3>
-<p>识别插入word的公式前面有一些奇奇怪怪的空间，后面发现是占位符，想把它们删掉，从而实现公式的对齐。</p>
-<p><img src="/pictures/image-20240108131147814.png" alt="image-20240108131147814" /></p>
-<h3 id="解决方法"><a class="markdownIt-Anchor" href="#解决方法"></a> 解决方法：</h3>
-<ol>
+          <h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>识别插入word的公式前面有一些奇奇怪怪的空间，后面发现是占位符，想把它们删掉，从而实现公式的对齐。</p>
+<p><img src="/pictures/image-20240108131147814.png" alt="image-20240108131147814"></p>
+<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><ol>
 <li>显示占位符</li>
 </ol>
-<p><img src="/pictures/image-20240108131248181.png" alt="image-20240108131248181" /></p>
-<ol start="2">
+<p><img src="/pictures/image-20240108131248181.png" alt="image-20240108131248181"></p>
+<ol>
 <li>删除列</li>
 </ol>
-<p><img src="/pictures/image-20240108131334353.png" alt="image-20240108131334353" /></p>
-<ol start="3">
+<p><img src="/pictures/image-20240108131334353.png" alt="image-20240108131334353"></p>
+<ol>
 <li>最后效果：</li>
 </ol>
-<p><img src="/pictures/image-20240108131416647.png" alt="image-20240108131416647" /></p>
+<p><img src="/pictures/image-20240108131416647.png" alt="image-20240108131416647"></p>
 
       
     </div>
@@ -857,23 +930,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="为什么要把lumerical画的图导入matlab重新画图"><a class="markdownIt-Anchor" href="#为什么要把lumerical画的图导入matlab重新画图"></a> 为什么要把Lumerical画的图导入MATLAB重新画图</h2>
-<p>为了统一画图的格式，后续可以把matlab重新画的图导入AI统一进行图像的绘制和处理。</p>
-<h2 id="具体方法"><a class="markdownIt-Anchor" href="#具体方法"></a> 具体方法：</h2>
-<h3 id="1-首先把lumerical画出的模场分布导出为txt格式"><a class="markdownIt-Anchor" href="#1-首先把lumerical画出的模场分布导出为txt格式"></a> 1. 首先把Lumerical画出的模场分布导出为TXT格式：</h3>
-<p><img src="/pictures/adfdsfewwqex20240107.png" alt="adfdsfewwqex20240107" /></p>
-<h3 id="2-修改txt格式的文件的内容添加上bulk_e_slice"><a class="markdownIt-Anchor" href="#2-修改txt格式的文件的内容添加上bulk_e_slice"></a> 2. 修改txt格式的文件的内容，添加上bulk_E_slice = [ … ]</h3>
-<p><img src="/pictures/image-20240107192215500.png" alt="image-20240107192215500" /></p>
-<p><img src="/pictures/image-20240107192251396.png" alt="image-20240107192251396" /></p>
-<h3 id="3-把txt文件重命名为power_distributionm"><a class="markdownIt-Anchor" href="#3-把txt文件重命名为power_distributionm"></a> 3. 把txt文件重命名为power_distribution.m</h3>
-<p><img src="/pictures/image-20240107192301482.png" alt="image-20240107192301482" /></p>
-<h3 id="4-运行matlab程序"><a class="markdownIt-Anchor" href="#4-运行matlab程序"></a> 4. 运行MATLAB程序</h3>
-<h4 id="matlab代码"><a class="markdownIt-Anchor" href="#matlab代码"></a> MATLAB代码</h4>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">close all;</span><br><span class="line">clear;</span><br><span class="line">power_distribution;</span><br><span class="line">bulk_E_slice =<span class="built_in">rot90</span>(bulk_E_slice);</span><br><span class="line"><span class="built_in">length</span> = <span class="number">104</span>;</span><br><span class="line">width = <span class="number">4</span>;</span><br><span class="line">x =<span class="number">0</span>:<span class="built_in">size</span>(bulk_E_slice,<span class="number">1</span>)*<span class="built_in">length</span>/<span class="built_in">size</span>(bulk_E_slice,<span class="number">1</span>);</span><br><span class="line">y =<span class="number">0</span>:<span class="built_in">size</span>(bulk_E_slice,<span class="number">2</span>)*width/<span class="built_in">size</span>(bulk_E_slice,<span class="number">2</span>);</span><br><span class="line">y = <span class="built_in">fliplr</span>(y);</span><br><span class="line">x = x<span class="number">-3</span>;</span><br><span class="line">imagesc(x,y,bulk_E_slice)</span><br><span class="line">xlabel(<span class="string">&quot;x(μm)&quot;</span>);</span><br><span class="line">ylabel(<span class="string">&quot;y(μm)&quot;</span>);</span><br><span class="line">colorbar;</span><br><span class="line"><span class="comment">% caxis([0,1]);</span></span><br><span class="line">colorbar(<span class="string">&#x27;Ticks&#x27;</span>,[<span class="number">0</span>,<span class="number">0.5</span>,<span class="number">1</span>,<span class="number">1.5</span>,<span class="number">2</span>]);</span><br><span class="line">set(gca,<span class="string">&#x27;YDir&#x27;</span>,<span class="string">&#x27;normal&#x27;</span>)</span><br><span class="line">colormap(<span class="string">&#x27;jet&#x27;</span>);</span><br><span class="line">xlim([<span class="number">0</span>,<span class="number">40</span>])</span><br></pre></td></tr></table></figure>
-<p><img src="/pictures/image-20240107192325877.png" alt="image-20240107192325877" /></p>
-<h3 id="5-复制图窗拷贝进入adobe-iiiustrator"><a class="markdownIt-Anchor" href="#5-复制图窗拷贝进入adobe-iiiustrator"></a> 5. 复制图窗，拷贝进入Adobe IIIustrator</h3>
-<p>修改完之后最后结果：</p>
-<p><img src="/pictures/120240107.png" alt="资源 120240107" /></p>
+          <h2 id="为什么要把Lumerical画的图导入MATLAB重新画图"><a href="#为什么要把Lumerical画的图导入MATLAB重新画图" class="headerlink" title="为什么要把Lumerical画的图导入MATLAB重新画图"></a>为什么要把Lumerical画的图导入MATLAB重新画图</h2><p>为了统一画图的格式，后续可以把matlab重新画的图导入AI统一进行图像的绘制和处理。</p>
+<h2 id="具体方法："><a href="#具体方法：" class="headerlink" title="具体方法："></a>具体方法：</h2><h3 id="1-首先把Lumerical画出的模场分布导出为TXT格式："><a href="#1-首先把Lumerical画出的模场分布导出为TXT格式：" class="headerlink" title="1. 首先把Lumerical画出的模场分布导出为TXT格式："></a>1. 首先把Lumerical画出的模场分布导出为TXT格式：</h3><p><img src="/pictures/adfdsfewwqex20240107.png" alt="adfdsfewwqex20240107"></p>
+<h3 id="2-修改txt格式的文件的内容，添加上bulk-E-slice-…"><a href="#2-修改txt格式的文件的内容，添加上bulk-E-slice-…" class="headerlink" title="2. 修改txt格式的文件的内容，添加上bulk_E_slice = [ … ]"></a>2. 修改txt格式的文件的内容，添加上bulk_E_slice = [ … ]</h3><p><img src="/pictures/image-20240107192215500.png" alt="image-20240107192215500"></p>
+<p><img src="/pictures/image-20240107192251396.png" alt="image-20240107192251396"></p>
+<h3 id="3-把txt文件重命名为power-distribution-m"><a href="#3-把txt文件重命名为power-distribution-m" class="headerlink" title="3. 把txt文件重命名为power_distribution.m"></a>3. 把txt文件重命名为power_distribution.m</h3><p><img src="/pictures/image-20240107192301482.png" alt="image-20240107192301482"></p>
+<h3 id="4-运行MATLAB程序"><a href="#4-运行MATLAB程序" class="headerlink" title="4. 运行MATLAB程序"></a>4. 运行MATLAB程序</h3><h4 id="MATLAB代码"><a href="#MATLAB代码" class="headerlink" title="MATLAB代码"></a>MATLAB代码</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">close all;</span><br><span class="line">clear;</span><br><span class="line">power_distribution;</span><br><span class="line">bulk_E_slice =<span class="built_in">rot90</span>(bulk_E_slice);</span><br><span class="line"><span class="built_in">length</span> = <span class="number">104</span>;</span><br><span class="line">width = <span class="number">4</span>;</span><br><span class="line">x =<span class="number">0</span>:<span class="built_in">size</span>(bulk_E_slice,<span class="number">1</span>)*<span class="built_in">length</span>/<span class="built_in">size</span>(bulk_E_slice,<span class="number">1</span>);</span><br><span class="line">y =<span class="number">0</span>:<span class="built_in">size</span>(bulk_E_slice,<span class="number">2</span>)*width/<span class="built_in">size</span>(bulk_E_slice,<span class="number">2</span>);</span><br><span class="line">y = <span class="built_in">fliplr</span>(y);</span><br><span class="line">x = x<span class="number">-3</span>;</span><br><span class="line">imagesc(x,y,bulk_E_slice)</span><br><span class="line">xlabel(<span class="string">&quot;x(μm)&quot;</span>);</span><br><span class="line">ylabel(<span class="string">&quot;y(μm)&quot;</span>);</span><br><span class="line">colorbar;</span><br><span class="line"><span class="comment">% caxis([0,1]);</span></span><br><span class="line">colorbar(<span class="string">&#x27;Ticks&#x27;</span>,[<span class="number">0</span>,<span class="number">0.5</span>,<span class="number">1</span>,<span class="number">1.5</span>,<span class="number">2</span>]);</span><br><span class="line">set(gca,<span class="string">&#x27;YDir&#x27;</span>,<span class="string">&#x27;normal&#x27;</span>)</span><br><span class="line">colormap(<span class="string">&#x27;jet&#x27;</span>);</span><br><span class="line">xlim([<span class="number">0</span>,<span class="number">40</span>])</span><br></pre></td></tr></table></figure>
+<p><img src="/pictures/image-20240107192325877.png" alt="image-20240107192325877"></p>
+<h3 id="5-复制图窗，拷贝进入Adobe-IIIustrator"><a href="#5-复制图窗，拷贝进入Adobe-IIIustrator" class="headerlink" title="5. 复制图窗，拷贝进入Adobe IIIustrator"></a>5. 复制图窗，拷贝进入Adobe IIIustrator</h3><p>修改完之后最后结果：</p>
+<p><img src="/pictures/120240107.png" alt="资源 120240107"></p>
 
       
     </div>
@@ -952,22 +1017,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="器件功能"><a class="markdownIt-Anchor" href="#器件功能"></a> 器件功能：</h2>
-<p>使TE0-TE4和TM0-TM4能分开</p>
-<h2 id="结构"><a class="markdownIt-Anchor" href="#结构"></a> 结构：</h2>
-<p><img src="/pictures/image-20240104164502003.png" alt="image-20240104164502003" /></p>
-<h2 id="优化思路"><a class="markdownIt-Anchor" href="#优化思路"></a> 优化思路：</h2>
-<p>大体思路就是TE4好的话就减少宽度，TM4好的话就增加宽度（trench和gap）</p>
-<h2 id="优化过程log"><a class="markdownIt-Anchor" href="#优化过程log"></a> 优化过程log</h2>
-<h4 id=""><a class="markdownIt-Anchor" href="#"></a> </h4>
-<h3 id="gap-03-trench-03"><a class="markdownIt-Anchor" href="#gap-03-trench-03"></a> gap = 0.3; trench = 0.3</h3>
-<p>TM4 @ 1550 nm:</p>
-<img src="/pictures/image-20240104175603572.png" alt="image-20240104175603572" style="zoom:200%;" />
-<h3 id="gap-025-trench-025"><a class="markdownIt-Anchor" href="#gap-025-trench-025"></a> gap = 0.25; trench = 0.25</h3>
-<h4 id="tm4"><a class="markdownIt-Anchor" href="#tm4"></a> TM4:</h4>
-<p><img src="/pictures/image-20240104211808072.png" alt="image-20240104211808072" /></p>
+          <h2 id="器件功能："><a href="#器件功能：" class="headerlink" title="器件功能："></a>器件功能：</h2><p>使TE0-TE4和TM0-TM4能分开</p>
+<h2 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h2><p><img src="/pictures/image-20240104164502003.png" alt="image-20240104164502003"></p>
+<h2 id="优化思路："><a href="#优化思路：" class="headerlink" title="优化思路："></a>优化思路：</h2><p>大体思路就是TE4好的话就减少宽度，TM4好的话就增加宽度（trench和gap）</p>
+<h2 id="优化过程log"><a href="#优化过程log" class="headerlink" title="优化过程log"></a>优化过程log</h2><h4 id=""><a href="#" class="headerlink" title=" "></a> </h4><h3 id="gap-0-3-trench-0-3"><a href="#gap-0-3-trench-0-3" class="headerlink" title="gap = 0.3; trench = 0.3"></a>gap = 0.3; trench = 0.3</h3><p>TM4 @ 1550 nm:</p>
+<p><img src="/pictures/image-20240104175603572.png" alt="image-20240104175603572" style="zoom:200%;" /></p>
+<h3 id="gap-0-25-trench-0-25"><a href="#gap-0-25-trench-0-25" class="headerlink" title="gap = 0.25; trench = 0.25"></a>gap = 0.25; trench = 0.25</h3><h4 id="TM4"><a href="#TM4" class="headerlink" title="TM4:"></a>TM4:</h4><p><img src="/pictures/image-20240104211808072.png" alt="image-20240104211808072"></p>
 <p>TE4:</p>
-<p><img src="/pictures/image-20240104212419303.png" alt="image-20240104212419303" /></p>
+<p><img src="/pictures/image-20240104212419303.png" alt="image-20240104212419303"></p>
 
       
     </div>
@@ -1046,119 +1103,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="器件功能"><a class="markdownIt-Anchor" href="#器件功能"></a> 器件功能：</h2>
-<p>使TE0-TE4和TM0-TM4能分开</p>
-<h2 id="结构"><a class="markdownIt-Anchor" href="#结构"></a> 结构：</h2>
-<p><img src="../pictures/image-20240104164502003.png" alt="image-20240104164502003" /></p>
-<h2 id="优化思路"><a class="markdownIt-Anchor" href="#优化思路"></a> 优化思路：</h2>
-<p>大体思路就是TE4好的话就减少宽度，TM4好的话就增加宽度（trench和gap）</p>
-<h2 id="优化过程log"><a class="markdownIt-Anchor" href="#优化过程log"></a> 优化过程log</h2>
-<h4 id=""><a class="markdownIt-Anchor" href="#"></a> </h4>
-<h3 id="gap-03-trench-03"><a class="markdownIt-Anchor" href="#gap-03-trench-03"></a> gap = 0.3; trench = 0.3</h3>
-<p>TM4 @ 1550 nm:</p>
-<img src="../pictures/image-20240104175603572.png" alt="image-20240104175603572" style="zoom:200%;" />
-<h3 id="gap-025-trench-025"><a class="markdownIt-Anchor" href="#gap-025-trench-025"></a> gap = 0.25; trench = 0.25</h3>
-<h4 id="tm4"><a class="markdownIt-Anchor" href="#tm4"></a> TM4:</h4>
-<p><img src="../pictures/image-20240104211808072.png" alt="image-20240104211808072" /></p>
+          <h2 id="器件功能："><a href="#器件功能：" class="headerlink" title="器件功能："></a>器件功能：</h2><p>使TE0-TE4和TM0-TM4能分开</p>
+<h2 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h2><p><img src="../pictures/image-20240104164502003.png" alt="image-20240104164502003"></p>
+<h2 id="优化思路："><a href="#优化思路：" class="headerlink" title="优化思路："></a>优化思路：</h2><p>大体思路就是TE4好的话就减少宽度，TM4好的话就增加宽度（trench和gap）</p>
+<h2 id="优化过程log"><a href="#优化过程log" class="headerlink" title="优化过程log"></a>优化过程log</h2><h4 id=""><a href="#" class="headerlink" title=" "></a> </h4><h3 id="gap-0-3-trench-0-3"><a href="#gap-0-3-trench-0-3" class="headerlink" title="gap = 0.3; trench = 0.3"></a>gap = 0.3; trench = 0.3</h3><p>TM4 @ 1550 nm:</p>
+<p><img src="../pictures/image-20240104175603572.png" alt="image-20240104175603572" style="zoom:200%;" /></p>
+<h3 id="gap-0-25-trench-0-25"><a href="#gap-0-25-trench-0-25" class="headerlink" title="gap = 0.25; trench = 0.25"></a>gap = 0.25; trench = 0.25</h3><h4 id="TM4"><a href="#TM4" class="headerlink" title="TM4:"></a>TM4:</h4><p><img src="../pictures/image-20240104211808072.png" alt="image-20240104211808072"></p>
 <p>TE4:</p>
-<p><img src="../pictures/image-20240104212419303.png" alt="image-20240104212419303" /></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/31/google%E5%AD%A6%E6%9C%AF-zotero-Xmousebutton%E5%BF%AB%E9%80%9F%E5%AF%BC%E5%85%A5%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E7%9A%84%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
-      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
-      <meta itemprop="description" content="You should write because writing makes you a better person.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZhaoYaotian's Blogs">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/12/31/google%E5%AD%A6%E6%9C%AF-zotero-Xmousebutton%E5%BF%AB%E9%80%9F%E5%AF%BC%E5%85%A5%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E7%9A%84%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">google学术+zotero+Xmousebutton快速导入参考文献的方法</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-12-31 20:37:32" itemprop="dateCreated datePublished" datetime="2023-12-31T20:37:32+08:00">2023-12-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-10-17 14:37:49" itemprop="dateModified" datetime="2024-10-17T14:37:49+08:00">2024-10-17</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>161</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="方法"><a class="markdownIt-Anchor" href="#方法"></a> 方法</h3>
-<p>google 学术里面选择引用-&gt;BibTeX</p>
-<p><img src="/pictures/image-20231231204002660.png" alt="image-20231231204002660" /></p>
-<p><em>用BibTeX的原因是其他格式的的好像短时间下载多了ip会被ban</em></p>
-<p>鼠标侧键复制</p>
-<p>下面是x mouse button的配置</p>
-<p><img src="/pictures/image-20231231204026045.png" alt="image-20231231204026045" /></p>
-<p>鼠标中键导入到zotero中</p>
-<p><img src="/pictures/image-20231231204041281.png" alt="image-20231231204041281" />最后在word里面使用</p>
-<p><img src="/pictures/image-20231231204136679.png" alt="image-20231231204136679" /></p>
-<h3 id="好处"><a class="markdownIt-Anchor" href="#好处"></a> 好处：</h3>
-<ol>
-<li>
-<p>google学术抓取的一般参考文献的人名、页码等不会出错</p>
-</li>
-<li>
-<p>方便快捷，适合大量参考文献的格式统一和抓取</p>
-</li>
-</ol>
+<p><img src="../pictures/image-20240104212419303.png" alt="image-20240104212419303"></p>
 
       
     </div>
@@ -1245,7 +1197,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">108</span>
+          <span class="site-state-item-count">109</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1294,13 +1246,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">244k</span>
+    <span title="站点总字数">234k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3:41</span>
+    <span title="站点阅读时长">3:32</span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
 
         
