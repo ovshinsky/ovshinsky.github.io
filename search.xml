@@ -2342,7 +2342,7 @@ Origin源文件 <a href="/download/不同RMS下损耗和波导粗糙度的关系
   <entry>
     <title>用于下一代数据通信技术的硅光子学平台-from_TSMC</title>
     <url>/2025/01/03/%E7%94%A8%E4%BA%8E%E4%B8%8B%E4%B8%80%E4%BB%A3%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E7%9A%84%E7%A1%85%E5%85%89%E5%AD%90%E5%AD%A6%E5%B9%B3%E5%8F%B0-from-TSMC/</url>
-    <content><![CDATA[<p>REF: Silicon Photonics Platform for Next Generation Data  Communication Technologies</p>
+    <content><![CDATA[<p>REF: Silicon Photonics Platform for Next Generation Data  Communication Technologies， TSMC，2024</p>
 <h3 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h3>
 <p>台积电开发了一种先进的硅光子代工平台，以满足下一代数据通信应用日益增长的需求。本文概述了该平台及其关键光子器件的性能。</p>
 <h3 id="背景介绍"><a class="markdownIt-Anchor" href="#背景介绍"></a> 背景介绍</h3>
@@ -2370,7 +2370,7 @@ Origin源文件 <a href="/download/不同RMS下损耗和波导粗糙度的关系
 <p>硅氮化物因其宽带宽、极小的温度依赖性、低光学损耗以及对光功率的高耐受性，而成为开发高性能光子集成电路（PIC）的优选替代材料。采用低温（&lt;400°C）等离子体增强化学气相沉积（PECVD）以及对硅氮化物波导中化学键的精确控制，开发出一个氮化物波导平台，具有单模波导在λ=1310nm时的传播损耗为<mark>0.21dB/cm</mark>，以及多模波导的损耗为<mark>0.14dB/cm</mark>。展示了一种硅氮化物边缘耦合器，在λ=1270-1330nm时，其插入损耗为1.2dB，偏振相关损耗（PDL）为0.18dB。</p>
 <h3 id="有源器件"><a class="markdownIt-Anchor" href="#有源器件"></a> 有源器件</h3>
 <h4 id="微环调制器"><a class="markdownIt-Anchor" href="#微环调制器"></a> 微环调制器</h4>
-<p>MRM与MZM相比，具有占位面积小和功耗低的优点。然而，由于<mark>自热效应</mark>，MRM本质上对制造工艺的变化和温度升高更加敏感。这些变化对热波长调谐范围的影响可以通过严格的CD均匀性控制来最小化。通过优化散热器设计，进一步减少自热引起的温度升高。通过调整掺杂和其他设计修改，可以调节调制效率和速度等关键性能参数，以满足不同产品的要求[7, 8]。图7a显示了一个设计用于最大化调制效率的5μm半径环在不同偏置电压下的光谱偏移，而图7b显示了另一个设计用于高速调制的S21带宽测量结果（6dB/4dB插损下为63GHz/76GHz）。</p>
+<p>MRM与MZM相比，具有占位面积小和功耗低的优点。然而，由于<mark>自热效应</mark>，MRM本质上对制造工艺的变化和温度升高更加敏感。这些变化对热波长调谐范围的影响可以通过严格的CD均匀性控制来最小化。通过优化散热器设计，进一步减少自热引起的温度升高。通过调整掺杂和其他设计修改，可以调节调制效率和速度等关键性能参数，以满足不同产品的要求[7, 8]。图7a显示了一个设计用于最大化调制效率的<mark>5μm</mark>半径环在不同偏置电压下的光谱偏移，而图7b显示了另一个设计用于高速调制的S21带宽测量结果（<mark>6dB/4dB插损下为63GHz/76GHz</mark>）。</p>
 <img src="/pictures/image-20250103102431123.png" alt="image-20250103102431123" style="zoom:50%;" />
 <h4 id="锗光电探测器-pd"><a class="markdownIt-Anchor" href="#锗光电探测器-pd"></a> 锗光电探测器 (PD)</h4>
 <p>这里展示了具有高响应度、高3dB光电带宽和低暗电流的锗光电探测器（PD）。晶圆级数据（图8a）显示在输入功率为5mW的情况下，光波导中的响应度接近<mark>1A/W</mark>。晶圆上的暗电流中值在-1.5V时为4.5nA（图8b）。展示的3dB光电带宽在光电流为200uA时为<mark>110GHz</mark>（图8c）（-&gt;光功率 -7 dBm），在1mA时超过50GHz（-&gt;光功率 0 dBm）。</p>
