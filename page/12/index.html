@@ -200,6 +200,101 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/07/%E6%8A%8ALumerical%E4%BB%BF%E7%9C%9F%E7%9A%84%E7%94%B5%E5%9C%BA%E5%88%86%E5%B8%83%E5%AF%BC%E5%85%A5MATLAB%E9%87%8D%E6%96%B0%E7%94%BB%E5%9B%BE%E7%9A%84%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
+      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
+      <meta itemprop="description" content="You succeed when your peers understand your work and use it to motivate their own.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhaoYaotian's Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/01/07/%E6%8A%8ALumerical%E4%BB%BF%E7%9C%9F%E7%9A%84%E7%94%B5%E5%9C%BA%E5%88%86%E5%B8%83%E5%AF%BC%E5%85%A5MATLAB%E9%87%8D%E6%96%B0%E7%94%BB%E5%9B%BE%E7%9A%84%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">把Lumerical仿真的电场分布导入MATLAB重新画图的方法</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-01-07 19:03:50" itemprop="dateCreated datePublished" datetime="2024-01-07T19:03:50+08:00">2024-01-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-01-08 12:10:21" itemprop="dateModified" datetime="2024-01-08T12:10:21+08:00">2024-01-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>695</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="为什么要把lumerical画的图导入matlab重新画图"><a class="markdownIt-Anchor" href="#为什么要把lumerical画的图导入matlab重新画图"></a> 为什么要把Lumerical画的图导入MATLAB重新画图</h2>
+<p>为了统一画图的格式，后续可以把matlab重新画的图导入AI统一进行图像的绘制和处理。</p>
+<h2 id="具体方法"><a class="markdownIt-Anchor" href="#具体方法"></a> 具体方法：</h2>
+<h3 id="1-首先把lumerical画出的模场分布导出为txt格式"><a class="markdownIt-Anchor" href="#1-首先把lumerical画出的模场分布导出为txt格式"></a> 1. 首先把Lumerical画出的模场分布导出为TXT格式：</h3>
+<p><img src="/pictures/adfdsfewwqex20240107.png" alt="adfdsfewwqex20240107" /></p>
+<h3 id="2-修改txt格式的文件的内容添加上bulk_e_slice"><a class="markdownIt-Anchor" href="#2-修改txt格式的文件的内容添加上bulk_e_slice"></a> 2. 修改txt格式的文件的内容，添加上bulk_E_slice = [ … ]</h3>
+<p><img src="/pictures/image-20240107192215500.png" alt="image-20240107192215500" /></p>
+<p><img src="/pictures/image-20240107192251396.png" alt="image-20240107192251396" /></p>
+<h3 id="3-把txt文件重命名为power_distributionm"><a class="markdownIt-Anchor" href="#3-把txt文件重命名为power_distributionm"></a> 3. 把txt文件重命名为power_distribution.m</h3>
+<p><img src="/pictures/image-20240107192301482.png" alt="image-20240107192301482" /></p>
+<h3 id="4-运行matlab程序"><a class="markdownIt-Anchor" href="#4-运行matlab程序"></a> 4. 运行MATLAB程序</h3>
+<h4 id="matlab代码"><a class="markdownIt-Anchor" href="#matlab代码"></a> MATLAB代码</h4>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">close all;</span><br><span class="line">clear;</span><br><span class="line">power_distribution;</span><br><span class="line">bulk_E_slice =<span class="built_in">rot90</span>(bulk_E_slice);</span><br><span class="line"><span class="built_in">length</span> = <span class="number">104</span>;</span><br><span class="line">width = <span class="number">4</span>;</span><br><span class="line">x =<span class="number">0</span>:<span class="built_in">size</span>(bulk_E_slice,<span class="number">1</span>)*<span class="built_in">length</span>/<span class="built_in">size</span>(bulk_E_slice,<span class="number">1</span>);</span><br><span class="line">y =<span class="number">0</span>:<span class="built_in">size</span>(bulk_E_slice,<span class="number">2</span>)*width/<span class="built_in">size</span>(bulk_E_slice,<span class="number">2</span>);</span><br><span class="line">y = <span class="built_in">fliplr</span>(y);</span><br><span class="line">x = x<span class="number">-3</span>;</span><br><span class="line">imagesc(x,y,bulk_E_slice)</span><br><span class="line">xlabel(<span class="string">&quot;x(μm)&quot;</span>);</span><br><span class="line">ylabel(<span class="string">&quot;y(μm)&quot;</span>);</span><br><span class="line">colorbar;</span><br><span class="line"><span class="comment">% caxis([0,1]);</span></span><br><span class="line">colorbar(<span class="string">&#x27;Ticks&#x27;</span>,[<span class="number">0</span>,<span class="number">0.5</span>,<span class="number">1</span>,<span class="number">1.5</span>,<span class="number">2</span>]);</span><br><span class="line">set(gca,<span class="string">&#x27;YDir&#x27;</span>,<span class="string">&#x27;normal&#x27;</span>)</span><br><span class="line">colormap(<span class="string">&#x27;jet&#x27;</span>);</span><br><span class="line">xlim([<span class="number">0</span>,<span class="number">40</span>])</span><br></pre></td></tr></table></figure>
+<p><img src="/pictures/image-20240107192325877.png" alt="image-20240107192325877" /></p>
+<h3 id="5-复制图窗拷贝进入adobe-iiiustrator"><a class="markdownIt-Anchor" href="#5-复制图窗拷贝进入adobe-iiiustrator"></a> 5. 复制图窗，拷贝进入Adobe IIIustrator</h3>
+<p>修改完之后最后结果：</p>
+<p><img src="/pictures/120240107.png" alt="资源 120240107" /></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/04/PBS%E4%BB%BF%E7%9C%9F%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1145,80 +1240,6 @@ r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 = I_2
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/20/%E9%87%87%E7%94%A8Lumerical%E7%9A%84%E7%A1%85%E5%85%89%E4%BB%BF%E7%9C%9F%E8%AE%BE%E8%AE%A1%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
-      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
-      <meta itemprop="description" content="You succeed when your peers understand your work and use it to motivate their own.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZhaoYaotian's Blogs">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/12/20/%E9%87%87%E7%94%A8Lumerical%E7%9A%84%E7%A1%85%E5%85%89%E4%BB%BF%E7%9C%9F%E8%AE%BE%E8%AE%A1%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">采用Lumerical的硅光仿真设计参数优化方法</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-12-20 15:46:44 / 修改时间：16:26:01" itemprop="dateCreated datePublished" datetime="2023-12-20T15:46:44+08:00">2023-12-20</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>62</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h5 id="reference"><a class="markdownIt-Anchor" href="#reference"></a> REFERENCE:</h5>
-<p>[1] <a target="_blank" rel="noopener" href="https://optics.ansys.com/hc/en-us/articles/360034922973-Creating-optimization-tasks-using-a-script">Creating optimization tasks using a script – Ansys Optics</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1290,7 +1311,7 @@ r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 = I_2
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">121</span>
+          <span class="site-state-item-count">122</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1345,13 +1366,13 @@ r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 = I_2
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">350k</span>
+    <span title="站点总字数">353k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">5:19</span>
+    <span title="站点阅读时长">5:21</span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
 
         
