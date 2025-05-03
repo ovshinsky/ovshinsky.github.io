@@ -2981,4 +2981,37 @@ r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 = I_2
         <tag>文献导读</tag>
       </tags>
   </entry>
+  <entry>
+    <title>光栅耦合器的设计</title>
+    <url>/2025/04/29/%E5%85%89%E6%A0%85%E8%80%A6%E5%90%88%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<p>REF： <a href="https://optics.ansys.com/hc/en-us/articles/360042305334-Grating-coupler">Grating coupler – Ansys Optics</a></p>
+<p>源文件:  <a href="/download/c118296f-grating-coupler.zip" download>下载</a></p>
+<h2 id="光栅耦合器"><a href="#光栅耦合器" class="headerlink" title="光栅耦合器"></a>光栅耦合器</h2><p>在光芯片的表面设计一个光栅耦合器，使单模光纤连上一个集成光波导。</p>
+<p>内置的PSO优化算法将最大化耦合效率，在INTERCONNECT里用器件S参数生成compact model。</p>
+<p>展示了如何通过CML Compiler生成compact model。</p>
+<h3 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h3><p><img src="../pictures/image-20250429150741829.png" alt="image-20250429150741829"></p>
+<p>案例的设计目标是设计一个TE模式的Bragg Grating SOI耦合器（光从顶部SMF入射），核心指标FOM是目标波长下的耦合效率。</p>
+<p>耦合效率对光栅周期$p$、刻蚀长度$l_e$、刻蚀深度$h_e$、光纤位置$x$和光纤倾角$\theta$非常敏感。</p>
+<p><img src="../pictures/image-20250429151403070.png" alt="image-20250429151403070"></p>
+<p>这5个参数通常进行协同优化，以在目标波长实现最大的耦合效率。由于使用五个参数进行暴力三维优化耗时过长，本文采用二维与三维模型结合的两阶段优化策略，仅需调节三个几何参数。整个设计流程分为四个主要步骤。</p>
+<blockquote>
+<ol>
+<li><strong>初始二维优化</strong>：优化光栅的周期 <em>p</em>、占空比 <em>d</em> 及光纤位置 <em>x</em>。</li>
+<li><strong>最终三维优化</strong>：优化光纤位置 <em>x</em>，以最小化插入损耗。</li>
+<li><strong>S参数提取</strong>：运行S参数扫描，并将结果导出至数据文件。</li>
+<li><strong>紧凑模型创建</strong>：将S参数数据导入光学S参数元件中。</li>
+</ol>
+</blockquote>
+<p>如下节所示，通过主要采用二维仿真并调节光栅周期、占空比及光纤位置，可实现高于40%的峰值耦合效率。</p>
+<h4 id="通过CML-Compiler生成Compact-Model"><a href="#通过CML-Compiler生成Compact-Model" class="headerlink" title="通过CML Compiler生成Compact Model"></a>通过CML Compiler生成Compact Model</h4><p>为了生成Grating coupler的Compact model，可以使用第3步中产生的S参数数据。CML compiler中的参数提取将在后面单独的一小节介绍，可以使用一个脚本文件来自动化的运行实现第3步的功能，并且生成S参数数据。</p>
+<h3 id="步骤-1：二维优化"><a href="#步骤-1：二维优化" class="headerlink" title="步骤 1：二维优化"></a>步骤 1：二维优化</h3><ol>
+<li>打开二维模拟文件。</li>
+<li>通过进入 “优化与扫描” 窗口并打开名为 “耦合效率优化” 的优化项目，来查看优化设置。</li>
+<li>查看设置后，关闭编辑窗口并运行优化。优化应在 10 到 20 分钟内完成。如果你不想等待，可以直接进入最后的三维优化步骤。<br>优化完成后，就可以获取到最佳的间距、占空比和位置。右键点击 “耦合效率优化” 项目，然后在上下文菜单中依次选择 “可视化” 和 “最佳参数”。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>光计算</tag>
+      </tags>
+  </entry>
 </search>
