@@ -3061,4 +3061,16 @@ r_2(\lambda_1)*a_1 + r_2(\lambda_2)*a_2 = I_2
         <tag>光互连</tag>
       </tags>
   </entry>
+  <entry>
+    <title>虚拟环境的搭建及用conda_pack做环境迁移</title>
+    <url>/2025/04/08/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%94%A8conda-pack%E5%81%9A%E7%8E%AF%E5%A2%83%E8%BF%81%E7%A7%BB/</url>
+    <content><![CDATA[<ol>
+<li>环境搭建<br><a href="https://blog.csdn.net/Lamber130/article/details/144590838">https://blog.csdn.net/Lamber130/article/details/144590838</a></li>
+<li>环境迁移<br><a href="https://zhuanlan.zhihu.com/p/15627818776">亲测成功多次！逐步解析Windows系统使用conda pack 迁移、部署anaconda中的虚拟环境至离线（不联网）的孤岛机。 - 知乎</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>技术小结</tag>
+      </tags>
+  </entry>
 </search>
