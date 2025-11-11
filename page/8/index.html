@@ -333,15 +333,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/09/06/%E5%85%89%E7%94%B5%E4%BA%92%E8%BF%9E%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88%E8%AE%A8%E8%AE%BA/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p><img src="/pictures/image-20240906091652610.png" alt="image-20240906091652610" /></p>
+<p><img src="/pictures/image-20240906091659769.png" alt="image-20240906091659769" /></p>
+<p><img src="/pictures/image-20240906091703333.png" alt="image-20240906091703333" /></p>
+<p><img src="/pictures/image-20240906091707934.png" alt="image-20240906091707934" /></p>
+<p><img src="/pictures/image-20240906091712959.png" alt="image-20240906091712959" /></p>
+<p><img src="/pictures/image-20240906091718446.png" alt="image-20240906091718446" /></p>
+<p><img src="/pictures/image-20240906091724195.png" alt="image-20240906091724195" /></p>
+<p><img src="/pictures/image-20240906091729199.png" alt="image-20240906091729199" /></p>
+<p><img src="/pictures/image-20240906091733597.png" alt="image-20240906091733597" /></p>
+<p><img src="/pictures/image-20240906091737868.png" alt="image-20240906091737868" /></p>
+<p><img src="/pictures/image-20240906091746519.png" alt="image-20240906091746519" /></p>
+<p><img src="/pictures/image-20240906091751752.png" alt="image-20240906091751752" /></p>
+<p><img src="/pictures/image-20240906091756560.png" alt="image-20240906091756560" /></p>
+<p><img src="/pictures/image-20240906091802947.png" alt="image-20240906091802947" /></p>
+<p><img src="/pictures/image-20240906091807952.png" alt="image-20240906091807952" /></p>
+<p><img src="/pictures/image-20240906091812402.png" alt="image-20240906091812402" /></p>
+<p><img src="/pictures/image-20240906091817721.png" alt="image-20240906091817721" /></p>
+<p><img src="/pictures/image-20240906091822476.png" alt="image-20240906091822476" /></p>
+<p><img src="/pictures/image-20240906091826864.png" alt="image-20240906091826864" /></p>
+<p><img src="/pictures/image-20240906091831634.png" alt="image-20240906091831634" /></p>
+<p><img src="/pictures/image-20240906091835670.png" alt="image-20240906091835670" /></p>
+<p><img src="/pictures/image-20240906091839631.png" alt="image-20240906091839631" /></p>
+<p><img src="/pictures/image-20240906091844579.png" alt="image-20240906091844579" /></p>
+<p><img src="/pictures/image-20240906091849574.png" alt="image-20240906091849574" /></p>
+<p><img src="/pictures/image-20240906091853444.png" alt="image-20240906091853444" /></p>
+<p><img src="/pictures/image-20240906091857099.png" alt="image-20240906091857099" /></p>
+
       
     </div>
 
@@ -413,15 +431,54 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/08/29/%E5%A4%A7%E7%AE%97%E5%8A%9B%E8%8A%AF%E7%89%87%E5%85%89%E7%94%B5%E6%8E%A5%E5%8F%A3%E8%AE%A8%E8%AE%BA%E6%80%BB%E7%BB%93/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <h2 id="20240829-大算力芯片光电接口讨论总结"><a class="markdownIt-Anchor" href="#20240829-大算力芯片光电接口讨论总结"></a> 20240829 大算力芯片光电接口讨论总结</h2>
+<h3 id="整体架构from-杨所"><a class="markdownIt-Anchor" href="#整体架构from-杨所"></a> 整体架构（from 杨所）</h3>
+<p><img src="/pictures/image-20240829122625092.png" alt="image-20240829122625092" /></p>
+<h3 id="光芯片和tiadriver之间的封装方案"><a class="markdownIt-Anchor" href="#光芯片和tiadriver之间的封装方案"></a> 光芯片和TIA/driver之间的封装方案</h3>
+<p>封装方案一共有三种：</p>
+<p><mark>需要找杨所确认XPU interposer 封装的I/O进行下一步评估</mark></p>
+<h4 id="光芯片做tsv"><a class="markdownIt-Anchor" href="#光芯片做tsv"></a> 光芯片做TSV （×）</h4>
+<p>尺寸： 1.5【尺寸修正系数】 * 512 mm<sup>2</sup> 【512 mm <sup>2</sup> = 32个 * 四通道TIA/DRIVER * (2 mm * 8 mm)，128通道】<br />
+风险点：TSV只有ICRD能做，flip chip 的电芯片需要定做(<mark>可购买的电芯片不支持flip-chip的封装方式，待确认</mark>)</p>
+<p>![资源 17@20240829](/pictures/资源 17@20240829.png)</p>
+<h4 id="共基板"><a class="markdownIt-Anchor" href="#共基板"></a> 共基板 （√）</h4>
+<p>缺点：面积较大，影响整体的带宽密度（基板的制备可以询问中芯国际）<br />
+尺寸： 1.5【尺寸修正系数】 *2* 512 mm<sup>2</sup></p>
+<p>![资源 18@20240829](/pictures/资源 18@20240829.png)</p>
+<h4 id="先进基板"><a class="markdownIt-Anchor" href="#先进基板"></a> 先进基板 （√√）</h4>
+<p>尺寸： 1.5 【尺寸修正系数】* 512 mm<sup>2</sup><br />
+风险点：需要找到定制先进基板的协作方（基板的制备可以询问长电科技）</p>
+<p>![资源 20@20240829](/pictures/资源 20@20240829.png)</p>
+<p><mark>需要找杨所确认XPU interposer 封装的I/O进行下一步评估</mark></p>
+<h4 id="interposer可以和杨所电芯片的interposer一起做"><a class="markdownIt-Anchor" href="#interposer可以和杨所电芯片的interposer一起做"></a> <mark>interposer可以和杨所电芯片的interposer一起做</mark></h4>
+<h4 id="引线键合-wire-bonding"><a class="markdownIt-Anchor" href="#引线键合-wire-bonding"></a> 引线键合 wire bonding (×)</h4>
+<p>![资源 15@20240829](/pictures/资源 15@20240829.png)</p>
+<p>金属引线太多，无法打线，延迟较高。</p>
+<h3 id="激光器方案"><a class="markdownIt-Anchor" href="#激光器方案"></a> 激光器方案</h3>
+<p>外置激光器（在整个substrate的外面），通过光纤进入光芯片。</p>
+<p>预估散热功耗5w，激光器功耗2w，一共8个激光器</p>
+<p>![资源 21@20240829](/pictures/资源 21@20240829.png)</p>
+<h4 id="光学封装方案-32根光纤16发16收"><a class="markdownIt-Anchor" href="#光学封装方案-32根光纤16发16收"></a> 光学封装方案 （32根光纤，16发16收）</h4>
+<ol>
+<li>端面耦合 (√)<br />
+节约芯片面积，增加计算的带宽密度（带宽密度 = 带宽/芯片面积）。</li>
+</ol>
+<p>![资源 23@20240829](/pictures/资源 23@20240829-17249087182561.png)</p>
+<p>![资源 25@20240829](/pictures/资源 25@20240829.png)</p>
+<ol>
+<li>
+<p>光栅耦合</p>
+<p>![资源 22@20240829](/pictures/资源 22@20240829.png)</p>
+</li>
+<li>
+<p>光口从上面斜入射的方案</p>
+</li>
+</ol>
+<p>​	良率可能存在问题</p>
+<h2 id="需要进一步讨论的"><a class="markdownIt-Anchor" href="#需要进一步讨论的"></a> 需要进一步讨论的：</h2>
+<h3 id="调制器选型及驱动电压"><a class="markdownIt-Anchor" href="#调制器选型及驱动电压"></a> 调制器选型及驱动电压</h3>
+<h3 id="driver的设计满足调制器的驱动电压"><a class="markdownIt-Anchor" href="#driver的设计满足调制器的驱动电压"></a> Driver的设计，满足调制器的驱动电压</h3>
+
       
     </div>
 
@@ -493,15 +550,72 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/08/28/%E4%B8%80%E7%A7%8D%E4%BC%98%E5%8C%96%E9%AB%98%E9%80%9F%E5%BE%AE%E7%8E%AF%E8%B0%83%E5%88%B6%E5%99%A8%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%8F%8A%E8%B0%83%E5%88%B6%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <h3 id="一-现有技术背景技术"><a class="markdownIt-Anchor" href="#一-现有技术背景技术"></a> 一、现有技术（背景技术）</h3>
+<p>随着人工智能（AI）、机器学习（ML）和高性能计算（HPC）的迅猛发展，数据传输量的不断增加要求芯片间互连具有更高的带宽、更低的功耗和更低的延迟。数据在电缆上的传输受限于带宽和功率密度，成为现代计算机系统和数据中心的性能瓶颈。这些限制可以通过光通信来克服，由集成光电子技术实现。其中硅基光电子技术提供了一个成熟的、性价比高的平台，能够把微环调制器、激光器、光探测器和无源光学器件集成在一起，甚至可以通过标准工艺集成微电子电路，从而以高能效大带宽的方式在计算节点之间迁移数据。光通信是实现大量数据交换最重要的解决方案之一，硅光调制器作为电光信号转换最关键的器件之一，必须在能效、带宽和可靠性上具有出色的表现，才能使光互连及光模块具有足够的竞争力。</p>
+<p>传统电互连中带宽密度的扩展依赖于增加波特率和 / 或封装引脚数量的全电连接，而通过在单根光纤上独立调制许多紧密间隔的光波长，密集波分复用（DWDM）提供了更高能效的带宽密度扩展方法。片上DWDM技术使我们可以在一个物理通道上同时调制和探测多个信号，作为片上波分复用系统中滤调一体的器件，微环调制器提供了超紧凑的器件尺寸，较低的能耗，并且可以通过高品质因子（Q 值）的谐振腔增强光与物质相互作用，从而提高光互连的带宽密度与能效。C. Sun 等人在 2015 年首次展示了使用微环调制器进行电光调制的与片上光互连链路通信的微处理器，标志着芯片级电子-光子系统时代的开端，具有变革计算系统架构的潜力。</p>
+<p>然而，微环调制器目前面临三大挑战：</p>
+<ol>
+<li>
+<p>在存在静态工艺偏差和动态温度变化的情况下，微环谐振腔的品质因子和谐振波长会发生变化，从而影响器件的良率和系统工作的稳定性。</p>
+</li>
+<li>
+<p>现有代工工艺中的硅基微环调制器通常基于反偏 PN 结，由于硅较弱的等离子体色散效应，可以实现的调制效率通常较小，通常需要较高的驱动电压（&gt; 2V），这与使用先进的 CMOS 工艺节点的数字集成电路不兼容，需要额外的调制器驱动电路，引起了额外的功耗和成本。</p>
+</li>
+<li>
+<p>由于掺杂的硅波导损耗较高，难以实现更高Q值的微环谐振腔，从而限制了光与物质相互作用的进一步增强。</p>
+</li>
+</ol>
+<p>本专利拟通过对微环谐振腔结构进行设计，将绝热，欧拉曲线和光子晶体微环谐振腔进行组合，利用回音壁模式（WGM），变换光学和慢光的原理，增加微环谐振腔工作的可靠性，提高工艺的容忍度，实现更高的调制效率。</p>
+<h3 id="二-发明内容"><a class="markdownIt-Anchor" href="#二-发明内容"></a> 二、发明内容：</h3>
+<h4 id="1-技术解决方案"><a class="markdownIt-Anchor" href="#1-技术解决方案"></a> 1、技术解决方案</h4>
+<h5 id="11-发明技术方案简介"><a class="markdownIt-Anchor" href="#11-发明技术方案简介"></a> 1.1 发明技术方案简介：</h5>
+<p>本方案微环调制器稳定性及调制效率的提高主要是通过对微环谐振腔结构进行改良，将绝热，欧拉曲线和光子晶体微环谐振腔结构进行组合。其基本原理如下：</p>
+<ol>
+<li>
+<p>绝热微环谐振器可以通过使谐振模式从器件侧壁上离散，以减少光学散射损耗，与传统微环谐振腔相比，模式的离散化也能进一步提高器件的制造容差。</p>
+</li>
+<li>
+<p>通过优化的欧拉曲线可以在弯曲波导和直波导的连接处获得足够大的曲率半径。从变换光学的角度看，这样的设计可以实现不同波导模式之间的绝热耦合，从而降低波导的弯曲损耗和模间串扰，增强微环谐振腔的品质因子。</p>
+</li>
+<li>
+<p>光子晶体微环谐振腔可以实现同时具有高 Q 值和慢光的模式，通过慢光的方式增加光-物质相互作用的时间，进一步增强微环的调制效率。</p>
+</li>
+</ol>
+<p>通过将以上的三种结构进行组合，本方案能够进一步优化微环调制器工作的可靠性，提高工艺容差，实现更高的调制效率。</p>
+<h5 id="12-技术发明细节"><a class="markdownIt-Anchor" href="#12-技术发明细节"></a> 1.2 技术发明细节：</h5>
+<p>传统的微环调制器结构及原理如图1所示，图中箭头为光信号的路径。光从左侧波导进入，当入射光的波长满足微环的谐振条件时，输出端只能检测到很弱的光信号，而其他波长的光不会在微环中发生谐振，在输出端能检测到较强的光信号。</p>
+<p>微环调制器通过掺杂在硅波导中形成PN结，并通过重掺杂形成欧姆接触，通过电极控制PN结中的载流子浓度。由于不同载流子浓度下的波导具有不同的折射率，不同电压下微环谐振腔的谐振峰位置会发生改变，如图1（c）所示，当入射光的波长在谐振峰附近时（λ0），并且电信号被施加在PN结两侧，由于不同电压下微环谐振腔的透射率不同，输出的光波会携带同样的信号。</p>
+<p>虽然传统的微环调制器近年来发展迅速，且已经可以实现较大带宽较高能效的电光信号转化，但进一步提高微环调制器的工艺容差和调制效率仍是实现高性能光互连的关键问题。因此，本发明拟通过对微环谐振腔结构进行设计，将绝热，欧拉曲线和光子晶体微环谐振腔进行组合，进一步增加微环调制器的工艺容差和调制效率。</p>
+<p>图2为本专利设计优化的微环谐振腔的结构示意图，包括绝热微环谐振腔，欧拉弯曲微环谐振腔，光子晶体微环谐振腔及其组合。</p>
+<p>绝热微环谐振腔如图2（a）所示，该结构在浅刻蚀形成的脊波导上进行设计和加工。绝热微环谐振器的几何结构由两个相互错位的圆形定义，其特征参数包括外半径、内半径以及两个圆心之间的位移。绝热微环的波导被分为上侧较宽的波导和下侧较窄的波导。下侧较窄区域有效地防止了在微环中激发高阶谐振模式，抑制非理想的高阶谐振峰。在上侧波导较宽的部分，绝热微环中谐振的光部分以回音壁的模式进行传播，光学模式与侧壁的重叠减少，因此光学散射损耗对侧壁粗糙度变化不敏感，从而显著减少工艺容差，使不同微环谐振腔性能保持一致。此外，绝热微环在较宽部分的模式离散化降低了模式折射率对波导宽度的敏感性，有助于稳定谐振频率，提高微环调制器的整体性能，减少为稳定谐振波长进行热调控制所需的能耗。</p>
+<p>欧拉弯曲微环谐振腔的结构如图2（b）所示，该结构在脊形波导上进行设计和加工。微环谐振腔是由4个90°的欧拉弯曲波导，两个直波导组成的跑道型微环谐振腔（Racetrack Mircoring）。每个90°欧拉弯曲波导由两个45°欧拉弯曲波导组合构成，其特征参数包括最大曲率半径（<em>Rmax</em>）和最小曲率半径（<em>Rmin</em>）决定。欧拉弯曲的位置可以通过以下方程进行计算：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi>d</mi><mi>θ</mi></mrow><mrow><mi>d</mi><mi>L</mi></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mi>R</mi></mfrac><mo>=</mo><mfrac><mi>L</mi><msup><mi>A</mi><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><mn>1</mn><msub><mi>R</mi><mi>max</mi><mo>⁡</mo></msub></mfrac></mrow><annotation encoding="application/x-tex">\frac{d \theta}{d L}=\frac{1}{R}=\frac{L}{A^2}+\frac{1}{R_{\max }}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">L</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.1574400000000002em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mop mtight"><span class="mtight">m</span><span class="mtight">a</span><span class="mtight">x</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>其中<em>L</em>是从起点(0, 0)到位置(<em>x</em>, <em>y</em>)的曲线长度，<em>R</em>是曲率半径<em>A</em>是一个常数。常数<em>A</em>的表达式为：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mo>=</mo><msup><mrow><mo fence="true">[</mo><msub><mi>L</mi><mn>0</mn></msub><mi mathvariant="normal">/</mi><mrow><mo fence="true">(</mo><mn>1</mn><mi mathvariant="normal">/</mi><msub><mi>R</mi><mi>min</mi><mo>⁡</mo></msub><mo>−</mo><mn>1</mn><mi mathvariant="normal">/</mi><msub><mi>R</mi><mi>max</mi><mo>⁡</mo></msub><mo fence="true">)</mo></mrow><mo fence="true">]</mo></mrow><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mn>2</mn></mrow></msup><mtext>, </mtext></mrow><annotation encoding="application/x-tex">A=\left[L_0 /\left(1 / R_{\min }-1 / R_{\max }\right)\right]^{1 / 2} \text {, }
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.2779em;vertical-align:-0.25em;"></span><span class="minner"><span class="minner"><span class="mopen delimcenter" style="top:0em;">[</span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord">1</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31750199999999995em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mop mtight"><span class="mtight">m</span><span class="mtight">i</span><span class="mtight">n</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mop mtight"><span class="mtight">m</span><span class="mtight">a</span><span class="mtight">x</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="mclose delimcenter" style="top:0em;">]</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0279em;"><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">/</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord text"><span class="mord">, </span></span></span></span></span></span></p>
+<p>其中，<em>L0</em>是与终点<em>R = Rmin</em>的位置 (<em>xE</em>, <em>yE</em>)所对应的曲线长度，通过以上的计算，欧拉曲线每个点坐标在笛卡尔坐标系可以表示为:</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.24999999999999992em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>x</mi><mo>=</mo><mi>A</mi><msubsup><mo>∫</mo><mn>0</mn><mrow><mi>L</mi><mi mathvariant="normal">/</mi><mi>A</mi></mrow></msubsup><mi>sin</mi><mo>⁡</mo><mrow><mo fence="true">(</mo><mfrac><msup><mi>θ</mi><mn>2</mn></msup><mn>2</mn></mfrac><mo>+</mo><mfrac><mrow><mi>A</mi><mi>θ</mi></mrow><msub><mi>R</mi><mi>max</mi><mo>⁡</mo></msub></mfrac><mo fence="true">)</mo></mrow><mi>d</mi><mi>θ</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>y</mi><mo>=</mo><mi>A</mi><msubsup><mo>∫</mo><mn>0</mn><mrow><mi>L</mi><mi mathvariant="normal">/</mi><mi>A</mi></mrow></msubsup><mi>cos</mi><mo>⁡</mo><mrow><mo fence="true">(</mo><mfrac><msup><mi>θ</mi><mn>2</mn></msup><mn>2</mn></mfrac><mo>+</mo><mfrac><mrow><mi>A</mi><mi>θ</mi></mrow><msub><mi>R</mi><mi>max</mi><mo>⁡</mo></msub></mfrac><mo fence="true">)</mo></mrow><mi>d</mi><mi>θ</mi></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+&amp; x=A \int_0^{L / A} \sin \left(\frac{\theta^2}{2}+\frac{A \theta}{R_{\max }}\right) d \theta \\
+&amp; y=A \int_0^{L / A} \cos \left(\frac{\theta^2}{2}+\frac{A \theta}{R_{\max }}\right) d \theta
+\end{aligned}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:5.7758600000000015em;vertical-align:-2.6379300000000008em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.1379300000000008em;"><span style="top:-5.137930000000001em;"><span class="pstrut" style="height:3.6379em;"></span><span class="mord"></span></span><span style="top:-2.2499999999999996em;"><span class="pstrut" style="height:3.6379em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.6379300000000008em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.1379300000000008em;"><span style="top:-5.137930000000001em;"><span class="pstrut" style="height:3.6379em;"></span><span class="mord"><span class="mord"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011249999999999316em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6379000000000004em;"><span style="top:-1.7880500000000001em;margin-left:-0.44445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span style="top:-3.8129000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">/</span><span class="mord mathnormal mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119499999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">sin</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mop mtight"><span class="mtight">m</span><span class="mtight">a</span><span class="mtight">x</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span><span style="top:-2.2499999999999996em;"><span class="pstrut" style="height:3.6379em;"></span><span class="mord"><span class="mord"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011249999999999316em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6379000000000004em;"><span style="top:-1.7880500000000001em;margin-left:-0.44445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span style="top:-3.8129000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">/</span><span class="mord mathnormal mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119499999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">cos</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mop mtight"><span class="mtight">m</span><span class="mtight">a</span><span class="mtight">x</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.6379300000000008em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>这种方式可以定义出45°欧拉弯曲波导的结构参数，两个45°欧拉弯曲波导拼接为一个90°欧拉弯曲波导，进而组成微环谐振腔。这样的微环谐振腔由于可以降低波导的弯曲损耗和模间串扰，给微环谐振腔提供更高的Q值，进而提高微环调制器的调制效率。</p>
+<p>光子晶体微环谐振腔的结构如图2（c）所示，结构类似于内部齿轮，将光子晶体（PhC）和回音壁模式（WGM）的概念结合在一起，通过微环内部的光子晶体超构材料，对微环谐振腔的内边界进行周期性调制，可以打开一个带隙，并在带隙边缘实现较强的慢光效应。需要注意的是，慢光效应也可以通过在微环中引入刻蚀孔来实现。</p>
+<p>通过慢光效应增加光–物质相互作用的时间，能够提高微环调制器的调制效率。并且微环内部的光子晶体超构材料可以对微环波导的色散和反射特性进行调控，实现对微环调制器光谱的控制。</p>
+<p>通过将图（a）~（c）中不同的微环调制器的结构有机结合在一起，如图2（d）~（g）所示，可以同时利用绝热、欧拉弯曲、和慢光微环谐振腔的优势，增加微环谐振腔工作的可靠性，提高工艺的容忍度，实现更高的调制效率。</p>
+<h4 id="2技术效果与本发明所要解决的技术问题相对应阐述本发明所能达到的效果包括社会的-经济的-技术的效果最好结合具体数据"><a class="markdownIt-Anchor" href="#2技术效果与本发明所要解决的技术问题相对应阐述本发明所能达到的效果包括社会的-经济的-技术的效果最好结合具体数据"></a> 2．技术效果（与本发明所要解决的技术问题相对应，阐述本发明所能达到的效果，包括社会的、经济的、技术的效果（最好结合具体数据））</h4>
+<p>通过在脊形波导上优化微环谐振腔结构，可以有效的提高微环调制器的工艺容差及调制效率，从而提高器件的良率，降低调制器的驱动电压。进一步可以降低成本，提高光子集成芯片的规模，降低调制器的功耗，提高系统的能效。</p>
+<h4 id="3-附图及附图的简单说明提供描述本发明的必要的附图最好是黑白的线条图不能是彩色效果图-工程图等"><a class="markdownIt-Anchor" href="#3-附图及附图的简单说明提供描述本发明的必要的附图最好是黑白的线条图不能是彩色效果图-工程图等"></a> 3. 附图及附图的简单说明（提供描述本发明的必要的附图，最好是黑白的线条图，不能是彩色效果图、工程图等）</h4>
+<p><img src="/pictures/sddsdafdsfadsfasdfasd.png" alt="sddsdafdsfadsfasdfasd" /></p>
+<p>图 1 传统微环调制器的结构示意图（a）俯视图（b）截面图（c）工作原理</p>
+<p><img src="../pictures/DFADFADSGASDFFDSFWEE.png" alt="DFADFADSGASDFFDSFWEE" /></p>
+<p>图 2 本专利中稳定性及调制效率优化的微环调制器结构示意图</p>
+<h4 id="4-发明的核心技术点希望通过本专利来进行保护的技术特征以及相应的技术方案"><a class="markdownIt-Anchor" href="#4-发明的核心技术点希望通过本专利来进行保护的技术特征以及相应的技术方案"></a> 4、发明的核心技术点（希望通过本专利来进行保护的技术特征以及相应的技术方案）</h4>
+<p>核心技术点1：本发明专利在脊波导上设计的绝热、欧拉弯曲、光子晶体微环谐振腔及其组合的结构。</p>
+<p>核心技术点2：本发明专利的微环调制器原理及其组合（如图2所示），包括在脊波导上通过绝热设计提高微环谐振器的工艺容差和品质因数；通过不同形状的样条线设计减少微环谐振腔的弯曲损耗和模间串扰；通过慢光效应提高微环谐振器的光与物质的相互作用强度；以及这些原理的组合使用。</p>
+<p>核心技术点3：本发明专利在脊波导上设计的绝热、欧拉弯曲、光子晶体微环谐振腔及其组合结构的应用，包括但不限于调制器、滤波器、传感器及非线性应用。</p>
+
       
     </div>
 
@@ -579,15 +693,40 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/08/27/%E9%AB%98Q%E5%80%BC%E6%85%A2%E5%85%89%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%85%89%E5%AD%90%E6%99%B6%E4%BD%93%E5%BE%AE%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%B1%80%E5%9F%9F%E5%8C%96/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>参考文献：<a href="/download/Lu 等 - 2022 - High-Q slow light and its localization in a photon.pdf" download>高Q值慢光及其在光子晶体微环中的局域化</a> 2022.</p>
+<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
+<p>我们介绍了一种光子晶体环形谐振腔，它类似于内部齿轮，将光子晶体（PhC）和回音壁模式（WGM）的概念结合在一起。这种“微齿轮”光子晶体环（MPhCR）是通过对微环谐振腔的内边界进行周期性调制而形成的，打开了一个大的带隙，就像在PhC腔体中一样，同时保持了环的圆对称外边界和高光学品质因子（Q），如同在WGM腔体中一样。MPhCR以特定的WGM为目标，打开一个宽达几十个自由光谱范围的大的PhC带隙，压缩模式谱，同时保持WGM模式的高Q值、角动量和波导耦合特性。特别是在介质带边附近，我们观察到模式的群速度相对于传统微环模式降低了10倍，同时支持Q值为(1.1 ± 0.1) × 10^6。这个Q值大约是先前慢光设备记录的50倍。以慢光设计为起点，我们进一步展示了将WGM局域化到光子晶体缺陷模式的能力，使模式体积相比于传统WGM减少了超过10倍，同时保持高达(5.6 ± 0.1) × 10^5的高Q值。重要的是，这种额外的光子晶体缺陷局域化可以在不需要详细电磁设计的情况下实现。此外，由于MPhCR继承了WGM的特性，控制其共振频率和波导耦合变得简单。在利用PhC强烈改变WGM的基本特性（如群速度和局域化）的过程中，MPhCR为广泛的光子学应用提供了一个令人兴奋的平台，包括传感/计量学、非线性光学和腔量子电动力学。</p>
+<h2 id="背景介绍"><a class="markdownIt-Anchor" href="#背景介绍"></a> 背景介绍</h2>
+<p>芯片集成的光学微/纳米腔已经在光学科学领域取得了许多突破。这些器件在适合集成和部署的平台上，时空增强了光与物质的相互作用，并被确立为量子光学、非线性光子学、光机械学和传感等领域的基础元素。空间约束的度量标准是模式体积（V），而与时间增强相关的度量标准是光学品质因子（Q）。虽然已经研究了许多腔体几何结构，但它们大多可以归为两类：回音壁模式（WGM）腔体，它们基于设备外围的全内反射；以及光子晶体（PhC）腔体，它们基于在一维或二维光子晶格中局域化缺陷。在前一类中，只要设备的半径足够大且侧壁光滑，就自然可以在宽波长范围内实现多个高Q值的WGM，而无需特定的器件几何结构设计。相比之下，在PhC腔体中，多模式操作和高Q值共振需要对器件几何结构进行精心和具体的设计，并且在纳米制造过程中必须保持一定的图案精度。WGM腔体的另一个优势是通过倏逝场相互作用实现波导耦合的相对容易性。这两个优势使WGM腔体成为宽带非线性光学的主要平台，包括克尔频率梳、光频率转换和其他非线性波混合效应。然而，WGM腔体无法与PhC缺陷腔体提供的更强的空间约束相媲美，后者的V值通常小10到100倍。PhC缺陷腔体可以具有亚立方波长的V值，特别适用于腔体量子电动力学（QED）和腔体光机械学中的单模应用。<br />
+鉴于WGM和光子晶体（PhC）缺陷腔体各自的优点，将这两种几何结构结合起来以利用两者的最佳特点是非常理想的。实际上，这一愿望已在各种腔体几何结构中得到追求（见扩展数据表1）。例如，一种研究中的几何结构在二维光子晶体中创建了多边形的“盘”形或“环”形线缺陷，即光子晶体“盘/环”谐振器（PCDRs/PCRRs）9–11。进一步的开创性工作在传统的环形谐振器中进行，称为光子晶体环（PhCRs）12，其中在微环中引入了刻蚀的空气孔，重点在于生成慢光模式12–16。在这些PhCRs中，尽管光的群速度被减慢以增强光-物质相互作用，但Q值与最先进的微环相比显著下降，这抵消了使用慢光的最初好处。<br />
+其他研究在微环侧壁上加入了小幅度的光栅，以控制选定腔体模式的频率17，并用于单模激光18和自发脉冲生成19，但这些研究没有考虑光子晶体引起的慢光或局部化效应。类似的光栅概念也被应用于回音壁谐振器，在许多不同的背景下进行研究，包括生成轨道角动量光束20和探索微激光器中的对称时间概念21，但一般来说，这些研究并未专注于通过缺陷引入实现高Q因子或强模式局部化。<br />
+在这项工作中，我们以一种新颖的方式将WGM和光子晶体（PhC）缺陷腔体的特点结合起来，这种方式保留了WGM腔体实现高Q因子和简便波导耦合的优势，同时保持了对光的传播和局部化的强控制能力，与PhC缺陷腔体相关联。我们的设备，即MPhCR，是一种微环腔体，其中对其内边界进行精心选择的周期性调制（类似于内部齿轮的形状）在角动量空间的目标位置打开了一个大的带隙。在这个平台上，我们展示了具有高Q值（1.1 ± 0.1）× 10⁶的慢光模式，并且群速度减慢比（SR）12,22值约为10。我们进一步展示了基于慢光模式在带边缘局部化的PhC缺陷模式。这些局部化的缺陷模式具有类似的高Q值，最高可达（5.6 ± 0.1）× 10⁵，并支持直观的频率工程和波导耦合，类似于传统的WGM。通过将WGM和PhC概念以保持各自优势的方式结合，MPhCR成为微腔物理学和应用的突破性平台。</p>
+<h2 id="mphcr设计的介绍"><a class="markdownIt-Anchor" href="#mphcr设计的介绍"></a> MPhCR设计的介绍</h2>
+<p>图1a和1b展示了MPhCR的示意图，其中第一个面板展示了慢光设备，第二个面板展示了具有光子晶体缺陷（dPhC）的设备。这两个设备都具有与传统微环相同的圆形外边界，支持具有离散角动量（由方位模数m描述）和频率（ω）的高Q值WGM。慢光设备的内边界具有大幅度的周期性调制，如图1a所示，这在带边缘及其附近创建了宽的光子带隙，支持慢光模式。dPhC设备基于慢光设备的设计，在周期性调制中引入了一个局部化的缺陷（此处缺陷位于中心，靠近耦合波导），如图1b所示。</p>
+<p><img src="/pictures/image-20240827091202436.png" alt="image-20240827091202436" /></p>
+<blockquote>
+<p><strong>图1 | MPhCR，高Q值慢光光子晶体微环。</strong><br />
+a,b, MPhCR的示意图，分别用于慢光（a）和光子晶体缺陷（dPhC）（b）腔体。c, MPhCR中的三种对称性：CW和CCW传播模式的镜像对称性（S）；仅允许具有离散角动量（m）和能量（ω）的模式的旋转对称性（R）；以及来自PhC结构的方位方向的周期性平移对称性（P），它将具有特定方位动量（即± m0）的CW和CCW模式耦合在一起。d, 由这三种对称性创建的带结构图。空气带被推向光锥（灰色），而介电带则被很好地保持。在慢光设备中，模式通过实线连接，其中s0和a0是带边缘模式。在dPhC设备中，s0移动到g，如虚线所示，而其他模式保持固定频率。e, 标记模式的主要电场分量的定性示意图（例如，横电模式的径向电场分量Er），红色和蓝色显示对立的相位，暗度与幅度成正比。慢光和dPhC模式的模式轮廓通过完整的数值电磁仿真显示在扩展数据图1和图2中。</p>
+</blockquote>
+<p>MPhCR设备具有三种对称性，如图1c所示：</p>
+<ul>
+<li><strong>S</strong> 代表镜像对称性，即顺时针（CW）和逆时针（CCW）传播光的对称性；</li>
+<li><strong>P</strong> 代表由周期性（在方位方向上）PhC调制产生的角动量变化，即模式从CCW到CW的转变（红色箭头）或从CW到CCW的转变（蓝色箭头）；</li>
+<li><strong>R</strong> 代表由于圆形边界条件而产生的旋转对称性，这导致了WGMs的量子化/整数角动量（m）和离散的共振频率（ωm）。</li>
+</ul>
+<p>如图1a所示，施加大幅度的内部侧壁调制会在图1d中m = ±m0处产生大的光子带隙，其中PhC调制周期为πR/m0（即环形周长内适配2m0个周期）。在MPhCR中，两个传播模式（m = ±m0）被重标定为两个驻波模式，标记为a0（空气带边缘模式）和s0（介电带边缘模式）。在带边缘的两侧，四个模式（m = ±(m0 ± 1)）被混合成四个新模式，其中两个在空气带中简并（a1），两个在介电带中简并（s1），其中s1可以看作是与s0具有相同空间轮廓但附加了cos(φ)调制（φ是方位角）。s2的特性类似，只是模式轮廓相对于s0附加了cos(2φ)的调制。我们注意到，由PhC调制引起的频率偏移导致高频空气带模式开始接触光锥（灰色阴影区域）。从慢光设备开始，通过局部扰动调制幅度可以制作dPhC设备。dPhC模式（g）是s0模式的局部化，具有较高的共振频率，依赖于缺陷的详细参数，如图1d中的虚线所示，而其他所有模式保持不变。图1e以定性方式展示了这些光学模式的代表性轮廓。为了说明目的，这里展示了方位模数m = 8，这大约是我们实际设备中使用的20倍。实际几何形状的模式的完整数值仿真见于方法部分和扩展数据图1和图2。<br />
+图2a、b显示了在化学计量硅氮化物（Si3N4）中制造的MPhCR的扫描电子显微镜（SEM）图像。图2a展示了一个环半径（Rout）为25 μm，厚度为500 nm，标称平均环宽（RW）为1,250 nm，调制幅度（A）为1,150 nm的MPhCR。图2b的扩展SEM图像展示了慢光MPhCR的结构细节，包括较大的A，使得环宽在最窄部分仅为100 nm，形状类似于以前研究的‘鳄鱼’光子晶体波导。该设备完全通过Si3N4层进行刻蚀，具有平滑的调制轮廓和侧壁。调制周期（一单元长度）约为485 nm，对应于周长上的162 × 2单元。有关制造细节，请参见方法部分。</p>
+<h2 id="mphcr中的慢光效应"><a class="markdownIt-Anchor" href="#mphcr中的慢光效应"></a> MPhCR中的慢光效应</h2>
+<p>通过增加光–物质相互作用的时间，可以增强这些相互作用。通常，这通过增加光子存储时间（即提高Q值）来实现，例如，通过使用光学微腔。此外，另一种方法是通过降低光的群速度，也就是利用慢光效应，例如，基于光子带边附近的波导模式。尽管这两种方法分别被广泛研究，但也存在它们可以协同工作的情况，即在保持高Q值的同时减慢光的群速度。我们强调，在光子晶体微环中，减慢因子应已包含在Q中。换句话说，慢光设备可能具有比对照设备更高的光学Q值，并在应用中提供额外的好处。虽然有证据支持在Q &lt;5,000的范围内使用慢光来增强Q值，但所有这些研究的Q值比通常在高Q微腔中达到的1,000,000低两个数量级，这抵消了使用慢光效应的好处。例如，在对光子晶体微环的开创性研究中，实现了Q = 2,000和SR = 4。最近，有研究报告了改进的性能，其中Q = 12,100和SR = 8。详细信息请参见扩展数据表1。<br />
+我们在开发MPhCR的首要目标是实现具有高Q值的慢光模式，这些Q值与WGMs相当。与之前在微环中采用空气孔的几何结构相比，MPhCR似乎更有利于减少散射损耗。我们通过图2中的光谱测量确认了这一点，其中Q和SR分别从线宽和自由光谱范围（FSR）值中提取（详见方法部分）。特别地，由于FSR与谐振腔模式群体指数成反比，相对于传统的微环模式，FSR的减小表明群体指数相应增加（从而群体速度降低）。与早期的研究相同，我们将SR作为旅行波模式和驻波模式的评价指标（这两种模式在传统高Q WGMs中常见且没有慢光效应，即SR=1）。对于后者，我们主要考虑构成驻波的反向传播旅行波的群体速度的降低。<br />
+没有调制的传统微环（A = 0 nm）展示了WGMs（主要是单模共振），其自由光谱范围（FSR）值几乎均匀（约0.91 THz或7.4 nm），如图2c所示。对于波长为1553.9 nm的模式，其固有光学品质因子（Q0）为（7.5 ± 0.2）× 10^5（最右侧面板），其方位模式数（m = 162）是目标用于内部侧壁调制的数值（Q0的误差来自传输共振的非线性最小二乘拟合；详见方法部分）。当调制非常大时，A = 1,150 nm，如图2d所示，大多数空气带模式被推入光锥中，只剩下三个模式具有较低的Q值和较差的波导耦合。介质带得到很好的保留，光谱被压缩，并且在带边附近的模式具有更高的光谱密度。该设备的s0模式的Q0 =（6.8 ± 0.1）× 10^5。图2f展示了图2d中{ s0，s1，s2 }模式的散射光的红外图像，这些模式的方位图案与图1e中所示的相匹配。<br />
+我们在图2e中构建了八个设备的能带图（七个设备的调制幅度A从550 nm到1150 nm，步长为100 nm，再加上一个对照设备）。当A增加时，空气带会被推向光锥，但介质带边缘保持在1 THz以内。测得的带边频率与数值模拟结果非常一致，如图2f所示（这些设备的完整模拟带结构显示在扩展数据图1中）。图2h展示了带隙（BG）值BG = [ω(a0) − ω(s0)]/2π和s0模式的SR值作为A的函数。带隙增加时，SR也增加，具有最大带隙的设备展现了SR = 9.94 ± 0.02（SR的误差来自于用分裂模式估算的FSR值；详见方法部分），对于s0模式的Q0为（6.8 ± 0.1）× 10^5，这比以往研究高约50倍。扩展数据图3b展示了所有A值和所有介质带模式近带边的SR，表明s1和s2也展现出显著但较小的SR值。对于慢光应用（例如，干涉仪），一个重要的指标是 ( \frac{n_g}{\alpha} )，其中 ( n_g ) 是群折射率，( \alpha ) 是损耗系数（与 ( Q_0 ) 直接成正比；详见方法部分）。在A = 1,150 nm的设备中，s0模式的 ( \frac{n_g}{\alpha} = (17 \pm 1) ) cm（不确定性来源于 ( Q_0 ) 的误差），这与早期研究相比有显著改进。此外，光学Q因子还可以进一步提升。例如，在扩展数据图4中，我们展示了一种具有高Q的慢光设备，其s0模式的 ( Q_0 = (1.1 \pm 0.1) \times 10^6 )，SR约为10， ( \frac{n_g}{\alpha} \approx 28 ) cm。这种高Q值，或等效地 ( \frac{n_g}{\alpha} )，代表了约50倍的记录提升；详见扩展数据表1的比较。因此，MPhCR是进一步研究慢光应用的有前途的平台，包括干涉仪、电信和传感等领域。</p>
+<h2 id="mphcr中的缺陷模式"><a class="markdownIt-Anchor" href="#mphcr中的缺陷模式"></a> MPhCR中的缺陷模式</h2>
+<p>虽然 (  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>n</mi><mi>g</mi></msub><mi>α</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{n_g}{\alpha}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.153712em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.808712em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.50732em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.16454285714285716em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2818857142857143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> ) 是慢光应用中的一个重要性能指标，如前一节所讨论，但 ( \frac{Q}{V} ) 是对腔增强光–物质相互作用（包括非线性和量子光学过程，例如 Purcell 增强）至关重要的度量指标。在微环中，这个值可以通过减少微环的半径，同时保持相对较低的辐射/散射损耗来优化，弯曲损耗最终限制了可实现的最小模式体积（V）。在本节中，我们展示了如何将局部的光子晶体缺陷（dPhC）引入慢光设备中，从而进一步减少模式体积（V），并将 ( \frac{Q}{V} ) 提高约十倍，相较于我们传统的微环。例如，在图 3a 中，SEM 图像展示了如何从慢光设备（如图 2b 所示）中导出一个 dPhC 设备。在此图中，引入了一个缺陷区域，其中调制幅度 A 在八个单元格（两侧各四个）中呈二次变化，缺陷中心的最大调制深度偏差（Δ）为 A 的 10%。这种直观的缺陷设计产生了一个支撑基态（g）dPhC 模式的束缚简谐势阱。图 3b 显示了类似于图 3a 的 dPhC 模式（g）的传输，但跨越 48 个单元，Q0 = (4.0 ± 0.1) × 10^5，类似于慢光模式的 Q0。观察到的最高 Q0 为 (5.6 ± 0.1) × 10^5；参见扩展数据图 5e。通过对慢光腔体进行扰动可以创建高 Q dPhC 模式，而无需特定的详细设计，这是与大多数 dPhC 腔体相对比的一个优点，在大多数 dPhC 腔体中，需要详细的数值模拟来优化设计以支持高 Q 值。通过以上述方式在图 2e 中的所有七种慢光设计中引入缺陷，生成了图 3c 中的缺陷带图。图 3c 中的介质带边缘扩展图展示了与未扰动的慢光设备（图 2e）的带图相比，s0 模式向带隙中的移动（形成 g）是主要变化，而相邻的慢光模式（例如，{s1, s2, s3}）基本上未受扰动。在扩展数据图 5a–c 中，我们展示了除 A 以外的其他参数对 g 模式频率的控制，包括 m、N（构成缺陷的单元数量）和 Δ。我们通过模拟确认了这些实验观察到的 g 模式的存在，并计算了它们的模式体积（V）数据。扩展数据图 2 展示了 dPhC 模式剖面和结果 V 值的全面数值模拟，使用基于电偶极耦合的腔体 QED 定义来计算 V（详见方法部分）。对于 dPhC 模式，V 值在 3.3(λ/n)³ 到 5.5(λ/n)³ 之间，其中 λ 是波长，n 是氮化硅的折射率，相较于慢光带边缘模式，显示出十倍以上的减少，并且，如预期的那样，本地化程度取决于势阱的具体特征。我们预计，通过数值优化和采用基本方法来增加模式的约束（如更低的空气包层或槽模式结构），可以进一步减少 V，而在高折射率平台（如硅基绝缘体）上使用近似的 (λ/n)³ 值是可能的。<br />
+利用光学微腔中增强的光–物质相互作用的应用还需要有效的波导输入/输出耦合。接下来，我们考虑以受控方式耦合到 dPhC 模式的能力，这是 MPhCR 继承自 WGM 的一个特性。在图 3d 中，我们展示了控制 MPhCR 与波导之间的渐逝耦合的两个参数，即缺陷角（θ）和波导–环间隙（G）。我们还展示了两个红外图像，分别来自于缺陷旋转（θ = 60°）和缺陷中心（θ = 0°）的设备。图 3e 中绘制了 dPhC 模式（g）和慢光模式 {s1±, s2+} 的耦合比 K = Q0/Qc 的测量值，涵盖了六种情况，即三种 G 值和两种 θ 值。显然，由于 g 模式的局部化，其耦合特性与 {s1±, s2+} 模式大相径庭。在旋转情况下，与 {s1±, s2+} 相比，g 的耦合较弱（约为 K 值的十分之一）。相比之下，在中心情况下，g 的耦合强度比 {s1±, s2+} 强（K 值约提高十倍）。对于 G = 350 nm 的 MPhCR，耦合质量因子 Qc 可以达到 10,000（参见扩展数据图 5），而通过使用更小的 G、优化的波导宽度和滑轮耦合，甚至可以实现更强的耦合。</p>
+<h2 id="讨论"><a class="markdownIt-Anchor" href="#讨论"></a> 讨论</h2>
+<p>我们展示了一种新的微腔平台，结合了 WGM 和 PhC 腔体的一些最重要的特点。实质上，我们的 MPhCR 设计可以可控地修改目标微环 WGM 的基本特性，例如其群速度和局部化长度尺度，同时保持其高 Q 值和简便的波导耦合。MPhCR 几何设计高度直观，我们展示的设备不需要任何详细的数值建模来实现高 Q 值、大的 SR 值或强的模式局部化（数值建模仅用于验证设备性能）。展望未来，慢光、dPhC 和传统 WGM 模式的共存对非线性光学具有很大的潜力，例如光学参量振荡；此外，在单一设备中结合多个光子带隙频率是可行的，类似于选择性引入多重 WGM 的背散射能力。另一个可能的方向是关注气体带模式的性能，例如，开发用于耦合中性原子的设备。如最近的综述中讨论的那样，虽然氮化硅通常被认为是在集成光子学中具有特别高 Q 值的平台，但 Q 值的实现很大程度上依赖于模态约束的程度，这由波导的横截面尺寸和包层的折射率决定。在中等约束的氮化硅微环中，最先进的 Q 值在 1,000,000 左右；而在高约束和低约束的氮化硅微环中，最先进的 Q 值则分别高达 10,000,000 和 100,000,000。虽然我们在本研究中展示了中等约束的氮化硅微环中的 MPhCR，但将 MPhCR 应用于高约束和低约束的氮化硅微环对于实现更高的 Q 值以及在超窄带滤波器、延迟线和受激布里渊散射等额外应用中也很有趣。最后，在其他平台上开发 MPhCR，例如碳化硅和砷化镓，可能会带来控制和利用被约束光场与单一量子发射体之间强相互作用的新机会。</p>
+
       
     </div>
 
@@ -665,15 +804,314 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/08/26/%E5%8F%AF%E8%A7%81%E6%B3%A2%E9%95%BF%E4%B8%8B%E7%A8%B3%E5%81%A5%E9%AB%98%E6%95%88%E7%9A%84%E5%BE%AE%E7%B1%B3%E7%BA%A7%E7%9B%B8%E4%BD%8D%E8%B0%83%E5%88%B6%E5%99%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>参考文献：<a href="/download/Liang 等 - 2021 - Robust, efficient, micrometre-scale phase modulato.pdf" download>可见波长下稳健高效的微米级相位调制器</a> 2021.</p>
+<p>补充材料：<a href="/download/Liang 等 - 2021 - Robust, efficient, micrometre-scale phase modulators at visible wavelengths.pdf" download>可见波长下稳健高效的微米级相位调制器-补充材料</a> 2021.</p>
+<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
+<p>光学相位调制器在可见光波长的大规模集成光子系统中至关重要，并且在许多新兴应用中表现出广阔的前景。然而，目前的技术需要较大的器件占地面积，并且要么消耗较高的功率，要么需要较高的驱动电压，从而限制了可见光谱集成光子电路中活跃元件的数量。在这里，我们展示了一种基于绝热微环谐振器的可见光谱硅氮化物热光相位调制器，相比于波导相位调制器，这种调制器在器件占地面积和功率消耗方面至少减少了一个数量级。设计用于在强耦合模式下工作，微谐振器提供了1.6π的相位调制，同时幅度变化最小，相应的调制损耗小至0.61 dB。通过使谐振模式的分布更加离散，绝热微环对制造变差表现出更好的稳健性：与常规微环相比，绝热微环所需的功率不到三分之一，以在芯片上热光对准绝热微环的谐振频率到激光频率。</p>
+<h2 id="背景介绍"><a class="markdownIt-Anchor" href="#背景介绍"></a> 背景介绍</h2>
+<p>相位调制器的大规模集成是光子系统的核心，尤其在芯片上的光学路由和自由空间波前整形中，这两种基本操作对于实现包括光学交换网络、人工神经网络、光学测距与探测、自由空间光通信和相控阵成像在内的广泛应用至关重要。可见光谱集成光子学是另一个令人兴奋的前沿领域，具有许多新兴应用，如增强现实和虚拟现实显示、量子信息处理、非线性光学、光学传感和光遗传学。在可见光和近红外光谱区域的大规模集成芯片系统需要微米级的相位调制器，且要求低功耗或低驱动电压。对于可见光谱集成光子学，这些要求尤其具有挑战性，因为与互补金属氧化物半导体（CMOS）工艺兼容的可用材料平台（即硅氮化物（SiN）、氮化铝（AlN）和二氧化硅（SiO2））具有较弱的热光（TO）和电光（EO）效应。例如，SiN的TO系数远小于硅：可见光波长下的基于波导的SiN TO相位调制器通常长达数百微米，并且需要数十毫瓦的功率来实现π相位调制。铌酸锂（LN）是一种具有超低传播损耗的新材料平台，尽管它与CMOS不兼容。考虑到LN的高EO系数，最先进的可见光谱LN波导相位调制器需要一个半波电压–长度乘积VπL为1.6 V cm，这意味着由CMOS水平电压驱动的器件长度大约为一厘米。液晶包层提供了另一种调制机制，具有较小的VπL，但不支持高速调制。</p>
+<p>传统的可见光波长相位调制器基于光在波导中的传播引起的相位累积，这限制了大规模芯片集成。基于光学谐振的调制器，如微环、微盘和光子晶体薄片，以及基于等离子体限制的调制器，支持增强的光–物质相互作用，可以显著减少器件的占地面积、功耗和驱动电压。然而，谐振腔在相位调制中的应用并不广泛，因为光学谐振通常与较大的幅度调制相关联，且光学谐振中的相位覆盖范围可能远小于2π。此外，谐振结构对制造和温度变化敏感，需要额外的功率来热光稳定所有芯片上器件的谐振频率，并将其对准激光频率。</p>
+<p>在这里，我们展示了在可见光波长下，可以通过在强耦合状态下操作的光学微谐振器实现最小损耗的相位调制。我们设计了一种绝热微环谐振器，<strong>通过使谐振模式从器件侧壁上离散，以减少光学散射损耗，并选择合适的耦合器几何形状以增强谐振器与波导的耦合强度</strong>。我们的可见光谱调制器在热光调制中显著降低了占地面积和功耗。<strong>与传统微环谐振器和波导相位移器相比，模式的离散化进一步提高了器件的制造容差</strong>。我们的方法有可能实现可见光波长下的大规模整体集成光子学。</p>
+<h2 id="用于相位调制的强耦合微谐振器"><a class="markdownIt-Anchor" href="#用于相位调制的强耦合微谐振器"></a> 用于相位调制的强耦合微谐振器</h2>
+<p>在绿色（λ = 530 nm）和蓝色（λ = 488 nm）波长下工作的器件使用标准的洁净室技术制造，包括薄膜生长、电子束光刻（EBL）和感应耦合等离子体刻蚀（见方法部分）。190 nm厚的SiN器件层通过低压化学气相沉积（LPCVD）生长。优化了等离子体刻蚀工艺以减少垂直侧壁上的粗糙度，并使用化学机械抛光（CMP）来降低SiN微环顶表面的粗糙度。图2展示了制造的器件的光学显微镜图像和扫描电子显微镜照片。</p>
+<p><img src="/pictures/image-20240826100740808.png" alt="image-20240826100740808" /></p>
+<p>图3a和3b分别展示了在λ = 530 nm下，绝热微环谐振器的“强度”端口和“相位”端口信号的测量结果以及提取的幅度和相位响应。绝热微环的外半径为R = 10 μm。跨越谐振时，当加热功率变化约4 mW时，相位变化约为1.6π；在谐振中心附近，当加热功率变化仅约0.85 mW时，相位变化为π；与此同时，强度端口的输出变化最小，为0.87 dB（对应幅度变化约10%）。绝热微环的固有和加载质量因子（Q因子）分别估计为2.1 × 10^5和1.0 × 10^4（见补充部分9）。对于基于直线SiN波导的对照器件，其长度范围从200到500 μm，需要约20 mW的加热功率才能实现π相位偏移（见图3e和补充部分10）。相比之下，我们的直径为20 μm的绝热微环器件仅需不到1 mW即可实现π相位调制，这表示加热功率减少了超过20倍。这与我们的理论分析一致，微谐振器在热光调制中能减少功耗的倍数为F/2，其中F在我们实验演示的器件中约为46（见补充部分9）。<br />
+我们还在实验中展示了基于微盘谐振器和传送带耦合器的绿色波长相位调制器（见补充部分8）。这些设备在基本的耳语厅模式（WGM）下运行，相比于λ = 530 nm的绝热微环，它们的功耗略有减少：其中最优的设备需要0.68 mW的加热功率变化即可实现π相位调制，调制损耗为1.13 dB，精细度因子F = 71（见补充图9）。然而，微盘设备通常在多模态条件下运行，其高阶WGM可能不会在强耦合状态下运行（见补充图9）。<br />
+在蓝色波长下，相位调制的实验结果也展示了幅度变化最小的情况。实现π相位偏移需要1.8 mW的加热功率（见图3d），调制损耗低至0.61 dB（见图3c)。估计的固有和加载Q因子分别为1.1 × 10^5和3.5 × 10^3，精细度因子F约为14。与绿色波长下的器件相比，稍高的功耗是由于F的降低以及准TM模式与SiN微谐振器之间的模态重叠减少所致。</p>
+<p><img src="/pictures/image-20240826100805358.png" alt="image-20240826100805358" /></p>
+<p>可见光谱器件的调制速度通过对微加热器施加方波并监测MZI的“相位端口”输出信号来测量。图3f展示了在蓝色波长下的绝热微环器件的驱动电压和输出信号。通过拟合输出信号的上升和下降边缘的指数函数并提取时间常数，计算得出的器件响应时间为3.4 ± 1.2 μs（n = 8个器件）（见补充部分11），对应的调制频率约为290 kHz。制造在同一芯片上的对照波导相位调制器的响应时间类似，为3.9 ± 0.6 μs（n = 6个器件）。测得的响应时间与热力学模拟结果一致（见补充部分11）。模拟进一步显示，波导器件的局部峰值温度至少比微谐振器高30°C（见补充图11)。</p>
+<h2 id="对制造变差具有良好稳健性的性能"><a class="markdownIt-Anchor" href="#对制造变差具有良好稳健性的性能"></a> 对制造变差具有良好稳健性的性能</h2>
+<p>与传统的微环谐振器相比，绝热微环对制造变差具有更强的稳健性，例如侧壁粗糙度和环几何形状的系统性变化（见补充部分13）。绝热微环宽部分的光学模式与侧壁的重叠减少，因此光学散射损耗对侧壁粗糙度变化不敏感，从而显著减少并使γo值更加一致。此外，绝热微环宽部分的模式离散化使得模态折射率对波导宽度的变化不敏感（见补充图12），有助于稳定谐振频率。</p>
+<p><img src="/pictures/image-20240826100830981.png" alt="image-20240826100830981" /></p>
+<p>我们对在λ = 488 nm下制造的52个绝热微环器件和49个常规微环器件进行了比较研究。这两种类型的器件具有相同的外半径和耦合器几何形状，唯一不同的是常规微环具有恒定的波导宽度，这个宽度等于绝热微环最窄部分的宽度（见图4a插图）。对于常规微环，γo/γe（即衰减率/耦合率）的直方图峰值为0.24（对应相对较大的调制损耗4.2 dB），标准差为0.078；而对于绝热微环，γo/γe的直方图峰值为更小的0.09（对应调制损耗1.5 dB），且标准差也较小，为0.046（见图4a）。<br />
+由于两种器件的γe相似，实验结果表明绝热微环的衰减率γo约为常规微环的三分之一。通过利用先进的半导体制造厂设施，可以进一步减少γo的幅度和变化。图4b展示了在芯片上对齐谐振中心与激光频率所需的加热功率的空间分布。在芯片上，常规微环的加热功率在∆x ≈ 6 mm和∆y ≈ 17 mm的区域内呈现5.44 mW mm^−1的梯度，而绝热微环的加热功率仅为1.60 mW mm^−1。这种加热功率的变化是由于芯片上SiN生长和刻蚀条件的系统性变化，导致SiN层厚度和波导宽度的变化（见补充部分12)。我们的结果展示了绝热微环在应对这种系统性变化方面的增强稳健性，因此，绝热微环对齐谐振频率所需的加热功率相比于常规微环减少了三倍以上。补充部分13进一步展示了与波导相位移器相比，绝热微环中由器件几何变化引起的有效模态折射率变化和相位误差较小。</p>
+<h2 id="讨论和小结"><a class="markdownIt-Anchor" href="#讨论和小结"></a> 讨论和小结</h2>
+<p>这项工作在超耦合概念的基础上迈出了具体的一步，通过开发一系列设计策略来实现可见光谱中最困难部分（即短波长区域）的强超耦合极限。该工作提出并实验实现了在强超耦合条件下工作的绝热微环，以提供光学损耗显著低于1 dB的相位调制（例如，蓝色光谱范围内为0.6 dB）；同时理论上证明了经过适当设计的绝热微环可以在整个可见光谱范围内以强超耦合模式运行，因此可以用于对任何颜色的光进行相位移位。</p>
+<p><img src="/pictures/image-20240826100901020.png" alt="image-20240826100901020" /></p>
+<p>绝热微环在功率效率和紧凑性方面相比于直线和蛇形波导设备具有明显的优势。这些提出的器件还可以帮助解决由系统性材料生长和制造变化引起的相位误差，这是大规模集成光子电路中普遍且一致的挑战。这些紧凑、高效且稳健的可见光谱相位调制器最适合用于对尺寸、重量和功耗（SWaP）要求较高的高度集成系统，如增强现实和虚拟现实眼镜、量子信息处理电路、光学人工神经网络和用于光遗传学的神经探针。我们为可见光谱热光调制器采用的设计策略可以应用于电光调制器以降低VπL，并且可以适应其他光谱范围（例如，紫外线、电信、红外中段和太赫兹范围）和其他谐振器设计（例如，光子晶体腔和逆向设计的光学谐振器）。因此，我们的工作可以激发未来的努力，实施强超耦合以增强光–物质相互作用（例如，用于控制群时延和增强光学非线性），同时抑制光学损耗。使用谐振器基础的相位调制器的潜在缺点包括：（1）调制频率的上限与加载Q因子的倒数成正比，（2）由于谐振的群时延和群速度色散导致的对短光脉冲的真实时延和失真，（3）调制损耗，即幅度响应不是完全恒定的，以及（4）需要热偏置来调整谐振频率以对准激光频率，并需要小心保持激光频率的稳定。然而，前两项缺点不太可能限制可见光区域的应用，与电信不同，可见光区域通常不需要超高的调制速度（例如，光遗传探针只需要比神经元的放电速度快；增强现实显示器的刷新率只需比人眼的感知速度快）。通过将器件推入更强的超耦合状态，可以最小化调制损耗。调整微环谐振所需的热偏置可以通过使用更大半径的环（较小的自由光谱范围）来减少。</p>
+<h2 id="补充材料"><a class="markdownIt-Anchor" href="#补充材料"></a> 补充材料</h2>
+<h3 id="过耦合状态下谐振器的幅度和相位响应"><a class="markdownIt-Anchor" href="#过耦合状态下谐振器的幅度和相位响应"></a> 过耦合状态下，谐振器的幅度和相位响应</h3>
+<h3 id="两个相同的-未耦合的微谐振器串联"><a class="markdownIt-Anchor" href="#两个相同的-未耦合的微谐振器串联"></a> 两个相同的、未耦合的微谐振器串联</h3>
+<p>在过耦合状态下，微谐振器的相位响应在谐振中心附近变化迅速，而在远离中心的区域则变化缓慢（见图S3a）。因此，在热光调制器中，调节光学相位所需的加热功率的变化在较大范围内不成比例地增加。可以通过将两个相同的、未耦合的微谐振器级联来克服这个问题，这样可以实现总相位调制为 (4<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>)，使得中心的 (2<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>) 相位移只需相对较小的加热功率变化（即，相对于单个微谐振器中相位调节 ( <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span> ) 所需的加热功率的两倍）。（见图S3b）。</p>
+<h3 id="绝热微环调制器的设计考量"><a class="markdownIt-Anchor" href="#绝热微环调制器的设计考量"></a> 绝热微环调制器的设计考量</h3>
+<p><strong>绝热微环谐振器的几何设计及其耦合器</strong>：</p>
+<h3 id="绝热微环谐振器的几何设计"><a class="markdownIt-Anchor" href="#绝热微环谐振器的几何设计"></a> 绝热微环谐振器的几何设计</h3>
+<p>绝热微环谐振器的几何结构由两个相互错位的圆形定义，其特征参数包括外半径、内半径以及两个圆心之间的位移。在典型设计中，例如图1d中展示的适用于蓝色波长（λ = 488 nm）的设计：</p>
+<ul>
+<li><strong>外半径</strong>：10 μm</li>
+<li><strong>内半径</strong>：9 μm</li>
+<li><strong>圆心位移</strong>：0.7 μm</li>
+</ul>
+<p>在此设计中，微环的最窄部分（即耦合器区域）宽度为300 nm，而最宽部分宽度为1.7 μm。</p>
+<p><strong>设计要点</strong>：</p>
+<ol>
+<li>
+<p><strong>宽窄区域设计</strong>：</p>
+<ul>
+<li><strong>宽区域</strong>：宽区域的光模式与侧壁的重叠减少，从而降低了侧壁粗糙度引起的散射损耗。</li>
+<li><strong>窄区域</strong>：窄区域有效地防止了在微环的径向方向上激发高阶谐振模式。</li>
+</ul>
+</li>
+<li>
+<p><strong>渐变过渡</strong>：</p>
+<ul>
+<li><strong>渐变缓慢</strong>：窄区域与宽区域之间的过渡应足够缓慢（例如，外半径与内半径的差异不超过2 μm，位移不超过1 μm），以确保模式指数的渐变是绝热的，避免光学损耗。</li>
+</ul>
+</li>
+<li>
+<p><strong>与波导的相位匹配</strong>：</p>
+<ul>
+<li><strong>窄区宽度选择</strong>：绝热微环谐振器的最窄部分宽度选择接近波导的宽度，以实现相位匹配。在图1d中，波导宽度为280 nm，绝热微环的最窄部分宽度为300 nm。</li>
+</ul>
+</li>
+</ol>
+<h3 id="波导与绝热微环谐振器的耦合器设计"><a class="markdownIt-Anchor" href="#波导与绝热微环谐振器的耦合器设计"></a> 波导与绝热微环谐振器的耦合器设计</h3>
+<ol>
+<li>
+<p><strong>耦合器设计</strong>：</p>
+<ul>
+<li><strong>弯曲段和直段</strong>：典型设计中，耦合器由围绕绝热微环的45°弧段（ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>θ</mi><mrow><mi>a</mi><mi>r</mi><mi>c</mi></mrow></msub><mo>=</mo><mn>45</mn><mi>deg</mi><mo>⁡</mo></mrow><annotation encoding="application/x-tex">θ_{arc} = 45\deg</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">4</span><span class="mord">5</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">de<span style="margin-right:0.01389em;">g</span></span></span></span></span> ）和弧段两侧的5 μm直段（ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mi>s</mi></msub><mo>=</mo><mn>5</mn><mi>μ</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">L_s = 5 μm</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">5</span><span class="mord mathnormal">μ</span><span class="mord mathnormal">m</span></span></span></span> ）组成。这样设计可以实现波导与微环外缘之间距离的平滑变化，有助于减少由于模式指数突变引起的光学散射。</li>
+</ul>
+</li>
+<li>
+<p><strong>波导间隙的优化</strong>：</p>
+<ul>
+<li><strong>间隙大小</strong>：在可见光谱范围内，材料中的有效波长可以小到200 nm，因此间隙大小需要减小以增强波导与谐振器的耦合。然而，过小的间隙会导致制造良率降低，并在反应离子刻蚀过程中引入大量侧壁粗糙度。因此，间隙大小限制在70 nm到130 nm之间。</li>
+</ul>
+</li>
+<li>
+<p><strong>FDTD模拟</strong>：</p>
+<ul>
+<li><strong>传输、耦合和散射损失</strong>：使用有限差分时域（FDTD）方法模拟了不同 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>θ</mi><mrow><mi>a</mi><mi>r</mi><mi>c</mi></mrow></msub></mrow><annotation encoding="application/x-tex">θ_{arc}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 值的耦合器的传输、耦合和散射损失。绝热微环谐振器与图1d中的设计相同，而普通微环谐振器具有相同的外半径但宽度恒定为300 nm（见图S5a和b）。耦合器的单程散射损失定义为：
+<ul>
+<li>从波导侧的损失： <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>o</mi><mi>s</mi><msub><mi>s</mi><mi>w</mi></msub><mo>=</mo><mn>1</mn><mo>−</mo><msubsup><mi>t</mi><mi>w</mi><mn>2</mn></msubsup><mo>−</mo><msubsup><mi>k</mi><mi>w</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">loss_w = 1 - t_w^2 - k_w^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal">s</span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4530000000000003em;margin-left:-0.03148em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></li>
+<li>从微环谐振器侧的损失： <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>o</mi><mi>s</mi><msub><mi>s</mi><mi>r</mi></msub><mo>=</mo><mn>1</mn><mo>−</mo><msubsup><mi>t</mi><mi>r</mi><mn>2</mn></msubsup><mo>−</mo><msubsup><mi>k</mi><mi>r</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">loss_r = 1 - t_r^2 - k_r^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal">s</span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4530000000000003em;margin-left:-0.03148em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span><br />
+其中，t<sub>w</sub>、k<sub>w</sub>、t<sub>r</sub>和 k<sub>r</sub> 的定义见图S4a-b和图S5a-b。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>通过这些设计考量和优化，绝热微环谐振器可以在可见光谱范围内实现高效的光学调制和耦合。</p>
+<p><img src="/pictures/image-20240826102717692.png" alt="image-20240826102717692" /></p>
+<p><img src="/pictures/image-20240826102732906.png" alt="image-20240826102732906" /></p>
+<p>耦合器的总散射损耗，在考虑到谐振器中模式的循环之后，使用两种模型进行进一步计算：在相干散射模型中，假设来自连续循环的散射会相干累积；在非相干散射模型中，假设来自连续循环的散射会非相干累积。当具有幅度 ( s_{iwn} = 1 ) 的光源进入耦合器时，耦合到微环谐振器的模式幅度为 ( a_0 = kw s_{iwn} = kw )。经过一次单次循环后，从微环侧重新进入耦合器的模式幅度降至 ( s_{0r} = a \cdot a_0 = kw a )，其中 ( a ) 是循环模式的单次传输幅度，而经过耦合器传输后，残留在微环中的模式幅度为 ( a_1 = trs_{0r} = kw tra )。通过在微环谐振器中的连续循环，经过耦合器退出的循环模式幅度形成一个序列：({a_n = kw (tra)^n, n = 0,1,2, \ldots })，而重新进入耦合器的循环模式幅度形成一个序列：({s_{nr} = kwa (tra)^n, n = 0,1,2, \ldots })。每次循环模式在微环谐振器中重新进入耦合器时，都会产生一定的散射损耗。</p>
+<p>在相干散射模型中，循环模式的散射损耗是相干累加的，计算公式为 ((\sum_{n=0}^{\infty} s_{nr})^2 \text{loss}<em>r)，因此总损耗为 (\text{loss}</em>{\text{coherent}} = \text{loss}<em>w + \frac{k^2 w a^2}{(1 - tra)^2} \cdot \text{loss}<em>r)；在非相干散射模型中，循环模式的散射损耗是非相干累加的，计算公式为 (\sum</em>{n=0}^{\infty} (s</em>{nr})^2 \text{loss}<em>r)，因此总损耗为 (\text{loss}</em>{\text{incoherent}} = \text{loss}_w + \frac{k^2 w a^2}{(1 - tr^2 a^2)} \cdot \text{loss}_r)。</p>
+<p>绝热和常规微环谐振器的单次传输幅度 ( a ) 由图4a中对制造的设备的测量确定，通过解谐振中心的强度传输 ( T_0 = \frac{(a - t)^2}{(1 - ta)^2} ) 和 finesse 因子 ( F = \frac{\pi \sqrt{ta}}{(1 - ta)} ) [W. Bogaerts, Laser Photonics Rev. 6, 47–73 (2012)]。对于绝热微环，提取的平均值为 ( a = 0.98 )；对于常规微环，提取的平均值为 ( a = 0.97 )。</p>
+<p>对于 θarc = 45° 和 Ls = 5 μm 的绝热和常规设备，传送带耦合器的耦合强度适中（图S4c 和图S5c），耦合器的单次散射损耗（图S4d 和图S5d）和总散射损耗（图S4e 和图S5e）均处于局部最小值。与没有直线段（即 Ls = 0 μm）的情况相比，耦合器的两个 Ls = 5 μm 的直线段显著减少了散射损耗（图S6）。虽然传送带耦合器的总散射损耗在 1-2% 的范围内（图S4e 和图S5e），但测得的绝热微环设备的总损耗 ( 1 - T_0 )（其中 T0 为谐振中心的强度传输），包括由于侧壁粗糙度引起的散射、耦合器的散射、材料吸收和谐振器中的弯曲损耗，最好为 10%，平均约为 30%；这表明耦合器的光学散射不是设备总损耗的主要贡献者。由于材料吸收和谐振器中的弯曲损耗在我们制造的设备中可以忽略不计，上述分析表明，设备损耗主要由侧壁粗糙度引起的散射损耗贡献。绝热微环的比较优势在于其侧壁散射损耗减少至常规微环的约 1/3（图4a）。</p>
+<p><img src="/pictures/image-20240826103726871.png" alt="image-20240826103726871" /></p>
+<h3 id="微谐振腔与直波导相位调制器的热电功耗比较"><a class="markdownIt-Anchor" href="#微谐振腔与直波导相位调制器的热电功耗比较"></a> 微谐振腔与直波导相位调制器的热电功耗比较</h3>
+<p>微波导相位调制器和基于强过耦合谐振腔的相位调制器的热电功耗比较如下：</p>
+<p>在波导型相位调制器中，实现π相位调节所需的加热功率为：</p>
+<p>[ P_{wg} = p_0 \delta T_{wg} L_{wg}, ]</p>
+<p>其中，( p_0 ) 是导致波导单位长度上温度变化一度所需的加热功率，( \delta T_{wg} ) 是实现π相位调节所需的温度增加量，( L_{wg} ) 是波导的长度。</p>
+<p>波导型相位调制器的相位变化为：</p>
+<p>[ \delta \phi = \frac{2 \pi}{\lambda} \delta n_{wg} L_{wg} = \pi, ]</p>
+<p>其中，( \lambda ) 是自由空间波长，( \delta n_{wg} ) 是有效波导模态指数的变化量。</p>
+<p>( \delta n_{wg} ) 与 ( \delta T_{wg} ) 之间的关系由热光系数 ( \alpha_{TO} ) 给出：</p>
+<p>[ \delta n_{wg} = \alpha_{TO} n_{wg} \delta T_{wg}. ]</p>
+<p>通过使用方程（S10）到（S12），可以确定波导型相位调制器的加热功率：</p>
+<p>[ P_{wg} = \frac{p_0 \lambda}{2 \alpha_{TO} n_{wg}}. ]</p>
+<p>在基于强过耦合谐振腔的相位调制器中，实现π相位调节所需的加热功率为：</p>
+<p>[ P_{ring} = p_0 \delta T_{ring} L_{ring}, ]</p>
+<p>其中，( \delta T_{ring} ) 是实现π相位调节所需的温度增加量，( L_{ring} ) 是微环谐振腔的周长。</p>
+<p>相位调节大约为谐振线宽的π（补充部分 I），因此我们有：</p>
+<p>[ \frac{\delta n_{ring}}{n_{ring}} = \frac{\delta \lambda_{ring}}{\lambda_{ring}}, ]</p>
+<p>其中，( \delta \lambda_{ring} ) 是谐振线宽的波长，( \lambda_{ring} ) 是谐振波长，( \delta n_{ring} ) 是有效模态指数 ( n_{ring} ) 的变化量，对于π相位调节，其与 ( \delta T_{ring} ) 之间的关系由热光系数 ( \alpha_{TO} ) 给出：</p>
+<p>[ \delta n_{ring} = \alpha_{TO} n_{ring} \delta T_{ring}. ]</p>
+<p>我们进一步将 ( \delta \lambda_{ring} ) 与谐振腔的品质因数 ( F ) 相关联：</p>
+<p>[ F = \frac{FSR}{\delta \lambda_{ring}}, ]</p>
+<p>其中，( FSR ) 是谐振腔的自由光谱范围，可以通过以下公式计算：</p>
+<p>[ FSR = \frac{\lambda_{ring}^2}{n_{ring} L_{ring}}. ]</p>
+<p>通过使用方程（S14）到（S18），可以确定基于谐振腔的相位调制器的加热功率：</p>
+<p>[ P_{ring} = \frac{p_0 \lambda_{ring}}{\alpha_{TO} n_{ring} F}. ]</p>
+<p>波导和微环谐振腔具有类似的有效模态指数（( n_{wg} \approx n_{ring} )）和 ( p_0 )；因此，我们可以得到波导型相位调制器和谐振腔型相位调制器在实现π相位调节所需的加热功率的比值：</p>
+<p>[ \frac{P_{wg}}{P_{ring}} = F^2. ]</p>
+<h3 id="微型谐振腔与波导相位移器的-vπl-比较"><a class="markdownIt-Anchor" href="#微型谐振腔与波导相位移器的-vπl-比较"></a> 微型谐振腔与波导相位移器的 VπL 比较</h3>
+<h3 id="波导相位移器与微型谐振腔的-vπl-比较"><a class="markdownIt-Anchor" href="#波导相位移器与微型谐振腔的-vπl-比较"></a> 波导相位移器与微型谐振腔的 VπL 比较</h3>
+<p><strong>波导相位移器的 VπL:</strong></p>
+<p>波导相位移器的 π 相位调制所需的有效波导模态指数变化为：</p>
+<p>[ \delta n_{wg} = \eta Vπ_{wg} , (S21) ]</p>
+<p>其中，( Vπ ) 是实现 π 相位调制所需的电压，( \eta ) 是每伏特电压变化引起的有效波导模态指数变化。根据公式 (S11) 和 (S21)，波导相位移器的半波电压长度乘积 ( VπL_{wg} ) 可以计算为：</p>
+<p>[ Vπ_{wg} L_{wg} = \frac{λ}{2\eta} , (S22) ]</p>
+<p><strong>微型谐振腔的 VπL:</strong></p>
+<p>基于强过耦合谐振腔的电光调谐相位调制器的 π 相位调制所需的有效模态指数变化为：</p>
+<p>[ \delta n_{res} = \eta Vπ_{ring} , (S23) ]</p>
+<p>根据公式 (S15)、(S17)、(S18) 和 (S23)，微型谐振腔的 VπL 可以计算为：</p>
+<p>[ Vπ_{ring} L_{ring} = \frac{λ0}{F\eta} , (S24) ]</p>
+<p>其中，( F ) 是谐振腔的精细因子，( λ0 ) 是谐振波长。</p>
+<p><strong>VπL 比例比较:</strong></p>
+<p>波导和微型谐振腔的 ( \eta ) 值相似，因此，我们可以得到波导相位移器与微型谐振腔相位调制器的 VπL 比值：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi>V</mi><msub><mi>π</mi><mrow><mi>w</mi><mi>g</mi></mrow></msub><msub><mi>L</mi><mrow><mi>w</mi><mi>g</mi></mrow></msub></mrow><mrow><mi>V</mi><msub><mi>π</mi><mrow><mi>r</mi><mi>i</mi><mi>n</mi><mi>g</mi></mrow></msub><msub><mi>L</mi><mrow><mi>r</mi><mi>i</mi><mi>n</mi><mi>g</mi></mrow></msub></mrow></mfrac><mo>=</mo><msup><mi>F</mi><mn>2</mn></msup><mtext> </mtext><mo stretchy="false">(</mo><mi>S</mi><mn>25</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\frac{Vπ_{wg} L_{wg}}{Vπ_{ring} L_{ring}} = F^2 \, (S25) 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.332438em;vertical-align:-0.972108em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.972108em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.1141079999999999em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord">2</span><span class="mord">5</span><span class="mclose">)</span></span></span></span></span></p>
+<h3 id="将微谐振腔融入马赫-曾德干涉仪的输出端口"><a class="markdownIt-Anchor" href="#将微谐振腔融入马赫-曾德干涉仪的输出端口"></a> 将微谐振腔融入马赫-曾德干涉仪的输出端口</h3>
+<p>将微谐振腔集成到具有三个输出端口的马赫-曾德干涉仪（MZI）中，以监测谐振腔的幅度和相位响应（图 S7a）。从强度端口得到的输出反映了设备的传输特性；从相位端口得到的输出是设备传输和参考波导之间的干涉；从参考端口得到的输出是参考波导的传输特性。如果微谐振腔处于欠耦合状态，即 γe/γo &lt; 1，则相位端口和强度端口的输出在谐振中心的陷波不会降至零（图 S7b）。如果微谐振腔处于临界耦合状态，即 γe/γo = 1，则强度端口的输出在谐振中心的陷波会降至零（图 S7c）。如果微谐振腔处于过耦合状态，即 γe/γo &gt; 1，则相位端口的输出陷波会接近零，而强度端口的输出陷波会达到最小值 ((\frac{γe/γo−1}{γe/γo+1})^2)（图 S7d）。</p>
+<p><img src="/pictures/image-20240826104219090.png" alt="image-20240826104219090" /></p>
+<h3 id="器件测试"><a class="markdownIt-Anchor" href="#器件测试"></a> 器件测试</h3>
+<p>图 S8a 显示了用于在绿色波长下测试集成光子器件的实验 setup 的示意图。绿色光是通过频率倍增可调二极管激光器（Newport，型号 TLB-6721-P，调谐波长为 1030-1070 nm）输出的光获得的。二极管激光器的输出经过光纤放大器（3SP Group，TKS 1064 nm CW SLM PM 光纤放大器）进行放大，然后使用温度控制的周期性极化锂铌酸盐（PPLN）实现频率倍增。产生的绿色光通过自由空间光学系统耦合到被测试器件的输入波导中，耦合损耗估计为 10 dB。入射的偏振由线性偏振片控制。插入损耗，即与调制损耗无关的静态光损耗，是由于光在进入和离开绝热微环的波导中传播（总长度约为 2 mm），在绿色光谱范围内约为 0.9 dB。</p>
+<p>图 S8b 显示了用于在蓝色波长下测试集成光子器件的实验 setup 的示意图。波长为 488 nm 的蓝光由二极管激光器（Toptica，DL pro）产生，通过单模光纤耦合到被测试器件的输入波导中，光纤中使用的光栅用于控制入射偏振。光纤到芯片的耦合损耗和插入损耗分别估计为 10 dB 和 1.9 dB。</p>
+<p>在这两个实验 setup 中，使用光阑从每个器件的三个输出端口（即强度端口、相位端口和参考端口）中选择信号。使用 Si 雪崩光电探测器（Thorlabs，APD120A2）测量输出信号强度。</p>
+<p>微环器件支持可见光谱范围内大量的共振，其中一些相对于激光频率是蓝移的，另一些是红移的。第一个与激光频率最接近的蓝移共振将被选为目标器件的共振。通过微加热器加热微环器件会导致 SiN 的折射率增加，从而导致几个最接近的蓝移共振在激光频率范围内红移。通常使用范围从 0 到 50 mW 的加热功率，这通常会使两个最初的蓝移共振在激光频率范围内移动。因此，设备的“相位端口”中的信号将显示两个因加热功率变化而产生的陷波。第一个陷波的加热功率是将目标器件共振与激光频率对齐的加热偏置；如果此加热功率被认为过大（即 &gt; 5 mW），则我们会将激光频率蓝移，使其更接近第一个蓝移共振。这样可以减少对齐目标器件共振与激光频率所需的加热偏置。</p>
+<p><img src="/pictures/image-20240826104306099.png" alt="image-20240826104306099" /></p>
+<h3 id="在绿色波长下用于相位调制的微盘谐振腔"><a class="markdownIt-Anchor" href="#在绿色波长下用于相位调制的微盘谐振腔"></a> 在绿色波长下用于相位调制的微盘谐振腔</h3>
+<p>在绿色波长下，微盘谐振腔也展示了相位调制的能力。微盘谐振腔（图 S9a）支持准TE耳语廊模式（图 S9b），其光学散射损耗比同尺寸的微环谐振腔支持的准TE共振模式更小。微盘仅有一个侧壁，耳语廊模式向盘中心偏移（图 S12），这两个因素导致与器件侧壁的光学相互作用减弱。然而，微盘外部的减少的渐逝场导致了γe的降低。通过使用传送带耦合器（图 S9a 和 c）可以改善这一点，从而增加相互作用长度。</p>
+<p>微盘谐振腔的基频耳语廊模式，根据我们的设计，将在强过耦合状态下运行。图 S9d 和 e 显示，在这种条件下，当加热功率变化仅为 0.68 mW 时，可以实现 π 相位偏移，并且共振范围内的强度变化限制在 1.13 dB。估计的内在和加载Q因子分别为 3.6×10^5 和 2.2×10^4。微盘谐振腔的主要缺点是它通常支持高阶耳语廊模式，这些模式可能无法在强过耦合状态下运行（图 S9f）。</p>
+<p><img src="/pictures/image-20240826104353905.png" alt="image-20240826104353905" /></p>
+<h3 id="器件的q因子和光学-finesse-的计算"><a class="markdownIt-Anchor" href="#器件的q因子和光学-finesse-的计算"></a> 器件的Q因子和光学 finesse 的计算</h3>
+<p>器件的加载Q因子（( Q_L )）通过公式 ( Q_L = \frac{\lambda}{\Delta \lambda} ) 计算，其中 (\lambda) 是光源波长，(\Delta \lambda) 是从器件强度端口的传输中的共振深度的线宽。强度端口的传输首先作为加热功率的函数进行测量，并应转换为波长的函数曲线，以提取 (\Delta \lambda)。对于在绿色波长下测试的器件，通过调节光源波长并同时监测在共振中心的加热功率来测量加热功率与波长之间的转换系数。对于在蓝色波长下测试的器件，转换系数通过将测得的器件自由光谱范围（FSR）以加热功率单位表示与通过有限差分时域（FDTD）模拟确定的波长单位的FSR相除来估算。器件的内在Q因子（( Q_o )）通过公式 ( Q_o = Q_L(1 + \frac{\gamma_e}{\gamma_o}) ) 计算，其中 ( Q_L ) 是如上所述计算的加载Q因子，(\frac{\gamma_e}{\gamma_o}) 是通过使用公式 (S7) 从 ( T_0 ) 计算得到的。</p>
+<p>器件的finesse因子（( F )）通过公式 ( F = \frac{\text{FSR}}{\Delta \lambda} ) 计算，其中 (\Delta \lambda) 如上所述确定。对于在蓝色波长下测试的器件，FSR 是从 FDTD 模拟中估算的，而对于在绿色波长下测试的器件，FSR 是通过测量确定的。</p>
+<p>器件的传播损耗（单位距离的dB）通过公式 (\alpha = 10 \log_{10} \left( \frac{e \cdot \lambda}{Q_o \cdot \text{FSR} \cdot R} \right) ) 计算 [C. Xiong et al., New J. Phys. 14, 095014 (2012); P. Rabiei et al., J. Lightwave Technol. 20, 1968 (2002)]，其中 ( R ) 是器件的半径。</p>
+<p>例如，对于在 (\lambda=530 \text{ nm}) 下操作的绝热微环器件（图3a和3b），半径为 10 μm，线宽以加热功率单位表示为 1.3 mW，转换系数为 25 mW/nm，由此计算得到的加载Q因子和内在Q因子分别为 ( 1.0 \times 10^4 ) 和 ( 2.1 \times 10^5 )；FSR 为 2.4 nm，由此计算得到的finesse因子为 46，传播损耗为 4.6 dB/cm。</p>
+<p>对于在 (\lambda=530 \text{ nm}) 下操作的微盘器件（图S9），线宽以加热功率单位表示为 0.74 mW，转换系数为 31 mW/nm，由此计算得到的加载Q因子和内在Q因子分别为 ( 2.2 \times 10^4 ) 和 ( 3.6 \times 10^5 )；FSR 为 1.7 nm，由此计算得到的finesse因子为 71，传播损耗为 2.6 dB/cm。</p>
+<p>对于在 (\lambda=488 \text{ nm}) 下操作的绝热微环器件（图3c和3d），线宽以加热功率单位表示为 2.1 mW，转换系数为 15 mW/nm，由此计算得到的加载Q因子和内在Q因子分别为 ( 3.5 \times 10^3 ) 和 ( 1.1 \times 10^5 )；FSR 为 2.0 nm，由此计算得到的finesse因子为 14，传播损耗为 9.6 dB/cm。</p>
+<p>微环中耳语画廊模式的有效传播距离可以估算为其周长与finesse因子的乘积。以我们在 (\lambda=530 \text{ nm}) 下操作的SiN绝热微环为例，半径为 10 μm，finesse因子为 46。因此，光在器件内的有效传播距离约为 2,890 μm = 2.89 mm。该器件的调制损耗为 0.87 dB（图3a）。注意，该器件支持单一的耳语画廊模式，因为绝热微环的窄段宽度仅为 300 nm（宽段宽度为 1.7 μm）。</p>
+<p>根据对可见光下SiN波导衰减系数的文献搜索，我们发现衰减系数通常随着波长的增加和波导的宽度增加而降低，对于在 (\lambda \approx 530 \text{ nm}) 下的 300 nm 宽单模 SiN 波导，衰减系数为 1.5–8.2 dB/cm。例如，见正文中引用的两篇论文：[26, 27]。因此，长度等于我们绿色绝热微环内光的有效传播距离 2.89 mm 的直波导，其光学损耗为 1.5–8.2 dB/cm × 2.89 mm = 0.43–2.37 dB。我们在 (\lambda=530 \text{ nm}) 下的单模绝热微环的调制损耗 0.87 dB 接近该范围的下限。我们的在 (\lambda=488 \text{ nm}) 下操作的绝热微环（图3c和3d）具有仅 0.61 dB 的调制损耗。</p>
+<p>尽管与均匀宽度波导相比，绝热扩展波导的使用较少，但我们相信使用绝热技术可以显著减少波导侧壁的渐逝场和相关的侧壁散射损耗，从而减少传播损耗，这在绝热微环中得到了观察。</p>
+<h3 id="传统的基于波导的热光相位调制器"><a class="markdownIt-Anchor" href="#传统的基于波导的热光相位调制器"></a> 传统的基于波导的热光相位调制器</h3>
+<p><img src="/pictures/image-20240826104932228.png" alt="image-20240826104932228" /></p>
+<h3 id="调制速度的测量与仿真"><a class="markdownIt-Anchor" href="#调制速度的测量与仿真"></a> 调制速度的测量与仿真</h3>
+<p>图S11显示了在波长λ = 488 nm下，三台渐变微环设备和三台基于波导的相位调制器的输出信号，这些信号由加热器功率的方波驱动。</p>
+<p>信号的上升和下降边缘的时间常数是通过拟合边缘10%-90%部分的指数函数得到的。需要注意的是，在微谐振器中，加热器功率与相位响应之间的关系并不是严格线性的（例如，见图S3）；因此，只有在设备工作接近其共振中心、加热器功率与相位关系大致线性时，时间常数才能通过指数函数进行拟合。一旦加热器功率超过光学共振的中心区域，调制信号会变形（例如，图b中的上升边缘和图c中的下降边缘），在这些情况下不尝试提取时间常数。</p>
+<p><img src="/pictures/image-20240826105012739.png" alt="image-20240826105012739" /></p>
+<h3 id="微环谐振器的耳语廊模式"><a class="markdownIt-Anchor" href="#微环谐振器的耳语廊模式"></a> 微环谐振器的耳语廊模式</h3>
+<p>图S12展示了微环谐振器中基本TE和TM耳语廊模式的有限元方法（FEM）模拟，外半径 R 固定为 10 μm，而宽度 w 变化的情况。随着 w 从 0.3 μm 增加到 1.7 μm，模式向微环中心移动，从而减少了与外侧壁的重叠（图 S12b 和 c）。模式中心通过 〈x〉 = ∫∫ x|E|^2dA / ∫∫|E|^2dA 进行量化。模式与外侧壁的重叠通过 Sidewall Intensity = ∫∫ |E|^2dA  −δ&lt;x&lt;δ /  ∫∫|E|^2dA 进行量化，其中 δ = 30 nm 被选定。图 S12d 和 e 分别展示了 〈x〉 和 Sidewall Intensity 随着 w 变化的情况。两者在 w 从 0.3 μm 增加到 ~0.7 μm 时均减少，并在 w 进一步增加时趋于稳定。在 w=R 的情况下，微盘的这些量将与稳定值相同。结果显示，当 w &gt; 1.0 μm 时，Sidewall Intensity 约为 w=0.3 μm 时的 1/4，表明在宽节段的渐变微环中的耳语廊模式会经历显著减少的侧壁散射。图 S12f 和 g 展示了基本 TE 和 TM 模式的有效模态指数 δneff 在微环高度 h 或微环宽度 w 变化 10 nm 时的变化。与 δw=10 nm 的情况相比，当 δh=10 nm 时，neff 的变化显著更大，这表明微环的共振波长对高度变化的敏感性大于对宽度变化的敏感性。当 δw=10 nm 时，δneff 随着 w 从 0.3 μm 增加到 ~0.5 μm 显著减少，并在 w 进一步增加时趋于稳定，这表明通过增加环宽或使用渐变微环，可以减少由于 δw 引起的共振波长变化。</p>
+<p>需要将设备的共振对准激光频率所需的加热功率的梯度测量为：渐变微环为 1.60 mW/mm，常规微环为 5.44 mW/mm（见主文图4b）。将共振跨越一个自由光谱范围（FSR）所需的加热功率测量为：渐变微环为 30 mW，常规微环为 33 mW。使用附录IX中的加热功率和波长之间的转换系数，可以计算得到共振波长的梯度 |∇λres|，渐变微环为 0.107 nm/mm，常规微环为 0.363 nm/mm。这两种类型设备的 FSR 分别为 2.0 nm 和 2.2 nm。有效模态指数的梯度 |∇neff| 可以通过 |∇neff| = δnFSR|∇λres|/FSR 进行评估，其中 δnFSR =  λ/2πR = 7.77 × 10−3 是将共振波长移动一个 FSR 所需的有效模态指数变化量。因此，|∇neff| 计算为：渐变微环为 4.16×10^-4 /mm，常规微环为 1.28×10^-3 /mm。使用 |∇neff| = δneff/δw ∙ |∇w| + δneff/δh ∙ |∇h|，可以基于模拟中的 δneff/δw 和 δneff/δh 计算 w 和 h 的变化梯度 |∇w| 和 |∇h|。图 S12g 的结果表明，对于基本 TM 模式，常规微环的 δneff/δw=3.65×10^-4 /nm（w=0.3 μm），而渐变微环的 δneff/δw=4.3×10^-5 /nm（w 从 0.3 到 1.7 μm 平均），两种设备的 δneff/δh=1.75×10^-3 /nm。因此，制造的芯片上 w 和 h 的变化梯度估计为：|∇w|=2.7 nm/mm 和 |∇h|=0.17 nm/mm。</p>
+<p><img src="/pictures/image-20240826105236046.png" alt="image-20240826105236046" /></p>
+<h3 id="渐变微环对制造变化的鲁棒性"><a class="markdownIt-Anchor" href="#渐变微环对制造变化的鲁棒性"></a> 渐变微环对制造变化的鲁棒性</h3>
+<p>在本节中，我们将比较渐变微环与常规微环（具有恒定波导宽度）和波导相位调制器的制造公差。我们将展示，在这三种设备中，渐变微环具有对制造变化的最高鲁棒性，因为其宽部位的模式去局部化使得模态折射率对波导尺寸变化不敏感。</p>
+<p><strong>渐变微环与常规微环的比较</strong>：</p>
+<ol>
+<li>
+<p><strong>侧壁粗糙度对传输的影响</strong>：</p>
+<ul>
+<li><strong>仿真结果</strong>：FDTD（有限差分时域）仿真显示，随着RMS（均方根）侧壁粗糙度的增加，共振中心的强度传输（T0）会下降（见图 S13a）。例如，当RMS粗糙度增加到30 nm时，常规微环的T0显著下降至0.57，而渐变微环的T0则下降至0.89。这表明，渐变微环对侧壁粗糙度的变化更加耐受。</li>
+</ul>
+</li>
+<li>
+<p><strong>共振波长的偏移</strong>：</p>
+<ul>
+<li><strong>宽度变化对共振波长的影响</strong>：仿真结果还表明，常规微环的环宽变化引起的共振波长偏移约为渐变微环的三倍（见图 S13b）。这意味着，常规微环对波导宽度变化更为敏感，而渐变微环由于模式的去局部化，在波导宽度变化时表现出更好的稳定性。</li>
+</ul>
+</li>
+</ol>
+<p><strong>渐变微环与波导相位调制器的比较</strong>：</p>
+<p>假设制造变化引入了渐变微环有效模态折射率 ( n_{\text{ring}} ) 的变化量 ( \delta n_{\text{ring}} )，则相应的共振波长变化量 ( \delta \lambda_{\text{res}} ) 由以下公式给出：<br />
+[ \frac{\delta \lambda_{\text{res}}}{\lambda_{\text{res}}} = \frac{\delta n_{\text{ring}}}{n_{\text{ring}}} \quad \text{(S26)} ]</p>
+<p>渐变微环的相位响应变化量 ( \delta \phi_{\text{ring}} ) 可以表示为：<br />
+[ \frac{\delta \phi_{\text{ring}}}{\pi} = \frac{\delta \lambda_{\text{res}}}{\Delta \lambda} \quad \text{(S27)} ]<br />
+其中，共振线宽 ( \Delta \lambda ) 与近似的 (\pi) 相位偏移相关（见补充信息 I）。</p>
+<p>共振线宽 ( \Delta \lambda ) 进一步与加载 Q 因子 ( Q_L ) 相关：<br />
+[ Q_L = \frac{\lambda_{\text{res}}}{\Delta \lambda} \quad \text{(S28)} ]</p>
+<p>结合上述关系（S26）-（S28），可以导出渐变微环的相位响应变化量为：<br />
+[ \delta \phi_{\text{ring}} = \frac{\pi Q_L}{n_{\text{ring}}} \cdot \delta n_{\text{ring}} \quad \text{(S29)} ]</p>
+<p>对于波导相位调制器，其相位响应的变化量 ( \delta \phi_{\text{wg}} ) 为：<br />
+[ \delta \phi_{\text{wg}} = \frac{\delta n_{\text{wg}}}{2 \pi} \cdot \frac{\lambda}{L} \quad \text{(S30)} ]<br />
+其中，( \delta n_{\text{wg}} ) 是由制造变化引起的波导模态折射率变化量，( L ) 是波导的长度。</p>
+<p><strong>渐变微环与波导相位调制器的比较：</strong></p>
+<p>我们的全波仿真显示，对于一个外半径为10 μm、工作波长为488 nm、准TM导模的渐变微环共振器，折射率的变化量 ( \delta n_{\text{ring}} ) 相对于波导宽度变化量 ( \delta w ) 和波导高度变化量 ( \delta h ) 分别为：<br />
+[ \frac{\delta n_{\text{ring}}}{\delta w} = 4.3 \times 10^{-5} \text{ /nm} ]<br />
+[ \frac{\delta n_{\text{ring}}}{\delta h} = 1.75 \times 10^{-3} \text{ /nm} ]</p>
+<p>而对于一个宽度为250 nm、准TM导模的波导相位调制器，折射率的变化量 ( \delta n_{\text{wg}} ) 相对于波导宽度变化量 ( \delta w ) 和波导高度变化量 ( \delta h ) 分别为：<br />
+[ \frac{\delta n_{\text{wg}}}{\delta w} = 5.85 \times 10^{-4} \text{ /nm} ]<br />
+[ \frac{\delta n_{\text{wg}}}{\delta h} = 1.6 \times 10^{-3} \text{ /nm} ]</p>
+<p>在已制造的微环设备中，我们提取出的波导宽度 ( w ) 和高度 ( h ) 的变化梯度分别为：<br />
+[ |\nabla w| = 2.7 \text{ nm/mm} ]<br />
+[ |\nabla h| = 0.17 \text{ nm/mm} ]<br />
+（见补充信息 XII）</p>
+<p>因此，折射率变化量的梯度 ( |\nabla n_{\text{ring}}| ) 和 ( |\nabla n_{\text{wg}}| ) 分别估算为：<br />
+[ |\nabla n_{\text{ring}}| = \frac{\delta n_{\text{ring}}}{\delta w} \times |\nabla w| + \frac{\delta n_{\text{ring}}}{\delta h} \times |\nabla h| = 4.1 \times 10^{-4} \text{ /mm} \quad \text{(S31)} ]<br />
+[ |\nabla n_{\text{wg}}| = \frac{\delta n_{\text{wg}}}{\delta w} \times |\nabla w| + \frac{\delta n_{\text{wg}}}{\delta h} \times |\nabla h| = 1.9 \times 10^{-3} \text{ /mm} \quad \text{(S32)} ]</p>
+<p>( |\nabla n_{\text{ring}}| ) 约为 ( |\nabla n_{\text{wg}}| ) 的五分之一，主要原因是渐变微环的宽度扩展部分的模态折射率对波导宽度的变化具有更强的鲁棒性（即 ( \frac{\delta n_{\text{ring}}}{\delta w} ) 比 ( \frac{\delta n_{\text{wg}}}{\delta w} ) 小一个数量级）。由于 ( |\nabla n_{\text{wg}}| ) 比 ( |\nabla n_{\text{ring}}| ) 大几倍，因此波导相位调制器的相位误差和校正所需的热偏置应比渐变微环大几倍。</p>
+<p>使用我们制造的设备中观察或使用的一组参数（即渐变微环的加载 Q 因子 ( Q_L = 3.5 \times 10^3 )、有效模态折射率 ( n_{\text{ring}} = 2.0 )，波导相位调制器的长度 ( L = 400 \text{ μm} )），相位响应的变化梯度可以根据（S29）-（S32）估算为：<br />
+[ |\nabla \phi_{\text{ring}}| = \frac{\pi Q_L}{n_{\text{ring}}} \times |\nabla n_{\text{ring}}| = 2.3 \text{ radians/mm} \quad \text{(S33)} ]<br />
+对于波导相位调制器：<br />
+[ |\nabla \phi_{\text{wg}}| = \frac{|\nabla n_{\text{wg}}| \cdot 2\pi}{\lambda L} = 9.8 \text{ radians/mm} \quad \text{(S34)} ]</p>
+<p>也就是说，渐变微环的系统性波导宽度和高度变化引起的相位误差比波导相位调制器小几倍。这并不令人惊讶：波导的相位响应应该表现出与常规微环类似的制造灵敏度（常规微环实际上是首尾连接的波导），而渐变微环的制造变化鲁棒性优于直波导和传统微环。</p>
+<h3 id="形成紧凑型相位调制器阵列的能力"><a class="markdownIt-Anchor" href="#形成紧凑型相位调制器阵列的能力"></a> 形成紧凑型相位调制器阵列的能力</h3>
+<p><strong>实现片上大规模集成相位调制器的策略</strong></p>
+<p>为了实现片上大规模集成的相位调制器，必须最小化单个器件的占地面积，并确保整个芯片的功耗在可控范围内；对于热光调制器来说，还需要最小化相邻器件之间的热串扰，以减少相位误差。我们的有限差分时域（FDTD）模拟表明，渐变微环谐振腔的外半径可以减少到4-5 μm，而不会导致显著的弯曲损耗（见图 S14、S15 和 S16）。</p>
+<h3 id="热效应分析"><a class="markdownIt-Anchor" href="#热效应分析"></a> 热效应分析</h3>
+<p>图 S14c 显示了波导相位调制器和外半径为 4 μm 的微环谐振腔的模拟空间分布图。这些图展示了在设备平面上超额温度（即局部温度减去散热器温度）相对于设备峰值温度的归一化分布。模拟使用 COMSOL Multiphysics 进行，结果表明了有效模态指数扰动 δn（与归一化超额温度成正比）与器件间距之间的关系：</p>
+<p><img src="../pictures/image-20240826105623915.png" alt="image-20240826105623915" /></p>
+<p><strong>波导相位调制器和微环谐振腔的占地面积估算</strong></p>
+<p>波导相位调制器的占地面积 ( S_{\text{wg}} ) 可以通过以下公式估算：</p>
+<p>[ S_{\text{wg}} = L_{\text{wg}} \times w_{\text{wg}} ]</p>
+<p>其中：</p>
+<ul>
+<li>( L_{\text{wg}} ) 是波导的长度（在这里取值为 400 μm，但在文献中报道的器件通常要长得多）。</li>
+<li>( w_{\text{wg}} ) 是波导的宽度。</li>
+</ul>
+<p>对于微环谐振腔，其占地面积 ( S_{\text{ring}} ) 可以通过以下公式估算：</p>
+<p>[ S_{\text{ring}} = w_{\text{ring}}^2 ]</p>
+<p>其中：</p>
+<ul>
+<li>( w_{\text{ring}} ) 是微环的宽度。</li>
+</ul>
+<p><img src="/pictures/image-20240826105711949.png" alt="image-20240826105711949" /></p>
+<h3 id="设备占地面积和功耗比较"><a class="markdownIt-Anchor" href="#设备占地面积和功耗比较"></a> 设备占地面积和功耗比较</h3>
+<p>从表格的最后一列可以看出，为了将由热串扰引入的相位误差保持在 10% 内，使用微环谐振腔可以将设备的占地面积比使用波导相位调制器缩小一个数量级以上。基于谐振腔的相位调制器有潜力大幅度减少集成光子芯片的功耗预算。</p>
+<h4 id="功耗计算"><a class="markdownIt-Anchor" href="#功耗计算"></a> 功耗计算</h4>
+<p>假设使用图 S3b 中描述的双谐振腔设计作为相控阵列的像素，每个像素的相位调制需要 0.85 × 2 = 1.70 mW 的加热功率（根据图 3b 中测得的 π 相位调制的功耗）。因此，调制 1,024 元素阵列的功耗约为 1.74 W。</p>
+<p>考虑到在芯片上对齐谐振频率与激光频率所需的加热功率梯度为 1.60 mW/mm（见主文图 4b），假设每个谐振腔的面积 ( S_{\text{ring}} = 151.29 , \text{μm}^2 )，1,024 元素阵列将需要额外的偏置功率约为 0.91 W。因此，2D 阵列的总功耗估计为 1.74 W + 0.91 W = 2.65 W。</p>
+<h4 id="波导相位调制器的功耗"><a class="markdownIt-Anchor" href="#波导相位调制器的功耗"></a> 波导相位调制器的功耗</h4>
+<p>相比之下，1,024 元素的波导相位调制器阵列在热光调制下的总功耗为 40.96 W（根据图 3e 中测得的 π 相位调制的功耗）。</p>
+<p><img src="/pictures/image-20240826105757930.png" alt="image-20240826105757930" /></p>
+<h3 id="全可见光范围内工作的绝热微环相位调制器"><a class="markdownIt-Anchor" href="#全可见光范围内工作的绝热微环相位调制器"></a> 全可见光范围内工作的绝热微环相位调制器</h3>
+<p>在本节中，我们将通过全波模拟展示适当设计的绝热微环如何在整个可见光谱范围内以强过耦合状态运行，从而可以作为相位调制器，针对可见光的任何颜色，具有最小的调制损耗。我们将展示两组模拟及其结果，一组基于从我们实验室的绝热微环提取的蓝光和绿光光谱的模态指数和传播损耗，另一组基于从代工厂制造的氮化硅（SiN）波导提取的模态指数和传播损耗（见主文中的参考文献 [27]）。</p>
+<h4 id="1-使用从-sin-微环提取的复折射率的绝热微环设计与模拟"><a class="markdownIt-Anchor" href="#1-使用从-sin-微环提取的复折射率的绝热微环设计与模拟"></a> 1. 使用从 SiN 微环提取的复折射率的绝热微环设计与模拟</h4>
+<p>绝热微环（与图 S14a 中的相同）由一个外半径为 4 μm 的圆和一个内半径为 3 μm 的圆定义，两圆的中心间距为 700 nm；因此，绝热微环最窄处宽 300 nm，最宽处宽 1.7 μm。绝热微环与宽度为 250 nm 的直波导耦合，谐振腔-波导间隙为 70 nm。</p>
+<p>在我们的制造设备中，侧壁粗糙度引起的散射损耗是主要的光学损耗来源，超过了其他损耗机制，包括耦合器的散射、材料吸收和谐振腔的弯曲损耗（补充材料部分 III）。为了在 FDTD 模拟中考虑侧壁散射损耗的影响，我们为 SiN 的复折射率分配了一个有效的消光系数（而不是构建一个物理模型的粗糙侧壁微环，因为我们制造设备中的 RMS 和相关长度尚未量化）。具体步骤如下：</p>
+<ol>
+<li>
+<p><strong>计算衰减系数：</strong></p>
+<ul>
+<li>通过公式 α = λ0/(Q ∙ R ∙ FSR) [X. Ji 等, 2016] 计算我们的制造设备在 λ1=530 nm 和 λ2=488 nm 处的衰减系数分别为 α1=1.1 cm⁻¹ 和 α2=2.2 cm⁻¹。这里，Q 是固有质量因子，R 是微环的外半径，FSR 是自由光谱范围。</li>
+</ul>
+</li>
+<li>
+<p><strong>计算有效虚部：</strong></p>
+<ul>
+<li>使用公式 κ = αλ0/4π 计算 SiN 微环的有效虚部分别为 κ1=4.6×10⁻⁶ 和 κ2=8.5×10⁻⁶。注意，这两个值的差异主要来自绿色和蓝色设备的制造质量差异，而不是波长的不同。</li>
+</ul>
+</li>
+<li>
+<p><strong>选择更大 κ 值：</strong></p>
+<ul>
+<li>在上述两个值中选择较大的 κ 值（8.5×10⁻⁶），并在我们的 FDTD 模拟中保持不变。虽然 Rayleigh 散射在较短波长下更强，但在较短波长下的耳语模式在 SiN 中的限制性更强，侧壁上的衰减场较少。这两个效应的平衡可能导致有效的散射损耗（κ）在波长变化时相对恒定。</li>
+</ul>
+</li>
+</ol>
+<p>通过这种方式，我们的 FDTD 模拟考虑了波导-谐振腔耦合造成的散射损耗、侧壁粗糙度引起的散射损耗（通过等效材料吸收建模）和弯曲损耗的综合效应。</p>
+<h5 id="模拟结果"><a class="markdownIt-Anchor" href="#模拟结果"></a> 模拟结果</h5>
+<ul>
+<li>
+<p><strong>传输光谱：</strong></p>
+<ul>
+<li>图 S15a 和 S15b 显示了绝热微环谐振器在 λ=450-700 nm 波长范围内的模拟传输光谱。结果显示，设备的调制损耗范围从 0.3 到 0.7 dB（图 S15a、b），对应的 γe/γo 范围从 25 到 65（图 S15c、d）。即，设备在所有模拟的光谱范围内均处于强过耦合状态。</li>
+</ul>
+</li>
+<li>
+<p><strong>Finesse 因子：</strong></p>
+<ul>
+<li>图 S15c 和 S15d 进一步显示了所有共振的 Finesse 因子。对于准 TE 波导模式，Finesse 因子从蓝光的 ~40 到红光的 ~6 变化；对于准 TM 波导模式，从蓝光的 ~64 到红光的 ~10 变化。这对应于与波导相位调制器相比，热光调制功耗降低的因子范围为 ~3 到 ~32，具体取决于波长和导模的偏振。</li>
+</ul>
+</li>
+<li>
+<p><strong>波导-谐振腔耦合：</strong></p>
+<ul>
+<li>在较长波长下（由于更长的衰减波），波导-谐振腔耦合增加，导致共振的线宽增加。</li>
+<li><img src="/pictures/image-20240826105922273.png" alt="image-20240826105922273" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="2-使用参考文献-27-提取的复折射率进行绝热微环设计与模拟"><a class="markdownIt-Anchor" href="#2-使用参考文献-27-提取的复折射率进行绝热微环设计与模拟"></a> 2. 使用参考文献 [27] 提取的复折射率进行绝热微环设计与模拟</h4>
+<p>我们还通过模拟展示了使用从参考文献 [27]（Sacher 等，Optics Express 27, 37400-37418 (2019)）提取的 SiN 复折射率的强过耦合绝热微环。参考文献 [27] 报告了多种宽度的 SiN 波导在多个可见光谱波段的折射率和传播损耗，这些波导使用先进的微型铸造工艺（AMF）制造。我们使用他们的单模 SiN 波导（即波导宽度为 250 nm，厚度为 200 nm，准 TE 模态偏振）的传播损耗数据，并在以下波长范围内分别进行模拟：λ=430-464 nm，466-500 nm，502-550 nm，552-600 nm 和 602-648 nm。在每个波长范围内，根据报告的传播损耗数据计算衰减系数 α，并在中心波长处计算有效虚部 κ。下表总结了用于模拟的五个波长范围的传播损耗 α 和 κ。</p>
+<p>绝热微环由外半径为 5 μm 的圆和内半径为 4 μm 的圆定义，两圆的中心间距为 700 nm。绝热微环与宽度为 250 nm 的直波导耦合，谐振腔-波导间隙为 70 nm。</p>
+<p><img src="/pictures/image-20240826110003328.png" alt="image-20240826110003328" /></p>
+<p>图 S16a 显示了在五个波长范围内运行于准 TE 波导模式的绝热微环的模拟传输谱。结果表明，器件的调制损耗范围从 0.1 到 0.9 dB，在整个绿色和红色光谱（λ=500-650 nm）中，损耗低于 0.3 dB（见图 S16a）。在共振点，耦合速率与损耗速率的比率（γe/γo）在 20 到 150 之间（见图 S16b），因此，器件在模拟的光谱范围内的所有共振点都处于强过耦合状态。图 S16b 进一步显示，共振点的 Finesse 因子范围从蓝光的 ~40 到红光的 ~5，这对应于相较于波导相位调节器，热光调制功耗的减少因子从 ~20 到 ~2.5。图 S16c 显示每个共振点都能实现约 2π 的相位变化。因此，在图 S15 和 S16 中我们展示了：（a）一个微米大小的绝热微环可以作为相位调节器而不引入显著的调制损耗；（b）它可以在可见光的离散波长范围内提供 2π 的相位调制；（c）该器件可以显著减少热光调制的功耗。图 S16 的结果尤其重要，因为该设计基于铸造厂制造的 SiN 波导的光学损耗数据。</p>
+<p>需要注意的是，与波导相位调节器相比，绝热微环的通用性稍有降低：前者可以在任何波长下操作，而后者需要通过热光调谐使其多个共振点中的一个与激光波长匹配。也就是说，减少的通用性可以通过额外的功耗来弥补：一个适当设计的绝热微环，配备集成的微加热器以提供热偏置和热光调谐，可以作为低损耗的相位调节器用于任何可见波长。通过使用更大半径的微环（更小的 FSR），可以减少调整微环共振所需的加热偏置。</p>
+<p><img src="/pictures/image-20240826110102050.png" alt="image-20240826110102050" /></p>
+
       
     </div>
 
@@ -751,15 +1189,42 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/08/23/4%E9%80%9A%E9%81%93200Gb-sWDMO%E6%B3%A2%E6%AE%B5%E7%A1%85%E5%85%89%E5%AD%90%E5%AD%A6%E6%94%B6%E5%8F%91%E5%99%A8%E5%AD%90%E7%BB%84%E4%BB%B6/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>参考文献：<a href="/download/Moralis-Pegios 等 - 2020 - 4-channel 200 Gbs WDM O-band silicon photonic transceiver sub-assembly.pdf" download>4通道200 Gb/s WDM O波段硅光子学收发器子组件</a> 2020.</p>
+<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
+<p>我们展示了一种具备200G能力的WDM O-band光学收发模块，该模块包含一个由4个硅光子学环调制器（RM）和锗光电二极管（PD）组成的阵列，与一个SiGe BiCMOS集成驱动器和一个SiGe跨阻放大器（TIA）芯片共同封装。在4×50 Gb/s的数据调制实验中，平均消光比（ER）为3.17 dB，发射器的总能效为 <mark>2 pJ/bit</mark> 。数据接收实验验证了每条通道在50 Gb/s下的性能，实现了输入光调制幅度（OMA）为−9.5 dBm时的插值10^-12位错误率（BER），功率效率为 <mark>2.2 pJ/bit</mark> ，使得整个收发模块的总功率效率为4.2 pJ/bit，包括加热器调节要求。该电光子模块在O-band基于RM的硅光子学收发器实现中提供了最高的总数据速率，突显了其在下一代WDM以太网收发器中的潜力。</p>
+<h2 id="背景介绍"><a class="markdownIt-Anchor" href="#背景介绍"></a> 背景介绍</h2>
+<p>新兴的数据中心（DC）时代[1]和持续增长的内部数据中心流量[2]要求光收发器技术在低功耗和小体积的要求下提供更高的操作速度和总带宽。然而，从当前部署的100 GbE（4×25 Gb/s以太网）模块向200 GbE甚至400 GbE接口的过渡，需要多通道收发器配置，具有等于或高于50 Gb/s的传输速率，利用波分复用（WDM）或空间分复用（SDM）技术。硅光子学（SiPho）作为一种技术推动者已经脱颖而出，在C波段[3–5]的先前展示中，光发射器（Tx）布局已经实现了8×40G[3]的操作，而完整的C波段收发器模块集成了Tx和接收器（Rx）电路以及它们的电子驱动器和TIA模块，实现了4通道WDM设置，总带宽达到80 Gb/s，这一性能相对平庸[5]。<br />
+然而，由于O波段已经成为高速数据中心内部互联的主要光谱区域，研究工作逐渐转向O波段发射器（Tx）和接收器（Rx）的实现[6–9]。到目前为止，主要的关注点仍集中在发射器部分，特别是在目标为25 Gb/s或更高线速的情况下[10–15]。无论是利用行波马赫-曾德调制器（MZM）阵列[9,10]，还是硅基环形调制器（RM）[11–15]，单通道和多通道发射器布局都已报道了高达400 Gb/s的总带宽。然而，最近展示的基于MZM的发射器仅包括硅光子芯片，并使用外部连接的大型电驱动器，这需要较高的驱动电压（2.9V）和额外的数字信号处理[9]，使其能耗远离了数据中心发射器低功耗规格。基于MZM的发射器与电子驱动器共同组装的演示也仅达到2通道布局，总带宽为2 × 56 Gb/s[10]。与MZM相比，基于RM的发射器布局在占地面积和能效方面具有显著优势。我们最近的工作中，首次展示的WDM硅光O波段发射器报道了一个4×40 Gb/s的配置，其能耗仅为2.2 pJ/bit[14]，但缺乏集成的接收器部分，使其不能成为完整的WDM TxRx子模块。<br />
+在本文中，我们扩展了之前关于基于环形调制器（RM）的WDM光发射器（Tx）的研究[14]，展示了一个完整的200 Gb/s能力的O波段WDM收发器子模块。该模块在50 Gb/s的线速下运行，并且提供了迄今为止报告的硅光（Si-Pho）RM基O波段收发器布局中最高的总带宽。它包括一个硅光4通道收发器芯片，该芯片与其电子部分共同封装在一个基于聚合物的电路板上，4通道电子驱动器和TIA电路采用55纳米SiGe技术平台制造。硅光发射部分包括4个高速载波耗尽环形调制器（RM），接着是一个4通道基于环形的复用器（MUX），而接收部分则包括一个类似的4通道解复用器（DEMUX）以及4个Ge光电二极管。在一个4×50 Gb/s的数据调制实验中，使用4种不同波长，波道间距为2 nm，结果显示开眼图，消光比（ER）值在3 dB到3.38 dB之间。电子驱动器为每个RM提供平均2 Vpp的电压，功耗仅为244 mW，能效为1.22 pJ/bit，考虑到RM的热调节机制后能效提高至2 pJ/bit。此外，展示了2×50 Gb/s的数据接收操作，结果显示无误差操作，插值位误码率（BER）为10^-12，参考输入光调制幅度（OMA）为-9.5 dBm。TIA的功耗为448 mW，对应的功耗为2.24 pJ/bit，最终总收发器能效为4.24 pJ/bit，工作速率为50 Gb/s。</p>
+<h2 id="器件的加工和描述"><a class="markdownIt-Anchor" href="#器件的加工和描述"></a> 器件的加工和描述</h2>
+<p>图1(a)展示了4通道WDM O波段收发器的示意图，图中包括了设备安装在聚合物电路板上的显微照片，以及硅光芯片和电子部分的特写图，分别如图1(b)和1©所示。该收发器组件包括一个硅光（SiPho）芯片（14.04 mm²），该芯片通过线焊接连接到一个SiGe电子驱动器阵列（2.4 mm²）和一个SiGe跨阻放大器（TIA）阵列（2.9 mm²），这三块芯片都安装在一个基于聚合物的印刷电路板（PCB）上。</p>
+<p><img src="/pictures/image-20240823173006919.png" alt="image-20240823173006919" /></p>
+<p>SiPho芯片是在imec的ISIPP50G平台上制造的，包含一个基于微环调制器（MRM）的4通道发射器（Tx）阵列和一个基于<strong>SiGe光电二极管</strong>的4通道接收器（Rx）阵列[11]。每个Tx单元包含一个<strong>7.5 μm的载流子耗尽RM</strong>，具有45 fF的电容、约5000的Q因子、33.8 GHz的3 dB带宽和9.0 nm的自由光谱范围（FSR）。集成的加热器允许对RM共振进行精细调节，并通过芯片东侧的电气直流垫片进行访问。所有四个RM的光输出通过一个4通道MUX单元进行复用，该单元基于级联的双环谐振器，每个MUX通道包括两个微环[16]，具有9.0 nm的FSR，而一个集体加热器允许对MUX的传输函数进行热调节。集成Tx阵列的光输入/输出访问通过芯片西侧的TE极化光栅耦合器（GC）实现，这些光栅耦合器基于PDK-ready imec设计，在图1(b)中标记为Tx In 1-4和Tx out，分别指代4个Tx输入和组合Tx输出。</p>
+<p>每个Rx单元包含一个Ge波导光电探测器（PD），具有50 GHz的3 dB带宽、30 fF的电容和0.9 A/W的响应度。Rx阵列设计用于接收一个共用的WDM光输入，该输入包含4个不同波长的信号，信道间距为2 nm，信号在一个4通道DEMUX单元中进行解复用，该单元基于与Tx中使用的类似的级联双环谐振器。解复用后的信号被波导引导到各个Rx单元，而Rx阵列的访问通过芯片西侧的TE GC实现，在图1(b)中标记为RxIn。</p>
+<p>该收发器的电子电路包括一个4通道全差分电子驱动器阵列[17]和一个4通道全差分TIA阵列[18]，均采用55 nm SiGe BiCMOS技术制造。4通道电子驱动器为每个RM提供2 Vpp的电压，所有通道的总功耗为244 mW，这有效转化为50 Gb/s下的1.22 pJ/bit功率效率。此外，它采用集中驱动方案，通过利用驱动器与RM垫片之间的短电气连接（线键合），避免了使用终端电阻，从而提高了能量效率。还利用了不平衡输出阶段，允许直接耦合到调制器而无需外部偏置TEE，从而显著减少了所需的空间和降低了Tx的成本。</p>
+<p>4通道TIA具有光电流的差分检测功能，显著提高了Rx的灵敏度，同时使用片上偏置网络为PD提供偏置电压，简化了组装过程。所有通道的TIA电路总功耗为448 mW，在50 Gb/s下的效率为2.24 pJ/bit。</p>
+<p>所有三块芯片被安装在一个高频印刷电路板上，以便提供驱动器和TIA电路所需的电子组件（例如去耦电容、线键合垫片、电源I/O引脚）并通过50GHz电气走线路由驱动器输入和TIA输出信号。需要注意的是，这些电路板是作为开发电光电路板（EOCB）迭代过程的一部分专门开发的，最终将实现通过低损耗光学聚合物波导和硅到聚合物绝热耦合器进行电气路由和光学波导耦合。此外，铜走线提供了几乎垂直的侧壁和良好控制的间隙宽度，从而实现低阻抗变化，并允许特征尺寸缩小至40μm。聚合物RF走线的高速路由性能已经在先前的演示中得到验证，能够在4cm长的线路上无缝传输112 Gb/s PAM-4信号[19]。最后，电子芯片和光子芯片被放置在近距离位置，以最小化线键合引起的电感，同时特别设计的布局允许通过无焊RF连接器（Ardent TR70）实现驱动器输入和TIA输出的无缝连接。</p>
+<h2 id="实验设备和测试结果"><a class="markdownIt-Anchor" href="#实验设备和测试结果"></a> 实验设备和测试结果</h2>
+<p>图2展示了200 Gb/s收发器的Tx部分的原理图以及用于评估其性能的实验设置。实验中使用了一个位模式发生器生成50 Gb/s的差分信号，该信号为NRZ伪随机二进制序列（PRBS7-1），峰值幅度为180 mV，通过TR70可插拔RF连接器输入到驱动器的输入端。电子驱动电路由四个电压源供电：VddPre、Vdd、Vbias1和Vbias2，其中第一个用于预驱动器操作，第二个用于主电源电压，最后两个用于设置RM的偏置点。集成驱动器的操作设置经过精细调整，以提供最佳的调制深度和光学眼图开口。</p>
+<p>一个可调激光源（TLS）被用来依次生成四个连续波（CW）信号中的一个，波长分别为λ1 = 1309.70 nm、λ2 = 1311.90 nm、λ3 = 1314.26 nm和λ4 = 1316.34 nm，具体取决于RM的操作点。这些CW信号通过光纤阵列注入到输入光栅耦合器（Tx In1-4）中。一个偏振控制器用于匹配入射光的偏振方向与光栅耦合器的偏振方向。调制后的信号通过输出光栅耦合器（Tx out）从芯片中耦合出来，经过半导体光放大器（SOA）放大后，注入到带通光学滤波器（OBPF）中，该滤波器具有0.5 nm的3 dB带宽，用于滤除SOA放大的自发辐射（ASE）。最后，信号在采样示波器（OSC）中进行评估。</p>
+<p><img src="/pictures/image-20240823173540799.png" alt="image-20240823173540799" /></p>
+<p>图3(a)-(e)展示了通过依次扫掠每个Tx输入端口并测量共用Tx输出端口的光功率得到的4通道MUX的光谱传递函数。MUX的自由光谱范围（FSR）为9.02 ± 0.2 nm，通道间距为2 ± 0.2 nm，而插入损耗为10-12 dB，与预期的1-2 dB有所偏差，这主要是由于设计错误导致的。图3(a)中的波长标注（λ1-λ4）指示了用于数据传输的MUX通道，而图3(b)–3(e)展示了相应MUX通道的输出光谱，分别显示了在调谐MUX传递函数内各个RM谐振腔之前和之后的光谱。Rx侧的4通道DEMUX与Tx侧的设计完全相同，并具有相同的光谱特性，包括通道间距和FSR。</p>
+<p>4通道Tx的性能通过4×50 Gb/s NRZ OOK数据调制实验进行了评估。图3(f)–3(i)展示了在MUX的共用输出端口获得的光学眼图，每个RM按适当波长依次调谐，分别显示了3.07 dB、3.25 dB、3.38 dB和3.01 dB的ER值。RM由集成驱动阵列提供的约2 Vpp驱动，每个驱动输入由180-mVpp差分信号供给，而RM的DC反向偏置分别为−0.39 V、−0.41 V、−0.42 V、−0.38 V。注入在四个波长（λ1-λ4）上的CW信号的光功率为10 dBm，而从共用输出端口产生的调制信号的平均光功率分别为−17.7 dBm、−18 dBm、−19.1 dBm和−19 dBm。光损耗分析中，两个GC引入了约9 dB的损耗，RM插入损耗在6-9 dB之间，具体取决于Tx通道和操作波长，而MUX引入了约10-12 dB的光损耗，这主要是由于MUX设计错误造成的。SOA以276 mA电流驱动，提供了20 ± 2 dB的平均增益，具体取决于操作波长。为了将RM谐振腔调谐到相应的MUX通道，应用于RM1-RM4的集成加热器的电功率分别为39.3 mW、47.58 mW、33.63 mW和38.75 mW。驱动阵列的功耗为244 mW，对应的高能效为1.22 pJ/bit，当考虑到RM加热器的功耗时，总Tx功率效率为2 pJ/bit。需要注意的是，通过使用消耗约180 mW的热电控制器（TEC），保持了芯片上的温度和因此RM操作点的稳定。下一代的收发器可以通过利用最近引入的无接触集成光子探针（CLIPP）系统来进一步降低RM监控和控制的功耗，从而在50 Gb/s数据速率下，仅增加约0.5 pJ/bit的功耗，同时稳定RM操作。</p>
+<p><img src="/pictures/image-20240823173713494.png" alt="image-20240823173713494" /></p>
+<p>图4(a)展示了用于表征收发器Rx部分的实验 setup。TIA电路通过两个电源供电，其中一个（Vdd1 = 1V）用于为一个芯片上的可编程寄存器提供电力，以允许对TIA特性进行细调，另一个（Vdd = 2.5V）则用于为TIAs供电并为PDs偏置。使用比特模式发生器生成一个40 Gb/s和50 Gb/s的NRZ伪随机二进制序列（PRBS7-1）差分信号，峰值幅度为300 mV，该信号经过商业高速RF驱动放大器放大，以驱动一个30 GHz O带MZM调制器。</p>
+<p>为了确定4通道DEMUX的峰值光谱点，从TLS发出的光被扫过O带，并随后注入到MZM调制器中，得到的调制信号耦合到共用RxIn端口。使用RF功率计监测TIA的电输出，从而确定每个MUX通道的峰值传输点。基于这些测量，Rx通道2和3的峰值波长分别为1316.6 nm和1318.79 nm。不幸的是，通道1和4的TIAs的线焊点被切断，无法进行评估，而MUX/DEMUX设计中的设计错误阻止了使用集成DEMUX加热器来匹配发射器和接收器的通道波长，因为其使用显著增加了DEMUX插入损耗。</p>
+<p>随后使用TLS生成了两个CW信号，分别为1316.6 nm和1318.79 nm，对应于Rx2和Rx3通道，这些信号被注入到MZM调制器中。得到的调制光信号在SOA中放大，以补偿MZM、MUX和GC的光损耗，并通过相应的GC耦合到Rx阵列的共用输入端口（即RxIn），在0.5 nm 3 dB带宽的OBPF中滤波。最后，电TIA输出信号通过高速RF迹线传输到TR70可插拔连接器，并在实时OSC中进行监测和评估。</p>
+<p><img src="/pictures/image-20240823173816949.png" alt="image-20240823173816949" /></p>
+<p>两个Rx通道的性能通过40 Gb/s和50 Gb/s NRZ OOK数据进行了评估。图4(b)和4(e)展示了λ=1316.6 nm处MZM调制器输出的光学眼图，在40 Gb/s和50 Gb/s下分别具有8 dB和7.2 dB的消光比（ER），其光学调制幅度（OMA）分别为5.4 dBm和6 dBm，这些数据是在光带通滤波器（BPF）输出后得到的，随后被注入到Rx共用输入端口（RxIn）。考虑到由光栅耦合器（GC）引起的约4.5 dB损耗和DEMUX额外的约11 dB损耗，最终在PD输入处的光信号OMA为40 Gb/s下的−10.1 dBm和50 Gb/s下的−9.5 dBm。</p>
+<p>单端TIA输出连接到实时示波器（OSC），该示波器通过比特错误率（BER）估算提供信号质量的指示。图4©、(f)-(d)和(g)中的电信号眼图对应于Rx通道2和通道3在40 Gb/s和50 Gb/s下的10E-12 BER值。BER值是通过在3E+07比特序列中测量零错误，并利用实时示波器提供的工具包应用插值方法[21]得出的。更具体地说，在信号到达实时示波器之前引入了0.86 dB的光学衰减，这可以映射为信噪比（SNR）从13.8 dB降到11.2 dB，并且理论BER从1E-12变化到1E-7，基于假设接收器输入的热高斯噪声是系统中错误的主要原因。在插入衰减因子后，测量了3.01E-07比特的结果，再次显示零错误，并允许插值到1E-12 BER。最后，如果光信号来自发射器的一侧，并且在50 Gb/s时ER为3 dB，则为了实现相同的OMA和性能，接收器中注入的光信号的平均功率应比实验上演示的具有7.2 dB ER的情况增加3.2 dB。TIA阵列的功耗测量为448 mW，结果为50 Gb/s时的2.44 pJ/bit功率效率。</p>
+<p>为了评估发射机的最大可实现传输距离，计算了总光学功率预算，并在表1中进行了说明。可以明显观察到，主要的光学损耗来源于MUX和相应的DEMUX，这些损耗在后续的制造过程中可以轻松纠正，以达到最初目标的1-2 dB损耗，这在相应的C波段设计中已经得到实验验证[16]。这表明，采用基于之前C波段设计的光栅耦合器（GC），其损耗为2 dB[22]，以及优化的RM结构，其损耗为4 dB[23]，可以使未来的制造过程中的总光学损耗达到10 dB（发射端）和4 dB（接收端）。考虑到输入激光功率为10 dBm，并且考虑到RM达到的3 dB ER，发射端的调制信号OMA将为−1.76 dBm。因此，接收器PD-TIA处的信号OMA将为−5.76 dBm，相比于接收器在50 Gb/s时的−9.5 dBm OMA要求，具有约4 dB的功率裕量。最后，考虑到O波段光谱窗口中的单模标准光纤（SSMF）的极低色散，以及典型的光学损耗约为0.33 dB/km[24]，4 dB的光学功率裕量允许在包括0.2 dB光学连接器相关损耗在内的11.5 km SSMF上进行传输。</p>
+<p><img src="/pictures/image-20240823173940164.png" alt="image-20240823173940164" /></p>
+<p>为了评估在多通道操作下的TxRx性能，我们开发了一个模拟框架，该框架考虑了来自RF信号路由的电气串扰和来自使用的MUX和DEMUX的光学串扰。基于在Keysight的ADS中进行的电气模拟结果，差分模式到模式和共模到差分模式的串扰均为−40 dB，因此不会影响4通道TxRx的电气性能。考虑到来自光学MUX和DEMUX的有限串扰，使用VPI软件套件模拟了多通道TxRx操作的光学性能。将MUX和DEMUX的测量光学传输函数以及Tx和Rx的性能导入到自定义模拟环境中，最坏情况下的光学串扰测量为22 dB，Tx的ER在50 Gb/s时设置为3 dB。在50 Gb/s下，通过逐步将调制信号注入到每个MUX通道，从而模拟了从一个到四个通道同时操作的TxRx，结果显示，4通道同时操作相对于单通道操作在10E-12比特错误率（BER）下的功率损耗为0.2 dB。</p>
+<p>总结如下，表2汇总了测量性能，并与之前的CMOS-SiPho TxRx演示进行比较，揭示了该工作的低功耗高带宽优势。</p>
+<p><img src="/pictures/image-20240823174039142.png" alt="image-20240823174039142" /></p>
+<h2 id="结论"><a class="markdownIt-Anchor" href="#结论"></a> 结论</h2>
+<p>我们展示了一个200 Gb/s O波段4通道硅光子WDM光学收发器，其中包括一个SiPho芯片与4通道电子驱动器和4通道TIA共同组装在一个单一的聚合物基板上。通过50 Gb/s每通道的调制和数据接收实验，验证了集成收发器的高速度和低功耗性能，最终实现了总收发器能效为4.4 pJ/bit。</p>
+
       
     </div>
 
@@ -831,15 +1296,103 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/08/23/0-96pJ-b7%C3%9750Gb-s%E6%AF%8F%E5%85%89%E7%BA%A4%E6%B3%A2%E9%95%BF%E5%88%86%E5%A4%8D%E7%94%A8%EF%BC%88WDM%EF%BC%89%E6%8E%A5%E6%94%B6%E5%99%A8%E9%87%87%E7%94%A8%E5%A0%86%E5%8F%A07nmCMOS%E5%92%8C45nm%E7%A1%85%E5%85%89%E5%AD%90%E8%8A%AF%E7%89%87/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>Ref.  <a href="/download/Raj 等 - 2023 - A O.96pJb 7 × 50Gbs-per-Fiber WDM Receiver with Stacked 7nm CMOS and 45nm Silicon Photonic Dies.pdf" download>下载</a></p>
+<p>随着机器学习、高性能计算和云存储等新兴应用对数据中心计算需求的不断推动，分布式计算架构的采用越来越广泛。在这些架构中，CPU、GPU、FPGA、内存和存储的物理位置可能分布在数米的距离范围内。为了跟上这种需求，基于硅光子的封装光学链路采用了波长分复用（WDM）和非归零（NRZ）信号传输，这种方法提供了一个高效、带宽高且延迟低的接口，连接这些组件。</p>
+<p>在本文中，我们介绍了一种低功耗（0.96 pJ/bit）、高灵敏度（中位值为-11.1 dBm）、高带宽（7×50 Gb/s NRZ WDM）的接收器（RX）。该接收器在没有前向纠错（FEC）的情况下，能够实现低于1e-12的比特错误率（BER）。</p>
+<p>图12.1.1展示了一个多芯片模块（MCM）原型，包括一个电气芯片（EIC）、一个硅光子芯片（PIC）、集成扇出（InFO）、一个有机中介层（organic interposer）和一个有机层压基板（organic laminate substrate）。为了实现低功耗和高带宽，EIC的接收器输入直接放置在PIC的顶部，采用了55μm间距的铜柱焊盘。这种设计使得TIA可以直接连接到光探测器（PD），并且寄生效应最小化。InFO用于通过并行接口（在此工作中未使用）将EIC连接到代理核心集成电路（proxy Core IC）。光通过15光纤阵列以250μm的间距通过V型槽耦合进出PIC。</p>
+<p><img src="/pictures/image-20240823163949323.png" alt="image-20240823163949323" /></p>
+<p>图12.1.1详细展示了PIC RX的架构。为了实现WDM通道选择，采用了级联环形谐振器（CRR）。CRR滤波器由两个环形谐振器耦合形成，创建了一个以特定波长为中心的二阶平顶滤波器，具有来自相邻波长的低串扰。CRR的自由光谱范围（FSR）设计为通道间距1.5 nm的8倍。每个RX1至RX7 CRR的掉落端口连接到一个基于SiGe的波导光探测器（PD），其响应度为0.9 A/W。最后一个CRR（RX8）的掉落端口未连接到PD，用于测试芯片中的调试。CRR设计的插入损耗小于1.5 dB，串扰小于15 dB。选择了带有直耦合段的赛道设计，以增加耦合距离，从而提高工艺变化的容忍度。与一阶滤波器（单个环形谐振器）相比，二阶滤波器由于-40 dB/dec增益衰减提供了更低的相邻波长之间的串扰。此外，平顶特性对激光波长间距变化的敏感性也较低。这允许对CRR阵列进行集体热调谐，以匹配激光波长。为了获得最佳的整体BER性能，每个CRR的通带必须与其对应的激光波长匹配，同时保持1.5 nm的网格间距。为了优化激光网格和滤波器对齐，RX1至RX7的透过端口功率（在此设计中是免费的）被求和，1313 nm的最低损耗中间值被用作RX1的波长（见图12.1.2）。RX2至RX7的激光波长通过递减1.5 nm的倍数来确定。通过集体调谐CRR阵列也可以实现相同的操作，同时固定激光波长。</p>
+<p><img src="/pictures/image-20240823164052568.png" alt="image-20240823164052568" /></p>
+<p>图12.1.3展示了完整的接收器（RX）架构。在光接收器设计中，低功耗和高灵敏度的TIA（跨导放大器）至关重要。为了利用7nm技术节点提供的(<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mi>m</mi></msub><mi mathvariant="normal">/</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">g_m/C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span>)缩放效益，选择了一个3级基于逆变器的TIA设计，配备了t-coil峰值电路。TIA输出（Voutb）直接连接到强臂锁存器（latch-based slicers）。锁存器的正端（Vcm）连接到由自偏置逆变器生成的固定DC电位，该逆变器具有PMOS/NMOS强度控制。为了匹配采样时钟对Vcm和Voutb节点的干扰，在Vcm节点上添加了一个可编程的传输门开关。与传统的连续时间线性均衡器（CTLE）电路不同，NMOS开关被添加到TIA的电阻R1和R3上，以实现可编程带宽和峰值调整。为了确保无论光电二极管的平均电流水平如何，锁存器的输入共模电压始终保持在Vcm，添加了一个带宽为10MHz的DC电流取消环路。该DC环路可以通过关闭工作跨导放大器（OTA）来禁用，使TIA在开环模式下运行。在这种模式下，使用静态模拟探针（SAP）监测TIA经过RC滤波器后的输出电压，以表征CRR滤波器的插入损耗。TIA的设计目标是跨导阻抗（Zt）在4kΩ到6kΩ之间，带宽大于35GHz，集成输入噪声为3μA。TIA的电源敏感性通过使用片上稳压电源得到改善，该电源提供了大于25dB的电源抑制比（PSRR）。为了避免由于DC环路跟踪导致通过Vcm路径的差分PSRR在中频（10-200MHz）处峰值，添加了一个低通滤波器（见图12.1.3）。</p>
+<p><img src="/pictures/image-20240823164143548.png" alt="image-20240823164143548" /></p>
+<p>设计中使用了四相四分之一速率时钟来驱动4个数据取样器和1个误差取样器。误差取样器用于采样输入信号的峰值，并与数据取样结合，用于执行波特率时钟和数据恢复（CDR）功能。CDR环路通过数字控制一个8位相位插值器（PI）来将取样时钟调整到其最佳位置。PI的8相位时钟由一个基于环形的锁相振荡器（ILO1）生成，该振荡器使用来自通用锁相环（PLL）的12.5GHz时钟作为参考。另一个锁相振荡器（ILO2）生成驱动取样器的4相位时钟，并以PI的输出作为参考。为了修正4相位取样时钟的相位误差，使用了一个四分之一锁相环（QLL），同时为PI和两个ILO生成电源电压。在设计中，四分之一锁相环（QLL）使用的相位误差检测器（QED）驱动的电压到电流（V-to-I）电路直接驱动了调节器的NMOS源跟随器。这种设计使得可以去除操作跨导放大器（OTA）和滤波电容器（C2）。去除C2将第二极点推得更远，从而可以进一步减小C1，节省硅片面积。</p>
+<ul>
+<li>
+<p><strong>制造工艺</strong>：</p>
+<ul>
+<li>电气芯片（EIC）使用7nm FinFET工艺制造，每个通道的RX活跃区域为165×186μm²。</li>
+<li>光子集成电路（PIC）使用45nm工艺制造。</li>
+</ul>
+</li>
+<li>
+<p><strong>测量设置</strong>：</p>
+<ul>
+<li>测量使用了一个参考光调制器，生成50Gb/s的伪随机二进制序列（PRBS7）模式，具有3.7dB的消光比（ER）。</li>
+<li>激光波长由可调激光器设置。</li>
+<li>可调光衰减器用于控制发送到PIC的光功率。</li>
+</ul>
+</li>
+<li>
+<p><strong>光接收器性能</strong>：</p>
+<ul>
+<li>RX1至RX7的灵敏度在-11.4dBm（OMA）到-10.1dBm（OMA）之间变化，中位灵敏度为-11.1dBm（OMA）。</li>
+<li>灵敏度变化由CRR滤波器的损耗差异造成。</li>
+<li>测量结果表明，最差通道（RX1）的响应与最佳通道（RX7）的响应一致，只需增加1.5dBm的功率输入，这对应于RX1的1.3dB OMA损耗。</li>
+<li>
+<ul>
+<li><img src="/pictures/image-20240823165722998.png" alt="image-20240823165722998" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>误码率（BER）性能</strong>：</p>
+<ul>
+<li>
+<p>测量的BER浴缸曲线显示，RX1至RX7在1dB链路余量下，所有通道都满足BER&lt;1e-12，并且在50Gb/s时具有超过14%的单位间隔（UI）开口。</p>
+</li>
+<li>
+<p>聚合数据率达到350Gb/s，BER&lt;1e-12，没有前向纠错（FEC）。</p>
+</li>
+<li>
+<p><img src="/pictures/image-20240823165817759.png" alt="image-20240823165817759" /></p>
+</li>
+<li>
+<p><strong>眼图扫描</strong>：</p>
+</li>
+<li>
+<p>使用1e10比特的2D眼图扫描显示了内部眼形状。</p>
+</li>
+<li>
+<p>2D眼图的水平分辨率为一个PI代码（在50Gb/s下为312.5fs），垂直分辨率为4.4mV。</p>
+</li>
+<li>
+<p>第二阶平顶CRR滤波器的优势通过RX5得到证明，尽管其激光波长偏离滤波器中心200pm，但仍能保持&lt;1e-12的无误差性能。</p>
+</li>
+<li>
+<p><img src="/pictures/image-20240823165851522.png" alt="image-20240823165851522" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>光学串扰影响</strong>：</p>
+<ul>
+<li>对RX2和RX3进行的测试显示，即使通道间隔为1.5 nm，水平和垂直眼开口的影响也很小。</li>
+</ul>
+</li>
+<li>
+<p><strong>功耗与能效</strong>：</p>
+<ul>
+<li>RX的功耗为40mW，通用PLL的功耗为8.2mW（在7条通道中摊销）。</li>
+<li>RX的能效为0.96pJ/bit（在50Gb/s时测得）。</li>
+</ul>
+</li>
+<li>
+<p><strong>性能总结</strong>：</p>
+<ul>
+<li>图表总结了系统性能，并与之前报道的CMOS接收器前端进行了比较。</li>
+<li>本设计在综合数据速率和功耗效率方面优于集成SerDes的相关工作。</li>
+</ul>
+</li>
+<li>
+<p><strong>芯片照片</strong>：</p>
+<ul>
+<li>图示包括PIC中的CRR阵列、EIC中的RX电路和打包模块的照片。</li>
+</ul>
+</li>
+</ul>
+<p><img src="/pictures/image-20240823165912605.png" alt="image-20240823165912605" /></p>
+
       
     </div>
 
@@ -917,15 +1470,34 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/08/23/45nmCMOS%E9%9B%86%E6%88%90256Gb-s%E5%85%89%E7%94%B5%E5%8D%95%E7%89%87%E9%9B%86%E6%88%90%E6%94%B6%E5%8F%91%E5%99%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>随着人工智能（AI）、机器学习（ML）和高性能计算（HPC）的迅猛发展，数据传输量的不断增加要求高密度互连具有更高的带宽（BW）、更低的功耗和更低的延迟[1−3]。光学输入/输出（I/O）利用硅光子技术（SiPh）实现高密度大规模集成光子学。通过这种方式，微型光学收发器可以集成到xPU封装中，并直接连接到芯片边缘的光纤。光学I/O将电气芯片间连接扩展到数十米，从而扩展了具有高能效的高度并行计算系统。<br />
+以前，光子学和电子学是在不同的工艺下制造，并在单独的芯片中实现，然后通过封装（2D、2.5D或3D）进行集成[4, 5]。然而，电静电放电（ESD）保护电路和引脚垫不可避免地引入了与主要光子器件相当的电容，这会影响信号完整性并消耗大量功耗。此外，有限的引线或焊球数量无法支持大规模高密度的芯片集成。<br />
+在此，我们提出了一种单片集成的4λ × 64 Gb/s硅光子（SiPh）收发器，采用单一的45 nm SOI-CMOS电子-光子集成芯片（EPIC）[6, 7]。通过将所有光电探测器（PD）、基于微环谐振器（MRR）的调制器和滤波器，以及共设计的CMOS驱动器、跨阻放大器（TIA）和波长热控单元（TCU）集成在一起，演示了极高的带宽密度和功率效率，并借助外部激光源进行测试。实验结果表明，所提出的EPIC在光学发射器（TX）和接收器（RX）中分别消耗了仅1.6和1.25 pJ/bit。O波段的波长分复用（WDM）聚合了256 Gb/s的总数据速率，并且实现了低于10⁻¹²的比特错误率（BER）。<br />
+图1展示了EPIC的显微图和单片集成光学收发器的细节。主要内容包括：<br />
+光子组件:微环谐振器（MRR） 基于调制器（MRM）和滤波器，半径约为7.5 μm。<br />
+集成的温控单元（TCU） 用于调节共振波长。</p>
+<p><img src="/pictures/image-20240823163032792.png" alt="image-20240823163032792" /></p>
+<p>单通道发射系统:连续时间线性均衡器（CTLE）: 提供高达10 dB的均衡，工作频率为25 GHz，用于补偿PCB上的通道损耗。<br />
+双级可变增益放大器（VGA）: 提供15 dB的可调范围，以覆盖更大的输入动态范围。<br />
+双轨输出前驱动器: 生成在不同电压域（0-1 V和1-2 V）下工作的双路径。通过以堆叠推挽的方式驱动最终级，输出电压摆幅增加到2.5 Vppd。<br />
+差分输出: 通过适当的DC偏置耦合到MRM，用于耗尽模式操作。为了提高驱动电容型MRM时的线性度，采用500 Ω电阻反向终端，以最小化调制MRM电容的阻抗波动。<br />
+光学接收器:使用四个MRR滤波器级联在总线波导上，每个MRR选择相应波长的信号。<br />
+在每个MRR的下游端口，Ge-Si光电探测器将高速光功率转换为光电流，然后在跨阻放大器（TIA）中放大。<br />
+信号差分（S2D）转换器: 提供差分输出，以抑制共模噪声。<br />
+DC偏移消除环路（DCOL）: 在输入节点实现，以消除由输入平均光功率变化引起的DC漂移。<br />
+多级源退化均衡: 在VGA和最后驱动级中使用，以补偿由MRR带宽限制引起的符号间干扰（ISI），提供高达8.5 dB的均衡能力。<br />
+封装面积:<br />
+发射器（TX）的面积为870 × 1500 μm²。<br />
+接收器（RX）的面积为640 × 1500 μm²。<br />
+这些设计元素共同实现了高密度、高性能的光电集成系统，有效地支持了256 Gb/s的高速数据传输。<br />
+图2 展示了发射器（TX）的光学响应，测得的消光比（ER）超过15 dB，自由光谱范围（FSR）为9.2 nm。接收器（RX）的FSR为9.2 nm，ER大于8 dB。</p>
+<p><img src="/pictures/image-20240823163054891.png" alt="image-20240823163054891" /></p>
+<p>为了展示高速度性能，使用任意波形发生器（AWG）将差分信号输入到收发器链路中。然后收集输出信号并使用数字通信分析仪（DCA）生成眼图。图3 显示了TX的64 Gb/s非归零（NRZ）传输眼图，得到了一个开眼图，调制ER约为7 dB。图3中还显示了在输入光功率OMA为–5 dBm的条件下，RX的64 Gb/s NRZ眼图。跨阻放大器（TIA）的输出电压摆幅为38 mV，抖动为1.2 ps。</p>
+<p><img src="/pictures/image-20240823163111768.png" alt="image-20240823163111768" /></p>
+<p>需要注意的是，5级前馈均衡（FFE）被应用于补偿TX输入和RX输出的PCB走线和连接器损耗（在40 GHz下约5 dB），这些损耗在xPU封装中通常要小得多，并会由xPU SERDES在实际应用中提供。使用波长分复用（WDM）技术，4通道阵列在发射器和接收器中实现了256 Gb/s的总数据速率（比特错误率BER &lt; 10⁻¹²），能效分别为1.6和1.25 pJ/bit。</p>
+<p>表1 展示了与其他最新技术报告的性能比较[9−13]。我们的工作实现了更高的通道数据速率、更低的功耗和更高的调制ER。总结来说，我们报告了一种单片O波段4λ × 64 Gb/s光学收发器，能够实现高达256 Gb/s的总带宽用于光学I/O。实验结果表明，完整的发射器（TX）和接收器（RX）功耗为2.85 pJ/bit，达到10⁻¹²的前向纠错（FEC）比特错误率（BER）。除了这项工作外，我们还成功实现了基于Mach-Zehnder调制器的单片集成EPIC收发器，用于以太网共同封装光学（CPO），相关研究将于不久后公布。</p>
+<p><img src="/pictures/image-20240823163204020.png" alt="image-20240823163204020" /></p>
+
       
     </div>
 

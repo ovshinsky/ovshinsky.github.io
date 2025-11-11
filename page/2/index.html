@@ -253,15 +253,41 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/03/11/%E5%A2%9E%E5%8A%A0%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E5%AE%B9%E9%87%8F%E7%9A%84%E6%8C%87%E5%B0%96%E5%A4%A7%E5%B0%8F%E5%85%89%E5%AD%A6%E6%A8%A1%E5%9D%97%E5%85%89%E5%AD%A6I-O%E6%A0%B8%E5%BF%83%E5%8F%8A%E5%85%B6%E5%9C%A8FPGA%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>REF: Nakamura T, Yashiki K, Mizutani K, et al. Fingertip-size optical module,“Optical I/O Core”, and its application in FPGA[J]. IEICE Transactions on Electronics, 2019, 102(4): 333-339. <a href="/download/e102-c_4_333.pdf" download>下载</a></p>
+<h3 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h3>
+<p>基于硅光子技术和光电组装的“光学I/O核心”被开发为一种指尖大小的光学模块，具有高带宽密度、低功耗和高温操作的特点。光学I/O核心的优势，包括量子点激光二极管和光学引脚的混合集成，使其在无需时钟数据恢复的情况下，能够在现场可编程门阵列（FPGA）周围实现每通道25Gbps的300米传输。</p>
+<p>关键词：硅光子，带宽密度，光电组装，FPGA</p>
+<h3 id="1-引言"><a class="markdownIt-Anchor" href="#1-引言"></a> 1. 引言</h3>
+<p>在现代信息和通信技术（ICT）社会中，大数据分析和人工智能（AI）变得越来越重要。数据中心（DC）收集了大量数据，并在这些中心以及高性能计算机（HPC）中进行分析。由于数据的增加，计算复杂性也在增加。随着信息内容的增加，AI的进展需要大量的计算能力。然而，尽管过去两年中CPU/GPU的处理速度几乎翻了一番[1]，当前的处理速度仍不足以应对数据的增加。为了弥补处理速度的不足，FPGA已在DC和HPC中得到应用。例如，FPGA被用作固定功能硬件加速器以进行高吞吐量数据处理，作为软件加速器将运行在CPU上的软件应用程序的部分卸载到FPGA，以及作为桥接器和交换机连接不同的接口逻辑和子系统[2]。这些FPGA具有超过1Tbps的I/O带宽。为了满足这些带宽需求，需要在FPGA周围安装具有小尺寸、高带宽（高带宽密度）、低功耗和高温操作的光学模块。在本研究中，我们提出了一种指尖大小的光学模块，称为“光学I/O核心”，以满足这些需求。我们将光学I/O核心应用于FPGA板，并展示了每通道25Gbps的300米传输。</p>
+<h3 id="2-光学io核心的设计与结构"><a class="markdownIt-Anchor" href="#2-光学io核心的设计与结构"></a> 2. 光学I/O核心的设计与结构</h3>
+<p>为了应对大规模集成（LSI）带来的I/O容量增加，光学收发器需要在高温度环境下具有高带宽密度和低功耗。我们开发的光学收发器，称为“光学I/O核心”，如图1所示[3]。光学I/O核心的尺寸为5 x 5 mm2，最大容量为300Gbps（25Gbps x 12通道）。如图1的横截面图所示，光学I/O核心由基于硅光子集成和光电组装的技术组成。</p>
+<img src="/pictures/image-20250311132320059.png" alt="image-20250311132320059" style="zoom:50%;" />
+<p>我们的硅光子集成技术基于300毫米绝缘体上硅（SOI）晶圆工艺。ArF浸没式光刻技术使我们能够创建低损耗和高均匀性的光波导。我们在O波段实现了1.28dB/cm的低波导损耗[4]，并在整个300毫米晶圆上实现了耦合谐振器光波导（CROW）的谐振峰波长分布高度均匀，为2 nm（3σ）[5]。我们还开发了用于光电探测器（PD）的锗选择性外延工艺。</p>
+<p>基于这些工艺，我们开发了包括波导、MOS电容型硅光调制器、锗光电探测器（Ge-PD）和光栅耦合器（GC）的硅光子集成电路，如图1的横截面图所示。我们开发的MOS电容型硅调制器的结构是带有马赫-曾德尔干涉仪（MZI）的垂直MOS结硅光调制器。该调制器具有0.16 V·cm的高调制效率，比仅具有横向pn结的传统硅光调制器高出约十倍[6]。此外，它在相对较低的CMOS驱动阻抗和4段电极结构下实现了超过25Gbps的操作[6]。我们还设计了一种高速高效的表面照射型Ge-PD，具有1800纳米厚的锗层。通过优化抗反射涂层堆叠结构，在晶圆内均匀获得了0.8-0.9 A/W的高响应度[7]。在3 V的直流偏压下，获得了约15GHz的带宽。对于具有厚锗层的Ge-PD，光载流子渡越时间主要限制了频率带宽。</p>
+<p>在完成硅光子集成电路后，我们将法布里-珀罗激光二极管（FP-LD）和光学引脚组装到光学I/O核心中。图2显示了硅光子集成电路上组装FP-LD的部分横截面图。如图2所示，LD通过我们开发的LD键合机被动对齐到硅光子集成电路上的LD安装平台，根据LD和硅光子集成电路上的对齐标记进行对齐。LD通过AuSn焊料凸块与电路键合。我们的LD键合机使用红外相机在LD和硅光子集成电路之间创建了±0.5μm的水平偏差[8]。垂直位置由Si基座制造工艺确定。因此，垂直偏差优于±0.1μm。</p>
+<img src="/pictures/image-20250311132514460.png" alt="image-20250311132514460" style="zoom:50%;" />
+<p>图3显示了LD与带有尖端锥形SSC的硅波导之间的光学耦合容差。LD与硅波导之间的最小光学耦合损耗为2.4dB。1dB额外损耗的对齐容差分别为水平方向±0.7μm和垂直方向±0.3μm。因此，通过使用LD键合机，可以获得小于3dB的耦合损耗。此外，由于在高达100°C的温度下进行倒装键合，耦合损耗几乎没有温度依赖性，如[9]所示。</p>
+<img src="/pictures/image-20250311132609923.png" alt="image-20250311132609923" style="zoom:50%;" />
+<p>对于这些硅光子集成电路上的LD，需要高温操作和高光学反馈容差。我们应用量子点FP-LD来满足这两个要求。图4显示了量子点FP-LD与量子阱FP-LD在200mA操作电流下的光输出功率的温度依赖性。量子阱层由应变补偿量子阱结构组成，包括5个InGaAsP压缩应变（+1%）量子阱，厚度为6纳米，以及6个InGaAsP拉伸应变（-0.1%）势垒，夹在1.0微米组成的InGaAsP SCH层之间。另一方面，量子点层由8层InAs/GaAs量子点组成，夹在1400纳米Al0.4Ga0.6As包层之间。量子点FP-LD在高温下保持比量子阱FP-LD更高的输出功率。图5显示了测量近端反射光学反馈容差的系统。该系统由LD和MZI组成，MZI的一个输出臂连接到PD，另一个输出臂连接到空气面。通过移动MZI中一个臂的相位，可以改变从空气面反射到LD的光强度。我们测量并比较了量子点FP-LD和量子阱FP-LD的光学反馈容差。图6显示了估计的最差信噪比（SNR）与反馈条件（Cfeedback）的关系，其公式如图5所示。光学I/O核心的Cfeedback为-7.5 dB。与量子阱FP-LD相比，量子点FP-LD在广泛的Cfeedback区域中估计的最差SNR优于40dB，足以实现25Gbps的无误码操作[10]。这些结果表明，量子点FP-LD适用于硅光子集成电路。</p>
+<img src="/pictures/image-20250311132655149.png" alt="image-20250311132655149" style="zoom:50%;" />
+<img src="/pictures/image-20250311132924856.png" alt="image-20250311132924856" style="zoom: 67%;" />
+<p>接下来，我们将简要介绍光学引脚。光学引脚是一种三维聚合物波导，用于代替光学透镜连接GC或Ge-PD与多模光纤（MMF）。光学引脚由树脂制成，使用两步光刻工艺：一步是核心，另一步是包层。由于这种光刻工艺，易于扩展全晶圆工艺并降低组装成本。光学I/O核心的输出波长具有0.6 nm/°C的高温度依赖性，这是由于FP-LD没有温度控制。由于FP-LD中波长的高温度依赖性，GC的辐射角度变化为0.083度/nm。然而，由于光学引脚在核心和包层之间具有大于0.4的高折射率数值孔径，GC的辐射光变化可以包含在核心内[11]。因此，在-45°C至+85°C的温度范围内，光学引脚与GI50 MMF之间的1dB额外损耗的偏差容差大于10μm。</p>
+<p>至于电气组装，我们组装了驱动器和跨阻放大器（TIA）集成电路（IC），以及用于电气I/O的玻璃通孔（TGV）。为了小型化，驱动器和TIA IC通过倒装键合纵向组装在硅光子集成电路上。硅光子芯片上的GC或Ge-PD与IC芯片顶部表面之间的台阶使得在GC或Ge-PD上组装MMF变得困难。因此，通过安装光学引脚，我们可以轻松地将MMF连接到光学I/O核心。此外，由于这个台阶也使得连接电气触点变得困难，我们安装了TGV以在IC芯片上创建一个平坦层，以便轻松连接它们。</p>
+<h3 id="3-光学io核心的特性"><a class="markdownIt-Anchor" href="#3-光学io核心的特性"></a> 3. 光学I/O核心的特性</h3>
+<p>在本节中，我们介绍了光学I/O核心的特性。对于在FPGA周围安装光学I/O核心，两个特性尤为重要：高温操作和低功耗。</p>
+<p>光学I/O核心安装在评估板上，并实现了MMF。我们在恒温槽中测量了眼图和误码率（BER）。图7显示了在25 Gbps下，使用伪随机比特序列（PRBS）31的眼图和BER的温度依赖性。从25°C到85°C，实现了清晰的眼图。此外，在20°C和85°C下，BER小于10-12[12]。这种在广泛温度范围内的操作是通过量子点LD和光学引脚实现的。</p>
+<img src="/pictures/image-20250311132952516.png" alt="image-20250311132952516" style="zoom:50%;" />
+<p>图8显示了在25 Gbps，PRBS31下的BER浴缸曲线。由于清晰的眼图，我们在没有时钟数据恢复（CDR）的情况下获得了0.34单位间隔（UI）的BER为10-12。尽管驱动器和TIA的功耗在25 Gbps操作下低至5mW/Gbps，得益于28纳米CMOS工艺，排除CDR进一步有助于降低光学I/O核心的功耗。图9显示了光学I/O核心的传输特性。使用了两种类型的MMF。一种是专门用于O波段的康宁ClearCurve LX MMF[13]，另一种是用于850纳米波长的传统OM3光纤。通过使用康宁ClearCurve，在25 Gbps下实现了高达300米的传输。300米的传输长度足以满足DC系统中的应用。此外，通过使用传统OM3光纤，在25 Gbps下实现了30米的无均衡器传输和60米的均衡器传输。30-60米的传输长度足以满足HPC系统中的应用。</p>
+<img src="/pictures/image-20250311133022851.png" alt="image-20250311133022851" style="zoom:50%;" />
+<h3 id="4-fpga应用"><a class="markdownIt-Anchor" href="#4-fpga应用"></a> 4. FPGA应用</h3>
+<p>随着FPGA性能的提高，其应用领域已扩展到不仅包括通信，还包括DC和HPC。这主要归功于FPGA在灵活性、高吞吐量、低延迟和低功耗方面相对于CPU和GPU的优势。在DC和HPC的服务器系统中，FPGA被用作CPU和GPU的加速器，这些加速器通过FPGA连接。因此，整个系统的带宽保证对于提高服务器系统的有效性能非常重要。为此，我们提出了一种在FPGA周围安装光学I/O核心的FPGA板，如图10所示。最多24个Tx和Rx通道的光学I/O核心，容量为1.2 Tbps，安装在FPGA周围。这些FPGA板通过300米MMF连接，并传输每通道25 Gbps的信号。然后，在FPGA中测量BER和眼图。如图11所示，获得了小于10-12的BER和良好的眼图。这表明在光学I/O核心的多个通道同时操作时，BER几乎没有退化。</p>
+<p>12个传统四通道小型可插拔（QSFPs）（容量= 1.2 Tbps）的安装面积约为180cm2。相比之下，8个光学I/O核心的安装面积约为11cm2，容量也为1.2 Tbps。换句话说，光学I/O核心的安装面积不到传统QSFP面积的1/10。这意味着通过使用光学I/O核心，服务器系统中的带宽保证比传统光学模块高出10倍以上。此外，由于光学I/O核心可以安装在FPGA附近，得益于其小尺寸和高温操作，FPGA与光学I/O核心之间的高速电气线路非常短：小于20毫米。这使得25 Gbps的高速传输无需CDR，并有助于降低功耗。</p>
+<img src="/pictures/image-20250311133059286.png" alt="image-20250311133059286" style="zoom:50%;" />
+<h3 id="5-结论"><a class="markdownIt-Anchor" href="#5-结论"></a> 5. 结论</h3>
+<p>基于硅光子技术和光电组装的“光学I/O核心”被开发为一种指尖大小的光学模块，具有高带宽密度、低功耗和高温操作的特点。光学I/O核心的优势，包括量子点LD和光学引脚的混合集成，使其在无需时钟数据恢复的情况下，能够在FPGA周围实现每通道25Gbps的300米传输。这种光学I/O核心将有助于在数据中心系统和高性能计算系统中实现FPGA之间的高带宽密度和低功耗互连。</p>
+<h3 id="致谢"><a class="markdownIt-Anchor" href="#致谢"></a> 致谢</h3>
+<p>本文基于由新能源和工业技术开发组织（NEDO）委托的项目结果。</p>
+
       
     </div>
 
@@ -333,15 +359,63 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/03/11/%E7%94%A8%E4%BA%8ECPU%E7%9A%84%E8%8A%AF%E7%89%87%E7%BA%A7%E5%85%89%E4%BA%92%E8%BF%9E%E6%8A%80%E6%9C%AF/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>REF. Hao, Qinfen, et al. “A chip-level optical interconnect for CPU.” <em>IEEE Photonics Technology Letters</em> 33.16 (2021): 852-855. <a href="/download/A_Chip-Level_Optical_Interconnect_for_CPU.pdf" download>下载</a></p>
+<h3 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h3>
+<p>随着电芯片性能的增长，电信号限制了芯片I/O的功耗、传输距离及信号完整性。在本文中，我们提出了一种新的芯粒架构，用来实现芯片级的光互连。光学I/O芯粒包括一个超小的光收发器和电子元件。分析表明了相比在以太网NIC应用中传统的板级光互连，基于此架构的光互连能够实现1/3的能耗和1/2的面积。通过采用我们提出的此架构，光I/O芯粒可以支持例如CPU、GPU、SWITCH等任意负载。</p>
+<h3 id="背景介绍"><a class="markdownIt-Anchor" href="#背景介绍"></a> 背景介绍</h3>
+<p>在芯片上实施光学IO比在板级或者机柜级更有优势。在PCB上的走线会更短，使系统具有更低的能耗，模块尺寸和加工成本。很多文章讨论了芯片级的IO，但很少有文章从系统级的观点出发讨论，例如将光学收发器集成在电芯片上，形成完整的解决方案。<br />
+最近，一些完整的芯片级光互连工作已经发表。在[5]及其后续工作中，实现了FPGA芯片的芯片级光互连设计。英特尔[11]开发了一种光收发器芯片，与其交换机芯片集成。这些工作在大多数方面都不同，因此在不同应用之间共享技术具有挑战性，这阻碍了光互连的长期发展。<br />
+在本文中，我们提出了一种芯粒架构，能实现片间光互连，以及100Gbps物理层链路，实现一个个超小的光收发器。光IO芯粒可以用于集成任意负载。</p>
+<h3 id="架构"><a class="markdownIt-Anchor" href="#架构"></a> 架构</h3>
+<p>如今，ISO/IEC OSI 7层通信协议模型被业界广泛使用。物理层（PHY）分为三个子层：物理编码子层（PCS）、物理介质附加子层（PMA）和物理介质依赖子层（PMD）[1]。当物理介质为光时，PMD将实现为光模块。在板级光互连应用中，PMD与PMA和PCS是分离的。然而，在芯片级光互连应用中，所有组件彼此非常接近，因此它们紧密集成。在[5]和[11]中，PMA与TIA/驱动器集成。在[12]中，CPU设计集成了PMA和TIA/驱动器电路。尽管这些设计提高了集成密度，但它们过于特定，无法为未来芯片级光互连的发展提供通用架构。</p>
+<h4 id="芯片级光互连的芯片架构"><a class="markdownIt-Anchor" href="#芯片级光互连的芯片架构"></a> 芯片级光互连的芯片架构</h4>
+<p>我们提出了一种通用的芯片级光互连架构，如图1所示。考虑到负载IC（集成电路）对制造工艺敏感，而PMA和PMD不敏感，PMA和PMD被集成为光I/O芯片，负载IC与光I/O芯片之间的连接被标准化以实现解耦开发。因此，负载IC可以从先进的CMOS工艺中受益，而PMA和PMD可以保持在旧工艺上以保持低成本。例如，CPU可以在28nm CMOS工艺中流片，而PMA可以在40nm CMOS工艺中流片。PMD可能使用更旧的工艺或非CMOS工艺。</p>
+<img src="/pictures/image-20250311101423172.png" alt="image-20250311101423172" style="zoom:50%;" />
+<h4 id="pcs子层和内部接口的设计"><a class="markdownIt-Anchor" href="#pcs子层和内部接口的设计"></a> PCS子层和内部接口的设计</h4>
+<p>为了使两个芯片独立开发，我们需要定义它们之间的接口。我们选择PCS子层来实现这一目标，因为在以太网等标准中，PCS和PMA之间没有明确的定义，因此更改不会对现有应用产生影响。</p>
+<p>由于6.25Gbps接近单端信号的极限，同时也是差分信号的功率效率和成熟度较高的速率，我们选择实现16 x 6.25Gbps的数据速率作为PCS和PMA之间的接口。它将作为负载IC（如CPU）与光I/O芯片之间的接口。如果应用关注低延迟，可以选择使用并行单端信号实现6.25Gbps的I/O。如果不关注低延迟，SerDes是一个不错的选择。</p>
+<p>我们设计了一个PCS子层，并将其连接到负载IC的MAC层。PCS子层的内部结构如图2所示。</p>
+<img src="/pictures/image-20250311101844837.png" alt="image-20250311101844837" style="zoom: 67%;" />
+<p>为了提高PCS的性能，我们采用了多种设计方法。通过实现并行检测，PCS RX可以更快地区分2位同步头的所有可能位置。在每个通道中添加了同步缓冲区以消除时间偏差。实现了I/O缓冲区以动态调整空闲字符，以在插入对齐标记后保持数据速率。在PCS RX中实现了验证模块，以便更早地检测错误，从而减少RX在错误处理上花费的时间。</p>
+<p>图3是使用Synopsys公司的VCS软件进行的仿真结果，显示TX和RX可以在9个时钟周期（23.04 ns）和23个时钟周期（58.88 ns）内处理100Gbps的数据。PCS的功耗为42.5207 mW，如图12a所示。</p>
+<img src="/pictures/image-20250311112715621.png" alt="image-20250311112715621" style="zoom:80%;" />
+<p>为了测试我们开发的PCS，我们将其与CPU设计一起在28nm CMOS工艺中流片。我们在芯片上添加了一个引脚以测量其带宽。该引脚设计为在MAC帧处理完成后接收脉冲信号。当芯片开始工作时，我们用示波器测量该引脚，并在每500ns间隔内获得四个脉冲。因此，带宽计算如下</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext> Bandwidth </mtext><mo>=</mo><mfrac><mrow><mn>4</mn><mo>×</mo><mo stretchy="false">(</mo><mn>1512</mn><mo>+</mo><mn>20</mn><mo stretchy="false">)</mo><mo>×</mo><mn>8</mn><mo>×</mo><mfrac><mn>66</mn><mn>64</mn></mfrac></mrow><mn>500</mn></mfrac><mspace width="1em"/><mo stretchy="false">(</mo><mtext> bits </mtext><mi mathvariant="normal">/</mi><mi>n</mi><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\text { Bandwidth }=\frac{4 \times(1512+20) \times 8 \times \frac{66}{64}}{500} \quad(\text { bits } / n s)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord"> Bandwidth </span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.266108em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.580108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.7350000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mord">5</span><span class="mord">1</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">6</span><span class="mord mtight">4</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">6</span><span class="mord mtight">6</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mopen">(</span><span class="mord text"><span class="mord"> bits </span></span><span class="mord">/</span><span class="mord mathnormal">n</span><span class="mord mathnormal">s</span><span class="mclose">)</span></span></span></span></span></p>
+<p>其中1512是我们发送的帧的长度（以字节为单位），20是帧头的长度（以字节为单位）。8表示一个字节中有8位，66/64表示我们为每64位添加一个2位同步头，这是以太网协议标准的要求。该公式的计算结果显示，该设计的带宽可以达到101.112Gbps。</p>
+<h4 id="光io芯片的设计"><a class="markdownIt-Anchor" href="#光io芯片的设计"></a> 光IO芯片的设计</h4>
+<p>我们实现了光I/O芯片，该芯片由PMA电路和超小型光收发器组成，并通过共封装技术将它们集成在一起。</p>
+<h5 id="pma子层的设计"><a class="markdownIt-Anchor" href="#pma子层的设计"></a> PMA子层的设计</h5>
+<p>PMA将16 x 6.25Gbps的数据串行化为4 x 25Gbps，并将4 x 25Gbps的数据反串行化为16 x 6.25Gbps。图4a显示了TX通道中的所有构建块。图4b描绘了PMA RX的示意图。除了反向数据流外，RX模拟前端均衡器（AFE）电路的实现与TX AFE不同。为了补偿通道损耗和固有带宽，其带宽。引脚设计为接收脉冲信号，终端和连续时间线性均衡器用于可调均衡。</p>
+<img src="/pictures/image-20250311130611067.png" alt="image-20250311130611067" style="zoom:50%;" />
+<p>图5显示了使用Cadence公司的Virtuoso软件进行的RX AFE仿真结果，显示RX AFE采用串联电感峰值用于输入终端频率为25Gbps全速率输入。根据表I，TX每通道的功耗计算为约160mW。RX的功耗与TX相同，因此每通道包括TX和RX的功耗为160mW + 160mW = 320mW。</p>
+<img src="/pictures/image-20250311130625568.png" alt="image-20250311130625568" style="zoom:50%;" />
+<p>为了测试PMA设计，我们在40nm CMOS工艺中流片。图6是PMA芯片的显微镜照片。TX芯片在左侧，RX芯片在右侧。</p>
+<img src="/pictures/image-20250311130650878.png" alt="image-20250311130650878" style="zoom:67%;" />
+<p>我们可以看到我们的TX芯片达到了25.045Gbps的比特率，同时图7是TX芯片上一个通道的眼图，芯片保持良好的信号质量。</p>
+<img src="/pictures/image-20250311130703749.png" alt="image-20250311130703749" style="zoom:67%;" />
+<h4 id="超小型光收发器"><a class="markdownIt-Anchor" href="#超小型光收发器"></a> 超小型光收发器</h4>
+<p>光I/O核心是由日本AIO核心公司设计的硅光子芯片[9]。它是一个集成了驱动器电路、量子点激光器和调制器、光电探测器等其他部件的全合一芯片。由于所有组件都集成在一起，其未封装尺寸仅为5mm x 5mm，与其他部件分离的光收发器相比，尺寸最小。由于它使用量子点激光器，它还可以耐受超过100°C的温度。它还具有插座设计，因此即使在紧密集成中也可以插拔。为了更好地适应数据中心，它采用1310nm波长。因此，它是与电子芯片集成的理想选择。</p>
+<h4 id="共封装pma与光收发器"><a class="markdownIt-Anchor" href="#共封装pma与光收发器"></a> 共封装PMA与光收发器</h4>
+<p>封装中基板的尺寸为3cm x 2.5cm，厚度为1.49mm。为了减少信号偏差，我们控制每对差分线的内部长度差异在100μm以内。为了同样的原因，四组相邻差分线之间的长度差异控制在200μm以内（如图9a所示）。两个PMA芯片和一个光I/O核心芯片通过共封装集成到一个模块中。图9b是封装模块的图片。图9c是带有两个PMA芯片和超小型光收发器安装槽的基板。</p>
+<p>为了隔离不同电源之间的相互干扰，所有电源电压都是独立供电的。因此，电源平面和地平面之间的寄生电感也被最小化，并且快速切换和PMA芯片的电源平面和地平面分别被分成几个独立的部分。</p>
+<h3 id="测试"><a class="markdownIt-Anchor" href="#测试"></a> 测试</h3>
+<p>为了测试我们设计的光I/O芯片，我们实现了MAC和PCS代码并将其放在FPGA卡上，然后通过FMC连接器将其连接到PCB板（如图10b所示）。我们设计的光I/O芯片位于该PCB上（如图10a所示）。</p>
+<img src="/pictures/image-20250311130919956.png" alt="image-20250311130919956" style="zoom:50%;" />
+<p>使用Xilinx公司开发的用于编程FPGA板的Vivado软件，我们证明了PCS TX和PCS RX之间的通信是正确的，如图11所示。</p>
+<img src="/pictures/image-20250311130950519.png" alt="image-20250311130950519" style="zoom:50%;" />
+<h3 id="比较"><a class="markdownIt-Anchor" href="#比较"></a> 比较</h3>
+<p>我们比较了芯片级光互连（C-OI）和板级光互连（B-OI）的面积占用和功耗。计算包括电子芯片和光收发器。芯片级光互连包括一个CPU芯片和一个光I/O芯片，光I/O芯片包括PMA和超小型光收发器。相比之下，板级光互连由电子ASIC芯片和可插拔光收发器组成。它们实现了相同的以太网网卡功能。</p>
+<h4 id="面积占用的比较"><a class="markdownIt-Anchor" href="#面积占用的比较"></a> 面积占用的比较</h4>
+<p>在芯片级光互连实现中，CPU和光I/O芯片在封装前集成，因此可以轻松放入尺寸为3.3cm x 3.3cm的封装中，这是电子芯片封装后的常规尺寸，例如Chelsio公司的T6芯片[10]。同时，典型的板级光互连占用的面积由电子ASIC芯片和可插拔光收发器的总面积决定。对于电子ASIC芯片，我们再次使用3.3cm x 3.3cm = 10.89cm2作为其占用的面积。对于光收发器，四通道小型可插拔（QSFP）光收发器占用的面积为2cm x 6cm = 12cm2。因此，板级光互连占用的面积为10.89cm2 + 12cm2 = 22.89cm2。我们假设电子ASIC芯片和可插拔光收发器之间的走线非常短以简化讨论，这意味着板级光互连实现可能比我们的计算占用更多的面积。</p>
+<h4 id="功耗的比较"><a class="markdownIt-Anchor" href="#功耗的比较"></a> 功耗的比较</h4>
+<p>我们使用Synopsys公司的DC软件计算芯片级光互连的功耗。我们使用的CPU包括4个CPU核心、缓存、总线、MAC和PCS组件。从DC报告（如图12b所示）中，其功耗为1.17W。在III.A节中，我们可以看到PMA的功耗为320mW x 4 = 1.28W。根据AIO的数据表[9]，AIO光收发器的功耗为1.5W。因此，芯片级光互连的总功耗为3.95W。在板级光互连中，典型的100G以太网网卡上的电子ASIC芯片的功耗为12W[10]，可插拔光收发器的功耗为2.5W[7]。因此，总功耗为12W + 2.5W = 14.5W。比较结果如表II所示。</p>
+<p>获取商用100G以太网网卡中电子ASIC芯片的组件功耗并不容易，因此我们无法在更深层次上比较芯片级光互连与板级光互连的功耗，以查看哪些部分有助于节能。然而，我们认为有两个因素可能导致我们的芯片级光互连功耗较低。一个是我们设计的PMA芯片在如此短的范围内工作，因此在发送和接收100Gbps数据时消耗的功率较少。另一个是我们选择CPU架构来实现100Gbps以太网数据处理，这显著重用了其现有电路元件，使电子芯片更小并节省了功耗。</p>
+<img src="/pictures/image-20250311131202208.png" alt="image-20250311131202208" style="zoom:67%;" />
+<h3 id="结论"><a class="markdownIt-Anchor" href="#结论"></a> 结论</h3>
+<p>我们提出了一种通用的芯片级光互连应用架构，包括CPU芯片和光I/O芯片。我们重新设计了接口以保持两个芯片独立开发。我们基于一对PMA芯片和超小型光收发器通过共封装技术开发了光I/O芯片。我们还在28nm CMOS工艺中流片了带有MAC和PCS的CPU芯片。该架构可以支持任何负载芯片（如CPU、GPU、交换机）实现光I/O。</p>
+<p>与板级光互连[7]相比，我们的工作在以太网网卡应用中可以实现1/3的功耗和1/2的面积占用（如表I所示）。通过使用芯片级光互连，以太网网卡可以更小。此外，该工作可以在服务器PCB上实现直接光连接，而无需安装附加的光以太网网卡。</p>
+
       
     </div>
 
@@ -419,15 +493,43 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/02/25/300mm%E7%A1%85%E5%85%89%E5%B9%B3%E5%8F%B0%E9%9B%86%E6%88%90%E7%9A%84%E5%AF%B9%E5%85%89%E5%AD%A6%E5%8F%8D%E9%A6%88%E7%9A%84%E9%AB%98%E5%BA%A6%E5%AE%B9%E5%BF%8D%E7%9A%84%E9%87%8F%E5%AD%90%E7%82%B9%E6%BF%80%E5%85%89%E5%99%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p><a href="/download/Feedback Tolerant Quantum Dot Lasers Integrated With 300 mm Silicon Photonics.pdf" download>文献下载</a></p>
+<hr />
+<h3 id="反馈容限量子点激光器与300毫米硅光子集成的研究"><a class="markdownIt-Anchor" href="#反馈容限量子点激光器与300毫米硅光子集成的研究"></a> 反馈容限量子点激光器与300毫米硅光子集成的研究</h3>
+<h4 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h4>
+<p>我们报道了首个与300毫米硅光子集成异质集成的量子点激光器。该激光器展现出接近零的线宽增强因子，表明其对光学反馈具有极高容忍度，从而实现了无隔离器运行。我们通过在硅微环调制器存在的情况下，演示了在高达-13 dB的光学反馈下仍能保持128 Gb/s PAM-4信号眼图质量的无损操作。</p>
+<hr />
+<h3 id="i-引言"><a class="markdownIt-Anchor" href="#i-引言"></a> I. 引言</h3>
+<p>量子点（QD）激光器相较于传统量子阱激光器具有诸多优势，包括更低的阈值电流密度、更高的高温增益、减少增益竞争以实现多波长操作，以及对光学反馈的高度容忍性（因其线宽增强因子较低）[1]-[3]。其中，对光学反射的低敏感性激发了研究者对无光隔离器运行的兴趣[4]-[5]。光隔离器通常用于保护激光器免受杂散背反射的影响，但由于材料不兼容性和高插入损耗，其在光子集成电路（PIC）中的集成极具挑战性。目前光隔离器仍作为分立器件通过封装与PIC互联，移除光隔离器需求可显著降低封装复杂度和成本。</p>
+<p>尽管近年来量子点激光器性能大幅提升，但多数研究集中于独立器件而非光子集成。硅基光子集成允许利用成熟的硅光子波导器件库，并通过300毫米CMOS工艺实现规模化生产。现有硅基量子点研究多采用硅上同质生长技术[8]-[9]，但需厚缓冲层或图案化硅口袋，导致光提取效率受限。本文首次展示300毫米硅光子平台上异质集成量子点激光器，实现与硅波导器件的耦合，并演示了150℃下工作的法布里-珀罗（FP）激光器及输出功率超过28 mW的分布式反馈（DFB）激光器，其对光学反馈的耐受性达到-13 dB。</p>
+<hr />
+<h3 id="ii-量子点激光器设计与制造"><a class="markdownIt-Anchor" href="#ii-量子点激光器设计与制造"></a> II. 量子点激光器设计与制造</h3>
+<p>异质集成硅基量子点激光器与英特尔现有高量产III-V/Si量子阱激光器设计理念相似[13]-[14]。采用多级渐变波导将光从被动硅波导向混合硅/III-V增益波导过渡。通过调整硅波导宽度可定制有源区光场约束，硅层下方可通过CMOS光刻工艺精确制作波导布拉格光栅（用于DFB激光器）。与III-V材料的键合采用直接等离子体活化键合技术，键合后通过干湿法刻蚀形成激光台与波导渐变结构，最终完成金属化工艺。</p>
+<p><img src="../pictures/image-20250225104409955.png" alt="image-20250225104409955" /></p>
+<hr />
+<h3 id="iii-激光器表征"><a class="markdownIt-Anchor" href="#iii-激光器表征"></a> III. 激光器表征</h3>
+<h4 id="a-法布里-珀罗量子点激光器"><a class="markdownIt-Anchor" href="#a-法布里-珀罗量子点激光器"></a> A. 法布里-珀罗量子点激光器</h4>
+<p>FP激光器采用500 μm长增益区，两端分别设置高反射率（<sub>100%）和部分反射率（</sub>40%）环形镜。总腔长约1500 μm，包含波导路由与MMI器件。测试结果显示其在30℃至150℃范围内阈值电流从20 mA升至40 mA（特征温度To≈115℃），输出功率仅下降0.7 dB，证实了QD材料的高温稳定性。亚阈值状态下（10-20 mA偏置），通过Hakki-Paoli法提取线宽增强因子α，在1280-1320 nm范围内接近零，表明其抗反馈能力显著优于传统量子阱激光器（~2-5）[23]。</p>
+<h4 id="b-分布式反馈量子点激光器"><a class="markdownIt-Anchor" href="#b-分布式反馈量子点激光器"></a> B. 分布式反馈量子点激光器</h4>
+<p>DFB激光器在室温下阈值为26 mA，200 mA驱动时输出功率达28 mW（双边），80℃时阈值升至42 mA，功率下降1.5 dB。波长漂移小于增益峰偏移，得益于硅基布拉格光栅的设计灵活性与工艺重复性。</p>
+<hr />
+<h3 id="iv-光学反馈耐受性研究"><a class="markdownIt-Anchor" href="#iv-光学反馈耐受性研究"></a> IV. 光学反馈耐受性研究</h3>
+<h4 id="a-qd-dfb激光器的rin与反馈"><a class="markdownIt-Anchor" href="#a-qd-dfb激光器的rin与反馈"></a> A. QD-DFB激光器的RIN与反馈</h4>
+<p>通过集成光学测试平台（含VOA与环路镜）验证QD-DFB激光器在-13 dB至-30 dB反馈下的表现。实验表明，即使存在强反馈（-13 dB），激光器在60-160 mA偏置范围内的RIN变化小于2 dB/Hz，光谱无多模或相干崩塌现象。</p>
+<p><img src="../pictures/image-20250225104526209.png" alt="image-20250225104526209" /></p>
+<h4 id="b-数据传输验证"><a class="markdownIt-Anchor" href="#b-数据传输验证"></a> B. 数据传输验证</h4>
+<p>使用硅微环调制器（Q值4500）在64 Gb/s NRZ和128 Gb/s PAM-4信号下测试，结果显示即使在-13 dB反馈下，眼图仍保持高消光比（&gt;5 dB）与信噪比（&gt;5），误码率（BER）与参考激光器性能一致，TDECQ惩罚低于0.2 dB。</p>
+<hr />
+<h3 id="v-结论"><a class="markdownIt-Anchor" href="#v-结论"></a> V. 结论</h3>
+<p>本研究成功实现300毫米硅光子平台上异质集成量子点激光器，其具备单模输出（&gt;28 mW）、150℃高温稳定性及-13 dB光学反馈耐受性。该技术为数据通信、电信、传感及AI/ML领域提供了高性能、低成本的光子集成解决方案。</p>
+<hr />
+<p><strong>致谢</strong><br />
+感谢Richard Jones、Ranju Venables等人在技术指导与支持方面的贡献。</p>
+<p><strong>参考文献</strong><br />
+[1]-[26] （略，保留原文格式）</p>
+<hr />
+<p>翻译过程中严格遵循学术规范，专业术语（如QD、DFB、PAM-4等）均采用标准译法，并保留关键缩写首次出现的英文全称注释。如需进一步调整或补充，请随时告知。</p>
+
       
     </div>
 
@@ -505,15 +607,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/02/08/%E5%85%89%E4%BA%92%E8%BF%9E%E5%9B%BD%E5%86%85%E5%9B%BD%E5%A4%96%E6%94%BF%E5%BA%9C%E9%A1%B9%E7%9B%AE%E5%92%8C%E8%B7%AF%E7%BA%BF%E5%9B%BEDAPPA/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>主要参见<a target="_blank" rel="noopener" href="https://latitudeda.com/document/413">https://latitudeda.com/document/413</a> 、<a href="/download/DARPA-Photonics_for_Scalability_HR001119S0004.pdf" download>DAPPA PIPES项目书2018</a> 和DAPPA最近的OFC报告<a target="_blank" rel="noopener" href="https://opg.optica.org/abstract.cfm?uri=OFC-2024-Tu2F.5#videoPlayer%E3%80%82">https://opg.optica.org/abstract.cfm?uri=OFC-2024-Tu2F.5#videoPlayer。</a></p>
+<h2 id="pipes极端可扩展性光子技术包photonics-in-the-package-for-extreme-scalability"><a class="markdownIt-Anchor" href="#pipes极端可扩展性光子技术包photonics-in-the-package-for-extreme-scalability"></a> PIPES：极端可扩展性光子技术包（Photonics in the Package for Extreme Scalability）</h2>
+<p>Ref: <a target="_blank" rel="noopener" href="https://www.darpa.mil/research/programs/photonics-in-the-package-for-extreme-scalability">Photonics in the Package for Extreme Scalability</a></p>
+<h4 id="项目概述"><a class="markdownIt-Anchor" href="#项目概述"></a> 项目概述</h4>
+<p>数字微电子技术的进步为国防部（DoD）在信息处理、传感器和通信领域提供了不可或缺的能力。越来越多地，这些领域的系统性能并不是由单个节点的计算限制，而是受到单个芯片之间电数据传输的限制。</p>
+<p>“极端可扩展性光子技术包”（PIPES）计划利用光来大幅提升封装集成电路的数字连接性，目标是通过并行性和模块化实现革命性的性能提升。PIPES旨在将光信号技术嵌入到应用特定集成电路（ASIC）和现场可编程门阵列（FPGA）的封装中，以实现前所未有的带宽密度、效率和距离的数据链路。具体而言，PIPES的目标是在低于<mark>每比特1皮焦耳的能量消耗</mark>下，集成最先进的电子器件和光子模块，以每个封装<mark>实现100Tbps的数据传输</mark>，同时为未来的应用创造能够实现10倍更高性能的技术。</p>
+<p>随着PIPES技术的成熟，DARPA预期嵌入光学信号技术将在先进微电子系统中得到广泛应用。除了FPGA和特种国防部产品外，中央处理单元（CPU）、图形处理单元（GPU）和领域特定加速器的光子连接将影响许多双用途应用，包括人工智能、机器学习、大规模仿真和高性能计算。</p>
+<p>主要参见<a target="_blank" rel="noopener" href="https://latitudeda.com/document/413">https://latitudeda.com/document/413</a> 、<a href="/download/DARPA-Photonics_for_Scalability_HR001119S0004.pdf" download>DAPPA PIPES项目书2018</a> 和DAPPA最近的OFC报告<a target="_blank" rel="noopener" href="https://opg.optica.org/abstract.cfm?uri=OFC-2024-Tu2F.5#videoPlayer%E3%80%82">https://opg.optica.org/abstract.cfm?uri=OFC-2024-Tu2F.5#videoPlayer。</a></p>
+<h2 id="darpa-pipes项目在芯片级演示了2-tbits的光互连技术-2020"><a class="markdownIt-Anchor" href="#darpa-pipes项目在芯片级演示了2-tbits的光互连技术-2020"></a> DARPA PIPES项目在芯片级演示了2 Tbit/s的光互连技术 - 2020</h2>
+<p>Ref:  <a target="_blank" rel="noopener" href="https://www.laserfocusworld.com/fiber-optics/article/14176186/darpa-pipes-program-demonstrates-2-tbit-s-optical-interconnects-at-the-chip-level">DARPA PIPES Program demonstrates 2 Tbit/s optical interconnects at the chip level | Laser Focus World</a></p>
+<p><img src="/pictures/2006LFWwn1.5ed50cee9d260.png" alt="adds" /></p>
+<p>英特尔和Ayar Labs开发的一款先进FPGA板，将铜引脚替换为光速硅光组件，每个芯片的成本仅需几分钱；集成在硅芯片中的直径为10微米的微环谐振器（插图）调制信号的光相位，并作为一个下路口，帮助解决带宽/能耗/距离的权衡问题。</p>
+<p>英特尔（加利福尼亚州圣克拉拉）和Ayar Labs（加利福尼亚州埃默里维尔）研究人员之间的合作努力成功演示了高带宽光I/O互连，这些互连相比于传统电数据链路仅消耗少量电力。该演示是国防高级研究计划局（DARPA）名为==“极端可扩展性光子技术包”（PIPES, Photonics in the Package for Extreme Scalability）<mark>计划的一个里程碑，该计划的雄心目标是开发先进的封装内硅光子接口，能够实现超过</mark>100 Tbit/s<mark>的带宽和低于</mark>1 pJ/bit==的能量消耗，且能够在公里级距离内工作，相比当前每秒400 Gbit的商业互连，其性能提升超过10倍。</p>
+<p>数据通信通过光纤系统和网络传播，直到在铜互连处遇到瓶颈，铜互连是微芯片和电路板上基本的点对点导电组件。虽然在数据中心中，服务器和交换机之间的光收发器已变得非常普遍，但电子在电路板上的铜引脚和导线之间点对点传输数据仍然相对较慢。</p>
+<p>将铜信号替换为光信号是跟上摩尔定律的下一个合乎逻辑的步骤，但这面临着许多挑战。在高带宽传输中，最大可实现的互连距离显著下降，能效也降低。在高带宽和逐渐增加的能量密度下，散热问题也是一个难题。Ayar Labs和英特尔正在努力克服这一长期存在的带宽-能量-距离权衡，以推动摩尔定律的需求超越其最初的限制。</p>
+<p>在2020年光纤大会的现场演示中（由于COVID-19，Ayar Labs在3月10日至12日进行了虚拟参与），Ayar展示了其TeraPHY光芯片技术，这一技术集成在传统通过铜传输电子的先进商业集成电路（IC）——英特尔的Stratix 10现场可编程门阵列（FPGA）中。Ayar的TeraPHY芯片包含微米级的光波导和光子微环特征，采用全球半导体（GlobalFoundries，位于加利福尼亚州圣克拉拉）使用45纳米平台CMOS芯片制造技术制造而成。</p>
+<p>TeraPHY芯片上的光波导是单片式地模式化集成到硅中，本质上是铜线的光学模拟。通过将两个波导放在接近的位置，可以实现光子的转移，从而将功率从一个波导传递到另一个波导，形成一个消逝耦合器。在耦合器内，直径为10微米的微环谐振器可以电调制光的相位并控制光的方向，可以通过芯片的内部或到达芯片顶部，创造下路口。目前，大多数硅光子芯片使用0.5毫米大小的马赫-泽德干涉仪（MZI）来控制方向和调制光子的相位，这在带宽密度和能耗效率方面存在局限性。由于该微环的占用空间是典型MZI的100倍小，使其能够实现25到50倍更高的带宽密度和50倍更好的能效。这些改进有效地消除了传统的带宽/能量/距离限制。</p>
+<p>单芯片封装演示具有八个波长分复用通道，每个通道的波长不同，四个光宏芯片的I/O数据速率为16 Gbit/s，总代码速率为512 Gbit/s。DARPA团队预计，生产时单个芯片的容量将达到2.56 Tbit/s的I/O，支持24个通道，且无需前向错误更正，延迟小于10纳秒（见图）。TeraPHY光互连旨在与外部多波长连续波（CW）激光源配合使用，并与任何类型的系统封装搭配集成：CPU、GPU、ASIC或FPGA，以在最多2公里的距离内连接交换机、服务器和卡。</p>
+<p>走向市场及未来 Ayar Labs于2015年从麻省理工学院分拆而出，获得了来自英特尔资本和全球半导体的战略投资，以及硅谷的风险投资公司Founders Fund和Playground Global的支持。TeraPHY光子互连于2019年正式上市，目标是解决硅芯片的瓶颈问题；Ayar希望在超级计算机架构、数据中心，甚至未来可能的消费电子和自动驾驶汽车等其他应用中找到机会。2020年3月，洛克希德·马丁（North Bethesda, MD）同意向Ayar提供一笔未公开金额的战略投资，以促进TeraPHY技术的商业化。该团队的下一个步骤是提高高产量的可制造性。</p>
+<p>尽管在这一早期阶段取得了一定进展，但实现DARPA PIPES第一阶段目标所需的指标仍任重道远，同时在光I/O达到100 Tbit/s的成熟阶段还需更长时间。今年3月，DARPA宣布选定了同时进行的PIPES计划第二个技术领域的研究团队。第二次研究的目标是在一个芯片上开发具有Peta级/秒数据速率的芯片，这相当于今天互联网的整个聚合流量。被选中的研究团队包括桑迪亚国家实验室、加利福尼亚大学圣迭戈分校、加利福尼亚大学圣巴巴拉分校、哥伦比亚大学和宾夕法尼亚大学。这些团队将探索所需的信号效率、带宽密度和集成方面的进展，以推动比现代芯片多100倍的数据传输。</p>
+
       
     </div>
 
@@ -591,15 +705,165 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/02/08/%E5%85%89%E4%BA%92%E8%BF%9E%E5%9B%BD%E5%86%85%E5%9B%BD%E5%A4%96%E6%94%BF%E5%BA%9C%E9%A1%B9%E7%9B%AE%E5%92%8C%E8%B7%AF%E7%BA%BF%E5%9B%BE-%20%E6%AC%A7%E6%B4%B2%E5%9C%B0%E5%B9%B3%E7%BA%BF%E9%A1%B9%E7%9B%AEHorizon%20Europe/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <h1 id="欧洲地平线项目horizon-europe"><a class="markdownIt-Anchor" href="#欧洲地平线项目horizon-europe"></a> 欧洲地平线项目（Horizon Europe）</h1>
+<p>REF: <a target="_blank" rel="noopener" href="https://cordis.europa.eu/search?q=contenttype%3D%27project%27%20AND%20programme%2Fcode%3D%27HORIZON%27%20AND%20(%27cpo%27)&amp;p=1&amp;num=10&amp;srt=Relevance:decreasing">https://cordis.europa.eu/search?q=contenttype%3D'project' AND programme%2Fcode%3D'HORIZON' AND ('cpo')&amp;p=1&amp;num=10&amp;srt=Relevance:decreasing</a><br />
+<strong>欧洲地平线项目资助了许多子项目，这里总结了一些和硅光相关的项目：</strong></p>
+<h2 id="先进的协同封装光学技术实现高效能云计算advance-co-packaged-optics-enabling-high-efficiency-cloud-computing"><a class="markdownIt-Anchor" href="#先进的协同封装光学技术实现高效能云计算advance-co-packaged-optics-enabling-high-efficiency-cloud-computing"></a> 先进的协同封装光学技术，实现高效能云计算；Advance co-packaged optics enabling high-efficiency cloud computing</h2>
+<p>Ref: <a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/101070178">https://cordis.europa.eu/project/id/101070178</a></p>
+<h5 id="降低数据中心的能源消耗"><a class="markdownIt-Anchor" href="#降低数据中心的能源消耗"></a> 降低数据中心的能源消耗</h5>
+<p>在数字时代，超大规模数据中心对于高效的数据传输和通信至关重要。然而，它们消耗了大量的电力，现有的解决方案在减少能源使用方面并不高效。欧盟资助的ADOPTION项目旨在应对这一挑战，通过开发高能效硅光子学的光学（CPO）收发器引擎的共包装技术。这项创新将有效降低数据中心的能耗和运营成本。该项目将与三家大型企业、三家中小企业和四个研究机构合作，为欧洲提供竞争优势。ADOPTION项目的目标是克服数据中心面临的能源挑战，并提升它们的效率，以支持我们现代化的数字世界。</p>
+<h5 id="目标"><a class="markdownIt-Anchor" href="#目标"></a> 目标</h5>
+<p>ADOPTION项目致力于为数据中心内网络提供一种低功耗和低成本的解决方案，该方案采用将光学（CPO）收发器与封装交换芯片共封装的方式。超大规模数据中心是我们数字社会的基本且不可或缺的一部分。然而，数据中心的电力消耗代表了一个巨大的全球性问题，约占全球电力消耗的1%。由于电分组交换机与可插拔光收发器之间的电气互连的耗电量不断增加，使得当前架构的数据中心内网络的容量扩展也越来越具有挑战性。</p>
+<p>ADOPTION项目旨在通过使用高能效的硅光子CPO收发器引擎来减少电气互连长度，从而支持超越204.8Tb/s的交换容量，并达到每端口6.4Tb/s的速度，目标是每比特约3皮焦耳的能耗。ADOPTION还将开发创新的封装解决方案，通过电气和光学层分离的双部分组装来简化工艺并提高产量。在组装过程中，一个先进的光纤阵列主动光学对准技术也将被集成，旨在减少装配时间并提高耦合效率。通过这些解决方案，ADOPTION将挑战将光接口成本降至每Gb/s低于50美分的目标。ADOPTION还将展示颠覆性的超大规模数据中心和人工智能计算集群的新型网络架构，以提高效率并降低延迟，利用光学交换和路由技术。</p>
+<p>ADOPTION项目计划建立一个新的研究和创新生态系统，基于由3家中小企业、3家大公司和4个研究机构组成的联盟的互补专业知识，重新定义CPO收发器的数字供应链，促进欧洲在这一新价值链中的竞争力。为了实现这一愿景，联盟申请了580万欧元的资金。</p>
+<h5 id="项目背景和整体目标概述"><a class="markdownIt-Anchor" href="#项目背景和整体目标概述"></a> 项目背景和整体目标概述</h5>
+<p>超大规模数据中心正成为我们数字基础设施的基石，在云计算、物联网、社交媒体和人工智能的发展推动下，扮演着处理巨量数据处理、存储和网络需求的重要角色。这些设施对于数字经济至关重要，提供无与伦比的可扩展性和效率。ADOPTION项目正在解决超大规模数据中心所面临的紧迫挑战。随着数据流量的不断激增，传统技术已达到极限，导致显著的低效率和不断增长的能源需求。</p>
+<p>面板可插拔光电模块历来在连接和管理数据中心范围内的数据流量，特别是超大规模设施中发挥了重要作用。这些模块通过光纤连接服务器、交换机及其他网络设备，促进相对短距离的高速数据传输。然而，随着数据中心扩展至超大规模水平——基础设施须处理巨量数据和众多连接——面板可插拔模块的局限性愈发明显。此环境下这些模块的主要挑战是其带宽有限和功耗增加。超大规模数据中心需要更高的吞吐量和更高的效率，而这些传统模块由于电气接口的物理限制，难以满足这样的需求。因此，它们可能成为瓶颈，限制数据中心的整体性能和扩展性。</p>
+<p>为了解决这些问题，ADOPTION项目正在开发创新的光互连和封装技术。目标是创造更高效、更高容量的解决方案，以应对未来预计的巨量数据流。该项目关注三个关键领域：开发减少延迟并提高数据吞吐量的光交换架构；推进2.5D和3D共封装技术，以无缝集成高速电子和光子组件，从而降低能耗和成本；通过密集波分复用推进光互连的界限，以实现前所未有的数据速率和带宽密度。</p>
+<p>ADOPTION的预期影响是显著的，预计在能效和数据传输速度方面实现突破。该项目将建立一个由欧洲主导的光收发器共封装生态系统，减少对非欧洲技术的依赖，并推动欧洲中小企业的创新。通过推进这些前沿技术，ADOPTION不仅旨在降低能耗，还要创造可扩展的数据中心架构，以满足未来包括人工智能和高性能计算在内的需求。</p>
+<p>该项目不仅解决了紧迫的技术挑战，还将欧洲定位为下一代数据中心技术的领跑者。ADOPTION的创新可能会对行业产生持久影响，支持数字服务不断增长的需求，并确保欧洲的数字基础设施始终处于全球进步的前沿。</p>
+<h5 id="从项目开始到报告涵盖期结束所开展的工作及迄今取得的主要成果"><a class="markdownIt-Anchor" href="#从项目开始到报告涵盖期结束所开展的工作及迄今取得的主要成果"></a> 从项目开始到报告涵盖期结束所开展的工作及迄今取得的主要成果</h5>
+<p>在ADOPTION项目的第一阶段，数据中心新技术的开发取得了显著进展。项目专注于为数据中心系统创建先进的设计和规格，在提升网络性能和效率方面达到了重要的里程碑。主要成就之一是设计了一种新型的平面光网络架构，能够连接多达65,536个计算单元，预计将大大提高人工智能集群的效率。</p>
+<p>该项目采用模块化设计方法，即分别开发和优化各单独组件的策略，这样可以实现专业化创新并更容易集成到各种系统中。这不仅促进了欧洲技术独立性，也为中小企业（SMEs）创造了新机遇。在该目标的实现中，设计并构建了关键光学组件，例如阵列波导光栅、先进的光开关和高功率多波长激光源。此外，还制作了支持高容量数据流分离和组合的光端口扩展模块，初步结果显示出良好的前景。</p>
+<p>此外，创建了两代收发器光子集成电路（PICs），最新版本能够以每通道112Gb/s的速度处理数据。项目也建立了组装和封装这些组件的流程，并开发了精确对准多光纤连接的方法。</p>
+<p>在减少新光学技术的能耗方面的努力取得了显著进展，与当前行业标准相比，潜在节能高达64%。尽管遇到了一些延迟，这一阶段成功完成了多种光学技术的发展，为下一个阶段的进一步进步奠定了基础。</p>
+<h5 id="超越现有技术的进展和预期潜在影响包括迄今为止的社会经济影响和更广泛的社会影响"><a class="markdownIt-Anchor" href="#超越现有技术的进展和预期潜在影响包括迄今为止的社会经济影响和更广泛的社会影响"></a> 超越现有技术的进展和预期潜在影响（包括迄今为止的社会经济影响和更广泛的社会影响）</h5>
+<p>在首个报告期内，ADOPTION项目取得了实质性进展，达到了推动当前技术界限的成果。关键发展包括创建了节能光子集成电路（PICs）以及可扩展的平面光网络架构设计，能够连接多达65,536个计算节点。这些创新有望显著提高数据中心的效率和可扩展性，使该项目位于下一代数据中心技术的前沿。</p>
+<p>为了充分利用这些进步，需要采取几个关键步骤。需要继续进行研究并进行大规模演示以确认这些技术在实际应用中的性能。与数据中心运营商建立战略合作伙伴关系将是确保这些解决方案进入市场的关键。强有力的知识产权保护对支撑商业化并保护所开发的创新至关重要。</p>
+<p>此外，将项目成果与当前法规标准对齐是促进采用的必要条件。参与国际合作和标准化活动将对获得全球认可并确保这些技术成功推向市场至关重要。解决这些领域的问题对提升项目的影响力及确保其长期成功至关重要。</p>
+<h2 id="photonics-innovation-factory-for-europe-photonics-partnership-ia"><a class="markdownIt-Anchor" href="#photonics-innovation-factory-for-europe-photonics-partnership-ia"></a> Photonics Innovation Factory for Europe (Photonics Partnership) (IA)</h2>
+<p>REF: [Photonics Innovation Factory for Europe (Photonics Partnership) (IA) | <a target="_blank" rel="noopener" href="http://Horizon-europe.gouv.fr">Horizon-europe.gouv.fr</a>](<a target="_blank" rel="noopener" href="https://www.horizon-europe.gouv.fr/photonics-innovation-factory-europe-photonics-partnership-ia-32629#:~:text=The">https://www.horizon-europe.gouv.fr/photonics-innovation-factory-europe-photonics-partnership-ia-32629#:~:text=The</a> aim is to provide a virtual factory,operating as a sustainable fully integrated European ecosy)</p>
+<h5 id="行动类型horizon-创新行动"><a class="markdownIt-Anchor" href="#行动类型horizon-创新行动"></a> 行动类型：HORIZON 创新行动</h5>
+<h5 id="预期成果"><a class="markdownIt-Anchor" href="#预期成果"></a> 预期成果：</h5>
+<p>项目预计将为以下成果做出贡献：</p>
+<p>大幅提高核心光子技术在多种终端用户应用领域和行业部门的渗透，特别是通过精心挑选的中小企业和具有强大商业增长和就业影响潜力的新初创企业，从而实现更具竞争力和技术自主的欧洲工业。<br />
+在欧洲从TRL 2到7创建一个可持续的流线型光子学创新生态系统，为国家和地区在光子学领域的投资提供高杠杆效应的欧洲跨境附加值。</p>
+<p>范围：</p>
+<p>其目标是提供一个灵活开放结构的虚拟工厂，允许多个竞争主体和服务，这些主体和服务作为一个可持续的、完全整合的欧洲跨境深度创新支持生态系统，服务于欧洲工业的核心光子技术。该工厂应降低进入光子学的门槛，促进这些技术在新产品和流程中的广泛采用和集成，具有市场和社会上的高潜在影响。</p>
+<p>该工厂应帮助加速欧洲工业中已验证光子技术的部署，以提升其全球竞争力，强调技术主权和韧性，同时促进强大的新企业业务增长。需注意的是，它不会与现有商业产品竞争。</p>
+<p>提案应涵盖以下内容：</p>
+<p>通过网络中心组成的单一联盟，提供一个流线型的虚拟访问，接触一个涵盖从概念到商业化的整个光子学创新光谱的广泛光子技术供应链（TRL2-7）。<br />
+该行动应创建从初始概念到生产的途径，采用与市场相关的试验线和预系列生产设施相连的可扩展制造方法，从而弥合光子学价值链中的空白，并释放基于更完整和成熟解决方案的欧洲制造投资。<br />
+这项行动主要应面向第一批用户和早期采用者，促进核心光子技术在具有强大商业潜力的创新产品和流程中的更广泛采用和部署。<br />
+支持项目应具有创新性和工业相关性，需要密集的跨境协作专家干预，以克服基于协同光子核心技术的特定创新挑战，并应包括直接与创新活动相关的商业指导活动，以支持工业化步骤，直到按照市场需求的完整价值链完全商业化启动。<br />
+用户和早期采用者可能会根据其需求在不同的技术就绪水平上开始单独支持项目：TRL 2可能对使用光子技术的研究人员有用，而工业用户可能会从更高开始，例如TRL 4或5。支持项目应增加至少两个水平的初始TRL。所有措施合在一起应涵盖TRL 2到7的工作。<br />
+该行动应以先前的欧洲相关倡议和现有的欧洲和地区基础设施为基础，使用适当的质量管理和影响评估框架用于直接创新支持干预，展示支持行业（尤其是中小企业和初创公司）进行深度跨境创新支持的成功记录。<br />
+该行动应与已建立的欧洲光子工业和投资网络以及（泛）欧洲数字创新中心和光子及光子启用的应用领域的集群组织建立紧密联系。</p>
+<p>此行动应以示范中心和体验中心的形式提供创新就绪支持，以帮助准备商业案例，并提供技术、商业、投资和知识产权指导等额外支持，旨在最大化创新支持活动的潜在未来商业影响。该行动还应能够展示一个坚实的业务计划，以实现其活动的耐久资金和可持续性。</p>
+<p>该主题实施了欧盟共同编程光子学伙伴关系。</p>
+<h5 id="具体主题条件"><a class="markdownIt-Anchor" href="#具体主题条件"></a> 具体主题条件：</h5>
+<p>活动预计从TRL 2-5开始，并在项目结束时达到TRL 4-7 – 详见通用附录B。</p>
+<h2 id="数据中心应用和光钟中创新连接性的自适应微梳技术"><a class="markdownIt-Anchor" href="#数据中心应用和光钟中创新连接性的自适应微梳技术"></a> 数据中心应用和光钟中创新连接性的自适应微梳技术</h2>
+<p>REF:<a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/101136762">Universal frequency-comb platform for datacenter communications | UNICO | Project | Fact sheet | HORIZON | CORDIS | European Commission</a></p>
+<p>随着数据流量的不断增长，数据中心面临着加强其互连架构的压力。共封装光学 (CPO) 拥有实现这一目标的巨大潜力，通过将光电模块靠近集成来提升计算效率。这项技术预计将实现显著的市场增长，但需要多波长激光源来满足未来的带宽需求。由欧洲创新理事会资助的AMICA项目计划基于可在晶圆上扩展的高效微梳技术，开发波分复用 CPO 的关键示范器。研究人员将以可扩展平台为目标，瞄准每秒拍字节级的数据传输速度，提供前所未有的通道数量、效率、线路间距和每通道功率的组合。</p>
+<h5 id="目标-2"><a class="markdownIt-Anchor" href="#目标-2"></a> 目标</h5>
+<p>信息通信技术（ICT）应用的快速增长，如人工智能，将越来越多的计算资源转移到数据中心。数据中心负责全球约四分之三的互联网协议数据。数据流量和带宽需求的持续增长对数据中心互连架构的现状提出了挑战。未来十年所面临的突出挑战是寻找可扩展且高效的解决方案，以实现所需的带宽密度。</p>
+<p>共封装光学 (CPO) 是推动这一计算效率范式转变的关键技术，预计2022-2026年硅光子市场将实现最大复合年增长率（CAGR），2030年后潜在的收入将达到数十亿美元。CPO 的基础是通过在同一中介板上共同集成光电模块来减少耗电大的电接口的距离。</p>
+<p>为了推动光学边缘带宽密度的扩展，需要用于密集波分复用的多波长激光源，但最先进的商业解决方案面临着根本性的扩展问题。</p>
+<p>AMICA 基于突破性的、可在晶圆上扩展的超高效微梳技术，在WDM CPO中实现关键示范器，目标是在一个具备批量制造能力的平台上实现拍比特每秒的汇聚速度，其通道数量、效率、线路间距和每线路功率的组合前所未有。该联盟在数据中心互连和高性能计算领域的工业领军企业、在集成光子学方面具有互补专长的学术伙伴以及拥有商业化知识产权的新兴初创公司之间建立了一个相互协作的努力。团队由一个创新办公室补充，以领导技术向市场的过渡，还包括两位联合伙伴，帮助测试超出电信的新兴市场技术。</p>
+<h2 id="用于在硅上直接生长的密集集成iii-v激光器的纳米脊工程"><a class="markdownIt-Anchor" href="#用于在硅上直接生长的密集集成iii-v激光器的纳米脊工程"></a> 用于在硅上直接生长的密集集成III-V激光器的纳米脊工程</h2>
+<p><a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/884963">Nano-Ridge Engineering for Densely Integrated III-V Lasers Directly Grown on Silicon | NARIoS | Project | Fact sheet | H2020 | CORDIS | European Commission</a></p>
+<p>硅光子学——即应用使用硅作为光学介质的光子系统——利用了传统半导体行业成熟的硅晶片加工技术。虽然该领域已取得进展，但缺乏真正集成的光源阻碍了硅光子学向大批量消费应用的迁移，或用于数据中心互连。欧盟资助的NARIoS项目将基于新开发的强大平台，该平台利用真正的晶圆级工艺将直接带隙III-V族半导体集成到标准硅晶片中。项目的主要目标是提出能够克服光学限制和高效电流注入之间权衡的器件概念。</p>
+<h5 id="目标-3"><a class="markdownIt-Anchor" href="#目标-3"></a> 目标</h5>
+<p>虽然硅光子学，即利用CMOS工业的成熟技术实现复杂光子集成电路已取得巨大进步，并被最大的电子制造商所采用，但在例如大批量消费应用或非常短距离互连中的真正突破受到其缺乏真正的晶圆级光源的阻碍。我们结合了比例捕获法来抑制缺陷，以及纳米脊工程来塑造所生成材料，开发了一种强大的平台，可使用真正的晶圆级工艺将直接带隙III-V族半导体集成到标准硅晶片上。通过形貌研究、增益和寿命测量以及光泵浦激射的展示，证实了这种材料的卓越高质量。然而，对于实际应用来说，电注入是关键，而到目前为止，由于生成的GaAs/InGaAs纳米脊的尺寸过小，以至于无法直接应用电接触而不引入不可接受的损失，这一目标难以实现。因此，NARIoS的主要目标是提出器件概念，以克服光学限制和高效电流注入之间的权衡。我们目标是展示用于低功率应用的电注入微腔激光器，以及一类新型毫瓦级激光器，其发射方向可平面内或面外，利用了在这些纳米脊上生长高度均匀阵列的可能性。接下来，我们希望展示在纳米脊平台上生长的长波长InAs量子点的单光子发射，最终集成到适当的微腔中。这些面向器件的目标将辅以两个横向目标：开发和广泛表征InGaAs纳米脊以扩展激射波长，以及利用近期文献中的新概念来设计对光反馈具有弹性的激光器和/或在单一相干空间模式下的激光发射。</p>
+<h2 id="用于混合硅光子学的晶体氧化物平台"><a class="markdownIt-Anchor" href="#用于混合硅光子学的晶体氧化物平台"></a> 用于混合硅光子学的晶体氧化物平台</h2>
+<p><a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/101097804">Crystalline Oxides Platform for Hybrid Silicon Photonics | CRYPTONIT | Project | Fact sheet | HORIZON | CORDIS | European Commission</a></p>
+<p>硅（Si）光子学是解决新兴通信系统中日益增长的互联设备数量所带来的扩展挑战的有力候选者。然而，硅具有一些主要物理限制，阻碍了关键功能的芯片集成：强双光子吸收限制了非线性光学器件的功能，硅的中心对称性阻碍了快速光调制，间接带隙的本质阻碍了光的发射和放大。为克服这些限制，常见的解决方案是将多种材料混合集成到硅上，每种材料针对一种特定限制。然而，这一策略需要为每种要集成的材料开发专用技术，从而影响成本和可扩展性。在此背景下，CRYPTONIT项目将探索硅光子学的新范式，以混合集成多功能氧化锆基晶体氧化物（c-oxides）为基础，提供硅中不存在的多种物理特性：强非线性，铁电性和光放大。该项目的原创想法是开发混合超晶格，通过包含多个不同c-氧化物的纳米级层，以结合关键的光学功能，使用兼容硅的一般制造工艺。项目将集中展示在硅上的先进非线性和光电子器件，这些器件将在近红外范围内运行，以开发高效宽带光子集成电路。主要目标是：i）开发基于多功能c-氧化物超晶格的混合硅光子学平台；ii）展示高功率和宽带频率梳源（强非线性和放大）；以及基于Pockels效应（铁电性）的高速&gt;100 GHz光调制器的展示。这些目标本质上是突破性的，将为通信、传感和量子光子学领域的研究和应用开启新的视野。</p>
+<h2 id="硅光电机械技术弥合光子学与微波之间的差距"><a class="markdownIt-Anchor" href="#硅光电机械技术弥合光子学与微波之间的差距"></a> 硅光电机械技术：弥合光子学与微波之间的差距</h2>
+<p><a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/101087901">Silicon opto-electro-mechanics for bridging the gap between photonics and microwaves | SPRING | Project | Fact sheet | HORIZON | CORDIS | European Commission</a></p>
+<p>电信号与光信号的转换使得近红外（near-IR）光子能够在光纤网络中实现高数据率传输。类似地，在微波和光子之间进行相干转换被视为在远程量子处理器之间传输量子态的有希望的解决方案，从而促进大规模量子网络的发展。然而，微波（GHz）与近红外（200 THz）光子之间的巨大频率差异阻碍了直接的相干转换。这一限制可以通过声子介导的转换来克服，这是一个相干的两步过程，包括电机械和光机械转换。由GHz声子介导的片上微波-光转换具有极高的潜在效率，因为普通材料的光机械响应较大，并且GHz声子与近红外光子的波长相似。然而，在单一集成电路中同时实现高效的电机械和光机械转换仍是一个开放的挑战。最先进的演示表明，表面声波（SAW）可以实现高效的电机械转换，而腔光力学利用紧密约束的光学和机械模式来实现强大的光力学耦合。然而，将这两种方法结合起来仍然被认为具有挑战性，甚至被认为是不可能的。SPRING项目将通过开发一种根本性的新光力学耦合方法来克服这些限制，以桥接SAW电机械与腔光力学。这个原创想法是利用硅腔的亚波长纳米结构来耦合紧密约束的光学模式和SAW。SPRING策略将用于展示在硅芯片上实现单光子和量子态在超导量子比特之间的相干微波-光转换的单片集成，从而为应用于通信、传感和计算开辟一条新路径。</p>
+<h2 id="利用新型超材料的智能光子设备"><a class="markdownIt-Anchor" href="#利用新型超材料的智能光子设备"></a> 利用新型超材料的智能光子设备</h2>
+<p><a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/190113917">Smart PHotonic devices Using Novel metamaterials | SPHUN | Project | Fact sheet | HORIZON | CORDIS | European Commission</a></p>
+<p>Alcyon Photonics是西班牙国家研究委员会的一家衍生公司，提供高性能组件以促进新一代更智能的光子电路和设备的发展，这些设备将应用于通信、传感、人工智能、增强现实、物联网和量子计算等领域。在EIC资助的SPHUN项目的支持下，Alcyon Photonics将开发一个数字平台，该平台将简化新型光子集成电路的设计过程。该平台将由Alcyon专有的光子电路设计流程提供支持，该流程基于亚波长光栅，这是一种光子超材料，通过其周期性几何结构实现颠覆性的光管理。</p>
+<p>Alcyon Photonics成立于2018年，是西班牙国家研究委员会的衍生公司，旨在提供高性能组件，以推动新一代更智能的光子电路和设备的发展，这些设备将应用于通信、传感、人工智能、增强现实、物联网（IoT）和量子计算等应用领域。<br />
+SPHUN项目将开发一个数字平台，旨在丰富和验证一个基于新型亚波长结构超材料的创新光子构建模块的扩展库，使新型光子设备的设计者能够简化其先进光子集成电路（PICs）的设计。该库将提供多种功能，其性能、多功能性、鲁棒性和成本均优于市场上现有的替代方案，所有功能都以简单的格式提供，并与半导体代工厂的传统电子制造方法兼容。</p>
+<h2 id="面向光子可编程多功能集成电路的晶圆级平台"><a class="markdownIt-Anchor" href="#面向光子可编程多功能集成电路的晶圆级平台"></a> 面向光子可编程多功能集成电路的晶圆级平台</h2>
+<p><a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/101070332">Wafer-scale platform for Photonic Programmable Multipurpose Integrated Circuits | PHORMIC | Project | Fact sheet | HORIZON | CORDIS | European Commission</a></p>
+<p>PHORMIC项目旨在建立一个欧洲平台，用于开发下一代可编程光子芯片，降低产品开发者在不同应用领域采用该技术的门槛。PHORMIC平台由三个层次组成。</p>
+<p>第一层次是一个200毫米晶圆级制造流程，该流程在一个世界级的硅光子平台上集成了转移印刷的III-V族光学放大器、分子玻璃形式的电光材料以及紧凑型低功耗MEMS执行器。这些器件被封装在晶圆级密封腔体中，这些腔体还将用于片上气体池，以校准PHORMIC中构建的可调谐激光器。高速硅光子技术、基于Pockels效应的调制器、宽带光学增益和低功耗MEMS调谐器的结合，为新的应用提供了真正的推动力。该制造流程将得到用于构建复杂光子电路的设计工具包的支持。</p>
+<p>第二层次通过模块化封装工艺和驱动电子设备（包括高速驱动器）对光子芯片进行补充，封装和连接逻辑被集成到设计工具包中。这为构建具有主动控制和可编程性的复杂光子芯片系统提供了一个低门槛的入口。</p>
+<p>第三层次在此基础上构建了一个多用途可编程光子处理器，该处理器可以通过软件接口以模拟方式控制光的流动。该芯片与其电子设备和编程框架一起，形成了一个真正的“光子开发工具包”。这使得其能够像电子FPGA一样实现即插即用的使用模式，将新概念的原型开发时间从超过1年缩短至几周。</p>
+<p>PHORMIC联盟拥有建立完整供应链的所有专业知识，包括向欧洲工业200毫米晶圆代工厂迁移的路径。该平台的三个层次的应用潜力通过三个示范项目进行了验证，这些项目涉及数据中心通信、传感和毫米波无线波束成形。在每种情况下，都将对定制设计的芯片与多用途光子处理器进行比较。</p>
+<h2 id="下一代光子集成电路的超高速光学元件"><a class="markdownIt-Anchor" href="#下一代光子集成电路的超高速光学元件"></a> 下一代光子集成电路的超高速光学元件</h2>
+<p><a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/101017194">Advanced GeSi components for next-generation silicon photonics applications | SIPHO-G | Project | Fact sheet | H2020 | CORDIS | European Commission</a></p>
+<p>硅光子学利用传统的互补金属氧化物半导体技术和方法，将光学技术集成在硅半导体上，结合了光子学和电子学的优势。这些光子集成电路（PIC）将激光器、调制器等复杂光学系统集成在单个芯片上，从而减少了损耗和能耗，并在性能上超越单独的元件。欧盟资助的SIPHO-G项目将开发超高速光学调制器和光电探测器，以便集成到PIC中，从而推动光数据传输的极限，并加速下一代光学应用的创新。</p>
+<p>通过开发100Gbaud锗-硅（GeSi）量子限制斯塔克效应（QCSE）调制器和高灵敏度100Gbaud雪崩光电探测器（APD），SIPHO-G将为硅光子学领域带来突破性的光调制和光探测能力。新开发的紧凑型波导耦合调制器和探测器构建块将单体集成在高产率的尖端300mm硅光子学平台上，从而将硅光子集成电路的带宽密度、功率效率、灵敏度和复杂性提升到一个新的水平。在复杂的仿真和设计支持框架的支持下，SIPHO-G将在O波段和C波段展示一系列广泛的应用驱动原型。通过整合整个硅光子学价值链，SIPHO-G将加速下一代协同封装光学技术的发展、长途光通信，以及光神经形态计算等新兴PIC应用的进步，其性能水平超越当前最先进技术的4x-20x。</p>
+<h5 id="项目背景和总体目标的总结"><a class="markdownIt-Anchor" href="#项目背景和总体目标的总结"></a> 项目背景和总体目标的总结</h5>
+<p>通过开发100Gbaud锗-硅（GeSi）量子限制斯塔克效应（QCSE）调制器和高灵敏度100Gbaud雪崩光电探测器（APD），SIPHO-G将为硅光子学领域带来突破性的光调制和光探测能力。新开发的紧凑型波导耦合调制器和探测器构建块将单体集成在高产率的尖端300mm硅光子学平台上，从而将硅光子集成电路的带宽密度、功率效率、灵敏度和复杂性提升到一个新的水平。在复杂的仿真和设计支持框架的支持下，SIPHO-G将在O波段和C波段展示一系列广泛的应用驱动原型。通过整合整个硅光子学价值链，SIPHO-G将加速下一代协同封装光学技术的发展、长途光通信，以及光神经形态计算等新兴光子集成电路（PIC）应用的进步，其性能水平超越当前最先进技术的4x-20x。</p>
+<h5 id="自项目开始到报告期间结束所进行的工作和主要成果"><a class="markdownIt-Anchor" href="#自项目开始到报告期间结束所进行的工作和主要成果"></a> 自项目开始到报告期间结束所进行的工作和主要成果</h5>
+<p>SIPHO-G项目的发展正在顺利进行，合作伙伴之间的合作持续展开，行动描述中设定的目标应该能够在项目结束时实现。<br />
+NXT和IMEC正在开发用于建模QCSE和APD光学特性的框架，而LUCEDA负责制作PDK。NXT开发了一个用于建模多量子阱QCSE器件的仿真框架。包括激子吸收在内的光学仿真已与实验数据进行了测试，量子模块也已更新。IMEC利用NXT的QCSE框架对其生长的器件进行了建模并校准了模型。NXT进行了灵敏度分析，以确定器件中量子阱厚度和锗浓度变化的影响。IMEC基于Synopsys TCAD软件创建了APD器件的仿真框架，并通过与SIPHO-G中制造的器件的实验数据比较验证了该框架。LUCE更新了他们的PDK，通过添加IMEC提供的组件模型和使用IMEC的实验数据更新紧凑模型。LUCE和NXT合作连接他们的软件，以实现从量子级到电路级的建模环境自动化。</p>
+<p>AMBEL和IMEC致力于工艺开发，以优化QCSE和APD器件的晶圆级选择性区外延生长。AMBEL展示了用于C波段QCSE EAM的应变平衡Ge/Si多量子阱堆栈（MQW）的生长。IMEC最终确定了用于QCSE EAM（O波段）制造的MQW外延的晶圆级化学气相沉积工艺。<br />
+这些组件在硅光子集成平台上的集成工作正在IMEC进行，集成组件的设计包含在PIC设计工具中。第一轮制造已完成，芯片被表征并分发给合作伙伴。对这些晶圆上器件的表征提供了对第二轮SiPho-G制造工作条件的反馈。<br />
+SIPHO-G的应用导向示范器件涵盖从用于协同封装光学芯片和5G前传网络的电光引擎，到仅PIC数据中心发射器演示和光计算引擎。三种PIC的布局设计已最终确定，分别基于QCSE和FK-EAM，涉及O波段和C波段的变体。此外，还提出了一个仅PIC设计，采用WDM复用流。从Run#1 PIC-EIC模块获得了第一批结果。前传评估测试床的开发以及初步台式测试已完成，以验证相关的测试方法。最后，从SiPho-G Run#1制造中获得的光计算PIC的测试结果可用，包括1×2神经元和2×2 Xbar电吸收调制器（EAMs）布局。<br />
+SIPHO-G项目的结果已在约25个科学会议/期刊上发表，并已准备好未来出版的计划。</p>
+<h5 id="超越现有技术的进展和预期潜在影响包括项目的社会经济影响及更广泛的社会意义"><a class="markdownIt-Anchor" href="#超越现有技术的进展和预期潜在影响包括项目的社会经济影响及更广泛的社会意义"></a> 超越现有技术的进展和预期潜在影响（包括项目的社会经济影响及更广泛的社会意义）</h5>
+<p>SIPHO-G汇集了一个全面的财团，将为今天的SiPho工具箱补充急需的先进调制器和光电探测器构建块，具体表现为波导集成的量子限制斯塔克效应（QCSE）调制器和分离吸收电荷倍增（SACM）APD。这些器件将利用已经在主流CMOS铸造厂可用的化学气相沉积（CVD）外延反应器，通过晶圆级单体外延生长高度精制的Ge/Si层堆叠进行实现，从而保证能够利用现有供应链将其顺利引入未来产品。为了在收发器子系统级别展示新开发组件的全部潜力，SIPHO-G还将构建一个1.6T混合模块原型，包括先进的SiPho PIC和一个精心协同设计的电子集成电路（EIC）芯片，包含采用先进FDX22技术实现的高速驱动器和放大器阵列，非常适合高速收发器。该示范模块将在欧洲全面制造，将展示新开发技术在更高抽象层次上的能力，并加速工业应用。<br />
+SIPHO-G项目的发展正在顺利进行，合作伙伴之间的合作持续展开，行动描述中设定的目标应该能够实现。</p>
+<h2 id="由自动动态探索集成光子脉冲神经网络驱动的人工智能"><a class="markdownIt-Anchor" href="#由自动动态探索集成光子脉冲神经网络驱动的人工智能"></a> 由自动动态探索集成光子脉冲神经网络驱动的人工智能</h2>
+<p><a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/101064322">Artificial intelligence enabled by automatic dynamic exploration of integrated photonic spiking neural networks | ARIADNE | Project | Fact sheet | HORIZON | CORDIS | European Commission</a></p>
+<p>项目目标</p>
+<p>在这个项目（ARIADNE）中，我将通过开发一种基于高度复杂、动态和非线性的集成光子神经网络的新型人工智能系统，来解决当今硬件基础的类脑计算面临的几个关键挑战。这种神经网络易于制造且功耗低。所提出的实现方式得益于一种原创的机器学习方法，这种方法能够显著放宽对制造可重复性以及网络参数的可观察性和可调性的要求。预计该人工智能系统将学习在紧凑设备内以高速执行多种复杂和依赖时间的计算任务，适用于增强网络安全的实时控制（如机器人技术、自动驾驶车辆、物联网等）和生理信号分析（例如，癫痫发作预测）。ARIADNE项目将由特伦托大学（UNITN）的NanoLab研究小组主办。</p>
+<p>该项目的缩写灵感源自古希腊神话中的忒修斯与米诺陶的故事，其中公主阿里阿德涅想出了一个巧妙的方法来帮助忒修斯逃出迷宫。在ARIADNE中，我希望让强化学习算法学习解决这个空间-时间迷宫，粗略地说，就是在考虑的集成光学谐振器网络中表现出的复杂动态特性。具体来说，强化学习算法将学习控制一个复杂的反馈回路，以设定有利的动态网络属性，从而完成目标计算任务。</p>
+<p>预计该人工智能系统将在紧凑的设备内学习以高速执行多种复杂且依赖时间的计算任务，适用于增强网络安全的实时控制（如机器人技术、自动驾驶车辆、物联网等）和生理信号分析（例如，癫痫发作预测）。</p>
+<h2 id="下一代纳米光电机械系统的材料"><a class="markdownIt-Anchor" href="#下一代纳米光电机械系统的材料"></a> 下一代（纳米）光电机械系统的材料</h2>
+<p><a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/101091968">Materials for a next-generation (nano-)opto-electro-mechanical systems | MAGNIFIC | Project | Fact sheet | HORIZON | CORDIS | European Commission</a></p>
+<p>光电技术整合了多样化的电子设备与光学系统，推动了信息和通信技术（ICT）的巨大进步。光电机械系统结合了激光光束来控制谐振器中的机械振动。而现在，纳米光电机械系统（NOEMS）正在允许对纳米光子结构中光的前所未有的控制，开启了集成、高效和低功耗ICT设备的新纪元。欧盟资助的MAGNIFIC项目将开发一个基于有前途的纳米晶硅（nc-Si）及其与柱状氮化铝的集成的灵活且可扩展的技术平台，以支持NOEMS的开发。改善对nc-Si中纳米尺度吸收和耗散机制的表征将促成射频电子与通信波长光学之间的优化接口。</p>
+<h5 id="项目目标"><a class="markdownIt-Anchor" href="#项目目标"></a> 项目目标</h5>
+<p>纳米光电机械（NOEMS）是一个新兴领域，具有设计高效且低功耗设备的巨大潜力。然而，为了充分发挥NOEMS的潜力，必须建立一个灵活且可扩展的技术平台，最好是基于当前的微电子技术。</p>
+<p>MAGNIFIC的目标是填补这一空白，专注于最近在NOEMS中使用的纳米晶硅（nc-Si），并与柱状氮化铝集成。实际上，虽然nc-Si已广泛应用于MEMS生产，但对于这种光电活性纳米晶材料的动态特性几乎没有进行研究，留下了关于电子、光子和声子的相互作用的基本理解空白。</p>
+<p>在此背景下，我们提出了一种可扩展、经济高效、室温和兼容硅的纳米光电机械平台，以推动高效通信技术的发展。关键挑战在于全面理解材料的静态和动态特性及其相互依赖性。尤其是，了解纳米晶体和颗粒边界在吸收和纳米尺度耗散机制中的作用，对于能效和可靠性能至关重要，因为它们与损失和变异密切相关。</p>
+<p>预期平台将提供一个介于射频电子和电信波长光学之间的连贯接口，声子媒介能在高度紧凑、能效高的设备中提供不同的功能（局部振荡、频率转换、调制）。该项目从技术准备水平（TRL）3开始，通过两个以往的欧洲委员会项目实现，并将系统推进到TRL5，制造出适当封装的、经过环境测试的器件和电路，射频频率范围在3-12 GHz之间。这将涵盖广泛的ICT应用，包括普遍无线网络（5G及更高）、智慧城市、物联网和卫星通信。</p>
+<h2 id="具有任意能力的集成光子神经网络"><a class="markdownIt-Anchor" href="#具有任意能力的集成光子神经网络"></a> 具有任意能力的集成光子神经网络</h2>
+<p><a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/101032147">Integrated Photonic Neural Networks with Arbitrary Capabilities | NeuroPhotonics | Project | Fact sheet | H2020 | CORDIS | European Commission</a></p>
+<p>复杂多功能的集成光子系统是现代通信系统的重要推动力。借助数千个自由度，空白算法能够进一步增加光子系统的复杂性，但其在相对较大且具有任意复杂功能的光子设备建模中的应用在计算上是不可行的。欧盟玛丽·斯克沃多夫斯卡-居里行动计划资助的NeuroPhotonics项目将开发通用的光子神经网络架构和优化框架，以展示具有先前难以实现的任意功能的芯片上光子设备。</p>
+<h5 id="项目目标-2"><a class="markdownIt-Anchor" href="#项目目标-2"></a> 项目目标</h5>
+<p>随着数据生成和传输速率在过去几十年中快速增长，集成光子系统已经成为现代通信系统的关键技术。为了维持未来的经济和社会增长，持续开发任意复杂和多功能的集成光子系统至关重要。这些系统的传统设计依赖于使用分析电磁学确定设备几何形状，然后优化各种参数。相比之下，目前对更复杂的光学功能的灵活性仅在“空白的”优化例程中可能实现。在这些算法中，设备结构通过对数千个自由度的搜索来确定，这在针对大型设备中的任意复杂功能时在计算上是不可行的。为此，该项目将开发基于人工智能的通用光子神经网络架构及其优化框架，以实现并在实验上演示芯片上的任意光子功能。首次，这种新颖的方法将允许为设计师指定的操作提供解决方案，包括任意组合的波长和特定偏振的传递函数。所产生的设备将被制造和表征，以展示先前难以实现的芯片功能，并实现快速采用和广泛使用。通过工业外派及结构化的创新管理/商业化计划，专门针对通信和传感应用中的客户需求。该框架及其工业应用代表了向普遍集成光子设计的巨大飞跃，旨在通过未来光学系统的创新推动欧洲能力和经济动力的发展。因此，该研究奖学金将使职业生涯朝着在学术研究和工业创新交叉处的未来领导地位转型。</p>
+<h2 id="六角硅-锗结构有助于从硅芯片中提取光"><a class="markdownIt-Anchor" href="#六角硅-锗结构有助于从硅芯片中提取光"></a> 六角硅-锗结构有助于从硅芯片中提取光</h2>
+<p><a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/964191">Towards optical communication on silicon chips | Opto silicon | Project | Fact sheet | H2020 | CORDIS | European Commission</a></p>
+<p>五十多年来，硅一直是微电子领域首选的原材料。从这种材料中发出光线一直是微电子行业的圣杯，因为芯片将变得比以往更快。然而，硅、锗和硅-锗合金都是间接带隙半导体，无法高效发光。研究人员目前致力于将硅和锗结合成一种六角结构，这种结构似乎具有直接带隙，因此可以发出光。欧盟资助的Opto silicon项目的目标是将基于六角硅-锗的发光器件集成到现有的硅电子学和被动硅光子电路中。这项新技术有望显著提高计算性能，同时降低硅晶圆的成本。</p>
+<h5 id="项目目标-3"><a class="markdownIt-Anchor" href="#项目目标-3"></a> 项目目标</h5>
+<p>我们的愿景是将基于六角硅-锗（Hex-SiGe）的发光器件与现有的硅电子学和被动硅光子电路集成。这样建立了一个兼容硅的技术平台，具备完整的光电功能。</p>
+<p>硅在电子行业主导了超过半个世纪。然而，硅、锗和硅-锗合金都是间接带隙半导体。它们无法高效发光，对我们今天所知的半导体行业产生了负面影响。因此，实现高效的硅-锗光发射是硅技术数十年来的一个目标。六角晶相硅-锗（Hex-SiGe）最近作为一种新型直接带隙半导体出现，具有出色的光发射能力。Hex-SiGe将为硅技术提供额外的功能，如光生成（发光二极管、激光器）、光放大（半导体光放大器）和高效光检测。</p>
+<p>该项目将重点关注： - 在绝缘体上的硅（SOI）上生长器件质量的Hex-SiGe。 - 演示Hex-SiGe中的光电功能，包括量子阱激光器。</p>
+<p>这项新技术承诺在计算和传感方面显著提高性能，同时通过现有硅铸造厂的大规模生产来降低成本。</p>
+<h2 id="newphotonics数据中心技术的未来"><a class="markdownIt-Anchor" href="#newphotonics数据中心技术的未来"></a> NEWPhotonics：数据中心技术的未来</h2>
+<p><a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/190110577">NEWPhotonics: The Future of Data Center Technologies | NEWPhotonics | Project | Fact sheet | HORIZON | CORDIS | European Commission</a></p>
+<p><strong>构建创新的全光芯片架构</strong></p>
+<p>数据的快速增长以及对高效数据管理和生成的需求导致了重要数据中心的激增，同时也要求稳定而快速的网络。然而，这些数据中心的扩张伴随着能源消耗的危险性增加以及对更高能量容量的日益需求。由欧盟资助的NEWPhotonics项目旨在通过开发创新的全光芯片架构来应对这一挑战，相较于当前在数据中心使用的替代方案，显著降低能耗。其解决方案通过新颖的创新和更好的管理方案，提高了效率、适应性、速度和成本效益。</p>
+<p><strong>项目目标</strong></p>
+<p>NEWPhotonics是一家无工厂芯片初创公司，提供当前及下一代超大规模数据中心网络的端到端光连接。成立于2020年，NEWPhotonics解决了超大规模数据中心中一个紧迫的问题——日益增长的能耗和容量。我们的解决方案是一种高效的全光芯片架构，改善了光收发器和核心交换机中对电功率密集且成本高昂的数字信号处理（DSP）芯片。</p>
+<p>NEWPhotonics已申请了五项专利：全光处理架构实现了卓越的速度、效率、稳健性和成本优势。我们还开发了一种突破性的非侵入式设备，用于校准和监测集成光子电路，它使得复杂光子系统的实现成为可能，并提高了可靠性和耐用性。我们专有的全光缓冲和管理技术用于缓解光子交换网络中的数据包拥堵，确保了超大规模数据中心的高吞吐量、可扩展性和可靠性。</p>
+<h5 id="定期报告-第一周期-newphotonicsnewphotonics数据中心技术的未来"><a class="markdownIt-Anchor" href="#定期报告-第一周期-newphotonicsnewphotonics数据中心技术的未来"></a> 定期报告 第一周期 - NEWPhotonics（NEWPhotonics：数据中心技术的未来）</h5>
+<p>报告周期：2022年12月1日至2023年11月30日</p>
+<p>项目背景和总体目标的总结<br />
+NEWPhotonics是一家无工厂的光子集成电路公司。成立于2020年1月，NEWPhotonics的目标是降低数据中心的功耗，这是数据中心（DC）行业中的一个尖锐“痛点”。<br />
+一个典型的超大规模数据中心有50,000台服务器，通过数百万个称为“光收发器”的连接设备互连。这些光收发器将高速电子数据信号转换为光信号，通过光纤电缆传输到下一级服务器。每个光收发器都配备一个内部的数字信号处理（DSP）芯片，执行多个通信功能（例如复用：将多个低比特率数据流汇聚为一个更高比特率的数据流）。DSP芯片消耗超过50% 的光收发器功耗，是该设备中最昂贵的组件。随着光收发器速度的提高，其功耗也随之增加。随着数据使用的激增以及生成性人工智能应用（如Chat GPT）的广泛接受，增加服务器数量和提升数据传输速度迫使数据中心面临不可持续的电力需求，全球的公用事业公司无法满足这一需求。电力消耗的增加对数据中心造成的碳排放以及运营支出（OPEX）也产生了负面影响。</p>
+<p>NEWPhotonics开发了一种新型的硅光子芯片，预计将显著降低数据中心的功耗。</p>
+<p>从项目开始到报告期末所进行的工作和主要成果<br />
+NEWPhotonics开发了一种新型的光收发器架构，最终将消除对“耗电量巨大的”DSP的使用，取而代之的是NEWPhotonics硅光子集成电路。NEWPhotonics的解决方案架构基于公司开发的多种技术，能够在光域内执行电子DSP的所有必要功能。这些光子芯片几乎不消耗电力，从而将先进光收发器的功耗降低超过50%。这项架构基于NEWPhotonics光子“引擎”集成电路（- PIC）和NEWPhotonics激光源，其性能无与伦比。</p>
+<p>NEWPhotonics通过执行多个测试芯片来验证新的系统子系统概念。公司已进行了概念验证（POC）测试，并与领先公司进行了集成，并在2023年10月于苏格兰格拉斯哥举行的ECOC——欧洲领先的光学会议上演示了该解决方案的可行性。</p>
+<p>公司已申请七项专利（其中两项已经授予）。</p>
+<p>超越现有技术的进展和预期潜在影响（包括项目的社会经济影响及更广泛的社会意义）<br />
+NEWPhotonics在最近的ECOC上证明了其200GB速度的数据传输性能，相较于现有技术的100GB每条通道极限（其中“通道”指的是单一光纤线程和由激光源产生的单一“颜色”）。这得益于其受专利保护的“光时分复用”（TDM）技术，并使用其自有激光源，该激光源的性能超越了当前用于数据中心光收发器的先进激光器。我们的激光源能够以几个皮秒的狭窄脉冲生成，并且其重复率比当前激光技术快一个数量级。</p>
+<p>我们的解决方案提供了关键优势（与电子DSP的先进实现相比）： a. 能源节省（即运营支出（OPEX）节省和减少碳排放）。<br />
+b. 几乎零延迟，这对于在数据中心实现能够支持AI的大量服务器变得极为重要。<br />
+c. 更好的可靠性，由于只有一个激光源，而不是多个单色激光源。<br />
+d. NEWPhotonics提供每个通道最快的数据传输速率。<br />
+e. NEWPhotonics在成熟的铸造厂中制造其光子集成电路，而不改变现有硅制造工艺（例如45纳米工艺）。这些铸造厂提供丰富的生产能力，成本低于采用最复杂的制造工艺（小于10纳米）制造数字芯片的成本。</p>
+<h2 id="基于硅芯片的电泵浦中红外光谱仪的通用传感器"><a class="markdownIt-Anchor" href="#基于硅芯片的电泵浦中红外光谱仪的通用传感器"></a> 基于硅芯片的电泵浦中红外光谱仪的通用传感器</h2>
+<p><a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/101128598">UNIVERSAL SENSOR BASED ON ELECTRICALLY-PUMPED MID-INFRARED SPECTROMETER ON SILICON CHIPS | UNISON | Project | Fact sheet | HORIZON | CORDIS | European Commission</a></p>
+<h5 id="项目目标-4"><a class="markdownIt-Anchor" href="#项目目标-4"></a> 项目目标</h5>
+<p>“高分辨率的中红外光谱学（mid-IR，波长范围为3-12 µm）是检测和量化微量温室气体和有毒气体的一种明确有效的方法，具有达到十亿分之一的灵敏度。这种灵敏度是确保低污染和无毒环境的先决条件，这一环境由欧盟行动计划定义：“向零污染的空气、水和土壤迈进。”然而，当前商业可获得的仪器的体积、成本和复杂性限制了它们的使用，仅限于少量高度专业化的应用，并阻碍了在网络、可穿戴电子设备等场景中的充分覆盖。特别是在物联网（IoT）设备的背景下，光谱系统的芯片集成将成为中红外高精度便携传感器的游戏规则改变者。</p>
+<p>UNISON的目标是解决这一挑战，并展示一个高度可扩展的中红外光谱平台，既具备高性能，又足够紧凑。UNISON的传感方案依赖于通过利用电泵浦级联激光器（QCL和ICL）和硅-锗（SiGe）中红外光子电路获得的双频梳光谱仪，以在检测带宽、点间距和系统紧凑性方面超越当前的光谱系统。UNISON围绕三个主要支柱组织，每个支柱都依赖于雄心勃勃的物理和技术挑战：（i）将在SiGe光子电路上通过组合电光频梳生成、非线性效应和色散工程生成可调的大带宽频率梳；（ii）通过与SiGe光子电路集成的创新电驱动级联激光源对梳源进行泵浦；（iii）与双频梳源集成的紧凑、宽带和灵敏的气体检测相互作用区将针对SiGe平台进行设计和优化，以展示光谱仪的传感能力。</p>
+<h2 id="具有极限信息容量的无序超表面对近红外光谱的应用"><a class="markdownIt-Anchor" href="#具有极限信息容量的无序超表面对近红外光谱的应用"></a> 具有极限信息容量的无序超表面对近红外光谱的应用</h2>
+<p><a target="_blank" rel="noopener" href="https://cordis.europa.eu/project/id/101146245">Disordered metasurfaces with ultimate information capacity for near-infrared spectroscopy | Metaspectrometer | Project | Fact sheet | HORIZON | CORDIS | European Commission</a></p>
+<h5 id="利用散斑图案的先进成像与传感技术"><a class="markdownIt-Anchor" href="#利用散斑图案的先进成像与传感技术"></a> 利用散斑图案的先进成像与传感技术</h5>
+<p>散斑图案常常被视为纯噪声，但它们是无序材料的独特特征，因其对外部变化的敏感性而提供了丰富的信息。这使得它们成为高光谱成像和传感应用的理想选择。由玛丽·斯克沃多夫斯卡-居里行动计划资助的Metaspectrometer项目将利用共振无序超表面的散斑图案以及机器学习技术，创建一种紧凑、高效的近红外光谱仪。这一倡议汇聚了超表面工程、硅光子学和机器学习领域的专家。新开发的近红外光谱仪将推动健康监测、食品安全和农业等领域的发展。</p>
+<h5 id="项目目标-5"><a class="markdownIt-Anchor" href="#项目目标-5"></a> 项目目标</h5>
+<p>散斑图案是无序材料的独特特征。尽管常常被视为单纯的噪声，但散斑图案对外部因素的微小波动的复杂反应，使其成为高光谱成像和传感应用的理想候选者。MetaSpectrometer充分利用共振无序超表面的散斑图案的高信息容量，以实现紧凑、机器学习辅助、非侵入式和高效的近红外光谱分析。超紧凑的体积、便携性、成本效益、最小损耗、机器学习辅助的识别、抗角度敏感性、抑制镜面散射、显著的记忆效应以及适应低相干场的能力是目前技术所无法实现的主要特点，这将代表一大步向前。</p>
+<p>MetaSpectrometer汇聚了几个领域的互补专业知识：博士后研究员（PR）的超表面工程专长；法国国家科研中心（CNRS-C2N）在硅光子学、光电学和纳米制造方面的技术；美国麻省理工学院（MIT）在光谱学和机器学习方面的技术；美国莱斯大学在无镜头成像方面的技术；以及德国蔡司公司在光谱学和市场分析方面的专业知识。该项目让博士后研究员获得硅光子技术的设计、制造、表征和商业化方面的专业知识，同时回馈超表面设计的专长。开发的近红外光谱仪将在可穿戴健康监测系统、食品筛查、农业和环境筛查等领域找到直接的潜在应用，具有显著的全球市场规模。工作包的分配具有明确的里程碑和成果，确保项目进展与工作计划的匹配和监控。</p>
+
       
     </div>
 
@@ -671,15 +935,745 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          这里有东西被加密了，需要输入密码查看哦。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/01/14/CPO%E5%92%8COIO%E6%80%A7%E8%83%BD%E6%80%BB%E7%BB%93-%E5%85%88%E8%BF%9B%E6%80%A7%E8%AE%BA%E8%AF%81/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <table>
+<thead>
+<tr>
+<th>参考文献</th>
+<th>Intel JSSC 2024</th>
+<th>Intel VLSI 2023</th>
+<th>QiNan JOS 2024</th>
+<th>Ayar Labs ISSCC 2024 【Shasta】</th>
+<th>AMD ISSCC 2023</th>
+<th>Boardcom 2024 Hot Chips</th>
+<th>IMEC OE 2020</th>
+<th>Cisco,ECTC 2024</th>
+<th>Bergman, Columbia, TCPMT 2024</th>
+<th>IBM &amp; Coherent, MOTION, OFC 2023</th>
+<th>A Star &amp; IME, JLT 2024</th>
+<th>我们的计划【第一阶段】</th>
+<th>我们的计划【第二阶段】</th>
+<th>我们的计划【第三阶段】</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总通道数</td>
+<td>8</td>
+<td>8</td>
+<td>4</td>
+<td>32 [N/V]</td>
+<td>7</td>
+<td>64</td>
+<td>4</td>
+<td>4 × 4 × 8</td>
+<td>N/R</td>
+<td>32</td>
+<td>8</td>
+<td>64</td>
+<td>128</td>
+<td>256</td>
+</tr>
+<tr>
+<td>总波长数</td>
+<td>8 λ</td>
+<td>8 λ</td>
+<td>4 λ</td>
+<td>8 λ</td>
+<td>7 λ</td>
+<td>N/R</td>
+<td>4 λ</td>
+<td>N/R</td>
+<td>64 λ [N/V]</td>
+<td>1 λ</td>
+<td>1 λ</td>
+<td>8 λ</td>
+<td>8 λ</td>
+<td>16 λ</td>
+</tr>
+<tr>
+<td>单波速率</td>
+<td>50 Gbps</td>
+<td>32 Gbps</td>
+<td>64 Gbps</td>
+<td>32 Gbps</td>
+<td>50 Gbps</td>
+<td>N/R</td>
+<td>50 Gbps</td>
+<td>N/R</td>
+<td>16 Gbps/32 Gbps</td>
+<td>112 Gbps</td>
+<td>112Gbps/224 Gbps</td>
+<td>32 Gbps</td>
+<td>64 Gbps</td>
+<td>128 Gbps</td>
+</tr>
+<tr>
+<td>单光纤速率</td>
+<td>400 Gbps</td>
+<td>256 Gbps</td>
+<td>256 Gbps</td>
+<td>256 Gbps</td>
+<td>350 Gbps</td>
+<td>100 Gbps</td>
+<td>200 Gbps</td>
+<td>200 Gbps</td>
+<td>1.024/2.048 Tbps [N/V]</td>
+<td>112 Gbps</td>
+<td>112Gbps/224 Gbps</td>
+<td>256 Gbps</td>
+<td>512 Gbps</td>
+<td>2 Tbps</td>
+</tr>
+<tr>
+<td>总带宽</td>
+<td>400 Gbps</td>
+<td>256 Gbps</td>
+<td>256 Gbps</td>
+<td>双向 4.096 Tbps [N/V]</td>
+<td>350 Gbps</td>
+<td>8 × 6.4 Tbps = 51.2 Tbps</td>
+<td>200 Gbps</td>
+<td>3.2 Tbps (4×800G) × 8 = 25. 6 Tbps</td>
+<td>N/R</td>
+<td>3.584 Tbps</td>
+<td>1.79 Tbps</td>
+<td>双向 4 Tbps</td>
+<td>双向 16 Tbps</td>
+<td>双向 64 Tbps</td>
+</tr>
+<tr>
+<td>工作波段</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+<td>N/R</td>
+<td>O</td>
+<td>N/R</td>
+<td>C波段（调制器），S波段（激光器）</td>
+<td>850 nm，910 nm</td>
+<td>N/R</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+</tr>
+<tr>
+<td>信号调制格式</td>
+<td>NRZ</td>
+<td>NRZ</td>
+<td>NRZ</td>
+<td>NRZ</td>
+<td>NRZ</td>
+<td>N/R</td>
+<td>NRZ</td>
+<td>N/R</td>
+<td>NRZ</td>
+<td>PAM4</td>
+<td>NRZ/PAM4</td>
+<td>NRZ</td>
+<td>NRZ</td>
+<td>PAM4</td>
+</tr>
+<tr>
+<td>光芯片和Driver/TIA的封装形式</td>
+<td>Flip-Chip</td>
+<td>Flip-Chip</td>
+<td>Monolithic</td>
+<td>Monolithic</td>
+<td>Flip-Chip (MCM)</td>
+<td>Flip-Chip（FOWLP）</td>
+<td>Wire-Bonding</td>
+<td>Flip-Chip（FPOP）</td>
+<td>Flip-Chip</td>
+<td>N/A</td>
+<td>Flip-Chip (晶圆级扇出封装)</td>
+<td>Flip-Chip</td>
+<td>Flip-Chip</td>
+<td>Flip-Chip</td>
+</tr>
+<tr>
+<td>光引擎和ASIC芯片的封装形式</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>AIB Gen 1，55 μm μbump，16通道，双向160 Gbps/通道，原生带宽密度＞1 Tbps/mm</td>
+<td>N/A</td>
+<td>CoWoS,OE on substrate</td>
+<td>N/A</td>
+<td>BGA和LGA插槽</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>AIB Gen 1, On Substrate</td>
+<td>UCIe, On Interposer</td>
+</tr>
+<tr>
+<td>激光器选型</td>
+<td>集成的多波长单外延 DFB 激光器阵列</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>SuperNova™ [外置的多波长 DFB 激光器阵列]，8波8通道。</td>
+<td>N/A</td>
+<td>可插拔外置激光器</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>CW laser + Kerr光频梳光源</td>
+<td>VCSEL</td>
+<td>N/A</td>
+<td>外置的多波长 DFB 激光器阵列</td>
+<td>外置的多波长 DFB 激光器阵列</td>
+<td>外置的多波长 DFB 激光器阵列</td>
+</tr>
+<tr>
+<td>激光器集成方式</td>
+<td>集成多波长激光器，晶圆键合（Wafer-Bonded）</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>片外耦合</td>
+<td>N/A</td>
+<td>片外耦合</td>
+<td>N/A</td>
+<td>片外耦合</td>
+<td>片外耦合</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>片外耦合</td>
+<td>片外耦合</td>
+<td>片外耦合</td>
+</tr>
+<tr>
+<td>激光器功率</td>
+<td>13 dBm/λ (支持8路，单路4 dBm/λ)</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>-1.49 dBm/λ</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>19 dBm/λ (支持8路，单路10 dBm/λ)</td>
+<td>22 dBm/λ (支持16路，单路10 dBm/λ)</td>
+<td>25 dBm/λ (支持16路，单路10 dBm/λ)</td>
+</tr>
+<tr>
+<td>激光器能效</td>
+<td>0.36 pJ/bit</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>2.3 pJ/bit</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>1 pJ/bit</td>
+<td>0.5 pJ/bit</td>
+<td>0.25 pJ/bit</td>
+</tr>
+<tr>
+<td>调制器选型</td>
+<td>MRM</td>
+<td>MRM</td>
+<td>MRM</td>
+<td>MRM</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>MRM</td>
+<td>N/R</td>
+<td>微盘谐振腔</td>
+<td>N/A</td>
+<td>TWMZM</td>
+<td>MRM</td>
+<td>集总MZM</td>
+<td>片上EAM/直驱集总MZM</td>
+</tr>
+<tr>
+<td>调制器能效</td>
+<td>N/R(可忽略)</td>
+<td>N/A</td>
+<td>N/R(可忽略)</td>
+<td>N/R(可忽略)</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/R(可忽略)</td>
+<td>N/R</td>
+<td>337.1fJ/bit</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/R(可忽略)</td>
+<td>N/R(可忽略)</td>
+<td>N/R(可忽略)</td>
+</tr>
+<tr>
+<td>调制器损耗</td>
+<td>6 dB</td>
+<td>6 dB</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>6 ~ 9 dB</td>
+<td>N/R</td>
+<td>7.29 dB</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>6 dB</td>
+<td>3 dB</td>
+<td>5 dB</td>
+</tr>
+<tr>
+<td>调制器输出动态消光比</td>
+<td>4 dB</td>
+<td>&gt; 4.9 dB</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>3 ~ 3.38 dB</td>
+<td>N/R</td>
+<td>N/R (OMA = 200 μW @ 32 Gbps)</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>4 dB</td>
+<td>6 dB</td>
+<td>6 dB</td>
+</tr>
+<tr>
+<td>调制器驱动电压</td>
+<td>1.8 V</td>
+<td>2 Vpp</td>
+<td>N/R</td>
+<td>4 Vpp</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>2 Vpp</td>
+<td>N/R</td>
+<td>0.8 Vpp</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>2 V</td>
+<td>3 V</td>
+<td>＜0.5V</td>
+</tr>
+<tr>
+<td>调制器驱动电路能效</td>
+<td>1.17 pJ/bit</td>
+<td>N/A</td>
+<td>1.6 pJ/bit</td>
+<td>1.87 pJ/bit</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>2 pJ/bit (含热调)</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>4 pJ/bit</td>
+<td>2 pJ/bit</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>电芯片制程</td>
+<td>28 nm CMOS</td>
+<td>28 nm CMOS</td>
+<td>GF 45 nm SOI-CMOS</td>
+<td>GF 300-mm 45 nm SOI-CMOS</td>
+<td>7nm FinFET CMOS</td>
+<td>7 nm CMOS EIC</td>
+<td>55 nm SiGe BiCMOS</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>28 nm CMOS</td>
+<td>28 nm CMOS</td>
+<td>28 nm CMOS</td>
+</tr>
+<tr>
+<td>光芯片制程</td>
+<td>Intel’s 300-mm hybrid silicon-photonics platform</td>
+<td>In-house silicon photonics process</td>
+<td>GF 300-mm 45 nm SOI-CMOS</td>
+<td>GF 300-mm 45 nm SOI-CMOS</td>
+<td>45nm process</td>
+<td>N/R</td>
+<td>200mm (8”) imec’s ISIPP50G platform (130nm)</td>
+<td>N/R</td>
+<td>N/R (AIM Photonics, etc.</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>ZJLAB’s 300-mm silicon-photonics platform with 65nm CMOS technology</td>
+<td>ZJLAB’s 300-mm silicon-photonics platform with 65nm CMOS technology</td>
+<td>ZJLAB’s 300-mm silicon-photonics platform with 65nm CMOS technology</td>
+</tr>
+<tr>
+<td>内部温度控制模块</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>有</td>
+<td>无</td>
+<td>无</td>
+</tr>
+<tr>
+<td>温度控制模块的能效</td>
+<td>0.125 pJ/bit</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>0.78 pJ/bit</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>光学耦合方式</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>光栅耦合器</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>光栅耦合器</td>
+<td>N/R</td>
+<td>端面耦合器</td>
+<td>N/A</td>
+<td>光栅耦合器</td>
+<td>光栅耦合器</td>
+<td>二维光口</td>
+<td>二维光口</td>
+</tr>
+<tr>
+<td>光学耦合损耗</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>0.92 dB</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>2 dB</td>
+<td>4 dB</td>
+<td>3 dB</td>
+</tr>
+<tr>
+<td>测试方案</td>
+<td>外置激光二极管 + 外置TEC + PDFA + 光学示波器，8波长同时传输</td>
+<td>发射机 + 接收机</td>
+<td>AWG+DCA</td>
+<td>N/R</td>
+<td>TLS + 参考模块 + 光衰减 + PIC</td>
+<td>N/R</td>
+<td>TLS，不同波长分别测试，发射和接收分别测试，额外加了SOA和BPF</td>
+<td>N/R</td>
+<td>Comb + TDFA + PIC + TDFA + 外置放大器 + 示波器</td>
+<td>N/A</td>
+<td>AWG + AMP + 探针 + DCA; Tunable Laser</td>
+<td>AWG+DCA</td>
+<td>协议验证</td>
+<td>ASIC集成验证</td>
+</tr>
+<tr>
+<td>集成半导体光放大（SOA）</td>
+<td>有，0.875 pJ/bit</td>
+<td>发射机自带SOA</td>
+<td>无</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>无</td>
+<td>N/R</td>
+<td>无</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>无</td>
+<td>有，1 pJ/bit，4 dB增益</td>
+<td>有，0.5 pJ/bit，4 dB增益</td>
+</tr>
+<tr>
+<td>滤波器选型</td>
+<td>单环滤波器</td>
+<td>单环滤波器</td>
+<td>单环滤波器</td>
+<td>单环滤波器</td>
+<td>双环滤波器</td>
+<td>N/R</td>
+<td>双环滤波器</td>
+<td>N/R</td>
+<td>MicroDisk</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>双环滤波器</td>
+<td>双环滤波器</td>
+<td>双环滤波器</td>
+</tr>
+<tr>
+<td>滤波器损耗</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>1 dB</td>
+<td>1 dB</td>
+<td>1 dB</td>
+</tr>
+<tr>
+<td>光电探测器选型</td>
+<td>N/A</td>
+<td>微环中的TPA电流</td>
+<td>Ge-Si PD</td>
+<td>片上光电探测器</td>
+<td>Ge-Si PD</td>
+<td>N/R</td>
+<td>Ge-Si PD</td>
+<td>N/R</td>
+<td>片上光电探测器</td>
+<td>N/R</td>
+<td>片上光电探测器</td>
+<td>Ge-Si PD</td>
+<td>Ge-Si APD</td>
+<td>Ge-Si APD</td>
+</tr>
+<tr>
+<td>光电探测器响应度</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>0.9 A/W</td>
+<td>N/R</td>
+<td>1 A/W</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>1 A/W</td>
+<td>4 A/W</td>
+<td>8 A/W</td>
+</tr>
+<tr>
+<td>光电探测器暗电流</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>&lt; 20 nA</td>
+<td>&lt; 2 μA</td>
+<td>&lt; 2 μA</td>
+</tr>
+<tr>
+<td>光电探测器的最低探测光功率（BER &lt; 1E-12）</td>
+<td>-10 dBm/λ</td>
+<td>- 10.1 dBm/λ</td>
+<td>N/R</td>
+<td>-11.7 dBm/λ [at input Rx fiber （TP3）]</td>
+<td>~-11.1 dBm</td>
+<td>N/R</td>
+<td>- 9.5 dBm</td>
+<td>N/R</td>
+<td>−24.85 dBm  (10 Gbps, BER = 4E-10)</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>-10 dBm/λ</td>
+<td>-13 dBm/λ</td>
+<td>-15 dBm/λ</td>
+</tr>
+<tr>
+<td>DSP方案</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>5 级前馈均衡FFE(测试)，模拟电路中的CTLE</td>
+<td>N/R 【无FEC，ECC】</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>112G NRZ：发射端：5 抽头 接收端：无   224G PAM4: 9 抽头，TDECQ = 2.44 dB</td>
+<td>3抽头DFE，模拟电路CTLE，预加重 &lt; 5 dB，非线性预失真</td>
+<td>3抽头DFE，模拟电路CTLE，预加重 &lt; 5 dB，非线性预失真</td>
+<td>3抽头DFE，模拟电路CTLE，预加重 &lt; 5 dB，非线性预失真</td>
+</tr>
+<tr>
+<td>发射机能效</td>
+<td>2.5325 pJ/bit</td>
+<td></td>
+<td>1.6 pJ/bit</td>
+<td>1.87 pJ/bit</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>2 pJ/bit</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>4 pJ/bit</td>
+<td>2 pJ/bit</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>接收机能效</td>
+<td>N/A</td>
+<td>3.8 pJ/bit (不含热调模块)</td>
+<td>1.25 pJ/bit</td>
+<td>2.09 pJ/bit</td>
+<td>0.96 pJ/b it</td>
+<td>N/R</td>
+<td>2.24 pJ/bit</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6 pJ/bit</td>
+<td>3 pJ/bit</td>
+<td>1.5 pJ/bit</td>
+</tr>
+<tr>
+<td>总能效</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>2.85 pJ/bit (不含激光器)</td>
+<td>&lt; 4 pJ/bit</td>
+<td>N/A</td>
+<td>~ 7.01 pJ/bit</td>
+<td>4.24 pJ/bit(不含激光器)</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>2 pJ/bit</td>
+<td>N/A</td>
+<td>11 pJ/bit</td>
+<td>6 pJ/bit</td>
+<td>2 pJ/bit</td>
+</tr>
+<tr>
+<td>光口带宽边密度</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>~ 2 Tbps/mm</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>1.57 Tbps/mm</td>
+<td>N/R</td>
+<td>&gt; 2 Tbps/mm</td>
+<td>N/A</td>
+<td>0.896 Tbps/mm</td>
+<td>~ 2 Tbps/mm</td>
+<td>~ 4 Tbps/mm</td>
+<td>~ 8 Tbps/mm</td>
+</tr>
+<tr>
+<td>电口带宽边密度</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>~ 0.17 Tbps/mm</td>
+<td>~ 0.5 Tbps/mm</td>
+<td>~ 1 Tbps/mm</td>
+</tr>
+<tr>
+<td>光芯片带宽面积密度</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>0.226 Tb/(s·mm<sup>2</sup>) [PIC + EIC]</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>~0.25 Tb/(s·mm<sup>2</sup>)</td>
+<td>~0.054 Tb/(s·mm<sup>2</sup>)</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>0.373 Tb/(s·mm<sup>2</sup>)</td>
+<td>N/R</td>
+<td>~ 0.3 Tb/(s·mm<sup>2</sup>)</td>
+<td>~ 0.6 Tb/(s·mm<sup>2</sup>)</td>
+<td>~ 1.2 Tb/(s·mm<sup>2</sup>)</td>
+</tr>
+<tr>
+<td>电芯片带宽面积密度</td>
+<td>1.6 Tb/(s·mm<sup>2</sup>) [仅发射机，不含PIC]</td>
+<td>N/A</td>
+<td>0.226 Tb/(s·mm<sup>2</sup>) [PIC + EIC]</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/R</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>~ 0.3 Tb/(s·mm<sup>2</sup>)</td>
+<td>~0.5 Tb/(s·mm<sup>2</sup>)</td>
+<td>~1 Tb/(s·mm<sup>2</sup>)</td>
+</tr>
+<tr>
+<td>备注</td>
+<td>仅发射机</td>
+<td>仅接收机</td>
+<td>链路不包括激光器</td>
+<td>全链路</td>
+<td>仅接收机</td>
+<td></td>
+<td>全链路</td>
+<td></td>
+<td></td>
+<td>VCSEL</td>
+<td></td>
+<td>全链路</td>
+<td>全链路</td>
+<td>全链路</td>
+</tr>
+</tbody>
+</table>
+<p>N/A: Not applicable; N/R: Not reported; N/V: Not verified</p>
+
       
     </div>
 

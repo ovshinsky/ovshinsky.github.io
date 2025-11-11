@@ -46,18 +46,21 @@
   };
 </script>
 
-  <meta name="description" content="这里有东西被加密了，需要输入密码查看哦。">
+  <meta name="description" content="在这里，我们在Cadence Virtuoso中采用Verilog-A模型仿真了一个4脉冲幅度调制（PAM4）收发器。仿真了其频率响应谱和瞬时的眼图。  仿真这个例程需要Spectre201（ISR17）或更高版本  我也不知道这个版本可不可行 T.T （好像不行）   概述  我们仿真了一个PAM4收发器，采用Verilog-A 模型。模型采用Spectre进行仿真，光学行为通过Verilog-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Verilog-A-PAM4收发器-virtuoso互操作">
 <meta property="og:url" content="http://example.com/2024/09/12/Verilog-A-PAM4%E6%94%B6%E5%8F%91%E5%99%A8-virtuoso%E4%BA%92%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="这里有东西被加密了，需要输入密码查看哦。">
+<meta property="og:description" content="在这里，我们在Cadence Virtuoso中采用Verilog-A模型仿真了一个4脉冲幅度调制（PAM4）收发器。仿真了其频率响应谱和瞬时的眼图。  仿真这个例程需要Spectre201（ISR17）或更高版本  我也不知道这个版本可不可行 T.T （好像不行）   概述  我们仿真了一个PAM4收发器，采用Verilog-A 模型。模型采用Spectre进行仿真，光学行为通过Verilog-">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/pictures/image-20240912171247351.png">
+<meta property="og:image" content="http://example.com/pictures/360102402733.png">
 <meta property="article:published_time" content="2024-09-12T09:02:16.000Z">
 <meta property="article:modified_time" content="2024-09-23T01:11:40.870Z">
 <meta property="article:author" content="Yaotian Zhao shineskys@outlook.com">
 <meta property="article:tag" content="光互连">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/pictures/image-20240912171247351.png">
 
 <link rel="canonical" href="http://example.com/2024/09/12/Verilog-A-PAM4%E6%94%B6%E5%8F%91%E5%99%A8-virtuoso%E4%BA%92%E6%93%8D%E4%BD%9C/">
 
@@ -268,18 +271,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="4e6e2e6c58e3d36f4fd3244aca46452f8faa15142bef195b57452170ce6e7c48">5852e6e1d18a5dbd7f6ca8ad98f80baa595156118799959b02db5d52db3ffc7039a6ca7f3d7e6362673c17f48b4c12ed4a547ee5e58697a5a79c118c691a487a72cca0ef075f2d0951168691329ab3347fa6598def7f25ff5cf73f5f23b5be01664bfcc50505ac02049ceb1ea0f6a8abfb76395d87decc455d7492f1605b088e8fc43f2e218ffb204884b14d5bb81a74a8c0e64c3944e247a8c767d8e5c8a960b17481157491c38aa8dcd024a2be1aba035b4a0f3bc887f825d7280c15d8ff06dbaff4ef533da0384b3704b7f5f54da2157b7e5b517a730d8e82e3d6389e6df3b7c7eb2318a7adf7c26242d6109eaca8cd92f2321000b21c8bfb3443881bc77fc3f228fe8f51bb34a2f5aa94c2a4ce2749667a20952abd4e33e94d51d50c589b2ce5c83d4867484e8c145b401e9cd1c92a4437b27fcf83b95c0b2fbd3d812cae5bd7e00cbfd6bcc6c3bfed7c579e088806ec3390bf46a0e7c75d7068e5ae7a6a19f590c194782b6a33410c2a9659f922c358c3f62ebcdd9de359a7d943230cbb861a38286638151cb0d46cd4374bb7d1f7cbcef9cdc6bd676330143dab226e626427f8c0d8298e9a4a56a9ee5073dad8bfda8a7e66df5d4ddcbac6140e8e6b6c789384c2f54fc8160f48862892e77ccbb6a310e620a267930ffc949ce85637b296c7f8157ff22c445b7ea644d4652314db1853bca4e8fe464088cd8076b2bcc689c9a5afeb30fbf9f1425f3b2cfc95936915bf003c3fa3a46b5077ffd099a3e188184ba511a750da042797199e63ba65c654469008438b8ebbb54c1d42f758b8b65bd79b1f157e9fd2021afabcf9857ad2aac732b23707c5fbcdefc8110e9fac69c3c0a2f5bc2537270eb3fd211b57a616246c4f43aa906cc8dded5d38026fd9f1f31a01e0c2ec6139d2d7e269fb94f8b5c4c5509e7ae6c3ad80a77f24ad4e4f393312bad70d2b89694e477e29fa2c6e9e14af42d56a8072b558dbca98173aedc13e6b461411ed5c3c6d1bea980d6fdb9f921e0aea403bf1f82cda1e3eddba6328f4b5030580ca62c947594b729053a586ee272041292cee3c331a682d3913a14922dfb764f1d24ef8796acb33fb96fcf08421bba12a265d701973996c8f2f6f6e7e9118f95bc3240d4cd54c60613304c823b088545a26c080926ef2fc18b8577c928debc2e4c38b60b4f23b73fbce8fbe33d6b7370ec2ca925e89ac71755df558620633823dcabd21a9e214af90d34ab2d07a949394f76843c9b255af6e1e21b8bd05517b36a26fcd4e0c6f8314f0a2d159c733086ec0021b4d508453c32396dbee88a02f0d8bd99b340673c253eb3ae06b016bac088b8b2bbfb91ed3612ab5a2f8473151cac63fb766a6e69baeb155cb758d2f9b11e8e0bc7536f41f3918c69653ca03454b1accbc53556aba526d8f19f83956b607c88a798491c186928e84d376e9058bf00fc7782bca300e47db95a58169bdd6c3479134ea4d95214433bbe953a513b33f3e477be06e8a62f18cc4eb310ee7ce9255ba6305967abcacb4d73a83352357916abdc8af004fa758ef982394f6d60b61b3488dc5012f7504367d332ee797909c385208aafc102734272888aeac9e4fb632d4eabb84ace3927b45ea826e52f1b313426e61e67030b3202d0642e364b9491d256e5307d5bcbb44f64e52ee92b26f4ef9a5a698fea4a840ca308b2d0257b54c5ec55e98a9cc0def6d2bae00f1d68608c1f28fc75cbf9ca38da5ff5784fc82bbe3a917232d30af89124c59f8627c70d7490fd759309c4bcad6dd139b98d95e521964ef6ee38f236131eb66ec3d7297449465c731af318e665de131b6a98c94252382c45a110257fd36adcd53e52cbc20356221b0d827c0fba584285791a3aa03bd38133a510ae68fea2f37ec1ee2b4d810c4a4f8379207ce76445d72cd63fe6c5e5f25c1f430e989e6d7af8729d532a7f8573cfbd1236a1720e322a31056443a948b87d51a2d9244712f9cd5eda91197decb9c6a07ccf48e44e6cb832223983e819978e73dcbe5c5fd9b81def5accb2f7b72b7620bf5864f9bfa88ce7a1483f7ab33864ac4bf112add2be0ed9f333049739d0e3f04ae04f2b216f7a55796b97cfe3b982fe7add4991d476532793c4e4dbd9df712a70f6c5ea2c16b56b8bd0a7768d7dc881e1d5be22df4518a72c2eba3fd16cba55069d0c8cfd0bb9c625fbe5075846a77d7904e7f31a4ef7c6935c4cf72213041ea978fd5c7c95fe3b1b04cd2e51913fb75722ed83ab04f40782cb25c23d531c2c03d2ae47e8c99e52da416026fa8a9f6e0a5d1d863dafd468ee5f802342fab9f2712c5c66e8fcaa182caa862b67193d3daad3101ab105e30e3cdcb0561b15cdfab48d5a053ca8edf89aadd0319405deba872242c743c21576f2df21303d676a5165a9f6842eaa44f852740d8a6ae63549cbe97102293191a3e35abe706970966cacaddf85c56bc2fe5dd2951d3dea57653da6c1cb69731f23fdde37e5854ee6d8b53d1059c610f78934313201920e209c68621eed1be28be98a9bdf0ea91922b93dec6ae6d32e03707c219162459b50e0d0db4e18f4e50bf4589dfa0e5f724095a5654b982565d0afb122abd4da2ffc48a10b6098e49f446e26568c7c3e91bc421495a80c2d5a0b71f410b3ab8b0224d29946ca5986a32400a698b923c8118fa0218bbf80086932f67491f90ebcc844ad708893833f40d94c103210dde5b10711f242cb06701157814d94a968daf7dc1d110dcc70cd7fd446b1d71d30f32454382dc78656bea0919a1b122e661e11ecced85db3e32aa6ced864bf8fe7d5406839142ff3da71fac0da3ab924ae3e7a7d3c0cbe2e7a46b25a0af056640e1fa092d27d0e284472029fe2296e9019cc8c4927f864257ac445730a51e69514a23763b65687d3c763b9d8558103fc6b2de612541a5a9cea28630f01137956f5498a5022d1c154713534c05384444d1a227989bb64881a137b4826e3616ec669884c523af58d4a57799cc530b5ca7a100232d9b5cf7aa20accb8b0a2cee9ddd1093a4dad69faf26b033a933c25cb02bf15c9c41da41131b786f54fcf9d006c36a88fabe52e44cb9ad8f9227a3e27d89ab991291c54d395ef11771ef4fed2f943bca354e4f5945e9d9f8781a5675e7fd3064d7cdb3c0bb080ff6740cbd3242dd03079d71b7abddc4df2a4040edc64cab9d12ca42923ed1836b67619f210917f8d55be41e519eb5b4729ed0507fd3e9a09638686a90f2574b6b8aae0034f70422cb0385a6fe7c730cb44184d74c0484f4c655773e41a55578a2e69910c559f4efa9ac019b445654669228002f4d12cb9708a2ac82fe86a65cb5b369b02ccb98640965e5a34da50f601f000e2fbff219ae81bd0f4dafa4a3f008b118e119f64599ca38f3c80aca945e71a00bde283fc345aeeb6493ed0bb44fde41bf620ed2bb81e02c827d95e9fbcdd0e6e4a70dced7b67e3a093c3c54b64e27454e6526d258e2232eb97cae00d90228b410eb2c236c336eaaab1fc07ac9b994446bbbf7a54ffe1dd5694b056eb954233a996a6726dde9291464e0c9c58794348331dad4744f90b60f4856f9c2ae5bdb7c866318a3de658872ec43f511212d5ef36b3060a921823bd50de2af88db92bf7f0562c874aee13c610ccdef97fe14171b94bc4773352eacb9500562068d2c9ef368d8545edae40bfb1e800648cfb83480416003d60007a7a99c3126d9868f0dfbaad0f8019cb8636c45e3582d65e0171361877b200d371bb62c11c929fb260ee489ccb8eb056f711fdc26847e251215943ad072144f8ab0e616afb954fb0f770bf4ca56758c0d280d00889df20cb8e3400e82282c9823398873c81e8bbbeb67c3d433de5746dfc25c84786b90231c6fc4acff176e80d094cf7ebea788eb19428c90a7391583ee02d3976db9a65d365f476b2be0eb2ab618032cae33204a42428586670fddf5300fb987a42c996798ce33f229cabb66db4d7cb12d90d2b972f4abd56b8444af1c9f48665c58759e313502b548340bd965a20979da20e84fce9d</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+        <p>在这里，我们在Cadence Virtuoso中采用Verilog-A模型仿真了一个4脉冲幅度调制（PAM4）收发器。仿真了其频率响应谱和瞬时的眼图。</p>
+<blockquote>
+<p>仿真这个例程需要Spectre201（ISR17）或更高版本</p>
+<p><img src="/pictures/image-20240912171247351.png" alt="image-20240912171247351" /></p>
+<p>我也不知道这个版本可不可行 T.T （好像不行）</p>
+</blockquote>
+<h3 id="概述"><a class="markdownIt-Anchor" href="#概述"></a> 概述</h3>
+<p><img src="/pictures/360102402733.png" alt="workflow_cadence_interop_verilog-a_pam4_v3.PNG" /></p>
+<p>我们仿真了一个PAM4收发器，采用Verilog-A 模型。模型采用Spectre进行仿真，光学行为通过Verilog-A方法进行仿真。</p>
+<p>此回路是一个PAM收发器，包括一个连续波激光器，一个光学微环调制器，一个光栅耦合器，一组光波导，一个光探测器，一个调制器的电学驱动回路。</p>
+<blockquote>
+<p>Verilog-A模型存放在库<strong>pam4_va_example_lib</strong>和<strong>pam4_va_example_primitive_lib</strong>，这些库包括模型符号和组件描述格式（CDF）设置。请参考 <a target="_blank" rel="noopener" href="https://support.lumerical.com/hc/en-us/articles/360037565953">CML Compiler Product reference manual </a>页面获得如何建立和使用Verilog-A模型的细节。</p>
+</blockquote>
+<h4 id="步骤1建立库参考和原理图设计"><a class="markdownIt-Anchor" href="#步骤1建立库参考和原理图设计"></a> 步骤1：建立库参考和原理图设计</h4>
+<p>将Verilog-A库和Virtuoso内置库添加到Library Manager的库路径中。然后，在Cadence Virtuoso中使用Verilog-A元素库设计电路原理图。同时还需要使用Cadence Virtuoso自带的<strong>analogLib</strong>、<strong>basic</strong> 和 <strong>opticalLib</strong> 库。</p>
+<h4 id="步骤-2配置ade-explorer"><a class="markdownIt-Anchor" href="#步骤-2配置ade-explorer"></a> 步骤 2：配置ADE Explorer</h4>
+<p>在模拟设计环境（ADE）Explorer窗口中定义设计变量、监控的输出端口和分析参数。</p>
+<h4 id="步骤-3生成网表-运行仿真并可视化结果"><a class="markdownIt-Anchor" href="#步骤-3生成网表-运行仿真并可视化结果"></a> 步骤 3：生成网表、运行仿真并可视化结果</h4>
+<p>接下来，我们可以生成网表并运行仿真。PAM4接收信号的传输波形和眼图将会在结果窗口中通过直接绘图方式呈现。响应谱也将生成。</p>
+<h4 id="步骤-4生成响应谱可选"><a class="markdownIt-Anchor" href="#步骤-4生成响应谱可选"></a> 步骤 4：生成响应谱（可选）</h4>
+<p>通过扫描光源的工作波长，可以在时域瞬态仿真中生成电路的频谱响应。在此步骤中，我们使用这种方法生成电路的频谱图。</p>
+
     </div>
 
     
@@ -364,6 +377,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text"> 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A41%E5%BB%BA%E7%AB%8B%E5%BA%93%E5%8F%82%E8%80%83%E5%92%8C%E5%8E%9F%E7%90%86%E5%9B%BE%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.1.</span> <span class="nav-text"> 步骤1：建立库参考和原理图设计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4-2%E9%85%8D%E7%BD%AEade-explorer"><span class="nav-number">1.2.</span> <span class="nav-text"> 步骤 2：配置ADE Explorer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4-3%E7%94%9F%E6%88%90%E7%BD%91%E8%A1%A8-%E8%BF%90%E8%A1%8C%E4%BB%BF%E7%9C%9F%E5%B9%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E7%BB%93%E6%9E%9C"><span class="nav-number">1.3.</span> <span class="nav-text"> 步骤 3：生成网表、运行仿真并可视化结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4-4%E7%94%9F%E6%88%90%E5%93%8D%E5%BA%94%E8%B0%B1%E5%8F%AF%E9%80%89"><span class="nav-number">1.4.</span> <span class="nav-text"> 步骤 4：生成响应谱（可选）</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

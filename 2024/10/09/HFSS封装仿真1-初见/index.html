@@ -46,18 +46,35 @@
   };
 </script>
 
-  <meta name="description" content="这里有东西被加密了，需要输入密码查看哦。">
+  <meta name="description" content="可能HFSS和FDTD在设置上还是有很多相似的地方吧，都是电磁场仿真，都先设置一个激励源（类似于模场 mode field），然后计算电磁场在结构中传输的情况。然后提取参数作图。  TSV仿真  仿真模型  左侧红色平面为端口1 右侧红色平面为端口2  结果  S参数   Zo   TDR   WB（Wire Bonding，引线键合的仿真）  仿真模型   仿真结果  S参数   TDR   Z">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HFSS封装仿真1-初见">
 <meta property="og:url" content="http://example.com/2024/10/09/HFSS%E5%B0%81%E8%A3%85%E4%BB%BF%E7%9C%9F1-%E5%88%9D%E8%A7%81/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="这里有东西被加密了，需要输入密码查看哦。">
+<meta property="og:description" content="可能HFSS和FDTD在设置上还是有很多相似的地方吧，都是电磁场仿真，都先设置一个激励源（类似于模场 mode field），然后计算电磁场在结构中传输的情况。然后提取参数作图。  TSV仿真  仿真模型  左侧红色平面为端口1 右侧红色平面为端口2  结果  S参数   Zo   TDR   WB（Wire Bonding，引线键合的仿真）  仿真模型   仿真结果  S参数   TDR   Z">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/pictures/image-20241009094609931.png">
+<meta property="og:image" content="http://example.com/pictures/image-20241009094643270.png">
+<meta property="og:image" content="http://example.com/pictures/image-20241009094731923.png">
+<meta property="og:image" content="http://example.com/pictures/image-20241009094724092.png">
+<meta property="og:image" content="http://example.com/pictures/image-20241009095505794.png">
+<meta property="og:image" content="http://example.com/pictures/image-20241009095555267.png">
+<meta property="og:image" content="http://example.com/pictures/image-20241009095606863.png">
+<meta property="og:image" content="http://example.com/pictures/image-20241009095621143.png">
+<meta property="og:image" content="http://example.com/pictures/image-20241009101232762.png">
+<meta property="og:image" content="http://example.com/pictures/b4cdcf88f54a446fa0833ebf05d4cbf1.png">
+<meta property="og:image" content="http://example.com/pictures/1cdf6cfe8cc47b9291180228936c4601.png">
+<meta property="og:image" content="http://example.com/pictures/image-20241009105321573.png">
+<meta property="og:image" content="http://example.com/pictures/image-20241009105427620.png">
+<meta property="og:image" content="http://example.com/pictures/image-20241009110106736.png">
+<meta property="og:image" content="http://example.com/pictures/image-20241009110523034.png">
+<meta property="og:image" content="http://example.com/pictures/image-20241009110626667.png">
 <meta property="article:published_time" content="2024-10-09T01:45:15.000Z">
 <meta property="article:modified_time" content="2024-10-09T03:06:29.074Z">
 <meta property="article:author" content="Yaotian Zhao shineskys@outlook.com">
 <meta property="article:tag" content="光互连">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/pictures/image-20241009094609931.png">
 
 <link rel="canonical" href="http://example.com/2024/10/09/HFSS%E5%B0%81%E8%A3%85%E4%BB%BF%E7%9C%9F1-%E5%88%9D%E8%A7%81/">
 
@@ -262,18 +279,62 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="725a09f7bd2d70514d5e80ecb1efaebbc402ad4eae6f3579f3b105c4f2ddedad">5852e6e1d18a5dbd7f6ca8ad98f80baa1c755dc4411c1305d92de9a07c3600b44407a38c49be1a7bba29278d1e2f1df9afcc23ee7a1d23ca9b567a03758145152f2702810521a6ead56b53ca78fd9c178542f71b0c38c839cf79bd6749afbe39b17d86f9b85125939e513c73451c6717c2932d6aad334f24c23366ed2295a3964c119a7955c444dbde2b70e0da3af026c750458be6ca5f4be9264a6dfc3f9bf8a9ebb9bae700efb538255ecf22fbf50647e874c4cdea3b1e495488f5e7c433509ba0388548ba23654a69b830f625fd097eab659527dc5706092c8c7202ee7eefaadb80ef2e091826f2266b1687ea5db03da0ef23aa8ea9a043d26e613b2c08ebd67e97a7c1bb6d8252dcf99663d04fbaedfcff8b2f37768155bb34e2729ff5625022b9e4fa0e875712d124e0622e946daf6ca8e22b40711ae706b8327dfd51cef2ff7b87cdadc10274e82fd3984deafcde221bad8a7941557fe842b838aa6c94865425bb0b4cae37d0e5bb2b2b961bf79f02161efaee34688b190e951aa0bb1cabe763997d7085762c9bef2f95b0780c8a96222bd6fa9772266e82e279e7539e567d7c15dbeaf94b2b4d7c8f6d9ba7170b506e912fe4b5d993a333c93d2e8d74daae0e52e68f3e5a82d1beb7955a33da17006a0f429e99a38e4d216933a6585b312f96cac265113e8a84c3082c372ef55d56c747ea411871c8325fac903980f555c3a3cdc520fd0d5a3d4e0c73d6cc494c053771be0748a99c8429e9f66a994840ae2aedc91085259a3e1248e257d5db51eec087f404c20b092cc02f9d7b3914c17142150c8f5a0eb59b382350f012ad7ac38c2cd39611d19017fc515d79fee1b5cfa591cbded68e36eb5593294e5ac7334b499786ae36bf1273d251e958d8a13b3ab0b6fa6dfc5f54e294f3fdf7a6f7f2c8b1716c2e3a494ad57895d2ea0218fa1756e185b3ad2985e50f6028b6cd61c425ce8c0e129f6e423d5058fe63ef44e4a1c8937ae005c5d4ca31a7cf4ab4db5b710cb979b3bcc4a0433b154ede4a02fd06dabaa93ef531445c2feb7180af68d0848001aaa43e883e3b5330b607c3092990318fd52d0ac9d9aa7d6661b740258af9f794d1f28dc048823d24fffb1d22be388b0ab5362f5b55fe30b299c9a95f9458c8eead38ebe0ba9d029346ddd277c5b13fc932f8aef5bc22dd557c72ca2cd18b310c1e8a971dad7f298d4e9ced109c64ed47e342b8b58552fc2dc18f58ee08b869bb78ef56228572464bbcad6b8bc5c7564dc52c571292286349b469b8137acca7e911fa96b570bfa0dbc30012de4a294a06d0decf44e70feb0061df57e266f88225326664dda832235514670c7a8388657341c1a7b4e467dda668ca380a2662a6c0652c2f41965a762b1df9265880c8e4ce9c6e93d1ef4906e7779dfe060e2f52d504b566cbc7ba25a7a8fa2038a4d78845c15f98d3aba409bc96a0f053cbefcf00fb8e2a7a8fc5bf735f78f3a1f4a5578d075166c29305cc427f23a73fd564380fccc8daf8942be68c59a81f294fa4c15dcd890620599700066a32f3268225d5f56884163b1fe8cf0858eb24c6f9f3285acd32611a745ba7dfcfc09c29a106b0063f225fd9a072cc88453d14e6975c0b214c6ac397cc6927f1e8efb9fac40553670667e942d118dc34d400073dd3d93cf6b1c2374dd43973b7d5079df7a6651d68904bbe02f0913378f5c477e1fdd21635d5adb2d07b0c36cd65d45041c68e8a78dd2bdcb19a7c08b746c9574cc14fed8f733432d63fdede8bf106f5130610d87abdbbda544b1422136c766b2dd5acce42a63685467b365119bb63d10de28e010216ef605e7b47517dd313c8b8eec89893e828acec6356bde2c01171eb3070621ecf83e9bd35e3579f328fd5d63bf87a694617f4415cf0aa3d4414c03104e3371470f3301a7d4ac90339b22c7d8c4c295f2c175e52efb549070f0997377262d6a64742d8304805fa8b4d14fdbef9f962b4af60841fccf87ba65573b927690914f74e7672ca222352d25a3033937bc2db5ecf0bb178a55cc275114ec38d33dcfe8eef1025a89dc4936f9ca687fa94fcfc2087f968ba42b09e511a545f285f0274132241249784acb918669efcb5c22a700a403d16a2cd600b2eca186a87d3d8e8059e1e61614bb014faad25258a44168397d9b9655372d7417f54be746f3d8ce16af276a0f49125a0fed79ac942720d0369328a003200773ec99cbfcfd3a109485efb7e39c946a96014896d115579e64a3fe4c1fc36bc0e5916fc79c242092d9da42542410d860aac69ee556311937e2c2e58d5300b203a213f24da055b1d0f9f32d1fefb3cd1670934e032a8ae0134688a9fa2b3f1072afac9f262d82c2053be12bab0cb3549a19b4d31ae98eaa7b81761062c91f2182646008e0fcc2592285fd4e3907415eed2c98c313a136895accf1db10d119ccb410ea326e2690285efe17d8a003923d8907b868b309fb636c1c9f234b6e31f6445079489fb2a38051d2a339d2db81079d5ff7f0802f73d3256785d920f6278b6dc212945b0d3ade5910d00a7cb152d34d06fe7a0fd14f9a6fb7a17b87122f3c04e0cf779736201da90df901f1b855f4a68087eaeabe88a7dce09ac9b6e2bb2af2c32e69a6d575a4da73ce306d3603aaf9037ade4ccde5a7223892086feb4b9de7a915a7a44f8da0aabe7cff3ce35dc55c4d198d5047f07dc44e4d8f5b8cb7ebdc3d5caef5170e871f42f0e01b21667c1c6fc8d9474ea400d4e296775dd1f8165c912ac653b5338e7a56eecae0e6c76c6283878164533dc32207ab74b195f79e6e4099f309469dc7910ab9fc17810b67a175748719f28953e6244bae14f9d31df877728e880dd520e034995342f9828724f3e63473c8db0c308b1ab2737b6056521c7daec8ff491d4ec666fd6631349e4271598451eecf5895ac3e9cd97171f01aedd0f99aaea72d7a863089e519ce1d1742e92377682c0d4f9c60621b1dd241f078da2c01d494f55dc12338b5a3c9a25bd3ce52804ea7043f31cc640c68b4514e1536dbc197dc48f614672363794405035bcdaf19686f769e37cd6d5e97d682f2c88018eb68cbcd1088936a94a06ba10d8a5dc7e219960644c285e9f2a08c93ee81a69da64a63280143bcdc8bb3310b2e481c1597d56578ab1ce51622b13fd77f2bf6581b7b96000f31ce8c38721caca8b283b5beeb73aadcfdf9ed913ad8991b749e2a1a5d1ee9c02852a2ce4d5615e8bca8d25c78b8088f05dbfc0e8e4721e55202b48cc5756d7b222adb08e8de5515eb25b20571d108d94cf25e9e892804db334d8b5cabaffce76b7f14f6855f382a9516bd59d662d05d035062d31613f7c433520d8cb9497b5642d157a487c5f063554f7e304c2cb70e2bc05ae22392eeab2ca5c1bcb329f3eb9438c6b5d149ecb35bb96cdfdca850e2bddf79a9a533236348cba41eda4de6ae4ab139d742f9951b9bb6ffdf39f67d6fae5cea1b0329ced55d2f624fa34a2d09603c7168f6e266c2e783ce68cdec33ccd75de8fc25b22d3bbde31b1cbaa3596e4bf177ef07e149dbc9e594154fc99967ad45628141fc45ce91d3be09ef75c697ba64244514e4ea0f95923098912727b19c233c6cc960f624bcfcb430f05da2b626d53b320daaec80e178979a37d407256d138c6150ea9b384049be43fa824cece96680d41e99a1259159bab03dd856c3d05b1980d6810595805f2cec94a91fdd4d8b574a727067c03d88c0ab4601a77d58bc53b91224678582299345a02b27cf4e295d5f36276708743f8818ac263a24db122ca16e2a70fdbb0a02dc0c21d3853a0b7e37107877291585da3f0d21fc8d25dda13366fb1d9c163ece612485c2c5a432998135f9af88749857f573ca8d3da3829635affe07caf87b79e05f37d583303df6f4036da1c9687b59b7da044b48c795d33362986a5dbd6296c5ebde89837f107f9d66cf242f7686364d0a4e6eabed0093846b627aac2d784392de3b527ef6ee7a02fa2cda6486499bd3f4a5ec7556d7f7bea6e827989eb7764fee1cb9720e2cac4aff8852c14108b8a97e9257a60db6251725c28a5044871aac2d6a594097a2291e8da65ec90795173c1d3ddf8d610f064661dc5374178f2a9879374238a2b4ac364d91a2274052c1ba0410626be44bb12774e438372641bb61d8df4cea327ea04ca819acdaa93a780ab3427f115217c7f4bfc00bc53afb6c4b105f7a0699387e96cbd3db760eecae144480bbcf17aaab3151846edde01ba1d829669e908f916666689a1464070650e87765d75b578107fc81d3f122eb97dd309c55646d9624b3e0c9ac3b306d3607351a29ff199c52f5cbd53b7d2acb2b3ed98d8b8d201b1553a367400e2274cd47edcfb37a5d483750902dc7b7af74cbeeef7895de1e58c74a99b373357b7c5b297ea48237da333e96280c90769da3bc0c58584060feb3bc0062ab960bc750897f20d9f56eb323a364acbb0cf54f23edccb5cd8807257f9918061852faf96c0a1feb4766f9e1365034f4c0a10544b4466d791d22407a568777a5f34139fe2ff8f03f525f7cf3ff8831b348113a133c08aa654eb84395afeb6bf2f756e41627a9114b94d37736918125425b404c251c6c91bf3f3431cdd8167b29d39c2a1a1ff197e8e5b7606a7710f28e877a0f6b3e9f4f78e3fa0bb29b6ebb2d5c2420f1d32ee66ee0b40883f5c9292773f444139327bba207d40c64b8cbbf36fa0361cc5c8778778855cabe3c64a3d6edcdc673b0c67fb4eb10ecc74ab668be06c335d1ef6a16b464c98e8440cacc1b5c2490895c1e8179f0ad67e2efe79a612853801e23fccb74f558d8f4d0606c6fdd308b80296c41fe8ab511cc112b4477b84e6d7dfb0bdc4736f6f1b871cfa7fa3d4078d89c6568e7cb728a568cd10879cb4d97946d1b165f52a657e42bd5689416187dcbfb6ea07897d25cb0a0ebee008b35c178a2c85d2491233e85d638fc027ba2ed904e95f96ff665e8f265d4ca69d839064bf57caba0274bafa9eee3c03eab845a2a14d397b7577576f889941b434ddd7d5f25cecc4f8e7726876b6f03bedd3ee2788c39bd7251c8486592156e07e1781537c01848407606fbcedf90213c22d4b91da44346ada88697b2c43484e13b499cc2cf9c9304f5c0661af429db990ae0ba23066fb8aeb93249e293d290e04dbae587b36faebf530ed64455ff9e53123d13f03879994a84ea628bf9078d63de91728b67d023c5a6a098596e65894a83eb979528c65c5ea7c69ce8553f5e870602019d41236b23133c9fc8c9e621228e1e523d6479a4ac392d91a8d696420ba2ce675c12f13f613baa06d085172c3a0a6c111f1e5d8b64c410f79e86f5c36decd1d181980dc6751ae3ec342c259f8cc8f98c23c801a0ca072e0c0965060b1e570f69292a63986fdbf81582c9c9e4d98aa0f564ada31452ebc9a4aeecc222f56d675e1d74af64bb9d2d92e468fd30ba1b49038938cc180a730e309396b883b9f3881e84baee76181993f982f0cd542c11b3487e3cfb6357ca19ad109337360f13f7a0fd6ea9842cc5f57a45d884b8bdf1dd85af9b0e3bfb44be2a265989e0b359a6eb6cbb9300c9ed643c7c3dad39559dcbe769bc82c239c0963a57c3ae40548f8528ee0d958f5e4d35e8070bc0f6021d23c165500b417578aecb26cc8a0dc9aea7a8c32067aa151cb6095d9f72573e584b58003b21be61e47e6df2465d5ac39836cc96b04eabb95bf6680178b240997f61a41f8f190fc1fc68882e3645914e9195e7e0da5ed2d66c08cd336d66b73c1fb27d1f2ca7182cf654d6cdba8ab17df0f59e8ac488a0218a21fc47973bc2ca99a84b1d3830a5ded21b4f43aaa8c5616c4e018c3009c9bc10603de6b27b15ea11f2a674e708405f706e647b037cf86b9b812ccf9a952ca9e65667f727da0f19d2cfb5b5fd9caa71d481267a823f34abdb5ba3649cc8ac16590a251b0aad57b02f550b2c9e61ce83c81d79e161a4e8cdaab24cd678a2dce6dd6a9d0139d8188112e43301a89ec94ac7d2d0cc619d90b0321bde38bbecb0043fa5ebf242fbb33a1c4a13520aaa9b1b2a089ea77856c941ac03106106ede8a363a4876df023491b68eda194a72e5437eaa2448a28c20fc0d0bff3a55a3a62232998c230e7a618ca9a08e8ee34e39f9f5585a281636c507e5e99b6598c7bf78647736a1aae4eb49c5fbb7dc894773af0de281e2ff002b14cbd1d88d91eeeab88bf907a2666c34693d851719fb9e333ce4620859586e63c80fd3fb8fb9ac438ce90c494de0c34c1f94f64c6c2ccc54f300278b31455717f1f9504da0689735f6e57e4e039c9b61130b19145e83f69cb1ff05cdedd06cd55b21c2f2178167215d07fe1374342bc8eadb7cd066e9a6dd82ca7cd65241853a75f16ef27b2e3ac3de08d82899f3fc929aaf7466cfbfc8a9a5e6c0abea912340f55652c3abdb894a1dabc70c1a98806e328b95d497a4214806b5bdd04722e5f99fda8bb06a78fbb85d98a0429be8f978f34601319a04c7a8e32eec5094f3771a096bd501a7aa848f8c954709b454c5a02fb747fe6c2a4b8328d9d79f24675772cf02be26862bd86c60b8daf643878eaf80163f6fa235d3d9a34b232f</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+        <p>可能HFSS和FDTD在设置上还是有很多相似的地方吧，都是电磁场仿真，都先设置一个激励源（类似于模场 mode field），然后计算电磁场在结构中传输的情况。然后提取参数作图。</p>
+<h3 id="tsv仿真"><a class="markdownIt-Anchor" href="#tsv仿真"></a> TSV仿真</h3>
+<h4 id="仿真模型"><a class="markdownIt-Anchor" href="#仿真模型"></a> 仿真模型</h4>
+<p><img src="/pictures/image-20241009094609931.png" alt="image-20241009094609931" /></p>
+<p>左侧红色平面为端口1</p>
+<p>右侧红色平面为端口2</p>
+<h4 id="结果"><a class="markdownIt-Anchor" href="#结果"></a> 结果</h4>
+<h5 id="s参数"><a class="markdownIt-Anchor" href="#s参数"></a> S参数</h5>
+<p><img src="/pictures/image-20241009094643270.png" alt="image-20241009094643270" /></p>
+<h5 id="zo"><a class="markdownIt-Anchor" href="#zo"></a> Zo</h5>
+<p><img src="/pictures/image-20241009094731923.png" alt="image-20241009094731923" /></p>
+<h5 id="tdr"><a class="markdownIt-Anchor" href="#tdr"></a> TDR</h5>
+<p><img src="/pictures/image-20241009094724092.png" alt="image-20241009094724092" /></p>
+<h3 id="wbwire-bonding引线键合的仿真"><a class="markdownIt-Anchor" href="#wbwire-bonding引线键合的仿真"></a> WB（Wire Bonding，引线键合的仿真）</h3>
+<h4 id="仿真模型-2"><a class="markdownIt-Anchor" href="#仿真模型-2"></a> 仿真模型</h4>
+<p><img src="/pictures/image-20241009095505794.png" alt="image-20241009095505794" /></p>
+<h4 id="仿真结果"><a class="markdownIt-Anchor" href="#仿真结果"></a> 仿真结果</h4>
+<h5 id="s参数-2"><a class="markdownIt-Anchor" href="#s参数-2"></a> S参数</h5>
+<p><img src="/pictures/image-20241009095555267.png" alt="image-20241009095555267" /></p>
+<h5 id="tdr-2"><a class="markdownIt-Anchor" href="#tdr-2"></a> TDR</h5>
+<p><img src="/pictures/image-20241009095606863.png" alt="image-20241009095606863" /></p>
+<h5 id="zo-2"><a class="markdownIt-Anchor" href="#zo-2"></a> Zo</h5>
+<p><img src="/pictures/image-20241009095621143.png" alt="image-20241009095621143" /></p>
+<h3 id="hfss仿真结果导出为snp文件"><a class="markdownIt-Anchor" href="#hfss仿真结果导出为snp文件"></a> HFSS仿真结果导出为SNP文件</h3>
+<p>REF: <a target="_blank" rel="noopener" href="https://blog.csdn.net/chengoes/article/details/127170543#:~:text=%E8%A6%81%E5%9C%A8HFSS%E4%B8%AD%E5%AF%BC%E5%87%BAS">HFSS仿真结果导出为SNP文件_hfss导出snp文件-CSDN博客</a></p>
+<p>具体的操作是：Results——Solution Data——Matrix Data——Exportmatrix Data 选出导出的SNP文件的路径，但是注意选择的路径不能有中文，否则会出现未知错误。</p>
+<p><img src="/pictures/image-20241009101232762.png" alt="image-20241009101232762" /></p>
+<p><img src="/pictures/b4cdcf88f54a446fa0833ebf05d4cbf1.png" alt="img" /></p>
+<p>接着就可以把SNP文件导入INTERCONNECT/ ADS等设计软件进行联合仿真</p>
+<h3 id="snp文件导入ads仿真软件"><a class="markdownIt-Anchor" href="#snp文件导入ads仿真软件"></a> SNP文件导入ADS仿真软件</h3>
+<p>REF: <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42945911/article/details/127977447">ADS2019学习笔记：二、SNP模型导入_ads导入s2p文件-CSDN博客</a></p>
+<h4 id="流程"><a class="markdownIt-Anchor" href="#流程"></a> 流程</h4>
+<ol>
+<li>在原理控制面板中选择Data Items，从中拖出S2P模型。</li>
+</ol>
+<p><img src="/pictures/1cdf6cfe8cc47b9291180228936c4601.png" alt="img" /></p>
+<ol start="2">
+<li>
+<p>鼠标左键双击SNP模型，弹出SNP设置界面，在Browse中打开所用SNP文件</p>
+</li>
+<li>
+<p>进行S参数仿真和原理图搭建。</p>
+</li>
+</ol>
+<p><img src="/pictures/image-20241009105321573.png" alt="image-20241009105321573" /></p>
+<h4 id="仿真结果-2"><a class="markdownIt-Anchor" href="#仿真结果-2"></a> 仿真结果</h4>
+<p><img src="/pictures/image-20241009105427620.png" alt="image-20241009105427620" /></p>
+<p>结果的差异可能是由终端（Term）的阻抗匹配引起，可能意味着边界条件的不同。</p>
+<h5 id="z-40-ohm的结果"><a class="markdownIt-Anchor" href="#z-40-ohm的结果"></a> Z = 40 Ohm的结果</h5>
+<p><img src="/pictures/image-20241009110106736.png" alt="image-20241009110106736" /></p>
+<h5 id="term50-ohm时tsv的s参数仿真结果"><a class="markdownIt-Anchor" href="#term50-ohm时tsv的s参数仿真结果"></a> Term=50 Ohm时，TSV的S参数仿真结果.</h5>
+<p>ADS仿真结果</p>
+<p><img src="/pictures/image-20241009110523034.png" alt="image-20241009110523034" /></p>
+<p>HFSS仿真结果</p>
+<p><img src="/pictures/image-20241009110626667.png" alt="image-20241009110626667" /></p>
+
     </div>
 
     
@@ -358,6 +419,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#tsv%E4%BB%BF%E7%9C%9F"><span class="nav-number">1.</span> <span class="nav-text"> TSV仿真</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%BF%E7%9C%9F%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text"> 仿真模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C"><span class="nav-number">1.2.</span> <span class="nav-text"> 结果</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#s%E5%8F%82%E6%95%B0"><span class="nav-number">1.2.1.</span> <span class="nav-text"> S参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#zo"><span class="nav-number">1.2.2.</span> <span class="nav-text"> Zo</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#tdr"><span class="nav-number">1.2.3.</span> <span class="nav-text"> TDR</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wbwire-bonding%E5%BC%95%E7%BA%BF%E9%94%AE%E5%90%88%E7%9A%84%E4%BB%BF%E7%9C%9F"><span class="nav-number">2.</span> <span class="nav-text"> WB（Wire Bonding，引线键合的仿真）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%BF%E7%9C%9F%E6%A8%A1%E5%9E%8B-2"><span class="nav-number">2.1.</span> <span class="nav-text"> 仿真模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%BF%E7%9C%9F%E7%BB%93%E6%9E%9C"><span class="nav-number">2.2.</span> <span class="nav-text"> 仿真结果</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#s%E5%8F%82%E6%95%B0-2"><span class="nav-number">2.2.1.</span> <span class="nav-text"> S参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#tdr-2"><span class="nav-number">2.2.2.</span> <span class="nav-text"> TDR</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#zo-2"><span class="nav-number">2.2.3.</span> <span class="nav-text"> Zo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hfss%E4%BB%BF%E7%9C%9F%E7%BB%93%E6%9E%9C%E5%AF%BC%E5%87%BA%E4%B8%BAsnp%E6%96%87%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text"> HFSS仿真结果导出为SNP文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#snp%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5ads%E4%BB%BF%E7%9C%9F%E8%BD%AF%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text"> SNP文件导入ADS仿真软件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B"><span class="nav-number">4.1.</span> <span class="nav-text"> 流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%BF%E7%9C%9F%E7%BB%93%E6%9E%9C-2"><span class="nav-number">4.2.</span> <span class="nav-text"> 仿真结果</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#z-40-ohm%E7%9A%84%E7%BB%93%E6%9E%9C"><span class="nav-number">4.2.1.</span> <span class="nav-text"> Z &#x3D; 40 Ohm的结果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#term50-ohm%E6%97%B6tsv%E7%9A%84s%E5%8F%82%E6%95%B0%E4%BB%BF%E7%9C%9F%E7%BB%93%E6%9E%9C"><span class="nav-number">4.2.2.</span> <span class="nav-text"> Term&#x3D;50 Ohm时，TSV的S参数仿真结果.</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
