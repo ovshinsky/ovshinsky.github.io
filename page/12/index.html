@@ -339,9 +339,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><img src="/pictures/image-20240708142321746.png" alt="image-20240708142321746" /></p>
-<p><img src="/pictures/image-20240708142336998.png" alt="image-20240708142336998" /></p>
-
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/07/08/MEMS%E5%85%89%E4%BA%92%E8%BF%9E%E5%B7%A5%E8%89%BA%E5%8E%82-%E4%B8%8A%E6%B5%B7%E5%B7%A5%E7%A0%94%E9%99%A2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -419,24 +425,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="使用软件cadence-sigrity-2024"><a class="markdownIt-Anchor" href="#使用软件cadence-sigrity-2024"></a> 使用软件：Cadence Sigrity 2024</h3>
-<p>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1gbXuV2C1L7YAmwbk7Q_8Pg?pwd=c62k">https://pan.baidu.com/s/1gbXuV2C1L7YAmwbk7Q_8Pg?pwd=c62k</a> 提取码: c62k</p>
-<h3 id="仿真方法"><a class="markdownIt-Anchor" href="#仿真方法"></a> 仿真方法：</h3>
-<ol>
-<li>
-<p>寻找PCB的.brd文件</p>
-</li>
-<li>
-<p>由于文件版本的不兼容，使用PCB DB DOCTOR对.brd文件进行修复</p>
-</li>
-<li>
-<p>使用Cadence Sigrity 2024中的Power SI模块，后续follow下面的文档进行设计<br />
-Ref. 毛忠宇，《信号、电源完整性仿真设计与高速产品应用实例》，电子工业出版社，第10章 PCIe信号仿真，pp. 262（2018）</p>
-</li>
-</ol>
-<p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1KA96gWqL_6fNO7qLKHDAXw">https://pan.baidu.com/s/1KA96gWqL_6fNO7qLKHDAXw</a><br />
-提取码：bfzw</p>
-
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/07/02/%E9%87%87%E7%94%A8PowerSI%E8%BD%AF%E4%BB%B6%E5%AF%B9PCB%E7%9A%84S%E5%8F%82%E6%95%B0%E8%BF%9B%E8%A1%8C%E6%8F%90%E5%8F%96/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -759,116 +756,15 @@ Ref. 毛忠宇，《信号、电源完整性仿真设计与高速产品应用实
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="pcie-基础规范学习"><a class="markdownIt-Anchor" href="#pcie-基础规范学习"></a> PCIe 基础规范学习</h1>
-<p><strong>REF：5.0-1.0-PUB — PCI Express® Base Specification Revision 5.0 Version 1.0</strong></p>
-<hr />
-<h2 id="pcie-简介"><a class="markdownIt-Anchor" href="#pcie-简介"></a> PCIe 简介</h2>
-<h3 id="pcie作为第三代通用的io互连接口能实现如下的功能要求"><a class="markdownIt-Anchor" href="#pcie作为第三代通用的io互连接口能实现如下的功能要求"></a> PCIe作为第三代通用的I/O互连接口，能实现如下的功能要求：</h3>
-<ol>
-<li>兼容多种应用场景（电脑、手机、工作站、服务器、嵌入式系统等等）</li>
-<li>性价比高（低成本高容量）</li>
-<li>支持多平台互连（片间互连、板间互连）</li>
-<li>有多样的物理接口形式（M.2、CEM、U.2、OcuLink等）</li>
-<li>兼容PCI的软件模型（向下兼容）</li>
-<li>性能优秀（低负担 low-overhead、低延迟的通信）</li>
-<li>先进的特性features
-<ol>
-<li>能理解输入的不同类型的数据和指令</li>
-<li>能耗管理和分配机制</li>
-<li>可以支持不同设备</li>
-<li>支持热插拔</li>
-<li>支持link-level和端到端的信号完整性检查</li>
-<li>支持高级的错误报告和处理</li>
-<li>在发射器和接收器能支持不同的共模电压</li>
-<li>容易测试：能够通过简单的连接来测试其电学特性</li>
-</ol>
-</li>
-</ol>
-<h3 id="pcie的链路link"><a class="markdownIt-Anchor" href="#pcie的链路link"></a> PCIe的链路（Link）</h3>
-<p>Link代表两个组件之间的双单工通信通道。PCIe Link的基础组件包括两个低电压差分驱动的信号对：一个发送对和一个接收对。如下图所示。一个PCIe Link包含一个PCIe的物理层。</p>
-<blockquote>
-<p>双单工通信：在每个方向上，数据只能在一个方向上传输（即单向），这与全双工通信（可以同时双向传输数据）有所不同。</p>
-</blockquote>
-<img src="/pictures/image-20240531143922148.png" alt="image-20240531143922148" style="zoom:80%;" />
-<p>PCIe具有如下的基础属性：</p>
-<ol>
-<li>
-<p>·基本链路：PCIe由两个单向传输差分链路构成，实现发送对和接收对的功能。使用编码的方式嵌入一个信号时钟，从而实现非常高速的数据传输速率。</p>
-</li>
-<li>
-<p>信号速率：初始化后，链路必须在支持的信号电平上运行。【不同版本的PCIe协议支持不同信号速率的传输】。</p>
-</li>
-<li>
-<p>通道（Lanes）：一个链路（Link）至少需要支持一个通道（Lane)，每个通道代表了一系列差分信号对（一个信号对用于信号发送，一个信号对用于信号接收）。为了扩展带宽，一个链路可能聚合多个通道，用×N来表示，其中N表示通道数量，如×1代表1个通道，×8表示8个通道。</p>
-</li>
-<li>
-<p>初始化： 在硬件初始化期间，每个 PCI Express 链路通过链路两端的两个设备进行通道宽度和工作频率的协商来设置。这个过程不涉及固件或操作系统软件。</p>
-</li>
-<li>
-<p>对称性：每个链路必须在每个方向上支持相同数量的通道。例如，一个×16链路表示在每个方向上都有16个差分信号对。</p>
-</li>
-</ol>
-<h3 id="pcie的结构拓扑"><a class="markdownIt-Anchor" href="#pcie的结构拓扑"></a> PCIe的结构拓扑</h3>
-<p>PCIe的拓扑结构（fabric）由点对点的链路组成。这些链路将一组组件互连在一起。下图展示了一个实例，称为体系结构（Hierarchy），由一个根复合体（Root complex，RC）、多个端点设备（I/O设备）、一个交换机（Switch）和一个PCIe连接到PCI/PCI-X桥组成，这些组件通过PCIe链路进行互连。</p>
-<p><img src="/pictures/image-20240602165921703.png" alt="image-20240602165921703" /></p>
-<h4 id="根复合体-root-complex"><a class="markdownIt-Anchor" href="#根复合体-root-complex"></a> 根复合体 （Root Complex）</h4>
-<ol>
-<li>
-<p>根复合体（RC）表示连接CPU/内存子系统到I/O（输入/输出）设备层次结构的根节点</p>
-</li>
-<li>
-<p>如图1.2所示，RC可以支持一个或多个PCIe端口，每个接口定义了一个独立的层次域。每个层次域可以由单个端点设备构成，也可以由多个交换机组件和端点设备组成的子层次结构组成</p>
-<p>…</p>
-</li>
-</ol>
-<h4 id="端点设备"><a class="markdownIt-Anchor" href="#端点设备"></a> 端点设备</h4>
-<p>端点设备指的是一种功能，它可以是PCIe通信传输的请求方或者完成方。</p>
-<h5 id="传统端点设备规则"><a class="markdownIt-Anchor" href="#传统端点设备规则"></a> 传统端点设备规则</h5>
-<p>…</p>
-<h5 id="pcie端点规则"><a class="markdownIt-Anchor" href="#pcie端点规则"></a> PCIe端点规则</h5>
-<p>…</p>
-<h5 id="rc集成系统的端点规则"><a class="markdownIt-Anchor" href="#rc集成系统的端点规则"></a> RC集成系统的端点规则</h5>
-<p>…</p>
-<h4 id="交换机switch"><a class="markdownIt-Anchor" href="#交换机switch"></a> 交换机（Switch）</h4>
-<p>交换机被定义为多个虚拟PCI到PCI桥设备的逻辑组合，如图所示。所有交换机需要满足以下基本规则：</p>
-<p><img src="/pictures/image-20240602173230536.png" alt="image-20240602173230536" /></p>
-<ol>
-<li>
-<p>Switch被配置为两个或多个PCI到PCI桥之间的连接</p>
-<p>…</p>
-</li>
-</ol>
-<h4 id="rc事件收集器"><a class="markdownIt-Anchor" href="#rc事件收集器"></a> RC事件收集器</h4>
-<p>…</p>
-<h4 id="pci-express-到-pcipci-x-桥接器"><a class="markdownIt-Anchor" href="#pci-express-到-pcipci-x-桥接器"></a> PCI Express 到 PCI/PCI-X 桥接器</h4>
-<h3 id="用于探索-配置和操作的硬件软件模型"><a class="markdownIt-Anchor" href="#用于探索-配置和操作的硬件软件模型"></a> 用于探索、配置和操作的硬件/软件模型</h3>
-<p>PCIe的硬件/软件模型包括必要的架构，可以用来简单地探索、配置和使用PCIe的功能。模型的核心组件包括：</p>
-<ol>
-<li>
-<p>软件要能够配置可用的硬件功能</p>
-</li>
-<li>
-<p>提供执行基本资源分配的机制，用于可寻址资源，例如内存空间和中断。</p>
-</li>
-<li>
-<p>启用/禁用控制功能，接收询问和初始化</p>
-</li>
-<li>
-<p>明确定义的顺序和控制流模型，支持硬件/软件接口的一致和鲁棒性</p>
-</li>
-</ol>
-<p>PCIe的配置模型支持两种机制：</p>
-<ol>
-<li>PCI兼容的配置机制</li>
-<li>PCIe增强的配置机制</li>
-</ol>
-<p>每个 PCI Express 链路都通过虚拟的 PCI-to-PCI 桥接器结构进行映射，并与一个逻辑 PCI 总线相关联。这个虚拟的 PCI-to-PCI 桥接器结构可以是 PCI Express 根复合体端口、交换机上行端口或者交换机下行端口的一部分。根端口是一个虚拟的 PCI-to-PCI 桥接器结构，它从一个 PCI Express 根复合体发起一个 PCI Express 层次域。设备被映射到配置空间，以便每个设备都会响应于特定的设备编号。</p>
-<h3 id="pcie分层概览"><a class="markdownIt-Anchor" href="#pcie分层概览"></a> PCIe分层概览</h3>
-<p>该文档按照三个独立的逻辑层次来规范架构：事务层（Transaction Layer）、数据链路层（Data Link Layer）和物理层（Physical Layer）。每个层次都分为两个部分：一个处理出站（待传输）信息，一个处理入站（接收）信息，如图1-4所示。这种分层定义的基本目标是为了方便读者理解规范。请注意，这种分层并不意味着特定的PCI Express实现。</p>
-<p><img src="/pictures/image-20240602194206885.png" alt="image-20240602194206885" /></p>
-<p>PCI Express 使用数据包在组件之间传递信息。数据包在事务层和数据链路层中形成，用于将信息从发送组件传输到接收组件。随着传输的数据包流经其他层次，它们会被扩展以包含其他层次处理数据包所需的额外信息。在接收端，相反的过程发生，数据包从物理层表示转换为数据链路层表示，最终（对于事务层数据包）转换为接收设备的事务层能够处理的形式。 图1-5展示了事务级数据包信息在各层之间的概念流程。</p>
-<p><img src="/pictures/image-20240602200151365.png" alt="image-20240602200151365" /></p>
-
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/05/19/PCIe%20%E5%9F%BA%E7%A1%80%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

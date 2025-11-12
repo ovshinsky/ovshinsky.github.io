@@ -46,20 +46,18 @@
   };
 </script>
 
-  <meta name="description" content="发送端 （32.0 GT&#x2F;S）模块要求    符号 参数描述 参数值 单位 备注     UI (Tx) 单位区间 31.246875~31.253125 ps 不包括  SSC  变化   BW_(TX-PKG-PLL1) 与 PKGTX-PLL1  对应的发送（Tx）锁相环（PLL）带宽 0.5  ~ 1.8 MHz 二阶锁相环（PLL）系统中的抖动传输界定函数   BW_(TX-PLL1)">
+  <meta name="description" content="这里有东西被加密了，需要输入密码查看哦。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PCIe发送端及眼图要求">
 <meta property="og:url" content="http://example.com/2024/07/08/PCIe%E5%8F%91%E9%80%81%E7%AB%AF%E5%8F%8A%E7%9C%BC%E5%9B%BE%E8%A6%81%E6%B1%82/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="发送端 （32.0 GT&#x2F;S）模块要求    符号 参数描述 参数值 单位 备注     UI (Tx) 单位区间 31.246875~31.253125 ps 不包括  SSC  变化   BW_(TX-PKG-PLL1) 与 PKGTX-PLL1  对应的发送（Tx）锁相环（PLL）带宽 0.5  ~ 1.8 MHz 二阶锁相环（PLL）系统中的抖动传输界定函数   BW_(TX-PLL1)">
+<meta property="og:description" content="这里有东西被加密了，需要输入密码查看哦。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/pictures/image-20240708144633884.png">
 <meta property="article:published_time" content="2024-07-08T06:38:06.000Z">
 <meta property="article:modified_time" content="2024-08-19T05:36:53.135Z">
 <meta property="article:author" content="Yaotian Zhao shineskys@outlook.com">
 <meta property="article:tag" content="光互连">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/pictures/image-20240708144633884.png">
 
 <link rel="canonical" href="http://example.com/2024/07/08/PCIe%E5%8F%91%E9%80%81%E7%AB%AF%E5%8F%8A%E7%9C%BC%E5%9B%BE%E8%A6%81%E6%B1%82/">
 
@@ -270,241 +268,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="发送端-320-gts模块要求"><a class="markdownIt-Anchor" href="#发送端-320-gts模块要求"></a> 发送端 （32.0 GT/S）模块要求</h4>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>参数描述</th>
-<th>参数值</th>
-<th>单位</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>UI (Tx)</td>
-<td>单位区间</td>
-<td>31.246875~31.253125</td>
-<td>ps</td>
-<td>不包括  SSC  变化</td>
-</tr>
-<tr>
-<td>BW_(TX-PKG-PLL1)</td>
-<td>与 PKGTX-PLL1  对应的发送（Tx）锁相环（PLL）带宽</td>
-<td>0.5  ~ 1.8</td>
-<td>MHz</td>
-<td>二阶锁相环（PLL）系统中的抖动传输界定函数</td>
-</tr>
-<tr>
-<td>BW_(TX-PLL1)</td>
-<td>与 BWTX-PKG-PLL1  相关的发送锁相环（PLL）的峰值特性</td>
-<td>0 ~  2</td>
-<td>MHz</td>
-<td>二阶锁相环（PLL）系统中的抖动传输界定函数</td>
-</tr>
-<tr>
-<td>V_(TX-DIFF-PP)</td>
-<td>全摆幅（full  swing）操作条件下，差分发送（Tx）电压摆幅的峰-峰值（peak-peak）</td>
-<td>800  ~1300</td>
-<td>mVPP</td>
-<td>在符合性测试负载条件下测量。定义为  2×  | VTXD+−VTXD |</td>
-</tr>
-<tr>
-<td>V_(TX-DIFF-PP-LOW)</td>
-<td>低摆幅（low  swing）操作条件下，差分发送（Tx）电压摆幅的峰-峰值（peak-peak）</td>
-<td>400  ~1300</td>
-<td>mVPP</td>
-<td>在符合性测试负载条件下测量。定义为  2×  | VTXD+−VTXD |</td>
-</tr>
-<tr>
-<td>V_(TX-EIEOS-RS)</td>
-<td>在减小摆幅信号传输期间，EIEOS  过程中的最小电压摆幅</td>
-<td>&gt;  232</td>
-<td>mVPP</td>
-<td>“EIEOS”  指的是一种信号序列，用于表示在通信系统中从空闲状态到数据传输状态的过渡。</td>
-</tr>
-<tr>
-<td>ps21_(TX-ROOT-DEVICE)</td>
-<td>包含根端口时的ps21损耗</td>
-<td>&lt;  8.5</td>
-<td>dB</td>
-<td></td>
-</tr>
-<tr>
-<td>ps21_(TX-NON-ROOT-DEVICE)</td>
-<td>不包含根端口的所有设备的ps21损耗</td>
-<td>&lt;  3.7</td>
-<td>dB</td>
-<td></td>
-</tr>
-<tr>
-<td>ILfit_(TX-ROOT-DEVICE)</td>
-<td>在奈奎斯特频率处的拟合插入损耗</td>
-<td>&lt;  9.0</td>
-<td>dB</td>
-<td></td>
-</tr>
-<tr>
-<td>ILfit_(TX-NON-ROOT-DEVICE)</td>
-<td>在奈奎斯特频率处的拟合插入损耗</td>
-<td>&lt;  4.0</td>
-<td>dB</td>
-<td></td>
-</tr>
-<tr>
-<td>V_(TX-BOOST-FS)</td>
-<td>全摆幅时的最大名义发送器增益比率</td>
-<td>&gt;  8</td>
-<td>dB</td>
-<td>超过8.0  dB的名义增益被限制，以确保满足PS21TX</td>
-</tr>
-<tr>
-<td>V_(TX-BOOST-RS)</td>
-<td>减小摆幅时的最大名义发送器增益比率</td>
-<td>&gt;  2.5</td>
-<td>dB</td>
-<td></td>
-</tr>
-<tr>
-<td>EQ_(TX-COEFF-RES)</td>
-<td>发送端系数分辨率</td>
-<td>1/63  ~ 1/24</td>
-<td>-</td>
-<td></td>
-</tr>
-<tr>
-<td>T_(TX-UTJ)</td>
-<td>发送端（Tx）不相关总抖动</td>
-<td>&lt;  6.25</td>
-<td>psPP    at  10-12</td>
-<td></td>
-</tr>
-<tr>
-<td>T_(TX-UTJ-SRIS)</td>
-<td>在使用  SSC  测试其时钟模式时的发送端（Tx）不相关总抖动</td>
-<td>&lt;  7.15</td>
-<td>psPP    at  10-12</td>
-<td></td>
-</tr>
-<tr>
-<td>T_(TX-UDJDD)</td>
-<td>非嵌入式参考时钟情况下的发送端（Tx）不相关抖动（Dj）</td>
-<td>&lt;  3.125</td>
-<td>psPP    at  10-12</td>
-<td></td>
-</tr>
-<tr>
-<td>T_(TX-UPW-TJ)</td>
-<td>总的不相关脉宽抖动</td>
-<td>&lt;  6.25</td>
-<td>psPP    at  10-12</td>
-<td></td>
-</tr>
-<tr>
-<td>T_(TX-UPW-DJDD)</td>
-<td>DjDD  [确定性抖动]  不相关脉宽抖动</td>
-<td>&lt;  2.5</td>
-<td>Ps  PP</td>
-<td></td>
-</tr>
-<tr>
-<td>T_(TX-RJ)</td>
-<td>发送的信号在时间上的随机变化</td>
-<td>0.23  ~ 0.45</td>
-<td>Ps  RMS</td>
-<td>这只是一个信息性参数。随机抖动（RJ）可能的范围从零到允许的最大  TTX-UDJDD</td>
-</tr>
-<tr>
-<td>L_(TX-SKEW)</td>
-<td>在多通道通信接口或系统中，不同通道输出之间的时序或相位对齐差异</td>
-<td>1.25</td>
-<td>ns</td>
-<td>在单个发送器模块或单元内部，任意两个通道输出之间可能出现的时序或相位失调</td>
-</tr>
-<tr>
-<td>RL_(TX-DIFF)</td>
-<td>发送器封装加芯片差分回波损耗</td>
-<td>见后</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>RL_(TX-CM)</td>
-<td>发送器封装和芯片中测量的共模回波损耗</td>
-<td>见后</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="回波损耗要求"><a class="markdownIt-Anchor" href="#回波损耗要求"></a> 回波损耗要求</h4>
-<p><img src="/pictures/image-20240708144633884.png" alt="image-20240708144633884" /></p>
-<h4 id="通道眼图320-gts容忍度要求eye-mask-values"><a class="markdownIt-Anchor" href="#通道眼图320-gts容忍度要求eye-mask-values"></a> 通道眼图（32.0 GT/S）容忍度要求（Eye mask values)：</h4>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>参数描述</th>
-<th>参数值</th>
-<th>单位</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>V_(RX-CH-EH-32G)</td>
-<td>眼高</td>
-<td>&gt;  15</td>
-<td>mVPP</td>
-<td>误码率（BER）为10的负12次方时的眼高</td>
-</tr>
-<tr>
-<td>V_(RX-CH-EW-32G)</td>
-<td>零交叉点处的眼宽度</td>
-<td>&lt;  0.3</td>
-<td>UI</td>
-<td>误码率（BER）为10的负12次方时的眼宽</td>
-</tr>
-<tr>
-<td>T_(RX-SAMPLE-OFFSET-32G)</td>
-<td>从UI中心向左的最大采样位置偏移量</td>
-<td>0.3</td>
-<td>UI</td>
-<td></td>
-</tr>
-<tr>
-<td>T_(RX-SAMPLE-GRANULARITY-32G)</td>
-<td>采样位置偏移的粒度</td>
-<td>0.05</td>
-<td>UI</td>
-<td>可以改变或配置采样位置偏移的最小增量</td>
-</tr>
-<tr>
-<td>V_(RX-DFE-D1-32G)</td>
-<td>DFE  d1系数的范围</td>
-<td>Abs(D1)/D0  [光标幅度]  &lt;= 0.8</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>V_(RX-DFE-D2-32G)</td>
-<td>DFE  d2系数的范围</td>
-<td>±20</td>
-<td>mV</td>
-<td></td>
-</tr>
-<tr>
-<td>V_(RX-DFE-D3-32G)</td>
-<td>DFE  d3系数的范围</td>
-<td>±20</td>
-<td>mV</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>end</p>
-
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="b9e91ccb996e840c45ca2b7e8633d976dd6d502ed906547a01a26386f18ca41a">5852e6e1d18a5dbd7f6ca8ad98f80baa524a36558b45162469a8c9c7c995a21606330fe64482a40e1c9247e9a9b7b62c621f187e408a906721222fb75b9ebd61fa07e48ac2251aaccfb93d3c851ecb15658dba15f3df33811fcbe716d5d2c7e718d5d4f38c49f3f2c74b20d4d8c8d7eb7601800e8984f41f0592f900fa4c4d201eae45e94b51fc8ee52128282aee0d7070c68d6b09c344a4aa9acac4147eca0d93f34d9efbe29001946696dc6e9fc350104edafe9424185974b40ca230444e942591cd3762a1b8c2d39bc3745f385f074bfc0f1a840923e078520674321cf558a9ac1dd04886e070dd13ade44695385765b3012af1cbd2bce8d01786ab224585580342790ff68fd832ebaf536aa1819c3de5e321f1d7bdeacf145d0cace676f33042cef55580b91f0a6c833a8b61fd521ca2e3aa4d0ad2245f0c536d370c3bb5cde06f6190097dd5277c998463a46e79880d060746355e4797761782be715cc5f48d06d310e97044b06e3dfae9fc9bb955df4b046d2013f093648bf8a1a80901c28df9b448318edfa1de418f310157245222ba97e69946d7f453d2d89913b7d5dd429a0aa220261247d1631322b134eac103b613575317f18b76873f6f7bb6bfe8fbe2c7cd204568687af465b306646e8a0cd87e81aef10d45670641394d48f495e49822198c3f5dc0be7bee4117dc8592b95be19e659e63b32fbfefc7a8e997eaf79ff530a5525837dc2f38d37b4e57e12b46daa01ad3272a1e15c73f743f818c9cf103a0db3e1a84d6992ab19d7fb441dd6bce78aefc3543c6019d2cd082804f7c0c2bb38cdff3d01fef0b2db1555f3ef3f8e6a11b61b6edf01ca1d4aada95009535170ed2fa18654b6c2c8b2002b4e81ea8ccbfb5d583455b2edd9b406b0858ab5a150abcf2b1a9b68f5653f566832b69c121b2bcf137414a53b4c7303be86a5b4ea41967fc0ffef88ed267829b53ead10ced6c32c0612a2d0d90781ea6b834071ad35beac844dcce14edae4ebd98c79ac0ac2dcb8d626a0bcaa235803d9ad93454a69ab19d69ff890e979cd3313714da1cac733e7338ea08462942990bac35cf1adf8f748b7a68b73c21276455e20f21fe7d162569628f3ead195457478e0bfcde7899df5d9480c4feff031d59ecae4c6238da4fb2cdb522d97dc88fd41b535309470927b4f7145e8c0aad2fd3d24031f62a1f021433df9a9aabd92dc72b7250227aa8a9d36389bfc4ccf3c3bb196af28f2671a82e20fe96c011476544cfad43d911e537fa356dc41853884e690b326a502a9befdef873e833e570390e39fdde82bb804aebf0a91df274e2636f7ee1dbbb269d5628ac8bad9544e218405ac77341f4c3a284c782b871e47a0fff037feb36825e6b35b9f275c19b99ee3cea7a84415f72bc18bde9e971ad52464f1fc1ea03da7b47087e59ae1d4fa2c1c80780f32a7c7fbe99681ed647f819547aa17dcd8a9a38f86d85a27d19821219cd4543f448ee0434169b19ebdb48c27d3b7931cfac3a4a296d80c1cac000af8bb8606dc607d668526340180c24df1b1de3963b5a0e423e94761dade7c30b42a2f2c4d3cf693d2064dca501bc42588743d3b55f2102e97cc9ec2d1ac4fa1ac8ce7143e17d3b052a34fdaa50c18539c918cedd3748794e1f830ba493ffe7734de4f0456c8c0c7bf4d65597ae907932f465b5a08016a56bfee64ef8183dd0dadbeab7c00234e38deb764eff3f612751a4ffeedfa6febcf094021a37152ab2642cc0cafe1989c832a118c47cab419ff3a34990fe587da42189add6263265d738054b5001cceced2dcb7cc6c77821bb73381f871991b3d09bea907933c743e9d287cd5c046910c2a4fb549ca32ec33955f3c97f0a91d6e4d659390b3a58a392c2c60f2eeb2b45c90ba64a8aac16a21f4aa3c7e881be945b5cefe067f4e289f5d8f078a940d21d539b947a2c75b378fc0370463c171bcd7b90d26367a690ef034d24b2093efd8e70bba1ba6ab9af942f403b0245f4047ec3589d8b2d7422d6a0ac70c46d28fc365b206950bbb7f58ef7910b6662b443d6cab1069fcd55704675aad5945639d1bc64da511b2c27f58b3db4bb41e914e19a01acbe3f2d155ced0e9dd4edda2b15d7789d9d971d90a6d440e5e6e87488328f761bab29587e47a2b041dd68e1001b255106396463f0a9b1f85301d1b213b7c0b9c6490bcdee92401ac1a98c5fb39291e08c49a0307d7ce3c7b70f7fa900e0788bb56e673f4778ac85f99c1df27a815db0bb7c1e8b5fc3f4041a02adf51636b0df4bbd7e15621e3663af5fc680f0a6075d54de5792e53d8552fa0d60b031c8d6b6bfc6e2d277650e5767085874330367d554c9cdacd703289026bb8eab38f8a157610ab9c1630c97be97619704f979098b81dc0e303bc9867c3123563bd0fd96ebbc6ddca40c75d295d1a3a7d6b8a2eec3f773de094ac85e19548af5fa377705040f61d3fbc35e095dbce09e2f699c107b601c4efb64497200e451365847a85c04dbe64ef2ffc8a45859abe9cfd3932aba8f6a5719c94120e921759d9306f8998d363f2b927690ff657f9279a5d9a85fb5b54326a82e5c6f0170587a0d87a6c584744b08edb3d89dc1d4670344477e7a6cbf71f43ef298ab5f24574ad9c19e2027720250d83c7320fb1893f190542634bb6eda2a46b93fee59c9adc6e7f87b938611ecb423557a263b7e45252b0c10acda161b5440231b02e4f73e2ddf578082bd099e6af9a194c0ad89b9b145866b7ade4002c1a2d5a2f081402dbf55b4f00ebf45397de5ac9508838832cc3f90d563263c33038a5268598581f2f5b9a82273d7f20e983313d0099b2812ed2cbbb0f2356c7198cb1e9789fee95b793003a211af7d795f76b9bc7960cdf2cb1f4efd45aa74b810cd9bbd9fcba7634bdf37f3d41b72b730823511080e281c10525c0db6afc13413021bd8a3b809d7d63a2990d88a1dcd5776bb97cc6ab8875486457bfec34cb0372f844c6bf406c89cf09ef5fb65d298de9d0b156094a1543cc1b1592cdb18027b81d792adbe7507899c6bb85b26fe8db6374c338ea770ff45b6de96663df6297fba3e40ccc10afecaa895a1cf817ad2246d301b0eda6a31007ef838193d04acc0d79d504df9e33ecfcbf847057013e57697984ad8433431f259dc49fc1ae9d808f59ae7f99b3440b5ef5b2f2ff3fef61b76e1b8f939ea9c1624f0d51e6bfecd44d01c44eb29d81c4bbc7236b3cae6a97e0e2062d5be6193cbb43f1daf8d987bd91fb4e0b27b9e47b8de18888044ba870206c5f8ec2cdc48feebb772029a1d6c722087c129bd29c755002f9c8d42a6fd41ef4b2cc895d1ebab0254c8dd06c4c82b87270bd4c47988e2fc3d99054275dc0f9b563b100b66d633c1d953209354ec52dffda177dec2ff79c573005cf7b57b3651a1feed5b8402a73817c9b4d912dc1b0ccae337ec800cc943c312de3885471eae722173c3bd83fd1226a8d7c496112632d2e93995db222f404b627351af2240bc090820ff7d9882eeeb8509d7b0b67ab98f36934471f0f6fdf94128b7264e9cb8459d8f4f848f135966414fb1ff709353e0abd4a80f2c2fb4231ec7c85827946e6e005f4ec13d1541e70120655e39430f69f2b9699bc1ad7f26e052ad4dc00c940ea65805797e6e4c40d047165ea79dac9b561880c06476e95719c7686bebd0c84f8923250a09243d64c5a18694ce403d760819ca44601d6286459a202e432dccadebc63fdf878605935e6df8d8a4b1de4b4b9c94f80e9ff05ae6c3ea018c43d97f833e7f1245d703aa5d23b37ecd9d0baa2f2103b0a8028ef5b009541a9c1f574a221485eb11dac5940aa4b3a09ff99ce2ff6825830d80e5c5b5b4adc89a99c20ac8def27e1aa1fc34bc968472094d60be4a0e3f82f3ecfc2b877c30e3d1549a52507bbabcb213775849eb52330f8a1c830efc7da5c5358254fd4a3f363186f810c794f079631768aeb2d649d8c1eb3fbc569615337e2efd7785b34693371799b9540ae269a78793d71361568e512b687ce0084bb9d190e443536a3bc0716d4ec579ca0bfdd350ca479081fc2515c5017d83d26b73bb926df9762434a2419461acf2f35d2148ee52e345236a929acdb8ab041224c7bacbfeba806b9235d3fcb3249961e9ab0622655327ca26d1407da5deda60e25b69c0abeba31e765853fd99a1754ea70239d7600813402a5912346d4617dd378446da63a7fde0906c622ecccbd82812ca2af56569d5d03081d7e746d1af50ee781b84468712f933fb108d647629e57f5f2cc7f2353bbb4831796201fe2f205cc63f625de0c3833e0f467ba0a9bebfa5b59d31ad83f3b254f6df0a6b7dcc6cbcd296cd69280ec22eeb2bb3e8acf9dbb0dc85c87e6aeaeee2257bd89db20a3cf4eca58429ef02459cffef54e7b2491f6dbe7433de4b1862ca6f93dcb1d06590d0dbab1610489132759d84ee4c77d11a931ce498fc5c4a52924732c3d4188116cde33c792d299cd14fd721699becb35ed9a98fcbc062774a4b9838c47d10ef15c4df92c6cbcb141698ac8b3a03d9e6aa8e7d61edf64a4c4234eb50b0c7df0f18b9cfea0b54ddabb23afb6a808dfc85ac91070ea3eee075d0e899ca643727255a7693c9e4315c4d936076a90be01e6bbdc17290a2aeac987edec6dee1e2fd26b950f3a909a8940ffa3f627700caee331896ca16903bd8194b462d361b07179a27c9ccfa5f2dff0ab8a0c88ed36d3da71b1a0d347411f87f8e25a017c2731f030f2e6c483349aa9ee4e400ccfb0bc61e5c80bbd6e1f12f7fa7bdeeac5e1f889872950581322bf69435523a4d66e781bf2b97683a9a29baeca952438fb3bb7351149e1d165c98be36f6a9b230bacea5008f519cad7df350b0e335eeeddee0de1a1fe9dddd1ae7282891d071d116542ac18e0a20a61cf8e642534659995c99096348c06c7e2372678e4069523dc6a3aa520d9a464f6db367a5e2cb2db23cd8025a4ebeb9ba9fa12aa4507f49e25fd9c0fa89af61e541278a5c47c5438a3cbe4a447a10d8cdc021ff1c3c05796f2730aaf8052adf506013fe51074db8630e11bc632a34ec8ae489782e051f0b22fa898d920d49f96987718ff9672227086eea81eeb49faa7a980d701fde30965531970a243cbf297e06e227eb6e4aee8f6aa0ad7c8f200a68df752fc9b3e31e6eb08c4d0f1ff4275d9d2f23ec203fb18aedd828c746b19266638ca7a05ae2d7aa50fe7ac897a86f8a1561753b067f3cb91925255e7325f84399d81f25913dfbe518673d959b002b0dc659933e483bf2e6f79fd17953709722f8293fc85aba95083391e5ba8d6e08531061312ea628d4104da7fe8f7db6e79aa177d9835adbb2771600b91ed8de52712fbef3b2e7e51afa47a0e06eb9754532c5e381302d4eb0bfa02c79dbcacd18d9c795304d3473c4f0e9ae9a21c14eee328d57aed9abbbe956b211f8a4583519063ea2cd3c3caee3c5bb5c0445af65830c6a9a4575acad27d5ba10b1f747a6bf77d36e0303356bc5fa0efef608d301c27bd2664dafd8d22ae157fc50a92a463a9f627b9554baf5a6159ba58be703e613d8075cf155a4dbe57f3f3a775b4a9d99c52ce405826e368309757e1ec57f3ba21c296fae85345539e8b1f188ee91bc082cc352e60d93ab2d365b19535d6671cf74d341f61af4ad2b43fd3a1fbf4036a6ad024128be61534bc0371cd199fac8fc1018f44601b28247441414ef0595c11f04123128f336aa8eea4c950d9fde0fa576a28baef3a5ff1bf7bc5d3e2b866b0462a96192a805d10c1e61c63a5aef30a94ec3ac3ca58b1fe685947565fa0d79021b2d967e376042eb4b89cc81d4a32c6719f541a0dc98aeccf8b4a6cf8a935b03466de2afe0fac9a11378adaabb7a202ce1080b2bced1df47e5400b5870ff30df3b4d381398e508481fdc5c9631401f0460ced836a54ef864f483cfca434e744e84fd2ad92deefe4efde5b82fb298975ba502ae908c56cd3291000da203bb34dba4f86984761c225793ec9134870d3b519efd73395d49bef9c590bcf7fdbdb63e5f88560d823b3d7d02a2f6be71f995c549ca7db727c9aac42a6218e7b1b988eddd025da9d3ce8f9ed15692dedfcc08585ad7f30ce1d8b4be7150d168b4f061397ed1e38db69a88a62ffcf0638070423ff8a8da3c85306feaa45e70dc788d4b41396ad75d1a3fb40b68e4335eeb47389abad3e80497cdadb065788da56a45597d788eaf7802da359a73c7a0ba1df49d7086e04175cef5fb22fa65036a1a135556d77b222d2992631ff3be97e5797f6577872077caa02580a77573b6a5c078088e7edac349fcf9ce3c5ce05b2e3193a4afe81e317488237ffde14bc63b1bd902b7e4a5971251062f140e95db3020b1fa907f5822f4b24e763fcb7cf4f3dfb1db7767dcaaf4ceda5304b04dba7c73c896048264a631b014b27f27418842580d5c59129850f26dd8cc5a28eaa682a987253740e223045c522acbe1be7e38f23724ff29e85024f2c94a98c42fc0d5abcf0bcb52ee88958ffe666beb61f004fbefec51518c22e91a5aa8099b98ae65106143e05aa1574cfc58563cc548d18dcb94b85e2bcde13f161ee72d97b61efcd9c79a295d1014695f8b322cccec5e25168ae26f5e833376a8f0ad4c3e2467589f8411eec41041e3eccec9578047ad64c576fd3754e7e5df9ac94922efac8c66f1f2692b10aa92038a04db0abac2db43e0ccf8a6c882c883bf1c7fcb4b264971156047f7064e57235abdfb6669c7c95593052ccdb2909e4b1e1616cd3c47f0afcb7a8528d5f55188fa6d11dd4acc10b3532894317691e541fb96c37b4e0aace4a7abd60a264683918472e77ad948fbf984b27deacbafe5206560d16f6823f7abef524d418dc0259bacae55020a0ec65e2343d505c88afd49a7bf39c34d32c9c41d01ab1f1dc8ad2052761b169363e5881c8eedc61054687a7b4f82f4f46367ddb179974accba80e75f77e4a7bcafb5327c9f0a3ee52dcd9b03dfe1c2b37fc1e8bacf0c21a0cd657854691c1215c2511e68eadc2401f91ba977e9aa2f0f761da2768008f5f91ee5ce77e6bfb36a84e176f2364d160dc6bbdb00f80ba14884a11958b3048c64d2d70c46eac46b810fbb52882264874a714a5582813bf86786e23d18924a77e60973f14f7c01e235bd34630081e4c9572db21479ce89dc820b34e5fec79b8753a5ce1da44254cc45ae8995f745c45fa874764ef890178c9cd5ee7e38defc0a8d71b0c3b485c791f471b4443eda64131a75e7124258bbf86cc6b98ea8e73ca452deadbe1577d78eea7bd9e1df58e779859e9ee0837b327e219a21a50b2d95843bb2d7ea2cc078677de929525765f51b128acfb4abd4cbf788887e61c5157ee5f49962fbdaed9aa9f74267c34a5479b5d2eff42de91ee101f86a4f9bf80503a7527c77a2506ea224ec103c3cfc8647fe61f1b7313583e8dbb82d56903c69176fa2ee1fad77035679dcb70acb2db5bb9b82a4271c969bf30eb7bcea01f8b63877a5474df5058ed2ad6bf0f47f1eb4b7e8e950ac8c1ad34c901702226f2304297e8f6979aa62038bb2589f217665888ed6ceb9658e9f2e549ca2fb63b168ba30a3cb0a0285f745dedb257fd23b96f1b39918795754fc4faabb4fc2b778711a98b7fd4b0e037bc9a904f79a767f9a2b8cabb397ff171e39b52328804ffd7fd33f6066380eb7ce7b7e1302fea31d70a5c7d50bffdf74a114e650173c97a4110164f50e7e0458e36eaa29c4b54152f386d466933c95a3455af1b759f474c5c17e6e3d5e90e18de7fd138f764fc7e715159853a6a9967f0898909584936f8919cbc8e991a953573bfb28af8cf1bfa474ea3eae4d139f51880e57f6969b22426561da6fb69c43555d00c758fcf11e342790483b8acf3ea4932d3fe065236273899accb78f2c674acaf5b211ec08b97506cb07ceb0cc53c7a4a035fb58d4877edb41fe2ce29324f3f53811064db0a873802541d511ef79e2f1de5e2638a1fe645d3f3bb35a1d4bb6ae12d5772db42b6411ba64f5d34553ca53d68f8438c182cfa1f8a7ecf63294cedbc9ad746bdef37956e5402458a061d1919f946f262d3b1d4ded53926e346aeda35927be71fad5facfee3dbba54d1b16c836f902a76950b668ea3d60e413cc15</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
     </div>
 
     
@@ -589,7 +364,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%91%E9%80%81%E7%AB%AF-320-gts%E6%A8%A1%E5%9D%97%E8%A6%81%E6%B1%82"><span class="nav-number">1.</span> <span class="nav-text"> 发送端 （32.0 GT&#x2F;S）模块要求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9E%E6%B3%A2%E6%8D%9F%E8%80%97%E8%A6%81%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text"> 回波损耗要求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E9%81%93%E7%9C%BC%E5%9B%BE320-gts%E5%AE%B9%E5%BF%8D%E5%BA%A6%E8%A6%81%E6%B1%82eye-mask-values"><span class="nav-number">3.</span> <span class="nav-text"> 通道眼图（32.0 GT&#x2F;S）容忍度要求（Eye mask values)：</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

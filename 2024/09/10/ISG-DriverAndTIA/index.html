@@ -46,12 +46,12 @@
   };
 </script>
 
-  <meta name="description" content="DATASHEET: Driver&amp;TCU ; TIA .  DRIVER  总体描述 ISG - D5680H是一个高性能8通道的53Gbaud&#x2F;s差分输入&#x2F;差分输出的MZ驱动芯片，可用于800Gbps的应用。驱动器可以支持的输入信号最高为600mVpp。在线性模式下，器件的最高输出电压摆幅为3.5Vpp，具有较低的总谐波失真（THD，Total Harmonic Distortion）">
+  <meta name="description" content="这里有东西被加密了，需要输入密码查看哦。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ISG_DriverAndTIA">
 <meta property="og:url" content="http://example.com/2024/09/10/ISG-DriverAndTIA/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="DATASHEET: Driver&amp;TCU ; TIA .  DRIVER  总体描述 ISG - D5680H是一个高性能8通道的53Gbaud&#x2F;s差分输入&#x2F;差分输出的MZ驱动芯片，可用于800Gbps的应用。驱动器可以支持的输入信号最高为600mVpp。在线性模式下，器件的最高输出电压摆幅为3.5Vpp，具有较低的总谐波失真（THD，Total Harmonic Distortion）">
+<meta property="og:description" content="这里有东西被加密了，需要输入密码查看哦。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-10T02:24:19.000Z">
 <meta property="article:modified_time" content="2024-09-10T05:56:47.682Z">
@@ -262,71 +262,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>DATASHEET: <a href="/download/DS000147AV1 ISG-D5680H-Advance.pdf" download>Driver&amp;TCU</a> ; <a href="/download/DS000120AV2 ISG-T5783-Advance.pdf" download>TIA</a> .</p>
-<h3 id="driver"><a class="markdownIt-Anchor" href="#driver"></a> DRIVER</h3>
-<h4 id="总体描述"><a class="markdownIt-Anchor" href="#总体描述"></a> 总体描述</h4>
-<p>ISG - D5680H是一个高性能8通道的53Gbaud/s差分输入/差分输出的MZ驱动芯片，可用于800Gbps的应用。驱动器可以支持的输入信号最高为600mVpp。在线性模式下，器件的最高输出电压摆幅为3.5Vpp，具有较低的总谐波失真（THD，Total Harmonic Distortion）。<br />
-ISG-D5680被设计为<mark>与调制器芯片进行DC耦合</mark>。芯片的尺寸为4.07×1.57mm。通道间隔为375μm。芯片提供了SPI的控制方式用于设置驱动增益和偏置电压。同时可以监测驱动芯片和调制器之间的直流共模电压，用于精确设置光子芯片调制器的偏置点。<br />
-芯片能够控制硅光芯片的加热器，并且能够运行两个无关的CW激光器，形成自动功率控制（APC）回路。<br />
-ISG-D5680H支持以下两种架构：</p>
-<ul>
-<li>ISG-D5680H 倒装版本</li>
-<li>ISG-D5680HW 引线键合封装版本</li>
-</ul>
-<h4 id="特点"><a class="markdownIt-Anchor" href="#特点"></a> 特点</h4>
-<ul>
-<li>支持速率最高可达53Gbaud/s</li>
-<li>差分输入，差分输出</li>
-<li>射频输入：AC耦合；射频输出：DC耦合</li>
-<li>特征带宽为42GHz</li>
-<li>低功耗：360mW/channel @ 3Vpp（与Modulaor进行DC耦合，包括调制器负载）</li>
-<li>线性输出最高可达3.5Vpp</li>
-<li>通道间隔为375μm</li>
-<li>芯片尺寸为4.07mm×1.57mm</li>
-<li>TX LOS dectect：发射链路信号丢失情况检测</li>
-<li>可调TX LOS阈值</li>
-<li>支持自动噪声抑制的工作模式</li>
-<li>调制器共模电压监测</li>
-<li>SPI数字接口</li>
-<li>硅光芯片的热调控制</li>
-<li>CW激光器的控制</li>
-<li>MPD电流监测</li>
-<li>可调低频增益：12~19dB</li>
-<li>可调均衡，最高可达8dB（26.5GHz处）</li>
-<li>工作温度范围：-5℃~+85℃</li>
-<li>基于SiGe的产品</li>
-</ul>
-<h3 id="tia"><a class="markdownIt-Anchor" href="#tia"></a> TIA</h3>
-<h4 id="总体描述-2"><a class="markdownIt-Anchor" href="#总体描述-2"></a> 总体描述</h4>
-<p>ISG-T5783是一个高性能8通道跨阻放大器，最高能工作在53Gbaud/s的条件。ISG-T5783提供了光探测器阴极偏置的pad，每个通道还提供了接收信号强度指示器垫。<br />
-TIA的通道间隔为375μm，芯片尺寸为3.9×1.3mm。TIA在线性条件下的输出摆幅最高为450mVpp，并且有着非常低的输入参考噪声。每通道功耗典型值为170mW。<br />
-TIA同时能够通过SPI控制来设置增益和偏置电压。TIA提供自动增益控制和手动增益控制两种方式。</p>
-<h4 id="特点-2"><a class="markdownIt-Anchor" href="#特点-2"></a> 特点</h4>
-<ul>
-<li>最高支持的速率为53Gbaud/s PAM4</li>
-<li>安装方式为倒装</li>
-<li>通道间隔为375μm</li>
-<li>最高支持450mVpp的差分输出</li>
-<li>自动增益控制：当输入电流变化时，保持输出恒定</li>
-<li>非常低的输入参考噪声：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>14</mn><mi>p</mi><mi>A</mi><mi mathvariant="normal">/</mi><msqrt><mrow><mi>H</mi><mi>z</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">14pA/\sqrt{Hz}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.176665em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">4</span><span class="mord mathnormal">p</span><span class="mord mathnormal">A</span><span class="mord">/</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9266650000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span><span style="top:-2.886665em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
-c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
-c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
-c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
-s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
-c69,-144,104.5,-217.7,106.5,-221
-l0 -0
-c5.3,-9.3,12,-14,20,-14
-H400000v40H845.2724
-s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
-c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
-M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.11333499999999996em;"><span></span></span></span></span></span></span></span></span></li>
-<li>可调增益【300~4000 ohm】</li>
-<li>SPI数字接口</li>
-<li>RSSI功能性</li>
-<li>工作温度范围：-5~+85℃</li>
-<li>芯片尺寸：3.9×1.3mm</li>
-</ul>
-
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="0cf38d13a436ca33eafbaf175af741037c4db80fda6545e634269be1c171ba2e">5852e6e1d18a5dbd7f6ca8ad98f80baa0b733c556b12f567950b2657624e441680b56e0075ba77fc6400c3c76ec0272c0be83a10e429aaff883a6492f9eee412939f75581e8876f9d5df92e7e1174192d5f685403642c18c9c5a7c2fdb862fd97afd7ab2f6462c04329ca73b3a543b68ffe3b45ce21a71049aa5b0e588b36d184929a74862ced52caa4f32932016b25433446711e0c5772f047b3a1f521388239158244d87de8b6dff6728299bd49b080515028663670fc07e61a2993849006ba7f88be1420e8faf793397d5508fa18a10a89ce78fcae49dfe24e0ff10d0dc72a1611f66166a1065645842d4a3950cde27a0b1ae10fc9b89a2fdba8b2453bec43466c084df8326f9f1f8f96ae76b75f3e349d183677052305c3a1655b90d8749ab96fdf86b0fc1244faa1773873649b41c83d7d5e5cd90ba3dd7fdee5870bb55be8627d3ca0a5ba6998ee26ee2a7c27dd7d9e16cf2d14d18871480768d8433b10a4f37a7f2fd090566fb0fef015015c320668928ef3e29d41b8af9325e2decad3deebb29f68c9e25396ff210abe5111beaf6b6eaa49457de17b57c8e1df6fe82b7e001fbf677438e0cd64a7787ebde37f80e763fdfd9460c8031f828a1229b789f49e73dfb00457e55bee0e87498f56137d7e9f39409c0c75672abef86aa35346feabffd90ccb90c07e6651bb5b8ae63e3fa0f1bc0014edbee082cef6c1c03825ac521a2bbac92145692a0282f6e1b9ee6be8525460d3dbad136227b9d4aa88dd9d72f99068f4431b49c5feceba2a9e4c986c5abbdaa1ebcf56076ce67ec152f0da8274431d1b1c93f3e64c064cd0d36b166d61f8ee59823e46bb6268631d98d983771d63552a093d77129dca1fec6210b6fd9b4875c830ede0ac04c1c9db3f776ca2d3b8bbd074a6781743af167990bf63a950cf607c56fcaf36b75ce4deb3de8179659529499708da3ca371c17bf92aafe6e1c1ca1aa8d670e426209c5976af36e86dbfe0f95ceaab08a0bd0bbcf1a508d87baeae864dab27a9bde7a2c974e1d470bf8b94601f0a8a579f280e6840ea8f300351b50b532a5642cdffe48edde57eaa3e7361a5471e4d5503ad64b666f64e7c291488d1537d7a4c20eac50980f2da7b3c0d9011cf052e361cf97f656af594a9a330d9408598e02e60b505a0bbcc788efcdded6a18a26f0816a002b01852793e7e6415e2d2bbcfbae5dcf406f2f6fd7b0243c3ad52bd513a21235cdc2510d1e90786f81a2f722b5eb2fde9f56fc1b6493c02452e34ca8e6c5077c61f0b20e07ee90ed7110a6780ec6f70e588f44e6f26b5253f8d1dcdf09a939a2d996867f3bf6640b5cc2c330729af6f2b4e705bb195ad02346ac1bf296715d6f6be9c86cfd26fb0aecdb957b8e0f4ec7cadfbd900412b4ff7595c0b1cb6908355aa28d4c0b0597bb59cb0e625e13692cad582bfee6a5802d639a7d5b760802d5dc1a824581f08f6c0e2a36b753601db9bb94a929698106b88f521954aadaf06d361d2afc3f8e3d04b88823b055e518110cacc887bdf49a9699866b9c97c54cc2efa51d570a3cfa0cff1c9a2786c6108c66e997db28995734cf2edccbe6f99514fc8fa2722bfc6cafcb94cec574ef715542978873729ca82bb1545995f26b1044ed0da5cbde798ae34e4aedb3807bcb9d5bd2985bf1247afe12ec91326d4c436210ca1ec217dd2c18873f0a67c2465c4441891ac1987b5a94ac59657f00a656e5636fa0ba2c6224611b48a11adc877ede56ed17a9aca09f26b963775eb409ba555a07a7cb94421e995026be2be5bb2f28d28d2ed02e152edfdd3b817a4058390fdc19030868a8bcca0de2e6c4afe43cf7c68d2a7a3d718fb84becbdc7fa1e73b69424bc90ce213bf6f770856c039f09553de891504e171a93576074af1661c7b41ae423c09d7384fc5dfc44c0c085b95613b034cc5f28a1a294f31fd0d0147c737f060fc8ce30fcd50738354e305a3c41699cffdd45a94828ce332093ccf477a87ee47ca2e404dbd7b7dc88fd73f41fb388bfb6a79b5029ed97104af9d09f8f5ecabc7e7a49c6d8ebbfd960724f8b3a4cd4973334e1991a55c377c166d14b6003d2849f06746f2a6afc9525f0c1f9b86fc183ae61db017a3858ae8169fc70a0e4d51f55b85373120bb9d6b1d9cb83c28f43417ead876f290f1dfccca589c4e97b0b3492a1655e9ee7e3d26b1df2ce0593eed79fde79c60e6db90cb3c2f4d6f54e93692aae942954f5b4d54616ceece194f7a0fbdac9a76211715d97cf3ed7333d125b1818034feaf8386f024770936900503cbcc4aef4f768a04db4f7a05aea9563c56c9ca53a1fb50e223c445466ff1691c68eb4e4f36eb15ea9b3e25367eb0040db39e09fb181370e61adaaaab567b749d48b0119752aa41d19e057611094010f3981f9b7a0e5720722597d7b51bff49c096d240ac383c488a703c55ed0f45fbad41cae78b8c25939087436abd84252088dd485fa4775f87acf8e61df9a9c7f18e3c620918f203fb750f99c86d6178759bc5d84dfebc53c9846cfa34bd6e116bf16b13748b55f68270ff0d59f5e6d4da8201fc9da3d297e6eef849e6e53d7f2931158885ce8f1dfeb36c11acb04e86ccf683de65cbcb26a98e8d4d3ed5dc8e1c1a885edad1e86d8c98fd0bd6764c98d3924f1aeec21264179998bb9e17239c3f5241e8fb737c354eed7cb14875eff98d91e80f2b67c3492c3d12f3f84e6494088acf6c7adde7a9ccf4a7c57fd89d23d76978c92976a852fef7f6a1c68ae95aa11c2d1e01f0e883f357fe96654e9f1a1293f5c35bd4b92c7ee76fa7efe52e0f0c95d7fbe63dd72b43fbef4e42edb4c8a80fe07c0bb59d64b17b9f279f5a01111250f2ec68847d102d424ffbedbaceb00fed2eac0d483383e033cd4b5435d55d3b16c069858f4f5f280f89fa06cd61cc14869258f467504414fd4f2c9c26a9e0f638e88db198f3302145be44f5ee3350fd6e4947e2af29ecbc492eefbba8eea00a5c733aac8a6c0d473a403d8161e365448588b45ae639df317a16f550340c9f9d0d35e3fd237c82db1c588a737492e4eb3fe530d306f8366a8256de39753b79e6519b3429a4bed81d72a3034468f79d61b3b57128b51113d8f370e7b69e91184ac4c4b5e28455c53866733492cc57d578c9797bb04264e21f7d573b2d9b932123abb79a66591d2f2646896f6424d918167a96942083d42d7cf4c09c91f300244a22b09d567b382aa80b342c5f72d66cab672398d62c283eb9c3d78b77a25d19fe0ebff44f41fc77f1e73046196e2b4326976ca95ae64a5d3176db119858d070bb3cc852dbc14d58b82d1bd99a6312f3a0f52aa871e624a4919e3ed51591686ebb93d594928a1f1dd283d280c28a795ce53b13b00ad8c246bc9b3e41d8a7fb2cae2a347f53ff0a0716c85470d3c6aa458dbc053bdec866f203fc6741e6c7583df7a1b48524196cb24387ae617b352d59c5e5b94f3ff5b7c0805ef395dbae9e7417ab49a609f063c3939491a69826f943fa7ed961dba235f2922c46a8f247badd453f5042d196e9f95286292cf6846a01bbf9e262c9e46de1fe27436a484087a13effb711e1db0ee17455a9ce88590896bd724293dbf7e673ff9ab2e5ea4fcc5a64e5b63f013d511b30fdd1cb31a60da21e5206a062e655ecb8249bf271fcd65080d6db26adc73b311753846255b6d106c08ba35e15de64b0f00209564d09bdf9675f1bd0d7a8b6992da53e96a14ed50aa893f35cb39beff7c9975c89e15db961978f752750b2e857d1db50c28722551216ffc19aa5d7dd5c022cbc91159f560d1668d1707ac7863ed55a11e7284f10ba3f2a3bbd098b77cbd662612d08adc66e72b862515c8fd2d3ce0aeaeceae38ea38c00b972fbbcc4fc26c53524c88a17c489f87989f4605bbc9e5d24a146791ea1fd884e9aec75c6c0fa5d3de7e0819f80aef76d302331d431eaa52f6cf2124cd1d4d6469254df1429ea8c928753abd197f9317a9f6954a1ee892d2b98768be25fdcc3713575b383cfe8c46f4a52fd013f979171e6174cecce223edc22cbd0bc3aa4cebed36db178f88ee9061a76ba5c78ae8182fa13f2a2bf8f3d8cb399d7aeef4fa86370f1743f9432ca16fab9261ec487c940dfe30134e889e86f80e435985e94beac4504f6cdd9aea15a6efb7b492b4e947f4ee8f37ebf96718dab1a1cee0bb716c0da163003aef58da5a7456285016290e83601b70f0f5cffbf099f86dd3144ed086310200f0f1e2e4e00d9f6a8468f6521b973ce1762969aef626aa7547e8d8e8b4c0e08d7a8cc9792d7085e9ace1996a76f69928c78cc205b43347ec8821da7d83e3b6173b1216fb65a5ea1f6f9489e6e338bacc5df03d4560aeed99398015d0d356f4e5ce0c1a8d8f080ed619eaf32fcdcd683c960e306509100ac2ee0fa511ef7d62a501d8c5d5cec210838e40cac13ebd7279794be88ff1acaeeb005a10496c17e0c2f2a913b20b27750cfb4e498b97cd8ad24c40608a3f94cd42177b56128daced45ec8266c879a54926b8ca852ae03d15b4ca16a7cf36fb89563729b026b50a70771ceb4ab11429ee432a19eadc25ae832d0975742b4ea954e966d76f4b08fb643ae0b350cc09b9f0575c4bb5dc0546cd9eece4be6da05a3a31e974afbe858d4341efcf76a1e5bdea1c6c5355f8c0c9808a1985ab1b19370bf585dfb3b8a66090b678440a314e894f1fa7c7546ccf35aa7935da84e63f35fda36ba20f36e0d7effd1faac52e3ba95c5a1cb80e358e83ba8c7d5e7f70ac24c3b588d52c025c4e3c10d0a9d0a9ca165576c93532170483426169a83b26d540e7edd56ac4ae2086dea20709299cb223689c114c1e6d086c6c7b8ffee0534f37e8fe879f4e54390832afae4dc169882a1becb93e99a2a9ec49450170ad2d25d199546167359a2fde00861f02b1491169c5fc8f100f94b1526733e0d9ea08640cfd11e77f96d6bd725635e0cd0779d6f29b84a10bbd56165aa78935b72f437ecaf947372b177080420fd88116ef6c4ef2e12b99bd0057596c91f7cd9a397997e71c94a76f51703976b80d0da8c6d10ff8783b211faa2e8a3009d0912bb723dae95092bd1b538e9071c8b1ad0ed30641a4937cdd0afedba6c775fe530e8d24444956e63e02da5fbb27bd66cb338c3f22cdd33323bbeea7d24e2af306d77730c443ae7b5d7a2faa4aa74e355c3ceec1cd7fdc159ec74a594cdf538e3e15b67619d7ed0d3c66930f96f3948e4acb8be35e49eb0508f83160181b135c9d5bae11976f69891c601cf7aea0222860c508c360e035d9e0313cfee85a9df4f42210571c91e6a26bacd022c4a89d14fd7b15207122fc6f6ebef47f3fd49b5b8468c93e5a0d5b912551f292c897e2113970303f5f722adadf95721dba83aa181c3d0db2e9c2151dccb511810fe643f807223df9af364b54e74252a0bf4fbe38ff96185be389848ed7d2bece89afd9a5a874770d6a63159085aa02407a059e057b14797f1f76a8b8efe9e3a3326328d88cc95677272569ec913210aee1b5a7d07d2c9bcbea95d28fd392972d49ec6046fe1d6e44b79982f9b01aacf7a90a52e1d4d031b2db86cee4128503e4c7cfbd8a3c7f19a78eae0c4dc87db07c121267c7e98fb0b44d7cf0303c6da4d6a28927b738c05974e2bbf4e855113a3c247caca3ab75fc140ca248bb6e4a22f3525e61d9f9fb48f423ea38754a66a4c482dc06cdc75ea54e3e3f1b3af31c0f8c84c7f822d60d02b155b564890ae9d3d1097761edafbca9f19617e35c118c601eeeabd37afec73631824f89fcfef23719e5e60ee4e282245e406d87b1d774bf745813dcf78a125d1e2f6210313bf06f2bece48fe3253babe1b2d5d07dbc313887096e68a029a5f643edd369443187bd9dffa158f7e5721126dec942c6492f5d227891d272797f27ce52550a9c38a05417c55b9d896635529f4534e87b4f49fb5fb30234a97bd50afeff834fa6a68f3bdaf69d4229cb249d8002526f724ba32424ff24897e19c486733c7c6700bd2f18d06497ce3df2258e1293e066591425e9c1eee5179c7d5f2ae6b1409344729592bc760229258cf19603f8ad39806793d19c155533b06d2458d65defde5bd3316a8a92591f4ed956d286b2f79880fcf7d7592fc003504242b9bf43b0973aa8ad725aa15c4d824a5f678b303f750ef73d1d6e8157028dc53ef87de0067a63e453d01c9e5b37026da414015d937e5e980c98ca5d27598db09297af18493ac3fc26a055ef897b18c8ff2c9642cc3ec1b03aa98d23a5ac8b185aac02d9038c1a363a87d8738070a51280ecd1ec0a3a1d492725f928719bb2e7db6a9fe9ef3e04fb6d62244b64d77ae325a178dc1a24659036cbcf05aba5adbb4255ecdd9b81bc10dc67ae3a0a5562c8c0accfd05a1fb6ec45ef0cfdcfc9a1eb558b636f04e14fce9d5c8cfcd7c76967afce2212ac0b5937d354de3ca412b0e832a6bcfe7c6827788b06a01629c43c3eb8bd734b3aff3bad318dea0508039ae4a0901fa9797c40b326176dc7acf6d75f55ffe981595d03b9cf4b96ea2bd7b8b9c4d2398dda40cd0073091d189c938297e2d2ff15ee560b8672513d3bdaac34623eef7c310d1a790163b4fc7cac07a9939fbb998afac998f24d71d6124536cd5ebe0eefb83f9e84e7e534d822c553de19166cebbf27aca82877fbe931b77b079d9e85de5ecd08b335713e44aa2f434c5019d23b2cedfb21caf961a4f149048dbdccfa2f00d0aefb3ed78b840aac608c8ae56ae20586ce94c8565ff04a8c7ed43fd5ec7ff964f713a7768ceb57c20722e98d0b09dce1f2428aa3755798edff15857a089c07d3f1c5544164e1dfbced6a0e8a5be9484d0bdc20d5116aab18a7c73c25f043dde6da73e2f04bf73f0f0ae242b6d7378b5723e3e72eebc0124ed810bed6a70108b0abaa984af841ab9726b78501baab13eeccfecc538008c5d717d287fbde7d53c1012993fa0165016cda15178dd1fe9993bd955ea3c143a00dae54e6e621c5a467d6b21c931f3ab418814542754d9fa03874709528ce301526638a5c4923867ce79ee1967228c00aa80e66481f7fa5f23c83c6a877976c56c1cd4f9e585fca06714e6683511191bb3d98b492b24cbb1f4502028a9c85fe961cebb8b01ae0bc8cc2da80e6ae9769efd0b21d9ee4ae8b5acea90847e3921c183c83903ead11bc570b62c542cc99f94e87e472b1acaea1132e601b671a9ab791187b5a431c67f435a66749403b11269fcc6e072fa2faa0a0ba9d3a6c98249649cfc619bbb394d9f23df2051ab5ead365b1d0dac5d99ac83b6da90c0f1414726d6c01e887c0b4ab7a34ea02fc66046625f2d1029287b5b3d0c743cebde9376d53fc1fef40b6f3a5576e4eddb6c847f9d97d5db01bf1e2c76ce0b5a95c6bc7a70517e7bec261bd50256e833e1e35af4adea5f0f24d7d055df82b8af120ca44a35ff9082bd08e4d2d70ac25923e9d5f5085fe0a9a88f405f6bdf49dd74c7ba37a497432f7cd63dcb860b66155eef9dc2baec019a53d80b72ade41c585431de93c074ce1d11f0104dc9b8046c769d227378fa341fe9c4a2e6e0e21311095a6f65dbf8fa4e50c5dc8c17f9d8eb93283f73049fd6f36c063af1d1823b7cc6b7257d433c84dd29be1b9ac6cbb03200e6d059525aa8fb19bb48c83ef58f4e06de6f2ae5b7c4d9df99d3ff0de53202cc7eec42b167953936bdefd7c56baa2b8a1bc8b3c87</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
     </div>
 
     
@@ -411,7 +358,6 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#driver"><span class="nav-number">1.</span> <span class="nav-text"> DRIVER</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E4%BD%93%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text"> 总体描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">1.2.</span> <span class="nav-text"> 特点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tia"><span class="nav-number">2.</span> <span class="nav-text"> TIA</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E4%BD%93%E6%8F%8F%E8%BF%B0-2"><span class="nav-number">2.1.</span> <span class="nav-text"> 总体描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-2"><span class="nav-number">2.2.</span> <span class="nav-text"> 特点</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

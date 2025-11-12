@@ -46,12 +46,12 @@
   };
 </script>
 
-  <meta name="description" content="Q1: ANSYS如何进行CPO的信号完整性仿真？ A: ANSYS的信号完整性仿真是分级的： a. 最顶层的system级（系统级）仿真具体通过Circuit模块进行仿真，把光学链路，发射机，接收机抽象为IBIS AMI模型，进行链路的优化和分级。这里需要一个模块把链路模型抽象成AMI模型，给到系统的设计者进行均衡算法、协议设计方面的研究，但是具体的抽象方法暂时不能提供给我们。 b. 中间层的c">
+  <meta name="description" content="这里有东西被加密了，需要输入密码查看哦。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="仿真的层级划分">
 <meta property="og:url" content="http://example.com/2024/11/16/%E4%BB%BF%E7%9C%9F%E7%9A%84%E5%B1%82%E7%BA%A7%E5%88%92%E5%88%86/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="Q1: ANSYS如何进行CPO的信号完整性仿真？ A: ANSYS的信号完整性仿真是分级的： a. 最顶层的system级（系统级）仿真具体通过Circuit模块进行仿真，把光学链路，发射机，接收机抽象为IBIS AMI模型，进行链路的优化和分级。这里需要一个模块把链路模型抽象成AMI模型，给到系统的设计者进行均衡算法、协议设计方面的研究，但是具体的抽象方法暂时不能提供给我们。 b. 中间层的c">
+<meta property="og:description" content="这里有东西被加密了，需要输入密码查看哦。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-16T06:20:17.000Z">
 <meta property="article:modified_time" content="2024-11-16T06:20:54.466Z">
@@ -262,14 +262,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Q1: ANSYS如何进行CPO的信号完整性仿真？<br />
-A: ANSYS的信号完整性仿真是分级的：<br />
-a. 最顶层的system级（系统级）仿真具体通过Circuit模块进行仿真，把光学链路，发射机，接收机抽象为IBIS AMI模型，进行链路的优化和分级。这里需要一个模块把链路模型抽象成AMI模型，给到系统的设计者进行均衡算法、协议设计方面的研究，但是具体的抽象方法暂时不能提供给我们。<br />
-b. 中间层的circuit级（链路级）的仿真通过Virtuoso（电学链路）和Interconnect CML模型（光学链路）进行联合仿真，得到整个链路的信息，例如通过这个系统的时域信号的waveform信息，抽象成AMI模型提供给系统设计者。<br />
-c. 最底层的物理层、器件级的仿真通过FDTD、DEVICE、HFSS、CHARGE、MODE、HEAT等模块进行物理场的仿真，可以通过OPTISLANG进行参数的联合优化。通过CML compiler 把结果抽象成CML模型，提供给链路设计者进行链路仿真。此外，Ansys RaptorX对封装的仿真也可以抽象成CML模型放入virtuoso进行链路优化。<br />
-Q2. 在信号完整性之外，ANSYS是怎样进行热管理、电源完整性、电磁失效分析等方面的仿真？<br />
-A: 热管理也是很重要的一部分，其仿真也是分级的，不是通过Luemrical Heat进行仿真的，主要是通过Power Artist，RedHawk-SC ET，Icepak等软件进行联合仿真优化。这个方面也不是专家，就没有过多的进行介绍。</p>
-
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="5fd71a7a34814f525e2811b51a15f17aa9af8a209d4189423f177403f57b045f">5852e6e1d18a5dbd7f6ca8ad98f80baae77186462e210a016a09f4d5af8b4af8cb8e48bff6cabdb5b7749d1347cbab44d802255c72fb3ac67af87f646efc017a64f7120ad55ea1c5841e86360d8efa9d522ee6191711a626337fccbf6dbb56265e156989fca79d951b6f6f86fbc5ae61986fb9910d99d32e659c0292669bbdf7590fe3597cef047f4dff1a9201172af1092327d13f089ac2a6c52cd8f245913ddd68d7e3f136836cd0a6c0a6f2ced42848b240b27c3d497f71254bb0c0e3c0310b50da6ce358185a842e94cb43bf0855ebe4c481f326fe3f0045d4679b4f78be92e6dd1d6f5cf0c78b77c66670f40c51ebaaa418f3d67d6501009a551857386eae8db298955be2816648eac00898bae08dd387f53d98e39535368b86157ae7a05bfe7efcab331e5c5159d2eefa1a361beb90e10352d6cefa4b94822da3ce544b964129988ed81fb734e93a38695494e6464c551d75d42dbe5172695eb9a582603806b0d71f035b0e369b5b5e63fe450b47157e5cc15baa033cd25417dd2f2844600cda45d32b3d1aefddf1fd015cd8cf5aa589771fab526be2fad69ef5ebf41d8065fc4b4caa83b210a4e376ea9e89f857c2516fd837abe1e49c6e595c91016cfd52bda5275c66aa808b8bbf7cbbae998c0e7346d2a60309321aef99c7a75a089e958440cbb3185f2b1dd7374a94f5eb06bb0ab58e13f13aaef59cd49ffe03d69a71a8535b5ceb75c15f8a539e2f6620d002a9e0a15b82f159380d68089321eae1e55fdc244ac8f62aa51fa3a97617b58ad5f7e38f4bdf98ed11a0c87cfee911aa31be212f8c60c31526796bafb3d63c393e836988ed8ac1d497ec8b13082b6091fa2212a2276131929fc1b4abf625296ce200cbbe4993de60d20108e8c4a4fd6acf82b460d00ce7918ca262c4b295cf4f254dec123dac5402dbd6902dcb448f434a62e80ed726775489521e752f06dd348dc28073cdb3e19d319656027113b994e557633fdcd571673bab2131b7a11ff6783770d262bedb753841213fef741a2cdd8a130e2d6938f8cc4fcf810366a7ccde404228e30750baf0803aceab746fc0e6e011449d48252a1921d199f5213991766d2dc00462af2dcc5e59faab38f03fb133367a36bc94b3354f901769a7ba72a636fcd6a14e1240a3b417e214670869bfe6defdccee33e913a82607f45e59933f6eb7291be3473435a854fc8a2d2e92237ffd84b798ba006507ef7b64ff8fd0327dfb6aee4ad3dc8711c75db6e2275292f4e0b73ef02906d4fb43133a921651390208d5dcccef2e0a7a7ec8204952dc2f6c78e2094fb09f83ced39fa7aaa9da7b18e56712881dd9a34a7f5a1e7713bf88486e9368b0b1e2a3a74034813ab57d4f36e626331646bedec99f8e2acd0e170d9469046b0a55824dfcf331a9100d67a40c528ac245fac5761799b6c3e5339927b21e98cb712790bdb4cc26b955e44434b4dfe5c5df33a2f7d1e7cfa9367bfa6b79fce86048d4d64ef477afa3e572a0edd5c902546b6c2926c27440f0374eaab69dde4312e9689fefb700f05f67091db8ae99ac92f3e6667a0009a78447ab2d10f788ead5b7472e7daa432a41171b0b7620d38f1a93e27f379bf3a56c0da4595da2c3df5f9373973f366274eeb02707d3edd06ec46e21d05c664ba0414e82221fb9e531219478cbd1bee315a2ddadad1358fba5540fac355083bdd129b30f5fca85aef885466c6620e0b1165fe2e70a31d4834acb7d77bdc0c935c14517ddac2a07d9917b0dee6afa2fff3fc93225d4cd1942c7a2599a06273124bd006fa2e8df0f9cbe718161a7b5d157db34901b2da18faa64a34bae425a6f137500b8be101cf0359d2cacd0a9b5742b4ce279eb8ba6ded175f99a785e4fc2963e26b3b8f4d35dfc04d4bfc1941ec0ecbd10c0eb569527e08a3409307a699db75843e1a7f6cf734bcb0cbd8bcefe6cfa249e063436a776ac6cbaf764f9b928a26628083a10b9befbe5e9d090e8a00656f13d4ac70e25f16a70e61ff8047d697bdcbfb4fad4292d282129b08a0f3f09082f06471859fb4416e8de63ccd7d1776eb3c5bd08fc70be81e31a92894a8252cd62bd0e5796f78e688a4db54923d7005f43aedbf924c6ca4e1b9e8e785cdae6eaa86c8baca98bbb9a0d755fd828b789745e6028182becbe2c5fadd4f35acfea46d68602288980885efa9ab9408399592fbc77d0e3f32c724dd070ebbca0ef83f6331e8e2797e465938117f4de7408c790facaffbc</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
     </div>
 
     

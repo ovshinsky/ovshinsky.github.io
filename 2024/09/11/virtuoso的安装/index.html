@@ -46,12 +46,12 @@
   };
 </script>
 
-  <meta name="description" content="安装虚拟机VMware 下载贾老师给的虚拟机镜像  密码为eda123456   把镜像加载进入VMware 【选择我已移动该虚拟机】 运行virtuoso 【终端virtuoso &amp;】 设置共享文件夹  ​		虚拟机-&gt;设置-&gt;选项   添加lumerical的library   添加外部工艺库 ​	在桌面启动cdb to open access translator ​">
+  <meta name="description" content="这里有东西被加密了，需要输入密码查看哦。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="virtuoso的安装">
 <meta property="og:url" content="http://example.com/2024/09/11/virtuoso%E7%9A%84%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="安装虚拟机VMware 下载贾老师给的虚拟机镜像  密码为eda123456   把镜像加载进入VMware 【选择我已移动该虚拟机】 运行virtuoso 【终端virtuoso &amp;】 设置共享文件夹  ​		虚拟机-&gt;设置-&gt;选项   添加lumerical的library   添加外部工艺库 ​	在桌面启动cdb to open access translator ​">
+<meta property="og:description" content="这里有东西被加密了，需要输入密码查看哦。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-11T06:53:35.000Z">
 <meta property="article:modified_time" content="2024-09-11T08:12:40.539Z">
@@ -262,48 +262,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ol>
-<li>安装虚拟机VMware</li>
-<li>下载贾老师给的虚拟机镜像
-<ol>
-<li>密码为eda123456</li>
-</ol>
-</li>
-<li>把镜像加载进入VMware 【选择我已移动该虚拟机】</li>
-<li>运行virtuoso 【终端virtuoso &amp;】</li>
-<li>设置共享文件夹</li>
-</ol>
-<p>​		虚拟机-&gt;设置-&gt;选项</p>
-<ol start="6">
-<li>
-<p>添加lumerical的library</p>
-</li>
-<li>
-<p>添加外部工艺库</p>
-<p>​	在桌面启动cdb to open access translator</p>
-<p>​	外部工艺库需要在另一个不同文件夹中</p>
-<p>​	这个会把之前的工艺覆盖</p>
-</li>
-<li>
-<p>运行virtuoso的spectre仿真之前需要在terminal添加文件路径：</p>
-</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:/opt/cadence/INNOVUS181/tools.lnx86/spectre/bin/64bit</span><br></pre></td></tr></table></figure>
-<ol start="9">
-<li>更换yum的镜像源（×）
-<ol>
-<li>有时候需要修改代理</li>
-</ol>
-</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 更换源：</span></span></span><br><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo_bak</span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line">yum install epel-release</span><br><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
-<ol start="9">
-<li>
-<p>修改配置代理，使虚拟机可以使用主机的vpn</p>
-<p>ref: <a target="_blank" rel="noopener" href="https://blog.csdn.net/nomoremorphine/article/details/138738065">VMware Ubuntu虚拟机 使用主机VPN 配置（简单、可行）-CSDN博客</a></p>
-</li>
-</ol>
-
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="cbaf51d7582cfbd3671050280aea8f6398bbd77d33c296b304f96c9b0a570621">5852e6e1d18a5dbd7f6ca8ad98f80baa51a390d21e1de3e6344e87f2345de1ca482fbfbed506a751cf2bc7238d40115c3e09881ebd042318aa90e4c1d96c2bf04c17d9744acff0f5b6ee2ba2fc5ae6157aed568167541215060bcebbdb86c9966f1292f91b157e47848f1d2b308f97fd1bd05f89e91d7ec920dbfbed219ce922b23a885b6b356eb2c1a4320ee8c979f4a133936500aebecc0420c43e0cc9e59a02833dd97f84f72818bcf6a5b5448b59f50ed0439eecb7cafeb75d596c61abdce57d49484378c97a62fd412432077ee0ba5b4fe9bbad07af44165241f811ce265519bdb70a645eab83e472d1d3b6f9173cfa7e97a086b3cc6b8d6c1fccc699082ffd6e9e3dcc13adcc3e71dd30121feaa0427dcda18f6def239790def7a774bb63dbde1492cfa6f4100c76b75b6be9fc9b5884b83d344f7780b228a6ed0f87bcd166e089b785e4873cac5bfedb722547e592eace6bea28a529575a52334c4d38b0755ce8755fdeaab10e8883905fca60334dcbd6822d00823bd1220c1c0edaf363abaa8bac4aefb80bed120ac2b0f36db37a5e6e91a325b3be58080820f3f44438e4d91905c5dca88b5437efa105c8158a0c911706e95c02a4425b25d3a5f80d674db18df4e3f1a600f74e0a2148ffba05d501fd4619409a2d67554f32fb889d6d636b2bba8cfda911774190b8de3685c732ad1342a16d6e36ede6682e9309532849358a839d2f40a802dbcf0c3a4b63f7ab7fe740a0fe97bcd75ce1cc135c1931042b231991882f905b1e712b59965f06e57c1541a8cbad7daa409f16fc9503592e20cf15cc3af6d92670961d0ba60da6102b88d93b2607262549237fbf06ae64289058be95f795d2c3727535a2b797a5df5483616385a77c96d20ac08a9ec26e629dfe4f10428dfeaac7fc3781586b754cc8f551581069e5f9062a285eab6be0b247a0948634f74a2954c2baba820a97f87ac299f6c988318e66b047c84e2d395d9565766a1a045397a772b78bdacad71e1bc88911086edca6d8fc350b785a2f071da7ab384137e3c9fb050a4a20c4fdd242ad427549cc8fa4963ecb14f2c91d4cb00c04a0dc9654fc735d037736308b7e5c4cb400593bd651a9803533df7150f27f44c1a992a347212842e8a17c5ec7851fbbcf9db3a4d3a7095b455518da573e99df1c155a08863fcaff5658c49bcaf1d5577ee04af2e2efedc88c8428dbd408d9622c4b8576bf5425dafac6ca655876174469649a5df0f17dc789a474d8be0b4a0ad3c607c9b317c0bb02f0899ae3ca242e3c8dc80840e8f7ea38498a6e41c1a23a3a4f7cf50401077222f61b8d7ae4b2ce6dc4f23d09c01ba621d09ee7c14a6b5c67ab0f293f30b51d1f5bf29a7647371fc60772c81da69bc0156e1fc5feb75a1cecc3ceb5d855611471566d4b41546154fc744287a7c6b9ac89775831256e2cc59cc7b276d8860bf8fabcb6f79cbe4e9299338d718da9e855c4cae077c96f50393816693d3357ce3e80bdf8a8d4546fb4facb5e6c905816351b99fc3a92d516d54a94dfbe359fbe45f0c8636243b7b91815ca49ccdabeac5c849cab633e1638ba18b356104a1a6c31b3f2abc5a0b138b19fc80e6bb16c525fa0d23829a74f78ab9cf607100c2fc84f954ab696a4bca3e0ef5fc0b33d71db93920d6ccd4610139a4b8da9e33845d956b96c4ffd2c343a1f7c196a294cc3ab9ae8213db35f87dcd55e4a10760515c99f03eea09cd8dc11dc2f2a9f82d789ef3bd62a608df44f528335efdf971e9d8fba5cb83862b2e68bc13c7c84a73af73eb30c48cd1e28a8936b52c53a6a9fc4a1b55067828c6bf75329a457425a46077dc603dfdfb1ce0480debec02997fb6eb466cc74ccf0c8c0852fed287f6d1871ef0ae8c3c5e4f8584cddcbceab0194b98e0331d6c4e7d24bb07dbb509159bce1a13624e251f5b1166d2c4de1ef8c432d288ac2350e864e410726b9fdfeafed308935d11d52e1954d1412a81b15fdca4ba5efdbb2c9cf90b5c491d823079a4b67c280e64292e5b36c05b559cae0b909b8e938afd5c5cffeb03aff3489145ed4f7ae1f0e69bec3e5332c37125bc3b5482e12ae953ac8a4967388d0ab1737ee57f0c899de0d2f2aa7371479e95c428558883b5cf207f4edcbd20c41c4cfb334d594d6d71d869ddf0c4935cd699570c1542adfe17283d6f9189df3163fad7f04123cf639ad642f47c98117c6eb7c9564d435d1b2258c27a39138644fb774f19676738bbf2aa1a71d8a629256ab17ba51eedd9ae3da8d4fd4742b6bf5db31714594ce48f10f3c23275d1e51486d7a3b954391475b8d016f870d46a641fe7c88b5e983bdb899204e79eae58f5e2da7f2e60a8bd8084a26526b9d7a7368a9d30e6ee66fbe7735e3c49279e0aea2cc0d4b8d252474e4de2e9af81fcba3aff6da096fd3e1fbad16bc421e32a965a20e2e3c68e767316cdbcd8f21bea0121ba9a2ae0696722bc39a8219f26d5e29de40948ed85ae51c9ef7bb976928930f7ab135ac4a6dd075531431d300269b59b301be72fc3c5cd81ab0587944e234e6243336ef66fdf8d0cae8fa89af1ca3f875191454918c4ad844132621d6fb47d1098f27d58d619d04a38e63f0e65f4d3fa1b3765e57f71ac2eca7ecb6e28e3ae8c5dbadee594408fc287dbedace811a7bc143a8e4ad6e5d12ad2ffa3d3aa6d5a4cd2becc4d57012044cf357550cd7577c33ffdc73abc94e29b920cf8f42b74d118185ae87ec0c212ed8e7ad563e61e82019dbbc274ebe3392e819a69be8141ffd97842db3e69c6efcdbf11cafe0c22fcd87001d59d1c3f09f1b8cbdb359da3e093f1bafc733f6edfdc5e3f1bb31e01b0b93b14381655ed9966733c13e44d45bab8cb002f1b38fbefb997451a0d4fb1d9159287d814db422ef27bf7db3ece793247a8fef25b87998e92581561f36157de38de63105eb755f6d70a5dcb8cb41ca3603bf394dbf5441052f19539ba2f46c9051ad0cb3f9e7ec8bce725b1e644fcbe94ffce9dce88fa41a55aacd54fc190d774026d791ef4e8799c575343d4cba3c8ce9c489df599cf39c2d20653cd29fe1b9a808935405841dce57b938b1f1</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
     </div>
 
     

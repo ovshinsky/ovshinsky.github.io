@@ -253,9 +253,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>我们前两周主要讨论了光电互连接口的技术方案，然后研究了慢光微环调制器的设计【可以试着先看看能不能用来提高热调的调制效率，这样不需要掺杂也好加工一些，可以初步验证慢光的效果】，然后折腾了一段时间的Candence Virtuoso，初步熟悉了Virtuoso的操作，但是做Virtuoso的光电片上回路联合仿真需要一些Library模块我们目前没有，而且Virtuoso运行在Linux平台上比较折腾，目前贾而穑老师在联合石泾波老师解决这方面的问题，后面可以给我们提供仿真的平台。此外virtuoso似乎不太方便用于更上层的整体链路仿真【更适合电路的仿真，缺少一些通信的仿真模型】，和胡昉辰老师讨论之后，我们准备继续关注ADS的光电联合仿真【把具体的器件参数用其他软件仿真并提取到ADS中】，准备先<mark>打通Lumerical和VPI之间的仿真</mark>，使胡晓老师、杨丰赫老师他们仿真的器件【通过工艺验证的器件模型】可以用于我们光电混合链路的设计，完成这一步之后面进一步完善我们的光电联合仿真模型的搭建【把器件模型用更具体的方式实现，以使模型更准确】。</p>
-<p><img src="/pictures/dfadasfasdfdsafewrfasdfre.png" alt="dfadasfasdfdsafewrfasdfre" /></p>
-
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/09/13/%E4%B8%8B%E4%B8%80%E6%AD%A5%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%9220240913/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -333,28 +339,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>在这里，我们在Cadence Virtuoso中采用Verilog-A模型仿真了一个4脉冲幅度调制（PAM4）收发器。仿真了其频率响应谱和瞬时的眼图。</p>
-<blockquote>
-<p>仿真这个例程需要Spectre201（ISR17）或更高版本</p>
-<p><img src="/pictures/image-20240912171247351.png" alt="image-20240912171247351" /></p>
-<p>我也不知道这个版本可不可行 T.T （好像不行）</p>
-</blockquote>
-<h3 id="概述"><a class="markdownIt-Anchor" href="#概述"></a> 概述</h3>
-<p><img src="/pictures/360102402733.png" alt="workflow_cadence_interop_verilog-a_pam4_v3.PNG" /></p>
-<p>我们仿真了一个PAM4收发器，采用Verilog-A 模型。模型采用Spectre进行仿真，光学行为通过Verilog-A方法进行仿真。</p>
-<p>此回路是一个PAM收发器，包括一个连续波激光器，一个光学微环调制器，一个光栅耦合器，一组光波导，一个光探测器，一个调制器的电学驱动回路。</p>
-<blockquote>
-<p>Verilog-A模型存放在库<strong>pam4_va_example_lib</strong>和<strong>pam4_va_example_primitive_lib</strong>，这些库包括模型符号和组件描述格式（CDF）设置。请参考 <a target="_blank" rel="noopener" href="https://support.lumerical.com/hc/en-us/articles/360037565953">CML Compiler Product reference manual </a>页面获得如何建立和使用Verilog-A模型的细节。</p>
-</blockquote>
-<h4 id="步骤1建立库参考和原理图设计"><a class="markdownIt-Anchor" href="#步骤1建立库参考和原理图设计"></a> 步骤1：建立库参考和原理图设计</h4>
-<p>将Verilog-A库和Virtuoso内置库添加到Library Manager的库路径中。然后，在Cadence Virtuoso中使用Verilog-A元素库设计电路原理图。同时还需要使用Cadence Virtuoso自带的<strong>analogLib</strong>、<strong>basic</strong> 和 <strong>opticalLib</strong> 库。</p>
-<h4 id="步骤-2配置ade-explorer"><a class="markdownIt-Anchor" href="#步骤-2配置ade-explorer"></a> 步骤 2：配置ADE Explorer</h4>
-<p>在模拟设计环境（ADE）Explorer窗口中定义设计变量、监控的输出端口和分析参数。</p>
-<h4 id="步骤-3生成网表-运行仿真并可视化结果"><a class="markdownIt-Anchor" href="#步骤-3生成网表-运行仿真并可视化结果"></a> 步骤 3：生成网表、运行仿真并可视化结果</h4>
-<p>接下来，我们可以生成网表并运行仿真。PAM4接收信号的传输波形和眼图将会在结果窗口中通过直接绘图方式呈现。响应谱也将生成。</p>
-<h4 id="步骤-4生成响应谱可选"><a class="markdownIt-Anchor" href="#步骤-4生成响应谱可选"></a> 步骤 4：生成响应谱（可选）</h4>
-<p>通过扫描光源的工作波长，可以在时域瞬态仿真中生成电路的频谱响应。在此步骤中，我们使用这种方法生成电路的频谱图。</p>
-
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/09/12/Verilog-A-PAM4%E6%94%B6%E5%8F%91%E5%99%A8-virtuoso%E4%BA%92%E6%93%8D%E4%BD%9C/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -426,20 +419,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>REF: <a target="_blank" rel="noopener" href="https://optics.ansys.com/hc/en-us/articles/4417886316819-Cadence-Interoperability-Overview">Cadence Interoperability Overview – Ansys Optics</a></p>
-<h3 id="概述"><a class="markdownIt-Anchor" href="#概述"></a> 概述</h3>
-<p>为了促进集成光子学设计生态系统的发展，Ansys Lumerical 和 Cadence 共同开发了用于光子组件设计和电路设计的设计工作流程，充分利用了 Cadence 和 Ansys Lumerical 的最先进设计工具。</p>
-<p><img src="/pictures/5490284279827.png" alt="EPDA_overview.png" /></p>
-<h3 id="器件设计流程"><a class="markdownIt-Anchor" href="#器件设计流程"></a> 器件设计流程</h3>
-<p>为了光子器件的设计，我们打造了一个Virtuoso layout Suite和Lumerical多物理场仿真之间的桥梁，用来提供无缝的集成器件设计开发环境。我们同时提供了Lumerial CML 编译器，其可以作为光子紧凑模型开发平台的中介仿真器，从而把器件的仿真数据转换为紧凑的光子PDKs。这些模型可以用在我们的器件设计流程中。</p>
-<h3 id="链路设计流程"><a class="markdownIt-Anchor" href="#链路设计流程"></a> 链路设计流程</h3>
-<p>为了实现电-光集成链路设计，我们已经把Lumerical的光子回路平台和Cadence Virtuoso结合在了一起。此设计环境允许使用者采用Virtuoso原理图编辑器来设计层次化的集成电路原理图，并且可以用Virtuoso 模拟设计开发环境（ADE）进行回路的仿真。</p>
-<p>从ADE中，用户可以通过后面讨论的两种设计流程来进行光子回路的仿真，并且版图文件将被反向标注回原理图，从而可以用于版图后的仿真（post-layout simulation）。</p>
-<h3 id="采用interconnect模型的链路设计"><a class="markdownIt-Anchor" href="#采用interconnect模型的链路设计"></a> 采用INTERCONNECT模型的链路设计</h3>
-<p>光学回路的时域/频域分析可以通过Virtuoso运行，通过将INTERCONNECT视作一个ADE的仿真引擎。用户同时可以实现全系统的仿真，包括他们的光子回路和电学回路。同时采用Spectre驱动电学回路和INTERCONNCT驱动光学回路。</p>
-<h3 id="采用光学verilog-a模型的链路设计"><a class="markdownIt-Anchor" href="#采用光学verilog-a模型的链路设计"></a> 采用光学Verilog-A模型的链路设计</h3>
-<p>全系统仿真也可以通过采用Lumerical 光子Verilog A 平台进行仿真，其提供了建模器件物理和光学回路的能力。这里，采用Spectre驱动电学和光学的回路设计。</p>
-
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/09/12/Cadence%E4%BA%92%E6%93%8D%E4%BD%9C%E6%A6%82%E8%BF%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -517,44 +505,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="绘制了反相器的电路原理图并且完成了简单仿真"><a class="markdownIt-Anchor" href="#绘制了反相器的电路原理图并且完成了简单仿真"></a> 绘制了反相器的电路原理图并且完成了简单仿真</h3>
-<p><img src="/pictures/image-20240912143816623.png" alt="image-20240912143816623" /></p>
-<p><img src="/pictures/image-20240912143837503.png" alt="image-20240912143837503" /></p>
-<p><img src="/pictures/image-20240912143850534.png" alt="image-20240912143850534" /></p>
-<p><img src="/pictures/image-20240912143924560.png" alt="image-20240912143924560" /></p>
-<p><img src="/pictures/image-20240912144837620.png" alt="image-20240912144837620" /></p>
-<p><img src="/pictures/image-20240912150815156.png" alt="image-20240912150815156" /></p>
-<h4 id="1-cadence-virtuoso虚拟机安装方式"><a class="markdownIt-Anchor" href="#1-cadence-virtuoso虚拟机安装方式"></a> 1. Cadence virtuoso虚拟机安装方式</h4>
-<ol>
-<li>资源链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Hhy0yxjRnsvdTMVRJ0DDaA">https://pan.baidu.com/s/1Hhy0yxjRnsvdTMVRJ0DDaA</a><br />
-提取码：7i29<br />
-安装教程和虚拟机解压密码：minlei618<br />
-IC618解压密码：minlei816<br />
-用vmware导入虚拟机，选择 <mark>我已移动该虚拟机</mark><br />
-用vmware可以设置共享文件夹</li>
-</ol>
-<h4 id="2-lumerical-工艺库"><a class="markdownIt-Anchor" href="#2-lumerical-工艺库"></a> 2. Lumerical 工艺库</h4>
-<p>运行virtuoso，可以添加Lumerical工艺库</p>
-<h4 id="3-绘制原理图"><a class="markdownIt-Anchor" href="#3-绘制原理图"></a> 3. 绘制原理图</h4>
-<ol>
-<li>快捷键 i ，添加conponent</li>
-<li>快捷键w，添加连线</li>
-<li>快捷键p，添加引脚</li>
-<li>快捷键l，添加label，可以用于较远的引线连接</li>
-</ol>
-<h4 id="4-创建symbol"><a class="markdownIt-Anchor" href="#4-创建symbol"></a> 4. 创建symbol</h4>
-<h4 id="5-test-branch"><a class="markdownIt-Anchor" href="#5-test-branch"></a> 5. Test branch</h4>
-<p>添加电源和激励，用来进行测试</p>
-<h4 id="6-ade-l"><a class="markdownIt-Anchor" href="#6-ade-l"></a> 6. ADE L</h4>
-<ol>
-<li>tran 仿真</li>
-<li>选择set library model，为仿真选择模型</li>
-</ol>
-<h4 id="7-眼图绘制"><a class="markdownIt-Anchor" href="#7-眼图绘制"></a> 7. 眼图绘制</h4>
-<ol>
-<li>在导航栏中的measurements -&gt; eye diagram</li>
-</ol>
-
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/09/12/Cadence-virtuoso-%E5%85%89%E7%94%B5%E8%81%94%E5%90%88%E4%BB%BF%E7%9C%9F1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -626,48 +585,15 @@ IC618解压密码：minlei816<br />
     <div class="post-body" itemprop="articleBody">
 
       
-          <ol>
-<li>安装虚拟机VMware</li>
-<li>下载贾老师给的虚拟机镜像
-<ol>
-<li>密码为eda123456</li>
-</ol>
-</li>
-<li>把镜像加载进入VMware 【选择我已移动该虚拟机】</li>
-<li>运行virtuoso 【终端virtuoso &amp;】</li>
-<li>设置共享文件夹</li>
-</ol>
-<p>​		虚拟机-&gt;设置-&gt;选项</p>
-<ol start="6">
-<li>
-<p>添加lumerical的library</p>
-</li>
-<li>
-<p>添加外部工艺库</p>
-<p>​	在桌面启动cdb to open access translator</p>
-<p>​	外部工艺库需要在另一个不同文件夹中</p>
-<p>​	这个会把之前的工艺覆盖</p>
-</li>
-<li>
-<p>运行virtuoso的spectre仿真之前需要在terminal添加文件路径：</p>
-</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:/opt/cadence/INNOVUS181/tools.lnx86/spectre/bin/64bit</span><br></pre></td></tr></table></figure>
-<ol start="9">
-<li>更换yum的镜像源（×）
-<ol>
-<li>有时候需要修改代理</li>
-</ol>
-</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 更换源：</span></span></span><br><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo_bak</span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line">yum install epel-release</span><br><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
-<ol start="9">
-<li>
-<p>修改配置代理，使虚拟机可以使用主机的vpn</p>
-<p>ref: <a target="_blank" rel="noopener" href="https://blog.csdn.net/nomoremorphine/article/details/138738065">VMware Ubuntu虚拟机 使用主机VPN 配置（简单、可行）-CSDN博客</a></p>
-</li>
-</ol>
-
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/09/11/virtuoso%E7%9A%84%E5%AE%89%E8%A3%85/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -739,71 +665,15 @@ IC618解压密码：minlei816<br />
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>DATASHEET: <a href="/download/DS000147AV1 ISG-D5680H-Advance.pdf" download>Driver&amp;TCU</a> ; <a href="/download/DS000120AV2 ISG-T5783-Advance.pdf" download>TIA</a> .</p>
-<h3 id="driver"><a class="markdownIt-Anchor" href="#driver"></a> DRIVER</h3>
-<h4 id="总体描述"><a class="markdownIt-Anchor" href="#总体描述"></a> 总体描述</h4>
-<p>ISG - D5680H是一个高性能8通道的53Gbaud/s差分输入/差分输出的MZ驱动芯片，可用于800Gbps的应用。驱动器可以支持的输入信号最高为600mVpp。在线性模式下，器件的最高输出电压摆幅为3.5Vpp，具有较低的总谐波失真（THD，Total Harmonic Distortion）。<br />
-ISG-D5680被设计为<mark>与调制器芯片进行DC耦合</mark>。芯片的尺寸为4.07×1.57mm。通道间隔为375μm。芯片提供了SPI的控制方式用于设置驱动增益和偏置电压。同时可以监测驱动芯片和调制器之间的直流共模电压，用于精确设置光子芯片调制器的偏置点。<br />
-芯片能够控制硅光芯片的加热器，并且能够运行两个无关的CW激光器，形成自动功率控制（APC）回路。<br />
-ISG-D5680H支持以下两种架构：</p>
-<ul>
-<li>ISG-D5680H 倒装版本</li>
-<li>ISG-D5680HW 引线键合封装版本</li>
-</ul>
-<h4 id="特点"><a class="markdownIt-Anchor" href="#特点"></a> 特点</h4>
-<ul>
-<li>支持速率最高可达53Gbaud/s</li>
-<li>差分输入，差分输出</li>
-<li>射频输入：AC耦合；射频输出：DC耦合</li>
-<li>特征带宽为42GHz</li>
-<li>低功耗：360mW/channel @ 3Vpp（与Modulaor进行DC耦合，包括调制器负载）</li>
-<li>线性输出最高可达3.5Vpp</li>
-<li>通道间隔为375μm</li>
-<li>芯片尺寸为4.07mm×1.57mm</li>
-<li>TX LOS dectect：发射链路信号丢失情况检测</li>
-<li>可调TX LOS阈值</li>
-<li>支持自动噪声抑制的工作模式</li>
-<li>调制器共模电压监测</li>
-<li>SPI数字接口</li>
-<li>硅光芯片的热调控制</li>
-<li>CW激光器的控制</li>
-<li>MPD电流监测</li>
-<li>可调低频增益：12~19dB</li>
-<li>可调均衡，最高可达8dB（26.5GHz处）</li>
-<li>工作温度范围：-5℃~+85℃</li>
-<li>基于SiGe的产品</li>
-</ul>
-<h3 id="tia"><a class="markdownIt-Anchor" href="#tia"></a> TIA</h3>
-<h4 id="总体描述-2"><a class="markdownIt-Anchor" href="#总体描述-2"></a> 总体描述</h4>
-<p>ISG-T5783是一个高性能8通道跨阻放大器，最高能工作在53Gbaud/s的条件。ISG-T5783提供了光探测器阴极偏置的pad，每个通道还提供了接收信号强度指示器垫。<br />
-TIA的通道间隔为375μm，芯片尺寸为3.9×1.3mm。TIA在线性条件下的输出摆幅最高为450mVpp，并且有着非常低的输入参考噪声。每通道功耗典型值为170mW。<br />
-TIA同时能够通过SPI控制来设置增益和偏置电压。TIA提供自动增益控制和手动增益控制两种方式。</p>
-<h4 id="特点-2"><a class="markdownIt-Anchor" href="#特点-2"></a> 特点</h4>
-<ul>
-<li>最高支持的速率为53Gbaud/s PAM4</li>
-<li>安装方式为倒装</li>
-<li>通道间隔为375μm</li>
-<li>最高支持450mVpp的差分输出</li>
-<li>自动增益控制：当输入电流变化时，保持输出恒定</li>
-<li>非常低的输入参考噪声：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>14</mn><mi>p</mi><mi>A</mi><mi mathvariant="normal">/</mi><msqrt><mrow><mi>H</mi><mi>z</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">14pA/\sqrt{Hz}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.176665em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">4</span><span class="mord mathnormal">p</span><span class="mord mathnormal">A</span><span class="mord">/</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9266650000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span><span style="top:-2.886665em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
-c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
-c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
-c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
-s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
-c69,-144,104.5,-217.7,106.5,-221
-l0 -0
-c5.3,-9.3,12,-14,20,-14
-H400000v40H845.2724
-s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
-c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
-M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.11333499999999996em;"><span></span></span></span></span></span></span></span></span></li>
-<li>可调增益【300~4000 ohm】</li>
-<li>SPI数字接口</li>
-<li>RSSI功能性</li>
-<li>工作温度范围：-5~+85℃</li>
-<li>芯片尺寸：3.9×1.3mm</li>
-</ul>
-
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/09/10/ISG-DriverAndTIA/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -967,83 +837,15 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>参考文献：<a href="/download/Kawahara 等 - 2024 - High-speed, low-voltage, low-bit-energy silicon photonic crystal slow-light modulator with impedance.pdf" download>高速低驱动电压硅基光子晶体慢光调制器</a> 2024.08.</p>
-<p>补充材料：<a href="/download/7150524.pdf" download>高速低驱动电压硅基光子晶体慢光调制器-补充材料</a> 2024.08.</p>
-<h3 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h3>
-<p>硅光调制器在光学收发器中具有高密度集成和低制造成本的优势，但它们还需要提供高速和低功耗，以满足未来数据中心和高性能计算的需求。本文展示了一种显著改进的64 Gbps硅马赫–曾德尔调制器，该调制器结合了光子晶体慢光移相器。通过采用分布式电极并优化其阻抗，同时实现了电光相位匹配和电阻抗匹配，使驱动电压降低至0.87 V，这与鳍型场效应晶体管兼容，并且无需额外的电放大器。该调制器的比特能量低至59 fJ/bit，与微环调制器相当，同时由于其6 nm的宽工作谱，不需要像微环调制器那样进行温度控制。这些结果表明，该调制器在解决下一代数据基础设施中的功耗问题方面具有潜力。</p>
-<h3 id="背景介绍"><a class="markdownIt-Anchor" href="#背景介绍"></a> 背景介绍</h3>
-<p>人工智能和物联网的快速发展大大增加了对数据中心和高性能计算机的需求[1,2]。光互连被用于减少电气布线中的能量损失[3,4]。由于硅（Si）光子技术与成熟的电子工艺兼容，Si光子技术已成为光互连的一种强大的光子集成平台[5]。光学收发器中的硅光调制器具有高速、小尺寸和低制造成本等优点[6–14]。为了应对未来的节能问题，硅调制器必须同时实现高速和低功耗[15,16]。微环调制器（MRMs）在共振波长下可以实现小尺寸和低至几十fJ/bit的比特能量[17–20]。然而，外部温度控制为了抑制共振漂移，会增加总功耗[12–14]。相比之下，马赫–曾德尔调制器（MZMs）在宽波长范围内工作，因此无需温度控制，但其长移相器需要数pJ/bit的比特能量[21–26]。为了提高能效，已经研究了异质集成材料，如III-V族半导体[27,28]、聚合物[29,30]、石墨烯[31,32]和铌酸锂[33–36]。然而，这种集成需要复杂的制造工艺，与标准的互补金属氧化物半导体（CMOS）技术不兼容。</p>
-<p><strong>一个重要的研究问题是，硅马赫–曾德尔调制器（Si MZMs）能否通过结构创新来降低比特能量，而不涉及工艺变更。光子晶体波导（PCWs）表现出低群速度的慢光效应，这增强了任何光学效应[37]。慢光使得Vπ L与群折射率ng成比例减小，并降低了移相器的长度和电容Cpn[38]。然而，当将慢光应用于高速MZMs时，即使对于较短的移相器，也必须解决电光相位匹配问题，因为慢光和射频（RF）信号的群速度差异远大于通常的MZMs。为此，蛇形线RF电极被插入到PCW慢光MZM中的行波电极中，作为电延迟线，已证明其操作速度可达64 Gbps[39,40]。然而，驱动电压Vpp仍然高达3.5–5.2 V，这无法通过鳍型场效应晶体管（FinFET）提供，因而需要额外的电放大器。</strong></p>
-<p>与此相关的是，比特能量的减少是另一个关键问题。在先前的研究中，为评估移相器的调制能力，比特能量是通过在p-n结中积累的电荷能量CpnVp²/2来估算的，并且部分能量被结电阻Rpn消耗。然而，在行波MZM中的实际功耗主要由终端电阻RT决定。当Rpn可以忽略不计时，这一点很容易理解，因为p-n结中不会发生功耗。如果Rpn不可忽略，结果几乎相同；尽管一些射频（RF）功率在结处损失，剩余的功率最终还是在RT中被消耗。根据实际功耗Vp²/4RT，先前慢光MZMs的比特能量在25、32和64 Gbps的比特率下分别为200、625和2,400 fJ/bit【39,40】。在64 Gbps下的高比特能量是由于高驱动电压和20Ω的低RT，后者被用来改善高频响应。**  通过增加RT可以降低比特能量，但为了实现阻抗匹配，电极的特征阻抗Z0也必须增加。如果寄生电阻较小，Z0可近似为√(L/Cpn)。 <strong>为了增加电感分量L，螺旋电感的分布式电极被引入到一种肋型MZM中【41】。</strong> 然而，肋型移相器的Cpn非常大，因此需要大的电感器来获得高Z0，这导致了大的占用面积和RF损耗，将带宽限制在20 GHz以下。 **另一方面，将这一概念应用于慢光MZM，缩短移相器长度导致的小Cpn的和合理长度的电极电感可以实现高Z0，尽管在之前的MZM中还没有考虑到这一点。</p>
-<p>在本研究中，我们设计了慢光马赫–曾德尔调制器（MZM）中分布式电极的阻抗，使电光相位匹配和阻抗匹配同时得以实现。本文详细介绍了其设计、制造过程以及在64 Gbps下的演示。最终，我们得出结论，该器件在平衡高速、低电压、低比特能量、小占用面积以及无需温度控制的操作方面具有很大的潜力，是一个很有前途的候选方案。</p>
-<h3 id="器件结构"><a class="markdownIt-Anchor" href="#器件结构"></a> 器件结构</h3>
-<p>图1(a)和图1(b)分别展示了分布式电极硅光子晶体波导（PCW）慢光马赫–曾德尔调制器（MZM）的示意图和电极的<strong>电路模型</strong>。p-n掺杂的移相器被分为N段，每段长度为l<sub>seg</sub>。移相器在载流子耗尽模式下通过反向偏置操作，以避免由于载流子瞬态引起的带宽限制。配线电感LH插入分段的移相器之间，形成一个类似于分布常数电路的LC梯形结构。对于LH，采用了特征阻抗为Z<sub>H</sub> &gt; Z<sub>0</sub>、相位常数为β<sub>H</sub>的共面波导的配线电感。当lseg远小于射频（RF）波长λ<sub>RF</sub>时，移相器可以建模为一个集总的RC串联电路。图1©显示了长度为lm &lt; λ<sub>RF</sub>的共面波导的集总π模型。串联电感和并联电容分别近似为L<sub>H</sub> = Z<sub>H</sub>β<sub>H</sub>l<sub>m</sub>/ω和C<sub>H</sub> = β<sub>H</sub>l<sub>m</sub>/ωZ<sub>H</sub>。然后，电极的单元电路被建模为图1(d)中显示的对称T型网络。在假设ωR<sub>pn</sub>C<sub>pn</sub> &lt; 1的情况下，Z<sub>0</sub>近似为</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>Z</mi><mn>0</mn></msub><mo>≈</mo><msqrt><mfrac><msub><mi>L</mi><mi>H</mi></msub><mrow><msub><mi>C</mi><mi>H</mi></msub><mo>+</mo><msub><mi>C</mi><mrow><mi>p</mi><mi>n</mi></mrow></msub></mrow></mfrac></msqrt></mrow><annotation encoding="application/x-tex">Z_0 ≈\sqrt{\frac{L_H}{C_H+C_{pn}}}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.04em;vertical-align:-1.2120140000000004em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8279859999999997em;"><span class="svg-align" style="top:-5em;"><span class="pstrut" style="height:5em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.972108em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.7879859999999996em;"><span class="pstrut" style="height:5em;"></span><span class="hide-tail" style="min-width:1.02em;height:3.08em;"><svg width='400em' height='3.08em' viewBox='0 0 400000 3240' preserveAspectRatio='xMinYMin slice'><path d='M473,2793
-c339.3,-1799.3,509.3,-2700,510,-2702 l0 -0
-c3.3,-7.3,9.3,-11,18,-11 H400000v40H1017.7
-s-90.5,478,-276.2,1466c-185.7,988,-279.5,1483,-281.5,1485c-2,6,-10,9,-24,9
-c-8,0,-12,-0.7,-12,-2c0,-1.3,-5.3,-32,-16,-92c-50.7,-293.3,-119.7,-693.3,-207,-1200
-c0,-1.3,-5.3,8.7,-16,30c-10.7,21.3,-21.3,42.7,-32,64s-16,33,-16,33s-26,-26,-26,-26
-s76,-153,76,-153s77,-151,77,-151c0.7,0.7,35.7,202,105,604c67.3,400.7,102,602.7,104,
-606zM1001 80h400000v40H1017.7z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2120140000000004em;"><span></span></span></span></span></span></span></span></span></span></p>
-<p>图1(e)显示了模拟得到的Z<sub>0</sub>，随着电感器的引入，Z<sub>0</sub>从35Ω增加到52Ω。射频（RF）功率在传播通过电极时会被Rpn消耗，这可能会限制带宽。射频传播常数α<sub>RF</sub>+ j β<sub>RF</sub>可近似表示为</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>α</mi><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">F</mi></mrow></msub><mo>+</mo><mi>j</mi><msub><mi>β</mi><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">F</mi></mrow></msub><mo>≈</mo><mfrac><mn>1</mn><msub><mi>l</mi><mi mathvariant="normal">U</mi></msub></mfrac><mrow><mo fence="true">(</mo><mfrac><mrow><msup><mi>ω</mi><mn>2</mn></msup><msub><mi>R</mi><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">n</mi></mrow></msub><msubsup><mi>C</mi><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">n</mi></mrow><mn>2</mn></msubsup><msub><mi>Z</mi><mn>0</mn></msub></mrow><mn>2</mn></mfrac><mo>+</mo><mi>j</mi><mi>ω</mi><msqrt><mrow><msub><mi>L</mi><mi mathvariant="normal">H</mi></msub><mrow><mo fence="true">(</mo><msub><mi>C</mi><mi mathvariant="normal">H</mi></msub><mo>+</mo><msub><mi>C</mi><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">n</mi></mrow></msub><mo fence="true">)</mo></mrow></mrow></msqrt><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\alpha_{\mathrm{RF}}+j \beta_{\mathrm{RF}} \approx \frac{1}{l_{\mathrm{U}}}\left(\frac{\omega^2 R_{\mathrm{pn}} C_{\mathrm{pn}}^2 Z_0}{2}+j \omega \sqrt{L_{\mathrm{H}}\left(C_{\mathrm{H}}+C_{\mathrm{pn}}\right)}\right)
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">R</span><span class="mord mathrm mtight">F</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">R</span><span class="mord mathrm mtight">F</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.0000299999999998em;vertical-align:-1.25003em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.01968em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">U</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5872160000000002em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.773108em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">p</span><span class="mord mathrm mtight">n</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4530000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">p</span><span class="mord mathrm mtight">n</span></span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.383108em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.265821em;"><span class="svg-align" style="top:-3.8em;"><span class="pstrut" style="height:3.8em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">H</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">H</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">p</span><span class="mord mathrm mtight">n</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span><span style="top:-3.225821em;"><span class="pstrut" style="height:3.8em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.8800000000000001em;"><svg width='400em' height='1.8800000000000001em' viewBox='0 0 400000 1944' preserveAspectRatio='xMinYMin slice'><path d='M983 90
-l0 -0
-c4,-6.7,10,-10,18,-10 H400000v40
-H1013.1s-83.4,268,-264.1,840c-180.7,572,-277,876.3,-289,913c-4.7,4.7,-12.7,7,-24,7
-s-12,0,-12,0c-1.3,-3.3,-3.7,-11.7,-7,-25c-35.3,-125.3,-106.7,-373.3,-214,-744
-c-10,12,-21,25,-33,39s-32,39,-32,39c-6,-5.3,-15,-14,-27,-26s25,-30,25,-30
-c26.7,-32.7,52,-63,76,-91s52,-60,52,-60s208,722,208,722
-c56,-175.3,126.3,-397.3,211,-666c84.7,-268.7,153.8,-488.2,207.5,-658.5
-c53.7,-170.3,84.5,-266.8,92.5,-289.5z
-M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.574179em;"><span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size4">)</span></span></span></span></span></span></span></p>
-<p>其中，l<sub>U</sub>是单元电路的长度（详细推导见补充材料1）。假设由于相位不匹配引起的滚降足够小，则归一化的电光频率响应G<sub>EO</sub>(f)由RC响应G<sub>RC</sub>(f)和每段的平均传播损耗决定，如下所示:</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.24999999999999992em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><msub><mi>G</mi><mrow><mi mathvariant="normal">E</mi><mi mathvariant="normal">O</mi></mrow></msub><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><msub><mi>G</mi><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">C</mi></mrow></msub><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>⋅</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi mathvariant="normal">n</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><msup><mi>e</mi><mrow><mo>−</mo><mo stretchy="false">(</mo><mi mathvariant="normal">n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><msub><mi>α</mi><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">F</mi></mrow></msub><msub><mi>l</mi><mi mathvariant="normal">U</mi></msub></mrow></msup><mo>=</mo><mrow><mo fence="true">∣</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mi>j</mi><mi>ω</mi><msub><mi>R</mi><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">n</mi></mrow></msub><msub><mi>C</mi><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">n</mi></mrow></msub></mrow></mfrac><mo fence="true">∣</mo></mrow><mo>⋅</mo><mfrac><mrow><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>N</mi><msub><mi>α</mi><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">F</mi></mrow></msub><msub><mi>l</mi><mi mathvariant="normal">U</mi></msub></mrow></msup></mrow><mrow><mi>N</mi><mrow><mo fence="true">(</mo><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mo>−</mo><msub><mi>α</mi><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">F</mi></mrow></msub><msub><mi>l</mi><mi mathvariant="normal">U</mi></msub></mrow></msup><mo fence="true">)</mo></mrow></mrow></mfrac></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
-G_{\mathrm{EO}}(f) &amp; =G_{\mathrm{RC}}(f) \cdot \frac{1}{N} \sum_{\mathrm{n}=1}^N e^{-(\mathrm{n}-1) \alpha_{\mathrm{RF}} l_{\mathrm{U}}} 
- =\left|\frac{1}{1+j \omega R_{\mathrm{pn}} C_{\mathrm{pn}}}\right| \cdot \frac{1-e^{-N \alpha_{\mathrm{RF}} l_{\mathrm{U}}}}{N\left(1-e^{-\alpha_{\mathrm{RF}} l_{\mathrm{U}}}\right)}
-\end{aligned}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.395449em;vertical-align:-1.4477245em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.9477245em;"><span style="top:-3.9477245em;"><span class="pstrut" style="height:3.828336em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">E</span><span class="mord mathrm mtight">O</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4477245em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.9477245em;"><span style="top:-3.9477245em;"><span class="pstrut" style="height:3.828336em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">R</span><span class="mord mathrm mtight">C</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283360000000002em;"><span style="top:-1.882887em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">n</span></span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.267113em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mopen mtight">(</span><span class="mord mtight"><span class="mord mathrm mtight">n</span></span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567071428571427em;margin-left:-0.0037em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">R</span><span class="mord mathrm mtight">F</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.14329285714285717em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567071428571427em;margin-left:-0.01968em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">U</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.14329285714285717em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4799700000000002em;"><span style="top:-1.65598em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.25698em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.85798em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.87897em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.47997em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500199999999999em;"><span></span></span></span></span></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">p</span><span class="mord mathrm mtight">n</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">p</span><span class="mord mathrm mtight">n</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.972108em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4799700000000002em;"><span style="top:-1.65598em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.25698em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.85798em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.87897em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.47997em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500199999999999em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.526108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7751079999999999em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567071428571427em;margin-left:-0.0037em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">R</span><span class="mord mathrm mtight">F</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.14329285714285717em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567071428571427em;margin-left:-0.01968em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">U</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.14329285714285717em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567071428571427em;margin-left:-0.0037em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">R</span><span class="mord mathrm mtight">F</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.14329285714285717em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567071428571427em;margin-left:-0.01968em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">U</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.14329285714285717em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4477245em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
-<p>图1(f)和图1(g)显示了为了实现Z<sub>0</sub> = 50Ω所需的电极总长度和电光带宽f3 dB的计算结果。随着群折射率ng的增加，用于实现高阻抗的电极变得更短，从而减少射频（RF）损耗。因此，慢光效应与分布式电极的结合可以在保持宽带宽的同时实现高阻抗，从而降低比特能量。在足够高的n<sub>g</sub>下，f <sub>3dB</sub>接近移相器的固有RC限制。然而，光子晶体波导（PCW）的工作谱也会变窄。为了在足够的电光带宽和足够的工作谱之间实现最佳平衡，我们选择了n<sub>g</sub> = 20。</p>
-<p><img src="/pictures/image-20240909142213683.png" alt="image-20240909142213683" /></p>
-<p>分布式电极的另一个优势是它们在慢光和射频（RF）信号之间的相位匹配，这一点已在先前的蛇形线电极中得到验证[39]。在本研究中的分布式电极中，较大的N使得相位匹配更加严格，并且提供了更高的sinc滚降频率。每个单元电路的相位移相由θ<sub>U</sub>(ω) = β<sub>RF</sub>l<sub>U</sub>给出。图2(a)和图2(b)展示了标准电极和分布式电极的电光转换增益和群延迟的模拟频率响应。<strong>这些模拟使用了Keysight的高级设计系统（ADS）电路模拟器和内部光子设备模型进行</strong>。模型中包括电光相位不匹配、RC时间常数和RF传播损耗等作为带宽限制因素。这些模拟结果与测量结果至少达到40 GHz一致[42]。类似于蛇形线电极，分布式电极成功地抑制了sinc滚降，导致宽带响应，f<sub>3dB</sub> = 39 GHz。模拟得到的f<sub>3dB</sub>略低于图1(g)中的计算值，这主要是由于配线中的串联寄生电阻引起的额外RF损耗，但对于无需数字信号处理（DSP）的64-Gbaud信号传输而言，已经足够。该调制器主要的带宽限制因素是p-n结的RC时间常数，频率响应表现出可以视为一阶滞后元件的缓慢滚降。由于滚降缓慢，可以通过应用简单的线性均衡器进一步提高带宽。例如，仅以1.3 dB的直流抑制，f<sub>3dB</sub>可以达到50 GHz，并且能够传输100-Gbaud信号。这一特性突显了所提议的MZM在未来光互连中的潜在应用。此外，由于严格的阻抗匹配，群延迟波动在40 GHz以内保持在±1 ps范围内。平坦的群延迟响应减少了抖动并改善了眼图开口。分布式电极的一个重要特性是阻抗和相位延迟完全独立。电极设计参数（Z<sub>H</sub>和l<sub>m</sub>）可以独特地确定，以同时满足阻抗匹配和电光相位匹配要求。更多详细的分析和设计指南见<strong>补充材料1的第2节</strong>。</p>
-<p><img src="/pictures/image-20240909142526025.png" alt="image-20240909142526025" /></p>
-<p>这些所提议MZM的结构优势可以应用于其他材料平台，只要它们的移相器得到缩短且结电容得到减少，例如通过慢光效应。为了获得高阻抗所需的电极电感也相应减少，从而实现实际的小尺寸和低RF损耗。例如，最近有报告了带有慢光增强的薄膜铌酸锂（TFLN）MZM[43]。TFLN MZM需要更小的电极间隙，以获得更小的Vπ，同时还需要阻抗匹配、相位匹配和低RF损耗[44]。将本研究中采用的电极工程应用于TFLN慢光MZM，将有助于克服这些权衡。</p>
-<h3 id="结果和讨论"><a class="markdownIt-Anchor" href="#结果和讨论"></a> 结果和讨论</h3>
-<h4 id="器件加工"><a class="markdownIt-Anchor" href="#器件加工"></a> 器件加工</h4>
-<p>图3(a)展示了在兼容CMOS的300毫米硅绝缘体（SOI）工艺中制造的原型设备。其占地面积仅为0.5 mm × 0.6 mm = 0.3 mm²，包括电极。通过电磁场分析，将共面波导的导线宽度和间隙设置为8 μm和6 μm，以实现Z<sub>H</sub> = 55Ω。为了抑制高频损耗，硅虚拟层被阻塞在共面波导正下方（见补充材料1）。图3(b)和图3©显示了PCW移相器的放大视图和示意图。晶格常数设置为a = 404 nm，孔直径为d = 230 nm，以实现<strong>C波段光子带隙</strong>。p型和n型掺杂浓度分别设置为N<sub>A</sub> = 9.5 × 10¹⁷ cm⁻³和N<sub>D</sub> = 1.0 × 10¹⁸ cm⁻³，以<strong>在光学损耗和调制效率之间取得平衡</strong>。电极接触底部高度掺杂，以实现优良的欧姆接触。图3(d)展示了设备的测量光学传输谱。通过将测量谱归一化到参考硅波导的谱，去除了测量设置中的固有损耗。总插入损耗约为10 dB，包括多模干涉耦合器的0.5 dB × 2、硅波导与PCW之间的过渡0.4 dB × 2、弯曲0.03 dB × 6，以及p-n掺杂PCW移相器的约8 dB。由于工艺变化，板厚度略微减小，这略微提高了光学损耗并使光谱窗口向短波长方向移动。然而，6 nm的光谱窗口足够宽，可以消除温度补偿。通过采用之前展示的晶格偏移PCWs，可以覆盖整个C波段[45]。未来，预计通过优化掺杂轮廓[46]和组件结构[47]，以及研究新材料[43]，可以降低损耗。该原型设备在下述调制实验中使用的波长下显示n<sub>g</sub> ≈ 30，这比目标n<sub>g</sub> = 20略高，原因是板厚度的变化（见补充材料1的第5节）。这种变化导致电光相位不匹配，将带宽缩小到f<sub>3dB</sub> ≈ 31 GHz，但仍保持了64-Gbaud调制能力。</p>
-<p><img src="/pictures/image-20240909142602883.png" alt="image-20240909142602883" /></p>
-<h4 id="阻抗"><a class="markdownIt-Anchor" href="#阻抗"></a> 阻抗</h4>
-<p>分布式电极的阻抗通过图4(a)中的设置进行了评估。使用了Keysight PNA-X N5247B矢量网络分析仪，通过在探针尖端的线反射反射匹配方法进行了校准。测量得到的S参数经过去嵌入处理，以去除焊盘电容，确保与模拟结果的一致性。设备通过bias-T施加了直流偏置电压VDC = −2 V。图4(b)展示了测量和模拟的反射系数。测量结果与模拟结果大致一致。模拟与测量之间的偏差源于电磁场分析中的模型误差。所有频率下的反射系数均小于−18 dB，达到了针对50Ω参考阻抗的令人满意的宽带匹配。图4©展示了输入阻抗的实部和虚部。在测量频率范围内（高达60 GHz），电阻分量和电抗分量分别接近50 Ω和0 Ω。这种频率无关的高阻抗降低了功耗，同时保持了优良的信号质量并降低了比特能量。</p>
-<h4 id="背靠背的信号传输"><a class="markdownIt-Anchor" href="#背靠背的信号传输"></a> 背靠背的信号传输</h4>
-<p>原型设备的传输性能进行了实验评估。使用了连续波可调激光器作为光源，并将马赫–曾德尔干涉仪的偏置调整到正交点（quad. bias）或从正交点下调5 dB（deep bias）。脉冲模式发生器（PPG）和多路复用器生成了50 Gbps或64 Gbps的非归零（NRZ）信号。设备由宽带放大器推拉驱动，驱动电压分别为Vpp = 0.87 V、1.6 V和2.2 V。前两个电压与12 nm FinFET CMOS工艺的核心和IO电压兼容[48]。使用采样示波器监测接收信号，并通过离线数字信号处理（DSP）中的五段线性均衡器进行均衡。实验细节见附录A。</p>
-<p>图5(a)展示了50-Gbaud无DSP眼图和预期的比特错误率（BER）。在2.2 V驱动电压下，正交点（quad. bias）和深偏置（deep bias）的动态消光比（ERs）分别为2.0 dB和4.5 dB。正交点和深偏置条件下的调制损耗分别为2.1 dB和6.3 dB。观察结果显示，50-Gbps无DSP的清晰眼图在V<sub>pp</sub> &lt; 1 V时都能实现。RF信号功耗在V<sub>pp</sub> = 0.87 V、1.6 V和2.2 V时分别为3.8 mW、13 mW和24 mW。尽管功耗低，但预计的BER在所有驱动电压下都达到了前向纠错（FEC）阈值。高阻抗电极成功地降低了驱动电流，比特能量分别达到76 fJ/bit、256 fJ/bit和484 fJ/bit。这些结果远低于标准硅MZM的几皮焦耳（pJ/bit）。图5(b)展示了64-Gbaud无DSP眼图和估计的BER。在64 Gbaud下，眼图略有退化，但接收信号仍然满足V<sub>pp</sub> &gt; 1.5 V的软决策（SD）FEC阈值。图5 ©和图5(d)展示了应用五段线性均衡器的50和64-Gbaud眼图。由于模拟预期的慢滚降响应，简单的线性均衡器显著提高了信号质量。该设备在V<sub>pp</sub> = 0.87 V下有效传输了64-Gbps信号，展示了优良的FinFET兼容性，比特能量为59 fJ/bit。</p>
-<p><img src="/pictures/image-20240909143509450.png" alt="image-20240909143509450" /></p>
-<p>表1总结了最近在CMOS兼容硅调制器方面的进展。为了估算我们设备的调制效率Vπ L，我们在高驱动电压V<sub>pp</sub> = 3.17 V下进行了2.4-Gbps调制实验，以最小化滚降和噪声。设备由PPG直接驱动，并在正交点进行偏置。我们测得ER = 4.19 dB，Vπ L估算为每个移相器0.32 V·cm，或推拉驱动情况下为0.16 V·cm。考虑到由于高频响应导致的滚降，DC Vπ L可能会小于此值。在我们之前的实验[40]中，n<sub>g</sub> = 20时测得DC Vπ L为0.44 V·cm。因此，鉴于原型设备的n<sub>g</sub> = 30，上述值是合理的。传统上，超过50 Gbps的MZM需要更小的RT[25,50,51]。使用50Ω终端的先前研究面临比特率的显著限制[41,54,55,57]。单驱动结构导致驱动电压达到或超过5 V，比特能量超过1.5 pJ/bit[21,26,54]。本研究展示了在64 Gbps下比特能量低于100 fJ/bit，克服了效率和比特率之间的权衡，如图6所示。比特能量接近MRM的水平，同时具有6 nm的工作光谱，这远宽于MRM的典型亚1-nm范围[18,19]。</p>
-<p><img src="/pictures/image-20240909143821942.png" alt="image-20240909143821942" /></p>
-<p><img src="/pictures/image-20240909143918219.png" alt="image-20240909143918219" /></p>
-<h3 id="结论"><a class="markdownIt-Anchor" href="#结论"></a> 结论</h3>
-<p>在这篇论文中，展示了使用硅（Si）光子晶体波导（PCW）慢光马赫–曾德尔调制器（MZM）在低于1 V的驱动电压下进行64-Gbps的背对背信号传输。分布式电极同时实现了50Ω阻抗和电光相位匹配，适度地抑制了RF损耗。这种方法突显了硅慢光MZM在功耗方面的潜在优势，实现了59 fJ/bit的比特能量。宽达6 nm的工作带宽消除了对温度控制的需求，从而提升了整体系统的功率性能。此外，设备的占地面积减少至0.3 mm²，同时保持了CMOS工艺兼容性。所提出的MZM的结构优势可以应用于其他材料平台，并预计会有进一步的性能提升。这些结果表明，硅慢光MZM有助于解决未来数据中心和高性能计算中的功率问题。</p>
-<h3 id="附录a"><a class="markdownIt-Anchor" href="#附录a"></a> 附录A</h3>
-<p>图7展示了用于背对背信号传输实验的测量设置。实验中使用了Santec的TSL550可调激光源生成功率为13 dBm的连续波激光光。Anritsu的MP1800A PPG输出了两个伪随机比特序列，SHF的601A多路复用器产生了50-或64-Gbaud NRZ信号。SHF的EQ25A被动均衡器用于补偿RF电缆损耗。SHF的S804B驱动器扩展了电信号。使用了一个6 dB的衰减器以达到CMOS兼容的驱动电压。调制的偏置点通过使用片上TiN加热器设置为正交点和从正交点下移5 dB。当Vpp &lt; 1 V时，移相器的p-n结被偏置为VDC = −1 V，否则为VDC = −2 V。设备产生的光通过掺铒光纤放大器进行放大，并通过带宽为1 nm的带通滤波器去除扩展的自发辐射噪声。调制后的光信号由Keysight的86100C采样示波器和86116C光电探测模块接收。接收的波形被导入MATLAB/Simulink进行离线数字信号处理。波形进行了过采样，并应用了时序校正以去除采样示波器中的固有时间失真。然后，对符号进行同步并在决策点重新采样。使用了一个符号逐一的五段自适应线性均衡器来塑造波形。常数模算法用于确定均衡器的抽头系数。通过将接收信号的垂直直方图拟合为两个高斯函数，来近似比特错误率（BER）。</p>
-<p><img src="/pictures/image-20240909144303343.png" alt="image-20240909144303343" /></p>
-<h3 id="补充材料"><a class="markdownIt-Anchor" href="#补充材料"></a> 补充材料</h3>
-<h4 id="公式1~3的推导"><a class="markdownIt-Anchor" href="#公式1~3的推导"></a> 公式1~3的推导</h4>
-<h4 id="采用周期传输线方法对分布式电极的分析"><a class="markdownIt-Anchor" href="#采用周期传输线方法对分布式电极的分析"></a> 采用周期传输线方法对分布式电极的分析</h4>
-<h4 id="分布式电极的集中实现"><a class="markdownIt-Anchor" href="#分布式电极的集中实现"></a> 分布式电极的集中实现</h4>
-<p>如前期研究所报告的那样，分布式电极也可以使用集中电感器，例如螺旋电感器来实现[3]。本节介绍了当每个元件被建模为完整的集中元件时的分布式电极分析，如图S4所示。分析模型与主要文献中描述的非常相似，但也有所不同。主要的区别在于，电感元件的物理长度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>l</mi><mi>m</mi></msub></mrow><annotation encoding="application/x-tex">l_m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.01968em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 并未定义。本节的分析基于带损耗的LC梯形电路，也称为常数-k滤波器的分析[4]。对于常数-k滤波器，电极阻抗被表示为图像阻抗而不是特征阻抗，如下所示：</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>Z</mi><mtext>image </mtext></msub><mo>=</mo><msqrt><mrow><mfrac><msub><mi>L</mi><mi mathvariant="normal">H</mi></msub><msub><mi>C</mi><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">n</mi></mrow></msub></mfrac><mrow><mo fence="true">[</mo><mn>1</mn><mo>−</mo><msup><mrow><mo fence="true">(</mo><mfrac><mi>ω</mi><msub><mi>ω</mi><mi mathvariant="normal">C</mi></msub></mfrac><mo fence="true">)</mo></mrow><mn>2</mn></msup><mo fence="true">]</mo></mrow></mrow></msqrt></mrow><annotation encoding="application/x-tex">Z_{\text {image }}=\sqrt{\frac{L_{\mathrm{H}}}{C_{\mathrm{pn}}}\left[1-\left(\frac{\omega}{\omega_{\mathrm{C}}}\right)^2\right]}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.317502em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">image </span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.2277799999999996em;vertical-align:-1.25003em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.9777499999999997em;"><span class="svg-align" style="top:-5.18778em;"><span class="pstrut" style="height:5.18778em;"></span><span class="mord" style="padding-left:1.056em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">p</span><span class="mord mathrm mtight">n</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">H</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.972108em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">[</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="minner"><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">C</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.6540080000000001em;"><span style="top:-3.9029000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size4">]</span></span></span></span></span><span style="top:-3.9377500000000003em;"><span class="pstrut" style="height:5.18778em;"></span><span class="hide-tail" style="min-width:0.742em;height:3.2677799999999997em;"><svg width='400em' height='3.2677799999999997em' viewBox='0 0 400000 3267' preserveAspectRatio='xMinYMin slice'><path d='M702 80H40000040
-H742v3133l-4 4-4 4c-.667.7 -2 1.5-4 2.5s-4.167 1.833-6.5 2.5-5.5 1-9.5 1
-h-12l-28-84c-16.667-52-96.667 -294.333-240-727l-212 -643 -85 170
-c-4-3.333-8.333-7.667-13 -13l-13-13l77-155 77-156c66 199.333 139 419.667
-219 661 l218 661zM702 80H400000v40H742z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.25003em;"><span></span></span></span></span></span></span></span></span></span></p>
-<h4 id="平面波导的表征"><a class="markdownIt-Anchor" href="#平面波导的表征"></a> 平面波导的表征</h4>
-<h4 id="群速度"><a class="markdownIt-Anchor" href="#群速度"></a> 群速度</h4>
-<p>通过色散分析仪（Alnair Labs, CDA-2100）测量了群速度 ( <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mi>g</mi></msub></mrow><annotation encoding="application/x-tex">n_g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> )，如图 S8(a) 所示。</p>
-<p><img src="/pictures/image-20240909164231755.png" alt="image-20240909164231755" /></p>
-
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/09/09/%E9%AB%98%E9%80%9F%E4%BD%8E%E9%A9%B1%E5%8A%A8%E7%94%B5%E5%8E%8B%E7%A1%85%E5%9F%BA%E5%85%89%E5%AD%90%E6%99%B6%E4%BD%93%E6%85%A2%E5%85%89%E8%B0%83%E5%88%B6%E5%99%A8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1115,8 +917,15 @@ c-4-3.333-8.333-7.667-13 -13l-13-13l77-155 77-156c66 199.333 139 419.667
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><img src="/pictures/image-20240909130018656.png" alt="image-20240909130018656" /></p>
-
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/09/09/%E5%85%89%E4%BA%92%E8%BF%9E%E6%80%A7%E8%83%BD%E6%AF%94%E8%BE%83/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1188,12 +997,15 @@ c-4-3.333-8.333-7.667-13 -13l-13-13l77-155 77-156c66 199.333 139 419.667
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="电学封装损耗-5-db带宽-32-ghz"><a class="markdownIt-Anchor" href="#电学封装损耗-5-db带宽-32-ghz"></a> 电学封装损耗：&lt; 5 dB，带宽 &gt; 32 GHz</h4>
-<h4 id="光纤链路损耗"><a class="markdownIt-Anchor" href="#光纤链路损耗"></a> 光纤链路损耗：</h4>
-<p><img src="/pictures/image-20240906103903837.png" alt="image-20240906103903837" /></p>
-<h4 id="光探测器的响应度1aw光探测器的噪声"><a class="markdownIt-Anchor" href="#光探测器的响应度1aw光探测器的噪声"></a> 光探测器的响应度：1A/W，光探测器的噪声</h4>
-<h4 id="电芯片的能效-5-pjbit-driver-tia-tcu在32-gbits的带宽下噪声及输出抖动"><a class="markdownIt-Anchor" href="#电芯片的能效-5-pjbit-driver-tia-tcu在32-gbits的带宽下噪声及输出抖动"></a> 电芯片的能效：&lt; 5 pJ/bit (Driver + TIA + TCU，在32 Gbit/s的带宽下)，噪声及输出抖动</h4>
-
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/09/06/%E5%85%89%E4%BA%92%E8%BF%9E%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%99%A8%E4%BB%B6%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87%E8%A6%81%E6%B1%82/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
