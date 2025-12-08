@@ -46,12 +46,12 @@
   };
 </script>
 
-  <meta name="description" content="REF:  Novel Parallel Digital Optical Computing System  (DOC) for Generative A.I. ，TSMC，2024 TSMC硅光平台COUPE的最新进展-EDN 电子技术设计，膜   摘要 生成式人工智能（GAI）的普及使基于光子的计算因其满足更高能效性能（EEP）需求的潜力而备受关注。然而，以前的光学解决方案用于乘加（MAC）操">
+  <meta name="description" content="REF:   Novel Parallel Digital Optical Computing System  (DOC) for Generative A.I. ，TSMC，2024 TSMC硅光平台COUPE的最新进展-EDN 电子技术设计，膜  摘要生成式人工智能（GAI）的普及使基于光子的计算因其满足更高能效性能（EEP）需求的潜力而备受关注。然而，以前的光学解决方案用于乘加（MAC）操作">
 <meta property="og:type" content="article">
 <meta property="og:title" content="新型并行数字光学计算系统用于生成式人工智能-TSMC">
 <meta property="og:url" content="http://example.com/2025/01/03/%E6%96%B0%E5%9E%8B%E5%B9%B6%E8%A1%8C%E6%95%B0%E5%AD%97%E5%85%89%E5%AD%A6%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F%E7%94%A8%E4%BA%8E%E7%94%9F%E6%88%90%E5%BC%8F%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-TSMC/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="REF:  Novel Parallel Digital Optical Computing System  (DOC) for Generative A.I. ，TSMC，2024 TSMC硅光平台COUPE的最新进展-EDN 电子技术设计，膜   摘要 生成式人工智能（GAI）的普及使基于光子的计算因其满足更高能效性能（EEP）需求的潜力而备受关注。然而，以前的光学解决方案用于乘加（MAC）操">
+<meta property="og:description" content="REF:   Novel Parallel Digital Optical Computing System  (DOC) for Generative A.I. ，TSMC，2024 TSMC硅光平台COUPE的最新进展-EDN 电子技术设计，膜  摘要生成式人工智能（GAI）的普及使基于光子的计算因其满足更高能效性能（EEP）需求的潜力而备受关注。然而，以前的光学解决方案用于乘加（MAC）操作">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/pictures/image-20250103165008937.png">
 <meta property="og:image" content="http://example.com/pictures/image-20250103170123006.png">
@@ -271,39 +271,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>REF:</p>
+        <p>REF: </p>
 <ol>
 <li>Novel Parallel Digital Optical Computing System  (DOC) for Generative A.I. ，TSMC，2024</li>
 <li><a target="_blank" rel="noopener" href="https://www.ednchina.com/technews/31546.html">TSMC硅光平台COUPE的最新进展-EDN 电子技术设计</a>，膜</li>
 </ol>
-<h3 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h3>
-<p>生成式人工智能（GAI）的普及使基于光子的计算因其满足更高能效性能（EEP）需求的潜力而备受关注。然而，以前的光学解决方案用于乘加（MAC）操作主要集中在模拟架构[1-7]，其精度和数据转换有限，或者自由空间光学架构的可扩展性有限[8]。在此，我们报道了全球首个用于GAI训练的芯片上大规模数字光学计算系统（DOC）。DOC采用了一种新颖的基于晶圆的系统集成技术，具有多层低损耗光子互联扇出（PIFO）和利用台积电SoIC®的EIC/PIC叠加架构。它减少了数据移动和存储层级，从而改善了关键路径延迟和系统能效（EE）。与传统电子设计相比，DOC可以扩展到更大规模的相干网络，并以更低的能量每MAC操作在更高速下运行。在8位操作时，能量消耗低至&lt;0.08皮焦/MAC，与最先进的GPU相比，在512 x 512MAC大规模操作中实现了超过20倍的EEP改进。由于相对较小的扇出能量，在更高精度下的EEP进一步提高。该架构完全有潜力在未来几代中实现持续的EEP扩展。</p>
-<h3 id="背景介绍"><a class="markdownIt-Anchor" href="#背景介绍"></a> 背景介绍</h3>
-<p>随着生成式人工智能（GAI）的使用增加，对更高计算能力和更低能耗的需求也在不断增长[1,2]。光学平台，特别是模拟架构，被提议作为一种具有竞争力的节能解决方案，包括Reck架构[3]、相干衍射光学[4-6]和LightMatter的推理Mars光子核心[7]。虽然光学模拟架构在过去十年中被深入研究，但由于相干性问题、器件损耗以及数模/模数转换设计，其仅在低精度应用和小规模上实际可行[8]。为了克服这一限制，MIT曾提出一种使用自由空间光学进行高能效复用技术以“被动传输和复制数据”的数字架构[8]。与电子不同，使用光学的一个显著优势是其能够直接进行低损耗的大规模扇出且与路径无关，从而减少了数据移动和延迟。此外，通过减少中间存储层级，内存层次结构得到简化，降低了整体内存访问的能耗[8]。这可能允许在大规模MAC操作中显著改善能效（EE）[8]。然而，自由空间光学难以扩展，其受限于衍射、光学元件的物理尺寸和对准要求。在所有光学自由空间架构中[4,5]，各个光学元件的对准变得至关重要，而物理尺寸总会受到衍射极限的限制。因此，要实现高效率、高性能和大规模MAC操作的好处[8]，需要一种高密度集成的低损耗光子扇出电路。类似于台积电InFO的电子扇出，设计了一种新型多层光子扇出DOC以实现所需收益。</p>
+<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>生成式人工智能（GAI）的普及使基于光子的计算因其满足更高能效性能（EEP）需求的潜力而备受关注。然而，以前的光学解决方案用于乘加（MAC）操作主要集中在模拟架构[1-7]，其精度和数据转换有限，或者自由空间光学架构的可扩展性有限[8]。在此，我们报道了全球首个用于GAI训练的芯片上大规模数字光学计算系统（DOC）。DOC采用了一种新颖的基于晶圆的系统集成技术，具有多层低损耗光子互联扇出（PIFO）和利用台积电SoIC®的EIC/PIC叠加架构。它减少了数据移动和存储层级，从而改善了关键路径延迟和系统能效（EE）。与传统电子设计相比，DOC可以扩展到更大规模的相干网络，并以更低的能量每MAC操作在更高速下运行。在8位操作时，能量消耗低至&lt;0.08皮焦/MAC，与最先进的GPU相比，在512 x 512MAC大规模操作中实现了超过20倍的EEP改进。由于相对较小的扇出能量，在更高精度下的EEP进一步提高。该架构完全有潜力在未来几代中实现持续的EEP扩展。</p>
+<h3 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h3><p>随着生成式人工智能（GAI）的使用增加，对更高计算能力和更低能耗的需求也在不断增长[1,2]。光学平台，特别是模拟架构，被提议作为一种具有竞争力的节能解决方案，包括Reck架构[3]、相干衍射光学[4-6]和LightMatter的推理Mars光子核心[7]。虽然光学模拟架构在过去十年中被深入研究，但由于相干性问题、器件损耗以及数模/模数转换设计，其仅在低精度应用和小规模上实际可行[8]。为了克服这一限制，MIT曾提出一种使用自由空间光学进行高能效复用技术以“被动传输和复制数据”的数字架构[8]。与电子不同，使用光学的一个显著优势是其能够直接进行低损耗的大规模扇出且与路径无关，从而减少了数据移动和延迟。此外，通过减少中间存储层级，内存层次结构得到简化，降低了整体内存访问的能耗[8]。这可能允许在大规模MAC操作中显著改善能效（EE）[8]。然而，自由空间光学难以扩展，其受限于衍射、光学元件的物理尺寸和对准要求。在所有光学自由空间架构中[4,5]，各个光学元件的对准变得至关重要，而物理尺寸总会受到衍射极限的限制。因此，要实现高效率、高性能和大规模MAC操作的好处[8]，需要一种高密度集成的低损耗光子扇出电路。类似于台积电InFO的电子扇出，设计了一种新型多层光子扇出DOC以实现所需收益。</p>
 <p>DOC的集成流程遵循EPIC（电子-光子芯粒与集成电路工艺集成的平台技术[9]）。EPIC-DOC首先在台积电SoIC®上进行EIC与PIC的叠加。然后移除PIC的背面硅。之后，多层PIFO结构如<strong>图1</strong>所示集成到PIC的背面。本文展示了一个用于512 x 512计算矩阵的超大规模、紧凑封装的光学扇出电路，具有-35 dB的光路损耗，允许能效改进和可扩展性。与最先进的GPU相比[10]，在相同逻辑面积下，8位操作时能效性能提升超过20倍。此外，展示了计算单元尺寸的可调性，允许兼容各种应用。</p>
-<p><img src="/pictures/image-20250103165008937.png" alt="image-20250103165008937" /></p>
-<p><img src="/pictures/image-20250103170123006.png" alt="image-20250103170123006" /></p>
-<h3 id="集成数字光学计算"><a class="markdownIt-Anchor" href="#集成数字光学计算"></a> 集成数字光学计算</h3>
-<p>对于一个 N x M 数字光学计算系统（DOC），首先通过光子调制器将 N 个输入和 M 个权重电信号转换为光信号，这些调制器位于光子集成电路（PIC）上，如<strong>图 2</strong> 所示。然后，输入和权重信号在多层氮化硅中均匀分布，对于512 x 512 的计算矩阵，该分布分为两层。信号经过设计的1到512扇出电路传输到PIC上的光电探测器，以进行电信号转换。电信号被直接连接到电子集成电路（EIC），在此处通过位串行乘法器顺序进行MAC运算，并进行输出固定的累加[8]。</p>
+<p><img src="/pictures/image-20250103165008937.png" alt="image-20250103165008937"></p>
+<p><img src="/pictures/image-20250103170123006.png" alt="image-20250103170123006"></p>
+<h3 id="集成数字光学计算"><a href="#集成数字光学计算" class="headerlink" title="集成数字光学计算"></a>集成数字光学计算</h3><p>对于一个 N x M 数字光学计算系统（DOC），首先通过光子调制器将 N 个输入和 M 个权重电信号转换为光信号，这些调制器位于光子集成电路（PIC）上，如<strong>图 2</strong> 所示。然后，输入和权重信号在多层氮化硅中均匀分布，对于512 x 512 的计算矩阵，该分布分为两层。信号经过设计的1到512扇出电路传输到PIC上的光电探测器，以进行电信号转换。电信号被直接连接到电子集成电路（EIC），在此处通过位串行乘法器顺序进行MAC运算，并进行输出固定的累加[8]。</p>
 <p>为了实现多路复用所需的大规模、低损耗、紧凑和路径长度控制的扇出特性，设计了两组封闭的1到512扇出电路。由于输入和权重信号的方向性，这两组可被区分为“水平”和“垂直”扇出。通过利用多层结构，封闭扇出的输出允许计算单元大小在不牺牲能效的情况下适用于各种应用，这与之前的树形扇出不同[11]。通过半对称扩展扇出实现了路径长度控制。</p>
 <p>为了构建具有25微米 x 25微米计算单元大小的512 x 512计算矩阵，设计了紧凑的6平方微米的1到2分配器作为扇出的最基本结构单元，具有-3.25 dB的损耗，如<strong>图3</strong>所示。为了连接封闭扇出电路中的每个1到2分配器，设计了具有15微米至8微米半径的模式匹配波导弯曲，损耗分别为-0.05 dB/弯曲和-0.25 dB/弯曲，如<strong>图4</strong>所示。</p>
-<p><img src="/pictures/image-20250103170236585.png" alt="image-20250103170236585" /></p>
+<p><img src="/pictures/image-20250103170236585.png" alt="image-20250103170236585"></p>
 <p>这是关键的，因为在螺旋图案封闭扇出中波导弯曲的高使用率成为限制计算单元大小的主要因素。</p>
-<p><img src="/pictures/image-20250103170305302.png" alt="image-20250103170305302" /></p>
+<p><img src="/pictures/image-20250103170305302.png" alt="image-20250103170305302"></p>
 <p>此外，波导宽度和间距被控制以防止串扰噪声，如<strong>图5</strong>所示。</p>
-<p><img src="/pictures/image-20250103170322869.png" alt="image-20250103170322869" /></p>
+<p><img src="/pictures/image-20250103170322869.png" alt="image-20250103170322869"></p>
 <p>最后，设计了一个60微米²的光通孔，层间过渡损耗为-0.5 dB，以防止各层之间的显著功率差异，如图6所示。通过优化流程和设计，预计还可以实现层间过渡损耗小于-0.1 dB和超过3倍的占用空间减少。通过控制扇出电路中每个基本构建块的损耗和空间，占用实现了大规模1到N/M扇出的制造。</p>
-<p><img src="/pictures/image-20250103170214914.png" alt="image-20250103170214914" /></p>
+<p><img src="/pictures/image-20250103170214914.png" alt="image-20250103170214914"></p>
 <p>1到512扇出原型的测量总光路损耗约为-35 dB，测量专用的波导交叉损耗为-1.6 dB，由使用常规弯曲波导和当前工艺导致的损耗为-3.3 dB，如<strong>图7</strong>和<strong>图8</strong>所示。这允许可实现的最小可调计算单元大小为20微米 x 20微米，尽管具有更高的光损耗。</p>
-<img src="/pictures/image-20250103170528510.png" alt="image-20250103170528510" style="zoom:67%;" />
-<h3 id="背面氮化硅集成封装-coupe"><a class="markdownIt-Anchor" href="#背面氮化硅集成封装-coupe"></a> 背面氮化硅集成封装 (COUPE)</h3>
-<p>与前侧相比，EIC/PIC堆栈的背面为扩大设计的高效扇出网络提供了一个平台[12]。多层氮化硅有助于减少扇出的占用空间和损耗。硅氮化物波导在1微米和2.1微米宽度下的传播损耗分别为-0.1 dB/cm和-0.02 dB/cm，如<strong>图9</strong>所示。这一点至关重要，因为传播损耗与计算矩阵的大小和单元尺寸成正比。</p>
+<p><img src="/pictures/image-20250103170528510.png" alt="image-20250103170528510" style="zoom:67%;" /></p>
+<h3 id="背面氮化硅集成封装-COUPE"><a href="#背面氮化硅集成封装-COUPE" class="headerlink" title="背面氮化硅集成封装 (COUPE)"></a>背面氮化硅集成封装 (COUPE)</h3><p>与前侧相比，EIC/PIC堆栈的背面为扩大设计的高效扇出网络提供了一个平台[12]。多层氮化硅有助于减少扇出的占用空间和损耗。硅氮化物波导在1微米和2.1微米宽度下的传播损耗分别为-0.1 dB/cm和-0.02 dB/cm，如<strong>图9</strong>所示。这一点至关重要，因为传播损耗与计算矩阵的大小和单元尺寸成正比。</p>
 <p>由于扇出位于背面，PIC/EIC从中获益，简化了整体设计的复杂性。这允许在每一层实现专用功能，从而通过扩展扩大潜在的能效性能（EEP）改进。此外，通过利用COUPE平台在最小化PIC-EIC接口寄生损耗方面的优势，提高了EEP[13]。</p>
-<h3 id="能效性能计算"><a class="markdownIt-Anchor" href="#能效性能计算"></a> 能效性能计算</h3>
-<p>在这种数字光学计算（DOC）架构中，总能效（EE）会随着精度的提高而显著改善。在低精度的MAC操作下，扇出能量占据了电力消耗的大部分。在高精度情况下，扇出能量将保持相对较小，与MAC操作中显著增加的功耗相比。因此，基于测得的损耗和经过优化工艺得出的估计改进，光路损耗可以如<strong>图10</strong>所示进行预测，假设激光器墙插效率为20%，调制器插入损耗为-2 dB，光纤到PIC连接损耗为-1 dB。基于这一损耗性能，可以实现预测的4096 x 4096 MAC操作。使用测量的工艺，DOC在8位情况下计算得出的EE约为0.15 pJ/MAC，相比当今技术实现了超过10倍的提升。通过优化工艺，预计在8位情况下可实现小于0.08 pJ/MAC的EE，能效性能获得超过20倍的提升。计算通过使用优化工艺后的光路损耗，假设调制器能耗为0.2 pJ/bit，每次SRAM访问能耗为0.1 pJ/bit [8]，光电探测器的响应率为~1 A/W，以及每次MAC的EIC能耗为&lt;0.025 pJ [8]。预计所提出的DOC在未来扩展到4096 x 4096 MAC操作以上时，由于系统集成和EIC/PIC的演变，其能效性能改进将显著。</p>
-<img src="/pictures/image-20250103170639951.png" alt="image-20250103170639951" style="zoom:67%;" />
-<h3 id="结论"><a class="markdownIt-Anchor" href="#结论"></a> 结论</h3>
-<p>本文展示了一种业界首创的集成芯片上数字光学计算（DOC）系统，该系统在台积电的COUPE上集成了PIC背面的多层光子互联扇出（PIFO）。与最先进的GPU相比，能效性能（EEP）提升超过20倍。DOC结构最大限度地减少了数据移动并降低了存储层级。该架构可以激发更多创新，并在未来的生成式人工智能（GAI）系统中具有持续提升能效性能的巨大潜力。</p>
+<h3 id="能效性能计算"><a href="#能效性能计算" class="headerlink" title="能效性能计算"></a>能效性能计算</h3><p>在这种数字光学计算（DOC）架构中，总能效（EE）会随着精度的提高而显著改善。在低精度的MAC操作下，扇出能量占据了电力消耗的大部分。在高精度情况下，扇出能量将保持相对较小，与MAC操作中显著增加的功耗相比。因此，基于测得的损耗和经过优化工艺得出的估计改进，光路损耗可以如<strong>图10</strong>所示进行预测，假设激光器墙插效率为20%，调制器插入损耗为-2 dB，光纤到PIC连接损耗为-1 dB。基于这一损耗性能，可以实现预测的4096 x 4096 MAC操作。使用测量的工艺，DOC在8位情况下计算得出的EE约为0.15 pJ/MAC，相比当今技术实现了超过10倍的提升。通过优化工艺，预计在8位情况下可实现小于0.08 pJ/MAC的EE，能效性能获得超过20倍的提升。计算通过使用优化工艺后的光路损耗，假设调制器能耗为0.2 pJ/bit，每次SRAM访问能耗为0.1 pJ/bit [8]，光电探测器的响应率为~1 A/W，以及每次MAC的EIC能耗为&lt;0.025 pJ [8]。预计所提出的DOC在未来扩展到4096 x 4096 MAC操作以上时，由于系统集成和EIC/PIC的演变，其能效性能改进将显著。</p>
+<p><img src="/pictures/image-20250103170639951.png" alt="image-20250103170639951" style="zoom:67%;" /></p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>本文展示了一种业界首创的集成芯片上数字光学计算（DOC）系统，该系统在台积电的COUPE上集成了PIC背面的多层光子互联扇出（PIFO）。与最先进的GPU相比，能效性能（EEP）提升超过20倍。DOC结构最大限度地减少了数据移动并降低了存储层级。该架构可以激发更多创新，并在未来的生成式人工智能（GAI）系统中具有持续提升能效性能的巨大潜力。</p>
 
     </div>
 
@@ -389,7 +383,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text"> 摘要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.</span> <span class="nav-text"> 背景介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E6%95%B0%E5%AD%97%E5%85%89%E5%AD%A6%E8%AE%A1%E7%AE%97"><span class="nav-number">3.</span> <span class="nav-text"> 集成数字光学计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E9%9D%A2%E6%B0%AE%E5%8C%96%E7%A1%85%E9%9B%86%E6%88%90%E5%B0%81%E8%A3%85-coupe"><span class="nav-number">4.</span> <span class="nav-text"> 背面氮化硅集成封装 (COUPE)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%BD%E6%95%88%E6%80%A7%E8%83%BD%E8%AE%A1%E7%AE%97"><span class="nav-number">5.</span> <span class="nav-text"> 能效性能计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">6.</span> <span class="nav-text"> 结论</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.</span> <span class="nav-text">背景介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E6%95%B0%E5%AD%97%E5%85%89%E5%AD%A6%E8%AE%A1%E7%AE%97"><span class="nav-number">3.</span> <span class="nav-text">集成数字光学计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E9%9D%A2%E6%B0%AE%E5%8C%96%E7%A1%85%E9%9B%86%E6%88%90%E5%B0%81%E8%A3%85-COUPE"><span class="nav-number">4.</span> <span class="nav-text">背面氮化硅集成封装 (COUPE)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%BD%E6%95%88%E6%80%A7%E8%83%BD%E8%AE%A1%E7%AE%97"><span class="nav-number">5.</span> <span class="nav-text">能效性能计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">6.</span> <span class="nav-text">结论</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -453,13 +447,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">402k</span>
+    <span title="站点总字数">375k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">6:06</span>
+    <span title="站点阅读时长">5:41</span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
 
         
