@@ -46,12 +46,12 @@
   };
 </script>
 
-  <meta name="description" content="REF： Grating coupler – Ansys Optics 源文件:  下载 光栅耦合器在光芯片的表面设计一个光栅耦合器，使单模光纤连上一个集成光波导。 内置的PSO优化算法将最大化耦合效率，在INTERCONNECT里用器件S参数生成compact model。 展示了如何通过CML Compiler生成compact model。 概览 案例的设计目标是设计一个TE模式的Bragg">
+  <meta name="description" content="REF： Grating coupler – Ansys Optics 源文件:  下载  光栅耦合器 在光芯片的表面设计一个光栅耦合器，使单模光纤连上一个集成光波导。 内置的PSO优化算法将最大化耦合效率，在INTERCONNECT里用器件S参数生成compact model。 展示了如何通过CML Compiler生成compact model。  概览  案例的设计目标是设计一个TE模式的B">
 <meta property="og:type" content="article">
 <meta property="og:title" content="光栅耦合器的设计">
 <meta property="og:url" content="http://example.com/2025/04/29/%E5%85%89%E6%A0%85%E8%80%A6%E5%90%88%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="REF： Grating coupler – Ansys Optics 源文件:  下载 光栅耦合器在光芯片的表面设计一个光栅耦合器，使单模光纤连上一个集成光波导。 内置的PSO优化算法将最大化耦合效率，在INTERCONNECT里用器件S参数生成compact model。 展示了如何通过CML Compiler生成compact model。 概览 案例的设计目标是设计一个TE模式的Bragg">
+<meta property="og:description" content="REF： Grating coupler – Ansys Optics 源文件:  下载  光栅耦合器 在光芯片的表面设计一个光栅耦合器，使单模光纤连上一个集成光波导。 内置的PSO优化算法将最大化耦合效率，在INTERCONNECT里用器件S参数生成compact model。 展示了如何通过CML Compiler生成compact model。  概览  案例的设计目标是设计一个TE模式的B">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2025/04/29/pictures/image-20250429150741829.png">
 <meta property="og:image" content="http://example.com/2025/04/29/pictures/image-20250429151403070.png">
@@ -246,7 +246,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>857</span>
+              <span>863</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -267,13 +267,15 @@
       
         <p>REF： <a target="_blank" rel="noopener" href="https://optics.ansys.com/hc/en-us/articles/360042305334-Grating-coupler">Grating coupler – Ansys Optics</a></p>
 <p>源文件:  <a href="/download/c118296f-grating-coupler.zip" download>下载</a></p>
-<h2 id="光栅耦合器"><a href="#光栅耦合器" class="headerlink" title="光栅耦合器"></a>光栅耦合器</h2><p>在光芯片的表面设计一个光栅耦合器，使单模光纤连上一个集成光波导。</p>
+<h2 id="光栅耦合器"><a class="markdownIt-Anchor" href="#光栅耦合器"></a> 光栅耦合器</h2>
+<p>在光芯片的表面设计一个光栅耦合器，使单模光纤连上一个集成光波导。</p>
 <p>内置的PSO优化算法将最大化耦合效率，在INTERCONNECT里用器件S参数生成compact model。</p>
 <p>展示了如何通过CML Compiler生成compact model。</p>
-<h3 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h3><p><img src="../pictures/image-20250429150741829.png" alt="image-20250429150741829"></p>
+<h3 id="概览"><a class="markdownIt-Anchor" href="#概览"></a> 概览</h3>
+<p><img src="../pictures/image-20250429150741829.png" alt="image-20250429150741829" /></p>
 <p>案例的设计目标是设计一个TE模式的Bragg Grating SOI耦合器（光从顶部SMF入射），核心指标FOM是目标波长下的耦合效率。</p>
-<p>耦合效率对光栅周期$p$、刻蚀长度$l_e$、刻蚀深度$h_e$、光纤位置$x$和光纤倾角$\theta$非常敏感。</p>
-<p><img src="../pictures/image-20250429151403070.png" alt="image-20250429151403070"></p>
+<p>耦合效率对光栅周期<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span></span></span></span>、刻蚀长度<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>l</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">l_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.01968em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>、刻蚀深度<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">h_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>、光纤位置<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span>和光纤倾角<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span>非常敏感。</p>
+<p><img src="../pictures/image-20250429151403070.png" alt="image-20250429151403070" /></p>
 <p>这5个参数通常进行协同优化，以在目标波长实现最大的耦合效率。由于使用五个参数进行暴力三维优化耗时过长，本文采用二维与三维模型结合的两阶段优化策略，仅需调节三个几何参数。整个设计流程分为四个主要步骤。</p>
 <blockquote>
 <ol>
@@ -284,11 +286,14 @@
 </ol>
 </blockquote>
 <p>如下节所示，通过主要采用二维仿真并调节光栅周期、占空比及光纤位置，可实现高于40%的峰值耦合效率。</p>
-<h4 id="通过CML-Compiler生成Compact-Model"><a href="#通过CML-Compiler生成Compact-Model" class="headerlink" title="通过CML Compiler生成Compact Model"></a>通过CML Compiler生成Compact Model</h4><p>为了生成Grating coupler的Compact model，可以使用第3步中产生的S参数数据。CML compiler中的参数提取将在后面单独的一小节介绍，可以使用一个脚本文件来自动化的运行实现第3步的功能，并且生成S参数数据。</p>
-<h3 id="步骤-1：二维优化"><a href="#步骤-1：二维优化" class="headerlink" title="步骤 1：二维优化"></a>步骤 1：二维优化</h3><ol>
+<h4 id="通过cml-compiler生成compact-model"><a class="markdownIt-Anchor" href="#通过cml-compiler生成compact-model"></a> 通过CML Compiler生成Compact Model</h4>
+<p>为了生成Grating coupler的Compact model，可以使用第3步中产生的S参数数据。CML compiler中的参数提取将在后面单独的一小节介绍，可以使用一个脚本文件来自动化的运行实现第3步的功能，并且生成S参数数据。</p>
+<h3 id="步骤-1二维优化"><a class="markdownIt-Anchor" href="#步骤-1二维优化"></a> 步骤 1：二维优化</h3>
+<ol>
 <li>打开二维模拟文件。</li>
 <li>通过进入 “优化与扫描” 窗口并打开名为 “耦合效率优化” 的优化项目，来查看优化设置。</li>
-<li>查看设置后，关闭编辑窗口并运行优化。优化应在 10 到 20 分钟内完成。如果你不想等待，可以直接进入最后的三维优化步骤。<br>优化完成后，就可以获取到最佳的间距、占空比和位置。右键点击 “耦合效率优化” 项目，然后在上下文菜单中依次选择 “可视化” 和 “最佳参数”。</li>
+<li>查看设置后，关闭编辑窗口并运行优化。优化应在 10 到 20 分钟内完成。如果你不想等待，可以直接进入最后的三维优化步骤。<br />
+优化完成后，就可以获取到最佳的间距、占空比和位置。右键点击 “耦合效率优化” 项目，然后在上下文菜单中依次选择 “可视化” 和 “最佳参数”。</li>
 </ol>
 
     </div>
@@ -375,7 +380,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E6%A0%85%E8%80%A6%E5%90%88%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">光栅耦合器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%A7%88"><span class="nav-number">1.1.</span> <span class="nav-text">概览</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87CML-Compiler%E7%94%9F%E6%88%90Compact-Model"><span class="nav-number">1.1.1.</span> <span class="nav-text">通过CML Compiler生成Compact Model</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4-1%EF%BC%9A%E4%BA%8C%E7%BB%B4%E4%BC%98%E5%8C%96"><span class="nav-number">1.2.</span> <span class="nav-text">步骤 1：二维优化</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E6%A0%85%E8%80%A6%E5%90%88%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text"> 光栅耦合器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%A7%88"><span class="nav-number">1.1.</span> <span class="nav-text"> 概览</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87cml-compiler%E7%94%9F%E6%88%90compact-model"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 通过CML Compiler生成Compact Model</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4-1%E4%BA%8C%E7%BB%B4%E4%BC%98%E5%8C%96"><span class="nav-number">1.2.</span> <span class="nav-text"> 步骤 1：二维优化</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -439,13 +444,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">375k</span>
+    <span title="站点总字数">402k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">5:41</span>
+    <span title="站点阅读时长">6:06</span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
 
         

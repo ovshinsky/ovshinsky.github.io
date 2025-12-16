@@ -46,12 +46,12 @@
   };
 </script>
 
-  <meta name="description" content="REF: 纯代码小白部署ChatGPT 学术优化——chatgpt_academic - 知乎 (zhihu.com) 此外：  报错缺少包可以使用pip install安装  chatgpt api key的获取:   chatanywhere&#x2F;GPT_API_free: Free ChatGPT API Key，免费ChatGPT API，支持GPT4 API（免费），ChatGPT国内可用免">
+  <meta name="description" content="REF: [纯代码小白部署ChatGPT 学术优化——chatgpt_academic - 知乎 (zhihu.com)](https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;618303185#:~:text&#x3D;ChatGPT 学术) 此外：   报错缺少包可以使用pip install安装   chatgpt api key的获取:    chatanywhere&#x2F;GPT_API_free">
 <meta property="og:type" content="article">
 <meta property="og:title" content="部署ChatGPT学术优化——chatgpt_academic">
 <meta property="og:url" content="http://example.com/2024/09/26/%E9%83%A8%E7%BD%B2ChatGPT%E5%AD%A6%E6%9C%AF%E4%BC%98%E5%8C%96%E2%80%94%E2%80%94chatgpt-academic/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="REF: 纯代码小白部署ChatGPT 学术优化——chatgpt_academic - 知乎 (zhihu.com) 此外：  报错缺少包可以使用pip install安装  chatgpt api key的获取:   chatanywhere&#x2F;GPT_API_free: Free ChatGPT API Key，免费ChatGPT API，支持GPT4 API（免费），ChatGPT国内可用免">
+<meta property="og:description" content="REF: [纯代码小白部署ChatGPT 学术优化——chatgpt_academic - 知乎 (zhihu.com)](https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;618303185#:~:text&#x3D;ChatGPT 学术) 此外：   报错缺少包可以使用pip install安装   chatgpt api key的获取:    chatanywhere&#x2F;GPT_API_free">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-26T01:23:42.000Z">
 <meta property="article:modified_time" content="2024-09-26T05:08:04.329Z">
@@ -243,7 +243,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>655</span>
+              <span>715</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -262,23 +262,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>REF: <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618303185#:~:text=ChatGPT 学术">纯代码小白部署ChatGPT 学术优化——chatgpt_academic - 知乎 (zhihu.com)</a></p>
+        <p>REF: [纯代码小白部署ChatGPT 学术优化——chatgpt_academic - 知乎 (<a target="_blank" rel="noopener" href="http://zhihu.com">zhihu.com</a>)](<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618303185#:~:text=ChatGPT">https://zhuanlan.zhihu.com/p/618303185#:~:text=ChatGPT</a> 学术)</p>
 <p>此外：</p>
 <ol>
-<li><p>报错缺少包可以使用pip install安装</p>
+<li>
+<p>报错缺少包可以使用pip install安装</p>
 </li>
-<li><p>chatgpt api key的获取:</p>
+<li>
+<p>chatgpt api key的获取:</p>
 <blockquote>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/chatanywhere/GPT_API_free">chatanywhere/GPT_API_free: Free ChatGPT API Key，免费ChatGPT API，支持GPT4 API（免费），ChatGPT国内可用免费转发API，直连无需代理。可以搭配ChatBox等软件/插件使用，极大降低接口使用成本。国内即可无限制畅快聊天。 (github.com)</a> -&gt; <a target="_blank" rel="noopener" href="https://api.chatanywhere.org/v1/oauth/free/github/render">申请内测免费Key</a> </p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://github.com/chatanywhere/GPT_API_free">chatanywhere/GPT_API_free: Free ChatGPT API Key，免费ChatGPT API，支持GPT4 API（免费），ChatGPT国内可用免费转发API，直连无需代理。可以搭配ChatBox等软件/插件使用，极大降低接口使用成本。国内即可无限制畅快聊天。 (github.com)</a> -&gt; <a target="_blank" rel="noopener" href="https://api.chatanywhere.org/v1/oauth/free/github/render">申请内测免费Key</a></p>
 </li>
-<li><p>找到<code>config.py</code>文件中的<code>API_URL_REDIRECT</code>配置并修改为以下内容：</p>
+<li>
+<p>找到<code>config.py</code>文件中的<code>API_URL_REDIRECT</code>配置并修改为以下内容：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">API_URL_REDIRECT = &#123;<span class="string">&quot;https://api.openai.com/v1/chat/completions&quot;</span>: <span class="string">&quot;https://api.chatanywhere.tech/v1/chat/completions&quot;</span>&#125;</span><br><span class="line"><span class="comment"># API_URL_REDIRECT = &#123;&quot;https://api.openai.com/v1/chat/completions&quot;: &quot;https://api.chatanywhere.org/v1/chat/completions&quot;&#125;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </blockquote>
 </li>
-<li><p>运行方式：</p>
+<li>
+<p>运行方式：</p>
 <p>运行Anaconda Prompt，输入命令：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd chatgpt_academic</span><br><span class="line">python main.py</span><br></pre></td></tr></table></figure>
 </li>
@@ -431,13 +436,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">375k</span>
+    <span title="站点总字数">402k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">5:41</span>
+    <span title="站点阅读时长">6:06</span>
 </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
 
         
