@@ -46,12 +46,12 @@
   };
 </script>
 
-  <meta name="description" content="为什么要把Lumerical画的图导入MATLAB重新画图 为了统一画图的格式，后续可以把matlab重新画的图导入AI统一进行图像的绘制和处理。  具体方法：  1. 首先把Lumerical画出的模场分布导出为TXT格式：   2. 修改txt格式的文件的内容，添加上bulk_E_slice &#x3D; [ … ]    3. 把txt文件重命名为power_distribution.m   4.">
+  <meta name="description" content="为什么要把Lumerical画的图导入MATLAB重新画图 为了统一画图的格式，后续可以把matlab重新画的图导入AI统一进行图像的绘制和处理。 具体方法： 1. 首先把Lumerical画出的模场分布导出为TXT格式： 2. 修改txt格式的文件的内容，添加上bulk_E_slice &#x3D; [ … ] 3. 把txt文件重命名为power_distribu…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="把Lumerical仿真的电场分布导入MATLAB重新画图的方法">
 <meta property="og:url" content="https://zhaoyaotian.com/2024/01/07/%E6%8A%8ALumerical%E4%BB%BF%E7%9C%9F%E7%9A%84%E7%94%B5%E5%9C%BA%E5%88%86%E5%B8%83%E5%AF%BC%E5%85%A5MATLAB%E9%87%8D%E6%96%B0%E7%94%BB%E5%9B%BE%E7%9A%84%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="ZhaoYaotian&#39;s Blogs">
-<meta property="og:description" content="为什么要把Lumerical画的图导入MATLAB重新画图 为了统一画图的格式，后续可以把matlab重新画的图导入AI统一进行图像的绘制和处理。  具体方法：  1. 首先把Lumerical画出的模场分布导出为TXT格式：   2. 修改txt格式的文件的内容，添加上bulk_E_slice &#x3D; [ … ]    3. 把txt文件重命名为power_distribution.m   4.">
+<meta property="og:description" content="为什么要把Lumerical画的图导入MATLAB重新画图 为了统一画图的格式，后续可以把matlab重新画的图导入AI统一进行图像的绘制和处理。 具体方法： 1. 首先把Lumerical画出的模场分布导出为TXT格式： 2. 修改txt格式的文件的内容，添加上bulk_E_slice &#x3D; [ … ] 3. 把txt文件重命名为power_distribu…">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zhaoyaotian.com/pictures/adfdsfewwqex20240107.png">
 <meta property="og:image" content="https://zhaoyaotian.com/pictures/image-20240107192215500.png">
@@ -61,7 +61,7 @@
 <meta property="og:image" content="https://zhaoyaotian.com/pictures/120240107.png">
 <meta property="article:published_time" content="2024-01-07T11:03:50.000Z">
 <meta property="article:modified_time" content="2026-04-18T13:15:20.526Z">
-<meta property="article:author" content="Yaotian Zhao shineskys@outlook.com">
+<meta property="article:author" content="Yaotian Zhao">
 <meta property="article:tag" content="技术小结">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://zhaoyaotian.com/pictures/adfdsfewwqex20240107.png">
@@ -154,9 +154,14 @@
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于我</a>
 
   </li>
-        <li class="menu-item menu-item-分类">
+        <li class="menu-item menu-item-论文成果">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>分类</a>
+    <a href="/about/#publications" rel="section"><i class="fa fa-fw fa-book"></i>论文成果</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -214,8 +219,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
-      <meta itemprop="name" content="Yaotian Zhao shineskys@outlook.com">
-      <meta itemprop="description" content="You succeed when your peers understand your work and use it to motivate their own.">
+      <meta itemprop="name" content="Yaotian Zhao">
+      <meta itemprop="description" content="赵耀天的个人网站，分享硅光互连、集成光子学研究成果、论文与技术笔记。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -279,19 +284,19 @@
 <p>为了统一画图的格式，后续可以把matlab重新画的图导入AI统一进行图像的绘制和处理。</p>
 <h2 id="具体方法"><a class="markdownIt-Anchor" href="#具体方法"></a> 具体方法：</h2>
 <h3 id="1-首先把lumerical画出的模场分布导出为txt格式"><a class="markdownIt-Anchor" href="#1-首先把lumerical画出的模场分布导出为txt格式"></a> 1. 首先把Lumerical画出的模场分布导出为TXT格式：</h3>
-<img src="/pictures/adfdsfewwqex20240107.png" alt="adfdsfewwqex20240107" style="zoom:80%;" />
+<img loading="lazy" decoding="async" src="/pictures/adfdsfewwqex20240107.png" alt="adfdsfewwqex20240107" style="zoom:80%;" />
 <h3 id="2-修改txt格式的文件的内容添加上bulk_e_slice"><a class="markdownIt-Anchor" href="#2-修改txt格式的文件的内容添加上bulk_e_slice"></a> 2. 修改txt格式的文件的内容，添加上bulk_E_slice = [ … ]</h3>
-<img src="/pictures/image-20240107192215500.png" alt="image-20240107192215500" style="zoom:80%;" />
-<img src="/pictures/image-20240107192251396.png" alt="image-20240107192251396" style="zoom:80%;" />
+<img loading="lazy" decoding="async" src="/pictures/image-20240107192215500.png" alt="image-20240107192215500" style="zoom:80%;" />
+<img loading="lazy" decoding="async" src="/pictures/image-20240107192251396.png" alt="image-20240107192251396" style="zoom:80%;" />
 <h3 id="3-把txt文件重命名为power_distributionm"><a class="markdownIt-Anchor" href="#3-把txt文件重命名为power_distributionm"></a> 3. 把txt文件重命名为power_distribution.m</h3>
-<img src="/pictures/image-20240107192301482.png" alt="image-20240107192301482" style="zoom:80%;" />
+<img loading="lazy" decoding="async" src="/pictures/image-20240107192301482.png" alt="image-20240107192301482" style="zoom:80%;" />
 <h3 id="4-运行matlab程序"><a class="markdownIt-Anchor" href="#4-运行matlab程序"></a> 4. 运行MATLAB程序</h3>
 <h4 id="matlab代码"><a class="markdownIt-Anchor" href="#matlab代码"></a> MATLAB代码</h4>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">close all;</span><br><span class="line">clear;</span><br><span class="line">power_distribution;</span><br><span class="line">bulk_E_slice =<span class="built_in">rot90</span>(bulk_E_slice);</span><br><span class="line"><span class="built_in">length</span> = <span class="number">104</span>;</span><br><span class="line">width = <span class="number">4</span>;</span><br><span class="line">x =<span class="number">0</span>:<span class="built_in">size</span>(bulk_E_slice,<span class="number">1</span>)*<span class="built_in">length</span>/<span class="built_in">size</span>(bulk_E_slice,<span class="number">1</span>);</span><br><span class="line">y =<span class="number">0</span>:<span class="built_in">size</span>(bulk_E_slice,<span class="number">2</span>)*width/<span class="built_in">size</span>(bulk_E_slice,<span class="number">2</span>);</span><br><span class="line">y = <span class="built_in">fliplr</span>(y);</span><br><span class="line">x = x<span class="number">-3</span>;</span><br><span class="line">imagesc(x,y,bulk_E_slice)</span><br><span class="line">xlabel(<span class="string">&quot;x(μm)&quot;</span>);</span><br><span class="line">ylabel(<span class="string">&quot;y(μm)&quot;</span>);</span><br><span class="line">colorbar;</span><br><span class="line"><span class="comment">% caxis([0,1]);</span></span><br><span class="line">colorbar(<span class="string">&#x27;Ticks&#x27;</span>,[<span class="number">0</span>,<span class="number">0.5</span>,<span class="number">1</span>,<span class="number">1.5</span>,<span class="number">2</span>]);</span><br><span class="line">set(gca,<span class="string">&#x27;YDir&#x27;</span>,<span class="string">&#x27;normal&#x27;</span>)</span><br><span class="line">colormap(<span class="string">&#x27;jet&#x27;</span>);</span><br><span class="line">xlim([<span class="number">0</span>,<span class="number">40</span>])</span><br></pre></td></tr></table></figure>
-<img src="/pictures/image-20240107192325877.png" alt="image-20240107192325877" style="zoom:80%;" />
+<img loading="lazy" decoding="async" src="/pictures/image-20240107192325877.png" alt="image-20240107192325877" style="zoom:80%;" />
 <h3 id="5-复制图窗拷贝进入adobe-iiiustrator"><a class="markdownIt-Anchor" href="#5-复制图窗拷贝进入adobe-iiiustrator"></a> 5. 复制图窗，拷贝进入Adobe IIIustrator</h3>
 <p>修改完之后最后结果：</p>
-<img src="/pictures/120240107.png" alt="image120240107" style="zoom:80%;" />
+<img loading="lazy" decoding="async" src="/pictures/120240107.png" alt="image120240107" style="zoom:80%;" />
 
     </div>
 
@@ -383,10 +388,10 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Yaotian Zhao shineskys@outlook.com"
+    <img class="site-author-image" itemprop="image" alt="Yaotian Zhao"
       src="/images/9aa3bf3c6f21ca21e768b6fd4d37c90.jpg">
-  <p class="site-author-name" itemprop="name">Yaotian Zhao shineskys@outlook.com</p>
-  <div class="site-description" itemprop="description">You succeed when your peers understand your work and use it to motivate their own.</div>
+  <p class="site-author-name" itemprop="name">Yaotian Zhao</p>
+  <div class="site-description" itemprop="description">赵耀天的个人网站，分享硅光互连、集成光子学研究成果、论文与技术笔记。</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -441,7 +446,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Yaotian Zhao shineskys@outlook.com</span>
+  <span class="author" itemprop="copyrightHolder">Yaotian Zhao</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
